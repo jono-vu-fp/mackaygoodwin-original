@@ -21,7 +21,7 @@ const CapabilityFormNew = (props) => {
       ch = 1;
       //creating an invisible element
       var element = document.createElement('a');
-      element.setAttribute('href', "/MGNewFinYear–Landscape-v4.pdf");
+      element.setAttribute('href', "/capability2.pdf");
       element.setAttribute('download', "New Financial Year Guide");
       // element.setAttribute('target', "_blank");
       // Above code is equivalent to
