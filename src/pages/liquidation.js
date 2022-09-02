@@ -1,19 +1,24 @@
 import * as React from "react"
 import { graphql } from "gatsby"
+import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import TopBanner from "../components/top-banner"
+import TopBanner from "../components/top-banner-3"
 import GetInTouch from "../components/get-in-touch"
 import CurveLeft from "../components/curve-left"
+import Services from "../components/services"
 import Accordian from "../components/accordian/accordian"
 import FullText from "../components/full-text"
 import OurPeople from "../components/our-people-liquid/our-people"
-import TestimonialMain from "../components/testimonial-main"
+import TestimonialMain from "../components/testimonial-main-liquid-1"
 import ReciveryPlan from "../components/recovery-plan"
-import Container from "../components/slider/container"
+import Container from "../components/slider/container-liquidation"
+import EbookForm from "../components/ebook-form"
+import { formEbookContext } from '../components/context';
 
 const ConsultBusiness = ({ data }) => {
+  const [showModal, setModal] = React.useState(false);
   let whyMG = [];
   let FAQs = [];
 
@@ -27,55 +32,33 @@ const ConsultBusiness = ({ data }) => {
 
   let businessData = [];
   data.allWpOurpeople.nodes.map((d) => {
-    return businessData.push({ title: d.title, subtitle: d.backInBusiness.designation, text: d.backInBusiness.location, certification: d.backInBusiness.certification, content: d.content, linkedin: d.backInBusiness.linkedin, email: d.backInBusiness.email, img: d.featuredImage?.node, designationType: d.backInBusiness.designationType });
+    if(d.title == 'Andrew Ngo' || d.title == 'Grahame Ward' || d.title == 'Kate McMahon'){
+      return businessData.push({ title: d.title, subtitle: d.backInBusiness.designation, text: d.backInBusiness.location, certification: d.backInBusiness.certification, content: d.content, linkedin: d.backInBusiness.linkedin, email: d.backInBusiness.email, img: d.featuredImage?.node, designationType: d.backInBusiness.designationType });
+    }
   })
 
   const breadCrumbs = [
     { link: "/", title: "Home" },
     { title: "Liquidation" },
   ]
+
+  const [fromDetails, setFormDetails] = React.useState(0);
+  const [fromEbookDetails, setFormEbookDetails] = React.useState(0);
+  const value = { fromDetails, setFormDetails };
+  const valueEbook = { fromEbookDetails, setFormEbookDetails };
   return (<div className="service restructure consult-business liquidation">
     <Layout>
       <Seo title={data.wpPage.metaFields?.metaTitle} description={data.wpPage.metaFields?.metaDescription} />
       <TopBanner
         title={data.wpPage.liquidation.bannerTitle}
-        subtitle={''}
+        subtitle={data.wpPage.liquidation.bannerSubtitle}
         text={data.wpPage.liquidation.bannerDesc}
         bannerImg={data.wpPage.liquidation.bannerImage}
         breadCrumbs={breadCrumbs}
-        sendUrl={data.wpPage.liquidation.sendUrl}
+        sendUrl={''}
         equalWidth={true}
       />
-      <div className="container-fluid">
-        <div className="row flex-row-reverse">
-          <div className="col-md-12 col-lg-6 pe-0 getintouchright">
-            <GetInTouch
-              title={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchTitle}
-              text={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchDescription}
-              fullWidth={true}
-            />
-          </div>
-          <div className="col-md-12 col-lg-5 offset-lg-1 ps-0 pe-0 getintouchleft">
-            {/* <h3>{data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.tagline}</h3> */}
-            <h1 className="whyTitle">{data.wpPage.liquidation.title}</h1>
-            {data.wpPage.liquidation.descriptionWhyliquid.map((d) => {
-              return (
-                <div className="row">
-                  <div className={"col-3"}>
-                    <div className="text-center">
-                      <img src={d.image.mediaItemUrl} alt={d.image.altText} className="why-need-img" />
-                    </div>
-                  </div>
-                  <div className="col-9">
-                    <p className="recovery-partner-title">{d.title.trim()}</p>
-                    <p className="recovery-partner-desc">{d.description.trim()}</p>
-                  </div>
-                </div>)
-            })}
-          </div>
-        </div>
-      </div>
-      <section className="recovery-partner">
+      <section className="recovery-partner liq_rec_section">
         <div className="container">
           <div className="row">
             <div className="col">
@@ -85,7 +68,7 @@ const ConsultBusiness = ({ data }) => {
           <div className="row justify-content-center">
             {data.wpPage.liquidation.partners.map((d) => {
               return (<div className={"col-xs-12 col-md-6 col-lg-" + parseInt(12 / data.wpPage.liquidation.partners.length)}>
-                <div className="text-center">
+                <div className="text-center rec_img">
                   <img src={d.image.mediaItemUrl} alt={d.image.altText} className="recovery-partner-img" />
                 </div>
                 <p className="recovery-partner-title text-center"> {d.title} </p>
@@ -94,22 +77,66 @@ const ConsultBusiness = ({ data }) => {
           </div>
         </div>
       </section>
-      <CurveLeft
-        title={data.wpPage.liquidation.businessTitle}
-        tag={''}
-        text={data.wpPage.liquidation.businessDesc}
-        img={data.wpPage.liquidation.businessImage}
-        video={data.wpPage.liquidation.businessVideo}
-        imagevideo={data.wpPage.liquidation.imagevideo}
-        btnTxt={'Enquire'}
-        btnLink={data.wpPage.liquidation.enquire}
-      />
-      <FullText
-        text={data.wpPage.liquidation.liquidationTypeTitle}
-        subTxt={data.wpPage.liquidation.tagline}
-      />
-      <Accordian
-        title={''}
+      <div className="liq_blocks">
+        <div className="container">
+          <div className="row">
+              {/* <h3>{data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.tagline}</h3> */}
+              {data.wpPage.liquidation.descriptionWhyliquid.map((d) => {
+                return (
+                  <div className="col-md-4 col-lg-4">
+                    <div className="lb_img">
+                        <img src={d.image.mediaItemUrl} alt={d.image.altText} />
+                    </div>
+                    <div className="lb_txt">
+                      <p className="recovery-partner-title">{d.title.trim()}</p>
+                      <p className="recovery-partner-desc">{d.description.trim()}</p>
+                    </div>
+                  </div>)
+              })}
+          </div>
+        </div>
+      </div>
+      <section className={"testimonial-main testimonial-main1"}>
+      <div className="container">
+          <div className="row">
+            <div className="col-sm-12 col-md-12 col-lg-6 p-5">
+              <img className="img-fluid" src={data.wpPage.liquidation.testimonialsLiquid[0].image?.mediaItemUrl} alt={data.wpPage.liquidation.testimonialsLiquid[0].image?.altText} />
+            </div>
+            <div className="col-sm-12 col-md-12 col-lg-6 p-5 desc">
+              <p>{data.wpPage.liquidation.testimonialsLiquid[0].description}</p>
+            </div>
+          </div>
+      </div>
+    </section>
+      <div className="wbl_section">
+        <div className="container">
+          <div className="wbl_right">
+            <a onClick={()=>setModal(true)}><img src={data.wpPage.liquidation.businessThumbnail.mediaItemUrl} /></a>
+          </div>
+          <div className="wbl_left">
+            <h3>{data.wpPage.liquidation.businessTitle}</h3>
+            <p>{data.wpPage.liquidation.businessDesc}</p>
+            {data.wpPage.liquidation.enquire !== null && data.wpPage.liquidation.enquire !== "" ? <Link className="btn btn-primary me-5" to={data.wpPage.liquidation.enquire}>Learn More</Link> : ""}
+          </div>
+        </div>
+      </div>
+      <div id="myModal" role="dialog" className={showModal?'in show modal fade':'modal fade'}>
+        <div className="model_inner">
+          <div className="popup_dialog">
+            <div className="modal-content">
+              <button type="button" className="close" data-dismiss="modal" onClick={()=>setModal(false)}>&times;</button>
+              <div className="popup_body">
+                <div className="video_ratio">
+                <video width="100%" controls><source src={data.wpPage.liquidation.businessVideo.mediaItemUrl} type="video/mp4" />Your browser does not support the video tag.</video>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <Services
+        title={'Our Liquidation Services'}
         showEnquireButton={true}
         data={whyMG}
         className={'liquid'}
@@ -117,27 +144,51 @@ const ConsultBusiness = ({ data }) => {
       <FullText
         text={data.wpPage.liquidation.liquidationTagline}
         subTxt={data.wpPage.liquidation.liquidationDescription}
-        customClass={'middleFullText'}
+        customClass={'middleFullText glpo_section'}
       />
       <ReciveryPlan
         data={data.wpPage.liquidation.process}
         titleDisplay={false}
+        customClass={'glpo_reco_section'}
       />
+      <section className={"testimonial-main testimonial-main1"}>
+        <div className="container">
+            <div className="row flex-row-reverse">
+              <div className="col-sm-12 col-md-12 col-lg-6 p-5">
+                <img className="img-fluid" src={data.wpPage.liquidation.testimonialsLiquid[1].image?.mediaItemUrl} alt={data.wpPage.liquidation.testimonialsLiquid[1].image?.altText} />
+              </div>
+              <div className="col-sm-12 col-md-12 col-lg-6 p-5 desc">
+                <p>{data.wpPage.liquidation.testimonialsLiquid[1].description}</p>
+              </div>
+            </div>
+        </div>
+      </section>
       {/* <FullText
         text={data.wpPage.liquidation.subDescription}
       /> */}
-      <Accordian
-        title={'FAQs'}
-        showEnquireButton={true}
-        data={FAQs}
-        className={'faq'}
-      />
-      <TestimonialMain
-        data={data.wpPage.liquidation.testimonialsLiquid}
-      />
+
+      <section className="ht_section">
+        <div className="container">
+          <div className="ht_left">
+            <img className="img-fluid" src={data.wpPage.liquidation.htImage?.mediaItemUrl} alt={data.wpPage.liquidation.htImage?.altText} />
+          </div>
+          <div className="ht_right">
+            <h2>{data.wpPage.liquidation.htTitle}</h2>
+            <p dangerouslySetInnerHTML={{ __html: data.wpPage.liquidation.htDescription }}></p>
+            <formEbookContext.Provider value={valueEbook}>
+              <button className="btn btn-primary me-5" onClick={() => { setFormEbookDetails(1) }}>Download Now</button>
+              <EbookForm
+                title={'Download e-guide'}
+                text={'Download your free copy today and get on the path to recovery'}
+              />
+            </formEbookContext.Provider>
+          </div>
+        </div>
+      </section>
+      
       <OurPeople
-        title={'Our people'}
-        text={'We’ve helped many business owners through tough times over the years. We’ll do the same for you, too.'}
+        title={'Meet our registered Liquidators'}
+        text={''}
         data={businessData}
         showAll={0}
         liquidation={1}
@@ -145,8 +196,11 @@ const ConsultBusiness = ({ data }) => {
       <Container
         title={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.testimonialTitle}
         data={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.testimonials}
-        slideColor={'#dfdfdf'}
+        slideColor={'#ebe9de'}
       />
+      <div className="cu_fixed">
+          <a href="/contact"><img src="images/sophie-img.png" />Contact Us</a>
+      </div>
     </Layout>
   </div>
   )
@@ -203,6 +257,12 @@ export const query = graphql`
             mediaItemUrl
           }
         }
+        htTitle
+        htDescription
+        htImage {
+          altText
+          mediaItemUrl
+        }
         liquidationTagline
         recoveryTagline
         sendUrl
@@ -256,7 +316,7 @@ export const query = graphql`
         }
       }
     }
-    allWpOurpeople(sort: {order:  ASC, fields: menuOrder}, filter: {backInBusiness: {registeredLiquidators: {eq: true}}}) {
+    allWpOurpeople(sort: {order:  ASC, fields: menuOrder}) {
       nodes {
         title
         backInBusiness {

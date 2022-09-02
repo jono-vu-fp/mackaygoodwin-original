@@ -2,7 +2,7 @@ import * as React from "react"
 import { Link } from "gatsby"
 
 const ReciveryPlan = (props) => (
-  <section className={"recovery-plan"}>
+  <section className={["recovery-plan", props?.customClass].join(' ')}>
     <div className="container">
     {props.titleDisplay !== false && <div className="row">
         <div className="col-12">

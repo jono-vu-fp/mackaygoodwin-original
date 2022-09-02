@@ -3533,6 +3533,285 @@ img.recovery-partner-img {
     background-color: #f1f0e8;
     padding-left: 0;
 }
+#banner-section.liq_banner {
+    padding-bottom: 85px;
+}
+.liq_banner .banner-content {
+    margin-top: 0;
+}
+.liq_banner .row {
+    display: flex;
+    align-items: center;
+}
+.liq_banner .banner-content .banner-heading {
+    margin-bottom: 26px;
+}
+.liq_banner .banner-content .banner-subheading {
+    color: #000000;
+    font-family: 'Sohne';
+    font-size: 28px;
+    font-weight: 400;
+    margin: 0 0 20px;
+}
+.liq_banner .banner-content .banner-desc {
+    font-size: 20px;
+    line-height: 1.4;
+    padding: 0 140px 0 0;
+}
+
+.liquidation .liq_rec_section.recovery-partner {
+    background-color: #ebe9de;
+    padding-top: 0;
+    padding-bottom: 36px;
+}
+.liquidation .liq_rec_section.recovery-partner h1, .bib_section h3 {
+    font-size: 44px;
+}
+
+.liq_rec_section .col-lg-2 {
+    width: 20%;
+    padding: 0 55px;
+}
+.liq_rec_section img {
+    width: auto;
+    height: auto;
+    margin: 0;
+}
+.liq_rec_section .rec_img {
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.liq_rec_section p {
+    font-size: 18px;
+    line-height: 1.33;
+}
+.liq_blocks {
+    padding-top: 84px;
+    padding-bottom: 28px;
+}
+.liq_blocks .col-lg-4 {
+    display: flex;
+}
+.liq_blocks .lb_img {
+    margin-right: 20px;
+}
+.liq_blocks .recovery-partner-title {
+    padding: 13px 0 10px;
+}
+.liq_blocks .lb_txt {
+    padding-right: 40px;
+}
+.liq_blocks .col-lg-4:first-child .recovery-partner-title {
+    padding-top: 0;
+}
+.liq_blocks .recovery-partner-desc {
+    margin-bottom: 0;
+}
+.wbl_section {
+    padding-bottom: 100px;
+}
+.wbl_section .wbl_left {
+    max-width: 600px;
+}
+.wbl_section .wbl_left a {
+    border-radius: 21px;
+    background-color: #1c5e48;
+    color: #ffffff;
+    font-family: 'Sohne';
+    font-size: 16px;
+    margin: 0;
+    padding: 11px 35px 7px;
+    display: inline-block;
+}
+.wbl_section .wbl_right {
+    max-width: 600px;
+    order: 2;
+    margin-left: auto;
+}
+.wbl_section .wbl_right a {
+    cursor: pointer;
+}
+.wbl_section h3 {
+    color: #1c5e48;
+    font-size: 36px;
+    margin: 0 0 37px;
+}
+.wbl_section p {
+    color: #000000;
+    font-size: 18px;
+    line-height: 1.55;
+    margin: 0 0 36px;
+}
+
+.wbl_section .container {
+    display: flex;
+    align-items: center;
+}
+.testimonial-main1 {
+    padding-bottom: 44px;
+}
+.ols_section {
+    background-color: #e0e3e5;
+    padding: 98px 0 92px;
+}
+.ols_section h3 {
+    color: #1c5e48;
+    font-size: 44px;
+    margin: 0 0 68px;
+}
+.ols_section ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+.ols_section ul li:first-child {
+    padding-left: 0;
+}
+.ols_section ul li {
+    width: 25%;
+    list-style: none;
+    padding: 0 33px;
+    margin: 0;
+    border-right: 1px solid rgba(171,177,181,0.5);
+}
+.ols_section ul li:last-child {
+    padding-right: 0;
+    border: 0;
+}
+.ols_section ul li h4 {
+    color: #333333;
+    font-family: 'Sohne-Buch';
+    font-size: 28px;
+    font-weight: 400;
+    margin: 0 0 29px;
+}
+.ols_section ul li p {
+    color: #000000;
+    font-size: 17px;
+    line-height: 1.64;
+    margin: 0;
+}
+.liquidation .middleFullText.glpo_section .fullTxt {
+    font-size: 44px;
+    width: 100%;
+    margin-bottom: 27px;
+}
+.liquidation .middleFullText.glpo_section .fullSubTxt {
+    font-size: 24px;
+    width: 100%;
+}
+.glpo_section {
+    padding-top: 31px;
+}
+
+.glpo_reco_section .stepsCol {
+    width: 20%;
+}
+.glpo_reco_section.recovery-plan .subTxt {
+    font-size: 22px;
+    line-height: 1.2;
+    margin-top: 37px;
+    padding: 0 30px;
+}
+.glpo_reco_section.recovery-plan .num {
+    font-size: 72px;
+    line-height: 1;
+}
+.glpo_reco_section.recovery-plan .stepsCol:last-of-type .subTxt {
+    padding: 0;
+}
+.bib_section#testimonials {
+    padding-bottom: 80px;
+}
+.bib_section#testimonials h2, .liquidation .news-articles h2 {
+    color: #000000;
+    font-family: reckless_neue_trialregular, serif, "Times New Roman";
+    font-size: 44px;
+    font-weight: 500;
+    margin: 0 0 36px;
+    padding: 0;
+}
+.bib_section#testimonials .card-body, .liquidation .news-articles .listbg {
+    background-color: #EBE9DE !important;
+}
+.ht_section {
+    position: relative;
+    padding-top: 13px;
+    padding-bottom: 28px;
+}
+.ht_section:after {
+    content: "";
+    width: 100%;
+    height: 173px;
+    background-color: #eae7db;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+.ht_section .container {
+    display: flex;
+    position: relative;
+    z-index: 2;
+}
+.ht_section .ht_right {
+    max-width: 410px;
+    padding-left: 13px;
+}
+.ht_section .ht_right h2 {
+    font-family: reckless_neue_trialregular, serif, "Times New Roman";
+    color: #1c5e48;
+    font-size: 44px;
+    margin-bottom: 33px;
+}
+.ht_section .ht_right p {
+    font-size: 18px;
+    line-height: 1.55;
+    margin: 0 0 27px;
+}
+.ht_section .ht_right .btn {
+    color: #eae7db;
+    font-size: 24px;
+    margin: 0;
+}
+
+.liquidation .news-articles {
+    padding-top: 71px;
+}
+.liquidation .news-articles h2 {
+    margin: 0 0 18px !important;
+    padding: 0;
+}
+.liquidation .news-articles .mt-4 {
+    margin-top: 0 !important;
+}
+.liquidation .news-articles .fullTxt {
+    display: none;
+}
+.cu_fixed {
+    position: fixed;
+    bottom: 30%;
+    right: 30px;
+    z-index: 9999;
+}
+.cu_fixed a {
+    border-radius: 30px;
+    background-color: #1c5e48;
+    color: #eae7db;
+    font-size: 22px;
+    display: inline-block;
+    padding: 13px 40px 8px 79px;
+    position: relative;
+}
+.cu_fixed a img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    max-height: 100%;
+    border-radius: 30px;
+}
 
 /****** BreakPoints *******/
 /****** Responsive Start *******/
@@ -3551,6 +3830,41 @@ img.recovery-partner-img {
         max-height: 586px;
     }
 }
+@media screen and (max-width:1700px){
+    .liq_banner .banner-content .banner-subheading {
+        font-size: 25px;
+    }
+    .liq_banner .banner-content .banner-desc {
+        font-size: 18px;
+    }
+    .liquidation .liq_rec_section.recovery-partner h1, .bib_section h3, .ols_section h3, .liquidation .middleFullText.glpo_section .fullTxt, .ht_section .ht_right h2, .bib_section#testimonials h2, .liquidation .news-articles h2, .banner-content .banner-heading {
+        font-size: 40px;
+    }
+    .recovery-partner-title {
+        font-size: 22px;
+    }
+    .ols_section ul li h4 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    .ols_section {
+        padding: 70px 0;
+    }
+    .liquidation .middleFullText.glpo_section .fullSubTxt, .ht_section .ht_right .btn {
+        font-size: 20px;
+    }
+    .liquidation .middleFullText.glpo_section .fullTxt {
+        padding-top: 30px;
+    }
+    .glpo_section {
+        padding-bottom: 40px;
+    }
+    .glpo_reco_section.recovery-plan .subTxt {
+        font-size: 20px;
+        margin-top: 30px;
+        padding: 0 20px;
+    }
+}
 @media screen and (max-width:1600px){
     
     .ps_bot .pack_inner {
@@ -3564,6 +3878,79 @@ img.recovery-partner-img {
     }
     .getfrm_model .popup_body {
         height: 670px;
+    }
+    .liq_banner .banner-content .banner-subheading {
+        font-size: 23px;
+    }
+    .liq_rec_section .col-lg-2 {
+        padding: 0 30px;
+    }
+    .liq_blocks .recovery-partner-title {
+        margin-bottom: 0;
+    }
+    .wbl_section h3 {
+        font-size: 34px;
+        margin-bottom: 25px;
+    }
+    .wbl_section p, .ht_section .ht_right p {
+        font-size: 17px;
+    }
+    .ols_section ul li h4 {
+        font-size: 22px;
+    }
+    .glpo_section {
+        padding-top: 20px;
+    }
+    .liquidation .middleFullText.glpo_section .fullSubTxt, .ht_section .ht_right .btn, .glpo_reco_section.recovery-plan .subTxt {
+        font-size: 18px;
+    }
+    .glpo_reco_section.recovery-plan .num {
+        font-size: 60px;
+    }
+    .glpo_reco_section.recovery-plan .subTxt {
+        margin-top: 20px;
+    }
+    .liquidation .liq_rec_section.recovery-partner h1 {
+        padding: 0;
+        margin-bottom: 40px;
+    }
+    .liquidation .liq_rec_section.recovery-partner {
+        padding-top: 40px;
+        padding-bottom: 10px;
+    }
+    .liq_blocks {
+        padding-top: 55px;
+        padding-bottom: 10px;
+    }
+    .ols_section {
+        padding: 55px 0;
+    }
+    .ols_section h3 {
+        margin-bottom: 55px;
+    }
+    .liquidation .middleFullText.glpo_section .fullTxt {
+        margin-bottom: 20px;
+    }
+    .testimonial-main1 {
+        padding-top: 0;
+    }
+    .ht_section .ht_right h2 {
+        margin-bottom: 20px;
+    }
+    .liquidation .news-articles {
+        padding-top: 50px;
+    }
+    .bib_section#testimonials {
+        padding-bottom: 50px;
+    }
+    .liquidation .news-articles .news-list {
+        padding-bottom: 60px;
+    }
+    .wbl_section {
+        padding-bottom: 70px;
+    }
+    .cu_fixed {
+        bottom: 70px;
     }
 }
 @media screen and (max-width:1500px){
@@ -3593,6 +3980,28 @@ img.recovery-partner-img {
     }
     .dpn_page .dpnfaq .accordion-button{
             font-size: 45px;
+    }
+    .liquidation .liq_rec_section.recovery-partner h1, .bib_section h3, .ols_section h3, .liquidation .middleFullText.glpo_section .fullTxt, .ht_section .ht_right h2, .bib_section#testimonials h2, .liquidation .news-articles h2, .banner-content .banner-heading {
+        font-size: 36px;
+    }
+    .liq_banner .banner-content .banner-heading {
+        margin-bottom: 15px;
+    }
+    .liq_banner .banner-content .banner-subheading {
+        font-size: 20px;
+    }
+    .liq_blocks .recovery-partner-title, .ols_section ul li h4 {
+        font-size: 21px;
+    }
+    .wbl_section h3 {
+        font-size: 32px;
+    }
+    .glpo_section {
+        padding-top: 10px;
+    }
+    .cu_fixed a {
+        font-size: 19px;
+        padding: 10px 40px 8px 65px;
     }
 }
 @media screen and (max-width:1400px){
@@ -3625,6 +4034,22 @@ img.recovery-partner-img {
     #community-support .slide img {
         max-height: 506px;
     }
+    .liq_blocks .recovery-partner-title, .ols_section ul li h4 {
+        font-size: 20px;
+        line-height: 1.2;
+    }
+    .liq_rec_section p {
+        font-size: 17px;
+    }
+    .wbl_section .wbl_left {
+        padding-right: 30px;
+    }
+    .ols_section ul li {
+        padding: 0 20px;
+    }
+    .ols_section ul li h4 {
+        margin-bottom: 15px;
+    }
 }
 @media screen and (max-width:1300px){
     .ps_bot .pack_inner h3 {
@@ -3637,6 +4062,12 @@ img.recovery-partner-img {
         margin-top: 20px;
     }
     .up_events {
+        padding-bottom: 50px;
+    }
+    .ols_section ul li p {
+        font-size: 16px;
+    }
+    .ols_section {
         padding-bottom: 50px;
     }
 }
@@ -3785,6 +4216,86 @@ img.recovery-partner-img {
     }
 }
 
+@media screen and (max-width:1200px){
+    #banner-section.liq_banner {
+        padding-top: 0;
+        padding-bottom: 61px;
+    }
+    .liq_banner .banner-content .banner-subheading {
+        font-size: 18px;
+    }
+    .liquidation .liq_rec_section.recovery-partner h1, .bib_section h3, .ols_section h3, .liquidation .middleFullText.glpo_section .fullTxt, .ht_section .ht_right h2, .bib_section#testimonials h2, .liquidation .news-articles h2, .banner-content .banner-heading {
+        font-size: 32px;
+    }
+    .liq_banner .banner-content .banner-heading {
+        margin-bottom: 5px;
+    }
+    .liq_banner .banner-content .banner-subheading {
+        margin-bottom: 10px;
+    }
+    .liq_banner .banner-content .banner-desc {
+        font-size: 17px;
+    }
+    .liq_blocks .lb_txt {
+        padding-right: 20px;
+    }
+    .testimonial-main1 .p-5 {
+        padding: 20px !important;
+    }
+    .testimonial-main1 p {
+        font-size: 26px;
+        line-height: 1.4;
+    }
+    .wbl_section h3 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+    .wbl_section .wbl_left, .wbl_section .wbl_right {
+        max-width: 50%;
+    }
+    .wbl_section .wbl_right img {
+        max-width: 100%;
+    }
+    .wbl_section p {
+        margin-bottom: 25px;
+    }
+    .ols_section {
+        padding-top: 45px;
+    }
+    .ols_section h3 {
+        margin-bottom: 40px;
+    }
+    .liquidation .middleFullText.glpo_section .fullTxt {
+        margin-bottom: 15px;
+    }
+    .liquidation .middleFullText.glpo_section .fullSubTxt, .ht_section .ht_right .btn, .glpo_reco_section.recovery-plan .subTxt {
+        font-size: 17px;
+    }
+    .glpo_section {
+        padding-bottom: 30px;
+    }
+    .glpo_reco_section.recovery-plan .num {
+        font-size: 50px;
+    }
+    .ht_section:after {
+        height: 100px;
+    }
+    .liquidation .news-articles {
+        padding-top: 35px;
+    }
+    .liquidation .news-articles h2 {
+        margin-bottom: 10px !important;
+    }
+    .bib_section#testimonials h2 {
+        margin-bottom: 25px;
+    }
+    .bib_section#testimonials {
+        padding-bottom: 100px;
+    }
+    .liquidation .news-articles .news-list {
+        padding-bottom: 45px;
+    }
+}
 @media screen and (max-width:991px){
     .identi_bannersec h1.banner-heading sup {
     top: -9px;
@@ -4046,6 +4557,121 @@ img.recovery-partner-img {
     #community-support .slide img {
         max-height: 481px;
     }
+    #banner-section.liq_banner {
+        padding-top: 35px;
+        padding-bottom: 0;
+    }
+    #banner-section.liq_banner .d-md-none {
+        display: block!important;
+    }
+    .liq_rec_section .col-lg-2 {
+        width: 33.33%;
+    }
+    .liquidation .liq_rec_section.recovery-partner {
+        padding-top: 30px;
+        padding-bottom: 5px;
+    }
+    .liq_blocks .col-lg-4 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .liq_blocks .col-lg-4:last-of-type {
+        margin-bottom: 0;
+    }
+    .liq_blocks {
+        padding-top: 45px;
+        padding-bottom: 15px;
+    }
+    .liq_blocks .lb_txt {
+        padding-right: 0;
+        width: calc(100% - 83px);
+    }
+    .liq_blocks .lb_img {
+        width: 63px;
+    }
+    .liq_blocks .lb_img {
+        width: 63px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .testimonial-main1 .p-5.desc {
+        padding-top: 0 !important;
+    }
+    .wbl_section {
+        padding-bottom: 50px;
+    }
+    .ols_section {
+        padding-top: 40px;
+        padding-bottom: 20px;
+    }
+    .ols_section ul li {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+    .ols_section ul {
+        flex-wrap: wrap;
+    }
+    .ols_section ul li:nth-child(3) {
+        padding-left: 0;
+    }
+    .ols_section ul li:nth-child(2) {
+        padding-right: 0;
+        border: 0;
+    }
+    .glpo_reco_section .stepsCol {
+        width: 33.33%;
+        margin-bottom: 20px;
+    }
+    .testimonial-main1 {
+        padding-top: 0 !important;
+    }
+    .testimonial-main1 p {
+        margin: 0;
+    }
+    .ht_section:after {
+        height: 50px;
+    }
+    .ht_section .ht_right h2 {
+        margin-bottom: 15px;
+    }
+    .ht_section .ht_right p {
+        margin-bottom: 20px;
+    }
+    .liquidation .news-articles .mt-4 {
+        margin-bottom: 30px;
+    }
+    .bib_section h2 {
+        padding: 0 !important;
+    }
+    .liquidation .news-articles .news-list {
+        padding-bottom: 20px;
+    }
+    #testimonials.bib_section .card-body {
+        padding: 20px;
+    }
+    #testimonials.bib_section h3 {
+        font-size: 22px;
+        line-height: 1.2;
+        min-height: inherit;
+    }
+    .restructure #testimonials.bib_section p.card-text {
+        padding-bottom: 0;
+    }
+    #testimonials.bib_section .testimonial-slider .btn {
+        margin-top: 10px;
+    }
+    .liquidation .news-articles p.py-1.px-4 {
+        min-height: inherit !important;
+        margin-bottom: 20px;
+    }
+    .liquidation .middleFullText.glpo_section .fullTxt {
+        padding-top: 20px;
+    }
+    .cu_fixed {
+        bottom: 55px;
+        right: 15px;
+    }
 }
 @media screen and (max-width:767px){
 
@@ -4143,6 +4769,117 @@ img.recovery-partner-img {
     #community-support .slide img {
         max-height: 360px;
     }
+    .liq_rec_section img {
+        max-width: 50px;
+        max-height: 50px;
+    }
+    .liq_rec_section .rec_img {
+        height: 50px;
+    }
+    .liq_rec_section p {
+        font-size: 16px;
+    }
+    .testimonial-main1 .p-5 {
+        padding: 20px 0 !important;
+    }
+    .testimonial-main1 p {
+        font-size: 24px;
+    }
+    .wbl_section .wbl_left, .wbl_section .wbl_right {
+        max-width: 100%;
+        width: 100%;
+    }
+    .wbl_section .container {
+        flex-wrap: wrap;
+    }
+    .wbl_section .wbl_right {
+        order: 0;
+        margin-bottom: 30px;
+    }
+    .ols_section ul li, .ols_section ul li:nth-child(2) {
+        width: 100%;
+        margin-bottom: 30px;
+        padding: 0 0 25px;
+        border: 0;
+        border-bottom: 1px solid rgba(171,177,181,0.5);
+    }
+    .ols_section ul li:last-child {
+        padding: 0;
+        margin: 0;
+    }
+    .ols_section {
+        padding-bottom: 45px;
+    }
+    .liquidation .liq_rec_section.recovery-partner h1, .bib_section h3, .ols_section h3, .liquidation .middleFullText.glpo_section .fullTxt, .ht_section .ht_right h2, .bib_section#testimonials h2, .liquidation .news-articles h2, .banner-content .banner-heading {
+        font-size: 30px;
+    }
+    .glpo_reco_section .stepsCol {
+        width: 100%;
+    }
+    .liquidation .middleFullText.glpo_section .fullSubTxt, .ht_section .ht_right .btn, .glpo_reco_section.recovery-plan .subTxt, .wbl_section p, .ht_section .ht_right p, .ols_section ul li p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    .glpo_reco_section.recovery-plan .subTxt {
+        margin-top: 15px;
+    }
+    .glpo_reco_section .stepsCol:last-of-type {
+        margin-bottom: 0;
+    }
+    .ht_section .container {
+        flex-wrap: wrap;
+    }
+    .ht_section .ht_left, .ht_section .ht_right {
+        width: 100%;
+        max-width: 100%;
+    }
+    .ht_section .ht_left {
+        margin-bottom: 30px;
+    }
+    .ht_section .ht_left img {
+        max-width: 400px;
+        margin: auto;
+        display: block;
+    }
+    .ht_section:after {
+        display: none;
+    }
+    .ht_section .ht_right {
+        padding-left: 0;
+    }
+    .liquidation .news-articles .mt-4 {
+        padding-right: 20px !important;
+        padding-left: 20px !important;
+    }
+    .liquidation .news-articles .mobile-show {
+        display: none !important;
+    }
+    .liquidation .news-articles {
+        margin-bottom: 50px;
+    }
+    .liquidation .news-articles .news-list {
+        width: 556px;
+        margin: auto;
+    }
+    #testimonials.bib_section .card-text {
+        min-height: inherit;
+    }
+    .ols_section h3 {
+        margin-bottom: 30px;
+    }
+    .liq_banner .banner-content .banner-subheading {
+        font-size: 17px;
+    }
+    .liq_banner .banner-content .banner-desc {
+        padding: 0;
+    }
+    .wbl_section .wbl_left {
+        padding-right: 0;
+    }
+    .cu_fixed a {
+        font-size: 17px;
+        padding: 9px 30px 8px 55px;
+    }
 }
 @media screen and (max-width:667px){
     .ol_list h2 {
@@ -4157,6 +4894,11 @@ img.recovery-partner-img {
     .dpn_page ul.service-option-container {
         width: 100%;
         text-align: center;
+    }
+}
+@media screen and (max-width:640px){
+    .ols_section {
+        padding-top: 35px;
     }
 }
 @media screen and (max-width:568px){
@@ -4187,6 +4929,34 @@ img.recovery-partner-img {
     #community-support .slide img {
         max-height: 358px;
     }
+    .liq_banner .row>*, .glpo_section .row>*, .bib_section .row>*, .glpo_reco_section .row>*, .liq_blocks .col-lg-4, .wbl_section .container, .ols_section .container, .ht_section .container, .liquidation .news-articles .container {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    .testimonial-main1 .p-5 {
+        padding: 20px !important;
+    }
+    .liquidation .news-articles .container > .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .liquidation .news-articles .people-slider {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .liquidation .news-articles .news-list {
+        width: 100%;
+    }
+    .liquidation .news-articles .mt-4 {
+        padding-right: 35px !important;
+        padding-left: 35px !important;
+    }
+    .liquidation .news-articles {
+        padding-top: 20px;
+    }
+    .wbl_section {
+        padding-bottom: 40px;
+    }
 }
 @media screen and (max-width:533px){
     .ps_bot h2 {
@@ -4210,6 +4980,25 @@ img.recovery-partner-img {
     #community-support .slide img {
         max-height: 333px;
     }
+    .liq_blocks {
+        padding-top: 40px;
+    }
+    .testimonial-main1 p {
+        font-size: 23px;
+    }
+    .liquidation .liq_rec_section.recovery-partner h1, .bib_section h3, .ols_section h3, .liquidation .middleFullText.glpo_section .fullTxt, .ht_section .ht_right h2, .bib_section#testimonials h2, .liquidation .news-articles h2, .banner-content .banner-heading {
+        font-size: 28px;
+        line-height: 1.4;
+    }
+    .liquidation .news-articles h2 {
+        margin-bottom: 0 !important;
+    }
+    .bib_section#testimonials h2 {
+        margin-bottom: 15px;
+    }
+    .liq_blocks .recovery-partner-title, .ols_section ul li h4 {
+        font-size: 19px;
+    }
 }
 @media screen and (max-width:480px){
     .dpn_page .accordion-button {
@@ -4223,6 +5012,19 @@ img.recovery-partner-img {
     }
     #community-support .slide img {
         max-height: 300px;
+    }
+    .liq_rec_section .col-lg-2 {
+        padding: 0 15px;
+        width: 50%;
+    }
+    .testimonial-main1 p {
+        font-size: 22px;
+    }
+    .liquidation .middleFullText.glpo_section .fullTxt {
+        line-height: 1.4;
+    }
+    .liquidation .news-articles p {
+        padding-right: 0;
     }
 }
 @media screen and (max-width:440px){
