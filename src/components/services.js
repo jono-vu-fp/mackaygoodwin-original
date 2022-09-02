@@ -34,7 +34,7 @@ const Accordian = (props) => {
             {props.data.map((d, key) => {
               return <li>
               <h4>{d.title}</h4>
-              <p dangerouslySetInnerHTML={{ __html: d.description }}></p>
+              <p dangerouslySetInnerHTML={{ __html: d?.description }}></p>
               </li>
             })}
         </ul>

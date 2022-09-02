@@ -174,7 +174,7 @@ const ConsultBusiness = ({ data }) => {
           </div>
           <div className="ht_right">
             <h2>{data.wpPage.liquidation.htTitle}</h2>
-            <p dangerouslySetInnerHTML={{ __html: data.wpPage.liquidation.htDescription }}></p>
+            <p dangerouslySetInnerHTML={{ __html: data.wpPage.liquidation?.htDescription }}></p>
             <formEbookContext.Provider value={valueEbook}>
               <button className="btn btn-primary me-5" onClick={() => { setFormEbookDetails(1) }}>Download Now</button>
               <EbookForm
