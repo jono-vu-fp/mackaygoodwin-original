@@ -3687,10 +3687,13 @@ img.recovery-partner-img {
     font-weight: 400;
     margin: 0 0 29px;
 }
-.ols_section ul li p {
+.ols_section ul li div {
     color: #000000;
     font-size: 17px;
     line-height: 1.64;
+    margin: 0;
+}
+.ols_section ul li div p {
     margin: 0;
 }
 .liquidation .middleFullText.glpo_section .fullTxt {
@@ -3766,10 +3769,13 @@ img.recovery-partner-img {
     font-size: 44px;
     margin-bottom: 33px;
 }
-.ht_section .ht_right p {
+.ht_section .ht_right div {
     font-size: 18px;
     line-height: 1.55;
     margin: 0 0 27px;
+}
+.ht_section .ht_right div p {
+    margin: 0;
 }
 .ht_section .ht_right .btn {
     color: #eae7db;
@@ -3811,6 +3817,19 @@ img.recovery-partner-img {
     top: 0;
     max-height: 100%;
     border-radius: 30px;
+}
+
+.voluntary_administration .banner-image:before {
+    top: 0;
+    bottom: inherit;
+    background: #154f3a;
+}
+.voluntary_administration .banner-image:after {
+    top: inherit;
+    bottom: 0;
+}
+.voluntary_administration #banner-section {
+    padding-top: 90px;
 }
 
 /****** BreakPoints *******/
@@ -3892,7 +3911,7 @@ img.recovery-partner-img {
         font-size: 34px;
         margin-bottom: 25px;
     }
-    .wbl_section p, .ht_section .ht_right p {
+    .wbl_section p, .ht_section .ht_right div {
         font-size: 17px;
     }
     .ols_section ul li h4 {
@@ -4064,7 +4083,7 @@ img.recovery-partner-img {
     .up_events {
         padding-bottom: 50px;
     }
-    .ols_section ul li p {
+    .ols_section ul li div {
         font-size: 16px;
     }
     .ols_section {
@@ -4635,7 +4654,7 @@ img.recovery-partner-img {
     .ht_section .ht_right h2 {
         margin-bottom: 15px;
     }
-    .ht_section .ht_right p {
+    .ht_section .ht_right div {
         margin-bottom: 20px;
     }
     .liquidation .news-articles .mt-4 {
@@ -4816,7 +4835,7 @@ img.recovery-partner-img {
     .glpo_reco_section .stepsCol {
         width: 100%;
     }
-    .liquidation .middleFullText.glpo_section .fullSubTxt, .ht_section .ht_right .btn, .glpo_reco_section.recovery-plan .subTxt, .wbl_section p, .ht_section .ht_right p, .ols_section ul li p {
+    .liquidation .middleFullText.glpo_section .fullSubTxt, .ht_section .ht_right .btn, .glpo_reco_section.recovery-plan .subTxt, .wbl_section p, .ht_section .ht_right div, .ols_section ul li div {
         font-size: 16px;
         line-height: 1.5;
     }

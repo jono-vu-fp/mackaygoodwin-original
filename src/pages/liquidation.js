@@ -174,7 +174,7 @@ const ConsultBusiness = ({ data }) => {
           </div>
           <div className="ht_right">
             <h2>{data.wpPage.liquidation.htTitle}</h2>
-            <p dangerouslySetInnerHTML={{ __html: data.wpPage.liquidation?.htDescription }}></p>
+            <div dangerouslySetInnerHTML={{ __html: data.wpPage.liquidation?.htDescription }}></div>
             <formEbookContext.Provider value={valueEbook}>
               <button className="btn btn-primary me-5" onClick={() => { setFormEbookDetails(1) }}>Download Now</button>
               <EbookForm
@@ -199,7 +199,7 @@ const ConsultBusiness = ({ data }) => {
         slideColor={'#ebe9de'}
       />
       <div className="cu_fixed">
-          <a href="/contact"><img src="images/sophie-img.png" />Contact Us</a>
+          <a href="/contact"><img src="/images/sophie-img.png" />Contact Us</a>
       </div>
     </Layout>
   </div>
