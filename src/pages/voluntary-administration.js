@@ -52,26 +52,26 @@ const ConsultBusiness = ({ data }) => {
         <div className="container">
           <div className="row">
             <div className="col">
-              <h1 className="whyTitle text-center">{data.wpPage.voluntaryadministration.recoveryTagline}</h1>
+              <h1 className="whyTitle text-center">{data.wpPage.voluntaryadministration.vaRecoveryTagline}</h1>
             </div>
           </div>
           <div className="row justify-content-center">
-            {data.wpPage.voluntaryadministration.partners.map((d) => {
-              return (<div className={"col-xs-12 col-md-6 col-lg-" + parseInt(12 / data.wpPage.voluntaryadministration.partners.length)}>
+            {data.wpPage.voluntaryadministration.vaPartners.map((d) => {
+              return (<div className={"col-xs-12 col-md-6 col-lg-" + parseInt(12 / data.wpPage.voluntaryadministration.vaPartners.length)}>
                 <div className="text-center rec_img">
-                  <img src={d.image?.mediaItemUrl} alt={d.image?.altText} className="recovery-partner-img" />
+                  <img src={d.vaImage?.mediaItemUrl} alt={d.vaImage?.altText} className="recovery-partner-img" />
                 </div>
-                <p className="recovery-partner-title text-center"> {d.title} </p>
+                <p className="recovery-partner-title text-center"> {d.vaTitle} </p>
               </div>)
             })}
           </div>
         </div>
       </section>
-      <div className="liq_blocks">
+      <div className="liq_blocks va_blocks">
         <div className="container">
           <div className="row">
               {/* <h3>{data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.tagline}</h3> */}
-              {data.wpPage.voluntaryadministration.descriptionWhyliquid.map((d) => {
+              {data.wpPage.voluntaryadministration.wymnuDescriptionWhyliquid.map((d) => {
                 return (
                   <div className="col-md-4 col-lg-4">
                     <div className="lb_img">
@@ -83,6 +83,36 @@ const ConsultBusiness = ({ data }) => {
                     </div>
                   </div>)
               })}
+          </div>
+        </div>
+      </div>
+        
+      <div className="wva_section">
+        <div className="container">
+          <div className="wva_left">
+            <img src={data.wpPage.voluntaryadministration.wvaImage.mediaItemUrl} alt={data.wpPage.voluntaryadministration.wvaImage.altText} />
+          </div>
+          <div className="wva_right">
+            <h3>{data.wpPage.voluntaryadministration.wvaTitle}</h3>
+            <div dangerouslySetInnerHTML={{ __html: data.wpPage.voluntaryadministration.wvaDescription }}></div>
+          </div>
+        </div>
+      </div>        
+        
+      <div className="weva_section">
+        <div className="container">
+            <div dangerouslySetInnerHTML={{ __html: data.wpPage.voluntaryadministration.wevaContent }}></div>
+            {data.wpPage.voluntaryadministration.wevaButtonLink !== null && data.wpPage.voluntaryadministration.wevaButtonLink !== "" ? <Link className="btn btn-primary me-5" to={data.wpPage.voluntaryadministration.wevaButtonLink}>{data.wpPage.voluntaryadministration.wevaButtonText}</Link> : ""}
+        </div>
+      </div>
+
+      <div className="wva_section fd_section">
+        <div className="container">
+          <div className="wva_left">
+            <img src={data.wpPage.voluntaryadministration.fdImage.mediaItemUrl} alt={data.wpPage.voluntaryadministration.fdImage.altText} />
+          </div>
+          <div className="wva_right">
+            <div dangerouslySetInnerHTML={{ __html: data.wpPage.voluntaryadministration.fdContent }}></div>
           </div>
         </div>
       </div>
@@ -103,21 +133,36 @@ const ConsultBusiness = ({ data }) => {
           </div>
         </div>
       </div>
-      <Services
-        title={'Our Liquidation Services'}
-        showEnquireButton={true}
-        data={whyMG}
-        className={'liquid'}
-      />
       <FullText
-        text={data.wpPage.voluntaryadministration.liquidationTagline}
-        subTxt={data.wpPage.voluntaryadministration.liquidationDescription}
+        text={data.wpPage.voluntaryadministration.vaLiquidationTagline}
+        subTxt={data.wpPage.voluntaryadministration.vaLiquidationDescription}
         customClass={'middleFullText glpo_section'}
       />
+
+      <ReciveryPlan
+        data={data.wpPage.voluntaryadministration.vaProcess}
+        titleDisplay={false}
+        customClass={'glpo_reco_section va_glpo_reco_section'}
+      />
+
+
+      <div className="wva_section fd_section dca_section">
+        <div className="container">
+          <div className="wva_left">
+            <img src={data.wpPage.voluntaryadministration.dcaImage.mediaItemUrl} alt={data.wpPage.voluntaryadministration.dcaImage.altText} />
+          </div>
+          <div className="wva_right">
+            <h3>{data.wpPage.voluntaryadministration.dcaTitle}</h3>
+            <h5>{data.wpPage.voluntaryadministration.dcaSubTitle}</h5>
+            <div dangerouslySetInnerHTML={{ __html: data.wpPage.voluntaryadministration.dcaDescription }}></div>
+            {data.wpPage.voluntaryadministration.dcaButtonLink !== null && data.wpPage.voluntaryadministration.dcaButtonLink !== "" ? <Link className="btn btn-primary me-5" to={data.wpPage.voluntaryadministration.dcaButtonLink}>{data.wpPage.voluntaryadministration.dcaButtonText}</Link> : ""}
+          </div>
+        </div>
+      </div>
       
       
       {/* <FullText
-        text={data.wpPage.voluntaryadministration.subDescription}
+        text={data.wpPage.voluntaryadministration.vaSubDescription}
       /> */}
 
       <section className="ht_section">
@@ -127,7 +172,7 @@ const ConsultBusiness = ({ data }) => {
           </div>
           <div className="ht_right">
             <h2>{data.wpPage.voluntaryadministration.htTitle}</h2>
-            <p dangerouslySetInnerHTML={{ __html: data.wpPage.liquidation?.htDescription }}></p>
+            <div className="ht_cnt" dangerouslySetInnerHTML={{ __html: data.wpPage.voluntaryadministration?.htDescription }}></div>
             <formEbookContext.Provider value={valueEbook}>
               <button className="btn btn-primary me-5" onClick={() => { setFormEbookDetails(1) }}>Download Now</button>
               <EbookForm
@@ -140,7 +185,7 @@ const ConsultBusiness = ({ data }) => {
       </section>
       
       <OurPeople
-        title={'Meet our registered Liquidators'}
+        title={'Meet your administrators'}
         text={''}
         data={businessData}
         showAll={0}
@@ -152,7 +197,7 @@ const ConsultBusiness = ({ data }) => {
         slideColor={'#ebe9de'}
       />
       <div className="cu_fixed">
-          <a href="/contact"><img src="images/sophie-img.png" />Contact Us</a>
+          <a href="/contact"><img src="/images/sophie-img.png" />Contact Us</a>
       </div>
     </Layout>
   </div>
@@ -169,7 +214,7 @@ export const query = graphql`
         }
         bannerTitle
         
-        descriptionWhyliquid {
+        wymnuDescriptionWhyliquid {
           description
           image {
             altText
@@ -178,15 +223,38 @@ export const query = graphql`
           title
         }
         
-        image {
+        wymnuImage {
           altText
           mediaItemUrl
         }
-        learnMoreLink
-        liquidationDescription
-        partners {
-          title
-          image {
+        wymnuLearnMoreLink
+        vaLiquidationDescription
+        wvaTitle
+        wvaDescription
+        wvaImage {
+            altText
+            mediaItemUrl
+          }
+        fdContent
+        fdImage {
+            altText
+            mediaItemUrl
+          }
+        wevaContent
+        wevaButtonText
+        wevaButtonLink
+        dcaTitle
+        dcaSubTitle
+        dcaDescription
+        dcaButtonText
+        dcaButtonLink
+        dcaImage {
+            altText
+            mediaItemUrl
+          }
+        vaPartners {
+          vaTitle
+          vaImage {
             altText
             mediaItemUrl
           }
@@ -197,13 +265,13 @@ export const query = graphql`
           altText
           mediaItemUrl
         }
-        liquidationTagline
-        recoveryTagline
-        subDescription
-        process {
+        vaLiquidationTagline
+        vaRecoveryTagline
+        vaSubDescription
+        vaProcess {
           processTitle
         }
-        title
+        wymnuTitle
       }
     }
     allWp {

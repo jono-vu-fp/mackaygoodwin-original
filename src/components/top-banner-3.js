@@ -27,7 +27,7 @@ const topBanner = (props) => {
 						<div className="banner-content innerpage-banner">
 							<h1 className="banner-heading">{props.title}</h1>
 							<h2 className="banner-subheading">{props.subtitle}</h2>
-							<div class="banner-desc d-none d-sm-none d-md-none d-lg-block">Where exiting is the best option, we support your people and help you find the path to what’s next.</div>
+							<div class="banner-desc d-none d-sm-none d-md-none d-lg-block">{props.text}</div>
 						</div>
 					</div>
 					<div className={typeof props.equalWidth !== "undefined" && props.equalWidth ? "col-sm-12 col-md-12 col-lg-6 col-xl-6" : "col-sm-12 col-md-12 col-lg-6 col-xl-5"}>

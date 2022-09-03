@@ -3769,12 +3769,12 @@ img.recovery-partner-img {
     font-size: 44px;
     margin-bottom: 33px;
 }
-.ht_section .ht_right div {
+.ht_section .ht_right .ht_cnt {
     font-size: 18px;
     line-height: 1.55;
     margin: 0 0 27px;
 }
-.ht_section .ht_right div p {
+.ht_section .ht_right .ht_cnt p {
     margin: 0;
 }
 .ht_section .ht_right .btn {
@@ -3829,7 +3829,196 @@ img.recovery-partner-img {
     bottom: 0;
 }
 .voluntary_administration #banner-section {
-    padding-top: 90px;
+    padding-top: 75px;
+}
+.voluntary_administration #banner-section h1, .voluntary_administration #banner-section .banner-desc {
+    color: #eae7db;
+}
+.voluntary_administration .banner-image {
+    display: inline-block;
+}
+.voluntary_administration .banner-image img {
+    width: auto;
+}
+.voluntary_administration .liq_banner .banner-content .banner-desc {
+    font-size: 24px;
+    padding-right: 0;
+}
+.voluntary_administration .banner-content .banner-heading {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+.voluntary_administration .banner-content {
+    padding-right: 80px;
+}
+.liq_blocks.va_blocks .recovery-partner-title {
+    padding-top: 0;
+}
+.liq_blocks.va_blocks {
+    padding-top: 73px;
+    padding-bottom: 91px;
+}
+.wva_section {
+    overflow: hidden;
+    margin-bottom: 99px;
+}
+.wva_section:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+.wva_section .wva_left {
+    margin-left: 205px;
+    position: relative;
+    float: left;
+    margin-top: 71px;
+}
+.wva_section .wva_left:before {
+    background: #DBFD90;
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: calc(100% + 71px);
+    width: 400%;
+    z-index: -1;
+}
+.wva_section .wva_left:after {
+    background-color: #dde1e3;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 250%;
+    width: 400%;
+    z-index: -1;
+}
+.wva_section .wva_right {
+    max-width: 495px;
+    margin-left: auto;
+    padding-top: 158px;
+    padding-bottom: 63px;
+    float: right;
+}
+.wva_section .wva_right h3, .weva_section h3 {
+    color: #154f3a;
+    font-size: 44px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 0 0 18px;
+    padding: 0;
+}
+.wva_section .wva_right div, .weva_section .container div {
+    color: #000000;
+    font-size: 18px;
+    line-height: 1.55;
+    margin: 0;
+}
+.wva_section .wva_right div p, .weva_section div p {
+    margin: 0 0 28px;
+}
+
+.weva_section {
+    background-color: #eae7db;
+    padding-top: 88px;
+    padding-bottom: 112px;
+    margin-bottom: 99px;
+}
+.weva_section div {
+    letter-spacing: 0.18px;
+}
+.weva_section h3 {
+    margin-bottom: 28px;
+}
+.weva_section .btn {
+    margin-top: 9px;
+}
+
+.fd_section .wva_right div {
+    margin-bottom: 0;
+}
+
+.fd_section .wva_right h3 {
+    color: #eae7db;
+    margin: 0;
+}
+.fd_section.wva_section .wva_left:before {
+    background-color: #eae7db;
+    bottom: inherit;
+    top: 0;
+}
+.fd_section.wva_section .wva_left:after {
+    background-color: #1c5e48;
+    top: inherit;
+    bottom: 0;
+}
+.fd_section.wva_section .container {
+    display: flex;
+}
+.fd_section.wva_section .wva_right {
+    padding: 34px 0 0;
+}
+.fd_section.wva_section .wva_left {
+    margin-top: 0;
+}
+.fd_section.wva_section {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    margin-bottom: 0;
+}
+.voluntary_administration.liquidation .middleFullText.glpo_section .fullSubTxt {
+    font-size: 20px;
+    line-height: 1.5;
+    padding: 0 200px;
+}
+.glpo_reco_section.va_glpo_reco_section .stepsCol {
+    width: 25%;
+}
+.glpo_reco_section.va_glpo_reco_section .stepsCol:last-of-type {
+    padding: 0 40px;
+}
+.voluntary_administration.liquidation .middleFullText.glpo_section .fullTxt {
+    padding-top: 58px;
+}
+.voluntary_administration .glpo_reco_section.recovery-plan .num {
+    padding-left: 60px;
+    padding-right: 60px;
+}
+.voluntary_administration .glpo_section {
+    padding-bottom: 72px;
+}
+.fd_section.wva_section.dca_section .wva_left:after {
+    background-color: #eae7db;
+}
+.fd_section.wva_section.dca_section .wva_left:before {
+    background-color: #d0ff80;
+}
+.fd_section.dca_section .wva_right h3 {
+    color: #134a38;
+    margin: 0 0 26px;
+}
+.dca_section .wva_right h5 {
+    color: #134a38;
+    font-size: 24px;
+    margin: 0 0 22px;
+    padding: 0;
+}
+.dca_section .wva_right .btn {
+    margin-top: 0;
+}
+.fd_section.dca_section .wva_right {
+    padding-top: 0;
+    margin-top: -20px;
+}
+.wva_section.dca_section .wva_right div {
+    color: #134a38;
+}
+.fd_section.wva_section.dca_section {
+    margin-bottom: 91px;
+}
+.liquidation .recovery-plan.va_glpo_reco_section {
+    padding-bottom: 80px;
 }
 
 /****** BreakPoints *******/
@@ -3856,7 +4045,10 @@ img.recovery-partner-img {
     .liq_banner .banner-content .banner-desc {
         font-size: 18px;
     }
-    .liquidation .liq_rec_section.recovery-partner h1, .bib_section h3, .ols_section h3, .liquidation .middleFullText.glpo_section .fullTxt, .ht_section .ht_right h2, .bib_section#testimonials h2, .liquidation .news-articles h2, .banner-content .banner-heading {
+    .voluntary_administration .liq_banner .banner-content .banner-desc {
+        font-size: 21px;
+    }
+    .liquidation .liq_rec_section.recovery-partner h1, .bib_section h3, .ols_section h3, .liquidation .middleFullText.glpo_section .fullTxt, .ht_section .ht_right h2, .bib_section#testimonials h2, .liquidation .news-articles h2, .banner-content .banner-heading, .wva_section .wva_right h3, .weva_section h3, .voluntary_administration .banner-content .banner-heading {
         font-size: 40px;
     }
     .recovery-partner-title {
@@ -3882,6 +4074,30 @@ img.recovery-partner-img {
         font-size: 20px;
         margin-top: 30px;
         padding: 0 20px;
+    }
+    .wva_section .wva_right div p, .weva_section div p {
+        margin-bottom: 20px;
+    }
+    .wva_section {
+        margin-bottom: 60px;
+    }
+    .weva_section {
+        padding-top: 45px;
+        padding-bottom: 60px;
+        margin-bottom: 70px;
+    }
+    .voluntary_administration.liquidation .middleFullText.glpo_section .fullTxt {
+        padding-top: 30px;
+    }
+    .liquidation .recovery-plan.va_glpo_reco_section {
+        padding-bottom: 60px;
+    }
+    .dca_section .wva_right h5 {
+        font-size: 22px;
+    }
+    .wva_section .wva_right {
+        padding-top: 110px;
+        padding-bottom: 30px;
     }
 }
 @media screen and (max-width:1600px){
@@ -3911,7 +4127,7 @@ img.recovery-partner-img {
         font-size: 34px;
         margin-bottom: 25px;
     }
-    .wbl_section p, .ht_section .ht_right div {
+    .wbl_section p, .ht_section .ht_right .ht_cnt, .wva_section .wva_right div, .weva_section .container div {
         font-size: 17px;
     }
     .ols_section ul li h4 {
@@ -3920,7 +4136,7 @@ img.recovery-partner-img {
     .glpo_section {
         padding-top: 20px;
     }
-    .liquidation .middleFullText.glpo_section .fullSubTxt, .ht_section .ht_right .btn, .glpo_reco_section.recovery-plan .subTxt {
+    .liquidation .middleFullText.glpo_section .fullSubTxt, .voluntary_administration.liquidation .middleFullText.glpo_section .fullSubTxt, .ht_section .ht_right .btn, .glpo_reco_section.recovery-plan .subTxt {
         font-size: 18px;
     }
     .glpo_reco_section.recovery-plan .num {
@@ -3940,6 +4156,10 @@ img.recovery-partner-img {
     .liq_blocks {
         padding-top: 55px;
         padding-bottom: 10px;
+    }
+    .liq_blocks.va_blocks {
+        padding-top: 55px;
+        padding-bottom: 55px;
     }
     .ols_section {
         padding: 55px 0;
@@ -4000,7 +4220,7 @@ img.recovery-partner-img {
     .dpn_page .dpnfaq .accordion-button{
             font-size: 45px;
     }
-    .liquidation .liq_rec_section.recovery-partner h1, .bib_section h3, .ols_section h3, .liquidation .middleFullText.glpo_section .fullTxt, .ht_section .ht_right h2, .bib_section#testimonials h2, .liquidation .news-articles h2, .banner-content .banner-heading {
+    .liquidation .liq_rec_section.recovery-partner h1, .bib_section h3, .ols_section h3, .liquidation .middleFullText.glpo_section .fullTxt, .ht_section .ht_right h2, .bib_section#testimonials h2, .liquidation .news-articles h2, .banner-content .banner-heading, .wva_section .wva_right h3, .weva_section h3, .voluntary_administration .banner-content .banner-heading {
         font-size: 36px;
     }
     .liq_banner .banner-content .banner-heading {
@@ -4024,7 +4244,6 @@ img.recovery-partner-img {
     }
 }
 @media screen and (max-width:1400px){
-
     .identi_bannersec .banner-desc {
         padding-top: 0;
         padding-right: 5px;
@@ -4069,6 +4288,9 @@ img.recovery-partner-img {
     .ols_section ul li h4 {
         margin-bottom: 15px;
     }
+    .wva_section .wva_left {
+        margin-left: 50px;
+    }
 }
 @media screen and (max-width:1300px){
     .ps_bot .pack_inner h3 {
@@ -4088,6 +4310,15 @@ img.recovery-partner-img {
     }
     .ols_section {
         padding-bottom: 50px;
+    }
+    .dca_section .wva_right h5 {
+        font-size: 20px;
+    }
+    .voluntary_administration .glpo_section {
+        padding-bottom: 50px;
+    }
+    .voluntary_administration .liq_banner .banner-content .banner-desc {
+        font-size: 20px;
     }
 }
 @media (min-width:992px) and (max-width:1200px) {
@@ -4243,7 +4474,7 @@ img.recovery-partner-img {
     .liq_banner .banner-content .banner-subheading {
         font-size: 18px;
     }
-    .liquidation .liq_rec_section.recovery-partner h1, .bib_section h3, .ols_section h3, .liquidation .middleFullText.glpo_section .fullTxt, .ht_section .ht_right h2, .bib_section#testimonials h2, .liquidation .news-articles h2, .banner-content .banner-heading {
+    .liquidation .liq_rec_section.recovery-partner h1, .bib_section h3, .ols_section h3, .liquidation .middleFullText.glpo_section .fullTxt, .ht_section .ht_right h2, .bib_section#testimonials h2, .liquidation .news-articles h2, .banner-content .banner-heading, .wva_section .wva_right h3, .weva_section h3, .voluntary_administration .banner-content .banner-heading {
         font-size: 32px;
     }
     .liq_banner .banner-content .banner-heading {
@@ -4252,7 +4483,7 @@ img.recovery-partner-img {
     .liq_banner .banner-content .banner-subheading {
         margin-bottom: 10px;
     }
-    .liq_banner .banner-content .banner-desc {
+    .liq_banner .banner-content .banner-desc, .voluntary_administration .liq_banner .banner-content .banner-desc {
         font-size: 17px;
     }
     .liq_blocks .lb_txt {
@@ -4287,7 +4518,7 @@ img.recovery-partner-img {
     .liquidation .middleFullText.glpo_section .fullTxt {
         margin-bottom: 15px;
     }
-    .liquidation .middleFullText.glpo_section .fullSubTxt, .ht_section .ht_right .btn, .glpo_reco_section.recovery-plan .subTxt {
+    .liquidation .middleFullText.glpo_section .fullSubTxt, .voluntary_administration.liquidation .middleFullText.glpo_section .fullSubTxt, .ht_section .ht_right .btn, .glpo_reco_section.recovery-plan .subTxt {
         font-size: 17px;
     }
     .glpo_section {
@@ -4313,6 +4544,66 @@ img.recovery-partner-img {
     }
     .liquidation .news-articles .news-list {
         padding-bottom: 45px;
+    }
+    .voluntary_administration .banner-content .banner-heading {
+        margin-bottom: 20px;
+    }
+    .voluntary_administration .banner-image {
+        margin-top: 70px;
+    }
+    .wva_section .wva_left {
+        margin-left: 0;
+        margin-top: 40px;
+        width: 50%;
+    }
+    .wva_section .wva_left img {
+        max-width: 100%;
+    }
+    .wva_section .wva_right {
+        max-width: 50%;
+        padding-top: 70px;
+        padding-bottom: 15px;
+        padding-left: 30px;
+    }
+    .wva_section .wva_right div p, .weva_section div p {
+        margin-bottom: 15px;
+    }
+    .wva_section {
+        margin-bottom: 40px;
+    }
+    .weva_section {
+        padding-top: 35px;
+        padding-bottom: 40px;
+        margin-bottom: 40px;
+    }
+    .fd_section.wva_section {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .fd_section.wva_section .wva_right {
+        padding: 30px 0 0 30px;
+    }
+    .voluntary_administration.liquidation .middleFullText.glpo_section .fullSubTxt {
+        padding: 0;
+    }
+    .voluntary_administration .glpo_section {
+        padding-bottom: 40px;
+    }
+    .liquidation .recovery-plan.va_glpo_reco_section {
+        padding-bottom: 40px;
+    }
+    .dca_section .wva_right h5 {
+        font-size: 19px;
+    }
+    .fd_section.wva_section.dca_section {
+        margin-bottom: 60px;
+    }
+    .liquidation .people-list .listbg img {
+        height: auto;
+        min-height: inherit;
+    }
+    .liquidation .news-list h4 {
+        padding-top: 30px;
     }
 }
 @media screen and (max-width:991px){
@@ -4594,12 +4885,18 @@ img.recovery-partner-img {
         width: 100%;
         margin-bottom: 20px;
     }
-    .liq_blocks .col-lg-4:last-of-type {
+    .liq_blocks .col-lg-4:last-of-type, .liq_blocks.va_blocks .col-lg-4:last-of-type {
         margin-bottom: 0;
     }
     .liq_blocks {
         padding-top: 45px;
         padding-bottom: 15px;
+    }
+    .liq_blocks.va_blocks .col-lg-4 {
+        margin-bottom: 40px;
+    }
+    .liq_blocks.va_blocks {
+        padding-top: 45px;
     }
     .liq_blocks .lb_txt {
         padding-right: 0;
@@ -4607,6 +4904,12 @@ img.recovery-partner-img {
     }
     .liq_blocks .lb_img {
         width: 63px;
+    }
+    .wva_section .wva_left:after {
+        height: 300%;
+    }
+    .weva_section h3 {
+        margin-bottom: 20px;
     }
     .liq_blocks .lb_img {
         width: 63px;
@@ -4654,7 +4957,7 @@ img.recovery-partner-img {
     .ht_section .ht_right h2 {
         margin-bottom: 15px;
     }
-    .ht_section .ht_right div {
+    .ht_section .ht_right .ht_cnt {
         margin-bottom: 20px;
     }
     .liquidation .news-articles .mt-4 {
@@ -4690,6 +4993,74 @@ img.recovery-partner-img {
     .cu_fixed {
         bottom: 55px;
         right: 15px;
+    }
+    .voluntary_administration .banner-image:after {
+        top: 0;
+        bottom: inherit;
+    }
+    .voluntary_administration .banner-image:before {
+        top: inherit;
+        bottom: 0;
+    }
+    .voluntary_administration .banner-image {
+        margin-top: 0;
+        display: block;
+    }
+    .voluntary_administration .banner-content .banner-heading {
+        margin-bottom: 15px;
+    }
+    .voluntary_administration .banner-image img {
+        width: 100%;
+    }
+    .glpo_reco_section.va_glpo_reco_section .stepsCol {
+        width: 50%;
+    }
+    .glpo_reco_section.va_glpo_reco_section .stepsCol, .glpo_reco_section.va_glpo_reco_section .stepsCol:last-of-type {
+        padding: 0 15px;
+    }
+    .liquidation .recovery-plan.va_glpo_reco_section {
+        padding-bottom: 20px;
+    }
+    .fd_section.wva_section.dca_section .container {
+        flex-wrap: wrap;
+    }
+    .fd_section.dca_section .wva_left, .wva_section .wva_left {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+    .fd_section.dca_section .wva_right, .wva_section .wva_right {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0 20px 0 0;
+    }
+    .wva_section .wva_right {
+        padding: 0 0 15px 25px;
+    }
+    .wva_section .wva_left img {
+        width: 100%;
+    }
+    .dca_section .wva_right h5 {
+        font-size: 18px;
+    }
+    .fd_section.dca_section .wva_right h3 {
+        margin-bottom: 20px;
+    }
+    .dca_section .wva_right h5 {
+        margin-bottom: 15px;
+    }
+    .wva_section.dca_section .wva_left:before {
+        height: 500%;
+    }
+    .fd_section.wva_section.dca_section {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .fd_section.wva_section.dca_section {
+        margin-bottom: 40px;
+    }
+    .voluntary_administration.liquidation .middleFullText.glpo_section .fullTxt {
+        padding-top: 20px;
     }
 }
 @media screen and (max-width:767px){
@@ -4829,13 +5200,16 @@ img.recovery-partner-img {
     .ols_section {
         padding-bottom: 45px;
     }
-    .liquidation .liq_rec_section.recovery-partner h1, .bib_section h3, .ols_section h3, .liquidation .middleFullText.glpo_section .fullTxt, .ht_section .ht_right h2, .bib_section#testimonials h2, .liquidation .news-articles h2, .banner-content .banner-heading {
+    .liquidation .liq_rec_section.recovery-partner h1, .bib_section h3, .ols_section h3, .liquidation .middleFullText.glpo_section .fullTxt, .ht_section .ht_right h2, .bib_section#testimonials h2, .liquidation .news-articles h2, .banner-content .banner-heading, .wva_section .wva_right h3, .weva_section h3, .voluntary_administration .banner-content .banner-heading {
         font-size: 30px;
     }
-    .glpo_reco_section .stepsCol {
+    .glpo_reco_section .stepsCol, .glpo_reco_section.va_glpo_reco_section .stepsCol {
         width: 100%;
     }
-    .liquidation .middleFullText.glpo_section .fullSubTxt, .ht_section .ht_right .btn, .glpo_reco_section.recovery-plan .subTxt, .wbl_section p, .ht_section .ht_right div, .ols_section ul li div {
+    .liquidation .recovery-plan.va_glpo_reco_section {
+        padding-bottom: 30px;
+    }
+    .liquidation .middleFullText.glpo_section .fullSubTxt, .voluntary_administration.liquidation .middleFullText.glpo_section .fullSubTxt, .ht_section .ht_right .btn, .glpo_reco_section.recovery-plan .subTxt, .wbl_section p, .ht_section .ht_right .ht_cnt, .ols_section ul li div, .wva_section .wva_right div, .weva_section .container div {
         font-size: 16px;
         line-height: 1.5;
     }
@@ -4899,6 +5273,24 @@ img.recovery-partner-img {
         font-size: 17px;
         padding: 9px 30px 8px 55px;
     }
+    .fd_section.wva_section .container {
+        flex-wrap: wrap;
+    }
+    .fd_section.wva_section {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .fd_section.wva_section .wva_left:before {
+        bottom: 0;
+        top: inherit;
+    }
+    .fd_section.wva_section .wva_left:after {
+        bottom: inherit;
+        top: 0;
+    }
+    .fd_section.wva_section .wva_right {
+        padding: 0 0 0 30px;
+    }
 }
 @media screen and (max-width:667px){
     .ol_list h2 {
@@ -4948,7 +5340,7 @@ img.recovery-partner-img {
     #community-support .slide img {
         max-height: 358px;
     }
-    .liq_banner .row>*, .glpo_section .row>*, .bib_section .row>*, .glpo_reco_section .row>*, .liq_blocks .col-lg-4, .wbl_section .container, .ols_section .container, .ht_section .container, .liquidation .news-articles .container {
+    .liq_banner .row>*, .glpo_section .row>*, .bib_section .row>*, .glpo_reco_section .row>*, .liq_blocks .col-lg-4, .wbl_section .container, .ols_section .container, .ht_section .container, .liquidation .news-articles .container, .wva_section .container, .voluntary_administration .glpo_section .container, .weva_section .container, .va_blocks .container, .voluntary_administration.liquidation .liq_rec_section.recovery-partner {
         padding-right: 20px;
         padding-left: 20px;
     }
@@ -4976,6 +5368,23 @@ img.recovery-partner-img {
     .wbl_section {
         padding-bottom: 40px;
     }
+    .fd_section.wva_section .wva_right {
+        padding: 0 0 0 20px;
+    }
+    .fd_section.wva_section.dca_section, .fd_section.wva_section {
+        padding-top: 30px;
+    }
+    .wva_section .wva_left {
+        margin-top: 30px;
+    }
+    .voluntary_administration .glpo_section .container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .voluntary_administration.liquidation .middleFullText.glpo_section .fullTxt {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 @media screen and (max-width:533px){
     .ps_bot h2 {
@@ -4999,13 +5408,13 @@ img.recovery-partner-img {
     #community-support .slide img {
         max-height: 333px;
     }
-    .liq_blocks {
+    .liq_blocks, .liq_blocks.va_blocks {
         padding-top: 40px;
     }
     .testimonial-main1 p {
         font-size: 23px;
     }
-    .liquidation .liq_rec_section.recovery-partner h1, .bib_section h3, .ols_section h3, .liquidation .middleFullText.glpo_section .fullTxt, .ht_section .ht_right h2, .bib_section#testimonials h2, .liquidation .news-articles h2, .banner-content .banner-heading {
+    .liquidation .liq_rec_section.recovery-partner h1, .bib_section h3, .ols_section h3, .liquidation .middleFullText.glpo_section .fullTxt, .ht_section .ht_right h2, .bib_section#testimonials h2, .liquidation .news-articles h2, .banner-content .banner-heading, .wva_section .wva_right h3, .weva_section h3, .voluntary_administration .banner-content .banner-heading {
         font-size: 28px;
         line-height: 1.4;
     }
@@ -5045,6 +5454,9 @@ img.recovery-partner-img {
     .liquidation .news-articles p {
         padding-right: 0;
     }
+    .liq_blocks .lb_img {
+        margin-right: 30px;
+    }
 }
 @media screen and (max-width:440px){
     .dpnbanner_sec h1.banner-heading {
@@ -5071,6 +5483,12 @@ img.recovery-partner-img {
         width: 40px;
         height: 40px;
         padding: 2px;
+    }
+    .voluntary_administration .banner-content.innerpage-banner {
+        margin-bottom: 30px;
+    }
+    .voluntary_administration .glpo_reco_section.recovery-plan .subTxt {
+        padding: 0;
     }
 }
 @media screen and (max-width:414px){
