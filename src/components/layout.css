@@ -5233,6 +5233,7 @@ img.recovery-partner-img {
         max-width: 400px;
         margin: auto;
         display: block;
+        width: 100%;
     }
     .ht_section:after {
         display: none;
@@ -5290,6 +5291,9 @@ img.recovery-partner-img {
     }
     .fd_section.wva_section .wva_right {
         padding: 0 0 0 30px;
+    }
+    .wva_section .wva_left:after {
+        height: 400%;
     }
 }
 @media screen and (max-width:667px){
@@ -5415,8 +5419,8 @@ img.recovery-partner-img {
         font-size: 23px;
     }
     .liquidation .liq_rec_section.recovery-partner h1, .bib_section h3, .ols_section h3, .liquidation .middleFullText.glpo_section .fullTxt, .ht_section .ht_right h2, .bib_section#testimonials h2, .liquidation .news-articles h2, .banner-content .banner-heading, .wva_section .wva_right h3, .weva_section h3, .voluntary_administration .banner-content .banner-heading {
-        font-size: 28px;
-        line-height: 1.4;
+        font-size: 26px;
+        line-height: 1.2;
     }
     .liquidation .news-articles h2 {
         margin-bottom: 0 !important;
