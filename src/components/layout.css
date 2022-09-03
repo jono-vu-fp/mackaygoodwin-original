@@ -3534,7 +3534,8 @@ img.recovery-partner-img {
     padding-left: 0;
 }
 #banner-section.liq_banner {
-    padding-bottom: 85px;
+    padding-bottom: 70px;
+    padding-top: 104px;
 }
 .liq_banner .banner-content {
     margin-top: 0;
@@ -3819,12 +3820,12 @@ img.recovery-partner-img {
     border-radius: 30px;
 }
 
-.voluntary_administration .banner-image:before {
+.liquidation.voluntary_administration .banner-image:before {
     top: 0;
     bottom: inherit;
     background: #154f3a;
 }
-.voluntary_administration .banner-image:after {
+.liquidation.voluntary_administration .banner-image:after {
     top: inherit;
     bottom: 0;
 }
@@ -3834,11 +3835,8 @@ img.recovery-partner-img {
 .voluntary_administration #banner-section h1, .voluntary_administration #banner-section .banner-desc {
     color: #eae7db;
 }
-.voluntary_administration .banner-image {
+.liquidation .banner-image{
     display: inline-block;
-}
-.voluntary_administration .banner-image img {
-    width: auto;
 }
 .voluntary_administration .liq_banner .banner-content .banner-desc {
     font-size: 24px;
@@ -4548,7 +4546,7 @@ img.recovery-partner-img {
     .voluntary_administration .banner-content .banner-heading {
         margin-bottom: 20px;
     }
-    .voluntary_administration .banner-image {
+    .liquidation .banner-image{
         margin-top: 70px;
     }
     .wva_section .wva_left {
@@ -4994,22 +4992,22 @@ img.recovery-partner-img {
         bottom: 55px;
         right: 15px;
     }
-    .voluntary_administration .banner-image:after {
+    .liquidation.voluntary_administration .banner-image:after {
         top: 0;
         bottom: inherit;
     }
-    .voluntary_administration .banner-image:before {
+    .liquidation.voluntary_administration .banner-image:before {
         top: inherit;
         bottom: 0;
     }
-    .voluntary_administration .banner-image {
+    .liquidation .banner-image{
         margin-top: 0;
         display: block;
     }
     .voluntary_administration .banner-content .banner-heading {
         margin-bottom: 15px;
     }
-    .voluntary_administration .banner-image img {
+    .liquidation .banner-imageimg {
         width: 100%;
     }
     .glpo_reco_section.va_glpo_reco_section .stepsCol {
