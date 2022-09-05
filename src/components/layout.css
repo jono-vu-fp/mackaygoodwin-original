@@ -4223,6 +4223,153 @@ img.recovery-partner-img {
 .bs_section .bs_right img {
     max-width: 100%;
 }
+.br_popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    display: none;
+}
+.br_popup.show {
+    display: flex;
+}
+.br_popup .brpp_outer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+.br_popup .brp_inner {
+    width: 1195px;
+    background-color: #eae7db;
+    position: relative;
+    z-index: 2;
+    max-width: 90%;
+}
+.br_popup .brp_inner .brp_left {
+    width: calc(100% - 500px);
+    padding: 51px 40px 46px;
+}
+.br_popup .brp_inner .brp_left h2 {
+    color: #000000;
+    font-size: 36px;
+    margin: 0 0 9px;
+    padding: 0;
+}
+.br_popup .brp_inner .brp_left .brp_desc {
+    color: #000000;
+    font-size: 18px;
+    line-height: 1.55;
+    margin: 0 0 22px;
+    padding: 0;
+}
+.br_popup .brp_inner .brp_left .brp_desc p {
+    margin-bottom: 0;
+}
+.br_popup .brp_inner .brp_left ul {
+    padding: 0;
+    margin: 0;
+}
+.br_popup .brp_inner .brp_left ul li {
+    padding: 0;
+    margin: 0 0 10px;
+    list-style: none;
+    width: 48.78%;
+    float: left;
+}
+.br_popup .brp_inner .brp_left ul li:nth-child(2n+0){
+    float: right;
+}
+.br_popup .brp_inner .brp_left ul li:nth-child(2n+1){
+    clear: left;
+}
+.br_popup .brp_inner .brp_left ul li:nth-child(7), .br_popup .brp_inner .brp_left ul li:nth-child(8){
+    width: 100%;
+}
+.br_popup .brp_inner .brp_left label {
+    color: #4a4a4a;
+    font-size: 15px;
+    margin: 0 0 1px;
+}
+.br_popup .brp_inner .brp_left input, .br_popup .brp_inner .brp_left textarea, .br_popup .brp_inner .brp_left select {
+    margin: 0;
+    background-color: #ffffff;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 15px;
+    font-size: 16px;
+    border: 0;
+}
+.br_popup .brp_inner .brp_left textarea {
+    height: 110px;
+}
+.br_popup .brp_inner .brp_left button {
+    margin: 0;
+}
+.br_popup .brp_inner .brp_right img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 500px;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.br_popup .brp_inner .brp_left:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+.brp_inner .brp_left ul li:nth-child(8) {
+    padding-top: 10px;
+    margin-bottom: 0;
+}
+.br_popup .brp_inner .brp_left .select_dd {
+    position: relative;
+}
+.br_popup .brp_inner .brp_left .select_dd:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 22px;
+    width: 10px;
+    height: 7px;
+    bottom: 0;
+    margin: auto;
+    background-image: url(../images/arw-icon.svg);
+    pointer-events: none;
+}
+.br_popup .brp_inner .brp_left select {
+    appearance: none;
+    -webkit-appearance: none;
+}
+.br_popup .brpp_close {
+    color: #1c5e48;
+    font-family: 'Sohne-Buch';
+    font-size: 48px;
+    font-weight: 400;
+    position: absolute;
+    top: 8px;
+    right: 20px;
+    line-height: 1;
+    z-index: 99;
+    cursor: pointer;
+}
+.br_popup .alert {
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
 /****** BreakPoints *******/
 /****** Responsive Start *******/
 @media screen and (min-width:1400px){
@@ -4338,6 +4485,19 @@ img.recovery-partner-img {
     }
     .bankruptcy .wva_section .wva_right {
         padding-bottom: 60px;
+    }
+    .br_popup .brp_inner .brp_left .brp_desc {
+        font-size: 17px;
+    }
+    .br_popup .brp_inner .brp_left {
+        padding: 35px;
+    }
+    .br_popup .brp_inner .brp_left input, .br_popup .brp_inner .brp_left select {
+        height: 40px;
+        line-height: 40px;
+    }
+    .br_popup .brp_inner .brp_left .select_dd:after {
+        right: 15px;
     }
 }
 @media screen and (max-width:1600px){
@@ -4530,6 +4690,17 @@ img.recovery-partner-img {
     }
     .bs_section .bs_left p {
         margin-bottom: 20px;
+    }
+    .br_popup .brp_inner .brp_left h2 {
+        font-size: 28px;
+        margin-bottom: 3px;
+    }
+    .br_popup .brp_inner .brp_left .brp_desc {
+        margin-bottom: 15px;
+        font-size: 16px;
+    }
+    .br_popup .brp_inner .brp_left {
+        padding: 25px 30px 30px;
     }
 }
 @media screen and (max-width:1400px){
@@ -4975,6 +5146,12 @@ img.recovery-partner-img {
     }
     .bankruptcy.service .accordion-button:before {
         top: 1px;
+    }
+    .br_popup .brp_inner .brp_right img {
+        width: 400px;
+    }
+    .br_popup .brp_inner .brp_left {
+        width: calc(100% - 400px);
     }
 }
 @media screen and (max-width:991px){
@@ -5478,6 +5655,32 @@ img.recovery-partner-img {
     .bankruptcy.service .accordion-body p {
         font-size: 16px;
     }
+    .br_popup {
+        z-index: 99999999;
+        height: auto;
+        padding-top: 30px;
+    }
+    .br_popup .brp_inner .brp_right img {
+        width: 300px;
+    }
+    .br_popup .brp_inner .brp_left {
+        width: calc(100% - 300px);
+    }
+    .br_popup .brpp_outer {
+        position: fixed;
+    }
+    .br_popup .brp_inner .brp_right {
+        display: none;
+    }
+    .br_popup .brp_inner .brp_left {
+        width: 100%;
+    }
+    .br_popup .brpp_close {
+        font-size: 38px;
+    }
+    .brp_inner .brp_left ul li:nth-child(8) {
+        padding-top: 0;
+    }
 }
 @media screen and (max-width:767px){
 
@@ -5767,6 +5970,9 @@ img.recovery-partner-img {
     .bankruptcy #why-mg .container, .bs_section .container, .bankruptcy .news-list .container {
         padding: 0 20px;
     }
+    .br_popup {
+        position: absolute;
+    }
 }
 @media screen and (max-width:667px){
     .ol_list h2 {
@@ -5865,6 +6071,12 @@ img.recovery-partner-img {
         font-size: 16px;
         padding: 9px 30px 7px;
     }
+    .br_popup .brp_inner .brp_left {
+        padding: 25px 20px 20px;
+    }
+    .br_popup .brpp_close {
+        font-size: 30px;
+    }
 }
 @media screen and (max-width:533px){
     .ps_bot h2 {
@@ -5919,6 +6131,15 @@ img.recovery-partner-img {
     .bankruptcy #why-mg {
         padding-top: 30px;
         padding-bottom: 40px;
+    }
+    .br_popup .brp_inner .brp_left ul li {
+        width: 100%;
+    }
+    .br_popup .brp_inner .brp_left {
+        padding: 20px;
+    }
+    .br_popup .brp_inner .brp_left h2 {
+        font-size: 24px;
     }
 }
 @media screen and (max-width:480px){
