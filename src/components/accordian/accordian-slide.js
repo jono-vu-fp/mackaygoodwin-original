@@ -1,6 +1,22 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import $ from "jquery"
 const AccordianSlide = (props) => {
+  // const [cls,setCls] = React.useState('');
+
+  const setCls = function(this_ele){
+    console.log($(this_ele).html());
+    if($(this_ele).closest('.accordion-item').hasClass('active')){
+      console.log(222);
+      $(this_ele).closest('.accordion-item').removeClass('active');
+    } else {
+      console.log(333);
+      $('.accordion-item').removeClass('active');
+      $(this_ele).closest('.accordion-item').addClass('active');
+    }
+  }
+  const setRmCls = function(){
+  }
   React.useEffect(() => {
     if(window.location.hash=='#heading3'){
       document.getElementById('heading3').children[0].classList.remove('collapsed');
@@ -21,7 +37,7 @@ const AccordianSlide = (props) => {
         aria-controls={"collapse" + props.keyloc}
         onMouseOver={(thisa) => { thisa.target.style.color = props.textHoverColor }}
         onMouseOut={(thisa) => { !thisa.target.classList.contains('collapsed') ? thisa.target.style.color = props.textHoverColor : thisa.target.style.color = props.textColor }}
-        onClick={(thisa) => { const col = thisa.target.classList.contains('collapsed') ? props.textColor : props.textHoverColor; thisa.target.style.color = col }}
+        onClick={(thisa) => { const col = thisa.target.classList.contains('collapsed') ? props.textColor : props.textHoverColor; thisa.target.style.color = col; setRmCls(); setCls(thisa.target) }}
       >
         {props.title} <sup>{props.tag && props.tag !== null ? props.tag : ""}</sup>
       </button>

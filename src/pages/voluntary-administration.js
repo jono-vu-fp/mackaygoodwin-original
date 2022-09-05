@@ -206,6 +206,10 @@ const ConsultBusiness = ({ data }) => {
 export const query = graphql`
   {
     wpPage(title: {eq: "Voluntary Administration"}) {
+      metaFields {
+        metaDescription
+        metaTitle
+      }
       voluntaryadministration {
         bannerDesc
         bannerImage {

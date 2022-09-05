@@ -25,6 +25,7 @@
     "gatsby-source-filesystem": "^3.6.0",
     "gatsby-source-wordpress": "next",
     "gatsby-transformer-sharp": "^3.6.0",
+    "jquery": "^3.6.1",
     "lottie-web": "^5.8.1",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
