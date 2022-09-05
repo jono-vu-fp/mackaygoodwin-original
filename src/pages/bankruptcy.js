@@ -40,7 +40,7 @@ const Bankruptcy = ({ data }) => {
         breadCrumbs={breadCrumbs}
         equalWidth={true}
       />
-      <div className="liq_blocks va_blocks">
+      <div className="liq_blocks va_blocks br_blocks">
         <div className="container">
           <div className="row">
               {/* <h3>{data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.tagline}</h3> */}
