@@ -9,6 +9,7 @@ import Accordian from "../components/accordian/accordian-bankruptcy"
 import FullText from "../components/full-text"
 import ReciveryPlan from "../components/recovery-plan"
 import News from "../components/news/list"
+import GetInTouch from "../components/get-in-touch-bankruptcy-popup"
 
 const Bankruptcy = ({ data }) => {
   let whyMG = [];
@@ -123,6 +124,12 @@ const Bankruptcy = ({ data }) => {
         <div className="cu_fixed">
             <a href="/contact"><img src="/images/sophie-img.png" />Contact Us</a>
         </div>
+
+        <GetInTouch
+          title={data.wpPage.bankruptcy.ppTitle}
+          text={data.wpPage.bankruptcy.ppDescription}
+          image={data.wpPage.bankruptcy.ppImage}
+        />
     </Layout>
   </div>
   )
@@ -179,6 +186,12 @@ export const query = graphql`
           mediaItemUrl
         }
         bsContent
+        ppTitle
+        ppDescription
+        ppImage {
+          altText
+          mediaItemUrl
+        }
       }
     }
     allWp {
