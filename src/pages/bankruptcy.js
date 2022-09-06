@@ -93,12 +93,6 @@ const Bankruptcy = ({ data }) => {
           customClass={'glpo_reco_section va_glpo_reco_section'}
         />
 
-        <div className="weva_section cm_cnt">
-          <div className="container">
-              <div dangerouslySetInnerHTML={{ __html: data.wpPage.bankruptcy.cmContent }}></div>
-          </div>
-        </div>
-
         <Accordian
           title={data.wpPage.bankruptcy.brFaqsTitle}
           showEnquireButton={false}

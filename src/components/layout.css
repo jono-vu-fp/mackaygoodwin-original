@@ -3871,6 +3871,7 @@ img.recovery-partner-img {
     position: relative;
     float: left;
     margin-top: 71px;
+    width: 526px;
 }
 .wva_section .wva_left:before {
     background: #DBFD90;
@@ -3891,6 +3892,11 @@ img.recovery-partner-img {
     height: 250%;
     width: 400%;
     z-index: -1;
+}
+.wva_section iframe {
+    display: block;
+    width: 100%;
+    height: 296px;
 }
 .wva_section .wva_right {
     max-width: 495px;
@@ -5154,6 +5160,9 @@ img.recovery-partner-img {
     .br_popup .brp_inner .brp_left {
         width: calc(100% - 400px);
     }
+    .wva_section iframe {
+        height: 263px;
+    }
 }
 @media screen and (max-width:991px){
     .identi_bannersec h1.banner-heading sup {
@@ -5682,6 +5691,9 @@ img.recovery-partner-img {
     .brp_inner .brp_left ul li:nth-child(8) {
         padding-top: 0;
     }
+    .wva_section iframe {
+        height: 390px;
+    }
 }
 @media screen and (max-width:767px){
 
@@ -5974,6 +5986,9 @@ img.recovery-partner-img {
     .br_popup {
         position: absolute;
     }
+    .wva_section iframe {
+        height: 290px;
+    }
 }
 @media screen and (max-width:667px){
     .ol_list h2 {
@@ -6078,6 +6093,9 @@ img.recovery-partner-img {
     .br_popup .brpp_close {
         font-size: 30px;
     }
+    .wva_section iframe {
+        height: 277px;
+    }
 }
 @media screen and (max-width:533px){
     .ps_bot h2 {
@@ -6141,6 +6159,9 @@ img.recovery-partner-img {
     }
     .br_popup .brp_inner .brp_left h2 {
         font-size: 24px;
+    }
+    .wva_section iframe {
+        height: 247px;
     }
 }
 @media screen and (max-width:480px){
@@ -6215,6 +6236,9 @@ img.recovery-partner-img {
     .voluntary_administration .glpo_reco_section.recovery-plan .subTxt {
         padding: 0;
     }
+    .wva_section iframe {
+        height: 210px;
+    }
 }
 @media screen and (max-width:414px){
     .ps_bot h2 {
@@ -6224,6 +6248,14 @@ img.recovery-partner-img {
 @media screen and (max-width:375px){
     #community-support .slide img {
         max-height: 230px;
+    }
+    .wva_section iframe {
+        height: 188px;
+    }
+}
+@media screen and (max-width:360px){
+    .wva_section iframe {
+        height: 180px;
     }
 }
 

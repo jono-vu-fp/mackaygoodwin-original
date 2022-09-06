@@ -90,7 +90,7 @@ const ConsultBusiness = ({ data }) => {
       <div className="wva_section">
         <div className="container">
           <div className="wva_left">
-            <img src={data.wpPage.voluntaryadministration.wvaImage.mediaItemUrl} alt={data.wpPage.voluntaryadministration.wvaImage.altText} />
+            <iframe src={'https://www.youtube.com/embed/'+data.wpPage.voluntaryadministration.wvaVideo} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div className="wva_right">
             <h3>{data.wpPage.voluntaryadministration.wvaTitle}</h3>
@@ -235,10 +235,7 @@ export const query = graphql`
         vaLiquidationDescription
         wvaTitle
         wvaDescription
-        wvaImage {
-            altText
-            mediaItemUrl
-          }
+        wvaVideo
         fdContent
         fdImage {
             altText
