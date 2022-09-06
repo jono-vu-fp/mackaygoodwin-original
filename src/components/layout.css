@@ -4066,6 +4066,7 @@ img.recovery-partner-img {
 .bankruptcy .wva_section .wva_left {
     margin-top: 0;
     margin-left: 175px;
+    width: auto;
 }
 .bankruptcy .wva_section .wva_right {
     max-width: 730px;
