@@ -32,9 +32,7 @@ const ConsultBusiness = ({ data }) => {
 
   let businessData = [];
   data.allWpOurpeople.nodes.map((d) => {
-    if(d.title == 'Andrew Ngo' || d.title == 'Grahame Ward' || d.title == 'Kate McMahon'){
-      return businessData.push({ title: d.title, subtitle: d.backInBusiness.designation, text: d.backInBusiness.location, certification: d.backInBusiness.certification, content: d.content, linkedin: d.backInBusiness.linkedin, email: d.backInBusiness.email, img: d.featuredImage?.node, designationType: d.backInBusiness.designationType });
-    }
+      return businessData.push({ title: d.title, subtitle: d.backInBusiness.designation, text: d.backInBusiness.location, certification: d.backInBusiness.certification, content: d.content, linkedin: d.backInBusiness.linkedin, email: d.backInBusiness.email, img: d.featuredImage?.node, designationType: d.backInBusiness.designationType, registeredLiquidators: d.backInBusiness.registeredLiquidators });
   })
 
   const breadCrumbs = [
@@ -326,6 +324,7 @@ export const query = graphql`
           designationType
           linkedin
           email
+          registeredLiquidators
         }
         featuredImage {
           node {

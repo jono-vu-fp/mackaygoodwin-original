@@ -3791,9 +3791,6 @@ img.recovery-partner-img {
     margin: 0 0 18px !important;
     padding: 0;
 }
-.liquidation .news-articles .mt-4 {
-    margin-top: 0 !important;
-}
 .liquidation .news-articles .fullTxt {
     display: none;
 }
@@ -5520,7 +5517,8 @@ img.recovery-partner-img {
         margin-bottom: 20px;
     }
     .liquidation .news-articles .mt-4 {
-        margin-bottom: 30px;
+        margin-bottom: 10px;
+        padding: 0;
     }
     .bib_section h2 {
         padding: 0 !important;

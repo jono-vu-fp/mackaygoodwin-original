@@ -5,10 +5,12 @@ import { Link } from "gatsby";
 
 const settings = {
   arrows: false,
-  infinite: false,
+  infinite: true,
   slidesToShow: 3,
   slidesToScroll: 3,
   dots: true,
+  autoplay: true,
+  autoplaySpeed: 3000,
   responsive: [
     {
       breakpoint: 1199,
@@ -77,7 +79,8 @@ const PeopleList = (props) => {
       <div className="container">
         <div className="row people-list">
           {props.data?.map((d, key) => {
-            return <div className="col-lg-4 col-md-12  mt-4" key={key}>
+            return !d.registeredLiquidators? "" : 
+            <div className="col-lg-4 col-md-12  mt-4" key={key}>
               <div className="listbg">
                 <img className="img-fluid" style={{ width: "100%" }} src={d.img?.mediaItemUrl} alt={d.img?.altTxt} />
                 <h4 className="px-4">{d.title}</h4>
@@ -96,7 +99,8 @@ const PeopleList = (props) => {
       <div className="row">
         <Slider {...settings} className="testimonial-slider people-slider">
           {props.data?.map((d, key) => {
-            return <div className="col-lg-4 col-md-12  mt-4 pe-4" key={key}>
+            return !d.registeredLiquidators? "" : 
+            <div className="col-lg-4 col-md-12  mt-4 pe-4" key={key}>
               <div className="listbg">
                 <img className="img-fluid" style={{ width: "100%" }} src={d.img?.mediaItemUrl} alt={d.img?.altTxt} />
                 <h4 className="px-4">{d.title}</h4>
