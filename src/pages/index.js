@@ -151,11 +151,16 @@ const IndexPage = ({ data }) => {
           </Slider>
 
         </section>
-        <div ref={observe} className={serviceEnter}>
-          <Services
-            serviceTitle={data.wpPage.hpOptions.serviceTitle}
-            data={data.wpPage.hpOptions.services}
-          />
+        
+        <div className="home_services">
+          <div className="container">
+            <h2>{data.wpPage.hpOptions.serviceTitle}</h2>
+            <ul>
+              {data.wpPage.hpOptions.services.map((d, key) => {
+                return <li><div className="hs_img"><img src={d.serviceImage.mediaItemUrl} alt="" /></div><div className="hs_cnt"><h4>{d.serviceTitle}</h4><p>{d.serviceDecription}</p><Link className="btn btn-primary" to={d.servicePageUrl}>Learn more</Link></div></li>
+              })}
+            </ul>
+          </div>
         </div>
         <Accordian
           title={data.wpPage.hpOptions.whyMgTitle}

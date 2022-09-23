@@ -4375,6 +4375,57 @@ img.recovery-partner-img {
     font-size: 14px;
     margin-top: 5px;
 }
+.home_services {
+    padding-top: 138px;
+    padding-bottom: 90px;
+}
+.home_services h2 {
+    color: #000000;
+    font-size: 36px;
+    font-weight: 400;
+    margin: 0 0 53px;
+}
+.home_services ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+.home_services ul li {
+    padding: 0;
+    margin: 0 1.48% 0 0;
+    background-color: #dde1e3;
+    list-style: none;
+    max-width: 32.3%;
+}
+.home_services ul li img {
+    width: 100%;
+}
+.home_services ul li:hover {
+    background-color: #ebe9de;
+}
+.home_services ul li:last-child {
+    margin-right: 0;
+}
+.home_services ul li .hs_cnt {
+    padding: 45px 42px 57px;
+}
+.home_services ul li .hs_cnt h4 {
+    color: #000000;
+    font-family: 'reckless_neuesemibold';
+    font-size: 30px;
+    margin: 0 0 20px;
+}
+.home_services ul li .hs_cnt p {
+    color: #000000;
+    font-size: 16px;
+    line-height: 1.75;
+    margin: 0 0 20px;
+    min-height: 84px;
+}
+.home_services ul li .hs_cnt .btn {
+    margin-top: 0;
+}
+
 /****** BreakPoints *******/
 /****** Responsive Start *******/
 @media screen and (min-width:1400px){
@@ -4504,6 +4555,20 @@ img.recovery-partner-img {
     .br_popup .brp_inner .brp_left .select_dd:after {
         right: 15px;
     }
+    .home_services {
+        padding-top: 110px;
+        padding-bottom: 70px;
+    }
+    .home_services h2 {
+        margin-bottom: 35px;
+        font-size: 34px;
+    }
+    .home_services ul li .hs_cnt h4 {
+        font-size: 28px;
+    }
+    .home_services ul li .hs_cnt {
+        padding: 40px 40px 50px;
+    }
 }
 @media screen and (max-width:1600px){
     
@@ -4627,6 +4692,9 @@ img.recovery-partner-img {
     .bankruptcy .weva_section .btn, .bankruptcy .wva_section .wva_right .btn {
         font-size: 18px;
     }
+    .home_services {
+        padding-top: 90px;
+    }
 }
 @media screen and (max-width:1500px){
     .brokermid_sec h2{ font-size: 42px; }
@@ -4707,6 +4775,13 @@ img.recovery-partner-img {
     .br_popup .brp_inner .brp_left {
         padding: 25px 30px 30px;
     }
+    .home_services {
+        padding-top: 70px;
+    }
+    .home_services h2 {
+        margin-bottom: 30px;
+        font-size: 32px;
+    }
 }
 @media screen and (max-width:1400px){
     .identi_bannersec .banner-desc {
@@ -4782,6 +4857,18 @@ img.recovery-partner-img {
     }
     .bankruptcy .wva_section .wva_right {
         padding-bottom: 50px;
+    }
+    .home_services ul li .hs_cnt {
+        padding: 30px;
+    }
+    .home_services ul li .hs_cnt h4 {
+        font-size: 26px;
+    }
+    .home_services {
+        padding-bottom: 60px;
+    }
+    .home_services ul li .hs_cnt p {
+        min-height: 112px;
     }
 }
 @media screen and (max-width:1300px){
@@ -5160,6 +5247,12 @@ img.recovery-partner-img {
     }
     .wva_section iframe {
         height: 263px;
+    }
+    .home_services ul li .hs_cnt h4 {
+        font-size: 24px;
+    }
+    .home_services ul li .hs_cnt p {
+        min-height: 140px;
     }
 }
 @media screen and (max-width:991px){
@@ -5693,6 +5786,29 @@ img.recovery-partner-img {
     .wva_section iframe {
         height: 390px;
     }
+    .home_services {
+        padding-top: 45px;
+    }
+    .home_services h2 {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+    .home_services ul {
+        flex-wrap: wrap;
+    }
+    .home_services ul li {
+        max-width: 48%;
+        margin: 0 4% 4% 0;
+    }
+    .home_services ul li:nth-child(2n+0) {
+        margin-right: 0;
+    }
+    .home_services ul li .hs_cnt p {
+        min-height: 112px;
+    }
+    .home_services {
+        padding-bottom: 30px;
+    }
 }
 @media screen and (max-width:767px){
 
@@ -5988,6 +6104,16 @@ img.recovery-partner-img {
     .wva_section iframe {
         height: 290px;
     }
+    .home_services ul li {
+        max-width: 100%;
+        margin: 0 0 30px;
+    }
+    .home_services ul li .hs_cnt p {
+        min-height: inherit;
+    }
+    .home_services {
+        padding-bottom: 20px;
+    }
 }
 @media screen and (max-width:667px){
     .ol_list h2 {
@@ -6162,6 +6288,9 @@ img.recovery-partner-img {
     .wva_section iframe {
         height: 247px;
     }
+    .home_services {
+        padding-top: 35px;
+    }
 }
 @media screen and (max-width:480px){
     .dpn_page .accordion-button {
@@ -6201,6 +6330,9 @@ img.recovery-partner-img {
     }
     .bankruptcy.service .accordion-button:before {
         top: 5px;
+    }
+    .home_services ul li .hs_cnt {
+        padding: 25px 20px;
     }
 }
 @media screen and (max-width:440px){

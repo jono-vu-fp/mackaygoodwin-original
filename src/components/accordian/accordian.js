@@ -5,7 +5,7 @@ const Accordian = (props) => {
   const isBrowser = typeof window !== "undefined"
   const [sheight,setHeight] = React.useState(isBrowser?window.scrollY:0);
 
-  React.useEffect(() => {
+  /*React.useEffect(() => {
     const onScroll = () => {
       const scrollPosition = window.scrollY;
       setHeight(scrollPosition);
@@ -24,7 +24,7 @@ const Accordian = (props) => {
       document.removeEventListener("scroll", onScroll);
     };
 
-  }, []);
+  }, []);*/
 
 
   return <section id="why-mg" className={sheight>767 && sheight<2901?props.className+' why-mg-fixed':props.className}>
