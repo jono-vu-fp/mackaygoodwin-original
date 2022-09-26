@@ -5,7 +5,9 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import TopBanner from "../components/top-banner"
 import CurveLeft from "../components/curve-left"
-import GetInTouch from "../components/get-in-touch"
+import ImageLeftLayout from "../components/image-left-layout"
+import ImageRightLayout from "../components/image-right-layout"
+import GetInTouch from "../components/get-in-touch3"
 import Accordian from "../components/accordian/accordian"
 import CapabilityForm from "../components/capability-form"
 import CapabilityFormNew from "../components/capability-form-new"
@@ -24,7 +26,9 @@ const Corporate = ({ data }) => {
   ]
   // const formDetailContext = React.createContext(null);
   const [fromDetails, setFormDetails] = React.useState(0);
+  const [fromDetails2, setFormDetails2] = React.useState(0);
   const value = { fromDetails, setFormDetails };
+  const value2 = { fromDetails2, setFormDetails2 };
   return (<div className=" service corporate-advisory">
     <Layout>
       <Seo title={data.wpPage.metaFields?.metaTitle} description={data.wpPage.metaFields?.metaDescription} />
@@ -39,56 +43,36 @@ const Corporate = ({ data }) => {
       <FullText
         text={data.wpPage.corporateAdvisoryPageOptions.pageTagline}
       />
-      <Accordian
-        title={''}
-        showEnquireButton={true}
-        data={whyMG}
-      />
-
-      <section class="sec_links">
-      <div class="container position-relative">
-       <div class="row">
-         <div class="col-sm-12">
-          <ul class="d-flex justify-content-center">
-            <li>
-             <Link to="#capability">Capability Statement</Link> 
-            </li>
-            <li>
-             <Link to="#financial">New Financial Year Guide</Link> 
-            </li>
-              <li>
-               <Link to="#vCFO">Virtual Chief Financial Officer (vCFO)</Link> 
-            </li>
-          </ul>
-          </div>
-          </div>
-        </div>
-    </section>
-
-    <a id="capability"></a>
+      
+      <div class="ca_main">
+      {data.wpPage.corporateAdvisoryPageOptions.qA.map((d,key) => {
+          return <div className="ca_sec"><div className="container"><h2>{d.question}</h2><div className="ca_txt" dangerouslySetInnerHTML={{ __html: d.answer }}></div><Link className="btn btn-primary" to={"#get-in-touch"}>Enquire</Link></div></div>
+      })}
+      </div>
       <formDetailContext.Provider value={value}>
-        <CurveLeft
+        <ImageLeftLayout
           title={data.wpPage.corporateAdvisoryPageOptions?.croTitle}
           text={data.wpPage.corporateAdvisoryPageOptions?.croDesc}
           img={data.wpPage.corporateAdvisoryPageOptions?.officerimage}
-          btnTxt={'Download Now'}
+          btnTxt={"Download Now"}
           btnLink={""}
           btnClick={() => { setFormDetails(1) }}
+          addClass={"ill_section"}
         />
         <CapabilityForm
           title={'Download Capability Statement'}
           text={'Download your free copy today and get on the path to recovery'}
         />
       </formDetailContext.Provider>
-      <a id="financial"></a>
-      <formDetailContext.Provider value={value}>
-        <CurveLeft
+      <formDetailContext.Provider value={value2}>
+        <ImageRightLayout
           title={data.wpPage.corporateAdvisoryPageOptions?.newFinancialTitle}
           text={data.wpPage.corporateAdvisoryPageOptions?.newFinancialDesc}
           img={data.wpPage.corporateAdvisoryPageOptions?.newFinancialImage}
-          btnTxt={'Download Now'}
+          btnTxt={"Download Now"}
           btnLink={""}
-          btnClick={() => { setFormDetails(1) }}
+          btnClick={() => { setFormDetails2(1) }}
+          addClass={"irl_section irl_section2"}
         />
         <CapabilityFormNew
           title={'Download New Financial Year Guide'}
@@ -96,18 +80,26 @@ const Corporate = ({ data }) => {
         />
       </formDetailContext.Provider>
 
-      <CurveLeft
-        id={'vCFO'}
-        title={data.wpPage.corporateAdvisoryPageOptions.cfoTitle}
-        text={data.wpPage.corporateAdvisoryPageOptions.cfoDesc}
-        img={data.wpPage.corporateAdvisoryPageOptions.cfoImage}
-        btnTxt={'Enquire'}
-        btnLink={data.wpPage.corporateAdvisoryPageOptions.cfoEnquireLink}
-      />
-      <GetInTouch
-        title={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchTitle}
-        text={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchDescription}
-      />
+
+      <ImageLeftLayout
+          title={data.wpPage.corporateAdvisoryPageOptions.cfoTitle}
+          text={data.wpPage.corporateAdvisoryPageOptions.cfoDesc}
+          img={data.wpPage.corporateAdvisoryPageOptions.cfoImage}
+          btnTxt={"Enquire"}
+          btnLink={data.wpPage.corporateAdvisoryPageOptions.cfoEnquireLink}
+          addClass={"ill_section ill_section2"}
+        />
+      
+      
+
+    
+
+      <div className="home">
+        <GetInTouch
+          title={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchTitle}
+          text={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchDescription}
+        />
+      </div>
     </Layout>
   </div>)
 }

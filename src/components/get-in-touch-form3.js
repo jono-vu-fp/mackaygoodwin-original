@@ -86,7 +86,7 @@ const GetInTouchForm = () => {
       <li>
       <label>State</label>
       <select id="00N9D000002QFLX" className="stateSelect" name="state" onChange={e => setStateName(e.target.value)}>
-        <option value="">State</option>
+        <option value=""></option>
         <option value="NSW">NSW</option>
         <option value="VIC">VIC</option>
         <option value="QLD">QLD</option>

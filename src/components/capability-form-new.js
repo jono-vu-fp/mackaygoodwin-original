@@ -63,13 +63,13 @@ const CapabilityFormNew = (props) => {
       // });
     }
   }
-  const { fromDetails, setFormDetails } = React.useContext(formDetailContext);
+  const { fromDetails2, setFormDetails2 } = React.useContext(formDetailContext);
 
   return (
-    <div className={fromDetails === 1 ? "modal fade show peopleModal" : "modal fade "} id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div className={fromDetails2 === 1 ? "modal fade show peopleModal" : "modal fade "} id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div className="modal-dialog modal-dialog-centered modal-xl">
         <div className="modal-content">
-          <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" onClick={() => { setFormDetails(0) }}></button>
+          <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" onClick={() => { setFormDetails2(0) }}></button>
           <div className="modal-body">
             <div className="container-fluid">
               <div className="row">
