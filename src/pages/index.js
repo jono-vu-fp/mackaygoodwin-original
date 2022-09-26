@@ -2,7 +2,7 @@ import * as React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import GetInTouch from "../components/get-in-touch"
+import GetInTouch from "../components/get-in-touch3"
 import Awards from "../components/awards"
 import Container from "../components/slider/container"
 import Accordian from "../components/accordian/accordian"
@@ -10,6 +10,8 @@ import Services from "../components/services/container"
 import Slider from "react-slick";
 import { Link } from "gatsby"
 import useInView from "react-cool-inview";
+import OurPeople from "../components/our-people-list/our-people"
+import News from "../components/news/list"
 
 const settings = {
   arrows: false,
@@ -20,6 +22,11 @@ const settings = {
 };
 
 const IndexPage = ({ data }) => {
+  let businessData = [];
+  data.allWpOurpeople.nodes.map((d) => {
+    return businessData.push({ title: d.title, subtitle: d.backInBusiness.designation, text: d.backInBusiness.location, certification: d.backInBusiness.certification, content: d.content, linkedin: d.backInBusiness.linkedin, email: d.backInBusiness.email, phone: d.backInBusiness.phoneNumber, img: d.featuredImage?.node, designationType: d.backInBusiness.designationType });
+  })
+  const [showModal, setModal] = React.useState(false);
   //console.log("Home pG Data", datadata.wpPage.hpOptions.homeSlider[2]);
   const [serviceEnter, changeServiceEnter] = React.useState('')
   const { observe, unobserve, inView, scrollDirection, entry } = useInView({
@@ -162,27 +169,74 @@ const IndexPage = ({ data }) => {
             </ul>
           </div>
         </div>
-        <Accordian
-          title={data.wpPage.hpOptions.whyMgTitle}
-          showEnquireButton={false}
-          data={data.wpPage.hpOptions.whyMgPoints}
-          bgColor={'#1C5E48'}
-          textColor={'#EBE9DE'}
-          textHoverColor={"#DBFD90"}
+
+        <div className="home_branding">
+          <div className="container">
+            <h2>{data.wpPage.hpOptions.obcTitle}</h2>
+            <div className="obc_img">
+              <img src={data.wpPage.hpOptions.obcImage.mediaItemUrl} alt="" />
+              <button type="button" onClick={()=>setModal(true)} data-toggle="modal" data-target="#myModal">play</button>
+            </div>
+          </div>
+        </div>
+        <div className="wcmg_section">
+          <div className="container">
+            <h2>{data.wpPage.hpOptions.whyMgTitle}</h2>
+            <ul>
+              {data.wpPage.hpOptions.whyMgPoints.map((d, key) => {
+                return <li><div className="wcmg_img"><img src={d.whyIcon.mediaItemUrl} alt="" /></div><h4>{d.title}</h4><p>{d.description}</p></li>
+              })}
+            </ul>
+          </div>
+        </div>
+        <OurPeople
+          title={data.wpPage.hpOptions.peopleTitle}
+          text={data.wpPage.hpOptions.peopleTagline}
+          data={businessData}
+          showAll={0}
         />
-        <Container
-          title={data.wpPage.hpOptions.testimonialTitle}
-          data={data.wpPage.hpOptions.testimonials}
-          slideColor={'#EBE9DE'}
+        <div className="vcfo_section vcfo_section1">
+          <div className="container">
+            <div class="vcfo_left"><img src={data.wpPage.hpOptions.vcfoImage.mediaItemUrl} alt="" /></div>
+            <div class="vcfo_right">
+              <h4>{data.wpPage.hpOptions.vcfoTitle}</h4>
+              <div dangerouslySetInnerHTML={{__html: data.wpPage.hpOptions.vcfoDescription }} />
+              <Link className="btn btn-primary" to={data.wpPage.hpOptions.vcfoButtonLink}>{data.wpPage.hpOptions.vcfoButtonText}</Link>
+            </div>
+          </div>
+        </div>
+        <div className="vcfo_section na_section">
+          <div className="container">
+            <h2>News & Articles</h2>
+          </div>
+          <News
+            title={'News & Articles'}
+            data={data.allWpArticle.nodes}
+            btn={false}
+          />
+        </div>
+        <GetInTouch
+          title={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchTitle}
+          text={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchDescription}
         />
         <Awards
           title={data.wpPage.hpOptions.awardTitle}
           data={data.wpPage.hpOptions.awardPoints}
         />
-        <GetInTouch
-          title={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchTitle}
-          text={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchDescription}
-        />
+        <div id="myModal" role="dialog" className={showModal?'in show modal fade':'modal fade'}>
+        <div class="model_inner">
+        <div class="popup_dialog">
+        <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" onClick={()=>setModal(false)}>&times;</button>
+        <div class="popup_body">
+        <div class="video_ratio">
+        <div dangerouslySetInnerHTML={{__html: data.wpPage.hpOptions.obcVideo }} />
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
       </Layout>
     </div>
   )
@@ -227,6 +281,10 @@ export const query = graphql`
           description
           fieldGroupName
           title
+          whyIcon {
+            altText
+            mediaItemUrl
+          }
         }
         awardTitle
         awardPoints {
@@ -235,6 +293,22 @@ export const query = graphql`
         }
         testimonialTitle
         whyMgTitle
+        obcTitle
+        obcImage {
+          altText
+          mediaItemUrl
+        }
+        obcVideo
+        peopleTagline
+        peopleTitle
+        vcfoImage {
+          altText
+          mediaItemUrl
+        }
+        vcfoTitle
+        vcfoDescription
+        vcfoButtonText
+        vcfoButtonLink
       }
       metaFields {
         metaDescription
@@ -255,6 +329,41 @@ export const query = graphql`
             speakExpertTitle
           }
         }
+      }
+    }
+    allWpOurpeople(sort: {order:  ASC, fields: menuOrder}) {
+      nodes {
+        title
+        backInBusiness {
+          designation
+          location
+          certification
+          designationType
+          linkedin
+          email
+          phoneNumber
+        }
+        featuredImage {
+          node {
+            altText
+            mediaItemUrl
+          }
+        }
+        content
+      }
+    }
+    allWpArticle(sort: {order: DESC, fields: date}, limit:3) {
+      nodes {
+        title
+        excerpt
+        content
+        featuredImage {
+          node {
+            altText
+            mediaItemUrl
+          }
+        }
+        slug
       }
     }
   }
