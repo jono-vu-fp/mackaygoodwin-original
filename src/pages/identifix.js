@@ -54,10 +54,10 @@ const Identifix = ({data}) => {
          <div class="col-sm-12">
           <ul class="d-flex justify-content-center">
             <li>
-             <Link to="#vCFO">Business Health Check</Link> 
+             <Link to="#BHC">Business Health Check</Link> 
             </li>
             <li>
-             <Link to="#business-health-check">Virtual CFO</Link> 
+             <Link to="#vCFO">Virtual CFO</Link> 
             </li>
               <li>
                <Link to="#virtual-ciso">Virtual CISO</Link> 
@@ -67,7 +67,7 @@ const Identifix = ({data}) => {
           </div>
         </div>
     </section>
-    <section id="vCFO" class="banners curve-left bhc_sec">
+    <section id="BHC" class="banners curve-left bhc_sec">
        <div class="container">
           <div class="row">
              <div class="col-sm-10 col-md-10 col-lg-10 offset-sm-1 offset-md-1 offset-lg-1">
@@ -88,7 +88,7 @@ const Identifix = ({data}) => {
        </div>
     </section>
 
-    <section id="business-health-check" class="banners curve-right vcf_sec">
+    <section id="vCFO" class="banners curve-right vcf_sec">
      <div class="container">
         <div class="row">
            <div class="col-sm-10 col-md-10 col-lg-10 offset-sm-1 offset-md-1 offset-lg-1">
