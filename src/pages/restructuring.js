@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import TopBanner from "../components/top-banner"
-import GetInTouch from "../components/get-in-touch"
+import GetInTouch from "../components/get-in-touch3"
 import Accordian from "../components/accordian/accordian"
 import FullText from "../components/full-text"
 import Container from "../components/slider/container"
@@ -104,10 +104,12 @@ const Restructuring = ({ data }) => {
           text={'Download your free copy today and get on the path to recovery'}
         />
       </formEbookContext.Provider>
-      <GetInTouch
-        title={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchTitle}
-        text={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchDescription}
-      />
+      <div className="home">
+        <GetInTouch
+          title={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchTitle}
+          text={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchDescription}
+        />
+      </div>
     </Layout>
   </div>
   )

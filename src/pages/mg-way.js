@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import TopBanner from "../components/top-banner"
-import GetInTouch from "../components/get-in-touch"
+import GetInTouch from "../components/get-in-touch3"
 import OurPeople from "../components/our-people-list/our-people"
 import AboutUs from "../components/about-us"
 import History from "../components/history"
@@ -212,10 +212,12 @@ const MgWay = ({ data }) => {
           </div>
         </div>
       </section>
-      <GetInTouch
-        title={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchTitle}
-        text={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchDescription}
-      />
+      <div className="home">
+        <GetInTouch
+          title={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchTitle}
+          text={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchDescription}
+        />
+      </div>
     </Layout>
   </div>
   )

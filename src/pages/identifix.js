@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import GetInTouch from "../components/get-in-touch"
+import GetInTouch from "../components/get-in-touch3"
 
 const Identifix = ({data}) => {
    const [showModal, setModal] = React.useState(false);
@@ -124,10 +124,12 @@ const Identifix = ({data}) => {
         </div>
      </div>
   </section>
+  <div className="home">
   <GetInTouch
      title={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchTitle}
      text={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchDescription}
    />
+</div>
    <div id="myModal" role="dialog" className={showModal?'in show modal fade':'modal fade'}>
     <div class="model_inner">
      <div class="popup_dialog">

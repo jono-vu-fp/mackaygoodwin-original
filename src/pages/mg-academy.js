@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import TopBanner from "../components/top-banner"
 import Events from "../components/events/events"
-import GetInTouch from "../components/get-in-touch"
+import GetInTouch from "../components/get-in-touch3"
 
 const breadCrumbs = [
   { link: "/", title: "Home" },
@@ -62,10 +62,12 @@ const MgAcademyPage = ({ data }) => {
           </div>
        </div>
     </section>
+    <div className="home">
       <GetInTouch
         title={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchTitle}
         text={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchDescription}
       />
+      </div>
     </Layout>
     <div id="myModal2" role="dialog" className={showModal2?'in show modal fade':'modal fade'}>
     <div class="model_inner">

@@ -46,9 +46,6 @@ const Header = () => {
           <img src={MackeySmall} alt="logo" />
         </Link>
         <ul className="top-belt1 mb-0 me-auto over-nav d-none">
-          <li className="nav-item p-3">
-            <Link className="nav-link active" aria-current="page" to="/">Home</Link>
-          </li>
           <li className="nav-item p-3 dropdown" onMouseOver={(t) => { t.currentTarget.classList.add('show'); }} onMouseOut={(t) => { t.currentTarget.classList.remove('show'); }}>
             <Link className="nav-link" to="/expertsinbusiness/"> Services</Link>
             <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -118,9 +115,6 @@ const Header = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ml-banner mb-2 mb-lg-0">
-            <li className="nav-item p-3">
-              <Link className="nav-link active" aria-current="page" to="/">Home</Link>
-            </li>
             <li className="nav-item p-3 dropdown" onMouseOver={(t) => { t.currentTarget.classList.add('show'); inputEl1.current.style.height = inputEl.current.offsetHeight; }} onMouseOut={(t) => { t.currentTarget.classList.remove('show'); inputEl1.current.style.height = 0 }}>
               <Link className="nav-link" to="/expertsinbusiness/"> Services</Link>
               <ul className="dropdown-menu" ref={inputEl} aria-labelledby="navbarDropdown">
@@ -209,7 +203,6 @@ const Header = () => {
         </div>
         <div className="mobile-logo black-logo text-center"><img src="https://res.cloudinary.com/mbsaiyed/image/upload/v1625481695/svg/mobile-logo.svg" alt="" /></div>
         <ul className="menu-ul">
-          <li className="nav-item"> <Link className="nav-link active" aria-current="page" to="/">Home</Link></li>
           <li className="nav-item sub-menu"><Link className="nav-link" to="/expertsinbusiness/"> Services</Link>
             <input type="checkbox" id="menu-1" />
             <div id="menu-cont-2">

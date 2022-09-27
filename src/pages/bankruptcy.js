@@ -98,7 +98,7 @@ const Bankruptcy = ({ data }) => {
           showEnquireButton={false}
           data={whyMG}
         />
-
+        {data.wpPage.bankruptcy.bsContent !== null && data.wpPage.bankruptcy.bsContent !== "" ? 
         <div className="bs_section">
           <div className="container">
             <div className="bs_right">
@@ -108,7 +108,7 @@ const Bankruptcy = ({ data }) => {
               <div dangerouslySetInnerHTML={{ __html: data.wpPage.bankruptcy.bsContent }}></div>
             </div>
           </div>
-        </div>
+        </div> : ""}
 
         <News
           title={''}
@@ -119,11 +119,7 @@ const Bankruptcy = ({ data }) => {
             <a href="/contact"><img src="/images/sophie-img.png" />Contact Us</a>
         </div>
 
-        <GetInTouch
-          title={data.wpPage.bankruptcy.ppTitle}
-          text={data.wpPage.bankruptcy.ppDescription}
-          image={data.wpPage.bankruptcy.ppImage}
-        />
+        
     </Layout>
   </div>
   )

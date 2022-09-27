@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import TopBanner from "../components/top-banner"
-import GetInTouch from "../components/get-in-touch"
+import GetInTouch from "../components/get-in-touch3"
 import GetInTouchPDF from "../components/get-in-touch-pdf"
 
 // const whyMG = [
@@ -118,10 +118,10 @@ const Post = ({ data }) => {
         title={'Download e-guide'}
         text={'Download your free copy today and get on the path to recovery'}
       />}
-      {typeof window !== "undefined" && window.location.pathname.indexOf("/insights/business-survival-pack") < 0 && <GetInTouch
+      {typeof window !== "undefined" && window.location.pathname.indexOf("/insights/business-survival-pack") < 0 && <div className="home"><GetInTouch
         title={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchTitle}
         text={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchDescription}
-      />}
+      /></div>}
     </Layout>
   </div>
   )

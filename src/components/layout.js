@@ -13,12 +13,34 @@ import Footer from "./footer"
 import Header from "./header"
 import "./layout.css"
 
+import GetInTouchPPForm from "../components/get-in-touch-bankruptcy-popup"
+
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
         siteMetadata {
           title
+        }
+      }
+      allWp {
+        nodes {
+          themeGeneralSettings {
+            themeGeneralSettings {
+              copyrightText
+              expertAdviceLink
+              expertAdviceTitle
+              fieldGroupName
+              getInTouchDescription
+              getInTouchTitle
+              getInTouchTitle
+              speakExpertLink
+              gitImage{
+                mediaItemUrl
+                altText
+              }
+            }
+          }
         }
       }
     }
@@ -82,6 +104,8 @@ const Layout = ({ children }) => {
         }
       }
 
+      console.log({data});
+
       //console.log('document.cookie---' + document.cookie);
 
       //document.getElementById('00N9D000002P061').value=window.location;
@@ -113,6 +137,11 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <main>{children}</main>
       <Footer />
+      <GetInTouchPPForm
+        title={data?.allWp?.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchTitle}
+        text={data?.allWp?.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchDescription}
+        image={data?.allWp?.nodes[0].themeGeneralSettings.themeGeneralSettings.gitImage}
+      />
     </>
   )
 }

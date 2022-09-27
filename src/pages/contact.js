@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import GetInTouch from "../components/get-in-touch"
+import GetInTouch from "../components/get-in-touch3"
 import TopBanner from "../components/top-banner"
 import Locations from "../components/locations/location"
 
@@ -38,10 +38,12 @@ const Corporate = ({data}) => {
       title={''}
       data={whyMG}
     /> */}
+    <div className="home">
     <GetInTouch
       title={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchTitle}
       text={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchDescription}
     />
+    </div>
   </Layout>
   </div>)
 }

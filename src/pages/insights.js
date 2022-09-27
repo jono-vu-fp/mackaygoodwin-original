@@ -7,7 +7,7 @@ import TopBanner from "../components/top-banner"
 import News from "../components/news/news"
 import BackInBusiness from "../components/backinbusiness/backinbusiness"
 import Events from "../components/events/events"
-import GetInTouch from "../components/get-in-touch"
+import GetInTouch from "../components/get-in-touch3"
 import Career from "../components/career"
 const breadCrumbs = [
   { link: "/", title: "Home" },
@@ -47,10 +47,12 @@ const Insights = ({ data }) => {
           image={data.wpPage.insightPageOptions.dealImage?.mediaItemUrl}
           altText={data.wpPage.insightPageOptions.dealImage?.altText}
         />
+        <div className="home">
         <GetInTouch
           title={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchTitle}
           text={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchDescription}
         />
+        </div>
       </Layout>
     </div>
   )

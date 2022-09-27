@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import TopBanner from "../components/top-banner"
 import News from "../components/news/list"
-import GetInTouch from "../components/get-in-touch"
+import GetInTouch from "../components/get-in-touch3"
 
 const breadCrumbs = [
   { link: "/", title: "Home" },
@@ -38,10 +38,12 @@ const NewsPage = ({ data }) => (
         title={data.wpPage.insightPageOptions.eventsTitle}
         data={data.allWpEvent.nodes}
       /> */}
+      <div className="home">
       <GetInTouch
         title={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchTitle}
         text={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchDescription}
       />
+      </div>
     </Layout>
   </div>
 )

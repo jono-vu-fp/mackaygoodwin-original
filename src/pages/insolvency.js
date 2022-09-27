@@ -1,17 +1,17 @@
 import * as React from "react"
 import { graphql } from "gatsby"
-
+import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import TopBanner from "../components/top-banner"
-import GetInTouch from "../components/get-in-touch"
-import Accordian from "../components/accordian/accordian"
+import GetInTouch from "../components/get-in-touch3"
 import FullText from "../components/full-text"
 import CurveLeft from "../components/curve-left"
-import CurveRight2 from "../components/curve-right2"
 import HealthForm from "../components/health-form"
 import EbookForm from "../components/ebook-form"
 import { formHealthContext, formEbookContext } from '../components/context';
+import ImageLeftLayout from "../components/image-left-layout2"
+import ImageRightLayout from "../components/image-right-layout"
 // const whyMG = [
 //   {
 //     "title": "Liquidation",
@@ -28,7 +28,6 @@ import { formHealthContext, formEbookContext } from '../components/context';
 // ]
 
 const Insolvency = ({ data }) => {
-  const [showModal, setModal] = React.useState(false);
   let whyMG = [];
   data.wpPage.insolvency.qA.map((d) => {
     return whyMG.push({ title: d.question, description: d.answer, learnMoreText: d.buttonLabel, learnMoreUrl: d.buttonUrl });
@@ -56,11 +55,11 @@ const Insolvency = ({ data }) => {
       <FullText
         text={data.wpPage.insolvency.pageTagline}
       />
-      <Accordian
-        title={''}
-        showEnquireButton={true}
-        data={whyMG}
-      />
+      <div class="ca_main">
+        {data.wpPage.insolvency.qA.map((d,key) => {
+            return <div className={'ca_sec ca_sec'+key}><div className="container"><h2>{d.question}</h2><div className="ca_txt" dangerouslySetInnerHTML={{ __html: d.answer }}></div>{d.buttonUrl !== null && d.buttonUrl !== "" ? <Link className="btn btn-primary me-5" to={d.buttonUrl}>{d.buttonLabel}</Link> : ""}</div></div>
+        })}
+      </div>
       {/* <CurveRight
         title={data.wpPage.insolvency.healthCheckTitle}
         text={data.wpPage.insolvency.healthCheckDesc}
@@ -71,41 +70,45 @@ const Insolvency = ({ data }) => {
         btn2Link={data.wpPage.insolvency.businessDirectorButtonLink}
       /> */}
       <formHealthContext.Provider value={value}>
-        <CurveRight2
+        <ImageLeftLayout
           title={data.wpPage.insolvency.healthCheckTitle}
           text={data.wpPage.insolvency.healthCheckDesc}
           img={data.wpPage.insolvency.healthCheckImage}
+          btnTxt={data.wpPage.insolvency.buttonBook}
+          btnLink={data.wpPage.insolvency.buttonBookurl}
+          btnClick={''}
+          addClass={"ill_section bhc_section"}
           video={data.wpPage.insolvency.video}
           videolabel={data.wpPage.insolvency.videoButtonLabel}
-          btn1Txt={data.wpPage.insolvency.buttonBook}
-          btn2Txt={null}
-          btn1Link={data.wpPage.insolvency.buttonBookurl}
-          btn2Link={''}
-        //btn1Click={() => { setFormDetails(1) }}
         />
+        
         <HealthForm
           title={'Register Now'}
           text={'Register now for your business health check'}
         />
       </formHealthContext.Provider>
       <formEbookContext.Provider value={valueEbook}>
-        <CurveLeft
+
+        <ImageRightLayout
           title={data.wpPage.insolvency.survivalTitle}
           text={data.wpPage.insolvency.survivalDesc}
           img={data.wpPage.insolvency.survivalImage}
           btnTxt={'Download Now'}
           btnLink={""}
           btnClick={() => { setFormEbookDetails(1) }}
+          addClass={"irl_section bsp_section"}
         />
         <EbookForm
           title={'Download e-guide'}
           text={'Download your free copy today and get on the path to recovery'}
         />
       </formEbookContext.Provider>
-      <GetInTouch
-        title={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchTitle}
-        text={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchDescription}
-      />
+      <div className="home">
+          <GetInTouch
+            title={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchTitle}
+            text={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchDescription}
+          />
+      </div>
     </Layout>
   </div>
   )

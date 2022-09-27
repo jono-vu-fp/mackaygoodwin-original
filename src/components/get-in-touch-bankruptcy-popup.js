@@ -23,7 +23,7 @@ const GetInTouch = (props) => {
     <div className="brp_inner">
       <div className="brpp_close" onClick={() => {document.getElementById('br_popup').classList.remove('show')}}>x</div>
       <div className="brp_right">
-        <img src={props.image.mediaItemUrl} alt={props.image.altText} />
+        <img src={props.image?.mediaItemUrl} alt={props.image?.altText} />
       </div>
       <div className="brp_left">
         <h2>{props.title}</h2>

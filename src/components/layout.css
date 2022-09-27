@@ -3796,7 +3796,7 @@ img.recovery-partner-img {
 }
 .cu_fixed {
     position: fixed;
-    bottom: 30%;
+    bottom: 55px;
     right: 30px;
     z-index: 9999;
 }
@@ -4533,7 +4533,7 @@ img.recovery-partner-img {
     line-height: 1.55;
     margin: 0 0 23px;
 }
-.vcfo_section .vcfo_right .btn {
+.vcfo_section .vcfo_right .btn, .vcfo_section .vcfo_right button {
     margin-top: 0;
 }
 .vcfo_section .vcfo_left:before {
@@ -4707,6 +4707,82 @@ img.recovery-partner-img {
 }
 .ill_section.ill_section2.vcfo_section {
     padding-top: 245px;
+}
+.ca_sec div.ca_txt .cols {
+    display: flex;
+    margin-top: 46px;
+}
+.ca_sec div.ca_txt .cols > div {
+    width: 45.68%;
+    max-width: 100%;
+}
+.ca_sec div.ca_txt .cols .col2 {
+    margin-left: auto;
+}
+.ca_sec div.ca_txt h4 {
+    color: #1c5e48;
+    font-size: 24px;
+    font-weight: 400;
+    margin: 0 0 13px;
+    font-family: 'Sohne';
+}
+.ca_sec div.ca_txt h4 b {
+    font-weight: normal;
+}
+.ca_sec.ca_sec0 {
+    padding-top: 103px;
+    padding-bottom: 105px;
+}
+.ca_sec.ca_sec0 .btn {
+    padding: 11px 34px 7px;
+}
+.ca_sec.ca_sec1 {
+    padding: 59px 0px 63px;
+}
+.ca_sec div.btns {
+    display: flex;
+    width: 100%;
+}
+.ca_sec div.btns .btn:first-of-type {
+    margin-right: 15px;
+}
+.ca_sec div.ca_txt .cols p {
+    margin-bottom: 42px;
+}
+.bankruptcy .news-list {
+    padding-top: 60px;
+}
+.bhc_section .me-5 {
+    margin-right: 10px !important;
+}
+.bhc_section button {
+    font-family: 'Sohne', sans-serif, Arial;
+    padding: 9px 35px;
+    width: auto;
+    border: 0;
+}
+.bsp_section {
+    margin-bottom: 229px;
+}
+.bsp_section ul {
+    padding: 0;
+    margin: 0 0 20px;
+}
+.bsp_section ul li {
+    position: relative;
+    padding-left: 16px;
+    list-style: none;
+    margin-bottom: 8px;
+}
+.bsp_section ul li:before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    background-color: #1c5e48;
+    position: absolute;
+    top: 8px;
+    left: 0;
+    border-radius: 100%;
 }
 /****** BreakPoints *******/
 /****** Responsive Start *******/
@@ -4907,7 +4983,7 @@ img.recovery-partner-img {
     .ill_section.vcfo_section .vcfo_right h4, .irl_section.vcfo_section .vcfo_right h4 {
         font-size: 36px;
     }
-    .ill_section.vcfo_section .vcfo_right .ill_txt, .irl_section.vcfo_section .vcfo_right .ill_txt, .ca_sec div.ca_txt {
+    .ill_section.vcfo_section .vcfo_right .ill_txt, .irl_section.vcfo_section .vcfo_right .ill_txt, .ca_sec div.ca_txt, .vcfo_section .vcfo_right p {
         font-size: 17px;
     }
     .ill_section.ill_section2.vcfo_section {
@@ -4919,6 +4995,22 @@ img.recovery-partner-img {
     }
     .irl_section2.vcfo_section {
         padding-bottom: 130px;
+    }
+    .ca_sec.ca_sec2 {
+        padding-bottom: 0;
+    }
+    .bsp_section {
+        margin-bottom: 170px;
+    }
+    .ca_sec.ca_sec0 {
+        padding-top: 70px;
+        padding-bottom: 80px;
+    }
+    .ca_sec div.ca_txt {
+        margin-bottom: 10px;
+    }
+    .ill_section.vcfo_section.bhc_section {
+        padding-bottom: 170px;
     }
 }
 @media screen and (max-width:1600px){
@@ -5009,9 +5101,6 @@ img.recovery-partner-img {
     .wbl_section {
         padding-bottom: 70px;
     }
-    .cu_fixed {
-        bottom: 70px;
-    }
     .voluntary_administration.liquidation.bankruptcy .middleFullText.glpo_section .fullSubTxt, .cm_cnt h6 {
         font-size: 20px;
     }
@@ -5051,6 +5140,9 @@ img.recovery-partner-img {
     }
     .ill_section.vcfo_section .vcfo_right h4, .irl_section.vcfo_section .vcfo_right h4 {
         font-size: 34px;
+    }
+    .bankruptcy .news-list {
+        padding-top: 40px;
     }
 }
 @media screen and (max-width:1500px){
@@ -5269,6 +5361,9 @@ img.recovery-partner-img {
     .vcfo_section.irl_section .vcfo_right {
         width: 500px;
     }
+    .ill_section.vcfo_section.bhc_section {
+        padding-bottom: 120px;
+    }
 }
 @media screen and (max-width:1300px){
     .ps_bot .pack_inner h3 {
@@ -5304,9 +5399,13 @@ img.recovery-partner-img {
     }
     .bankruptcy .news-list {
         padding-bottom: 50px;
+        padding-top: 30px;
     }
     .na_section .news-list {
         padding-bottom: 50px;
+    }
+    .bsp_section {
+        margin-bottom: 150px;
     }
 }
 @media (min-width:992px) and (max-width:1200px) {
@@ -5752,6 +5851,24 @@ img.recovery-partner-img {
     }
     .ca_sec h2 {
         font-size: 32px;
+    }
+    .vcfo_section.bsp_section .vcfo_left:before {
+        height: 200%;
+    }
+    .vcfo_section.bsp_section {
+        overflow: hidden;
+        padding-bottom: 20px;
+        margin-bottom: 60px;
+    }
+    .ca_sec.ca_sec0 {
+        padding-top: 40px;
+        padding-bottom: 50px;
+    }
+    .ca_sec div.ca_txt {
+        margin-bottom: 0;
+    }
+    .ca_sec.ca_sec1 {
+        padding: 40px 0 50px;
     }
 }
 @media screen and (max-width:991px){
@@ -6396,6 +6513,42 @@ img.recovery-partner-img {
     .ill_section.ill_section2.vcfo_section {
         margin-bottom: 50px;
     }
+    .ca_sec div.ca_txt .cols {
+        flex-wrap: wrap;
+    }
+    .ca_sec div.ca_txt .cols > div {
+        width: 100%;
+    }
+    .ca_sec div.ca_txt h4 {
+        font-size: 20px;
+    }
+    .ca_sec div.ca_txt .cols p {
+        margin-bottom: 30px;
+    }
+    .ca_sec div.ca_txt .cols {
+        margin-top: 30px;
+    }
+    .ca_sec.ca_sec2 div.ca_txt .cols .col1 {
+        margin-bottom: 40px;
+    }
+    .ill_section.vcfo_section.bhc_section {
+        padding-bottom: 0;
+        margin-bottom: 50px;
+    }
+    .vcfo_section.bsp_section {
+        padding-top: 40px;
+        margin-bottom: 45px;
+    }
+    .vcfo_section.irl_section.bsp_section .vcfo_left:before {
+        top: 0;
+        height: 100%;
+    }
+    .vcfo_section.irl_section.bsp_section .vcfo_left:after {
+        top: -40px;
+    }
+    .vcfo_section.irl_section .vcfo_right {
+        width: 100%;
+    }
 }
 @media screen and (max-width:767px){
 
@@ -6738,6 +6891,9 @@ img.recovery-partner-img {
         font-size: 28px;
         margin-bottom: 15px;
     }
+    .bankruptcy .news-list {
+        padding-top: 20px;
+    }
 }
 @media screen and (max-width:667px){
     .ol_list h2 {
@@ -6907,6 +7063,22 @@ img.recovery-partner-img {
     }
     .ill_section.ill_section2.vcfo_section {
         margin-bottom: 40px;
+    }
+    .ca_sec div.ca_txt h4 {
+        font-size: 18px;
+    }
+    .ill_section.vcfo_section.bhc_section {
+        padding-top: 40px;
+    }
+    .insolvency .container {
+        padding-right: 20px !important;
+        padding-left: 20px !important;
+    }
+    .legal {
+        text-align: center !important;
+    }
+    .legal a {
+        font-size: 12px;
     }
 }
 @media screen and (max-width:533px){

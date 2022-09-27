@@ -5,6 +5,7 @@ import SFLOGO from "../images/SF_LOGO.png";
 import DSLOGO from "../images/DS_LOGO.png";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 
+
 const links = [
   {
     'title': 'Services',
@@ -72,7 +73,7 @@ const links = [
   }
 ]
 
-const FooterMain = ({ siteTitle }) => {
+const FooterMain = ({ data }) => {
   const [showModal, setModal] = React.useState('');
   React.useEffect(() => {
      if(window.location.href.includes('thank-you')){
@@ -124,6 +125,8 @@ const FooterMain = ({ siteTitle }) => {
       </div>
     </div>
     <div dangerouslySetInnerHTML={{__html: showModal }} />
+
+    
   </footer>
 )}
 
