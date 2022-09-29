@@ -7,10 +7,13 @@ const phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
 
 const GetInTouch = (props) => {
   React.useEffect(() => {
-    const myTimeout = setTimeout(myGreeting, 2500);
-
+    
+    if(localStorage.getItem('pp_show') != 'yes'){
+      const myTimeout = setTimeout(myGreeting, 2500);
+    }
     function myGreeting() {
       document.getElementById('br_popup').classList.add('show');
+      localStorage.setItem('pp_show', 'yes');
     }
 
     return () => {

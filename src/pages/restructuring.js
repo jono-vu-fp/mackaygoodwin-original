@@ -13,6 +13,7 @@ import CurveRight2 from "../components/curve-right2"
 import HealthForm from "../components/health-form"
 import EbookForm from "../components/ebook-form"
 import { formHealthContext, formEbookContext } from '../components/context';
+import GetInTouchPPForm from "../components/get-in-touch-bankruptcy-popup"
 
 // breadCrumbs = [{
 //   title:"Home",
@@ -110,6 +111,11 @@ const Restructuring = ({ data }) => {
           text={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchDescription}
         />
       </div>
+      <GetInTouchPPForm
+        title={data?.allWp?.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchTitle}
+        text={data?.allWp?.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchDescription}
+        image={data?.allWp?.nodes[0].themeGeneralSettings.themeGeneralSettings.gitImage}
+      />
     </Layout>
   </div>
   )
@@ -185,6 +191,10 @@ export const query = graphql`
             fieldGroupName
             getInTouchDescription
             getInTouchTitle
+            gitImage{
+              mediaItemUrl
+              altText
+            }
             speakExpertLink
             speakExpertTitle
           }

@@ -12,6 +12,7 @@ import EbookForm from "../components/ebook-form"
 import { formHealthContext, formEbookContext } from '../components/context';
 import ImageLeftLayout from "../components/image-left-layout2"
 import ImageRightLayout from "../components/image-right-layout"
+import GetInTouchPPForm from "../components/get-in-touch-bankruptcy-popup"
 // const whyMG = [
 //   {
 //     "title": "Liquidation",
@@ -109,6 +110,11 @@ const Insolvency = ({ data }) => {
             text={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchDescription}
           />
       </div>
+      <GetInTouchPPForm
+        title={data?.allWp?.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchTitle}
+        text={data?.allWp?.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchDescription}
+        image={data?.allWp?.nodes[0].themeGeneralSettings.themeGeneralSettings.gitImage}
+      />
     </Layout>
   </div>
   )
@@ -167,6 +173,10 @@ export const query = graphql`
             fieldGroupName
             getInTouchDescription
             getInTouchTitle
+            gitImage{
+              mediaItemUrl
+              altText
+            }
             speakExpertLink
             speakExpertTitle
           }

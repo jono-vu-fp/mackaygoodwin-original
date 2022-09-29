@@ -12,6 +12,7 @@ import { Link } from "gatsby"
 import useInView from "react-cool-inview";
 import OurPeople from "../components/our-people-list/our-people"
 import News from "../components/news/list"
+import $ from "jquery"
 
 const settings = {
   arrows: false,
@@ -172,7 +173,6 @@ const IndexPage = ({ data }) => {
 
         <div className="home_branding">
           <div className="container">
-            <h2>{data.wpPage.hpOptions.obcTitle}</h2>
             <div className="obc_img">
               <img src={data.wpPage.hpOptions.obcImage.mediaItemUrl} alt="" />
               <button type="button" onClick={()=>setModal(true)} data-toggle="modal" data-target="#myModal">play</button>
@@ -219,15 +219,12 @@ const IndexPage = ({ data }) => {
           title={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchTitle}
           text={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchDescription}
         />
-        <Awards
-          title={data.wpPage.hpOptions.awardTitle}
-          data={data.wpPage.hpOptions.awardPoints}
-        />
+        
         <div id="myModal" role="dialog" className={showModal?'in show modal fade':'modal fade'}>
         <div class="model_inner">
         <div class="popup_dialog">
         <div class="modal-content">
-        <button type="button" class="close" data-dismiss="modal" onClick={()=>setModal(false)}>&times;</button>
+        <button type="button" class="close" data-dismiss="modal" onClick={()=>{setModal(false);$('iframe.embed-responsive-item').attr('src', $('iframe.embed-responsive-item').attr('src').replace("autoplay=1&amp;", ""));}}>&times;</button>
         <div class="popup_body">
         <div class="video_ratio">
         <div dangerouslySetInnerHTML={{__html: data.wpPage.hpOptions.obcVideo }} />

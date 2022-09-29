@@ -9,7 +9,7 @@ import Accordian from "../components/accordian/accordian-bankruptcy"
 import FullText from "../components/full-text"
 import ReciveryPlan from "../components/recovery-plan"
 import News from "../components/news/list"
-import GetInTouch from "../components/get-in-touch-bankruptcy-popup"
+import GetInTouchPPForm from "../components/get-in-touch-bankruptcy-popup"
 
 const Bankruptcy = ({ data }) => {
   let whyMG = [];
@@ -118,7 +118,11 @@ const Bankruptcy = ({ data }) => {
         <div className="cu_fixed">
             <a href="/contact"><img src="/images/sophie-img.png" />Contact Us</a>
         </div>
-
+        <GetInTouchPPForm
+          title={data?.allWp?.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchTitle}
+          text={data?.allWp?.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchDescription}
+          image={data?.allWp?.nodes[0].themeGeneralSettings.themeGeneralSettings.gitImage}
+        />
         
     </Layout>
   </div>
@@ -194,6 +198,10 @@ export const query = graphql`
             fieldGroupName
             getInTouchDescription
             getInTouchTitle
+            gitImage{
+              mediaItemUrl
+              altText
+            }
             tagline
             speakExpertLink
             speakExpertTitle

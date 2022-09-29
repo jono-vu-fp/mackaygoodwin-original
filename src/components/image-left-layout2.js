@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import $ from "jquery"
 
 const ImageLeftLayout = (props) => {
   const [showModal, setModal] = React.useState(false);
@@ -19,7 +20,7 @@ const ImageLeftLayout = (props) => {
       <div className="model_inner">
       <div className="popup_dialog">
       <div className="modal-content">
-      <button type="button" className="close" data-dismiss="modal" onClick={()=>setModal(false)}>&times;</button>
+      <button type="button" className="close" data-dismiss="modal" onClick={()=>{setModal(false);$('iframe.embed-responsive-item').attr('src', $('iframe.embed-responsive-item').attr('src').replace("autoplay=1&amp;", ""));}}>&times;</button>
       <div className="popup_body">
       <div className="video_ratio">
       <div dangerouslySetInnerHTML={{__html: props.video }} />

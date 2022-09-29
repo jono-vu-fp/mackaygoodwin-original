@@ -13,7 +13,7 @@ import Footer from "./footer"
 import Header from "./header"
 import "./layout.css"
 
-import GetInTouchPPForm from "../components/get-in-touch-bankruptcy-popup"
+
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -137,11 +137,7 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <main>{children}</main>
       <Footer />
-      <GetInTouchPPForm
-        title={data?.allWp?.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchTitle}
-        text={data?.allWp?.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchDescription}
-        image={data?.allWp?.nodes[0].themeGeneralSettings.themeGeneralSettings.gitImage}
-      />
+      
     </>
   )
 }
