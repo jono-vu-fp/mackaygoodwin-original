@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import TopBanner from "../components/top-banner-3"
-import GetInTouch from "../components/get-in-touch"
+import GetInTouch from "../components/get-in-touch3"
 import CurveLeft from "../components/curve-left"
 import Services from "../components/services"
 import Accordian from "../components/accordian/accordian"
@@ -198,11 +198,19 @@ const ConsultBusiness = ({ data }) => {
       <div className="cu_fixed">
           <a href="/contact"><img src="/images/sophie-img.png" />Contact Us</a>
       </div>
+      <div className="home">
+        <GetInTouch
+          title={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchTitle}
+          text={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchDescription}
+        />
+      </div>
+
       <GetInTouchPPForm
         title={data?.allWp?.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchTitle}
         text={data?.allWp?.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchDescription}
         image={data?.allWp?.nodes[0].themeGeneralSettings.themeGeneralSettings.gitImage}
       />
+
     </Layout>
   </div>
   )
