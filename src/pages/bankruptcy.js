@@ -10,6 +10,7 @@ import FullText from "../components/full-text"
 import ReciveryPlan from "../components/recovery-plan"
 import News from "../components/news/list"
 import GetInTouchPPForm from "../components/get-in-touch-bankruptcy-popup"
+import GetInTouch3 from "../components/get-in-touch3"
 
 const Bankruptcy = ({ data }) => {
   let whyMG = [];
@@ -118,6 +119,12 @@ const Bankruptcy = ({ data }) => {
         <div className="cu_fixed">
             <a href="/contact"><img src="/images/sophie-img.png" />Contact Us</a>
         </div>
+        <div className="home">
+        <GetInTouch3
+          title={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchTitle}
+          text={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchDescription}
+        />
+      </div>
         <GetInTouchPPForm
           title={data?.allWp?.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchTitle}
           text={data?.allWp?.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchDescription}

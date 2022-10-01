@@ -15,13 +15,13 @@ const Identifix = ({data}) => {
    }, [])
   return (<Layout>
     <Seo title="Identifix" />
-    <section id="banner-section" class="identi_bannersec">
+    <section id="banner-section" class="identi_bannersec identifix_sec1">
      <div class="container position-relative">
      <div class="row">
-       <div class="col-sm-12 col-md-12 col-lg-5 col-xl-4">
+       <div class="col-sm-12 col-md-12 col-lg-5 col-xl-5">
           <div class="banner-content innerpage-banner">
-             <h1 class="banner-heading">{data.wpPage.identifixPageOptions.title}</h1>
-              
+          <h1  class="banner-heading" dangerouslySetInnerHTML={{ __html: data.wpPage.identifixPageOptions.title }}></h1>
+                         
              <div class="banner-desc d-none d-sm-none d-md-none d-lg-block">
              
              <div dangerouslySetInnerHTML={{__html: data.wpPage.identifixPageOptions.description }} />
@@ -31,14 +31,14 @@ const Identifix = ({data}) => {
                 </div>
           </div>
        </div>
-       <div class="col-sm-12 col-md-12 col-lg-7 col-xl-7">
+       <div class="col-sm-12 col-md-12 col-lg-5 col-xl-5">
           <div class="banner-image">
              <img src={data.wpPage.identifixPageOptions.banner.mediaItemUrl} alt="data.wpPage.identifixPageOptions.banner.altText" />
           </div>
           <div class="col-12 d-block d-sm-block d-md-block d-lg-none banner-mdesc">
              <div class="banner-desc"><div dangerouslySetInnerHTML={{__html: data.wpPage.identifixPageOptions.description }} /></div>
              <div>
-              <Link className="btn_more" to="/contact/">Enquire now</Link>
+              <Link className="btn_more" to="/contact/">Enquire Now</Link>
 
               </div>
 
@@ -47,6 +47,8 @@ const Identifix = ({data}) => {
     </div>
     </div>
     </section>
+
+
 
     <section class="sec_links">
       <div class="container position-relative">
@@ -67,63 +69,66 @@ const Identifix = ({data}) => {
           </div>
         </div>
     </section>
-    <section id="BHC" class="banners curve-left bhc_sec">
-       <div class="container">
-          <div class="row">
-             <div class="col-sm-10 col-md-10 col-lg-10 offset-sm-1 offset-md-1 offset-lg-1">
-                <div class="image-warpper">
-                <div class="vid_play"><img class="img-fluid" src={data.wpPage.identifixPageOptions.banner1.mediaItemUrl} alt="data.wpPage.identifixPageOptions.banner1.altText"/>
-                <button type="button" onClick={()=>setModal(true)} data-toggle="modal" data-target="#myModal">play</button>
 
-                </div>
-                </div>
-                <div class="ins-content2">
-                   <h2 class="ins-banner-heading2">{data.wpPage.identifixPageOptions.title1}</h2>
-                   <div class="ins-banner-details2"><div dangerouslySetInnerHTML={{__html: data.wpPage.identifixPageOptions.description1 }} /></div>
-                    
-                   <Link className="btn btn-primary me-5"  target="_blank" to="https://calendly.com/davidhill-mackaygoodwin/30min?month=2022-03">Book Now</Link>
-                </div>
+
+
+
+
+    <section id="BHC" class="wva_section about_section history_section identifix_sec2">
+       <div class="container">
+
+        <div className="wva_left">
+             <div class="vid_play"><div class="hov_effact"><img class="img-fluid" src={data.wpPage.identifixPageOptions.banner1.mediaItemUrl} alt="data.wpPage.identifixPageOptions.banner1.altText"/>
+             <button type="button" onClick={()=>setModal(true)} data-toggle="modal" data-target="#myModal">play</button></div>
              </div>
+               
           </div>
+
+          <div className="wva_right">
+            <h3>{data.wpPage.identifixPageOptions.title1}</h3>
+            <div dangerouslySetInnerHTML={{__html: data.wpPage.identifixPageOptions.description1 }} /> 
+             <Link className="btn btn-primary me-5"  target="_blank" to="https://calendly.com/davidhill-mackaygoodwin/30min?month=2022-03">Book Now</Link>
+          </div>
+
+          
        </div>
     </section>
 
-    <section id="vCFO" class="banners curve-right vcf_sec">
+    
+
+    <section id="vCFO" class="banners curve-right vcf_sec mg_identifix">
      <div class="container">
-        <div class="row">
-           <div class="col-sm-10 col-md-10 col-lg-10 offset-sm-1 offset-md-1 offset-lg-1">
-              <div class="image-warpper">
-              <img class="img-fluid" src={data.wpPage.identifixPageOptions.banner2.mediaItemUrl} alt="data.wpPage.identifixPageOptions.banner2.altText"/></div>
-              <div class="ins-content2">
-                 <h2 class="ins-banner-heading2">{data.wpPage.identifixPageOptions.title2}</h2>
-                 <div class="ins-banner-details2"><div dangerouslySetInnerHTML={{__html: data.wpPage.identifixPageOptions.description2 }} /></div>
-                 <Link className="btn btn-primary me-5"  to="/vcfo/">Learn More</Link>
-                  
-              </div>
-           </div>
-        </div>
+          <div className="wva_right">
+            <img class="img-fluid" src={data.wpPage.identifixPageOptions.banner2.mediaItemUrl} alt="data.wpPage.identifixPageOptions.banner2.altText"/>           
+          </div>
+          <div className="wva_left">
+          <h3>{data.wpPage.identifixPageOptions.title2}</h3>           
+            <div dangerouslySetInnerHTML={{__html: data.wpPage.identifixPageOptions.description2 }}></div>
+             <Link className="btn btn-primary me-5"  to="/vcfo/">Learn More</Link>
+           
+          </div>      
      </div>
   </section>
 
-   <section id="virtual-ciso" class="banners curve-left vciso_sec">
-     <div class="container">
-        <div class="row">
-           <div class="col-sm-10 col-md-10 col-lg-10 offset-sm-1 offset-md-1 offset-lg-1">
-              <div class="image-warpper">
-               <img class="img-fluid" src={data.wpPage.identifixPageOptions.banner3.mediaItemUrl} alt="data.wpPage.identifixPageOptions.banner3.altText"/>
-              </div>
-              <div class="ins-content2">
-               <h2 class="ins-banner-heading2">{data.wpPage.identifixPageOptions.title3}</h2>
-               <div class="ins-banner-details2">
-                  <div dangerouslySetInnerHTML={{__html: data.wpPage.identifixPageOptions.description3 }} />
-               </div>
-               <Link className="btn btn-primary me-5"  to="#get-in-touch">Enquire now</Link>
-                
-            </div>
-           </div>
-        </div>
-     </div>
-  </section>
+   <section id="virtual-ciso" class="wva_section about_section history_section identifix_sec2">
+       <div class="container">
+
+        <div className="wva_left">
+             <img class="img-fluid" src={data.wpPage.identifixPageOptions.banner3.mediaItemUrl} alt="data.wpPage.identifixPageOptions.banner3.altText"/>            
+               
+          </div>
+
+          <div className="wva_right">
+            <h3>{data.wpPage.identifixPageOptions.title3}</h3>
+            <div dangerouslySetInnerHTML={{__html: data.wpPage.identifixPageOptions.description3 }} />
+              <Link className="btn btn-primary me-5"  to="#get-in-touch">Enquire now</Link>
+          </div>
+
+          
+       </div>
+    </section>
+
+  
   <div className="home">
   <GetInTouch
      title={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchTitle}

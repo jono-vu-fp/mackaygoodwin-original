@@ -32,6 +32,12 @@
     font-style: normal;
     font-display: swap;
 }
+ @font-face {
+    font-family: 'Myriad Pro Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Myriad Pro Regular'), url('../fonts/MYRIADPRO-REGULAR.woff') format('woff');
+    }
 
 body {
     color: #000;
@@ -1508,12 +1514,249 @@ section.backinbusiness {
 
 .top-bor {
     border-top: 1px solid rgba(0, 0, 0, 0.30);
-    ;
+}
+
+.wva_section.about_section.history_section{
+    margin-bottom: 90px;
+}
+.wva_section.about_section.history_section .wva_left:before {
+    background: #dfe3e6;
+  
+}
+
+.wva_section.about_section.history_section .wva_left:after {
+    background-color: #ebe9dd;   
+}
+.wva_section.about_section.history_section .wva_left::after{
+    height: 315%; 
+}
+
+
+
+.wva_section.about_section.history_section .vid_play img{
+    transform-origin: center center;
+    transition: all .5s ease;
+    transform: scale(1.0);
+   
+}
+.hov_effact{
+     overflow: hidden;
+}
+
+.wva_section.about_section.history_section .vid_play:hover img, .wva_section.about_section.history_section .vid_play:focus img{
+    transform: scale(1.1);
+    transition: all .5s ease;
+}
+.mgway .about_section.history_section .my-3{
+    padding-top: 45px;
+}
+.mgway .about_section.history_section .fullTxt{
+    padding-bottom: 115px;
+}
+.wva_section.about_section .wva_left:before {
+    background: #ebe9de;  
+}
+.wva_section.about_section .wva_left:after {
+    background-color: #dbfd90;   
+}
+.wva_section.about_section.history_section.identifix_sec2{
+    padding-bottom:22px;
+    margin-bottom: 70px;
+}
+
+.wva_section.about_section.history_section.identifix_sec2 .vid_play button{
+    background: url(../images/play_icon.svg);
+   
+}
+.wva_section.about_section.history_section.identifix_sec2 .wva_left:before{
+   background-color: #ebe9dd; 
+}
+.wva_section.about_section.history_section.identifix_sec2 .wva_left:after {
+    background-color: #dfe3e6;
+}
+.vcfo_section1.about_section {
+    margin-bottom: 30px;
+}
+ .mgway .about_section .my-3{
+    padding-top: 55px;
+    margin-bottom: 2px!important
+}
+ .mgway .about_section .fullTxt{
+    padding-top:0px;
+    line-height: 38px;
+    padding-bottom: 85px;
+}
+.wva_section.about_section .wva_right{
+    padding-top: 126px;
+    padding-bottom: 33px;
+    max-width: 515px;
+    margin-right: -25px;
+}
+.wva_section.about_section .wva_right h3{
+    margin-bottom: 26px;
+}
+
+.home_services.mg_carrer_part{
+    padding-top: 0px;
+}
+.home_services.mg_carrer_part #community-support{
+    padding: 0px;
+    background: #ebe9dd!important;
+}
+
+.home_services.mg_carrer_part ul li#community-support .hs_cnt h4{
+    margin-bottom: 24px;
+}
+
+.home_services.mg_carrer_part #community-support h2{
+    color: #1c5e48;
+    font-size: 18px;
+    margin-bottom: 5px;
+    line-height: 26px;
+}
+.home_services.mg_carrer_part ul li .hs_cnt p{
+    line-height: 24px;
+  }
+.home_services.mg_carrer_part  ul li .hs_cnt h4{
+    font-size: 28px;
+    font-weight: 400;
+    font-style: normal;
+    color: #333333;
+    font-family: 'Sohne';
+    margin-bottom: 55px;
+}
+.home_services.mg_carrer_part h3.card-title{
+    font-size: 19px;
+    font-weight: 400;
+    color: #000000;
+    letter-spacing: 0.16px;
+    font-family: 'Sohne', sans-serif, Arial;
+    margin-bottom: 15px;
+
+}
+.home_services.mg_carrer_part #community-support .slide img{
+    max-height: 277px;
+}
+.home_services.mg_carrer_part .des_1{
+    min-height: 354px!important;
+}
+.home_services.mg_carrer_part .des_2{
+    min-height:218px;
+}
+.home_services.mg_carrer_part > .container > ul > li{
+    margin: 0px 2% 0px 0px;
+    max-width: 32%;
+}
+.home_services.mg_carrer_part > .container > ul > li:last-child{
+      margin: 0px 0% 0px 0px;
+}
+.home_services.mg_carrer_part ul li .hs_cnt {
+    padding: 40px 42px 57px;
+}
+.home_services.mg_carrer_part .carousel.carousel-slider .control-arrow{
+    padding: 2px;
+}
+.home_services.mg_carrer_part #community-support .carousel.carousel-slider .control-arrow{
+    width: 40px;
+    height: 40px
+}
+.vcf_sec.mg_identifix .wva_left h3{
+    line-height: normal;
+    margin-bottom: 33px;
+}
+.vcf_sec.mg_identifix .wva_left{
+    max-width:500px;
+    padding-top: 64px;
+}
+.vcf_sec.mg_identifix .wva_left div{
+    font-size: 18px;
+}
+.vcf_sec.mg_identifix .wva_right{
+    margin-right: 205px;
+    width: 525px;
+    margin-top: 0;
+}
+.curve-right.mg_identifix{
+    margin-bottom: 40px;
+}
+.vcf_sec.mg_identifix .wva_left{
+    padding-bottom: 50px;
+}
+.vcf_sec.mg_identifix .wva_right:after{
+    top: 0px;
+    background-color: #dfe3e6;
+    height: 152.5%;
+}
+.vcf_sec.mg_identifix .wva_right:before{
+    top: -70px;
+    background-color: #ebe9dd;
+}
+#virtual-ciso .wva_right .btn{
+    margin-bottom: 48px;
+}
+.vcf_sec.mg_identifix .wva_left .btn, #virtual-ciso .wva_right .btn{
+    margin-top: 22px;
+}
+
+#virtual-ciso.wva_section.about_section.history_section.identifix_sec2{
+    margin-bottom: 100px;
+}
+.events_section_1{
+    border-top: 1px solid #ccc;
+    padding-top: 53px;
+}
+.events_mgacademy .bg_1{
+    background-color: #e0e3e5;
+}
+.events_mgacademy img{
+   height: 280px;
+   width: auto;
+}
+.events_mgacademy .mg_img{
+   text-align: center;
+   background: #000;
+}
+.events_mgacademy h4{
+    min-height:155px;
+    padding-top: 35px;
+    font-size: 26px;
+}
+.events_mgacademy .sh_desc_1{
+    min-height: 196px;
+    margin-top: 1px;
+}
+.events_mgacademy .desc_1{
+    height: 140px;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+.events_mgacademy .buttons_2{
+    height: 80px;
+}
+.events_mgacademy .buttons_2 i{
+ padding-left: 2px;
+}
+.events_mgacademy .buttons_2 .bt-big{
+    font-family: 'Sohne';
+    font-size: 16px;
+    font-weight: 400;
+    padding: 14px 28px 12px 28px!important;
+    margin-right: 0px!important;
+}
+.events_mid_part{
+    padding: 4px 8px 0px 8px;
+}
+.event_button{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.event_incubator{
+    margin-bottom: 120px!important;
 }
 
 .mgway .fullTxt {
     padding-top: 60px;
-    padding-bottom: 70px;
+    padding-bottom: 30px;
 }
 
 .mgway .news-list h5 {
@@ -1540,7 +1783,106 @@ section.backinbusiness {
 .mgway .keybannerholder>.gry-bx {
     background-color: #F1F0E8;
 }
+.wcmg_section.mg_approach{
+    background-color: #2d2d2d; 
+}
 
+.wcmg_section.mg_approach ul li h4{
+    color: #dffe97;
+}
+.wcmg_section.mg_approach ul li p{
+    color: #ffffff;
+    font-weight: 400;
+    line-height: 28px;
+}
+.mg_approach{
+    margin-bottom: 126px;
+}
+.mg_identifix{
+    overflow: hidden;
+}
+.mg_identifix img,.about_section img{
+    width: 100%;
+}
+  .mg_identifix .wva_left {
+    order: 2;
+}
+.mg_identifix .wva_left {
+    float: left;
+    margin-left: auto;
+    max-width: 515px;
+    padding-bottom: 120px;
+    padding-top: 67px;
+}
+.mg_identifix .wva_left h3 sup{
+    font-family: 'Myriad Pro Regular';
+    font-weight: 400;
+    font-size:40px ;
+    top: 0;
+}
+.mg_identifix .wva_left .btn{
+    margin-top: 0px;
+    width: 150px;
+    padding: 9px 25px;
+}
+.mg_identifix .wva_left h3{
+    font-size: 44px;
+    font-weight: 500;
+    line-height: 0.01px;
+    color: #000000;
+    margin-bottom: 37px;
+}
+.mg_identifix .wva_left p{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+}
+.mg_identifix .wva_left p a{
+    font-size: 20px;
+}
+
+.mg_identifix .wva_right {
+    float: right;
+    margin-right: 207px;
+    margin-top: 71px;
+    position: relative;
+    width: 526px;
+}
+.mg_identifix .wva_right:before,.mg_identifix .wva_right:after{   
+    bottom: 0;
+    content: "";
+    height: calc(100% + 71px);
+    position: absolute;
+    right: 0;
+    width: 400%;
+    z-index: -1;
+}
+
+.mg_identifix .wva_right:before {
+    background-color: #dfe3e6;
+    bottom: inherit;
+    top: 0;
+    left: 0px;
+}
+.mg_identifix .wva_right:after{
+    background-color: #ebe9dd;
+    bottom: 0;
+    right: 0px;
+    top: inherit;
+}
+
+.mg_identifix #banner-section{
+    padding: 65px 0px 90px;
+
+}
+.wva_section.mg_identifix .wva_right{
+    float: left;
+}
+.mg_identifix .banner-content .banner-desc{
+    padding: 8px 40px 25px 0;
+    font-size: 20px;
+    line-height: 28px; 
+}
 
 /** MG Way Page **/
 
@@ -1876,7 +2218,6 @@ section.backinbusiness.backinbusiness-page {
     background: #EBE9DE;
 }
 
-#careers,
 #community-support {
     background-color: #E0E3E5;
     padding: 70px 0 120px;
@@ -2569,12 +2910,26 @@ img.recovery-partner-img {
     width: 55%;
     float: right;
 }
+.consult-business.liquidation #get-in-touch .stateSelect{
+    width: 100%;
+}
+.consult-business.liquidation #get-in-touch .areaSelect{
+    width: 100%;
+    float: right;
+}
 
 .consult-business #get-in-touch .firstName{
     width: 40%;
 }
 .consult-business #get-in-touch .surName{
     width: 55%;
+    float: right;
+}
+.consult-business.liquidation #get-in-touch .firstName{
+    width: 100%;
+}
+.consult-business.liquidation #get-in-touch .surName{
+    width: 100%;
     float: right;
 }
 
@@ -2656,7 +3011,24 @@ img.recovery-partner-img {
 
 .services-slider .slick-slide.slick-active{
     visibility: visible;
-}   
+} 
+
+#banner-section.identi_bannersec.identifix_sec1{
+    padding: 75px 0 90px;
+}  
+.identifix_sec1 .banner-image{
+    margin-top: 43px;
+}
+.identifix_sec1 .banner-content .banner-desc{
+    padding-bottom: 15px;
+    padding-right: 33px;
+}
+.identi_bannersec.identifix_sec1 h1.banner-heading sup{
+    font-family: 'Myriad Pro Regular';
+    font-weight: 400;
+    font-size: 40px;
+    top: 0;
+}
 
 .identi_bannersec h1.banner-heading sup {
     top: -13px;
@@ -3870,6 +4242,8 @@ img.recovery-partner-img {
     margin-top: 71px;
     width: 526px;
 }
+
+
 .wva_section .wva_left:before, .vcfo_section .vcfo_left:before {
     background: #DBFD90;
     content: '';
@@ -4594,7 +4968,7 @@ img.recovery-partner-img {
 .home #get-in-touch ul li:nth-child(7), .home #get-in-touch ul li:nth-child(8) {
     width: 100%;
 }
-.home #get-in-touch ul li input[type="text"], .home #get-in-touch ul li input[type="phone"], .home #get-in-touch ul li select, .home #get-in-touch ul li input[type="email"], .home #get-in-touch ul li textarea {
+.home #get-in-touch ul li input[type="text"], .home #get-in-touch ul li input[type="phone"], .home #get-in-touch ul li select, .home #get-in-touch ul li input[type="email"], .home #get-in-touch ul li textarea{
     background-color: #ffffff;
     border: 0;
     padding: 0 15px;
@@ -4784,6 +5158,59 @@ img.recovery-partner-img {
     left: 0;
     border-radius: 100%;
 }
+
+.doc_1 .col-xl-6{
+    width: 43%;
+}
+.voluntary_administration.doc_1 .banner-content .banner-heading{
+    font-size: 44px;
+}
+.voluntary_administration.doc_1 #banner-section {
+    padding-top: 79px;
+    padding-bottom: 95px;
+    margin-bottom: 3px;
+}
+.liq_blocks.doca_2 .recovery-partner-title {
+    padding:0px 0 1px;
+}
+.liq_blocks.doca_2 .col-lg-4{
+    width: 33.9%;
+}
+.liq_blocks.doca_2 .col-lg-4:last-child{
+    width: 32%;
+    padding-right: 0;
+}
+.liq_blocks.doca_2 .col-lg-4:last-child .lb_txt{
+    padding-right: 0px;
+}
+.liq_blocks.doca_2 .lb_img{
+    margin-top: 8px;
+}
+.liq_blocks.doca_2.va_blocks{
+    padding-bottom: 57px;
+
+}
+.bankruptcy  .wva_section.key_expert .wva_right{
+    max-width: 472px!important;
+    padding-top: 40px;
+}
+.bankruptcy .wva_section.key_expert .wva_left{
+    padding-top: 78px;
+    margin-left: 202px;
+}
+.bankruptcy .wva_section.key_expert .wva_left::before {
+    height: 100%;
+    background-color:#d0ff80;
+    top: 78px;
+}
+.bankruptcy .wva_section.key_expert .wva_left::after {
+    height: 100%;
+    background-color:#eae7db;
+    top: 0;
+}
+
+
+
 /****** BreakPoints *******/
 /****** Responsive Start *******/
 @media screen and (min-width:1400px){
@@ -5012,6 +5439,33 @@ img.recovery-partner-img {
     .ill_section.vcfo_section.bhc_section {
         padding-bottom: 170px;
     }
+    .mg_approach {
+        margin-bottom: 60px;
+    }
+    #virtual-ciso.wva_section.about_section.history_section.identifix_sec2 {
+    margin-bottom: 60px;
+    }
+    .curve-right.mg_identifix {
+    padding-bottom:0px!important;
+    }
+    .wva_section.about_section.history_section.identifix_sec2{
+        margin-bottom: 40px;
+    }
+    .event_incubator{
+    margin-bottom: 80px!important;
+    }
+    section.mg_events{
+        padding-bottom: 3rem;
+
+    }
+    .event_pro_title{
+        margin-top: 1rem!important;
+        margin-bottom: 1rem!important;
+    }
+    .wva_section.about_section.history_section {
+        margin-bottom: 60px;
+    }
+
 }
 @media screen and (max-width:1600px){
     
@@ -5144,6 +5598,19 @@ img.recovery-partner-img {
     .bankruptcy .news-list {
         padding-top: 40px;
     }
+    .wva_section.about_section .wva_right{
+            padding-bottom: 20px;
+    }
+    .events_mgacademy h4{
+        font-size: 24px;
+        min-height: 160px;
+    }
+    .events_section_1{
+        padding-top: 35px;
+    }
+    .mg_identifix .wva_left h3 {
+        font-size: 40px;
+    }
 }
 @media screen and (max-width:1500px){
     .brokermid_sec h2{ font-size: 42px; }
@@ -5233,6 +5700,20 @@ img.recovery-partner-img {
     }
     .home_branding h2, .wcmg_section h2, .na_section h2, .home #get-in-touch h2 {
         font-size: 32px;
+    }
+    .mgway .about_section .fullTxt, .mgway .about_section.history_section .fullTxt {
+        padding-bottom: 60px;
+    }
+    #banner-section.identi_bannersec.identifix_sec1 {
+        padding: 65px 0 50px;
+    }
+    .event_incubator{
+        margin-bottom: 60px!important;
+    }
+
+    .events_mgacademy h4{
+        font-size: 22px;
+
     }
 }
 @media screen and (max-width:1400px){
@@ -5364,6 +5845,52 @@ img.recovery-partner-img {
     .ill_section.vcfo_section.bhc_section {
         padding-bottom: 120px;
     }
+    .mg_identifix .wva_right{
+        margin-right: 20px;
+    }
+    .home_services.mg_carrer_part #community-support .slide img {
+        max-height: 241px;
+    }
+    .home_services.mg_carrer_part ul li .hs_cnt h4{
+            font-size: 26px;
+    }
+    .home_services.mg_carrer_part ul li .hs_cnt {
+    padding: 30px;
+    }  
+    .home_services.mg_carrer_part h3.card-title{
+        font-size: 18px;
+        line-height: 22px;
+    } 
+    .vcf_sec.mg_identifix .wva_right{
+            margin-right: 10px;
+    }
+    .mg_identifix .wva_left h3{
+        font-size: 36px;
+    }
+    .identifix_sec1 .banner-image {
+        margin-top: 54px;
+    }
+     .wva_section.about_section.history_section.identifix_sec2 .vid_play button{
+        width: 85px;
+        height: 85px;
+        background-size: 100% 70%!important;
+        background-repeat: no-repeat!important;
+    }
+     .curve-right.mg_identifix {
+    padding-top:60px!important;
+    }
+    .wva_section.about_section.history_section.identifix_sec2 {
+    margin-bottom: 60px;
+    }
+     section.mg_events {
+        padding-bottom: 2rem;
+    }
+    .events_mgacademy .sh_desc_1{
+        min-height: 215px;
+    }
+    .wva_section.about_section.history_section {
+        margin-bottom: 50px;
+    }
 }
 @media screen and (max-width:1300px){
     .ps_bot .pack_inner h3 {
@@ -5407,6 +5934,24 @@ img.recovery-partner-img {
     .bsp_section {
         margin-bottom: 150px;
     }
+    .events_mid_part {
+        padding: 4px 4px 0px 4px;
+    }
+    .events_mgacademy h4 {
+        font-size: 20px;
+    }
+    .events_mgacademy .sh_desc_1{
+        min-height: 210px;
+    }
+    .event_pro_title{
+        margin-top:0rem!important;
+        margin-bottom: 0rem!important;
+    }
+    .events_section_1{
+        padding-top: 25px;
+    }
+   
+    
 }
 @media (min-width:992px) and (max-width:1200px) {
 
@@ -5414,15 +5959,15 @@ img.recovery-partner-img {
         margin-left: 110px;
     }
     .identi_bannersec .banner-content .banner-desc {
-    font-size: 17px;
-    line-height: 26px;
+        font-size: 17px;
+        line-height: 26px;
     }
    .identi_bannersec .banner-image {
         margin-top: 0;
     }
     .identi_bannersec .banner-content .banner-heading {
-    margin-bottom: 11px;
-    font-size: 37px;
+        margin-bottom: 11px;
+        font-size: 37px;
     }
     .sec_links {
         padding: 50px 0;
@@ -5434,64 +5979,64 @@ img.recovery-partner-img {
             padding: 40px 75px 50px;
     }
     .appoint_faqsec{
-            margin-top: 60px;
-                padding-top: 70px;
-    padding-bottom: 60px;
+        margin-top: 60px;
+        padding-top: 70px;
+        padding-bottom: 60px;
     }
     .appoint_faqsec .accordion-item button.accordion-button, .appoint_faqsec .accordion-item:last-of-type .accordion-button.collapsed {
         font-size: 38px;
     }
     .srch_appblock label {
-    margin: 0 0 14px 0;
-    font-size: 27px;
+        margin: 0 0 14px 0;
+        font-size: 27px;
     }
     .appoint_faqsec .accordion-button:after{
         width: 47px;
-    height: 47px;
-    background-size: contain;
+        height: 47px;
+        background-size: contain;
     }
     .appoint_faqsec .accordion-button:not(.collapsed)::after{
          width: 47px;
     }
 
     .appoint_faqsec .accordion-body h3 {
-    font-size: 29px;
-    padding-top: 3px;
-    margin-bottom: 22px;
+        font-size: 29px;
+        padding-top: 3px;
+        margin-bottom: 22px;
     }
     .appoint_faqsec .accordion-body p {
-    margin: 0 0 18px 0;
-    line-height: normal;
-    font-size: 17px;
+        margin: 0 0 18px 0;
+        line-height: normal;
+        font-size: 17px;
     }
     .appoint_faqsec .accordion-body {
         padding-bottom: 40px;
     }
     .appoint_faqsec .accordion-body ul li {
-    font-size: 17px;
-    margin-right: 58px;
+        font-size: 17px;
+        margin-right: 58px;
     }
     .appoint_faqsec .accordion-body ul li a{ font-size: 17px; }
     .srch_app {
         margin-bottom: 40px;
     }
     .dealhub_bannersec .banner-content {
-    padding-top: 55px;
-    padding-right: 0;
+        padding-top: 55px;
+        padding-right: 0;
     }
     .brokermid_sec {
-    padding-top: 60px;
-    padding-bottom: 80px;
+        padding-top: 60px;
+        padding-bottom: 80px;
     }
     .brokermid_sec h2 {
-    font-size: 38px;
-    margin-bottom: 27px;
+        font-size: 38px;
+        margin-bottom: 27px;
     }
     .vid_play button {
-    width: 70px;
-    height: 70px;
-    background-size: contain;
-    font-size: 0;
+        width: 70px;
+        height: 70px;
+        background-size: contain;
+        font-size: 0;
     }
     .packages_section .ps_top {
         padding-top: 20px;
@@ -5535,21 +6080,57 @@ img.recovery-partner-img {
         padding: 30px 45px 37px;
     }
     .dpnbanner_sec h1.banner-heading {
-    color: #ffffff;
-    font-size: 37px;
-    margin-bottom: 0;
-    line-height: normal;
+        color: #ffffff;
+        font-size: 37px;
+        margin-bottom: 0;
+        line-height: normal;
     }
     .dpn_page .dpnfaq .accordion-button{
-            font-size: 39px;
-    line-height: 53px;
+        font-size: 39px;
+        line-height: 53px;
     }
     .eventgallery_sec {
-    padding-top: 50px;
-    padding-bottom: 50px;
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
     #community-support .slide img {
         max-height: 320px;
+    }
+    .wva_section.about_section .wva_right{
+        max-width: 470px;
+            padding-top: 80px;
+    }
+    .mg_identifix .wva_left{
+        max-width: 410px;
+    }
+    .mg_identifix .wva_right{
+            width: 495px;
+            margin-right: 0;
+    }
+    .mg_identifix .wva_left p{
+        font-size: 18px;
+        line-height: 26px;
+    }
+    .mg_identifix .wva_left p a{
+        font-size: 18px;
+    }   
+    .home_services.mg_carrer_part #community-support .slide img {
+        max-height: 202px;
+    }
+    .home_services.mg_carrer_part ul li .hs_cnt h4{
+        margin-bottom:42px;
+    }
+    .home_services.mg_carrer_part ul li#community-support .hs_cnt h4 {
+        margin-bottom: 10px;
+    }
+    .home_services.mg_carrer_part .des_1 {
+        min-height: 468px!important;
+    }
+    .home_services.mg_carrer_part .des_2 {
+        min-height: 322px;
+    }
+    .home_services.mg_carrer_part ul li .hs_cnt h4 {
+        font-size: 24px;
     }
 }
 
@@ -5870,11 +6451,56 @@ img.recovery-partner-img {
     .ca_sec.ca_sec1 {
         padding: 40px 0 50px;
     }
+     .mgway .about_section .fullTxt br{
+        display: none;
+    }
+    .vcf_sec.mg_identifix .wva_left {
+        max-width: 410px;
+    
+    }
+    .vcf_sec.mg_identifix .wva_right{
+        width: 490px
+    }
+    .mg_identifix .wva_left h3 {
+    font-size: 32px;
+    }
+    .vcf_sec.mg_identifix .wva_right:after{
+        height:400%;
+    }
+    .vcf_sec.mg_identifix .wva_left h3 {    
+        margin-bottom: 25px;
+    }
+    .identi_bannersec .banner-image {
+        margin-top: 80px;
+    }
+     .wva_section.about_section.history_section.identifix_sec2 {
+        margin-bottom: 50px;
+    }
+    .events_mgacademy .buttons_2 .bt-big{
+        font-size: 14px;
+        padding: 12px 15px 10px 15px!important;
+    }
+    .events_mgacademy h4{
+        min-height: 145px;
+        padding-top: 25px;
+    }
+    .events_mgacademy .buttons_2 {
+        height: 65px;
+    }
+    .events_mgacademy .sh_desc_1 {
+        min-height: 260px;
+    }
+    .events_mgacademy img{
+        height: 205px;
+    }
+
+
+
 }
 @media screen and (max-width:991px){
     .identi_bannersec h1.banner-heading sup {
-    top: -9px;
-    font-size: 22px;
+        top: -9px;
+        font-size: 22px;
     }
     #banner-section.identi_bannersec {
         padding-top: 50px;
@@ -5893,7 +6519,7 @@ img.recovery-partner-img {
     }
     .identi_bannersec a.btn_more{
         font-size: 17px;
-    padding: 7px 25px;
+        padding: 7px 25px;
     }
     #banner-section.identi_bannersec {
         padding: 91px 0 0px;
@@ -5902,22 +6528,24 @@ img.recovery-partner-img {
         padding: 45px 0;
     }
     .sec_links ul a {
-    display: block;
-    padding: 10.5px 0px;
-    text-align: center;
+        display: block;
+        padding: 10.5px 0px;
+        text-align: center;
     }
     .sec_links ul li {
-    margin: 0 1%;
-    width: 33%;
+        margin: 0 1%;
+        width: 33%;
     }
     .bhc_sec {
-    margin-top: 0 !important;
-    padding-top: 50px !important;
+        margin-top: 0 !important;
+        padding-top: 50px !important;
     }
-    .vcf_sec,.vciso_sec{padding-top: 50px !important;}
+    .vcf_sec,.vciso_sec{
+        padding-top: 50px !important;
+    }
     .vid_play:after{
         width: 55px;
-    height: 55px;background-size: contain;
+        height: 55px;background-size: contain;
     }
     .bhc_sec .ins-content2,
     .vcf_sec .ins-content2, .vciso_sec .ins-content2 {
@@ -5930,21 +6558,21 @@ img.recovery-partner-img {
     }
 
      .appoint_faqsec{
-            margin-top: 60px;
-                padding-top: 70px;
-    padding-bottom: 60px;
+        margin-top: 60px;
+        padding-top: 70px;
+        padding-bottom: 60px;
     }
     .appoint_faqsec .accordion-item button.accordion-button, .appoint_faqsec .accordion-item:last-of-type .accordion-button.collapsed {
         font-size: 34px; padding-right: 40px;
     }
     .srch_appblock label {
-    margin: 0 0 14px 0;
-    font-size: 25px;
+        margin: 0 0 14px 0;
+        font-size: 25px;
     }
     .appoint_faqsec .accordion-button:after{
         width: 47px;
-    height: 47px;
-    background-size: contain;
+        height: 47px;
+        background-size: contain;
     }
     .appoint_faqsec .accordion-button:not(.collapsed)::after{
          width: 47px;height: 1px !important;
@@ -5953,34 +6581,34 @@ img.recovery-partner-img {
         padding: 15px 22px;font-size: 17px;
     }
     .srch_app input.frm_submit{
-            right: 17px;
-    top: 12px;
+        right: 17px;
+        top: 12px;
     }
     .appoint_faqsec .accordion-button .sub_title{ font-size: 17px; }
 
     .appoint_faqsec .accordion-body h3 {
-    font-size: 29px;
-    padding-top: 3px;
-    margin-bottom: 22px;
+        font-size: 29px;
+        padding-top: 3px;
+        margin-bottom: 22px;
     }
     .appoint_faqsec .accordion-body p {
-    margin: 0 0 18px 0;
-    line-height: normal;
-    font-size: 17px;
+        margin: 0 0 18px 0;
+        line-height: normal;
+        font-size: 17px;
     }
     .appoint_faqsec .accordion-body {
         padding-bottom: 40px;
     }
     .appoint_faqsec .accordion-body ul li {
        font-size: 17px;
-    margin-right: 27px;
+       margin-right: 27px;
     }
     .appoint_faqsec .accordion-body ul li a{ font-size: 17px; }
     .srch_app {
         margin-bottom: 40px;
     }
 
-     .dealhub_bannersec .banner-content {
+    .dealhub_bannersec .banner-content {
     padding-top: 0px;
     padding-right: 0;
     }
@@ -6106,28 +6734,28 @@ img.recovery-partner-img {
     margin-top: 11px;
     }
     .dpn_page .dpnfaq .accordion-button {
-    font-size:39px;
-    padding-right: 95px;
-    line-height: 50px;
+        font-size:39px;
+        padding-right: 95px;
+        line-height: 50px;
     }
     .sponser_sec h2 {
-    font-size: 25px;
-    margin-bottom: 0;
+        font-size: 25px;
+        margin-bottom: 0;
     }
     .sponser_sec ul li {
         width: 30%;
-    margin-bottom: 20px;
+        margin-bottom: 20px;
     }
     .sponser_sec {    padding-bottom: 20px;}
      .eventgallery_sec {
-    padding-top: 50px;
-    padding-bottom: 50px;
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
     .eventgallery_sec ul li {
-    width: 48%;
-    float: left;
-    padding: 10px;
-    margin: 0 1% 18px;
+        width: 48%;
+        float: left;
+        padding: 10px;
+        margin: 0 1% 18px;
     }
     #community-support .slide img {
         max-height: 481px;
@@ -6451,6 +7079,7 @@ img.recovery-partner-img {
     .vcfo_section .vcfo_left {
         width: 100%;
     }
+
     .vcfo_section .vcfo_right {
         width: 100%;
         padding: 30px;
@@ -6548,6 +7177,139 @@ img.recovery-partner-img {
     }
     .vcfo_section.irl_section .vcfo_right {
         width: 100%;
+    }
+    .mg_identifix .wva_left,.mg_identifix .wva_right{
+        width: 100%;
+    }
+    .wva_section.about_section .wva_right{
+        padding-top: 0;
+        max-width: 100%;
+        margin-right: 0;
+    }
+    .wva_section.about_section.history_section .wva_left::after {
+        height: 750%;
+    }
+    .home_services.mg_carrer_part ul li {
+        max-width: 100%;
+        margin: 0 0% 4% 0;
+    }
+    .home_services.mg_carrer_part ul {
+        flex-wrap: nowrap;
+        display: block;
+    }
+    .home_services.mg_carrer_part .des_1,.home_services.mg_carrer_part .des_2{
+        min-height: auto!important;
+    }
+    .home_services.mg_carrer_part ul li .hs_cnt h4{
+        margin-bottom: 20px;
+    }
+    .home_services.mg_carrer_part #community-support .slide img {
+        max-height: 465px;
+    }
+    .home_services.mg_carrer_part .carousel .slider-wrapper.axis-horizontal .slider{
+        margin-bottom: -29px;
+    }
+   .home_services.mg_carrer_part #project8{
+        padding: 0px;
+    }
+    .mg_identifix .wva_left{
+        max-width: 100%;
+        padding-left: 40px;
+    }
+    .mg_identifix .wva_left p {
+        font-size: 18px;
+        line-height: 26px;
+    }
+    .mg_identifix .wva_left h3{
+        font-size: 40px;
+        margin-bottom: 32px;
+    }
+    .mg_identifix .wva_right:before{
+        height: 178%;
+    }
+    .mg_identifix .wva_right {
+        margin-right: 0;
+    }
+    .mg_approach {
+        margin-bottom: 60px;
+    }
+    .vcf_sec.mg_identifix .wva_left h3{
+        font-size: 32px;
+    }
+    .vcf_sec.mg_identifix .wva_left {
+        padding-left: 25px;
+        padding-right: 15px;
+        padding-top: 30px;
+    }
+    .vcf_sec.mg_identifix .wva_right,.vcf_sec.mg_identifix .wva_left {
+        width: 100%;
+        max-width: 100%;    
+    }
+    .vcf_sec.mg_identifix .wva_right:after{
+        left: 0px;
+    }
+
+    .vcf_sec.mg_identifix .wva_right:before {
+        height: calc(100% + 71px);
+        min-height: calc(100% + 71px);
+        left: auto;
+    }
+   
+    .vcf_sec.mg_identifix .wva_right {
+        margin-right: 0;
+    }
+    .identi_bannersec .banner-image {
+        margin-top: 0px;
+    }
+    #virtual-ciso.wva_section.about_section.history_section.identifix_sec2 {
+        margin-bottom: 50px;
+    }
+    .wva_section.about_section .wva_right{
+        padding-bottom: 0px;
+    }
+   #virtual-ciso .wva_right .btn {
+        margin-bottom: 5px;
+    }
+    .vcf_sec.mg_identifix .wva_left {
+        padding-bottom: 22px;
+    }
+    .mgway .wva_section.about_section .wva_right {
+        padding-bottom: 20px;
+    }
+    .mgway .wva_section.about_section .wva_right {
+        margin-right: 0;
+    }
+    .mg_identifix .wva_right {
+        margin-top: 40px;
+    }
+    .mg_identifix .wva_left {
+        padding-bottom: 40px;
+    }
+    .mgway .wva_section .wva_left:before {
+        height: calc(100% + 40px);
+    }
+    .mgway .home_services ul li .hs_cnt p {
+        min-height: inherit;
+    }
+    #banner-section.identi_bannersec.identifix_sec1 {
+        padding: 55px 0 0px;
+    }
+    .events_mgacademy img {
+        height: auto;
+    }
+    .events_mgacademy h4 {
+        min-height: auto;
+        font-size: 24px;
+    }
+    .events_mgacademy .sh_desc_1 {
+        min-height: auto;
+    }
+    .events_section_1{
+        padding-top: 30px;
+    }
+    .home_services.mg_carrer_part > .container > ul > li {
+    margin: 0px 0% 4% 0px;
+    max-width: 100%;
     }
 }
 @media screen and (max-width:767px){
@@ -6894,6 +7656,74 @@ img.recovery-partner-img {
     .bankruptcy .news-list {
         padding-top: 20px;
     }
+    .mg_identifix .wva_left h3 {
+        font-size: 36px;
+        margin-bottom: 30px;
+    }
+    .mg_identifix .wva_left h3 sup {
+        font-size: 20px;
+    }    
+    .mg_identifix .wva_right{
+        margin-right: 0;
+    }
+    .wva_section.about_section .wva_right{
+        margin-right: 0;
+    }
+    .home_services.mg_carrer_part #community-support .slide img {
+        max-height: 350px;
+    }
+    .mg_identifix .wva_right:before {
+        height: 220%;
+    }
+    .mg_identifix .wva_left{
+        padding-bottom: 50px;
+    }
+    .mg_approach {
+        margin-bottom: 60px;
+    }
+    .mgway .news-list .bt-big{
+        margin-left: 30px;
+    }
+    .vcf_sec.mg_identifix .wva_left h3 {
+        font-size: 30px;
+    }
+    .wva_section.about_section.history_section.identifix_sec2 .vid_play button{
+        width: 74px;
+        height: 74px;
+        background-size: 100% 70%!important;
+        background-repeat: no-repeat!important;
+    }
+    .vcf_sec.mg_identifix .wva_left {
+        padding-left: 25px;       
+    }
+    #banner-section.identi_bannersec.identifix_sec1 {
+        padding: 55px 0 0px;
+    }
+    .mgway .wva_section .wva_left {
+        margin-bottom: 0;
+    }
+     .curve-right.mg_identifix {
+    padding-top: 50px!important;
+    }
+    .wva_section.about_section.history_section.identifix_sec2 {
+    margin-bottom: 40px;
+    }
+    .events_section_1{
+        padding-top:20px;
+    }
+    #virtual-ciso.wva_section.about_section .wva_right h3, .wva_section.about_section.identifix_sec2 .wva_right h3{
+        padding-top: 0px;
+    }
+    .wva_section.about_section .wva_right h3{
+        padding-top: 25px;
+    }
+    .vcf_sec.mg_identifix .wva_left{
+        padding-top: 25px;
+    }
+    .mg_identifix .wva_left{
+         padding-top: 45px;
+    }
+
 }
 @media screen and (max-width:667px){
     .ol_list h2 {
@@ -6918,6 +7748,9 @@ img.recovery-partner-img {
     .ca_sec .btn {
         font-size: 17px;
     }
+
+
+   
 }
 @media screen and (max-width:640px){
     .ols_section {
@@ -6929,6 +7762,10 @@ img.recovery-partner-img {
     .vcfo_section1 {
         margin-bottom: 45px;
     }
+    #incubator-progra.wva_section.about_section .wva_right{
+        padding-right: 1.5rem!important;
+    }
+   
 }
 @media screen and (max-width:568px){
     .ps_bot {
@@ -6958,7 +7795,7 @@ img.recovery-partner-img {
     #community-support .slide img {
         max-height: 358px;
     }
-    .liq_banner .row>*, .glpo_section .row>*, .bib_section .row>*, .glpo_reco_section .row>*, .liq_blocks .col-lg-4, .wbl_section .container, .ols_section .container, .ht_section .container, .liquidation .news-articles .container, .wva_section .container, .voluntary_administration .glpo_section .container, .weva_section .container, .va_blocks .container, .voluntary_administration.liquidation .liq_rec_section.recovery-partner {
+    .liq_banner .row>*, .glpo_section .row>*, .bib_section .row>*, .glpo_reco_section .row>*, .liq_blocks .col-lg-4, .wbl_section .container, .ols_section .container, .ht_section .container, .liquidation .news-articles .container,.mg_identifix .container, #vCFO.mg_identifix .container, .wva_section .container, .voluntary_administration .glpo_section .container, .weva_section .container, .va_blocks .container, .voluntary_administration.liquidation .liq_rec_section.recovery-partner {
         padding-right: 20px;
         padding-left: 20px;
     }
@@ -7080,6 +7917,22 @@ img.recovery-partner-img {
     .legal a {
         font-size: 12px;
     }
+    .mg_identifix .wva_left{
+        padding-left: 25px;
+        padding-right: 20px;
+    }
+    .mg_identifix .wva_left p{
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .mg_identifix .wva_left p a{
+        font-size: 16px;
+    }
+    section.mg_events{
+        padding-top: 0px;
+    }
+ 
+
 }
 @media screen and (max-width:533px){
     .ps_bot h2 {
@@ -7089,13 +7942,13 @@ img.recovery-partner-img {
         width: 50%;
     }
     .sponser_sec ul li img{
-            max-height: 55px;
+        max-height: 55px;
     }
     .eventgallery_sec ul li {
-    width: 100%;
-    float: none;
-    padding: 10px;
-    margin: 0 0% 18px;
+        width: 100%;
+        float: none;
+        padding: 10px;
+        margin: 0 0% 18px;
     }
     .eventgallery_sec ul{
         margin: 0;
@@ -7150,6 +8003,14 @@ img.recovery-partner-img {
     .home_services {
         padding-top: 35px;
     }
+     .vcf_sec.mg_identifix .wva_left h3 {
+        font-size: 26px;
+    }
+   .home_services.mg_carrer_part #community-support .slide img {
+        max-height: 296px;
+    }
+
+    
 }
 @media screen and (max-width:480px){
     .dpn_page .accordion-button {
@@ -7209,19 +8070,37 @@ img.recovery-partner-img {
     .ca_sec h2 {
         line-height: 1.2;
     }
+    .mg_identifix .wva_right:before {
+        min-height: 330%;
+    }
+    .mgway .news-list .bt-big{
+        margin-left: 20px;
+    }
+    
+    .mg_approach {
+        margin-bottom: 45px;
+    }
+    .curve-right.mg_identifix {
+    padding-top: 40px!important;
+    }    
+    .mg_identifix .wva_left h3 {
+    font-size: 34px;
+    }
+
 }
 @media screen and (max-width:440px){
     .dpnbanner_sec h1.banner-heading {
         font-size: 29px;
     }
     .dpnbanner_sec .banner-content .banner-desc {
-    font-size: 16px;
-    line-height: 25px;
+        font-size: 16px;
+        line-height: 25px;
     }
     .dpnbanner_sec #get-in-touch {
-    padding: 26px 31px 41px;}
+        padding: 26px 31px 41px;
+    }
     .dpn_page .dpnfaq .accordion-button {
-            padding-right: 44px;line-height: 33px;
+        padding-right: 44px;line-height: 33px;
     }
     .sponser_sec h2 {
     font-size: 22px;
@@ -7261,6 +8140,9 @@ img.recovery-partner-img {
     .ca_sec div.ca_txt {
         margin-bottom: 20px;
     }
+    .home_services.mg_carrer_part #community-support .slide img {
+        max-height: 270px;
+    }
 }
 @media screen and (max-width:414px){
     .ps_bot h2 {
@@ -7274,11 +8156,19 @@ img.recovery-partner-img {
     .wva_section iframe {
         height: 188px;
     }
+    .home_services.mg_carrer_part #community-support .slide img {
+    max-height: 235px;
+    }
 }
 @media screen and (max-width:360px){
     .wva_section iframe {
         height: 180px;
     }
+     .home_services.mg_carrer_part #community-support .slide img {
+        max-height: 210px;
+    }
+     
+
 }
 
 /** Small Desktop **/
@@ -7347,7 +8237,7 @@ img.recovery-partner-img {
     .testimonial-main, .recovery-plan {
         padding: 20px 0;
     }
-    #careers, #community-support, #project8 {
+    #community-support, #project8 {
         padding-left: 15px;
         padding-right: 15px;
     }

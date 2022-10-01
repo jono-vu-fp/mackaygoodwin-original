@@ -95,7 +95,7 @@ const MgWay = ({ data }) => {
   });
   data.wpPage.mgWayPageOptions.approachQA.map((d) => {
     console.log(d);
-    return whyMG.push({ title: d.question, description: d.answer, tag: d.approachtag });
+    return whyMG.push({ title: d.question, description: d.answer, icon: d.icon, tag: d.approachtag });
   })
   let businessData = [];
   data.allWpOurpeople.nodes.map((d) => {
@@ -133,34 +133,156 @@ const MgWay = ({ data }) => {
         data={businessData}
         showAll={0}
       />
-      <AboutUs
+
+
+       <div className="wva_section about_section" id="about">
+        <div className="container">
+        <div class="row">
+             <h2 class="my-3">{data.wpPage.mgWayPageOptions.aboutTitle}</h2>
+             <div class="col-md-9 col-sm-12 fullTxt">             
+             <div dangerouslySetInnerHTML={{__html: data.wpPage.mgWayPageOptions.contentTagline }} />
+            </div>
+          </div>
+
+          <div className="wva_left">
+            <img src={data.wpPage.mgWayPageOptions?.aboutImage.mediaItemUrl} alt="" />
+          </div>
+          <div className="wva_right">
+            <h3>{data.wpPage.mgWayPageOptions.contentTitle}</h3>
+            <div dangerouslySetInnerHTML={{__html: data.wpPage.mgWayPageOptions.contentDesc }} /> 
+          </div>
+        </div>
+      </div>  
+
+
+       <div className="wcmg_section mg_approach">
+          <div className="container">
+            <h2>{data.wpPage.mgWayPageOptions.approachTitle}</h2>
+        
+            <ul>
+              {data.wpPage.mgWayPageOptions.approachQA.map((d, key) => {
+                return <li><div className="wcmg_img"><img src={d.icon.mediaItemUrl} alt="" /></div><h4>{d.question}</h4>
+                <div dangerouslySetInnerHTML={{__html: d.answer}} />
+                </li>
+              })} 
+            </ul>
+          </div>
+        </div> 
+
+        <div className="mg_identifix">
+        <div className="container">
+         
+          <div className="wva_right">
+           <img src={data.wpPage.mgWayPageOptions.identifixImage.mediaItemUrl} alt={data.wpPage.mgWayPageOptions.identifixImage.altText} />            
+          </div>
+
+           <div className="wva_left">
+          <h3>{data.wpPage.mgWayPageOptions.identifixTitle} <sup>{data.wpPage.mgWayPageOptions.identifixTag}</sup></h3>
+            <h5>{data.wpPage.mgWayPageOptions.bannerSubtitle}</h5>
+            <div dangerouslySetInnerHTML={{ __html: data.wpPage.mgWayPageOptions.identifixDescription }}></div>
+            {data.wpPage.mgWayPageOptions.enquireLink !== null && data.wpPage.mgWayPageOptions.enquireLink !== "" ? <Link className="btn btn-primary me-5" to={data.wpPage.mgWayPageOptions.enquireLink}>Enquire Now</Link> : ""}
+           
+          </div>
+        </div>
+      </div>
+
+       <div className="wva_section about_section history_section">
+        <div className="container">
+        <div class="row">
+             <h2 class="my-3">{data.wpPage.mgWayPageOptions.historyTitle}</h2>
+             <div class="col-md-9 col-sm-12 fullTxt">             
+             <div dangerouslySetInnerHTML={{__html: data.wpPage.mgWayPageOptions.historyContentTagline }} />
+            </div>
+          </div>
+
+          <div className="wva_left">
+            <img src={data.wpPage.mgWayPageOptions.historyImage.mediaItemUrl} alt="" />
+          </div>
+          <div className="wva_right">
+            <h3>{data.wpPage.mgWayPageOptions.historyContentTitle}</h3>
+            <div dangerouslySetInnerHTML={{__html: data.wpPage.mgWayPageOptions.historyContentDesc }} /> 
+          </div>
+        </div>
+      </div>  
+
+       <div className="home_services mg_carrer_part">
+          <div className="container">
+           
+            <ul>
+
+               <li id="careers">
+                  <div className="hs_img"><img src={data.wpPage.mgWayPageOptions.careerImage?.mediaItemUrl} alt="" /></div>
+                  <div className="hs_cnt"><h4>{data.wpPage.mgWayPageOptions.carrerTitle}</h4>
+                  <div className="des_1" dangerouslySetInnerHTML={{__html: data.wpPage.mgWayPageOptions.careerContentDesc }} /> 
+                  <a className="btn btn-primary" href={data.wpPage.mgWayPageOptions.careerButtonLink}>Get In Touch</a></div>
+                </li>
+
+
+                 <li id="community-support">                     
+            
+
+                  <div className="image-container hs_img">                     
+                    <Carousel showThumbs={false} showIndicators={false} autoPlay={true} dynamicHeight={false} swipeable={true} emulateTouch={true} showStatus={false}>
+                        { data.wpPage.mgWayPageOptions.communityImages.map((d) => {
+                          return <div><img src={d.image.mediaItemUrl} /></div>
+                        })}
+                    </Carousel>            
+                  </div>
+                  <div className="hs_cnt">
+                  <h2>{data.wpPage.mgWayPageOptions.communityTitle}</h2>
+                  <h4>{data.wpPage.mgWayPageOptions.communityContentTitle}</h4>
+                  <div dangerouslySetInnerHTML={{ __html: data.wpPage.mgWayPageOptions.communityContentDesc }} /> 
+                  </div>
+                   
+                </li>
+
+
+                   <li id="project8">
+                  <div className="hs_img"><img className={"img-fluid img-fullwidth"} src={data.wpPage.mgWayPageOptions.journeyImage.mediaItemUrl} alt={data.wpPage.mgWayPageOptions.journeyImage.altText} /></div>
+                  <div className="hs_cnt"><h4>{data.wpPage.mgWayPageOptions.journeyTitle}</h4>
+                   <h3 className="card-title">{data.wpPage.mgWayPageOptions.journeyContentTitle}</h3>
+                  <div  className="des_2" dangerouslySetInnerHTML={{__html: data.wpPage.mgWayPageOptions.journeyContentDesc }} /> 
+                  {data.wpPage.mgWayPageOptions.journeyButtonLink !== "" ? <Link className="btn btn-primary" to={data.wpPage.mgWayPageOptions.journeyButtonLink}>Read More</Link> : ""}
+                  </div>
+                </li>
+             
+            </ul>
+          </div>
+        </div>
+              
+         
+
+      {/*<AboutUs
         title={data.wpPage.mgWayPageOptions.aboutTitle}
         subtitle={data.wpPage.mgWayPageOptions.contentTitle}
         text={data.wpPage.mgWayPageOptions.contentDesc}
         tagline={data.wpPage.mgWayPageOptions.contentTagline}
         aboutImage={data.wpPage.mgWayPageOptions?.aboutImage}
-      />
-      <Accordian
+      />*/}
+
+      {/*<Accordian
         title={data.wpPage.mgWayPageOptions.approachTitle}
         showEnquireButton={false}
         data={whyMG}
-      />
-      <CurveLeft
+      />*/}
+      {/*<CurveLeft
         title={data.wpPage.mgWayPageOptions.identifixTitle}
         tag={data.wpPage.mgWayPageOptions.identifixTag}
         text={data.wpPage.mgWayPageOptions.identifixDescription}
         img={data.wpPage.mgWayPageOptions.identifixImage}
         btnTxt={'Enquire Now'}
         btnLink={data.wpPage.mgWayPageOptions.enquireLink}
-      />
-      <History
+
+      />*/}
+      {/*<History
         title={data.wpPage.mgWayPageOptions.historyTitle}
         subtitle={data.wpPage.mgWayPageOptions.historyContentTitle}
         text={data.wpPage.mgWayPageOptions.historyContentDesc}
         tagline={data.wpPage.mgWayPageOptions.historyContentTagline}
         historyImage={data.wpPage.mgWayPageOptions.historyImage}
-      />
-      <Career
+      />*/}
+      
+      {/*<Career
         title={data.wpPage.mgWayPageOptions.carrerTitle}
         text={data.wpPage.mgWayPageOptions.careerContentDesc}
         buttonLink={data.wpPage.mgWayPageOptions.careerButtonLink}
@@ -210,8 +332,8 @@ const MgWay = ({ data }) => {
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </div> 
+      </section>*/}
       <div className="home">
         <GetInTouch
           title={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchTitle}
@@ -238,6 +360,10 @@ export const query = graphql`
           answer
           question
           approachtag
+          icon {
+            altText
+            mediaItemUrl
+          }
         }
         approachTitle
         bannerDesc
@@ -303,6 +429,7 @@ export const query = graphql`
         metaTitle
       }
     }
+    
     allWp {
       nodes {
         themeGeneralSettings {
