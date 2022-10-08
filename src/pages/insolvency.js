@@ -121,7 +121,7 @@ const Insolvency = ({ data }) => {
 }
 export const query = graphql`
   {
-    wpPage(title: {eq: "Insolvency"}) {
+    wpPage(title: {eq: "Corporate Insolvency"}) {
       insolvency {
         bannerDesc
         bannerImage {

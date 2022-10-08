@@ -5190,6 +5190,10 @@ img.recovery-partner-img {
     padding-bottom: 57px;
 
 }
+.bankruptcy .wva_section.key_expert{
+    margin-bottom: 50px;
+}
+
 .bankruptcy  .wva_section.key_expert .wva_right{
     max-width: 472px!important;
     padding-top: 40px;
@@ -5199,7 +5203,7 @@ img.recovery-partner-img {
     margin-left: 202px;
 }
 .bankruptcy .wva_section.key_expert .wva_left::before {
-    height: 100%;
+    height: 99%;
     background-color:#d0ff80;
     top: 78px;
 }
@@ -5208,7 +5212,406 @@ img.recovery-partner-img {
     background-color:#eae7db;
     top: 0;
 }
+.navig_sec h3{
+    font-size: 44px;
+    font-weight: 500;
+    text-align: left;
+    line-height: normal;
+    color: #0d4432;
+}
+.bankruptcy .glpo_section.navig_sec{
+    padding-bottom: 85px;
+}
+.voluntary_administration.liquidation .middleFullText.glpo_section.navig_sec .fullSubTxt{
 
+    padding: 0 10px
+}
+
+.obstacles_text .container{
+  
+}
+.obstacles_text .fullTxt{
+    display: none;
+}
+.obstacles_text .col-xl-9{ 
+        width: 100%;
+        padding-left: 0px;
+}
+.bankruptcy .weva_section.obstacles{
+    padding-bottom: 70px;
+}
+.obstacles_text ul{
+    text-align: left;
+    padding: 0px;
+    margin-top: 38px;
+    margin-bottom: 0px;
+}
+.obstacles_text ul li{
+    list-style-type: none;
+  background-image: url(../images/obstacles_icon.svg);
+    background-position: left 0px center;
+    background-repeat: no-repeat;
+    padding-left: 34px;
+    margin-bottom: 11px;
+    font-size: 20px;
+}
+.liquidation .obstacles_text.middleFullText {
+    text-align: left;
+    padding-bottom: 0px;
+    padding-top: 8px;
+}
+.weva_section .obstacles_text h3 {
+    margin-bottom: 25px;
+}
+.myexperience_section{
+    padding: 25px 0px;
+    font-size: 32px;
+    color: #0d4432;
+    font-family: 'reckless_neue_trialregular';
+}
+.myexperience_section h2{
+color: #0d4432;
+font-size: 32px;
+font-weight: 400;
+line-height: 46px;
+font-family: 'reckless_neue_trialregular';
+margin-bottom: 45px;
+}
+.myexperience_section span{
+    padding-top: 15px;
+}
+  .myexperience_section .col-md-7{
+     padding-right: 50px;
+     width: 55.5%;
+}
+
+.myexperience_section .col-md-5{
+    padding-top: 12px;
+     width: 44.5%;
+     order: 2;
+   
+}
+.myexperience_section.per_insolvency .col-md-5{
+    order: 0;
+    padding-left:45px;
+    width: 52.5%;
+
+}
+ .myexperience_section.per_insolvency .col-md-7{
+     padding-right: 44px;
+     width: 47%;
+}
+.myexperience_section.per_insolvency h2{
+    padding-top: 12px;
+}
+.bankruptcy .doc3.per_in_1.weva_section{
+    margin-bottom: 39px;
+    padding-bottom: 105px;
+}
+
+.health_check{
+    background-color: #1c5e48;
+    overflow: hidden;
+    color: #eae7db;
+    padding-top: 25px;
+    padding-bottom: 15px;
+    margin-top:62px;
+}
+.health_check .ht_left{
+    float: left;
+    width: 40%;
+    font-size: 18px;
+    font-weight: 400;
+
+}
+.health_check .ht_right{
+     float: right;
+    width: 60%;
+    text-align: right;   
+
+}
+.health_check h2{
+    color: #eae7db;
+    font-size: 44px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-top: 55px;
+    margin-bottom: 30px;
+    font-family: 'reckless_neue_trialregular';
+}
+.health_check p{
+    padding-bottom: 13px;
+}
+.health_check .btn{
+    background-color: #eae7db;
+    color: #1c5e48;
+    margin-right: 12px!important;
+    width: 150px;
+    padding: 10px 0px 6px 0px;
+    margin-top: 8px;
+    float: left;
+}
+.health_check .btn:hover,.health_check .btn:focus{
+ background-color: #fff;
+ color: #1c5e48;
+}
+.voluntary_administration.liquidation .middleFullText.glpo_section.help_many{
+    padding-bottom: 0px;
+}
+.voluntary_administration.liquidation .middleFullText.glpo_section.help_many .fullSubTxt{
+    padding: 10px 0px 10px 10px;
+    text-align: left;
+}
+.help_many h3{
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 46px;
+    margin-top: 68px;
+    margin-bottom: 0px; 
+}
+ .liquidation.doc_1 .news-articles .listbg{
+        background-color: #dfe3e6 !important;
+}
+.liquidation.doc_1 .news-articles,.bankruptcy.doc_1 .news-list{
+    padding-top: 0px;
+}
+.solutions_bloks{
+    background-color: #e0e3e5;
+    margin-top: 25px;
+    padding-bottom: 95px!important;
+    margin-bottom: 158px!important;
+}
+.weva_section.solutions_bloks h3{
+    font-size: 55px;
+    font-weight: 400;
+    margin-bottom: 65px;
+    padding-top: 24px;
+    letter-spacing: normal;
+}
+.solutions_bloks .col-md-4 {
+    padding-left: 0px;
+   
+}
+.solutions_bloks .solutions-title{
+    font-size: 24px;
+    font-weight: 400;
+    color: #1c5e48;
+    font-family: 'Sohne';
+   margin-bottom: 10px;
+}
+.solutions_bloks .solutions-desc{
+    color: #000000;
+}
+.solutions_bloks .col-md-4{
+     width: 30%;
+}
+.solutions_bloks .col-md-4:nth-child(3){
+    padding-left: 86px;
+    width: 40%;
+    padding-right: 56px;
+}
+.solutions_bloks .col-md-4:nth-child(4){
+    padding-left: 45px;
+}
+.solutions_bloks .col-md-4:nth-child(4) .lb_txt,.solutions_bloks .col-md-4:nth-child(4){
+ padding-right: 0px;
+ 
+}
+.solutions_bloks .col-md-4 .lb_txt {
+    padding-right: 25px;
+}
+.per_in_section .liq_blocks.doca_2 .col-md-4 .lb_img {
+    margin-top: 5px;
+}
+.per_in_section .liq_blocks.doca_2 .col-md-4:nth-child(1) .lb_img {
+    margin-top: 0px!important;
+}
+.bankruptcy.per_in_section .wva_section.key_expert .wva_left{
+        margin-left: 0;
+        padding-top: 72px;
+}
+.bankruptcy.per_in_section .wva_section.key_expert .wva_left::before{
+    background-color: #e0e3e5;
+    top: 0;
+    height: 100%;
+}
+.bankruptcy.per_in_section .wva_section.key_expert .wva_left::after{
+       background-color: #dbfd90; 
+       top: 72px;
+       width: 700%;
+       height: 250%;
+}
+.bankruptcy.per_in_section .wva_section.key_expert .wva_right {
+    max-width: 70%!important;
+    padding-top: 158px;
+}
+.per_in_section .key_expert .wva_right h4{
+    font-size: 24px!important;
+    font-weight: 400;
+    color: #0d4432;
+    font-family: 'Sohne', sans-serif, Arial;
+    margin-bottom: 26px;
+}
+.per_in_section .doca_2 .col-md-4{
+     width: 32%!important;
+}
+.per_in_section .doca_2 .col-md-4:nth-child(1){
+    width: 37%!important;
+}
+.per_in_section .doca_2 .col-lg-4:last-child {
+    width: 30%!important;
+    padding-right: 0;
+}
+.bankruptcy.per_in_section .wva_section.key_expert{
+    margin-bottom: 127px;
+}
+.find_path h3{
+    font-size: 44px;
+    margin-bottom: 27px;
+    width: 100%;
+    color: #0d4432;
+}
+.find_path p{
+    font-size: 24px;
+    font-weight: 400;
+    color: #0d4432;
+    margin-top: 35px;
+}
+.per_in_section #why-mg{
+    margin-bottom: 91px;
+    padding-bottom: 72px;
+}
+.safe_harbour .banner-image{
+    padding-left: 205px
+}
+.liquidation.voluntary_administration.safe_harbour .banner-image:after{
+    left:205px ;
+}
+.voluntary_administration.safe_harbour #banner-section{
+
+    padding-bottom: 72px;
+    margin-bottom: 8px;
+}
+.safe_harbour .liq_blocks.va_blocks {
+    padding-bottom: 75px;
+}
+.bankruptcy.safe_harbour .weva_section.doc3{
+    padding-top: 55px;
+    padding-bottom: 66px;
+}
+.bankruptcy.safe_harbour .wva_section.key_expert .wva_right{
+   padding-top: 122px;
+   padding-bottom: 142px;
+}
+
+
+.liquidation.voluntary_administration.bankruptcy.safe_harbour .banner-image:before{
+    background-color:#e0e3e5!important;
+}
+.bankruptcy.safe_harbour .wva_section.key_expert .wva_left::after{
+    background-color: #1c5e48;
+}
+.bankruptcy.safe_harbour .wva_section .wva_right h3{
+        margin: 0px 0px 15px;
+
+}
+.bankruptcy.safe_harbour .wva_section .wva_right h3,.bankruptcy.safe_harbour .wva_section .wva_right p{ 
+    color: #eae7db;
+
+}
+.bankruptcy.safe_harbour .wva_section.key_expert{
+        margin-bottom: 95px;
+}
+.bankruptcy.safe_harbour .weva_section.obstacles{
+        padding-top: 54px;
+        margin-bottom: 53px
+}
+.bankruptcy.safe_harbour .wva_section.key_expert .wva_left::before{
+    background-color: #e0e3e5;
+}
+.safe_harbour .myexperience_section h2{
+    margin-bottom: 0px;
+}
+.safe_harbour .myexperience_section .row{
+    align-items: center;
+}
+.safe_harbour .health_check{
+    margin-bottom: 112px;
+}
+.safe_harbour .ht_section .ht_right{
+    margin-top: 14px;
+}
+.voluntary_administration.bankruptcy.safe_harbour .banner-content {
+    padding-left: 30px;
+    padding-bottom: 32px;
+        padding-right: 0;
+}
+
+.liquidation.voluntary_administration.bankruptcy.safe_harbour.small_business .banner-image:before{
+    background-color:#eae7db!important;
+}
+.safe_harbour.small_business .liq_blocks.va_blocks {
+    padding-bottom: 55px;
+}
+.safe_harbour.small_business .health_check {
+    margin-bottom: 0px;
+}
+.small_business .obstacles_text.middleFullText p{
+    color: #000;
+    margin-bottom: 8px;
+}
+.small_business .obstacles_text.middleFullText strong{
+    font-family: 'Sohne';
+    font-size: 24px;
+    font-weight: 400;
+    color: #1c5e48;
+    display: block;
+    padding-top: 16px;
+}
+.small_business .obstacles_text.middleFullText h6{
+    color: #0d4432;
+    font-size: 18px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+.liquidation.small_business .obstacles_text.middleFullText{
+    padding-top: 0px;
+}
+.bankruptcy.safe_harbour.small_business .weva_section.obstacles{
+    padding-bottom: 45px;
+}
+.safe_harbour.small_business .myexperience_section h2 {
+    margin-bottom:45px;
+}
+.small_business  .help_many h3{
+        margin-top: 28px;
+}
+.small_business .doc3 p{
+    margin-bottom: 13px;
+}
+.small_business .doc3 .btn{
+    margin-top: 22px;
+} 
+.right_soloution h2{
+    font-size: 44px;
+    font-weight: 500;
+    color: #0d4432;
+     font-family: 'reckless_neue_trialregular';
+}
+.right_soloution .fullTxt{
+    display: none;
+}
+.voluntary_administration.liquidation.small_business .middleFullText.glpo_section.right_soloution .fullSubTxt{
+    text-align: left;
+    padding: 0px 10px;
+
+}
+.bankruptcy.safe_harbour.small_business .wva_section.key_expert {
+    margin-bottom: 80px;
+}
+.voluntary_administration.small_business .glpo_section.right_soloution {
+    padding-bottom: 65px;
+}
 
 
 /****** BreakPoints *******/
@@ -5465,6 +5868,110 @@ img.recovery-partner-img {
     .wva_section.about_section.history_section {
         margin-bottom: 60px;
     }
+    .bankruptcy .weva_section.obstacles{
+        margin-bottom: 40px;
+        padding-bottom: 50px;
+        padding-top: 40px;
+    }
+    .health_check{
+        margin-top: 25px;
+    }
+    .help_many h3{
+        margin-top: 35px;
+    }
+   
+    .bankruptcy .glpo_section.navig_sec {
+        padding-bottom: 50px;
+    }
+    .myexperience_section, .myexperience_section h2{
+        font-size: 30px;
+    }
+   .myexperience_section h2 {
+        margin-bottom: 40px;
+    }
+    .navig_sec h3 {
+        font-size: 42px;
+
+    }
+    .bankruptcy .wva_section.key_expert{
+        padding-bottom: 50px;
+        margin-bottom: 35px;
+    }
+    .voluntary_administration.doc_1 .banner-content .banner-heading {
+        font-size: 40px;
+    }
+
+    .bankruptcy .doc3.per_in_1.weva_section {
+       
+        padding-bottom: 60px;
+    }
+    .solutions_bloks{
+        padding-bottom: 60px!important;
+        margin-bottom: 70px!important;
+    }
+    .bankruptcy.per_in_section .wva_section.key_expert {
+        margin-bottom: 75px;
+    }
+    .voluntary_administration.per_in_section  .glpo_section {
+        padding-bottom: 55px;
+    }
+    .per_in_section #why-mg {
+        margin-bottom: 55px;
+    }
+    .weva_section.solutions_bloks h3{
+        font-size: 50px;
+         margin-bottom: 40px;
+    }
+    .solutions_bloks .solutions-title {
+        font-size: 22px;
+    }
+    .safe_harbour .liq_blocks.va_blocks {
+        padding-bottom: 50px;
+    }
+    .safe_harbour .health_check {
+         margin-bottom: 70px;
+         margin-top: 45px;
+    }
+    .bankruptcy.safe_harbour .weva_section.obstacles{
+        margin-bottom: 30px;
+        padding-top: 35px;
+    }
+    .bankruptcy.safe_harbour .wva_section.key_expert {
+        margin-bottom: 30px;
+
+    }
+    .bankruptcy.safe_harbour .weva_section.doc3 {
+        padding-top: 45px;
+        padding-bottom: 45px;
+        margin-bottom: 55px;
+    }
+    .bankruptcy.safe_harbour .wva_section.key_expert .wva_right{
+         padding-top: 100px;
+        padding-bottom:110px;
+    }
+    .bankruptcy .wva_section.key_expert .wva_left{
+        padding-top: 55px;
+    }
+    .bankruptcy.safe_harbour .wva_section.key_expert .wva_left::before{
+        top: 55px;
+    }
+    .voluntary_administration.safe_harbour #banner-section {
+        padding-bottom: 65px;
+        padding-top: 65px;
+        margin-bottom: 0px;
+    }
+    .bankruptcy.safe_harbour.small_business .wva_section.key_expert {
+        margin-bottom: 50px;
+    }
+    .voluntary_administration.small_business .glpo_section.right_soloution {
+        padding-bottom: 50px;
+    }
+    .right_soloution h2{
+        font-size: 40px;
+    }
+
+
+
 
 }
 @media screen and (max-width:1600px){
@@ -5599,7 +6106,7 @@ img.recovery-partner-img {
         padding-top: 40px;
     }
     .wva_section.about_section .wva_right{
-            padding-bottom: 20px;
+        padding-bottom: 20px;
     }
     .events_mgacademy h4{
         font-size: 24px;
@@ -5611,6 +6118,17 @@ img.recovery-partner-img {
     .mg_identifix .wva_left h3 {
         font-size: 40px;
     }
+    .voluntary_administration.doc_1 #banner-section{
+        padding-bottom: 70px;
+    }
+    .weva_section.solutions_bloks h3 {
+        font-size: 48px;
+        margin-bottom: 35px;
+    }
+    .doca_2 .recovery-partner-title{
+            margin-bottom: 1rem;
+    }
+
 }
 @media screen and (max-width:1500px){
     .brokermid_sec h2{ font-size: 42px; }
@@ -5638,7 +6156,7 @@ img.recovery-partner-img {
         font-size: 40px;
     }
     .dpn_page .dpnfaq .accordion-button{
-            font-size: 45px;
+        font-size: 45px;
     }
     .liquidation .liq_rec_section.recovery-partner h1, .bib_section h3, .ols_section h3, .liquidation .middleFullText.glpo_section .fullTxt, .ht_section .ht_right h2, .bib_section#testimonials h2, .liquidation .news-articles h2, .banner-content .banner-heading, .wva_section .wva_right h3, .weva_section h3, .voluntary_administration .banner-content .banner-heading, .bankruptcy #why-mg h2 {
         font-size: 36px;
@@ -5715,6 +6233,56 @@ img.recovery-partner-img {
         font-size: 22px;
 
     }
+     .health_check h2{
+        font-size: 36px;
+    }
+      .voluntary_administration.doc_1 .banner-content .banner-heading {
+        font-size:36px;
+    }
+     .health_check p {
+        padding-bottom: 12px;
+    }
+    /*.myexperience_section, .myexperience_section h2 {
+        font-size:  26px;
+        line-height: 38px;
+    }*/
+     .weva_section.solutions_bloks h3{
+        font-size: 44px;
+    }
+     .bankruptcy .doc3.per_in_1.weva_section{
+        margin-bottom: 25px;
+        padding-bottom: 40px;
+    }
+    .bankruptcy.per_in_section .wva_section.key_expert .wva_right{
+        width: 68%!important;
+        padding-top: 135px;
+    }
+    .bankruptcy.per_in_section .wva_section.key_expert .wva_left{
+        padding-top: 50px;
+    }
+    .bankruptcy.per_in_section .wva_section.key_expert .wva_left::after{
+        top: 50px;
+    }
+    .per_in_section .key_expert .wva_right h4{
+        font-size: 22px!important;
+    }
+    .bankruptcy .wva_section .wva_right {
+        padding-bottom: 35px;
+    }
+    .safe_harbour .help_many h3 {
+         margin-top: 20px;
+    }
+     .right_soloution h2{
+        font-size: 36px;
+    }
+    
+    .voluntary_administration.small_business .glpo_section.right_soloution {
+        padding-bottom: 40px;
+    }
+    .per_in_section .per_insolvency .row {
+        align-items: center;
+    }
+
 }
 @media screen and (max-width:1400px){
     .identi_bannersec .banner-desc {
@@ -5725,7 +6293,7 @@ img.recovery-partner-img {
         padding-bottom: 0 !important;
     }
     .appoint_faqsec .accordion-item button.accordion-button, .appoint_faqsec .accordion-item:last-of-type .accordion-button.collapsed{
-            font-size: 45px;
+        font-size: 45px;
     }
     #serviceslider {
         height: 500px;
@@ -5816,7 +6384,7 @@ img.recovery-partner-img {
         font-size: 16px;
     }
     .vcfo_section .vcfo_right {
-       width: 480px;
+        width: 480px;
         padding-top: 40px;
     }
     .vcfo_section .vcfo_left:before {
@@ -5852,17 +6420,17 @@ img.recovery-partner-img {
         max-height: 241px;
     }
     .home_services.mg_carrer_part ul li .hs_cnt h4{
-            font-size: 26px;
+        font-size: 26px;
     }
     .home_services.mg_carrer_part ul li .hs_cnt {
-    padding: 30px;
+        padding: 30px;
     }  
     .home_services.mg_carrer_part h3.card-title{
         font-size: 18px;
         line-height: 22px;
     } 
     .vcf_sec.mg_identifix .wva_right{
-            margin-right: 10px;
+        margin-right: 10px;
     }
     .mg_identifix .wva_left h3{
         font-size: 36px;
@@ -5877,10 +6445,10 @@ img.recovery-partner-img {
         background-repeat: no-repeat!important;
     }
      .curve-right.mg_identifix {
-    padding-top:60px!important;
+        padding-top:60px!important;
     }
     .wva_section.about_section.history_section.identifix_sec2 {
-    margin-bottom: 60px;
+        margin-bottom: 60px;
     }
      section.mg_events {
         padding-bottom: 2rem;
@@ -5891,6 +6459,76 @@ img.recovery-partner-img {
     .wva_section.about_section.history_section {
         margin-bottom: 50px;
     }
+    .bankruptcy .wva_section.key_expert .wva_left{
+        margin-left: 70px;
+    }
+    .myexperience_section h2 br{
+        display: none;
+    }  
+    .bankruptcy .weva_section.obstacles {
+        margin-bottom: 30px;
+        padding-bottom: 40px;
+        padding-top: 30px;
+    }
+    .bankruptcy .glpo_section.navig_sec {
+        padding-bottom: 40px;
+    }
+    .bankruptcy .wva_section.key_expert{
+         margin-bottom: 25px;
+    }
+    .voluntary_administration.doc_1 #banner-section {
+        padding-top: 60px;
+    }
+    .myexperience_section.per_insolvency .col-md-5 img{ 
+        width: 100%; 
+    }
+    .myexperience_section.per_insolvency .col-md-5{
+        padding-right: 25px;
+        padding-left: 30px;
+    }
+    .solutions_bloks {
+        padding-bottom: 50px!important;
+        margin-bottom: 60px!important;
+    }
+
+   .bankruptcy.per_in_section .wva_section.key_expert {
+        margin-bottom: 60px;
+    }
+     .bankruptcy.per_in_section .wva_section.key_expert .wva_right{
+        width: 64%!important;
+       
+    }
+    .myexperience_section .col-md-7{
+        width: 48%;
+    }
+    .myexperience_section .col-md-5{
+        width: 52%;
+    }
+    .help_many h3 {
+    margin-top: 30px;
+    }
+    .myexperience_section, .myexperience_section h2 {
+    font-size: 28px;
+    line-height: 38px;
+    }
+    .myexperience_section.per_insolvency .col-md-7 {
+    padding-right: 0;
+    padding-left: 50px;
+    }
+    .myexperience_section.per_insolvency h2 {
+    padding-top: 0;
+    margin-bottom: 0;
+    }
+    .per_in_section .solutions_bloks h3 {
+    margin-bottom: 40px;
+    }
+    .per_in_section .glpo_reco_section.recovery-plan .subTxt {
+    padding: 0 65px;
+    }
+    .per_in_section .glpo_reco_section.recovery-plan .stepsCol:last-of-type .subTxt {
+    padding: 0 40px;
+    }
+    
 }
 @media screen and (max-width:1300px){
     .ps_bot .pack_inner h3 {
@@ -5950,6 +6588,23 @@ img.recovery-partner-img {
     .events_section_1{
         padding-top: 25px;
     }
+   .voluntary_administration.bankruptcy .banner-content {
+        padding-right: 35px;
+    }
+    .myexperience_section.per_insolvency .col-md-7{
+        padding-right: 0;
+    }
+    .solutions_bloks .col-md-4:nth-child(3) {
+        padding-left: 40px;   
+        padding-right: 30px;
+    }
+    .solutions_bloks .col-md-4:nth-child(4) {
+        padding-left: 15px;
+    }
+    .myexperience_section.per_insolvency{
+        padding: 15px 0px 30px 0px;
+
+    }
    
     
 }
@@ -5976,7 +6631,7 @@ img.recovery-partner-img {
         padding: 60px 40px 60px 85px;
     }
     .vcf_sec .ins-content2, .vciso_sec .ins-content2{
-            padding: 40px 75px 50px;
+        padding: 40px 75px 50px;
     }
     .appoint_faqsec{
         margin-top: 60px;
@@ -6104,8 +6759,8 @@ img.recovery-partner-img {
         max-width: 410px;
     }
     .mg_identifix .wva_right{
-            width: 495px;
-            margin-right: 0;
+        width: 495px;
+        margin-right: 0;
     }
     .mg_identifix .wva_left p{
         font-size: 18px;
@@ -6132,6 +6787,34 @@ img.recovery-partner-img {
     .home_services.mg_carrer_part ul li .hs_cnt h4 {
         font-size: 24px;
     }
+    .bankruptcy.per_in_section .wva_section.key_expert .wva_left {
+     
+         width: 37%;
+    }
+    .bankruptcy.per_in_section .wva_section.key_expert .wva_right{
+        width: 61%!important;
+        padding-top: 115px;
+        padding-bottom: 70px;
+    }
+
+    .health_check .ht_right{
+            width: 49%;
+    }
+    .health_check .ht_left{
+            width: 51%;
+    }
+    .health_check h2{
+            margin-top: 25px;
+
+    }
+    .health_check p{
+        margin-bottom: 10px;
+    }
+    .weva_section.solutions_bloks h3 {
+        font-size: 39px;
+    }
+
+
 }
 
 @media screen and (max-width:1200px){
@@ -6218,6 +6901,9 @@ img.recovery-partner-img {
     }
     .liquidation .banner-image{
         margin-top: 70px;
+    }
+    .liquidation .liq_banner .banner-image{
+        margin-top: 60px;
     }
     .wva_section .wva_left {
         margin-left: 0;
@@ -6462,7 +7148,7 @@ img.recovery-partner-img {
         width: 490px
     }
     .mg_identifix .wva_left h3 {
-    font-size: 32px;
+        font-size: 32px;
     }
     .vcf_sec.mg_identifix .wva_right:after{
         height:400%;
@@ -6493,8 +7179,79 @@ img.recovery-partner-img {
     .events_mgacademy img{
         height: 205px;
     }
+    .bankruptcy .wva_section.key_expert .wva_left{
+        padding-top: 50px;
+    }
+    .bankruptcy .wva_section.key_expert .wva_left::before{
+        top: 50px;
+    }
+    .bankruptcy .wva_section.key_expert .wva_left{
+        width: 48%;
+        margin-left: 25px;
+    }
+    .bankruptcy .wva_section.key_expert .wva_right{
+        max-width:49%!important;
+    }
+    .navig_sec h3 {
+        font-size: 36px;
+    }
+    .bankruptcy .wva_section.key_expert {
+        padding-bottom: 10px;
+        margin-bottom:30px;
+    }
+    .voluntary_administration.doc_1 .banner-content .banner-heading {
+        font-size: 32px;
+    }
+    .voluntary_administration.doc_1 #banner-section{
+        padding-top: 0px;
+        margin-bottom: 25px;
+        padding-bottom: 50px;
+    }
+    .health_check h2 {
+        font-size: 32px;
+    }
 
+    .help_many h3 {
+        font-size: 30px;
+        line-height: 44px;
+    }   
+     .navig_sec h3 {
+        font-size: 32px;
+    }
+    .myexperience_section.per_insolvency{
+        padding: 15px 0px 20px 0px;
 
+    }
+    .liquidation.safe_harbour .liq_banner .banner-image {
+        margin-top: 52px;
+    }
+    .voluntary_administration.bankruptcy.safe_harbour .banner-content{
+        padding-bottom: 0;
+    }
+    .bankruptcy.safe_harbour.small_business .wva_section.key_expert {
+        margin-bottom: 15px;
+    }
+    .voluntary_administration.small_business .glpo_section.right_soloution {
+        padding-bottom: 40px;
+    }
+    .right_soloution h2{
+        font-size: 32px;
+    }
+    .myexperience_section .col-md-7{
+        width: 50%;
+    }
+    .myexperience_section .col-md-5{
+        width: 50%;
+    }
+    .myexperience_section .col-md-5 img{width: 100%;}
+    .myexperience_section, .myexperience_section h2 {
+        font-size: 24px;
+        line-height: 36px;
+    }
+
+    .doca_2 .recovery-partner-title{
+            margin-bottom: 0.5rem;
+    }
 
 }
 @media screen and (max-width:991px){
@@ -6575,7 +7332,7 @@ img.recovery-partner-img {
         background-size: contain;
     }
     .appoint_faqsec .accordion-button:not(.collapsed)::after{
-         width: 47px;height: 1px !important;
+        width: 47px;height: 1px !important;
     }
     .srch_app .frm_input{
         padding: 15px 22px;font-size: 17px;
@@ -6600,8 +7357,8 @@ img.recovery-partner-img {
         padding-bottom: 40px;
     }
     .appoint_faqsec .accordion-body ul li {
-       font-size: 17px;
-       margin-right: 27px;
+        font-size: 17px;
+        margin-right: 27px;
     }
     .appoint_faqsec .accordion-body ul li a{ font-size: 17px; }
     .srch_app {
@@ -6609,21 +7366,21 @@ img.recovery-partner-img {
     }
 
     .dealhub_bannersec .banner-content {
-    padding-top: 0px;
-    padding-right: 0;
+        padding-top: 0px;
+        padding-right: 0;
     }
     .brokermid_sec {
-    padding-top: 60px;
-    padding-bottom: 80px;
+        padding-top: 60px;
+        padding-bottom: 80px;
     }
     .brokermid_sec h2 {
-    font-size: 34px;
-    margin-bottom: 27px;
-    line-height: 1.1;
+        font-size: 34px;
+        margin-bottom: 27px;
+        line-height: 1.1;
     }
     .brokermid_sec ul li{
-            font-size: 17px;
-    margin-bottom: 6px;
+         font-size: 17px;
+         margin-bottom: 6px;
     }
     .brokermid_sec p{ font-size: 17px; }
     #get-in-touch h3 {
@@ -7308,9 +8065,248 @@ img.recovery-partner-img {
         padding-top: 30px;
     }
     .home_services.mg_carrer_part > .container > ul > li {
-    margin: 0px 0% 4% 0px;
-    max-width: 100%;
+        margin: 0px 0% 4% 0px;
+        max-width: 100%;
     }
+    .doc_1 .col-xl-6 {
+         width: 100%;
+        
+         margin-bottom: 0px;
+    }
+    .liq_blocks.doca_2 .col-lg-4,.liq_blocks.doca_2 .col-lg-4:last-child {
+        width: 100%;
+    }
+    .voluntary_administration.doc_1 #banner-section{
+        margin-bottom: 10px;
+        padding-bottom: 0px;
+    }
+    .voluntary_administration.bankruptcy .liq_banner .banner-content{
+        padding-top: 25px;
+    }
+    .bankruptcy .wva_section.key_expert .wva_left,.bankruptcy .wva_section.key_expert .wva_right{
+        width: 100%;
+        max-width: 100%!important;
+        margin-left: 0;
+
+    }
+   .bankruptcy .wva_section.key_expert .wva_right{
+        padding-top: 0;
+        padding-bottom: 15px;
+    }
+    .bankruptcy .wva_section.key_expert .wva_left::before {
+         height: 100%;
+         top: 0;
+    }
+
+    .bankruptcy .wva_section.key_expert .wva_left::after{
+        height: 409%;
+        top: 50px;
+    }
+    .myexperience_section .col-md-7 {
+        padding-right:0px;
+        width: 100%;
+    }
+    .myexperience_section, .myexperience_section h2 {
+        font-size: 26px;
+        line-height: 38px;
+    }
+    .myexperience_section h2 {
+        margin-bottom: 25px;
+    }
+    .health_check .ht_left {
+        float: left;
+        width: 100%;
+    }
+    .health_check .ht_right{
+        width: 100%;
+        text-align: center;
+    }
+    .myexperience_section{
+        padding: 0px;
+    }
+    .myexperience_section .col-md-5{   
+        order: 0;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+   }
+    .myexperience_section .col-md-5 img{  
+         width: 100%;
+    }
+    .health_check h2{
+        margin-top: 10px;
+    }
+    .help_many h3 br{
+        display: none;
+    }
+    .help_many h3 {
+        margin-top: 20px;
+    }
+   .bankruptcy .glpo_section.navig_sec {
+        padding-bottom: 30px;
+    }
+    .bankruptcy .doca_2 .weva_section {
+        margin-bottom: 40px;
+    }
+    .bankruptcy .wva_section.key_expert{
+        margin-bottom: 20px;
+    }
+    .obstacles_text ul li{
+        font-size: 19px;
+    }
+    .bankruptcy .weva_section.obstacles{
+        margin-bottom: 30px;
+        padding-top: 30px;
+    }
+    .liquidation .liq_banner .banner-image {
+        margin-top: 0;
+    }
+    .obstacles_text ul li{
+        font-size: 18px;
+        background-position: 0px 2px;
+        
+    }
+    .per_in_section .doca_2 .col-md-4:nth-child(1),.per_in_section .doca_2 .col-md-4,.per_in_section .doca_2 .col-lg-4:last-child{
+        width: 100%!important;
+    }
+    .bankruptcy.per_in_section .liq_blocks .lb_img {
+        margin-right: 50px;
+    }
+    .bankruptcy .doc3.per_in_1.weva_section {
+        margin-bottom: 30px;
+        padding-bottom: 50px;
+    }
+    .myexperience_section.per_insolvency .col-md-5,.myexperience_section.per_insolvency .col-md-7{
+        width: 100%;
+        
+    }
+    .myexperience_section.per_insolvency .col-md-5{
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .solutions_bloks .col-md-4 .lb_txt {
+        padding-right: 0;
+        width: 100%!important;
+    }
+    .solutions_bloks .col-md-4{
+        width: 100%!important;
+        max-width: 100%!important;
+    }
+    .solutions_bloks .col-md-4:nth-child(3),.solutions_bloks .col-md-4:nth-child(4){
+        width: 100%!important;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .liq_blocks.va_blocks.solutions_bloks .col-lg-4 {
+        margin-bottom: 10px;
+        padding: 0;
+    }
+    .bankruptcy.per_in_section .wva_section.key_expert .wva_right {
+        width: 100%!important;
+        max-width:100%!important;
+        padding-top: 0;
+    }
+    .weva_section.solutions_bloks h3 {
+        font-size: 40px;
+        padding-top:10px;
+    }
+    .solutions_bloks {
+        padding-bottom:30px!important;
+        margin-bottom: 50px!important;
+    }
+    .bankruptcy.per_in_section .wva_section.key_expert {
+        margin-bottom: 40px;
+    }
+     .myexperience_section.per_insolvency h2 {
+        padding-top: 0;
+    }
+    .safe_harbour .banner-image {
+        padding-left: 0;
+    }
+    .liquidation.voluntary_administration.safe_harbour .banner-image:before{
+        top: 0;
+    }
+    .bankruptcy.safe_harbour .wva_section.key_expert .wva_left::before {
+        top: 0;
+    }
+    .bankruptcy.safe_harbour .wva_section.key_expert .wva_right {
+        padding-top: 0px;
+        padding-bottom:0px;
+    }
+    .bankruptcy.safe_harbour .weva_section.doc3{
+        margin-bottom: 35px;
+    }
+    .bankruptcy.safe_harbour .wva_section.key_expert {
+        margin-bottom: 40px;    
+    }
+    .safe_harbour .health_check {
+        margin-bottom:35px;
+        margin-top: 35px;
+    }
+    .bankruptcy.safe_harbour .weva_section.obstacles {
+        padding-top: 30px;        
+        padding-bottom: 30px;
+    }
+    .safe_harbour .help_many h3 {
+        margin-top: 0;
+    }
+    .bankruptcy.safe_harbour.small_business .wva_section.key_expert {
+        margin-bottom: 30px;
+    }
+    .voluntary_administration.small_business .glpo_section.right_soloution {
+        padding-bottom: 30px;
+    }
+    .small_business .obstacles_text.middleFullText strong{
+        font-size: 20px;
+        padding-top:10px;
+    }
+    .small_business .obstacles_text.middleFullText h6{
+        margin-bottom: 15px;
+    }
+    .safe_harbour.small_business .myexperience_section h2 {
+        margin-bottom: 20px;
+    }
+    .safe_harbour.small_business .myexperience_section p{
+        margin-bottom: 0px;
+    }
+    .safe_harbour.small_business .liq_blocks.va_blocks {
+        padding-bottom: 35px;
+    }
+    .liquidation.safe_harbour.small_business .liq_banner .banner-image {
+        margin-top: 0;
+    }
+    .liquidation.safe_harbour .liq_banner .banner-image {
+        margin-top: 0px;
+    }
+    .voluntary_administration.bankruptcy.safe_harbour .banner-content{
+        padding-left: 0;
+        margin-bottom: 20px;
+    }
+    .myexperience_section.per_insolvency {
+         padding: 0px 0px 0px 0px;
+    }
+    .safe_harbour.small_business .health_check {
+        margin-bottom: 10px;
+    }
+    .bankruptcy .weva_section.doc3 {
+        margin-bottom: 40px;
+    }
+ 
+
+    .doca_2 .col-md-4 {
+        align-items: center;
+    }
+   .liq_blocks.doca_2 .lb_img {
+    margin-top: 0;
+    }
+    .myexperience_section.per_insolvency .col-md-7{
+        padding-left: 0;
+    }
+    .per_in_section .solutions_bloks h3 {
+    margin-bottom: 15px;
+    }
+
 }
 @media screen and (max-width:767px){
 
@@ -7318,26 +8314,26 @@ img.recovery-partner-img {
         padding: 55px 0 0px;
     }
     .bhc_sec .ins-content2, .vcf_sec .ins-content2, .vciso_sec .ins-content2 {
-    padding: 29px 24px;
+        padding: 29px 24px;
     }
     .vciso_sec .ins-banner-heading2, .vcf_sec .ins-banner-heading2 {
         font-size: 22px;
     }
     .sec_links ul li {
-    margin: 0 0 14px 0;
-    width: 100%;
+        margin: 0 0 14px 0;
+        width: 100%;
     }
     .sec_links .d-flex {
-    display: block !important;
-    padding: 0;
+        display: block !important;
+        padding: 0;
     }
     .sec_links {
         padding: 33px 0 20px;
     }
     .identi_bannersec .banner-mdesc .banner-desc{ font-size: 16px; }
     .appoint_faqsec {
-    padding-top: 55px;
-    padding-bottom: 45px;
+        padding-top: 55px;
+        padding-bottom: 45px;
     }
     .srch_appblock label{ font-size: 23px; }
     .appoint_faqsec .accordion-item button.accordion-button, .appoint_faqsec .accordion-item:last-of-type .accordion-button.collapsed {
@@ -7346,9 +8342,9 @@ img.recovery-partner-img {
     .appoint_faqsec .accordion-button .sub_title,.appoint_faqsec .accordion-body p,.appoint_faqsec .accordion-body ul li,
     .appoint_faqsec .accordion-body ul li a{ font-size: 16px; }
     .appoint_faqsec .accordion-body h3 {
-    font-size: 26px;
-    padding-top: 0;
-    margin-bottom: 17px;
+        font-size: 26px;
+        padding-top: 0;
+        margin-bottom: 17px;
     }
     .appoint_faqsec .accordion-body p {
         margin: 0 0 13px 0;
@@ -7357,16 +8353,17 @@ img.recovery-partner-img {
         padding-bottom: 34px;
     }
     .brokermid_sec h2 {
-    font-size: 30px;
-    margin-bottom: 20px;}
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
     .brokermid_sec ul li,.brokermid_sec p{ font-size: 16px; }
     .brokermid_sec {
-    padding-top: 47px;
-    padding-bottom: 56px;
+        padding-top: 47px;
+        padding-bottom: 56px;
     }
     .popup_dialog button.close{
-            top: -26px;
-    right:0px;
+        top: -26px;
+        right:0px;
     }
     .modal{    margin-top: -400%; }
     .packages_section .ps_top p {
@@ -7381,10 +8378,10 @@ img.recovery-partner-img {
         height: 700px;
     }
     .getfrm_model .form_pp>div {
-    padding-top: 988px;
+        padding-top: 988px;
     }
     .getfrm_model .popup_body{
-            padding: 0;
+        padding: 0;
     }
     .dpn_page .accordion-button {
         font-size: 32px !important;
@@ -7403,7 +8400,7 @@ img.recovery-partner-img {
         font-size: 34px;
     }
     .dpn_page .dpnfaq .accordion-button{
-            line-height: 42px;
+        line-height: 42px;
     }
     #community-support .slide img {
         max-height: 360px;
@@ -7703,10 +8700,10 @@ img.recovery-partner-img {
         margin-bottom: 0;
     }
      .curve-right.mg_identifix {
-    padding-top: 50px!important;
+        padding-top: 50px!important;
     }
     .wva_section.about_section.history_section.identifix_sec2 {
-    margin-bottom: 40px;
+        margin-bottom: 40px;
     }
     .events_section_1{
         padding-top:20px;
@@ -7721,8 +8718,79 @@ img.recovery-partner-img {
         padding-top: 25px;
     }
     .mg_identifix .wva_left{
-         padding-top: 45px;
+        padding-top: 45px;
     }
+    .myexperience_section, .myexperience_section h2 {
+        font-size: 24px;
+        line-height: 36px;
+    }
+    .myexperience_section h2 {
+        margin-bottom: 20px;
+    }
+    .navig_sec h3 br{
+        display: none;
+    }
+    .navig_sec h3 {
+        font-size: 30px;
+    }
+    .voluntary_administration.liquidation .middleFullText.glpo_section.help_many .fullSubTxt{
+        padding: 0px;
+    }
+    .help_many h3 {
+        font-size: 26px;
+        line-height: 36px;
+        padding: 0px 10px;
+    }
+    .liq_blocks.doca_2.va_blocks {
+        padding-bottom: 40px;
+        padding-top: 25px;
+    }
+    .bankruptcy .wva_section.key_expert .wva_left {
+        padding-top: 30px;
+    }
+    .bankruptcy .wva_section.key_expert .wva_left::after{
+        top: 30px;
+    }
+    .bankruptcy .weva_section.doc3{
+        margin-bottom: 40px;
+    }
+    .health_check h2 ,.voluntary_administration.doc_1 .banner-content .banner-heading,.navig_sec h3 {
+        font-size: 30px;
+    }
+   
+   .weva_section.solutions_bloks h3 {
+        font-size: 36px;
+        padding-top: 0px;
+    }
+    .bankruptcy .doc3.per_in_1.weva_section{
+        padding-bottom: 30px;
+    }
+    .solutions_bloks {
+        padding-bottom: 0px!important;
+        margin-bottom: 35px!important;
+    }
+    .solutions_bloks .solutions-title {
+        font-size: 20px;
+    }
+    .per_in_section #why-mg {
+        margin-bottom: 30px;
+    }
+    .bankruptcy.safe_harbour .weva_section.doc3 {
+        padding-top: 30px;
+        padding-bottom: 30px
+    }
+    .liquidation.safe_harbour .obstacles_text.middleFullText{
+        padding-top: 0px;
+    }
+    .health_check p {
+         padding-bottom: 5px;
+    }
+    .right_soloution h2 {
+        font-size: 30px;
+        line-height: 32px;
+    }
+
+    .doc_1 #people .pe_content{  display: none; }
 
 }
 @media screen and (max-width:667px){
@@ -7765,6 +8833,33 @@ img.recovery-partner-img {
     #incubator-progra.wva_section.about_section .wva_right{
         padding-right: 1.5rem!important;
     }
+    .myexperience_section, .myexperience_section h2{
+        font-size: 22px;
+        line-height: 34px;
+    }
+   .myexperience_section.per_insolvency .col-md-5, .myexperience_section.per_insolvency .col-md-7 {
+    
+        padding:0px 15px;
+    }
+    .weva_section.solutions_bloks h3 {
+        font-size: 32px;
+    }
+    .per_in_section .liq_blocks.doca_2 .col-md-4:nth-child(1) .lb_img{
+        padding-left: 15px;
+    }
+    .liq_blocks .lb_img{
+        width: 100px;
+    }
+    .myexperience_section, .health_check .ht_left{
+        padding: 0px 10px;
+    }
+    .safe_harbour .myexperience_section h2{
+        padding-right: 15px;
+    }
+    .health_check p {
+        padding-bottom: 0;
+    }
+    
    
 }
 @media screen and (max-width:568px){
@@ -7931,7 +9026,17 @@ img.recovery-partner-img {
     section.mg_events{
         padding-top: 0px;
     }
+    .myexperience_section h2{
+     padding-right: 20px;
+    }
+    .safe_harbour .help_many h3{
+        padding: 0px;
+    }
  
+    .doc_1 .doc3 .btn{    padding: 11px 30px 10px;}
+    .per_insolvency h2 {
+        padding-right: 0;
+    }
 
 }
 @media screen and (max-width:533px){
@@ -8009,7 +9114,26 @@ img.recovery-partner-img {
    .home_services.mg_carrer_part #community-support .slide img {
         max-height: 296px;
     }
+     .health_check h2 ,.voluntary_administration.doc_1 .banner-content .banner-heading,.navig_sec h3 {
+        font-size: 26px;
+    }
+     .weva_section.solutions_bloks h3 {
+        font-size: 30px;
+    }
+    .liq_blocks .lb_img {
+        width: 70px;
+    }
+    .right_soloution h2 {
+        font-size: 26px;
 
+    }
+    .small_business .obstacles_text.middleFullText strong{
+        font-size: 18px;
+        padding-top: 5px;
+    }
+    .small_business .obstacles_text.middleFullText h6{
+        margin-bottom: 10px;
+    }
     
 }
 @media screen and (max-width:480px){
@@ -8081,11 +9205,19 @@ img.recovery-partner-img {
         margin-bottom: 45px;
     }
     .curve-right.mg_identifix {
-    padding-top: 40px!important;
+        padding-top: 40px!important;
     }    
     .mg_identifix .wva_left h3 {
-    font-size: 34px;
+        font-size: 34px;
     }
+     .weva_section.solutions_bloks h3 {
+        font-size: 28px;
+    }
+    .obstacles_text ul li {
+        font-size: 16px;
+    }
+
+
 
 }
 @media screen and (max-width:440px){
@@ -8103,9 +9235,9 @@ img.recovery-partner-img {
         padding-right: 44px;line-height: 33px;
     }
     .sponser_sec h2 {
-    font-size: 22px;
-    margin-bottom: 0;
-    line-height: normal;
+        font-size: 22px;
+        margin-bottom: 0;
+        line-height: normal;
     }
     #community-support .slide img {
         max-height: 256px;
@@ -8143,6 +9275,25 @@ img.recovery-partner-img {
     .home_services.mg_carrer_part #community-support .slide img {
         max-height: 270px;
     }
+
+    .per_in_section .liq_blocks.doca_2 .col-md-4:nth-child(1) .lb_img {
+        padding-left: 0;
+    }
+    .per_in_section .doca_2 .lb_img img {
+        max-width: 75px;
+    }
+    .bankruptcy.per_in_section .liq_blocks .lb_img {
+    margin-right: 0;width: 100px;
+    }
+    .per_in_section .liq_blocks .lb_txt {
+    padding-right: 0;
+    width: calc(100% - 100px);
+    }
+    .myexperience_section, .myexperience_section h2 {
+    font-size: 20px;
+    line-height: 29px;
+    }
+
 }
 @media screen and (max-width:414px){
     .ps_bot h2 {
@@ -8823,6 +9974,9 @@ img.recovery-partner-img {
     }
     .services-slider .slick-slide.slick-active {
         opacity: 1;
+    }
+    .liq_blocks.doca_2 .col-lg-4:last-child .lb_txt {
+        padding-right: 20px;
     }
 }
 

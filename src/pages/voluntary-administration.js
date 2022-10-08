@@ -16,7 +16,6 @@ import ReciveryPlan from "../components/recovery-plan"
 import Container from "../components/slider/container-liquidation"
 import EbookForm from "../components/ebook-form"
 import { formEbookContext } from '../components/context';
-import GetInTouchPPForm from "../components/get-in-touch-bankruptcy-popup"
 
 const ConsultBusiness = ({ data }) => {
   const [showModal, setModal] = React.useState(false);
@@ -198,18 +197,13 @@ const ConsultBusiness = ({ data }) => {
       <div className="cu_fixed">
           <a href="/contact"><img src="/images/sophie-img.png" />Contact Us</a>
       </div>
+
       <div className="home">
         <GetInTouch
           title={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchTitle}
           text={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchDescription}
         />
       </div>
-
-      <GetInTouchPPForm
-        title={data?.allWp?.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchTitle}
-        text={data?.allWp?.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchDescription}
-        image={data?.allWp?.nodes[0].themeGeneralSettings.themeGeneralSettings.gitImage}
-      />
 
     </Layout>
   </div>
@@ -297,10 +291,6 @@ export const query = graphql`
             fieldGroupName
             getInTouchDescription
             getInTouchTitle
-            gitImage{
-              mediaItemUrl
-              altText
-            }
             tagline
             speakExpertLink
             speakExpertTitle

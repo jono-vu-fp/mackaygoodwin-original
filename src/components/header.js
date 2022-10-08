@@ -49,9 +49,12 @@ const Header = () => {
           <li className="nav-item p-3 dropdown" onMouseOver={(t) => { t.currentTarget.classList.add('show'); }} onMouseOut={(t) => { t.currentTarget.classList.remove('show'); }}>
             <Link className="nav-link" to="/expertsinbusiness/"> Services</Link>
             <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li className="p-2"><Link className="dropdown-item" to="/corporate-advisory/">Corporate Advisory</Link></li>
-              <li className="p-2"><Link className="dropdown-item" to="/restructuring/">Restructuring</Link></li>
-              <li className="p-2"><Link className="dropdown-item" to="/insolvency/">Insolvency</Link></li>
+              
+
+               <li className="p-2"><Link className="dropdown-item" to="/corporate-advisory/">Corporate Advisory</Link></li>
+                <li className="p-2"><Link className="dropdown-item" to="/restructuring/">Restructure and turnaround</Link></li>
+                <li className="p-2"><Link className="dropdown-item" to="/insolvency/">Corporate Insolvency</Link></li>
+                <li className="p-2"><Link className="dropdown-item" to="/personal-insolvency/">Personal Insolvency</Link></li>
             </ul>
           </li>
           {/*<li className="nav-item p-3 dropdown" onMouseOver={(t) => { t.currentTarget.classList.add('show'); }} onMouseOut={(t) => { t.currentTarget.classList.remove('show'); }}>
@@ -119,8 +122,9 @@ const Header = () => {
               <Link className="nav-link" to="/expertsinbusiness/"> Services</Link>
               <ul className="dropdown-menu" ref={inputEl} aria-labelledby="navbarDropdown">
                 <li className="p-2"><Link className="dropdown-item" to="/corporate-advisory/">Corporate Advisory</Link></li>
-                <li className="p-2"><Link className="dropdown-item" to="/restructuring/">Restructuring</Link></li>
-                <li className="p-2"><Link className="dropdown-item" to="/insolvency/">Insolvency</Link></li>
+                <li className="p-2"><Link className="dropdown-item" to="/restructuring/">Restructure and turnaround</Link></li>
+                <li className="p-2"><Link className="dropdown-item" to="/insolvency/">Corporate Insolvency</Link></li>
+                <li className="p-2"><Link className="dropdown-item" to="/personal-insolvency/">Personal Insolvency</Link></li>
               </ul>
             </li>
             {/* <li className="nav-item p-3 dropdown" onMouseOver={(t) => { t.currentTarget.classList.add('show'); }} onMouseOut={(t) => { t.currentTarget.classList.remove('show'); }}>
@@ -209,9 +213,12 @@ const Header = () => {
               <div className="mobile-logo black-logo text-center"><img src="https://res.cloudinary.com/mbsaiyed/image/upload/v1625481695/svg/mobile-logo.svg" alt="" /></div>
               <ul className="menu-ul">
                 <label className="menu-label" htmlFor="menu-1">Menu</label>
-                <li className="nav-item"><Link to="/corporate-advisory/">Corporate Advisory</Link></li>
-                <li className="nav-item"><Link to="/restructuring/">Business Restructure and Turnaround</Link></li>
-                <li className="nav-item"><Link to="/insolvency/">Insolvency</Link></li>
+              
+                 <li className="nav-item"><Link to="/corporate-advisory/">Corporate Advisory</Link></li>
+                <li className="nav-item"><Link to="/restructuring/">Restructure and turnaround</Link></li>
+                <li className="nav-item"><Link to="/insolvency/">Corporate Insolvency</Link></li>
+                <li className="nav-item"><Link to="/personal-insolvency/">Personal Insolvency</Link></li>
+
               </ul>
             </div>
           </li>

@@ -122,7 +122,7 @@ const Restructuring = ({ data }) => {
 }
 export const query = graphql`
   {
-    wpPage(title: {eq: "Restructuring"}) {
+    wpPage(title: {eq: "Restructure and turnaround"}) {
       restructuring {
         bannerDesc
         bannerImage {
