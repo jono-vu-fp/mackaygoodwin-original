@@ -27,9 +27,9 @@ const Accordian = (props) => {
 
 
   return <section className="ols_section">
-    <div className="container">
-      <h3>{props.title}</h3>
-      <div className="ols_list">
+    <div className="container" >
+      <h3 >{props.title}</h3>
+      <div  id="liquidser" className="ols_list">
         <ul>
             {props.data.map((d, key) => {
               return <li>

@@ -12,6 +12,8 @@ import CurveLeft from "../components/curve-left"
 import CurveRight2 from "../components/curve-right2"
 import HealthForm from "../components/health-form"
 import EbookForm from "../components/ebook-form"
+import ImageRightLayout from "../components/image-right-layout"
+import ImageLeftLayout from "../components/image-left-layout3"
 import { formHealthContext, formEbookContext } from '../components/context';
 import GetInTouchPPForm from "../components/get-in-touch-bankruptcy-popup"
 
@@ -64,26 +66,29 @@ const Restructuring = ({ data }) => {
         data={data.wpPage.restructuring.businessTestimonial}
         slideColor={'#EBE9DE'}
       />
-      <CurveLeft
+      <ImageRightLayout
         id={'vCFO'}
         title={data.wpPage.restructuring.croTitle}
         text={data.wpPage.restructuring.croDesc}
         img={data.wpPage.restructuring.officerimage}
         btnTxt={'Enquire'}
         btnLink={data.wpPage.restructuring.enquireLink}
+        addClass={"ill_section resill_section"}
       />
       <formHealthContext.Provider value={value}>
-        <CurveRight2
+        <ImageLeftLayout
           id={'business-health-check'}
           title={data.wpPage.restructuring.healthCheckTitle}
           text={data.wpPage.restructuring.healthCheckDesc}
           img={data.wpPage.restructuring.healthCheckImage}
           video={data.wpPage.restructuring.video}
           videolabel={data.wpPage.restructuring.videoButtonLabel}
+          btnTxt={data.wpPage.restructuring.buttonLabel}
           btn1Txt={data.wpPage.restructuring.buttonLabel}
           btn2Txt={null}
           btn1Link={data.wpPage.restructuring.buttonUrl}
           btn2Link={''}
+          addClass={"ill_section bhc_section new_restu"}
           //btn1Click={() => { setFormDetails(1) }}
         />
         <HealthForm
@@ -91,20 +96,28 @@ const Restructuring = ({ data }) => {
           text={'Register now for your business health check'}
         />
       </formHealthContext.Provider>
-      <formEbookContext.Provider value={valueEbook}>
-        <CurveLeft
+
+
+        <formEbookContext.Provider value={valueEbook}>
+
+        <ImageRightLayout
           title={data.wpPage.restructuring.survivalTitle}
           text={data.wpPage.restructuring.survivalDesc}
           img={data.wpPage.restructuring.survivalImage}
           btnTxt={'Download Now'}
           btnLink={""}
           btnClick={() => { setFormEbookDetails(1) }}
+          addClass={"irl_section bsp_section"}
         />
         <EbookForm
           title={'Download e-guide'}
           text={'Download your free copy today and get on the path to recovery'}
         />
       </formEbookContext.Provider>
+
+
+
+      
       <div className="home">
         <GetInTouch
           title={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchTitle}

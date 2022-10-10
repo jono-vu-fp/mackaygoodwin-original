@@ -5612,6 +5612,16 @@ margin-bottom: 45px;
 .voluntary_administration.small_business .glpo_section.right_soloution {
     padding-bottom: 65px;
 }
+.ill_section.vcfo_section.new_restu{
+    padding-top: 0px;
+   
+}
+.ill_section.vcfo_section.resill_section{
+    padding-top: 0px;
+}
+.rig_button{
+    text-align: center;
+}
 
 
 /****** BreakPoints *******/
@@ -6400,6 +6410,9 @@ margin-bottom: 45px;
         padding-bottom: 90px;
         padding-top: 60px;
     }
+    .ill_section.vcfo_section.new_restu {
+    padding-top: 35px;
+}
     .ca_sec h2 {
         font-size: 34px;
         margin-bottom: 20px;
@@ -7851,7 +7864,7 @@ margin-bottom: 45px;
         margin-bottom: 60px;
     }
     .vcfo_section .vcfo_left:after, .vcfo_section.ill_section .vcfo_left:after {
-        height: 420%;
+        height: 440%;
     }
     .na_section .news-list h4, .na_section .news-desc, .home .news-articles p {
         min-height: inherit !important;
@@ -8304,8 +8317,11 @@ margin-bottom: 45px;
         padding-left: 0;
     }
     .per_in_section .solutions_bloks h3 {
-    margin-bottom: 15px;
+         margin-bottom: 15px;
     }
+    .ill_section.vcfo_section.new_restu {
+        padding-top: 85px!important;
+}
 
 }
 @media screen and (max-width:767px){
@@ -9298,6 +9314,9 @@ margin-bottom: 45px;
 @media screen and (max-width:414px){
     .ps_bot h2 {
         font-size: 20px;
+    }
+    .new_restu .vcfo_right .btn {
+        margin-bottom: 10px!important;
     }
 }
 @media screen and (max-width:375px){

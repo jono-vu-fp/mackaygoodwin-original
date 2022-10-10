@@ -85,6 +85,14 @@ const Post = ({ data }) => {
         <div className="row">
           <div className="col-sm-12 col-md-8 detailPost">
             <div dangerouslySetInnerHTML={{ __html: data.wpPost.content }}></div>
+            <div className="rig_button">
+
+            {data.wpPost.eventsOption?.eventStatus != 'enablevideoaccess' ?
+              data.wpPost.eventsOption?.registerUrl ? <a className="bt-big px-4 mx-4" href={data.wpPost.eventsOption?.registerUrl}>{data.wpPost.eventsOption?.buttonLabel} <i className="fa fa-chevron-right" aria-hidden="true"></i></a> : null
+            :null
+            }
+
+            </div>
           </div>
         </div>
       </div>
