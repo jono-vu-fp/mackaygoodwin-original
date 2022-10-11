@@ -58,7 +58,7 @@ const Insolvency = ({ data }) => {
       />
       <div class="ca_main">
         {data.wpPage.insolvency.qA.map((d,key) => {
-            return <div className={'ca_sec ca_sec'+key}><div className="container"><h2>{d.question}</h2><div className="ca_txt" dangerouslySetInnerHTML={{ __html: d.answer }}></div>{d.buttonUrl !== null && d.buttonUrl !== "" ? <Link className="btn btn-primary me-5" to={d.buttonUrl}>{d.buttonLabel}</Link> : ""}</div></div>
+            return <div className={'ca_sec ca_sec'+key}><div className="container"><h2>{d.question}</h2><div className="ca_txt" dangerouslySetInnerHTML={{ __html: d.answer }}></div><div className="find_more">{d.buttonUrl !== null && d.buttonUrl !== "" ? <Link className="btn btn-primary me-5" to={d.buttonUrl}>{d.buttonLabel}</Link> : ""}</div></div></div>
         })}
       </div>
       {/* <CurveRight

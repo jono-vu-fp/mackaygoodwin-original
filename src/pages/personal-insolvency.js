@@ -127,6 +127,8 @@ const ConsultBusiness = ({ data }) => {
                         </div>
                       </div>)
                   })}
+
+                   {data.wpPage.personalinsolvency.perWeva3ButtonLink !== null && data.wpPage.personalinsolvency.perWeva3ButtonLink !== "" ? <Link className="btn btn-primary me-5" to={data.wpPage.personalinsolvency.perWeva3ButtonLink}>{data.wpPage.personalinsolvency.perWeva3ButtonText}</Link> : ""} 
               </div>
             </div>
           </div>   
@@ -221,6 +223,8 @@ export const query = graphql`
             mediaItemUrl
           }
         perWevaContent
+        perWeva3ButtonText
+        perWeva3ButtonLink
         perWevaButtonText
         perWevaButtonLink
         perDcaTitle

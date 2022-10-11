@@ -45,7 +45,7 @@ const AccordianSlide = (props) => {
     <div id={"collapse" + props.keyloc} className="accordion-collapse collapse hide" aria-labelledby={"heading" + props.keyloc} data-bs-parent="#accordionExample">
       <div className="accordion-body">
         <div dangerouslySetInnerHTML={{ __html: props.text }}></div>
-        {props.showEnquireButton == true ? <Link className="btn btn-primary" to={props.learnMoreUrl != null ? props.learnMoreUrl : (props.title=='Voluntary Administration'?'/voluntary-administration/':(props.title=='Small Business Restructure'?'/small-business-restructure/':(props.title=='Safe Harbour'?'/safe-harbour/':"#get-in-touch")))}>{props.learnMoreText != null ? props.learnMoreText : 'Enquire'}</Link> : ""}
+        {props.showEnquireButton == true ? <Link className="btn btn-primary" to={props.learnMoreUrl != null ? props.learnMoreUrl : (props.title=='Voluntary Administration'?'/voluntary-administration/':(props.title=='Small Business Restructure'?'/small-business-restructure/':(props.title=='Safe Harbour'?'/safe-harbour/':"#get-in-touch")))}>{props.learnMoreText != null ? props.learnMoreText : 'Learn More'}</Link> : ""}
       </div>
     </div>
   </div>
