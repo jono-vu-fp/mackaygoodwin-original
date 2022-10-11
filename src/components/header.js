@@ -81,8 +81,8 @@ const Header = () => {
               MG Academy
             </Link> */}
             <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li className="p-2"><Link className="dropdown-item" to="/insights/">Insights</Link></li>
-              <li className="p-2"><Link className="dropdown-item" to="/news/">News & articles</Link></li>
+              <li className="p-2"><Link className="dropdown-item" to="/media-moments/">Media Moments</Link></li>
+              <li className="p-2"><Link className="dropdown-item" to="/news/">Resources</Link></li>
               <li className="p-2"><Link className="dropdown-item" to="/events/">Events</Link></li>
               <li className="p-2"><Link className="dropdown-item" to="/mg-academy/#incubator-program">Incubator Program</Link></li>
             </ul>
@@ -151,8 +151,8 @@ const Header = () => {
                 MG Academy
               </Link> */}
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li className="p-2"><Link className="dropdown-item" to="/insights/">Insights</Link></li>
-              <li className="p-2"><Link className="dropdown-item" to="/news/">News & articles</Link></li>
+                <li className="p-2"><Link className="dropdown-item" to="/media-moments/">Media Moments</Link></li>
+              <li className="p-2"><Link className="dropdown-item" to="/news/">Resources</Link></li>
               <li className="p-2"><Link className="dropdown-item" to="/events/">Events</Link></li>
               <li className="p-2"><Link className="dropdown-item" to="/mg-academy/#incubator-program">Incubator Program</Link></li>
               </ul>
@@ -229,7 +229,7 @@ const Header = () => {
               <ul className="menu-ul">
                 <label className="menu-label" htmlFor="menu-2">Menu</label>
                 <li className="nav-item"><Link className="dropdown-item" to="/deal-hub/">Deal Hub</Link></li>
-                <li className="nav-item"><Link className="dropdown-item" to="/news/">News & articles</Link></li>
+                <li className="nav-item"><Link className="dropdown-item" to="/news/">Resources</Link></li>
                 <li className="nav-item"><Link className="dropdown-item" to="/back-in-business/">Case studies</Link></li>
                 
               </ul>
@@ -254,8 +254,8 @@ const Header = () => {
               <div className="mobile-logo black-logo text-center"><img src="https://res.cloudinary.com/mbsaiyed/image/upload/v1625481695/svg/mobile-logo.svg" alt="" /></div>
               <ul className="menu-ul">
                 <label className="menu-label" htmlFor="menu-1">Menu</label>
-                <li className="nav-item"><Link to="/insights/">Insights</Link></li>
-              <li className="nav-item"><Link to="/news/">News & articles</Link></li>
+                <li className="nav-item"><Link to="/media-moments/">Media Moments</Link></li>
+              <li className="nav-item"><Link to="/news/">Resources</Link></li>
               <li className="nav-item"><Link to="/events/">Events</Link></li>
               <li className="nav-item"><Link to="/mg-academy/#incubator-program">Incubator Program</Link></li>
               </ul>

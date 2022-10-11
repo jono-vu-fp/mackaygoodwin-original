@@ -49,7 +49,7 @@ const MgAcademyPage = ({ data }) => {
       />
 
 
-      <section id="incubator-progra" class="wva_section about_section history_section identifix_sec2 event_incubator">
+      <section id="incubator-program" class="wva_section about_section history_section identifix_sec2 event_incubator">
        <div class="container">
 
         <div className="wva_left">

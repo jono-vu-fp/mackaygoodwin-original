@@ -207,7 +207,7 @@ const IndexPage = ({ data }) => {
         </div>
         <div className="vcfo_section na_section">
           <div className="container">
-            <h2>News & Articles</h2>
+            <h2>Resources</h2>
           </div>
           <News
             title={'News & Articles'}

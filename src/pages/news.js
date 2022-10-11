@@ -9,8 +9,8 @@ import GetInTouch from "../components/get-in-touch3"
 
 const breadCrumbs = [
   { link: "/", title: "Home" },
-  { link: "/insights/", title: "Insights" },
-  { title: "News and Articles" },
+  //{ link: "/insights/", title: "Insights" },
+  { title: "Resources" },
 ]
 
 const NewsPage = ({ data }) => (
