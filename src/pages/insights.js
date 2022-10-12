@@ -10,7 +10,7 @@ import Events from "../components/events/events"
 import GetInTouch from "../components/get-in-touch3"
 import Career from "../components/career"
 
-declare var window;
+// declare var window;
 
 
 const breadCrumbs = [
@@ -19,7 +19,7 @@ const breadCrumbs = [
 ]
 
 const Insights = ({ data }) => {
-  window.location.href = "/";
+  // window.location.href = "/";
   return (
     <div></div>
   )
