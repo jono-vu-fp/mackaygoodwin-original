@@ -9,6 +9,10 @@ import BackInBusiness from "../components/backinbusiness/backinbusiness"
 import Events from "../components/events/events"
 import GetInTouch from "../components/get-in-touch3"
 import Career from "../components/career"
+
+declare var window;
+
+
 const breadCrumbs = [
   { link: "/", title: "Home" },
   { title: "Insights" },
