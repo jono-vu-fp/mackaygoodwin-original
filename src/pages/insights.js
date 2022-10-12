@@ -15,46 +15,9 @@ const breadCrumbs = [
 ]
 
 const Insights = ({ data }) => {
-  setTimeout(() => {
-    if (typeof window !== "undefined" && window.location.hash !== "") {
-      document.getElementById(window.location.hash.replace("#", "")).scrollIntoView();
-    }
-  }, 100)
+  window.location.href = "/";
   return (
-    <div className="service insights">
-      <Layout>
-        <Seo title={data.wpPage.metaFields?.metaTitle} description={data.wpPage.metaFields?.metaDescription} />
-        <TopBanner
-          title={data.wpPage.insightPageOptions.bannerTitle}
-          subtitle={data.wpPage.insightPageOptions.bannerSubtitle}
-          text={data.wpPage.insightPageOptions.bannerDesc}
-          bannerImg={data.wpPage.insightPageOptions.bannerImage}
-          breadCrumbs={breadCrumbs}
-          sendUrl={data.wpPage.insightPageOptions.sendUrl}
-        />
-        <News
-          title={data.wpPage.insightPageOptions.newsTitle}
-          data={data.allWpArticle.nodes}
-        />
-        <BackInBusiness
-          title={data.wpPage.insightPageOptions.businessTitle}
-          data={data.allWpBusiness.nodes}
-        />
-        <Career
-          title={data.wpPage.insightPageOptions.dealContentTitle}
-          text={data.wpPage.insightPageOptions.dealContentDesc}
-          buttonLink={data.wpPage.insightPageOptions.dealButtonLink}
-          image={data.wpPage.insightPageOptions.dealImage?.mediaItemUrl}
-          altText={data.wpPage.insightPageOptions.dealImage?.altText}
-        />
-        <div className="home">
-        <GetInTouch
-          title={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchTitle}
-          text={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchDescription}
-        />
-        </div>
-      </Layout>
-    </div>
+    <div></div>
   )
 }
 

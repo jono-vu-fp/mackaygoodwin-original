@@ -14,6 +14,7 @@ exports.createPages = async ({ graphql, actions }) => {
     { from: '/business-survival-pack/', to: '/' },
     { from: '/expertsinbusiness/', to: '/' },
     { from: '/faqs.php', to: '/' },
+    { from: '/insights/', to: '/' },
     { from: '/insights/3-essential-actions-take-temporary-safe-harbour-ends-31-december-2020/', to: '/' },
     { from: '/insights/accountant-advice/', to: '/' },
     { from: '/insights/business-debt-management/page/2/', to: '/' },
@@ -57,7 +58,7 @@ exports.createPages = async ({ graphql, actions }) => {
   ]
 
   redirection.forEach(post => {
-    console.log(post);
+    // console.log(2342342);
     createRedirect({ fromPath: post.from, toPath: post.to, isPermanent: true })
   })
 
