@@ -65,7 +65,7 @@ const Restructuring = ({ data }) => {
       {data.wpPage.restructuring.queAndAnsNew.map((d,key) => {
           return <div className="ca_sec"><div className="container"><h2>{d?.questionNew}</h2>
           <div className="ca_txt" dangerouslySetInnerHTML={{ __html: d?.answerNew }}></div>
-          {d?.resLink !== null && d?.resLink !== "" ? <Link className="btn btn-primary me-5" to={d?.resLink}>Learn More</Link> : null}
+          <Link className="btn btn-primary me-5" to={d.resLink != null ? d.resLink : (d.questionNew=='Creditor and Stakeholder Negotiations'?'#get-in-touch':(d.questionNew=='Operational Improvements'?'#get-in-touch':''))}>Learn More</Link>
           </div></div>
       })}
       </div>
