@@ -1,6 +1,6 @@
 import * as React from "react"
 import { graphql } from "gatsby"
-
+import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import TopBanner from "../components/top-banner"
@@ -55,11 +55,21 @@ const Restructuring = ({ data }) => {
       <FullText
         text={data.wpPage.restructuring.pageTagline}
       />
-      <Accordian
+    {/*  <Accordian
         title={''}
         showEnquireButton={true}
         data={whyMG}
-      />
+      />*/}
+
+       <div class="ca_main res_new">
+      {data.wpPage.restructuring.queAndAnsNew.map((d,key) => {
+          return <div className="ca_sec"><div className="container"><h2>{d?.questionNew}</h2>
+          <div className="ca_txt" dangerouslySetInnerHTML={{ __html: d?.answerNew }}></div>
+          {d?.resLink !== null && d?.resLink !== "" ? <Link className="btn btn-primary me-5" to={d?.resLink}>Learn More</Link> : null}
+          </div></div>
+      })}
+      </div>
+
       <Container
         title={''}
         subtitle={data.wpPage.restructuring.businessDesc}
@@ -187,6 +197,7 @@ export const query = graphql`
         queAndAnsNew {
           questionNew
           answerNew
+          resLink
         }
       }
       metaFields {

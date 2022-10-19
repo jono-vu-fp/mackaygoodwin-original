@@ -5759,6 +5759,301 @@ margin-bottom: 45px;
     background-color: #154f39!important;
     overflow: hidden;
 }
+.service.contact #banner-section{
+    padding: 105px 0px 240px;
+}
+.service.contact #banner-section .row{
+    align-items: center;
+}
+.service.contact .banner-content .banner-heading{
+    color: #124b38;
+}
+.service.contact .banner-content .banner-desc{
+  padding: 4px 40px 25px 0;
+  color: #124b38;
+  font-size: 20px;
+  font-weight: 400;
+  padding-bottom: 78px;
+}
+.service.contact .ht_section{
+        margin-top: 120px;
+        margin-bottom: 50px;
+}
+.con_title{
+    font-size: 44px;
+    font-weight: 500;
+    color: #154f3a;
+    margin-top: 5px!important;
+    margin-bottom: 27px!important;
+}
+.service.contact .news-desc {
+    min-height: 120px;
+    padding-bottom: 32px;
+}
+.service.contact .listbg{
+    padding: 0px 20px 40px 20px;
+}
+.service.contact .news-list h4 {
+    padding-top: 40px;
+    color: #154f3a;
+    margin-bottom: 2px;
+     font-family: 'reckless_neue_trialregular';
+}
+.service.contact .listbg:hover{
+    background-color: #dbfd90;
+}
+.service.contact .news-list .container,.service.contact .ca_sec2 .container{
+     max-width: 1180px!important;
+}
+.service.contact .news-list{
+        padding-bottom:15px;
+}
+.service.contact .news-list .mt-4 {
+    margin-top: 1.9rem !important;
+}
+.service.contact .listbg a .fa {
+    vertical-align: middle;
+    padding-bottom: 2px;
+    padding-left: 5px
+}
+.service.contact .ca_sec2{
+    background-color: #1c5e48;
+    padding:62px 0px;
+}
+.service.contact .ca_sec2 h2{
+    color: #eae7db;
+    font-size: 72px;
+    font-weight: 500;
+     font-family: 'reckless_neue_trialregular';
+}
+.service.contact .ca_sec2 .btn{
+    background-color: #ebe9de;
+    color: #1c5e48;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 9px 60px;
+
+}
+.res_new .ca_sec .btn{
+    padding: 9px 49px
+}
+.res_ul{
+    color:#1c5e48;
+    margin: 0px;
+    padding-left:0px;
+}
+.res_ul li:before{
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 8px;
+    font-size: 40px;
+    background-color:#1c5e48 ;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+
+}
+.res_ul li{ 
+    padding-bottom:20px;
+    list-style-type: none;
+    position: relative;
+    padding-left: 20px;
+}
+.res_ul li:last-child{
+    padding-bottom: 10px;
+}
+.ca_main.res_new .ca_txt b{
+    color:#1c5e48;
+    font-size: 22px;
+    font-weight: 400;
+     font-family: 'Sohne';
+     line-height: normal;
+}
+.ca_main.res_new .ca_sec div.ca_txt{
+    padding-right: 40px;
+}
+.ca_main.res_new .ca_sec:nth-child(1){
+    background-color: #ebe9de!important;
+    padding:70px 0px 69px
+}
+.ca_main.res_new .ca_sec:nth-child(1) .btn{
+        margin-top:4px!important;
+}
+.ca_main.res_new .ca_sec:nth-child(2){
+    background-color: #1c5e48!important;
+  
+}
+.ca_main.res_new .ca_sec:nth-child(2) h2{
+    color: #ffffff!important;
+}
+.ca_main.res_new .ca_sec:nth-child(2) p{
+    color: #ffffff!important;
+}
+.ca_main.res_new .ca_sec:nth-child(2) .btn{
+        background-color: #ebe9de!important;
+       color: #1c5e48!important;
+       margin-top: 7px;
+}
+.ca_main.res_new .ca_sec:nth-child(2),.ca_main.res_new .ca_sec:nth-child(4),.ca_main.res_new .ca_sec:nth-child(3),.ca_main.res_new .ca_sec:nth-child(3n-1){
+      padding: 53px 0px 58px;
+}
+.ca_main.res_new .ca_sec:nth-child(3n+1){
+    background-color: #e0e3e5;
+  
+}
+.ca_main.res_new .ca_sec:nth-child(3n-1){
+    background-color: #ebe9de;
+}
+.ca_main.res_new .ca_sec:nth-child(3n+1) .btn{
+     margin-top: 7px;
+}
+.ca_main.res_new .ca_sec:nth-child(3n-1) h2{
+    color: #1c5e48;
+}
+.ca_main.res_new .ca_sec:nth-child(3n-1) p{
+     color: #000;
+}
+.ca_main.res_new .ca_sec:nth-child(3n-1) .btn{
+        background-color: #1c5e48;
+       color: #dbfd87;
+       margin-top: 7px;
+}
+.service.restructure #testimonials .row h2{
+    padding-top: 50px;
+}
+.experts_section .liq_blocks .whyTitle{
+    font-size: 44px;
+    margin-top: 0px;
+    padding-top: 0px;
+    padding-bottom: 45px;
+}
+.experts_section .why-need-img{
+        margin: 0px 0px 20px 0px;
+}
+.experts_section .liq_blocks.doca_2 .lb_img {
+    margin-top: -10px;
+}
+.experts_section .recovery-plan{
+    padding-bottom: 0px;
+    padding-top: 100px;
+}
+.experts_section .banner-content .banner-heading,.experts_section .banner-content .banner-desc{
+    color: #124b38;
+}
+.restructure.experts_section .banner-image::after{
+    background-color: #ebe9de;
+}
+.restructure.experts_section #banner-section{
+    padding-top: 100px;
+    padding-bottom: 75px;
+}
+.restructure.experts_section .liq_blocks.doca_2.va_blocks {
+    padding-bottom: 75px;
+}
+.restructure.experts_section  .liq_blocks.doca_2 .recovery-partner-title {
+    padding: 0px 0px 5px;
+}
+.restructure.experts_section .liq_blocks.doca_2 .col-lg-4{
+ padding-left: 0px;
+}
+.experts_section .liq_blocks .lb_txt {
+    padding-right: 65px;
+}
+.experts_section .liq_blocks.doca_2 .col-lg-4:last-child .lb_txt {
+    padding-right: 36px;
+}
+.experts_section .recovery-plan .title{
+    font-size: 44px;
+    font-weight: 500;
+    color: #000000;
+    padding-bottom: 25px;
+}
+.experts_section .recovery-plan .subDesc{
+    font-size: 20px;
+    font-weight: 400;
+    color: #000000;
+    text-align: center;
+    line-height: 30px;
+}
+.experts_section .recovery-plan .num{
+        font-size: 72px;
+        font-weight: 500;
+        padding: 10px 60px;
+}
+.experts_section .steps .stepsCol p{
+    padding: 0px 28px;
+    font-size: 17px;
+}
+.experts_section .steps .stepsCol:last-child p{
+     padding: 0px 26px;
+}
+.experts_section .ca_txt ul{
+    padding-left:0px;
+}
+.experts_section .ca_txt ul li{
+    margin-bottom: 5px;
+    padding-top: 5px;
+    padding-left: 20px;
+    position: relative;
+    list-style-type: none;
+}
+.experts_section .ca_txt ul li:before{
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 13px;
+    font-size: 40px;
+    background-color:#d0ff89 ;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+}
+.experts_section .ca_txt strong{
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Sohne';
+}
+.service.restructure.experts_section #testimonials .row h2 {
+    padding-top: 0;
+}
+.service.restructure.experts_section #testimonials{
+    padding: 0 0 85px;
+}
+.experts_section .recovery-partner{
+    padding-top: 0px;
+    margin-bottom: 35px;
+}
+.experts_section .recovery-partner .col-lg-2{
+        width: 18.8%;
+       
+}
+.experts_section .recovery-partner-title {
+     padding: 0px 20px;
+}
+
+.experts_section .recovery-partner .recovery-partner-title   {
+        font-size: 18px;
+        font-weight: 400;
+        font-family: 'Sohne-Buch';
+        line-height: 24px;
+        padding-top: 0px;        
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+  .experts_section img.recovery-partner-img{
+        width: auto;
+        height: 72px;
+    }
+     .experts_section .col-md-6:nth-child(3) img.recovery-partner-img{
+        width: auto;
+        height: 55px;
+        margin-top: 36px;
+    }
+   .experts_section .recovery-partner .whyTitle{
+        font-size: 44px;
+        padding-bottom: 25px;
+    }
 
 /****** BreakPoints *******/
 /****** Responsive Start *******/
@@ -6118,7 +6413,45 @@ margin-bottom: 45px;
     .media_blocks h2{
         font-size: 32px;
     }
-
+    .service.contact #banner-section {
+         padding-bottom:180px;
+    }
+    .service.contact .ht_section {
+        margin-top: 90px;        
+    }
+    .service.contact .ca_sec2 h2{
+        font-size: 65px;
+    }
+     .con_title{
+        font-size:40px;
+        margin-bottom: 20px!important;
+    }
+    .ca_main.res_new .ca_sec {
+        padding: 50px 0 60px!important;
+    }
+    .ca_main.res_new .ca_sec div.ca_txt{
+        padding-right: 0px;
+    }
+    .experts_section .recovery-plan{
+        padding-top: 70px;
+    }
+    .experts_section .liq_blocks .whyTitle,{
+         font-size:40px;
+         padding-bottom: 40px; 
+    }
+    .experts_section .liq_blocks .whyTitle, .experts_section .recovery-plan .title,.experts_section .recovery-partner .whyTitle{
+         font-size:40px;
+    }
+    .restructure.experts_section .liq_blocks.doca_2.va_blocks {
+        padding-bottom: 60px;
+    }
+    .experts_section .recovery-plan .num{
+        font-size: 68px;
+        padding: 10px 55px;
+    }
+    .experts_section .recovery-partner{
+        margin-bottom: 20px;
+    }
 
 
 }
@@ -6276,6 +6609,15 @@ margin-bottom: 45px;
     .doca_2 .recovery-partner-title{
             margin-bottom: 1rem;
     }
+    .res_ul li{
+        padding-bottom: 15px;
+    }
+     .experts_section .recovery-plan{
+        padding-top: 60px;
+    }
+    .experts_section .liq_blocks .whyTitle{
+        padding-bottom: 35px;
+    }
 
 }
 @media screen and (max-width:1500px){
@@ -6430,6 +6772,36 @@ margin-bottom: 45px;
     .per_in_section .per_insolvency .row {
         align-items: center;
     }
+     .service.contact #banner-section {
+         padding-bottom:160px;
+    }
+    .service.contact .ht_section {
+        margin-top: 75px;        
+    }
+    .service.contact .ca_sec2 h2{
+        font-size: 60px;
+    }
+    .service.contact .news-list {
+        padding-bottom: 0;
+        padding-top: 0px;
+    }
+    .con_title{
+        font-size:36px;
+        margin-top: 0px!important;
+    }
+    .experts_section .liq_blocks .whyTitle,.experts_section .recovery-plan .title,.experts_section .recovery-partner .whyTitle{
+        font-size: 36px;
+    }
+    .experts_section .recovery-plan .num{
+        font-size: 64px;
+    }
+    .restructure.experts_section .liq_blocks.doca_2.va_blocks {
+        padding-bottom: 40px;
+    }
+    .experts_section .liq_blocks .lb_txt {
+        padding-right: 40px;
+    }
+
 
 }
 @media screen and (max-width:1400px){
@@ -6557,6 +6929,9 @@ margin-bottom: 45px;
     }
     .ca_sec {
         padding: 40px 0 50px;
+    }
+    .ca_main.res_new .ca_sec {
+        padding: 40px 0 50px!important;
     }
     .vcfo_section.irl_section .vcfo_right {
         width: 500px;
@@ -6708,6 +7083,28 @@ margin-bottom: 45px;
      .media_blocks .col-md-12{
      width: 97.65%;
    }
+    .service.contact #banner-section {
+        padding-bottom:150px;
+    }
+    .service.contact .ht_section {
+        margin-top: 70px;        
+    }
+    .service.contact .ca_sec2 h2{
+        font-size: 56px;
+    } 
+    .experts_section .liq_blocks .lb_txt {
+        padding-right: 30px;
+    }   
+    .experts_section .liq_blocks .whyTitle {
+        padding-bottom: 25px;
+    }
+    .experts_section .banner-image {
+         margin-top: 60px;
+    }
+    .experts_section .liq_blocks.doca_2 .col-lg-4:last-child .lb_txt {
+        padding-right: 0px;
+    }
+    
     
 }
 @media screen and (max-width:1300px){
@@ -6784,6 +7181,21 @@ margin-bottom: 45px;
     .myexperience_section.per_insolvency{
         padding: 15px 0px 30px 0px;
 
+    }
+      .service.contact #banner-section {
+        padding-bottom:140px;
+        padding-top: 90px;
+
+    }
+    .service.contact .ht_section {
+        margin-top: 60px;        
+    }
+    .service.contact .ca_sec2 h2{
+        font-size: 54px;
+    }
+    .experts_section .steps .stepsCol p{
+        padding: 0px 15px;
+        font-size: 16px;
     }
    
     
@@ -6992,6 +7404,9 @@ margin-bottom: 45px;
     }
     .weva_section.solutions_bloks h3 {
         font-size: 39px;
+    }
+    .experts_section .recovery-plan {
+        padding-top: 50px;
     }
 
 
@@ -7471,6 +7886,63 @@ margin-bottom: 45px;
     .media_blocks .even .lb_txt1 .lb_txt, .media_blocks .even .lb_txt3 .lb_txt {
         width: 51%;
     }
+    .service.contact .news-list .container, .service.contact .ca_sec2 .container {
+         max-width:991px!important;
+    }
+    .service.contact .listbg {
+        padding: 0px 10px 40px 10px;
+    }
+    .service.contact .news-desc{
+        font-size: 16px;
+    }
+    .service.contact .wva_section.about_section.history_section.identifix_sec2 {
+        margin-bottom: 40px;
+    }
+    .con_title{
+            margin-bottom: 10px!important;
+            font-size: 32px;
+    }
+    .service.contact .news-articles{
+        padding-bottom: 4rem;
+    }
+    .service.contact #banner-section {
+        padding-bottom: 140px;
+        padding-top: 0px;
+    }
+    .ca_main.res_new .ca_txt b{
+            font-size: 20px;
+    }
+    .experts_section .recovery-plan .title{
+        padding-bottom: 20px;
+    }
+    .experts_section .recovery-plan .subDesc{
+        font-size: 18px;
+        line-height: 28px;
+    }
+    .experts_section .liq_blocks .whyTitle, .experts_section .recovery-plan .title,.experts_section .recovery-partner .whyTitle{
+        font-size: 32px;
+    }
+    .experts_section .liq_blocks .lb_txt {
+        padding-right: 20px;
+    }
+    .experts_section .banner-image {
+        margin-top: 0px;
+    }
+     .experts_section .fullTxtSection {
+        padding-bottom: 4rem;
+    }
+    .experts_section .recovery-partner .col-lg-2 {
+        width: 20%;
+    }
+    .experts_section .recovery-partner-title {
+        padding: 0px;
+       
+    }
+    .experts_section .recovery-partner .recovery-partner-title{
+         font-size: 16px;
+        line-height: 22px;
+    }
+
 
 }
 @media screen and (max-width:991px){
@@ -8559,7 +9031,71 @@ margin-bottom: 45px;
         width: 100%;
         padding-right: 12px;
     }
-
+    .service.contact .news-list .container, .service.contact .ca_sec2 .container {
+         max-width:725px!important;
+    }
+    .service.contact #banner-section {
+        padding-bottom:60px;
+        padding-top: 35px;
+    }
+    .service.contact .ht_section {
+        margin-top: 45px;
+    }
+    .con_title{
+        font-size: 32px;
+        margin-bottom: 0!important;
+    }
+    .service.contact .news-list .col-md-12{
+        width:50%;
+    }
+    .service.contact .news-list h4{
+            padding-top: 30px;
+    }
+    .service.contact .ca_sec2{
+        padding: 45px 0px;
+    }
+    .service.contact .ca_sec2 h2 {
+        font-size: 45px;
+    }
+    .service.contact .news-articles{
+       padding-top: 0px;
+    }
+    .service.contact .news-desc{
+        padding-bottom: 25px;
+    }
+    .service.contact .listbg {
+        padding: 0px 10px 35px 10px;
+    }
+    .service.contact .news-list .mt-4 {
+        margin-top: 1.5rem !important;
+    }
+     .ca_main.res_new .ca_txt b{
+            font-size: 18px;
+    }
+    .restructure.experts_section #banner-section {
+        padding-top: 50px;
+        padding-bottom: 0px;
+    }
+    .experts_section .recovery-plan .num {
+        font-size: 58px;
+        padding: 0;
+    }
+    .experts_section .recovery-plan {
+        padding-top: 40px;
+    }
+    .experts_section .recovery-plan .subDesc{
+        padding-bottom: 0px;
+    }
+   .experts_section .recovery-plan .subTxt {
+        line-height: 60px;
+    }
+    .experts_section .liq_blocks .whyTitle, .experts_section .recovery-plan .title,.experts_section .recovery-partner .whyTitle {
+    font-size: 30px;
+    }
+    .experts_section .recovery-partner .col-lg-2 {
+         width: 50%;
+    }
+   
 
 }
 @media screen and (max-width:767px){
@@ -9048,7 +9584,74 @@ margin-bottom: 45px;
     .media_blocks .container{
         width: 100%;
     }
-    
+    .service.contact .news-list .container, .service.contact .ca_sec2 .container {
+         max-width:100%!important;
+         padding: 0px 25px;
+    }
+    .service.contact .news-list .col-md-12 {
+        width: 100%;
+    }
+    .service.contact .news-desc{
+        min-height:auto;
+    }
+    .service.contact .listbg {
+        padding: 0px 10px 25px 10px;
+    }  
+    .service.contact .news-desc {
+        padding-bottom: 15px;
+        padding-top: 15px!important;
+    } 
+    .service.contact .news-list h4 {
+         padding-top: 25px;
+        font-size: 22px;
+    }
+    .service.contact #banner-section {
+        padding-bottom: 50px;
+    }    
+    .service.contact .ht_section{
+        margin-bottom: 25px;
+    }
+    .con_title {
+        font-size: 30px;
+    }
+    .service.contact .news-list .mt-4 {
+        margin-top: 1rem !important;
+    }
+    .service.contact .ca_sec2 h2 {
+        font-size: 40px;
+    }
+    .service.contact .ca_sec2 {
+        padding: 35px 0px;
+    }
+    .service.contact .news-articles {
+        padding-bottom: 3rem;
+    }
+    .experts_section .recovery-plan .num{
+        font-size: 55px;
+    }
+    .experts_section .ca_txt strong{
+        font-size: 16px;
+    }
+   .experts_section .fullTxtSection {
+        padding-bottom: 3rem;
+    }
+    .experts_section .fullTxtSection .fullTxt {
+        font-size: 27px;
+        line-height: 36px;
+    }
+    .restructure.experts_section #banner-section {
+        padding-top: 25px;
+        padding-bottom: 0px;
+    }
+    .experts_section .recovery-partner {
+        margin-bottom: 0;
+        padding-top: 10px;
+        padding-bottom: 55px;
+    }
+   .experts_section .testimonial-main .desc{
+    font-size: 25px;
+    line-height: 35px;
+    }
 
 }
 @media screen and (max-width:667px){
@@ -9298,6 +9901,24 @@ margin-bottom: 45px;
     .per_insolvency h2 {
         padding-right: 0;
     }
+    .experts_section .recovery-plan .subDesc br{
+        display: none;
+    }
+    .experts_section .fullTxtSection .fullTxt {
+        font-size: 24px;
+        line-height: 34px;
+    }
+    .experts_section .recovery-plan .subDesc {
+        font-size: 17px;
+        line-height: 25px;
+    }
+    .experts_section .steps .stepsCol:last-child p {
+    padding: 0px 10px;
+}
+
+
+
+
    
 
 }
@@ -9402,7 +10023,30 @@ margin-bottom: 45px;
     .media_blocks .lb_txt {
         padding: 30px 20px 30px 20px;
     }
+    .service.contact .ca_sec2 h2 {
+        font-size: 38px;
+    }
+    .service.contact .ca_sec2 {
+        padding: 32px 0px;
+    }
+    .con_title {
+        font-size: 26px;
+    }
+    .service.contact .news-list .container, .service.contact .ca_sec2 .container{
+        padding: 0px 20px;
+    }
+   .experts_section  .innerpage-banner .banner-heading{
+        font-size:28px;
+    }
+    .experts_section .testimonial-main .desc{
+    font-size: 22px;
+    line-height: 32px;
+    }
+    .experts_section .testimonial-main .p-5 {
+        padding: 1rem!important;
+    }
 
+ 
     
 }
 @media screen and (max-width:480px){
@@ -9485,7 +10129,53 @@ margin-bottom: 45px;
     .obstacles_text ul li {
         font-size: 16px;
     }
-
+    .service.contact .ca_sec2 h2 {
+        font-size: 34px;
+    }
+    .service.contact .ca_sec2 {
+        padding: 30px 0px;
+    }   
+    .service.contact .listbg {
+        padding: 0px 0px 25px 0px;
+    }
+    .service.contact #banner-section {
+        padding-bottom: 40px;
+    }
+    .service.contact .ht_section {
+        margin-top: 35px;
+        margin-bottom: 15px;
+    }
+   .service.contact  .wva_section.about_section.history_section.identifix_sec2 {
+        margin-bottom: 35px;
+    }
+     .ca_main.res_new .ca_sec {
+        padding: 35px 0 45px!important;
+    }
+    .experts_section .liq_blocks .whyTitle, .experts_section .recovery-plan .title,.experts_section .recovery-partner .whyTitle{
+        font-size: 28px;
+    }
+     .experts_section .fullTxtSection .fullTxt {
+        font-size: 22px;
+        line-height: 30px;
+    }
+   .experts_section .liq_blocks .lb_img {
+        margin-right: 15px;
+    }
+    .experts_section .recovery-plan .num {
+        font-size: 44px;
+        line-height: 1;
+    }   
+    .experts_section .recovery-plan .subTxt {
+        line-height: 45px;
+        font-size: 22px;
+    }
+     .experts_section .recovery-partner .col-lg-2 {
+         width: 100%;
+        margin-top: 20px;
+    }
+    .experts_section .recovery-partner .whyTitle{
+        padding-bottom: 0px;
+    }
 
 
 }
@@ -9562,6 +10252,21 @@ margin-bottom: 45px;
     font-size: 20px;
     line-height: 29px;
     }
+    .service.contact .ca_sec2 h2 {
+        font-size: 30px;
+    }
+    .service.contact .ca_sec2 .btn{
+        padding: 9px 45px;
+    }
+    .service.contact .ca_sec2 {
+        padding: 25px 0px;
+    }
+    .experts_section .liq_blocks .whyTitle, .experts_section .recovery-plan .title,.experts_section .recovery-partner .whyTitle {
+        font-size: 26px;
+    }
+    .experts_section .recovery-partner .whyTitle{
+        line-height: 1.1;
+    }
 
 }
 @media screen and (max-width:414px){
@@ -9570,6 +10275,9 @@ margin-bottom: 45px;
     }
     .new_restu .vcfo_right .btn {
         margin-bottom: 10px!important;
+    }
+     .service.contact .ca_sec2 {
+        padding: 20px 0px;
     }
 }
 @media screen and (max-width:375px){
@@ -9582,6 +10290,7 @@ margin-bottom: 45px;
     .home_services.mg_carrer_part #community-support .slide img {
     max-height: 235px;
     }
+   
 }
 @media screen and (max-width:360px){
     .wva_section iframe {
@@ -9590,6 +10299,12 @@ margin-bottom: 45px;
      .home_services.mg_carrer_part #community-support .slide img {
         max-height: 210px;
     }
+    .service.contact .ca_sec2 h2 {
+        font-size: 27px;
+    }
+    .experts_section .liq_blocks .whyTitle, .experts_section .recovery-plan .title,.experts_section .recovery-partner .whyTitle {
+    font-size: 24px;
+}
      
 
 }

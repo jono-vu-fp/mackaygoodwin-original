@@ -7,7 +7,7 @@ const ReciveryPlan = (props) => (
     {props.titleDisplay !== false && <div className="row">
         <div className="col-12">
           <h2 className="title text-center">Your 4-step recovery plan</h2>
-          <p className="subDesc">Here’s how we work with you to meet your unique needs. The sooner we get started, the better your chances of success.</p>
+          <p className="subDesc">Here’s how we work with you to meet your unique needs.<br/> The sooner we get started, the better your chances of success.</p>
         </div>
       </div>}
       <div className="row text-center steps">

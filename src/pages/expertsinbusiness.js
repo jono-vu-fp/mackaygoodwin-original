@@ -1,10 +1,10 @@
 import * as React from "react"
 import { graphql } from "gatsby"
-
+import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import TopBanner from "../components/top-banner"
-import GetInTouch from "../components/get-in-touch"
+import GetInTouch from "../components/get-in-touch3"
 import Container from "../components/slider/container"
 import Accordian from "../components/accordian/accordian"
 import FullText from "../components/full-text"
@@ -24,7 +24,7 @@ const ConsultBusiness = ({ data }) => {
     { link: "#", title: "Services" },
     { title: "Experts in business" },
   ]
-  return (<div className="service restructure consult-business">
+  return (<div className="service restructure experts_section">
     <Layout>
       <Seo title={data.wpPage.metaFields?.metaTitle} description={data.wpPage.metaFields?.metaDescription} />
       <TopBanner
@@ -32,39 +32,41 @@ const ConsultBusiness = ({ data }) => {
         subtitle={data.wpPage.consultBusiness.bannerSubtitle}
         text={data.wpPage.consultBusiness.bannerDesc}
         bannerImg={data.wpPage.consultBusiness.bannerImage}
-        breadCrumbs={breadCrumbs}
+        //breadCrumbs={breadCrumbs}
         sendUrl={data.wpPage.consultBusiness.sendUrl}
-        equalWidth={true}
+       //equalWidth={true}
       />
-      <div className="container-fluid">
-        <div className="row flex-row-reverse">
-          <div className="col-md-12 col-lg-6 pe-0 getintouchright">
-            <GetInTouch
-              title={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchTitle}
-              text={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchDescription}
-              fullWidth={true}
-            />
-          </div>
-          <div className="col-md-12 col-lg-5 offset-lg-1 ps-0 pe-0 getintouchleft">
-            {/* <h3>{data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.tagline}</h3> */}
-            <h1 className="whyTitle">{data.wpPage.consultBusiness.title}</h1>
-            {data.wpPage.consultBusiness.descriptionWhy.map((d) => {
-              return (
-                <div className="row">
-                  <div className={"col-3"}>
-                    <div className="text-center">
-                      <img src={d.image.mediaItemUrl} alt={d.image.altText} className="why-need-img" />
+
+      <div className="liq_blocks va_blocks doca_2">
+        <div className="container">
+          <div className="row">
+           <h1 className="whyTitle">{data.wpPage.consultBusiness.title}</h1>
+              
+              {data.wpPage.consultBusiness.descriptionWhy.map((d) => {
+                return (
+                  <div className="col-md-4 col-lg-4">
+                    <div className="lb_img">
+                         <img src={d.image.mediaItemUrl} alt={d.image.altText} className="why-need-img" />
                     </div>
-                  </div>
-                  <div className="col-9">
-                    <p className="recovery-partner-title">{d.title.trim()}</p>
-                    <p className="recovery-partner-desc">{d.description.trim()}</p>
-                  </div>
-                </div>)
-            })}
+                    <div className="lb_txt">
+                      <p className="recovery-partner-title">{d.title.trim()}</p>
+                     <p className="recovery-partner-desc">{d.description.trim()}</p>
+                    </div>
+                  </div>)
+              })}
           </div>
         </div>
-      </div>
+      </div> 
+      
+
+       <div className="home">
+    <GetInTouch
+      title={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchTitle}
+      text={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchDescription}
+    />
+    </div>  
+
+
       {/* <div className="container">
         <div className="row">
           <div className="col">
@@ -119,11 +121,21 @@ const ConsultBusiness = ({ data }) => {
       <FullText
         text={data.wpPage.consultBusiness.tagline}
       />
-      <Accordian
+       {/*<Accordian
         title={''}
         showEnquireButton={true}
         data={whyMG}
-      />
+      />*/}
+
+      <div class="ca_main res_new">
+      {data.wpPage.consultBusiness.queAns.map((d,key) => {
+          return <div className="ca_sec"><div className="container"><h2>{d?.ques}</h2>
+          <div className="ca_txt" dangerouslySetInnerHTML={{ __html: d?.ans }}></div>
+          {d?.learnMoreUrl !== null && d?.learnMoreUrl !== "" ? <Link className="btn btn-primary me-5" to={d?.learnMoreUrl}>Learn More</Link> : null}
+          </div></div>
+      })}
+      </div>
+
       <section className="recovery-partner">
         <div className="container">
           <div className="row">
@@ -136,8 +148,8 @@ const ConsultBusiness = ({ data }) => {
               return (<div className={"col-xs-12 col-md-6 col-lg-" + parseInt(12 / data.wpPage.consultBusiness.partner.length)}>
                 <div className="text-center">
                   <img src={d.image.mediaItemUrl} alt={d.image.altText} className="recovery-partner-img" />
-                </div>
-                <p className="recovery-partner-title text-center"> {d.title} </p>
+                </div>                
+                <p className="recovery-partner-title text-center" dangerouslySetInnerHTML={{ __html: d?.title }}></p>
               </div>)
             })}
           </div>
