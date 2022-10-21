@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import Mackey from "../images/logo.svg";
@@ -7,6 +7,7 @@ import MackeySmall from "../images/small-logo.svg";
 const Header = () => {
   const inputEl = useRef(null);
   const inputEl1 = useRef(null);
+  const [query, setQuery] = useState('');
   const handleScroll = (event) => {
     //handle your event base on scroll in pixels or what ever for example : 
     if (window.screen.width > 991) {
@@ -37,6 +38,7 @@ const Header = () => {
   }
   useEffect(() => {
     document.addEventListener('scroll', handleScroll);
+    setQuery(window.location.href.replace(/\+/g,' ').split("s=")[1]);
   }, []);
 
   return <header>
@@ -164,6 +166,12 @@ const Header = () => {
               <Link className="nav-link" to="/contact/" aria-disabled="true">Contact</Link>
             </li>
           </ul>
+          <div className="serch_top">
+          <form action="/search">
+                 <input type="text" id="search" onChange={e => { setQuery(e.target.value); }} value={query} placeholder="Search" name="s" class="frm_input"/>
+                 <input type="submit" value="" class="frm_submit"/>  
+              </form>                 
+          </div>
         </div>
       </div>
     </nav>
@@ -206,7 +214,16 @@ const Header = () => {
           </ul>
         </div>
         <div className="mobile-logo black-logo text-center"><img src="https://res.cloudinary.com/mbsaiyed/image/upload/v1625481695/svg/mobile-logo.svg" alt="" /></div>
+
         <ul className="menu-ul">
+         <li className="nav-item">  
+            <div className="serch_top">
+            <form action="/search">
+                <input type="text" id="search" onChange={e => { setQuery(e.target.value); }} value={query} placeholder="Search" name="s" class="frm_input"/>
+                <input type="submit" value="" class="frm_submit"/>      
+            </form>             
+            </div>
+          </li>
           <li className="nav-item sub-menu"><Link className="nav-link" to="/expertsinbusiness/"> Services</Link>
             <input type="checkbox" id="menu-1" />
             <div id="menu-cont-2">
@@ -263,6 +280,8 @@ const Header = () => {
           </li>
           <li className="nav-item"><Link className="nav-link" to="/contact/">Contact</Link></li>
         </ul>
+
+
       </div>
     </div>
     <div id="white" ref={inputEl1}></div>
