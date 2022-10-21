@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import TopBanner from "../components/top-banner"
+import TopBanner from "../components/top-banner-5"
 import Events from "../components/events/events2"
 import GetInTouch from "../components/get-in-touch3"
 
@@ -41,29 +41,79 @@ const MgAcademyPage = ({ data }) => {
         btn={false}
         breadCrumbs={breadCrumbs}
       />
-      <Events
+      {/*<Events
         title={''}
         data={data.allWpEvent.nodes}
         btn={false}
         setVideoUrl={setVideoUrl}
-      />
+      />*/}
 
-
-      <section id="incubator-program" class="wva_section about_section history_section identifix_sec2 event_incubator">
        <div class="container">
+          <div className="buttons_section">
+                <Link to={"#mediamoments"}>Media Moments</Link> <Link to={"#events"}>Events</Link> <Link  to={"#resources"}>Resources</Link> 
+                <Link to={"#incubator-program"}>Incubator Program</Link>
+          </div>
+       </div>
 
+       <div id="mediamoments" className="wva_section fd_section dca_section mg_acnew1">
+        <div className="container">
+          <div  className="row">
+              <div className="wva_left  col-sm-12 col-md-12 col-lg-6 col-xl-5">
+                <img src={data.wpPage.news.mgacImage.mediaItemUrl} alt={data.wpPage.news.mgacImage.altText} />
+              </div>
+              <div className="wva_right  col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                <h3>{data.wpPage.news.mgacTitle}</h3>
+                <div dangerouslySetInnerHTML={{ __html: data.wpPage.news.mgacDescription }}></div>
+              <Link className="btn btn-primary" to={data.wpPage.news.mgacLink}>Learn More</Link>
+              </div>
+          </div>
+         </div>
+      </div>
+
+      <section id="events" class="wva_section about_section history_section identifix_sec2 event_incubator mg_acnew2">
+       <div class="container">  
+        <div  className="row">      
+          <div className="wva_left">
+               <img class="img-fluid" src={data.wpPage.news.mgacImage2.mediaItemUrl} alt="data.wpPage.news.mgacImage2.altText"/>            
+            </div>
+            <div className="wva_right">
+              <h3>{data.wpPage.news.mgacTitle2}</h3>
+              <div dangerouslySetInnerHTML={{__html: data.wpPage.news.mgacDescription2 }} />
+               <Link className="btn btn-primary" to={data.wpPage.news.mgacLink2}>Learn More</Link>
+            </div>  
+          </div>        
+       </div>
+    </section>
+
+    <div id="resources" className="wva_section fd_section dca_section mg_acnew1 mg_acnew3">
+        <div className="container">
+          <div  className="row">
+              <div className="wva_left  col-sm-12 col-md-12 col-lg-6 col-xl-5">
+                <img src={data.wpPage.news.mgacImage3.mediaItemUrl} alt={data.wpPage.news.mgacImage3.altText} />
+              </div>
+              <div className="wva_right  col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                <h3>{data.wpPage.news.mgacTitle3}</h3>
+                <div dangerouslySetInnerHTML={{ __html: data.wpPage.news.mgacDescription3 }}></div>
+              <Link className="btn btn-primary" to={data.wpPage.news.mgacLink3}>Learn More</Link>
+              </div>
+          </div>
+         </div>
+      </div>
+
+
+
+      <section id="incubator-program" class="wva_section about_section history_section identifix_sec2 event_incubator mg_acnew4">
+       <div class="container">    
+       <div  className="row">    
         <div className="wva_left">
              <img class="img-fluid" src={data.wpPage.news.incubatorProgramImage.mediaItemUrl} alt="data.wpPage.news.incubatorProgramImage.altText"/>            
-               
           </div>
-
           <div className="wva_right">
             <h3>{data.wpPage.news.incubatorProgramTitle}</h3>
             <div dangerouslySetInnerHTML={{__html: data.wpPage.news.incubatorProgramDescription }} />
-              <button class="event_button" type="button" onClick={()=>setModal2(true)} data-toggle="modal" data-target="#myModal2">Enquire Now</button>
-          </div>
-
-          
+              <button class="event_button" type="button" onClick={()=>setModal2(true)} data-toggle="modal" data-target="#myModal2">Learn More</button>
+          </div> 
+           </div>         
        </div>
     </section>
 
@@ -120,6 +170,27 @@ export const query = graphql`
         description
         incubatorProgramTitle
         incubatorProgramImage{
+          mediaItemUrl
+          altText
+        }
+        mgacTitle
+        mgacDescription
+        mgacLink
+        mgacImage{
+          mediaItemUrl
+          altText
+        }
+        mgacTitle2
+        mgacDescription2
+        mgacLink2
+        mgacImage2{
+          mediaItemUrl
+          altText
+        }
+         mgacTitle3
+        mgacDescription3
+        mgacLink3
+        mgacImage3{
           mediaItemUrl
           altText
         }

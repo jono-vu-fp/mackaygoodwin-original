@@ -1733,8 +1733,11 @@ section.backinbusiness {
 .events_mgacademy .buttons_2{
     height: 80px;
 }
+
 .events_mgacademy .buttons_2 i{
- padding-left: 2px;
+     padding-left: 2px;
+     vertical-align: middle;
+     padding-bottom: 4px;
 }
 .events_mgacademy .buttons_2 .bt-big{
     font-family: 'Sohne';
@@ -6033,28 +6036,200 @@ margin-bottom: 45px;
 }
 
 .experts_section .recovery-partner .recovery-partner-title   {
-        font-size: 18px;
-        font-weight: 400;
-        font-family: 'Sohne-Buch';
-        line-height: 24px;
-        padding-top: 0px;        
-        padding-bottom: 0;
-        margin-bottom: 0;
-    }
-  .experts_section img.recovery-partner-img{
-        width: auto;
-        height: 72px;
-    }
-     .experts_section .col-md-6:nth-child(3) img.recovery-partner-img{
-        width: auto;
-        height: 55px;
-        margin-top: 36px;
-    }
-   .experts_section .recovery-partner .whyTitle{
-        font-size: 44px;
-        padding-bottom: 25px;
-    }
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Sohne-Buch';
+    line-height: 24px;
+    padding-top: 0px;        
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+.experts_section img.recovery-partner-img{
+    width: auto;
+    height: 72px;
+}
+.experts_section .col-md-6:nth-child(3) img.recovery-partner-img{
+    width: auto;
+    height: 55px;
+    margin-top: 36px;
+}
+.experts_section .recovery-partner .whyTitle{
+    font-size: 44px;
+    padding-bottom: 25px;
+}
+.serch_top {
+    display: inline-block;
+    margin-left: 50px;
+    height: 80px;
+    margin-top: -7px;
+}
+.serch_top .frm_input{
+    border-radius: 22px 0px 0px 22px;
+    border: 1px solid #e5e6e8;
+    background-color: #f6f7f9;
+    padding: 8px 15px 8px 15px;
+    float: left;
+    width:286px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 29px;
+}
+.serch_top .frm_submit{
+    background-color: #1c5e48;
+    border-radius: 0px 22px 22px 0px;
+    padding: 8px 10px 8px 10px;
+    color: #fff;
+    width: 60px;
+    background-image: url(../images/search.svg);
+    background-position: right 21px center;
+    background-repeat: no-repeat;
+    height: 47px;  
+    
+}
+ .insights .mgacademy_banner .banner-image::before {
+       height: calc(350% + 71px);
+       top: 72px;
+}
+.insights .mgacademy_banner .banner-image::after {  
+    height: 100%;
 
+}
+.insights #banner-section.mgacademy_banner{
+ padding-top: 8px;
+}
+.insights .mgacademy_banner .banner-content {
+    margin-top: 84px;
+    padding-left: 39px;
+    color: #154f3a;
+}
+.insights .mgacademy_banner .banner-content .banner-heading{
+    color: #154f3a;
+}
+.insights .mgacademy_banner .banner-image{
+    margin-left: 204px;
+    margin-right: 18px;
+    padding-top: 72px;
+    margin-bottom: 5px;
+
+}
+.insights .mgacademy_banner .banner-content .banner-desc{
+    padding-top: 12px;
+}
+.buttons_section{
+    text-align: center;
+    margin: 75px 0px 80px 0px;
+}
+.buttons_section a{
+    width: 212px;
+    height: 45px;
+    border-radius: 22px;
+    border: 2px solid #e0e3e5;
+    background-color: #fff;
+    display: inline-block;
+    line-height: 45px;
+    text-align: center;
+    margin-right: 15px;
+    color: #55595d;
+    font-size: 18px;
+    font-weight: 400;
+}
+.mg_acnew1 .wva_left{
+  order: 2;
+  padding-left: 0px;
+    margin-left:10px;
+    width: 540px;
+}
+.mg_acnew1 .wva_right{
+    width: 550px;     
+    max-width: 550px;   
+    margin-left: 0;
+    padding-left: 8px!important;
+}
+.mg_acnew1  .wva_left::before{
+    background-color: #e0e3e5!important;
+}
+.mg_acnew1  .wva_left::after{
+    background-color: #dbfd90!important;
+}
+.mg_acnew1 .row,.mg_acnew2 .row,.mg_acnew4 .row{
+    align-items: center;
+
+}
+.mg_acnew1 .wva_right h3{
+    margin-bottom: 15px!important;
+    padding-top: 79px;
+}
+.mg_acnew1 .btn{
+    margin-top: 30px!important;
+}
+.mg_acnew1 .wva_left img{
+    margin-left:13px;
+}
+.mg_acnew1 .wva_left:after{
+    left: 13px;
+}
+.mg_acnew2 .wva_left{
+    margin-bottom: 50px;
+    padding: 0;
+    margin-left: 213px;
+}
+.mg_acnew2,.mg_acnew4 {
+    padding-top: 7px!important;
+    margin-bottom: 100px !important;
+}
+.mg_acnew2 .wva_right{
+    float: left;
+    padding-top: 115px!important;
+    padding-left: 7px;
+    margin-right: 0px!important;
+}
+.mg_acnew2  .wva_left::before{
+    background-color: #1c5e48!important;
+}
+.mg_acnew2  .wva_left::after{
+    background-color: #ebe9de!important;
+}
+ .mg_acnew2  .wva_right .btn{
+      margin-top: 26px;
+ } 
+
+ .mg_acnew1.mg_acnew3 .wva_left::before{
+    background-color: #e0e3e5!important;
+}
+.mg_acnew1.mg_acnew3 .wva_left::after{
+    background-color: #ebe9de!important;
+}
+ .mg_acnew4 .wva_left::before{
+    background-color: #dbfd90!important;
+}
+.mg_acnew4 .wva_left::after{
+    background-color: #ebe9de!important;
+}
+.mg_acnew4 .wva_left{
+        margin-bottom: 50px!important;
+        padding: 0;
+}
+.wva_section.about_section.mg_acnew4  .wva_right{
+        margin-right: 0;
+        padding-left: 0;
+        padding-top: 118px;
+}
+
+.wva_section.mg_acnew4 .wva_right div p{
+    margin: 0 0 20px;
+}
+.serch_section .listbg img{
+    min-height: 285px;
+}
+.serch_section  .news-list h4 {
+    padding-top:37px;
+    min-height: 100px;
+}
+
+.serch_section .news-desc {
+    min-height: 150px;
+    padding-top: 15px!important;
+}
 /****** BreakPoints *******/
 /****** Responsive Start *******/
 @media screen and (min-width:1400px){
@@ -6452,7 +6627,16 @@ margin-bottom: 45px;
     .experts_section .recovery-partner{
         margin-bottom: 20px;
     }
-
+    .buttons_section {
+        margin: 60px 0px 65px 0px;
+    }
+    .mg_acnew1,.mg_acnew2,.mg_acnew3,.mg_acnew4{
+            padding-top: 0px!important;
+            margin-bottom: 75px!important;
+    }
+    .mg_acnew1 .wva_left{
+        margin-top: 70px!important;
+    }
 
 }
 @media screen and (max-width:1600px){
@@ -7104,8 +7288,39 @@ margin-bottom: 45px;
     .experts_section .liq_blocks.doca_2 .col-lg-4:last-child .lb_txt {
         padding-right: 0px;
     }
+    .serch_top{
+        margin-left: 0px;
+    }
+    .serch_top .frm_input{
+        width: 190px;
+         padding: 5px 15px 5px 15px;
+    }
+     .serch_top .frm_submit {
+        width: 50px;
+        height: 41px;
+        background-position: right 17px center;
+    }
+    .insights .mgacademy_banner .banner-image{
+        margin-left: 100px;
+    }
     
-    
+    .insights .mgacademy_banner .banner-content{
+            margin-top: 80px;
+            padding-left: 20px;
+    }
+    .buttons_section {
+        margin: 50px 0px;
+    }
+    .mg_acnew2 .wva_right,.wva_section.about_section.mg_acnew4 .wva_right{
+        padding-top: 75px!important;
+    }
+    .mg_acnew1,.mg_acnew2,.mg_acnew3,.mg_acnew4{            
+        margin-bottom: 55px!important;    
+    }
+    .mg_acnew1 .wva_left,.mg_acnew2 .wva_left,.mg_acnew3 .wva_left,.mg_acnew4 .wva_left{
+        margin-top: 60px!important;
+    }
+
 }
 @media screen and (max-width:1300px){
     .ps_bot .pack_inner h3 {
@@ -7203,7 +7418,7 @@ margin-bottom: 45px;
 @media (min-width:992px) and (max-width:1200px) {
 
     .ml-banner {
-        margin-left: 110px;
+        margin-left: 20px;
     }
     .identi_bannersec .banner-content .banner-desc {
         font-size: 17px;
@@ -7942,6 +8157,38 @@ margin-bottom: 45px;
          font-size: 16px;
         line-height: 22px;
     }
+    .serch_top {   
+        position: absolute;
+        right: 55px;
+    }
+    .insights .mgacademy_banner .banner-image{
+        margin-left: 0px;
+        margin-top: 0px;
+        margin-right: 10px;
+    }
+    
+    .insights .mgacademy_banner .banner-content{
+            margin-top: 80px;
+            padding-left: 10px;
+    }
+    .insights  #banner-section.mgacademy_banner {
+            padding:0px 0px 60px 0;
+    }
+    .insights .mgacademy_banner .banner-content .banner-desc {
+        padding-top: 0;
+    }
+    .mg_acnew1,.mg_acnew2,.mg_acnew3,.mg_acnew4{            
+        margin-bottom: 50px!important;    
+    }  
+    .mg_acnew1 .wva_left,.mg_acnew2 .wva_left,.mg_acnew3 .wva_left,.mg_acnew4 .wva_left{
+        margin-top: 50px!important;
+    }
+    .wva_section.about_section.mg_acnew4 .wva_right{
+        padding-left: 30px;
+    }
+       .wva_section.about_section.mg_acnew4 .wva_right br{
+        display: none;
+       }
 
 
 }
@@ -9095,7 +9342,93 @@ margin-bottom: 45px;
     .experts_section .recovery-partner .col-lg-2 {
          width: 50%;
     }
+    .serch_top{
+        position: inherit;        
+        width: 310px;
+        margin: 0 auto;
+        right: 0;
+        display: flex;
+    }
+    .serch_top .frm_input{
+        width: 260px;
+        height: 41px;
+    }
+    .insights #banner-section.mgacademy_banner {
+        padding: 0px;
+        margin-bottom: 20px;
+    }
+    .insights .mgacademy_banner .banner-content {
+        margin-top: 25px;
+        padding-left: 0;
+        margin-bottom: 20px;
+    }
+    .insights .mgacademy_banner .banner-content .banner-desc {
+        padding-top: 20px;
+    }
+    .mg_acnew1 .wva_left{
+        order: 0;
+        padding-right: 0;
+        padding-left: 0px;
+    }
+    .buttons_section {
+        margin: 40px 30px;
+
+    }
+    .buttons_section a{
+        margin-bottom: 15px;
+    }
+    .mg_acnew1 .wva_right h3,.mg_acnew2 .wva_right,.wva_section.about_section.mg_acnew4 .wva_right{
+        padding-top:5px!important;
+    }
+    .wva_section.about_section.mg_acnew4 .wva_right{
+        padding-left: 25px;
+    }
+    .mg_acnew4 .wva_left{
+        margin-bottom: 25px!important;
+    }
+    .mg_acnew1 .wva_left,.mg_acnew2 .wva_left,.mg_acnew3 .wva_left, .mg_acnew4 .wva_left{
+
+       margin-top: 55px!important;
+
+    }
+    .mg_acnew1, .mg_acnew2, .mg_acnew3, .mg_acnew4 {
+        margin-bottom: 50px!important;
+    }
+    .mg_acnew1 .wva_left:after {
+        left: 0px;
+    }
    
+    .mg_acnew1 .wva_left img {
+        margin-left: 0px;
+    }   
+   
+   .mg_acnew1 .btn ,.mg_acnew2 .wva_right .btn{
+        margin-top: 15px!important;
+    }
+    .mg_acnew2 .wva_right h3,.mg_acnew4 h3{
+        margin-bottom: 15px!important;
+    }
+    .insights .mgacademy_banner .banner-image{
+        margin-right: 0;
+    }
+    .mgacademy_banner .col-sm-12{
+        padding-right: 0px;
+    }
+    .serch_section .news-list h4 {
+        padding-top: 37px;
+        min-height: auto;
+    }
+    .serch_section .listbg img {
+        min-height: auto;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    .serch_section .news-desc {
+        min-height: auto;
+
+    }
+    
 
 }
 @media screen and (max-width:767px){
@@ -9652,6 +9985,36 @@ margin-bottom: 45px;
     font-size: 25px;
     line-height: 35px;
     }
+    .insights .mgacademy_banner .banner-image{
+        padding-top: 50px;
+        margin-right: 0px;
+    }
+    .insights .mgacademy_banner .banner-image::before{
+        top: 50px;
+    }
+    .insights .mgacademy_banner .banner-content .banner-desc{
+        padding-right:5px;
+    }
+    .mg_acnew1, .mg_acnew2, .mg_acnew3, .mg_acnew4 {
+        margin-bottom: 40px!important;
+    }
+    .mg_acnew1 .wva_left, .mg_acnew2 .wva_left, .mg_acnew3 .wva_left, .mg_acnew4 .wva_left {
+        margin-top: 40px!important;
+    }
+    .mg_acnew1 .wva_right{
+        padding-left: 25px!important;
+    }
+    .buttons_section {
+        margin:30px 15px;
+    }
+    
+    .mg_acnew1 .wva_right h3, .mg_acnew2 .wva_right, .wva_section.about_section.mg_acnew4 .wva_right {
+        padding-top: 0px!important;
+    }
+    .mg_acnew1, .mg_acnew3{
+        padding-bottom: 22px!important;
+    }
+   
 
 }
 @media screen and (max-width:667px){
@@ -9722,6 +10085,12 @@ margin-bottom: 45px;
     }
     .media_blocks h2{
         line-height: 34px;
+    }
+    .mgacademy_banner .col-sm-12{
+        padding-right:5px;
+    } 
+    .mg_acnew1 .container,.mg_acnew2 .container,.mg_acnew3 .container,.mg_acnew4 .container{
+        padding: 0px 25px!important;
     }
     
    
@@ -9914,12 +10283,11 @@ margin-bottom: 45px;
     }
     .experts_section .steps .stepsCol:last-child p {
     padding: 0px 10px;
-}
-
-
-
-
-   
+    }
+    .mgacademy_banner .col-sm-12{
+        padding-right:10px;
+    } 
+      
 
 }
 @media screen and (max-width:533px){
@@ -10045,7 +10413,11 @@ margin-bottom: 45px;
     .experts_section .testimonial-main .p-5 {
         padding: 1rem!important;
     }
-
+    .buttons_section a{
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }
  
     
 }
@@ -10176,7 +10548,12 @@ margin-bottom: 45px;
     .experts_section .recovery-partner .whyTitle{
         padding-bottom: 0px;
     }
-
+    .mg_acnew1, .mg_acnew2, .mg_acnew3, .mg_acnew4 {
+        margin-bottom: 30px!important;
+    }
+    .mg_acnew1 .container,.mg_acnew2 .container,.mg_acnew3 .container,.mg_acnew4 .container{
+        padding: 0px 20px!important;
+    }
 
 }
 @media screen and (max-width:440px){
@@ -10278,6 +10655,15 @@ margin-bottom: 45px;
     }
      .service.contact .ca_sec2 {
         padding: 20px 0px;
+    }
+    .serch_top{
+        position: inherit;        
+        width: 280px;
+        margin: 0 auto;
+        right: 0;
+    }
+    .serch_top .frm_input{
+        width: 230px;
     }
 }
 @media screen and (max-width:375px){
