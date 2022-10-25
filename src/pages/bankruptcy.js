@@ -94,6 +94,17 @@ const Bankruptcy = ({ data }) => {
           customClass={'glpo_reco_section va_glpo_reco_section'}
         />
 
+        <div className="wva_section fd_section dca_section testi_section">
+        <div className="container">
+          <div className="wva_left">
+            <img src={data.wpPage.bankruptcy.tesImage.mediaItemUrl} alt={data.wpPage.bankruptcy.tesImage.altText} />
+          </div>
+          <div className="wva_right">
+            <div dangerouslySetInnerHTML={{ __html: data.wpPage.bankruptcy.tesDescription }}></div>            
+          </div>
+        </div>
+      </div>
+
         <Accordian
           title={data.wpPage.bankruptcy.brFaqsTitle}
           showEnquireButton={false}
@@ -147,6 +158,11 @@ export const query = graphql`
           altText
           mediaItemUrl
         }
+        tesDescription
+          tesImage {
+            altText
+            mediaItemUrl
+          }
         brBannerTitle
         brBannerDesc        
         brDescriptionWhyliquid {
@@ -156,6 +172,7 @@ export const query = graphql`
             mediaItemUrl
           }
           title
+
         }
         brLearnMoreLink
         wbTitle

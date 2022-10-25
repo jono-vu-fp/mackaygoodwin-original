@@ -4264,7 +4264,7 @@ img.recovery-partner-img {
     left: 0;
     top: 0;
     height: 250%;
-    width: 400%;
+    width: 420%;
     z-index: -1;
 }
 .wva_section iframe {
@@ -6230,6 +6230,45 @@ margin-bottom: 45px;
     min-height: 150px;
     padding-top: 15px!important;
 }
+.wva_section.dpn_part .wva_left{
+    margin-left: 0px;
+    width: 744px;
+}
+.wva_section.dpn_part .wva_left img{
+    width: 100%;
+}
+.wva_section.dpn_part .container{
+    align-items: center;
+}
+.restructure .dpn_part .wva_left:after{
+    background-color: #e0e3e5!important;
+}
+.ht_bottom{
+    margin-bottom: 70px;
+}
+.home_helthcheck{
+    margin-bottom: 75px;
+}
+.identifixpage .health_check.home_helthcheck{
+    margin-top: 0;
+}
+.testi_section .wva_left{
+     margin-left:0px!important;
+         padding-top: 70px;
+    }
+    .testi_section .wva_left img{
+        width: 100%;
+    }
+   .wva_section.testi_section .wva_right{
+    max-width: 620px;
+    padding-top: 150px;
+    padding-left: 60px;
+    padding-bottom: 0px;
+    }
+ .wva_section.testi_section .wva_left:before {
+        height: calc(100% - 115px);
+    }
+
 /****** BreakPoints *******/
 /****** Responsive Start *******/
 @media screen and (min-width:1400px){
@@ -6637,6 +6676,18 @@ margin-bottom: 45px;
     .mg_acnew1 .wva_left{
         margin-top: 70px!important;
     }
+    .home_helthcheck {
+        margin-bottom: 50px;
+    }
+    .service.restructure  .home_helthcheck {
+            margin-top: 50px;
+    }
+   .wva_section.testi_section .wva_left:before {
+        height: calc(100% - 83px);
+    }
+    .wva_section.testi_section .wva_right{
+            padding-bottom: 0;
+    }
 
 }
 @media screen and (max-width:1600px){
@@ -6801,6 +6852,9 @@ margin-bottom: 45px;
     }
     .experts_section .liq_blocks .whyTitle{
         padding-bottom: 35px;
+    }
+   .wva_section.testi_section .wva_left:before {
+        height: calc(100% - 63px);
     }
 
 }
@@ -6984,6 +7038,12 @@ margin-bottom: 45px;
     }
     .experts_section .liq_blocks .lb_txt {
         padding-right: 40px;
+    }
+    .service.restructure .dca_section.dpn_part {
+        margin-bottom:60px;       
+    }
+    .wva_section.testi_section .wva_left:before {
+     height: calc(100% - 97px);
     }
 
 
@@ -7319,6 +7379,29 @@ margin-bottom: 45px;
     }
     .mg_acnew1 .wva_left,.mg_acnew2 .wva_left,.mg_acnew3 .wva_left,.mg_acnew4 .wva_left{
         margin-top: 60px!important;
+    }
+    .wva_section.dpn_part .wva_left{   
+        width: 600px;
+    }
+    .fd_section.dpn_part .wva_right{
+        padding-left: 15px;
+    }
+     .service.restructure .dca_section.dpn_part {
+        margin-bottom: 10px;       
+    }
+   .wva_section.testi_section .wva_left:before {
+        height: calc(100% - 154px);
+    }
+     .wva_section.testi_section .wva_right {
+        max-width: 500px;
+        padding-top: 120px;
+        padding-left: 25px;
+    }
+    .bankruptcy .wva_section.testi_section .wva_left{
+        width: 54%;
+    }
+    .bankruptcy .wva_section.testi_section {
+        padding-bottom: 0px!important;
     }
 
 }
@@ -8186,13 +8269,48 @@ margin-bottom: 45px;
     .wva_section.about_section.mg_acnew4 .wva_right{
         padding-left: 30px;
     }
-       .wva_section.about_section.mg_acnew4 .wva_right br{
+    .wva_section.about_section.mg_acnew4 .wva_right br{
         display: none;
-       }
+    }
+    .wva_section.dpn_part .wva_left {
+        width: 450px;
+    }   
+    .fd_section.dpn_part .wva_right{        
+        padding-bottom: 30px;
+    }
+    .service.restructure .dca_section.dpn_part {
+        margin-bottom: 20px;
+        margin-top: 50px;
+    }
+    .ht_bottom {
+        margin-bottom: 50px;
+    }
+  
+  .wva_section.testi_section .wva_left,.wva_section.testi_section .wva_right{
+    width: 50%!important;
+  }
+  .wva_section.testi_section .wva_right{
+        padding-top: 110px;
+        padding-bottom: 50px;
+  }
+    .wva_section.testi_section .wva_left:before {
+        height: calc(100% - 254px);
+    }
+    .bankruptcy .wva_section.testi_section .wva_left:after {
+        top: 50px!important;
+    }
+    .testi_section .wva_left{
+            padding-top: 50px;
+    }
+
 
 
 }
 @media screen and (max-width:991px){
+    .wva_section.testi_section .wva_left,.wva_section.testi_section .wva_right{
+    width:100%!important;
+  }
+  
     .identi_bannersec h1.banner-heading sup {
         top: -9px;
         font-size: 22px;
@@ -9428,7 +9546,26 @@ margin-bottom: 45px;
         min-height: auto;
 
     }
-    
+     .service.restructure .dca_section.dpn_part {
+        margin-bottom: 5px;       
+    }
+     .ht_bottom {
+        margin-bottom:40px;
+    }
+    .home_helthcheck {
+        margin-bottom: 40px;
+    }
+    .bankruptcy .wva_section.testi_section .wva_left {
+        width: 100%;
+    }
+    .bankruptcy .wva_section.testi_section .wva_right{
+     padding-left: 20px;
+     padding-top: 15px;
+     padding-bottom: 20px;
+    }
+     .bankruptcy .wva_section.testi_section .wva_left:before{
+        height: 100%!important;
+    }
 
 }
 @media screen and (max-width:767px){
@@ -10014,6 +10151,10 @@ margin-bottom: 45px;
     .mg_acnew1, .mg_acnew3{
         padding-bottom: 22px!important;
     }
+     .home_helthcheck {
+        margin-bottom: 30px;
+    }
+   
    
 
 }
@@ -10553,6 +10694,9 @@ margin-bottom: 45px;
     }
     .mg_acnew1 .container,.mg_acnew2 .container,.mg_acnew3 .container,.mg_acnew4 .container{
         padding: 0px 20px!important;
+    }
+    .dpn_part .wva_right .btn{
+        margin-bottom: 10px;
     }
 
 }

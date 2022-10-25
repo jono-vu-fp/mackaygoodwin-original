@@ -26,8 +26,9 @@ import GetInTouchPPForm from "../components/get-in-touch-bankruptcy-popup"
 //   link: "/"
 // }
 // ]
-
+import $ from "jquery"
 const Restructuring = ({ data }) => {
+   const [showModal, setModal] = React.useState(false);
   let whyMG = [];
   data.wpPage.restructuring.queAndAnsNew.map((d) => {
     return whyMG.push({ title: d.questionNew, description: d.answerNew });
@@ -85,7 +86,22 @@ const Restructuring = ({ data }) => {
         btnLink={data.wpPage.restructuring.enquireLink}
         addClass={"ill_section resill_section"}
       />
-      <formHealthContext.Provider value={value}>
+
+       <div className="wva_section fd_section dca_section dpn_part">
+        <div className="container">
+          <div className="wva_left">
+            <img src={data.wpPage.restructuring.dpn2Image.mediaItemUrl} alt={data.wpPage.restructuring.dpn2Image.altText} />
+          </div>
+          <div className="wva_right">
+            <h3>{data.wpPage.restructuring.dpn2Title}</h3>
+            <div dangerouslySetInnerHTML={{ __html: data.wpPage.restructuring.dpn2Description }}></div>
+            {data.wpPage.restructuring.dpn2ButtonLink !== null && data.wpPage.restructuring.dpn2ButtonLink !== "" ? <Link className="btn btn-primary me-5" to={data.wpPage.restructuring.dpn2ButtonLink}>{data.wpPage.restructuring.dpn2ButtonText}</Link> : ""} {data.wpPage.restructuring.dpn2Button2Link !== null && data.wpPage.restructuring.dpn2Button2Link !== "" ? <Link className="btn btn-primary me-5" to={data.wpPage.restructuring.dpn2Button2Link}>{data.wpPage.restructuring.dpn2Button2Text}</Link> : ""}
+          </div>
+        </div>
+      </div>
+
+
+     {/* <formHealthContext.Provider value={value}>
         <ImageLeftLayout
           id={'business-health-check'}
           title={data.wpPage.restructuring.healthCheckTitle}
@@ -105,10 +121,65 @@ const Restructuring = ({ data }) => {
           title={'Register Now'}
           text={'Register now for your business health check'}
         />
-      </formHealthContext.Provider>
+      </formHealthContext.Provider> */}
+
+       <section className="health_check home_helthcheck">
+          <div className="container">
+            <div className="ht_right">
+              <img className="img-fluid" src={data.wpPage.restructuring.healthCheckImage?.mediaItemUrl} alt={data.wpPage.restructuring.healthCheckImage?.altText} />
+            </div>
+
+            <div className="ht_left">
+              <h2>{data.wpPage.restructuring.healthCheckTitle}</h2>
+              <div className="ht_cnt" dangerouslySetInnerHTML={{ __html: data.wpPage.restructuring?.healthCheckDesc }}></div>
+          
+
+              {data.wpPage.restructuring.buttonUrl !== null && data.wpPage.restructuring.buttonUrl !== "" ? <Link className="btn btn-primary me-5" to={data.wpPage.restructuring.buttonUrl}>{data.wpPage.restructuring.buttonLabel}</Link> : ""}
+
+              <button  className="btn btn-primary me-5" type="button" onClick={()=>setModal(true)} data-toggle="modal" data-target="#myModal">{data.wpPage.restructuring.videoButtonLabel}</button>
+              <div id="myModal" role="dialog" className={showModal?'in show modal fade':'modal fade'}>
+              <div className="model_inner">
+                  <div className="popup_dialog">
+                      <div className="modal-content">
+                          <button type="button" className="close" data-dismiss="modal" onClick={()=>{setModal(false);$('iframe.embed-responsive-item').attr('src', $('iframe.embed-responsive-item').attr('src').replace("autoplay=1&amp;", ""));}}>&times;</button>
+                          <div className="popup_body">
+                              <div className="video_ratio">
+                                  <div dangerouslySetInnerHTML={{__html: data.wpPage.restructuring.video }} />
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+            </div>
+          </div>
+        </section>
 
 
-        <formEbookContext.Provider value={valueEbook}>
+
+       <section className="ht_section ht_bottom">
+        <div className="container">
+          <div className="ht_left">
+            <img className="img-fluid" src={data.wpPage.restructuring.resHtImage?.mediaItemUrl} alt={data.wpPage.restructuring.resHtImage?.altText} />
+          </div>
+          <div className="ht_right">
+            <h2>{data.wpPage.restructuring.resHtTitle}</h2>
+            <div className="ht_cnt" dangerouslySetInnerHTML={{ __html: data.wpPage.restructuring?.resHtDescription }}></div>
+            <formEbookContext.Provider value={valueEbook}>
+              <button className="btn btn-primary me-5" onClick={() => { setFormEbookDetails(1) }}>Download Now</button>
+              <EbookForm
+                title={'Download e-guide'}
+                text={'Download your free copy today and get on the path to recovery'}
+              />
+            </formEbookContext.Provider>
+          </div>
+        </div>
+      </section>
+
+
+
+        {/*  <formEbookContext.Provider value={valueEbook}>
 
         <ImageRightLayout
           title={data.wpPage.restructuring.survivalTitle}
@@ -123,7 +194,7 @@ const Restructuring = ({ data }) => {
           title={'Download e-guide'}
           text={'Download your free copy today and get on the path to recovery'}
         />
-      </formEbookContext.Provider>
+      </formEbookContext.Provider>*/}
 
 
 
@@ -173,6 +244,24 @@ export const query = graphql`
           altText
           mediaItemUrl
         }
+        resHtTitle
+        resHtDescription
+        resHtImage {
+          altText
+          mediaItemUrl
+        }
+
+        dpn2Title
+        dpn2Description
+        dpn2ButtonText
+        dpn2ButtonLink
+        dpn2Button2Text
+        dpn2Button2Link
+        dpn2Image {
+            altText
+            mediaItemUrl
+          }
+
         enquireLink
         healthCheckImage {
           altText

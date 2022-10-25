@@ -28,7 +28,9 @@ import GetInTouchPPForm from "../components/get-in-touch-bankruptcy-popup"
 //   }
 // ]
 
+import $ from "jquery"
 const Insolvency = ({ data }) => {
+    const [showModal, setModal] = React.useState(false);
   let whyMG = [];
   data.wpPage.insolvency.qA.map((d) => {
     return whyMG.push({ title: d.question, description: d.answer, learnMoreText: d.buttonLabel, learnMoreUrl: d.buttonUrl });
@@ -70,7 +72,9 @@ const Insolvency = ({ data }) => {
         btn1Link={data.wpPage.insolvency.businessDirectorAdvisorLink}
         btn2Link={data.wpPage.insolvency.businessDirectorButtonLink}
       /> */}
-      <formHealthContext.Provider value={value}>
+
+
+      {/* <formHealthContext.Provider value={value}>
         <ImageLeftLayout
           title={data.wpPage.insolvency.healthCheckTitle}
           text={data.wpPage.insolvency.healthCheckDesc}
@@ -87,8 +91,47 @@ const Insolvency = ({ data }) => {
           title={'Register Now'}
           text={'Register now for your business health check'}
         />
-      </formHealthContext.Provider>
-      <formEbookContext.Provider value={valueEbook}>
+      </formHealthContext.Provider> */}
+
+
+
+      <section className="health_check home_helthcheck">
+          <div className="container">
+            <div className="ht_right">
+              <img className="img-fluid" src={data.wpPage.insolvency.healthCheckImage?.mediaItemUrl} alt={data.wpPage.insolvency.healthCheckImage?.altText} />
+            </div>
+
+            <div className="ht_left">
+              <h2>{data.wpPage.insolvency.healthCheckTitle}</h2>
+              <div className="ht_cnt" dangerouslySetInnerHTML={{ __html: data.wpPage.insolvency?.healthCheckDesc }}></div>
+          
+
+              {data.wpPage.insolvency.buttonBookurl !== null && data.wpPage.insolvency.buttonBookurl !== "" ? <Link className="btn btn-primary me-5" to={data.wpPage.insolvency.buttonBookurl}>{data.wpPage.insolvency.buttonBook}</Link> : ""}
+
+              <button  className="btn btn-primary me-5" type="button" onClick={()=>setModal(true)} data-toggle="modal" data-target="#myModal">{data.wpPage.insolvency.videoButtonLabel}</button>
+              <div id="myModal" role="dialog" className={showModal?'in show modal fade':'modal fade'}>
+              <div className="model_inner">
+                  <div className="popup_dialog">
+                      <div className="modal-content">
+                          <button type="button" className="close" data-dismiss="modal" onClick={()=>{setModal(false);$('iframe.embed-responsive-item').attr('src', $('iframe.embed-responsive-item').attr('src').replace("autoplay=1&amp;", ""));}}>&times;</button>
+                          <div className="popup_body">
+                              <div className="video_ratio">
+                                  <div dangerouslySetInnerHTML={{__html: data.wpPage.insolvency.video }} />
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+            </div>
+          </div>
+        </section>
+
+
+
+
+       {/* <formEbookContext.Provider value={valueEbook}>
 
         <ImageRightLayout
           title={data.wpPage.insolvency.survivalTitle}
@@ -103,7 +146,43 @@ const Insolvency = ({ data }) => {
           title={'Download e-guide'}
           text={'Download your free copy today and get on the path to recovery'}
         />
-      </formEbookContext.Provider>
+      </formEbookContext.Provider> */}
+
+       <section className="ht_section ht_bottom">
+        <div className="container">
+          <div className="ht_left">
+            <img className="img-fluid" src={data.wpPage.insolvency.insHtImage?.mediaItemUrl} alt={data.wpPage.insolvency.insHtImage?.altText} />
+          </div>
+          <div className="ht_right">
+            <h2>{data.wpPage.insolvency.insHtTitle}</h2>
+            <div className="ht_cnt" dangerouslySetInnerHTML={{ __html: data.wpPage.insolvency?.insHtDescription }}></div>
+            <formEbookContext.Provider value={valueEbook}>
+              <button className="btn btn-primary me-5" onClick={() => { setFormEbookDetails(1) }}>Download Now</button>
+              <EbookForm
+                title={'Download e-guide'}
+                text={'Download your free copy today and get on the path to recovery'}
+              />
+            </formEbookContext.Provider>
+          </div>
+        </div>
+      </section> 
+
+
+       <div className="wva_section fd_section dca_section dpn_part">
+        <div className="container">
+          <div className="wva_left">
+            <img src={data.wpPage.insolvency.dpn3Image.mediaItemUrl} alt={data.wpPage.insolvency.dpn3Image.altText} />
+          </div>
+          <div className="wva_right">
+            <h3>{data.wpPage.insolvency.dpn3Title}</h3>
+            <div dangerouslySetInnerHTML={{ __html: data.wpPage.insolvency.dpn3Description }}></div>
+            {data.wpPage.insolvency.dpn3ButtonLink !== null && data.wpPage.insolvency.dpn3ButtonLink !== "" ? <Link className="btn btn-primary me-5" to={data.wpPage.insolvency.dpn3ButtonLink}>{data.wpPage.insolvency.dpn3ButtonText}</Link> : ""} {data.wpPage.insolvency.dpn3Button2Link !== null && data.wpPage.insolvency.dpn3Button2Link !== "" ? <Link className="btn btn-primary me-5" to={data.wpPage.insolvency.dpn3Button2Link}>{data.wpPage.insolvency.dpn3Button2Text}</Link> : ""}
+          </div>
+        </div>
+      </div>
+
+
+
       <div className="home">
           <GetInTouch
             title={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchTitle}
@@ -156,6 +235,23 @@ export const query = graphql`
           buttonUrl
           buttonLabel
         }
+        insHtTitle
+        insHtDescription
+        insHtImage {
+          altText
+          mediaItemUrl
+        }
+        dpn3Title
+        dpn3Description
+        dpn3ButtonText
+        dpn3ButtonLink
+        dpn3Button2Text
+        dpn3Button2Link
+        dpn3Image {
+            altText
+            mediaItemUrl
+          }
+
         sendUrl
       }
       metaFields {

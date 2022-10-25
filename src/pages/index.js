@@ -13,6 +13,7 @@ import useInView from "react-cool-inview";
 import OurPeople from "../components/our-people-list/our-people"
 import News from "../components/news/list"
 import $ from "jquery"
+import GetInTouchPPForm from "../components/get-in-touch-bankruptcy-popup"
 
 const settings = {
   arrows: false,
@@ -195,6 +196,21 @@ const IndexPage = ({ data }) => {
           data={businessData}
           showAll={0}
         />
+
+        <div className="wva_section fd_section dca_section dpn_part">
+        <div className="container">
+          <div className="wva_left">
+            <img src={data.wpPage.hpOptions.dpnImage.mediaItemUrl} alt={data.wpPage.hpOptions.dpnImage.altText} />
+          </div>
+          <div className="wva_right">
+            <h3>{data.wpPage.hpOptions.dpnTitle}</h3>
+            <div dangerouslySetInnerHTML={{ __html: data.wpPage.hpOptions.dpnDescription }}></div>
+            {data.wpPage.hpOptions.dpnButtonLink !== null && data.wpPage.hpOptions.dpnButtonLink !== "" ? <Link className="btn btn-primary me-5" to={data.wpPage.hpOptions.dpnButtonLink}>{data.wpPage.hpOptions.dpnButtonText}</Link> : ""} {data.wpPage.hpOptions.dpnButton2Link !== null && data.wpPage.hpOptions.dpnButton2Link !== "" ? <Link className="btn btn-primary me-5" to={data.wpPage.hpOptions.dpnButton2Link}>{data.wpPage.hpOptions.dpnButton2Text}</Link> : ""}
+          </div>
+        </div>
+      </div>
+
+
         <div className="vcfo_section vcfo_section1">
           <div className="container">
             <div class="vcfo_left"><img src={data.wpPage.hpOptions.vcfoImage.mediaItemUrl} alt="" /></div>
@@ -205,6 +221,41 @@ const IndexPage = ({ data }) => {
             </div>
           </div>
         </div>
+
+        <section className="health_check home_helthcheck">
+          <div className="container">
+            <div className="ht_right">
+              <img className="img-fluid" src={data.wpPage.hpOptions.bhcImage?.mediaItemUrl} alt={data.wpPage.hpOptions.bhcImage?.altText} />
+            </div>
+
+            <div className="ht_left">
+              <h2>{data.wpPage.hpOptions.bhcTitle}</h2>
+              <div className="ht_cnt" dangerouslySetInnerHTML={{ __html: data.wpPage.hpOptions?.bhcDescription }}></div>
+          
+
+              {data.wpPage.hpOptions.bhcButtonLink !== null && data.wpPage.hpOptions.bhcButtonLink !== "" ? <Link className="btn btn-primary me-5" to={data.wpPage.hpOptions.bhcButtonLink}>{data.wpPage.hpOptions.bhcButtonText}</Link> : ""}
+
+              <button  className="btn btn-primary me-5" type="button" onClick={()=>setModal(true)} data-toggle="modal" data-target="#myModal">{data.wpPage.hpOptions.bhcVideoButtonText}</button>
+              <div id="myModal2" role="dialog" className={showModal?'in show modal fade':'modal fade'}>
+              <div className="model_inner">
+                  <div className="popup_dialog">
+                      <div className="modal-content">
+                          <button type="button" className="close" data-dismiss="modal" onClick={()=>{setModal(false);$('iframe.embed-responsive-item').attr('src', $('iframe.embed-responsive-item').attr('src').replace("autoplay=1&amp;", ""));}}>&times;</button>
+                          <div className="popup_body">
+                              <div className="video_ratio">
+                                  <div dangerouslySetInnerHTML={{__html: data.wpPage.hpOptions.bhcVideo }} />
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+            </div>
+          </div>
+        </section>
+
+
         <div className="vcfo_section na_section">
           <div className="container">
             <h2>Resources</h2>
@@ -215,10 +266,28 @@ const IndexPage = ({ data }) => {
             btn={false}
           />
         </div>
+
+
         <GetInTouch
           title={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchTitle}
           text={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchDescription}
         />
+
+         <div id="myModal2" role="dialog" className={showModal?'in show modal fade':'modal fade'}>
+        <div class="model_inner">
+        <div class="popup_dialog">
+        <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" onClick={()=>{setModal(false);$('iframe.embed-responsive-item').attr('src', $('iframe.embed-responsive-item').attr('src').replace("autoplay=1&amp;", ""));}}>&times;</button>
+        <div class="popup_body">
+        <div class="video_ratio">
+        <div dangerouslySetInnerHTML={{__html: data.wpPage.hpOptions.bhcVideo }} />
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+
         
         <div id="myModal" role="dialog" className={showModal?'in show modal fade':'modal fade'}>
         <div class="model_inner">
@@ -263,6 +332,28 @@ export const query = graphql`
             altText
           }
         }
+        bhcTitle
+        bhcDescription
+        bhcButtonLink
+        bhcButtonText
+        bhcVideoButtonText
+        bhcVideo
+        bhcImage {
+          altText
+          mediaItemUrl
+        }
+
+        dpnTitle
+        dpnDescription
+        dpnButtonText
+        dpnButtonLink
+        dpnButton2Text
+        dpnButton2Link
+        dpnImage {
+            altText
+            mediaItemUrl
+          }
+
         testimonials {
           comment
           designation
