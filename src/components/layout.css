@@ -6126,13 +6126,19 @@ margin-bottom: 45px;
     border: 2px solid #e0e3e5;
     background-color: #fff;
     display: inline-block;
-    line-height: 45px;
+    padding: 12px 0px;
+    line-height: 1;
     text-align: center;
     margin-right: 15px;
     color: #55595d;
     font-size: 18px;
     font-weight: 400;
 }
+.buttons_section a:hover{
+    background: #e0e3e5;
+    color: #000000;
+}
+
 .mg_acnew1 .wva_left{
   order: 2;
   padding-left: 0px;
