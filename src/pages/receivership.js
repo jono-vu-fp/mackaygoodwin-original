@@ -10,7 +10,7 @@ import CurveLeft from "../components/curve-left"
 import Services from "../components/services"
 import Accordian from "../components/accordian/accordian"
 import FullText from "../components/full-text"
-import OurPeople from "../components/our-people-liquid/our-people2"
+import OurPeople from "../components/our-people/our-people"
 import TestimonialMain from "../components/testimonial-main-liquid-1"
 import ReciveryPlan from "../components/recovery-plan"
 import Container from "../components/slider/container-liquidation"
@@ -25,22 +25,8 @@ const ConsultBusiness = ({ data }) => {
   let whyMG = [];
 
   let businessData = [];
-  let count = 0;
-  data.allWpOurpeople.nodes.map((d,key) => {
-
-    if(d.backInBusiness.registeredLiquidators && (count < 3 )){
-
-      console.log(count);
-
-      count++;
-      
-      return businessData.push({ title: d.title, subtitle: d.backInBusiness.designation, text: d.backInBusiness.location, certification: d.backInBusiness.certification, content: d.content, linkedin: d.backInBusiness.linkedin, email: d.backInBusiness.email, img: d.featuredImage?.node, designationType: d.backInBusiness.designationType, registeredLiquidators: d.backInBusiness.registeredLiquidators });
-
-
-
-    } else {
-      return '';
-    }
+  data.allWpOurpeople.nodes.map((d) => {
+    return businessData.push({ title: d.title, subtitle: d.backInBusiness.designation, text: d.backInBusiness.location, certification: d.backInBusiness.certification, content: d.content, linkedin: d.backInBusiness.linkedin, email: d.backInBusiness.email, phone: d.backInBusiness.phoneNumber, img: d.featuredImage?.node });
   })
 
   const breadCrumbs = [
@@ -135,12 +121,9 @@ const ConsultBusiness = ({ data }) => {
             
      
       
-      <OurPeople
-        title={''}
-        text={''}
+     <OurPeople
         data={businessData}
-        showAll={0}
-        liquidation={1}
+        showAll={1}
       />
 
       <div className="home">
@@ -177,7 +160,6 @@ export const query = graphql`
           mediaItemUrl
         }
         receBannerTitle
-        
         receWymnuDescriptionWhyliquid {
           description
           image {
