@@ -128,7 +128,7 @@ const ConsultBusiness = ({ data }) => {
                       </div>)
                   })}
 
-                   {data.wpPage.personalinsolvency.perWeva3ButtonLink !== null && data.wpPage.personalinsolvency.perWeva3ButtonLink !== "" ? <Link className="btn btn-primary me-5" to={data.wpPage.personalinsolvency.perWeva3ButtonLink}>{data.wpPage.personalinsolvency.perWeva3ButtonText}</Link> : ""} 
+                  <div style={{'text-align':'center'}}>{data.wpPage.personalinsolvency.perWeva3ButtonLink !== null && data.wpPage.personalinsolvency.perWeva3ButtonLink !== "" ? <Link className="btn btn-primary me-5" to={data.wpPage.personalinsolvency.perWeva3ButtonLink}>{data.wpPage.personalinsolvency.perWeva3ButtonText}</Link> : ""} </div>
               </div>
             </div>
           </div>   
