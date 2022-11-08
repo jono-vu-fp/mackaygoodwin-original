@@ -124,11 +124,12 @@ const ConsultBusiness = ({ data }) => {
                         <div className="lb_txt">
                           <p className="solutions-title">{d.perSubtitle?.trim()}</p>
                           <p className="solutions-desc">{d.perSubdesc?.trim()}</p>
+                          {d?.perSubButtonLink !== null && d?.perSubButtonLink !== "" ? <Link className="btn btn-primary me-5" to={d?.perSubButtonLink}>{d?.perSubButtonText}</Link> : ""}
                         </div>
                       </div>)
                   })}
 
-                  <div style={{'text-align':'center'}}>{data.wpPage.personalinsolvency.perWeva3ButtonLink !== null && data.wpPage.personalinsolvency.perWeva3ButtonLink !== "" ? <Link className="btn btn-primary me-5" to={data.wpPage.personalinsolvency.perWeva3ButtonLink}>{data.wpPage.personalinsolvency.perWeva3ButtonText}</Link> : ""} </div>
+                  {/*<div style={{'text-align':'center'}}>{data.wpPage.personalinsolvency.perWeva3ButtonLink !== null && data.wpPage.personalinsolvency.perWeva3ButtonLink !== "" ? <Link className="btn btn-primary me-5" to={data.wpPage.personalinsolvency.perWeva3ButtonLink}>{data.wpPage.personalinsolvency.perWeva3ButtonText}</Link> : ""} </div>*/}
               </div>
             </div>
           </div>   
@@ -216,6 +217,8 @@ export const query = graphql`
         perWvaDescription{
           perSubtitle
           perSubdesc
+          perSubButtonText
+          perSubButtonLink
         }
         perFdContent
         perFdImage {
