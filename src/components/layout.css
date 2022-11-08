@@ -4998,8 +4998,14 @@ img.recovery-partner-img {
     background-position: right 21px center;
     background-repeat: no-repeat;
 }
-.home #awards {
+.home #awards, .about_awards#awards {
     padding-bottom: 45px;
+}
+.about_awards#awards h2 {
+    padding-bottom: 10px;
+}
+.about_awards#awards {
+    margin-bottom: 50px;
 }
 .ca_sec {
     /*background-color: #ebe9de;*/
@@ -6628,7 +6634,7 @@ margin-bottom: 45px;
     .home #get-in-touch h3 {
         font-size: 18px;
     }
-    .home #awards {
+    .home #awards, .about_awards#awards {
         padding-top: 60px;
     }
     .vcfo_section1 {
@@ -8239,11 +8245,11 @@ margin-bottom: 45px;
     .home #get-in-touch h3 {
         font-size: 16px;
     }
-    .home #awards {
+    .home #awards, .about_awards#awards {
         padding-top: 40px;
         padding-bottom: 35px;
     }
-    .home #awards h2 {
+    .home #awards h2, .about_awards#awards h2 {
         padding-bottom: 20px;
     }
     .home_branding {
@@ -10568,7 +10574,7 @@ margin-bottom: 45px;
     .ols_section {
         padding-top: 35px;
     }
-    .home #awards li {
+    .home #awards li, .about_awards#awards li {
         font-size: 18px;
     }
     .vcfo_section1 {
@@ -10706,10 +10712,10 @@ margin-bottom: 45px;
     .wva_section iframe {
         height: 277px;
     }
-    .home #awards h2 {
+    .home #awards h2, .about_awards#awards h2 {
         padding-bottom: 10px;
     }
-    .home #awards {
+    .home #awards, .about_awards#awards {
         padding-top: 30px;
         padding-bottom: 20px;
     }

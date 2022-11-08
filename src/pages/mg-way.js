@@ -9,6 +9,7 @@ import OurPeople from "../components/our-people-list/our-people"
 import AboutUs from "../components/about-us"
 import History from "../components/history"
 import Career from "../components/career"
+import Awards from "../components/awards2"
 import Accordian from "../components/accordian/accordian"
 import { Link } from "gatsby"
 import CurveLeft from "../components/curve-left"
@@ -152,7 +153,12 @@ const MgWay = ({ data }) => {
             <div dangerouslySetInnerHTML={{__html: data.wpPage.mgWayPageOptions.contentDesc }} /> 
           </div>
         </div>
-      </div>  
+      </div>
+
+      <Awards
+          title={data.wpPage.mgWayPageOptions.mgAwardTitle}
+          data={data.wpPage.mgWayPageOptions.mgAwardPoints}
+        />
 
 
        <div className="wcmg_section mg_approach">
@@ -422,6 +428,11 @@ export const query = graphql`
         journeyImage {
           altText
           mediaItemUrl
+        }
+        mgAwardTitle
+        mgAwardPoints {
+          fieldGroupName
+          mgPointDesc
         }
       }
       metaFields {
