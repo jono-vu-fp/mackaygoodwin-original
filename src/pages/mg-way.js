@@ -155,10 +155,7 @@ const MgWay = ({ data }) => {
         </div>
       </div>
 
-      <Awards
-          title={data.wpPage.mgWayPageOptions.mgAwardTitle}
-          data={data.wpPage.mgWayPageOptions.mgAwardPoints}
-        />
+      
 
 
        <div className="wcmg_section mg_approach">
@@ -255,6 +252,8 @@ const MgWay = ({ data }) => {
             </ul>
           </div>
         </div>
+
+
               
          
 
@@ -346,6 +345,10 @@ const MgWay = ({ data }) => {
           text={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchDescription}
         />
       </div>
+      <Awards
+          title={data.wpPage.mgWayPageOptions.mgAwardTitle}
+          data={data.wpPage.mgWayPageOptions.mgAwardPoints}
+        />
     </Layout>
   </div>
   )
