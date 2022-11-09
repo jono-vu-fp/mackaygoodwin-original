@@ -87,7 +87,11 @@ const DirectorPenaltyNotice = ({data}) => {
                    <h2 class="ins-banner-heading2">{data.wpPage.directorpenaltynoticePageOptions.title1}</h2>
                    <div class="ins-banner-details2"><div dangerouslySetInnerHTML={{__html: data.wpPage.directorpenaltynoticePageOptions.description1 }} /></div>
                     
-                   <Link className="btn btn-primary me-5" to="#get-in-touch">Learn More</Link>
+
+
+        
+
+                   {data.wpPage.directorpenaltynoticePageOptions.wsButtonLink !== null && data.wpPage.directorpenaltynoticePageOptions.wsButtonLink !== "" ? <Link className="btn btn-primary me-5" to={data.wpPage.directorpenaltynoticePageOptions.wsButtonLink}>{data.wpPage.directorpenaltynoticePageOptions.wsButtonText}</Link> : ""}
                 </div>
              </div>
           </div>
@@ -203,6 +207,8 @@ export const query = graphql`
           }
           titleNew
         }
+        wsButtonLink
+        wsButtonText
       }
     }
     allWpOurpeople(sort: {order:  ASC, fields: menuOrder}) {

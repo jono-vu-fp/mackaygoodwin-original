@@ -28,9 +28,7 @@ const ConsultBusiness = ({ data }) => {
   let count = 0;
   data.allWpOurpeople.nodes.map((d,key) => {
 
-    if(d.backInBusiness.registeredLiquidators && (count < 3 )){
-
-      console.log(count);
+    if(d.backInBusiness.registeredLiquidators){
 
       count++;
       

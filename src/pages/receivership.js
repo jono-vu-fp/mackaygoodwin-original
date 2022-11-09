@@ -26,7 +26,13 @@ const ConsultBusiness = ({ data }) => {
 
   let businessData = [];
   data.allWpOurpeople.nodes.map((d) => {
-    return businessData.push({ title: d.title, subtitle: d.backInBusiness.designation, text: d.backInBusiness.location, certification: d.backInBusiness.certification, content: d.content, linkedin: d.backInBusiness.linkedin, email: d.backInBusiness.email, phone: d.backInBusiness.phoneNumber, img: d.featuredImage?.node });
+
+    if(d.backInBusiness.registeredLiquidators){
+      return businessData.push({ title: d.title, subtitle: d.backInBusiness.designation, text: d.backInBusiness.location, certification: d.backInBusiness.certification, content: d.content, linkedin: d.backInBusiness.linkedin, email: d.backInBusiness.email, phone: d.backInBusiness.phoneNumber, img: d.featuredImage?.node, registeredLiquidators: d.backInBusiness.registeredLiquidators });
+
+    } else {
+      return '';
+    }
   })
 
   const breadCrumbs = [
