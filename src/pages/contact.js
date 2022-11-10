@@ -93,6 +93,13 @@ const Corporate = ({data}) => {
     </div>
   </div>
 
+  <div className="ca_sec2 ca_sec2_n">
+    <div className="container">
+        <div dangerouslySetInnerHTML={{__html: data.wpPage.contactPageOptions.cseTitle }} /> 
+        {data.wpPage.contactPageOptions.cseButtonLink !== null && data.wpPage.contactPageOptions.cseButtonLink !== "" ? <Link className="btn btn-primary me-5" to={data.wpPage.contactPageOptions.cseButtonLink}>{data.wpPage.contactPageOptions.cseButtonText}</Link> : ""}
+    </div>
+  </div>
+
     {/* <FullText 
       text={data.wpPage.corporateAdvisoryPageOptions.pageTagline}
     />
@@ -147,7 +154,11 @@ export const query = graphql`
 
         conDescription
         conDescription2
-        conVideo      
+        conVideo
+
+        cseTitle
+        cseButtonText
+        cseButtonLink
 
         conThriveTitle 
         conThriveDescription
