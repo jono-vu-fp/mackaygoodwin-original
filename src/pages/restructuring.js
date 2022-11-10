@@ -66,7 +66,7 @@ const Restructuring = ({ data }) => {
       {data.wpPage.restructuring.queAndAnsNew.map((d,key) => {
           return <div className="ca_sec"><div className="container"><h2>{d?.questionNew}</h2>
           <div className="ca_txt" dangerouslySetInnerHTML={{ __html: d?.answerNew }}></div>
-          <Link className="btn btn-primary me-5" to={d.resLink != null ? d.resLink : (d.questionNew=='Creditor and Stakeholder Negotiations'?'#get-in-touch':(d.questionNew=='Operational Improvements'?'#get-in-touch':''))}>Learn More</Link>
+          <Link className="btn btn-primary me-5" to={d.resLink != null ? d.resLink : (d.questionNew=='Creditor and Stakeholder Negotiations'?'#get-in-touch':(d.questionNew=='Operational Improvements'?'#get-in-touch':''))}>{d.resButtonText}</Link>
           </div></div>
       })}
       </div>
@@ -287,6 +287,7 @@ export const query = graphql`
           questionNew
           answerNew
           resLink
+          resButtonText
         }
       }
       metaFields {
