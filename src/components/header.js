@@ -73,7 +73,7 @@ const Header = () => {
             <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
               <li className="p-2"><Link className="dropdown-item" to="/mg-way/#people">People</Link></li>
               <li className="p-2"><Link className="dropdown-item" to="/mg-way/#about">About us</Link></li>
-              <li className="p-2"><Link className="dropdown-item" to="/mg-way/#careers">Careers</Link></li>
+              <li className="p-2"><Link className="dropdown-item" to="/careers">Careers</Link></li>
               <li className="p-2"><Link className="dropdown-item" to="/mg-way/#community-support">Community support</Link></li>
             </ul>
           </li>
@@ -143,7 +143,7 @@ const Header = () => {
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li className="p-2"><Link className="dropdown-item" to="/mg-way/#people">People</Link></li>
                 <li className="p-2"><Link className="dropdown-item" to="/mg-way/#about">About us</Link></li>
-                <li className="p-2"><Link className="dropdown-item" to="/mg-way/#careers">Careers</Link></li>
+                <li className="p-2"><Link className="dropdown-item" to="/careers">Careers</Link></li>
                 <li className="p-2"><Link className="dropdown-item" to="/mg-way/#community-support">Community support</Link></li>
               </ul>
             </li>
@@ -260,7 +260,7 @@ const Header = () => {
                 <label className="menu-label" htmlFor="menu-3">Menu</label>
                 <li className="nav-item"><Link className="dropdown-item" to="/mg-way/#people">People</Link></li>
                 <li className="nav-item"><Link className="dropdown-item" to="/mg-way/#about">About us</Link></li>
-                <li className="nav-item"><Link className="dropdown-item" to="/mg-way/#careers">Careers</Link></li>
+                <li className="nav-item"><Link className="dropdown-item" to="/careers">Careers</Link></li>
                 <li className="nav-item"><Link className="dropdown-item" to="/mg-way/#community-support">Community support</Link></li>
               </ul>
             </div>

@@ -57,7 +57,7 @@ const links = [
       'link': "/mg-way/#history"
     }, {
       'title': "Careers",
-      'link': "/mg-way/#careers"
+      'link': "/careers"
     }, {
       'title': "Community support",
       'link': "/mg-way/#community-support"
