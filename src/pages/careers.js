@@ -35,7 +35,7 @@ const Careers = ({ data }) => {
   const [showLoc, setShowLoc] = React.useState(false);
   const [showBiz, setShowBiz] = React.useState(false);
   const [noData, setNoData] = React.useState(false);
-  const [filterList, setFilterList] = React.useState([]);
+  const [filterList, setFilterList] = React.useState(whyMG);
   const fiterCareer = (v,t) =>{
     setNoData(false);
     let l1 = curLoc; let b1 = curBiz;
@@ -45,14 +45,24 @@ const Careers = ({ data }) => {
     }
     else{
       setCurBiz(v);
-      setCurLoc('');
+      // setCurLoc('');
       b1 = v;
-      l1 = '';
-      setShowLoc(true);
+      // l1 = '';
+      // setShowLoc(true);
     }
-    let whyMG1 = whyMG.filter((d) => {
-      return d.locs.indexOf(l1)>-1 && d.bizs.indexOf(b1)>-1;
-    });
+    let whyMG1 = whyMG;
+    if(l1!='' || b1!=''){
+      if(l1!=''){
+        whyMG1 = whyMG1.filter((d) => {
+          return d.locs.indexOf(l1)>-1;
+        });
+      }
+      if(b1!=''){
+        whyMG1 = whyMG1.filter((d) => {
+          return d.bizs.indexOf(b1)>-1;
+        });
+      }
+    }
     setFilterList(whyMG1);
     setTimeout(()=>{
       setNoData(whyMG1.length>0?false:true);
@@ -89,7 +99,7 @@ const Careers = ({ data }) => {
 
            <div class="row">
            <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
-               <h3 className={showBiz?"activebiz":""} onClick={()=>{setShowLoc(!showLoc);setShowBiz(!showBiz);setCurLoc('');setCurBiz('');setFilterList([]);}}>Business Area</h3>
+               <h3 className={showBiz?"activebiz":""} onClick={()=>{setShowBiz(!showBiz);setCurBiz('');fiterCareer('','biz');}}>Business Area</h3>
                 
                 <div className={showBiz?"activebiz job_list":"job_list"}>                     
                     <ul>
@@ -101,7 +111,7 @@ const Careers = ({ data }) => {
            </div>
 
             <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 rig_1">
-               <h3 className={showLoc?"activeloc":""} onClick={()=>{setShowLoc(!showLoc);setShowBiz(!showBiz);setCurLoc('');setCurBiz('');setFilterList([]);}}>Location</h3>
+               <h3 className={showLoc?"activeloc":""} onClick={()=>{setShowLoc(!showLoc);setCurLoc('');fiterCareer('','loc');}}>Location</h3>
               <div className={showLoc?"activeloc job_list":"job_list"}> 
                     <ul>
                         {data.allWpLocation.nodes.map((d,key) => {
@@ -111,7 +121,7 @@ const Careers = ({ data }) => {
               </div>
            </div>
 
-           {showLoc && showBiz?<div className="career_list">
+           <div className="career_list">
                     {filterList.map((d,key) => {
                       return <div key={'c'+key} className="list_1">
                           <div class="left_jobs">
@@ -123,8 +133,8 @@ const Careers = ({ data }) => {
                           </div>
                     </div>
                     })}  
-                    {filterList.length==0 && curBiz!='' && curLoc!='' && noData?<div className="error_msg">no career opportunities</div>:null} 
-           </div>:null}
+                    {filterList.length==0?<div className="error_msg">no career opportunities</div>:null} 
+           </div>
              
            </div>
 
