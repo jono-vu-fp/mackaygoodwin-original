@@ -196,7 +196,7 @@ const Header = () => {
         <span className="hamburgerspan"></span>
       </div>
 
-      <div className="mobile-logo black-logo text-center"> <Link  to="/"><img src="https://res.cloudinary.com/mbsaiyed/image/upload/v1625504292/svg/logo-color.svg" alt="" /></Link></div>
+      <div className="mobile-logo black-logo text-center"> <Link to="/"><img src="https://res.cloudinary.com/mbsaiyed/image/upload/v1625504292/svg/logo-color.svg" alt="" /></Link></div>
 
 
       <div id="menu-cont-1">
@@ -214,7 +214,7 @@ const Header = () => {
           </ul>
         </div>
        
-         <div className="mobile-logo black-logo text-center"><Link  to="https://mackaygoodwin.com.au/"><img src="https://res.cloudinary.com/mbsaiyed/image/upload/v1625481695/svg/mobile-logo.svg" alt="" /></Link></div>
+         <div className="mobile-logo black-logo text-center"><Link  onClick={()=>{document.getElementById('top-nav').checked=false; console.log('aaa');}} to="/"><img src="https://res.cloudinary.com/mbsaiyed/image/upload/v1625481695/svg/mobile-logo.svg" alt="" /></Link></div>
 
         <ul className="menu-ul">
          <li className="nav-item">  
