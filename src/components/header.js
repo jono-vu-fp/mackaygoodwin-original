@@ -228,7 +228,7 @@ const Header = () => {
           <li className="nav-item sub-menu"><Link className="nav-link" to="/expertsinbusiness/"> Services</Link>
             <input type="checkbox" id="menu-1" />
             <div id="menu-cont-2">
-              <div className="mobile-logo black-logo text-center"><Link  to="https://mackaygoodwin.com.au/"><img src="https://res.cloudinary.com/mbsaiyed/image/upload/v1625481695/svg/mobile-logo.svg" alt="" /></Link></div>
+              <div className="mobile-logo black-logo text-center"><Link  onClick={()=>{document.getElementById('top-nav').checked=false; console.log('aaa');}}  to="https://mackaygoodwin.com.au/"><img src="https://res.cloudinary.com/mbsaiyed/image/upload/v1625481695/svg/mobile-logo.svg" alt="" /></Link></div>
               <ul className="menu-ul">
                 <label className="menu-label" htmlFor="menu-1">Menu</label>
               
@@ -243,7 +243,7 @@ const Header = () => {
           {/* <li className="nav-item sub-menu"><Link className="nav-link" to="/insights/">Insights</Link>
             <input type="checkbox" id="menu-2" />
             <div id="menu-cont-2">
-              <div className="mobile-logo black-logo text-center"><Link  to="https://mackaygoodwin.com.au/"><img src="https://res.cloudinary.com/mbsaiyed/image/upload/v1625481695/svg/mobile-logo.svg" alt="" /></Link></div>
+              <div className="mobile-logo black-logo text-center"><Link  onClick={()=>{document.getElementById('top-nav').checked=false; console.log('aaa');}}  to="https://mackaygoodwin.com.au/"><img src="https://res.cloudinary.com/mbsaiyed/image/upload/v1625481695/svg/mobile-logo.svg" alt="" /></Link></div>
               <ul className="menu-ul">
                 <label className="menu-label" htmlFor="menu-2">Menu</label>
                 <li className="nav-item"><Link className="dropdown-item" to="/deal-hub/">Deal Hub</Link></li>
@@ -256,7 +256,7 @@ const Header = () => {
           <li className="nav-item sub-menu"><Link className="nav-link" to="/mg-way/">The MG Way</Link>
             <input type="checkbox" id="menu-3" />
             <div id="menu-cont-2">
-              <div className="mobile-logo black-logo text-center"><Link  to="https://mackaygoodwin.com.au/"><img src="https://res.cloudinary.com/mbsaiyed/image/upload/v1625481695/svg/mobile-logo.svg" alt="" /></Link></div>
+              <div className="mobile-logo black-logo text-center"><Link  onClick={()=>{document.getElementById('top-nav').checked=false; console.log('aaa');}}  to="https://mackaygoodwin.com.au/"><img src="https://res.cloudinary.com/mbsaiyed/image/upload/v1625481695/svg/mobile-logo.svg" alt="" /></Link></div>
               <ul className="menu-ul">
                 <label className="menu-label" htmlFor="menu-3">Menu</label>
                 <li className="nav-item"><Link className="dropdown-item" to="/mg-way/#people">People</Link></li>
@@ -269,7 +269,7 @@ const Header = () => {
           <li className="nav-item sub-menu"><Link className="nav-link" to="/mg-academy/"> MG Academy</Link>
             <input type="checkbox" id="menu-4" />
             <div id="menu-cont-2">
-              <div className="mobile-logo black-logo text-center"><Link  to="https://mackaygoodwin.com.au/"><img src="https://res.cloudinary.com/mbsaiyed/image/upload/v1625481695/svg/mobile-logo.svg" alt="" /></Link></div>
+              <div className="mobile-logo black-logo text-center"><Link  onClick={()=>{document.getElementById('top-nav').checked=false; console.log('aaa');}} to="https://mackaygoodwin.com.au/"><img src="https://res.cloudinary.com/mbsaiyed/image/upload/v1625481695/svg/mobile-logo.svg" alt="" /></Link></div>
               <ul className="menu-ul">  
                 <label className="menu-label" htmlFor="menu-4">Menu</label>
                 <li className="nav-item"><Link to="/media-moments/">Media Moments</Link></li>
