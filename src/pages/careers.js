@@ -11,8 +11,8 @@ import ReciveryPlan from "../components/recovery-plan"
 import News from "../components/news/list"
 import GetInTouchPPForm from "../components/get-in-touch-bankruptcy-popup"
 import GetInTouch3 from "../components/get-in-touch3"
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from 'react-responsive-carousel';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 
 
 import $ from "jquery"
@@ -68,8 +68,25 @@ const Careers = ({ data }) => {
       setNoData(whyMG1.length>0?false:true);
     },100);
   }
-
-
+  const responsive = {
+    superLargeDesktop: {
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1
+    }
+  };
+  
   return (<div className="service consult-business liquidation voluntary_administration bankruptcy doc_1 safe_harbour media_moment careers">
     <Layout>
       <Seo title={data.wpPage.metaFields?.metaTitle} description={data.wpPage.metaFields?.metaDescription} />
@@ -149,7 +166,7 @@ const Careers = ({ data }) => {
              <h2 dangerouslySetInnerHTML={{ __html: data.wpPage.careers.careSliderTitle }}></h2>
 
                  <div className="image-container hs_img">                     
-                    <Carousel showThumbs={false} showIndicators={false}  autoPlay={false} showArrows={true} labels={true} dynamicHeight={false} swipeable={true} emulateTouch={true} showStatus={false}>
+                    <Carousel responsive={responsive}>
                         { data.wpPage.careers.careImage.map((d) => {
                           return <div><img src={d.image.mediaItemUrl} /></div>
                         })}

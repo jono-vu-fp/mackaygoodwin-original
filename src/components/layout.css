@@ -6613,7 +6613,25 @@ margin-bottom: 45px;
     padding-bottom: 30px;
 }
 
+.mg_slide_part .react-multiple-carousel__arrow--left::before{
+    border-right: 14px solid #fff;
+    border-bottom: 14px solid transparent;
+    border-top: 14px solid transparent;
+    font-size: 0px;
+    right: 29px;
+}
 
+.mg_slide_part .react-multiple-carousel__arrow--right::before{
+    border-left: 14px solid #fff;
+    border-bottom: 14px solid transparent;
+    border-top: 14px solid transparent;
+    font-size: 0px;
+    left: 29px;
+}
+
+.react-multi-carousel-list{
+  position: unset !important;
+}
 
 .mg_slide_part .slider li{
    padding-right:25px;
@@ -6650,8 +6668,25 @@ margin-bottom: 45px;
     border-top: 14px solid transparent;
     border-bottom: 14px solid transparent;
 }
+.mg_slide_part .react-multi-carousel-list button{
+    width: 68px;
+    height: 67px;
+    background-color: #1C5E48!important;
+}
+.react-multi-carousel-track{
+
+}
+.react-multiple-carousel__arrow{
+    z-index: 1!important;
+}
+.mg_slide_part .react-multiple-carousel__arrow--left {
+    left: calc(10% + 0px);
+}
+.mg_slide_part .react-multiple-carousel__arrow--right{
+    right: calc(12% + 1px)!important;
+}
 .mg_slide_part .container li{
-    min-width: 33.3%!important;
+  /*  min-width: 33.3%!important;*/
 }
 .careers.single_career .banner-content {
     padding-right: 75px!important;
@@ -6742,6 +6777,8 @@ margin-bottom: 45px;
     margin-bottom: 70px;
 }
 
+
+
 /****** BreakPoints *******/
 /****** Responsive Start *******/
 @media screen and (min-width:1400px){
@@ -6757,6 +6794,14 @@ margin-bottom: 45px;
 @media screen and (max-width:1900px){
     #community-support .slide img {
         max-height: 586px;
+    }
+}
+@media screen and (max-width:1840px){
+    .mg_slide_part .react-multiple-carousel__arrow--left {
+    left: calc(7% + 0px);
+}
+    .mg_slide_part .react-multiple-carousel__arrow--right{
+        right: calc(9% + 1px)!important;
     }
 }
 @media screen and (max-width:1700px){
@@ -7273,6 +7318,37 @@ margin-bottom: 45px;
         padding-bottom: 40px;
         margin-bottom: 60px;
     } 
+    
+     .mg_slide_part .container li{
+      padding-left:20px;
+      
+    }
+    .mg_slide_part .container li img{
+     width: 100%;
+      
+    }
+    .mg_slide_part .react-multiple-carousel__arrow--left {
+    left: calc(8% + 0px);
+    }
+    .mg_slide_part .react-multiple-carousel__arrow--right{
+        right: calc(7% + 1px)!important;
+    }
+     .mg_slide_part .react-multi-carousel-list button {
+        width: 40px;
+        height: 41px;
+    }
+    .mg_slide_part .react-multiple-carousel__arrow--left::before{
+        right: 19px;
+        border-right: 9px solid #fff;
+        border-bottom: 9px solid transparent;
+        border-top:9px solid transparent;
+    }
+    .mg_slide_part .react-multiple-carousel__arrow--right::before{
+        left: 19px;
+        border-left: 9px solid #fff;
+        border-bottom:9px solid transparent;
+        border-top: 9px solid transparent;
+    }
 
 }
 @media screen and (max-width:1600px){
@@ -7749,6 +7825,30 @@ margin-bottom: 45px;
         font-size: 16px;
         line-height: 24px;       
 }
+.mg_slide_part .react-multiple-carousel__arrow--left {
+    left: calc(6.5% + 0px);
+    }
+    .mg_slide_part .react-multiple-carousel__arrow--right{
+        right: calc(6% + 0px)!important;
+    }
+
+    .mg_slide_part .react-multi-carousel-list button {
+        width: 46px;
+        height: 47px;
+    }
+    .mg_slide_part .react-multiple-carousel__arrow--left::before{
+        right: 19px;
+        border-right: 10px solid #fff;
+        border-bottom: 10px solid transparent;
+        border-top: 10px solid transparent;
+    }
+    .mg_slide_part .react-multiple-carousel__arrow--right::before{
+        left: 19px;
+        border-left: 10px solid #fff;
+        border-bottom: 10px solid transparent;
+        border-top: 10px solid transparent;
+    }
+
 
 
 }
@@ -8205,6 +8305,13 @@ margin-bottom: 45px;
  .bankruptcy .weva_section.sec_new1{
         margin-bottom: 40px;
     } 
+    .mg_slide_part .react-multiple-carousel__arrow--left {
+    left: calc(3.5% + 0px);
+    }
+    .mg_slide_part .react-multiple-carousel__arrow--right{
+        right: calc(3% + 0px)!important;
+    }
+
 
 }
 @media screen and (max-width:1300px){
@@ -8303,6 +8410,12 @@ margin-bottom: 45px;
     .mg_slide_part .carousel .control-next.control-arrow {
         right: -50px;
     } 
+     .mg_slide_part .react-multiple-carousel__arrow--left {
+    left: calc(3.5% + 0px);
+    }
+    .mg_slide_part .react-multiple-carousel__arrow--right{
+        right: calc(2.5% + 0px)!important;
+    }
    
 
 }
@@ -9192,6 +9305,15 @@ margin-bottom: 45px;
     .job_list ul li:before{
         top: 17px;
     }
+    .mg_slide_part .react-multiple-carousel__arrow--left {
+    left: calc(4% + 0px);
+    }
+    .mg_slide_part .react-multiple-carousel__arrow--right{
+        right: calc(3% + 0px)!important;
+    }
+    .mg_slide_part .container li {
+        padding-left: 15px;
+}
 
 }
 @media screen and (max-width:1100px){
@@ -10592,6 +10714,7 @@ margin-bottom: 45px;
     .bankruptcy .weva_section.sec_new1 {
         padding-bottom: 20px;
     }
+   
 
 }
 @media screen and (max-width:767px){
@@ -11209,13 +11332,23 @@ margin-bottom: 45px;
     .ccopportun {
         padding-bottom: 50px;
     }
-    .mg_slide_part .container li{
-        min-width: 50%!important;
-        margin-left: 0px!important;
-        margin-right:0px!important;
-        padding-left: 10px;
+    
+.mg_slide_part .react-multi-carousel-list button {
+        width: 32px;
+        height: 33px;
     }
-
+    .mg_slide_part .react-multiple-carousel__arrow--left::before{
+        right: 20px;
+        border-right: 8px solid #fff;
+        border-bottom:8px solid transparent;
+        border-top: 8px solid transparent;
+    }
+    .mg_slide_part .react-multiple-carousel__arrow--right::before{
+        left:20px;
+        border-left: 8px solid #fff;
+        border-bottom: 8px solid transparent;
+        border-top: 8px solid transparent;
+    }
 
 
 }
@@ -11304,9 +11437,7 @@ margin-bottom: 45px;
         width: 75%!important;
     }
     .mg_slide_part .container li{
-        min-width: 100%!important;
-       padding-left: 0px!important;
-        padding-right: 0px!important;
+      
       
     }
     .mg_slide_part .carousel .control-next.control-arrow {
@@ -11860,7 +11991,22 @@ margin-bottom: 45px;
       .sing_sec4 h5, .sing_sec4 h5 a {
         font-size: 17px;
     }
+     .mg_slide_part .container li {
+        padding-left:10px;
+    }
 
+}
+@media screen and (max-width:460px){
+    .mg_slide_part .container li {
+    padding-left:1px;
+}
+ .mg_slide_part .react-multiple-carousel__arrow--left {
+        left: calc(2% + 0px)!important;
+    }
+    
+    .mg_slide_part .react-multi-carousel-list  .react-multiple-carousel__arrow--right{
+        right: calc(2% + 0px)!important;
+    }
 }
 @media screen and (max-width:440px){
     .dpnbanner_sec h1.banner-heading {
@@ -11957,6 +12103,8 @@ margin-bottom: 45px;
   .sing_sec2 h2, .sing_sec3 h2, .sing_sec4 h2{
         font-size: 26px;
   }
+
+    
 
 }
 @media screen and (max-width:414px){
@@ -12682,6 +12830,12 @@ margin-bottom: 45px;
     .liq_blocks.doca_2 .col-lg-4:last-child .lb_txt {
         padding-right: 20px;
     }
+    .mg_slide_part .react-multiple-carousel__arrow--left {
+     left: calc(6.2% + 0px);
+    }
+    .mg_slide_part .react-multiple-carousel__arrow--right {
+    right: calc(4% + 0px)!important;
+}
 }
 
 @media only screen and (min-width: 767.99px) and (max-width: 991.99px) {
