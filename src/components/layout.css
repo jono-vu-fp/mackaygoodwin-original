@@ -12001,7 +12001,7 @@ margin-bottom: 45px;
     padding-left:1px;
 }
  .mg_slide_part .react-multiple-carousel__arrow--left {
-        left: calc(2% + 0px)!important;
+        left: calc(2% + 0px)!important; 
     }
     
     .mg_slide_part .react-multi-carousel-list  .react-multiple-carousel__arrow--right{
