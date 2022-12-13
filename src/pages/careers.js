@@ -101,8 +101,14 @@ const Careers = ({ data }) => {
 
        <div className="weva_section ino_mid_text">
         <div className="container">
-        
+
+          <div className="imt_text">
             <div dangerouslySetInnerHTML={{ __html: data.wpPage.careers.careDescription }}></div>
+          </div>
+
+          <div className="imt_img">
+            <img src={data.wpPage.careers.toiVideoImage1?.mediaItemUrl} alt={data.wpPage.careers.toiVideoImage1?.altText} />
+          </div>
             
         </div>
       </div>
@@ -207,8 +213,15 @@ export const query = graphql`
         careCcoTitle       
         careBannerTitle
         careBannerDesc       
-        careDescription      
-        
+        careDescription
+        toiVideo1 {
+          altText
+          mediaItemUrl
+        }
+        toiVideoImage1 {
+          altText
+          mediaItemUrl
+        }
       }
     }
     allWp {

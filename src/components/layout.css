@@ -6778,6 +6778,42 @@ margin-bottom: 45px;
 }
 
 
+.careers .ino_mid_text .container {
+    display: flex;
+    align-items: center;
+}
+.ino_mid_text .imt_text {
+    width: 790px;
+    text-align: left;
+}
+.careers .ino_mid_text .imt_img {
+    position: relative;
+}
+.careers .ino_mid_text .imt_img:before {
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    content: '';
+    margin: auto;
+    position: absolute;
+    top: 47%;
+    left: 49.5%;
+    z-index: 9999;
+    border-left: 8px solid #fff;
+}
+.careers .ino_mid_text .imt_img:after {
+    content: "";
+    width: 50px;
+    height: 50px;
+    background-color: rgb(28, 94, 72);
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 100%;
+    
+}
 
 /****** BreakPoints *******/
 /****** Responsive Start *******/
@@ -10714,8 +10750,21 @@ margin-bottom: 45px;
     .bankruptcy .weva_section.sec_new1 {
         padding-bottom: 20px;
     }
-   
-
+    .ino_mid_text .imt_text {
+        width: 100%;
+    }
+    .careers .ino_mid_text .container {
+        flex-wrap: wrap;
+    }
+    .careers .ino_mid_text .imt_img {
+        width: 100%;
+    }
+    .careers .ino_mid_text .imt_img img {
+        max-width: 100%;
+    }
+    .ino_mid_text .imt_text {
+        margin-bottom: 10px !important;
+    }
 }
 @media screen and (max-width:767px){
 
