@@ -36,6 +36,12 @@ const Careers = ({ data }) => {
   const [showBiz, setShowBiz] = React.useState(false);
   const [noData, setNoData] = React.useState(false);
   const [filterList, setFilterList] = React.useState(whyMG);
+  const [vdUrl, setVdUrl] = React.useState('');
+  const [showModal, setModal] = React.useState(false);
+  const setVideoUrl = (url) => {
+    setVdUrl(url);
+    setModal(true);
+  }
   const fiterCareer = (v,t) =>{
     setNoData(false);
     let l1 = curLoc; let b1 = curBiz;
@@ -107,7 +113,7 @@ const Careers = ({ data }) => {
           </div>
 
           <div className="imt_img">
-            <img src={data.wpPage.careers.toiVideoImage1?.mediaItemUrl} alt={data.wpPage.careers.toiVideoImage1?.altText} />
+            <img onClick={()=>setVideoUrl(data.wpPage.careers.toiVideo1?.mediaItemUrl)} src={data.wpPage.careers.toiVideoImage1?.mediaItemUrl} alt={data.wpPage.careers.toiVideoImage1?.altText} />
           </div>
             
         </div>
@@ -182,7 +188,21 @@ const Careers = ({ data }) => {
             </div>
 
             </div>
-      
+      <div id="myModal" role="dialog" className={showModal?'in show modal fade':'modal fade'}>
+        <div className="model_inner">
+          <div className="popup_dialog">
+            <div className="modal-content">
+              <button type="button" className="close" data-dismiss="modal" onClick={()=>setModal(false)}>&times;</button>
+              <div className="popup_body">
+                <div className="video_ratio">
+                {vdUrl?<video key={vdUrl} width="100%" controls><source src={vdUrl} type="video/mp4" />Your browser does not support the video tag.</video>:null}
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
 
     </Layout>
