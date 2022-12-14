@@ -6789,6 +6789,9 @@ margin-bottom: 45px;
 .careers .ino_mid_text .imt_img {
     position: relative;
 }
+.careers .ino_mid_text .imt_img img {
+    cursor: pointer;
+}
 .careers .ino_mid_text .imt_img:before {
     border-top: 8px solid transparent;
     border-bottom: 8px solid transparent;
@@ -6797,8 +6800,9 @@ margin-bottom: 45px;
     position: absolute;
     top: 47%;
     left: 49.5%;
-    z-index: 9999;
+    z-index: 99;
     border-left: 8px solid #fff;
+    pointer-events: none;
 }
 .careers .ino_mid_text .imt_img:after {
     content: "";
@@ -6812,7 +6816,7 @@ margin-bottom: 45px;
     right: 0;
     bottom: 0;
     border-radius: 100%;
-    
+    pointer-events: none;
 }
 
 /****** BreakPoints *******/
@@ -11399,7 +11403,9 @@ margin-bottom: 45px;
         border-top: 8px solid transparent;
     }
 
-
+    .mg_slide_part .react-multi-carousel-list button {
+        overflow: hidden;
+    }
 }
 @media screen and (max-width:667px){
     .ol_list h2 {
@@ -13167,4 +13173,8 @@ button.btn-close {
 .service.contact .ca_sec2.ca_sec2_n .btn {
     background-color: #1c5e48;
     color: #fff;
+}
+
+.cr_video_pp .popup_dialog {
+    max-width: 1300px;
 }

@@ -188,7 +188,7 @@ const Careers = ({ data }) => {
             </div>
 
             </div>
-      <div id="myModal" role="dialog" className={showModal?'in show modal fade':'modal fade'}>
+      <div id="myModal" role="dialog" className={showModal?'in show modal cr_video_pp fade':'modal cr_video_pp fade'}>
         <div className="model_inner">
           <div className="popup_dialog">
             <div className="modal-content">
