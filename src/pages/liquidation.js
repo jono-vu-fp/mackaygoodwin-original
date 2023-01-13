@@ -297,6 +297,10 @@ export const query = graphql`
           }
         }
       }
+      metaFields {
+        metaDescription
+        metaTitle
+      }
     }
     allWp {
       nodes {
