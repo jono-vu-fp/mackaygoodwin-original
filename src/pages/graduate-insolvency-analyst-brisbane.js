@@ -48,16 +48,17 @@ const SingleCareers = ({ data }) => {
 
       <div className="sing_sec3 sec_new">
         <div className="container">
-             <h2>{data.wpPage?.singlecareers4?.singcare4AboutTitle}</h2>
-            <div dangerouslySetInnerHTML={{ __html: data.wpPage?.singlecareers4?.singcare4AboutDescription }}></div>
+         <h2>{data.wpPage?.singlecareers4?.singcare4OfferTitle}</h2>
+            <div dangerouslySetInnerHTML={{ __html: data.wpPage?.singlecareers4?.singcare4OfferDescription }}></div>
             
         </div>
       </div>
 
       <div className="sing_sec4">
         <div className="container">
-             <h2>{data.wpPage?.singlecareers4?.singcare4OfferTitle}</h2>
-            <div dangerouslySetInnerHTML={{ __html: data.wpPage?.singlecareers4?.singcare4OfferDescription }}></div>
+            
+             <h2>{data.wpPage?.singlecareers4?.singcare4AboutTitle}</h2>
+            <div dangerouslySetInnerHTML={{ __html: data.wpPage?.singlecareers4?.singcare4AboutDescription }}></div>
             
         </div>
       </div>  
