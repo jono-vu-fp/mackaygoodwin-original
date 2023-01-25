@@ -3596,12 +3596,12 @@ img.recovery-partner-img {
     max-width: 1136px;
 }
 
-.dpn_page .accordion-button {
+/*.dpn_page .accordion-button {
     font-size: 55px;
     color: #dbfd90;
     position: relative;
     padding-left: 129px;
-}
+}*/
 .dpn_page .accordion-button:after {
     position: absolute;
     top: 0;
@@ -6819,6 +6819,114 @@ margin-bottom: 45px;
     pointer-events: none;
 }
 
+.dpn_page .identi_bannersec .banner-content .banner-heading{ padding-top:75px; }
+.dpn_page .identi_bannersec a.btn_more, .ps_bot .pack_inner .gs_btn a{ margin-top:25px; }
+
+.dpn_page #vCFO {
+    margin-top: 80px;
+    margin-bottom: 115px;
+} 
+.dpn_page .wva_section.about_section .wva_right{    max-width: 521px;}
+.dpn_page .wva_section.about_section .wva_right p:last-child{ margin-bottom:0; }
+.dpn_page .ca_sec:nth-child(3n+1){
+        background-color: #1c5e48;
+}
+.dpn_page .ca_sec:nth-child(3n-1) {
+    background-color: #ebe9de;
+}
+.dpn_page .ca_sec h2{
+    color: #dbfd90;
+}
+.dpn_page .ca_sec:nth-child(3n-1) h2 
+ {
+    color: #1c5e48;
+}
+.dpn_page .ca_sec:nth-child(3n-1) div.ca_txt{ color:#000; }
+.dpn_page .ca_sec div.ca_txt {    color: #fff;}
+.dpn_page .ca_txt p {
+    margin: 0 0 28px 0;
+}
+.dpn_page .ca_txt ul{ list-style:none; padding:0; margin:0 0 30px 0; }
+.dpn_page .ca_txt ul li{
+    position: relative;
+    padding-left: 27px;
+    margin-bottom: 9px;
+}
+.dpn_page .ca_txt ul li:before{
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    background: #dbfd90;
+    border-radius: 50px;
+    top: 8px;
+    left: 0;
+}
+
+.dpn_page .dpnsec_3{ padding:0; }
+
+
+.dpnsec_3 h3 {
+    color: #ebe9de;
+    font-size: 24px;
+    margin-bottom: 29px;
+    font-family: 'Sohne-Buch', sans-serif, Arial;
+    font-weight: 7;
+    letter-spacing: 1px;
+    display:none;
+}
+
+.dpn_page .ca_sec:nth-child(1) h3{ display:block; }
+
+
+section.dpn_optoins {
+    padding-top: 93px;
+    padding-bottom: 0;
+}
+.dpn_optoins h2 {
+    color: rgb(28, 94, 72);
+    font-family: reckless_neue_trialregular;
+    font-size: 55px;
+    font-weight: 400;
+    margin: 0px 0px 43px;
+}
+.dpn_optoins p {
+    font-size: 18px;
+    line-height: 1.55;
+    margin: 0;
+    color: #000000;
+}
+.dpn_page .ca_txt p:last-child {
+    margin-bottom: 0;
+}
+.dpn_page .ca_sec div.ca_txt{ margin-bottom:0; }
+
+.dpn_page .banners.curve-right.vcf_sec.mg_identifix.dpntab_sec {
+    padding-top: 70px;
+   
+}
+.dpn_page .wva_section.about_section.history_section.identifix_sec2.dpntab_sec{
+     padding-top: 0;
+} 
+.dpn_page .wva_section.about_section.history_section.identifix_sec2.dpntab_sec,
+.dpn_page .banners.curve-right.vcf_sec.mg_identifix.dpntab_sec{
+   
+     padding-bottom: 80px;
+    margin-bottom: 103px;
+}
+ 
+.dpn_page .vcf_sec.mg_identifix .wva_left {
+    padding-bottom: 0;
+}
+.dpn_page .testimonial-main.why-mg-fixed {
+    padding-top: 0;
+}
+
+.dpn_page .bankruptcy #why-mg{
+    padding-bottom: 70px;
+}
+
+
 /****** BreakPoints *******/
 /****** Responsive Start *******/
 @media screen and (min-width:1400px){
@@ -7008,7 +7116,7 @@ margin-bottom: 45px;
     .vcfo_section1 {
         margin-bottom: 160px;
     }
-    .ca_sec h2 {
+    .ca_sec h2, .dpn_optoins h2 {
         font-size: 42px;
         margin-bottom: 30px;
     }
@@ -7390,6 +7498,11 @@ margin-bottom: 45px;
         border-top: 9px solid transparent;
     }
 
+    .dpn_page .wva_section.about_section.history_section.identifix_sec2.dpntab_sec, 
+    .dpn_page .banners.curve-right.vcf_sec.mg_identifix.dpntab_sec{
+        padding-bottom: 80px !important;
+    }
+
 }
 @media screen and (max-width:1600px){
     
@@ -7513,7 +7626,7 @@ margin-bottom: 45px;
     .home_services {
         padding-top: 90px;
     }
-    .ca_sec h2 {
+    .ca_sec h2, .dpn_optoins h2 {
         font-size: 38px;
     }
     .ill_section.vcfo_section .vcfo_right h4, .irl_section.vcfo_section .vcfo_right h4 {
@@ -7603,6 +7716,9 @@ margin-bottom: 45px;
         padding-bottom: 30px;
         margin-bottom: 50px;
     } 
+    .dpn_page .wva_section.about_section.history_section.identifix_sec2.dpntab_sec, .dpn_page .banners.curve-right.vcf_sec.mg_identifix.dpntab_sec{
+        margin-bottom: 80px;
+    }
 
 
 }
@@ -7889,6 +8005,8 @@ margin-bottom: 45px;
         border-top: 10px solid transparent;
     }
 
+    section.dpn_optoins {
+    padding-top: 60px;}
 
 
 }
@@ -8011,7 +8129,7 @@ margin-bottom: 45px;
     .ill_section.vcfo_section.new_restu {
         padding-top: 35px;
     }
-    .ca_sec h2 {
+    .ca_sec h2, .dpn_optoins h2 {
         font-size: 34px;
         margin-bottom: 20px;
     }
@@ -8351,7 +8469,10 @@ margin-bottom: 45px;
     .mg_slide_part .react-multiple-carousel__arrow--right{
         right: calc(3% + 0px)!important;
     }
-
+    .dpn_page #vCFO {
+    margin-top: 60px;
+    margin-bottom: 75px;
+    }
 
 }
 @media screen and (max-width:1300px){
@@ -8575,8 +8696,7 @@ margin-bottom: 45px;
         height: 56px;
         top: 14px !important;
     }
-    .dpn_page .accordion-button {
-        padding-left: 80px;
+    .dpn_page .accordion-button { 
     }
     .dpn_rp_sec .recovery-partner-title {
         font-size: 20px;
@@ -8666,7 +8786,30 @@ margin-bottom: 45px;
         padding-top: 50px;
     }
 
-
+    .dpn_page .identi_bannersec .banner-image {
+        margin-top: 25px;
+    }
+    .dpn_page .identi_bannersec .banner-content .banner-heading {
+        padding-top: 20px;
+    }
+    .dpn_page .identi_bannersec a.btn_more {
+        margin-top: 6px;
+    }
+    .dpn_page .wva_section.about_section .wva_right {
+        max-width: 475px;
+    }
+    .dpnsec_3 h3{
+            margin-bottom: 13px;
+    }
+    section.dpn_optoins {
+        padding-top: 40px;
+    }
+    .dpn_page .wva_section.about_section.history_section.identifix_sec2.dpntab_sec, .dpn_page .banners.curve-right.vcf_sec.mg_identifix.dpntab_sec {
+    margin-bottom: 60px;
+    }
+    section#DOCA {
+        margin-bottom: 0;
+    }
 }
 
 @media screen and (max-width:1200px){
@@ -8974,7 +9117,7 @@ margin-bottom: 45px;
         font-size: 18px;
         padding: 9px 40px;
     }
-    .ca_sec h2 {
+    .ca_sec h2, .dpn_optoins h2 {
         font-size: 32px;
     }
     .vcfo_section.bsp_section .vcfo_left:before {
@@ -9549,8 +9692,7 @@ margin-bottom: 45px;
         padding: 9px 25px;
     }
     .dpn_page .accordion-button {
-        font-size: 40px;
-        padding-left: 50px;
+        font-size: 40px; 
     }
     .dpn_page .accordion-button:after {
         top: 10px;
@@ -9979,7 +10121,7 @@ margin-bottom: 45px;
     .ill_section.vcfo_section .vcfo_right .ill_txt, .irl_section.vcfo_section .vcfo_right .ill_txt, .ca_sec div.ca_txt {
         font-size: 16px;
     }
-    .ca_sec h2 {
+    .ca_sec h2, .dpn_optoins h2 {
         font-size: 30px;
     }
     .ill_section.vcfo_section .container, .irl_section.vcfo_section .container {
@@ -10769,6 +10911,33 @@ margin-bottom: 45px;
     .ino_mid_text .imt_text {
         margin-bottom: 10px !important;
     }
+    .dpn_page .identi_bannersec .banner-content .banner-heading {
+        padding-top: 0;
+    }
+    .dpn_page .identi_bannersec a.btn_more{ margin-top:0; }
+    .dpn_page .wva_section.about_section .wva_right {
+        max-width: 100%;
+    }
+    .dpnsec_3 h3{
+            font-size: 22px;
+    margin-bottom: 5px;
+    }
+    .dpn_page .ca_txt p {
+        margin: 0 0 15px 0;
+    }
+    #DOCA {
+        margin-bottom: 0;
+    }
+
+    .dpn_page .testimonial-main .col-sm-12.col-md-12.col-lg-6.p-5.desc {
+        padding-top: 0 !important;
+    }
+    .dpn_page .wva_section.about_section.history_section.identifix_sec2.dpntab_sec, .dpn_page .banners.curve-right.vcf_sec.mg_identifix.dpntab_sec{
+            padding-bottom: 50px !important;    margin-bottom: 60px;
+    }
+    .dpn_page #restructure.wva_section .wva_left{
+        margin-top: 50px;
+    }
 }
 @media screen and (max-width:767px){
 
@@ -11108,7 +11277,7 @@ margin-bottom: 45px;
     .ill_section.vcfo_section .vcfo_right h4, .irl_section.vcfo_section .vcfo_right h4 {
         font-size: 26px;
     }
-    .ca_sec h2 {
+    .ca_sec h2, .dpn_optoins h2 {
         font-size: 28px;
         margin-bottom: 15px;
     }
@@ -11406,6 +11575,11 @@ margin-bottom: 45px;
     .mg_slide_part .react-multi-carousel-list button {
         overflow: hidden;
     }
+    .dpn_page #vCFO {
+    margin-top: 40px;
+    margin-bottom: 50px;
+    }
+
 }
 @media screen and (max-width:667px){
     .ol_list h2 {
@@ -11522,8 +11696,7 @@ margin-bottom: 45px;
         height: 24px;
     }
     .dpn_page .accordion-button {
-        font-size: 30px !important;
-        padding-left: 40px;
+        font-size: 30px !important; 
     }
     #community-support .slide img {
         max-height: 358px;
@@ -11946,7 +12119,7 @@ margin-bottom: 45px;
     .ca_sec {
         padding: 35px 0 45px;
     }
-    .ca_sec h2 {
+    .ca_sec h2, .dpn_optoins h2 {
         line-height: 1.2;
     }
     .mg_identifix .wva_right:before {
@@ -12109,7 +12282,7 @@ margin-bottom: 45px;
     .vcfo_section .vcfo_right {
         padding: 25px;
     }
-    .ca_sec h2 {
+    .ca_sec h2, .dpn_optoins h2 {
         font-size: 26px;
     }
     .ca_sec div.ca_txt {
@@ -12158,8 +12331,23 @@ margin-bottom: 45px;
   .sing_sec2 h2, .sing_sec3 h2, .sing_sec4 h2{
         font-size: 26px;
   }
+  .dpnsec_3 h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    line-height: 1.4;
+    letter-spacing: normal;
+    }
+    section.dpn_optoins {
+    padding-top: 38px;
+    }
+    .dpn_optoins p {
+    font-size: 16px;}
+    .dpn_optoins p br{ display:none; }
+    .dpn_page .wva_section.about_section.history_section.identifix_sec2.dpntab_sec, .dpn_page .banners.curve-right.vcf_sec.mg_identifix.dpntab_sec {
+    padding-bottom: 40px !important;
+    margin-bottom: 40px;
+    }    
 
-    
 
 }
 @media screen and (max-width:414px){
@@ -13178,3 +13366,4 @@ button.btn-close {
 .cr_video_pp .popup_dialog {
     max-width: 1300px;
 }
+

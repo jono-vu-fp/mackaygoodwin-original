@@ -10,17 +10,17 @@ const TestimonialMain = (props) => {
       setHeight(scrollPosition);console.log(scrollPosition)
       if(document.getElementsByClassName("why-mg-fixed").length && (window.outerWidth<=991)){
         if(window.outerWidth<430){
-          document.getElementsByClassName("why-mg-fixed")[0].style.top = 96+document.getElementsByClassName("slider_fix")[0].offsetHeight+'px';
+          //document.getElementsByClassName("why-mg-fixed")[0].style.top = 96+document.getElementsByClassName("slider_fix")[0].offsetHeight+'px';
         } else {
-          document.getElementsByClassName("why-mg-fixed")[0].style.top = 91+document.getElementsByClassName("slider_fix")[0].offsetHeight+'px';
+          //document.getElementsByClassName("why-mg-fixed")[0].style.top = 91+document.getElementsByClassName("slider_fix")[0].offsetHeight+'px';
         }
       }
     };
 
-    document.addEventListener("scroll", onScroll);
+    //document.addEventListener("scroll", onScroll);
 
     return () => {
-      document.removeEventListener("scroll", onScroll);
+      //document.removeEventListener("scroll", onScroll);
     };
 
 
