@@ -37,7 +37,7 @@ const Post = ({ data }) => {
   }
   let imgArr = [];
   data?.wpPost?.backInBusiness?.eventGallery.map((d,key) => {
-    imgArr.push(d.eventGalleryImage.mediaItemUrl);
+    imgArr.push(d.eventGalleryImage.mediaItemUrl.replace('http://','https://'));
   });
   let breadCrumbs = [
     { link: "/", title: "Home" },
