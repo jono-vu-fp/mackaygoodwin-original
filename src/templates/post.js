@@ -117,7 +117,7 @@ const Post = ({ data }) => {
             {data.wpPost.backInBusiness.eventGallery!=null && data.wpPost.backInBusiness.eventGallery.map((d,key) => {
               return key<glimit?<li key={key}><div className="event_gsthum">
 
-              <img onClick={() => {setToggler(!toggler);setCurslide(key)}} src={d.eventGalleryImage.mediaItemUrl} alt={d.eventGalleryImage.altText} />
+              <img onClick={() => {setToggler(!toggler);setCurslide(key+1)}} src={d.eventGalleryImage.mediaItemUrl} alt={d.eventGalleryImage.altText} />
 
               </div></li>:null
             })}
