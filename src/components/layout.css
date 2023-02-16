@@ -3869,6 +3869,7 @@ img.recovery-partner-img {
     border: 1px solid #ddd;
     background: #fff;
     margin: 0 1% 25px;
+    cursor: pointer;
 }
 
 .eventgallery_sec ul li img {
