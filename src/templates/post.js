@@ -6,6 +6,7 @@ import Seo from "../components/seo"
 import TopBanner from "../components/top-banner"
 import GetInTouch from "../components/get-in-touch3"
 import GetInTouchPDF from "../components/get-in-touch-pdf"
+import FsLightbox from "fslightbox-react";
 
 // const whyMG = [
 //   {
@@ -25,12 +26,19 @@ import GetInTouchPDF from "../components/get-in-touch-pdf"
 const Post = ({ data }) => {
   const [glimit,setLimit] = React.useState(6);
   const [showLm,setLm] = React.useState(true);
+  const [toggler, setToggler] = React.useState(false);
+  const [curslide, setCurslide] = React.useState(0);
+
   const loadMore = () => {
     setLimit(glimit+6);
     if((glimit+6)>=data.wpPost.backInBusiness.eventGallery.length){
       setLm(false);
     }
   }
+  let imgArr = [];
+  data?.wpPost?.backInBusiness?.eventGallery.map((d,key) => {
+    imgArr.push(d.eventGalleryImage.mediaItemUrl);
+  });
   let breadCrumbs = [
     { link: "/", title: "Home" },
     { title: data.wpPost?.title }
@@ -99,9 +107,19 @@ const Post = ({ data }) => {
       {data.wpPost.backInBusiness?.eventGallery!=null?
       <div className="eventgallery_sec">
         <div className="container">
+        
+       <FsLightbox
+        toggler={toggler}
+        sources={imgArr}
+        slide={curslide}
+      />
             <ul>
             {data.wpPost.backInBusiness.eventGallery!=null && data.wpPost.backInBusiness.eventGallery.map((d,key) => {
-              return key<glimit?<li key={key}><div className="event_gsthum"><img src={d.eventGalleryImage.mediaItemUrl} alt={d.eventGalleryImage.altText} /></div></li>:null
+              return key<glimit?<li key={key}><div className="event_gsthum">
+
+              <img onClick={() => {setToggler(!toggler);setCurslide(key)}} src={d.eventGalleryImage.mediaItemUrl} alt={d.eventGalleryImage.altText} />
+
+              </div></li>:null
             })}
             </ul>
             <div className="me-5 text_center">
