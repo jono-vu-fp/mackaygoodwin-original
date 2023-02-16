@@ -37,7 +37,7 @@ const Post = ({ data }) => {
   }
   let imgArr = [];
   data?.wpPost?.backInBusiness?.eventGallery.map((d,key) => {
-    imgArr.push('<img src="'+d.eventGalleryImage.mediaItemUrl.replace('http://','https://')+'">');
+    imgArr.push(d.eventGalleryImage.mediaItemUrl.replace('http://','https://'));
   });
   let breadCrumbs = [
     { link: "/", title: "Home" },
@@ -112,6 +112,7 @@ const Post = ({ data }) => {
         toggler={toggler}
         sources={imgArr}
         slide={curslide}
+        types={[...new Array(imgArr.length).fill('image')]}
       />
             <ul>
             {data.wpPost.backInBusiness.eventGallery!=null && data.wpPost.backInBusiness.eventGallery.map((d,key) => {
