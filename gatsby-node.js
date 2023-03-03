@@ -69,6 +69,7 @@ exports.createPages = async ({ graphql, actions }) => {
       allWpArticle: { nodes: allWpArticle },
       allWpBusiness: { nodes: allWpBusiness },
       allWpEvent: { nodes: allWpEvent },
+      allWpOurpeople: { nodes: allWpOurpeople },
     },
   } = await graphql(`
     query {
@@ -96,9 +97,16 @@ exports.createPages = async ({ graphql, actions }) => {
           slug
         }
       }
+      allWpOurpeople {
+        nodes {
+          id
+          slug
+        }
+      }
     }
   `)
   const postTemplate = path.resolve(`./src/templates/post.js`)
+  const authorTemplate = path.resolve(`./src/templates/author.js`)
   allPosts.forEach(post => {
     createPage({
       // will be the url for the page
@@ -148,6 +156,21 @@ exports.createPages = async ({ graphql, actions }) => {
       path: "insights/" + post.slug,
       // specify the component template of your choice
       component: slash(postTemplate),
+      // In the ^template's GraphQL query, 'id' will be available
+      // as a GraphQL variable to query for this post's data.
+      context: {
+        id: post.id,
+      },
+    })
+  })
+
+  allWpOurpeople.forEach(post => {
+    console.log(post.slug);
+    createPage({
+      // will be the url for the page
+      path: "author/" + post.slug,
+      // specify the component template of your choice
+      component: slash(authorTemplate),
       // In the ^template's GraphQL query, 'id' will be available
       // as a GraphQL variable to query for this post's data.
       context: {

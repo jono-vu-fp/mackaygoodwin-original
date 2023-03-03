@@ -36,6 +36,7 @@ const topBanner = (props) => {
 							{props.btn !== false && props.sendUrl !== null && props.sendUrl !== "" ? <Link className="btn btn-primary d-none d-sm-none d-md-none d-lg-inline-block" to={props.sendUrl}>{props.btnTxt || "Learn more"}</Link> : ""}
 							{props.downloadBtn === true ? <button className="btn btn-primary" onClick={() => { sendemail() }}>Download e-guide</button> : ""}
 							{props.downloadBtn2 === true ? <a className="btn btn-primary" href="#get-in-touch">Download e-guide</a> : ""}
+							{props.readTime !== null && props.readTime !== "" && props.readTime !== undefined ? <span>Read Time<br />{props.readTime}</span> : ""}
 						</div>
 					</div>
 					<div className={typeof props.equalWidth !== "undefined" && props.equalWidth ? "col-sm-12 col-md-12 col-lg-6 col-xl-6" : "col-sm-12 col-md-12 col-lg-6 col-xl-5"}>

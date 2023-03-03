@@ -6927,7 +6927,57 @@ section.dpn_optoins {
     padding-bottom: 70px;
 }
 
+.author_page .banner-image::after{
+        background: #eae7db;
+        bottom: 0;
+    top: inherit;
+}
+.author_page .banner-image:before {
+    
+    bottom: inherit;
+    top: 0;
+}
+.author_page .banner-image img {
+    height: 500px;
+    object-fit: cover;
+}
+.author_page .liq_banner .row{
+       align-items: flex-start;
+}
+.author_page .banner-content .banner-heading{
+        margin-top: 65px;       color: #0d4432; 
+}
+.author_page .banner-content .banner-subheading {
+    color: #0d4432;
+    
+    font-family: Sohne-Buch,sans-serif,Arial;
+}
+.author_page .liq_banner .banner-content {
+    padding-left: 40px;
+} 
+.aufull_cont {
+    background: #dde1e3;
+    padding-top: 70px;
+    margin-top: 75px;
+    padding-bottom: 70px;
+}
+.aufull_cont p{    color: #000;
+    font-size: 18px;
+    line-height: 1.55;
+    margin:0;}
 
+.mid_head{
+    color: #1c5e48;
+    font-size: 36px;
+    margin: 0 0 37px;
+        font-family: reckless_neue_trialregular,serif,Times New Roman;
+}
+.au_newsec section.news-list {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.au_newsec section.news-list .mt-4{ margin-top:0 !important; }
+.au_newsec{ padding-bottom:90px; }
 /****** BreakPoints *******/
 /****** Responsive Start *******/
 @media screen and (min-width:1400px){
@@ -7720,7 +7770,9 @@ section.dpn_optoins {
     .dpn_page .wva_section.about_section.history_section.identifix_sec2.dpntab_sec, .dpn_page .banners.curve-right.vcf_sec.mg_identifix.dpntab_sec{
         margin-bottom: 80px;
     }
-
+    .author_page .banner-image img {
+        height: 475px;
+    }
 
 }
 @media screen and (max-width:1500px){
@@ -8474,6 +8526,9 @@ section.dpn_optoins {
     margin-top: 60px;
     margin-bottom: 75px;
     }
+    .author_page .banner-image img {
+        height: 400px;
+    }
 
 }
 @media screen and (max-width:1300px){
@@ -8811,6 +8866,17 @@ section.dpn_optoins {
     section#DOCA {
         margin-bottom: 0;
     }
+    .author_page .banner-image {
+        margin-top: 40px;
+    }
+    .author_page .liq_banner .banner-content {
+        padding-left: 25px;
+    }
+    .mid_head{
+            font-size: 34px;
+    margin: 0 0 28px;
+    }
+
 }
 
 @media screen and (max-width:1200px){
@@ -10939,6 +11005,43 @@ section.dpn_optoins {
     .dpn_page #restructure.wva_section .wva_left{
         margin-top: 50px;
     }
+    .author_page .banner-content .banner-heading {
+            margin-top: 40px;
+    }
+    .author_page .liq_banner .banner-content {
+        padding-left: 0;
+    }
+    .author_page .banner-image{ padding-top:100%; }
+    .author_page .banner-image img {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    }
+    .author_page #banner-section.liq_banner {
+        padding-top: 0;
+    }
+    .aufull_cont {
+    padding-top: 60px;
+    margin-top: 55px;
+    padding-bottom: 60px;
+    }
+    .mid_head{
+            font-size: 32px;
+    margin: 0 0 25px;
+    }
+    .au_newsec section.news-list .mt-4 {
+        margin-top: 1.5rem !important;
+    }
+    .author_page .liq_blocks.va_blocks.media_blocks {
+        padding-bottom: 25px;
+    }
+    .author_page .news-list h4{
+            min-height: auto !important;
+    }
+    .au_newsec {
+        padding-bottom: 70px;
+    }
 }
 @media screen and (max-width:767px){
 
@@ -11579,6 +11682,13 @@ section.dpn_optoins {
     .dpn_page #vCFO {
     margin-top: 40px;
     margin-bottom: 50px;
+    }
+    .mid_head {
+    font-size: 30px;
+    margin: 0 0 22px;
+    }
+    .author_page .banner-content .banner-subheading{
+        line-height: 25px;
     }
 
 }
@@ -12349,6 +12459,20 @@ section.dpn_optoins {
     margin-bottom: 40px;
     }    
 
+    .author_page .banner-content .banner-heading {
+        margin-top: 25px;
+    }
+    .aufull_cont p{
+        font-size: 17px;
+    }
+
+    .aufull_cont {
+    padding-top: 50px;
+    margin-top: 50px;
+    padding-bottom: 50px;
+    }
+    .mid_head {
+    font-size: 27px;}
 
 }
 @media screen and (max-width:414px){
@@ -13093,6 +13217,7 @@ section.dpn_optoins {
     ul.top-belt.justify-content-center {
         justify-content: flex-end
     }
+
 }
 
 

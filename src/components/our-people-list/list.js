@@ -88,7 +88,8 @@ const PeopleList = (props) => {
                   <a href={"tel:" + d.phone} className="pb-2 px-right d-inline-block"><i className="fa fa-phone" aria-hidden="true"></i></a>
                   <a href={d.linkedin} className="pb-2 d-inline-block"><i className="fa fa-linkedin" aria-hidden="true"></i></a>
                 </div>
-                {d.content && d.content.length > 0 && <a className="ps-4 pe-4 px-4" href="#" onClick={(e) => { e.preventDefault(); setShowPopup(1); console.log(key); slide.current.slickGoTo(key); }}>Read More <i className="fa fa-chevron-right" aria-hidden="true"></i></a>}
+                {/*d.content && d.content.length > 0 && <a className="ps-4 pe-4 px-4" href="#" onClick={(e) => { e.preventDefault(); setShowPopup(1); console.log(key); slide.current.slickGoTo(key); }}>Read More <i className="fa fa-chevron-right" aria-hidden="true"></i></a>*/}
+                <Link className="ps-4 pe-4 px-4" to={'/author/'+d.slug}>Read More <i className="fa fa-chevron-right" aria-hidden="true"></i></Link>
               </div>
             </div>
           })}
@@ -106,7 +107,8 @@ const PeopleList = (props) => {
                   <a href={"tel:" + d.phone} className="pb-2 px-right d-inline-block"><i className="fa fa-phone" aria-hidden="true"></i></a>
                   <a href={d.linkedin} className="pb-2 d-inline-block"><i className="fa fa-linkedin" aria-hidden="true"></i></a>
                 </div>
-                {d.content && d.content.length > 0 && <a className="ps-4 pe-4 px-4" href="#" onClick={(e) => { e.preventDefault(); setShowPopup(1); console.log(key); slide.current.slickGoTo(3+key); }}>Read More <i className="fa fa-chevron-right" aria-hidden="true"></i></a>}
+                {/*d.content && d.content.length > 0 && <a className="ps-4 pe-4 px-4" href="#" onClick={(e) => { e.preventDefault(); setShowPopup(1); console.log(key); slide.current.slickGoTo(3+key); }}>Read More <i className="fa fa-chevron-right" aria-hidden="true"></i></a>*/}
+                <Link className="ps-4 pe-4 px-4" to={'/author/'+d.slug}>Read More <i className="fa fa-chevron-right" aria-hidden="true"></i></Link>
               </div>
             </div>
           })}
@@ -131,7 +133,8 @@ const PeopleList = (props) => {
                   <a href={d.linkedin} className="pb-2 d-inline-block"><i className="fa fa-linkedin" aria-hidden="true"></i></a>
                 </div>
                 <p className="px-4" dangerouslySetInnerHTML={{ __html: d.content }}></p>
-                {d.content && d.content.length > 0 && <a className="ps-4 pe-4 px-4" href="#" onClick={(e) => { e.preventDefault(); setShowPopup(1); console.log(key); slide.current.slickGoTo(key); }}>Read More <i className="fa fa-chevron-right" aria-hidden="true"></i></a>}
+                {/*d.content && d.content.length > 0 && <a className="ps-4 pe-4 px-4" href="#" onClick={(e) => { e.preventDefault(); setShowPopup(1); console.log(key); slide.current.slickGoTo(key); }}>Read More <i className="fa fa-chevron-right" aria-hidden="true"></i></a>*/}
+                <Link className="ps-4 pe-4 px-4" to={'/author/'+d.slug}>Read More <i className="fa fa-chevron-right" aria-hidden="true"></i></Link>
               </div>
             </div>
           })}
