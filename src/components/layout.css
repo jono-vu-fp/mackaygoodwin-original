@@ -6978,6 +6978,19 @@ section.dpn_optoins {
 }
 .au_newsec section.news-list .mt-4{ margin-top:0 !important; }
 .au_newsec{ padding-bottom:90px; }
+.wva_videobox {
+    position: relative;    padding-top: 67%;
+}
+.wva_videobox video {
+   width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+
 /****** BreakPoints *******/
 /****** Responsive Start *******/
 @media screen and (min-width:1400px){

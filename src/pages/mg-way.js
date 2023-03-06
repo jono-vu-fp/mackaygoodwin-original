@@ -146,7 +146,12 @@ const MgWay = ({ data }) => {
           </div>
 
           <div className="wva_left">
-            <img src={data.wpPage.mgWayPageOptions?.aboutImage.mediaItemUrl} alt="" />
+            {data.wpPage.mgWayPageOptions?.aboutVideo?
+            <div
+          className="wva_videobox"
+          dangerouslySetInnerHTML={{ __html: '<video width="320" height="240" autoplay="autoplay" muted playsinline><source src='+data.wpPage.mgWayPageOptions?.aboutVideo.mediaItemUrl+' type="video/mp4" /></video>' }}
+        />:
+            <img src={data.wpPage.mgWayPageOptions?.aboutImage.mediaItemUrl} alt="" />}
           </div>
           <div className="wva_right">
             <h3>{data.wpPage.mgWayPageOptions.contentTitle}</h3>
@@ -360,6 +365,10 @@ export const query = graphql`
     wpPage(title: {eq: "The MG Way"}) {
       mgWayPageOptions {
         aboutImage {
+          altText
+          mediaItemUrl
+        }
+        aboutVideo {
           altText
           mediaItemUrl
         }
