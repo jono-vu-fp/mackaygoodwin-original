@@ -56,6 +56,9 @@ const Author = ({ data }) => {
         text={''}
         bannerImg={data.wpPost?.featuredImage?.node}
         breadCrumbs={breadCrumbs}
+        linkedin= {data.wpPost.backInBusiness.linkedin}
+        email= {data.wpPost.backInBusiness.email}
+        phone= {data.wpPost.backInBusiness.phoneNumber}
         // btn={typeof window !== 'undefined' && window.location.pathname === '/insights/business-survival-pack/' ? false : true}
         btn={false}
         btnTxt={data.wpPost.backInBusiness?.eventStatus == '' ? '' : (data.wpPost.backInBusiness?.eventStatus == 'enablevideoaccess' ? 'Watch Now' : data.wpPost.backInBusiness?.buttonLabel)}
@@ -142,6 +145,8 @@ query ($id: String) {
         twitter
         facebook
         linkedin
+        email
+        phoneNumber
         articles {
           ... on WpArticle {
             id

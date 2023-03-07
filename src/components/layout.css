@@ -6930,6 +6930,7 @@ section.dpn_optoins {
 .author_page .banner-image::after{
         background: #eae7db;
         bottom: 0;
+            width: 680%;
     top: inherit;
 }
 .author_page .banner-image:before {
@@ -6938,8 +6939,11 @@ section.dpn_optoins {
     top: 0;
 }
 .author_page .banner-image img {
-    height: 500px;
+    height: 300px;
     object-fit: cover;
+}
+.author_page #banner-section.liq_banner{
+        padding-top: 66px;
 }
 .author_page .liq_banner .row{
        align-items: flex-start;
@@ -7783,9 +7787,7 @@ section.dpn_optoins {
     .dpn_page .wva_section.about_section.history_section.identifix_sec2.dpntab_sec, .dpn_page .banners.curve-right.vcf_sec.mg_identifix.dpntab_sec{
         margin-bottom: 80px;
     }
-    .author_page .banner-image img {
-        height: 475px;
-    }
+    
 
 }
 @media screen and (max-width:1500px){
@@ -8540,7 +8542,7 @@ section.dpn_optoins {
     margin-bottom: 75px;
     }
     .author_page .banner-image img {
-        height: 400px;
+        height: 285px;
     }
 
 }
@@ -8888,6 +8890,9 @@ section.dpn_optoins {
     .mid_head{
             font-size: 34px;
     margin: 0 0 28px;
+    }
+    .author_page #banner-section.liq_banner {
+        padding-top: 23px;
     }
 
 }
