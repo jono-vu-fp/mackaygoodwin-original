@@ -117,6 +117,17 @@ const MgWay = ({ data }) => {
       }
     }
   }, 500)
+  const toggleVideo = () =>{
+    let video = document.querySelector('.video');
+    let playpause = document.querySelector('.playpause');
+    if (video.paused) {
+      video.play();
+      playpause.setAttribute('hiddens', '');
+    } else {
+      video.pause();
+      playpause.removeAttribute('hiddens');
+    }
+  }
   return (<div className="mgway">
     <Layout>
       <Seo title={data.wpPage.metaFields?.metaTitle} description={data.wpPage.metaFields?.metaDescription} />
@@ -147,10 +158,9 @@ const MgWay = ({ data }) => {
 
           <div className="wva_left">
             {data.wpPage.mgWayPageOptions?.aboutVideo?
-            <div
-          className="wva_videobox"
-          dangerouslySetInnerHTML={{ __html: '<video width="320" height="240" autoplay="autoplay" muted playsinline><source src='+data.wpPage.mgWayPageOptions?.aboutVideo.mediaItemUrl+' type="video/mp4" /></video>' }}
-        />:
+            <div className="wva_videobox">
+            <div dangerouslySetInnerHTML={{ __html: '<video class="video" width="320" height="240" playsinline poster="'+data.wpPage.mgWayPageOptions?.aboutVideoCover.mediaItemUrl+'"><source src='+data.wpPage.mgWayPageOptions?.aboutVideo.mediaItemUrl+' type="video/mp4" /></video>' }}
+        /><div class="playpause" onClick={toggleVideo}>play</div></div>:
             <img src={data.wpPage.mgWayPageOptions?.aboutImage.mediaItemUrl} alt="" />}
           </div>
           <div className="wva_right">
@@ -369,6 +379,10 @@ export const query = graphql`
           mediaItemUrl
         }
         aboutVideo {
+          altText
+          mediaItemUrl
+        }
+        aboutVideoCover {
           altText
           mediaItemUrl
         }

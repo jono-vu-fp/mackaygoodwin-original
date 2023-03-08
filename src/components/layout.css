@@ -6993,6 +6993,31 @@ section.dpn_optoins {
     left: 0;
     object-fit: cover;
 }
+.playpause{
+    background: url(../images/play_icon.png);
+    width: 100%;
+    height: 100%;
+    font-size: 0;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+     opacity: 1;
+  transition: opacity 400ms;
+  background-size: 70px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+ 
+
+.playpause[hiddens] {
+  opacity: 0;
+  display: block;
+}
+
 
 
 /****** BreakPoints *******/
@@ -11708,6 +11733,7 @@ section.dpn_optoins {
     .author_page .banner-content .banner-subheading{
         line-height: 25px;
     }
+    .playpause{    background-size: 50px;}
 
 }
 @media screen and (max-width:667px){
