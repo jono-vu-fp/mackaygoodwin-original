@@ -7018,6 +7018,36 @@ section.dpn_optoins {
   display: block;
 }
 
+.wva_video {
+    cursor: pointer;
+    position: relative;
+}
+.wva_video:before {
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid #fff;
+    border-top: 8px solid transparent;
+    content: "";
+    left: 49.5%;
+    margin: auto;
+    pointer-events: none;
+    position: absolute;
+    top: 47%;
+    z-index: 99;
+}
+.wva_video:after {
+    background-color: #1c5e48;
+    border-radius: 100%;
+    bottom: 0;
+    content: "";
+    height: 50px;
+    left: 0;
+    margin: auto;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50px;
+}
 
 
 /****** BreakPoints *******/

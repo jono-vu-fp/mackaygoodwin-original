@@ -128,6 +128,12 @@ const MgWay = ({ data }) => {
       playpause.removeAttribute('hiddens');
     }
   }
+  const [vdUrl, setVdUrl] = React.useState('');
+  const [showModal, setModal] = React.useState(false);
+  const setVideoUrl = (url) => {
+    setVdUrl(url);
+    setModal(true);
+  }
   return (<div className="mgway">
     <Layout>
       <Seo title={data.wpPage.metaFields?.metaTitle} description={data.wpPage.metaFields?.metaDescription} />
@@ -157,11 +163,14 @@ const MgWay = ({ data }) => {
           </div>
 
           <div className="wva_left">
-            {data.wpPage.mgWayPageOptions?.aboutVideo?
-            <div className="wva_videobox">
-            <div dangerouslySetInnerHTML={{ __html: '<video class="video" width="320" height="240" playsinline poster="'+data.wpPage.mgWayPageOptions?.aboutVideoCover.mediaItemUrl+'"><source src='+data.wpPage.mgWayPageOptions?.aboutVideo.mediaItemUrl+' type="video/mp4" /></video>' }}
-        /><div class="playpause" onClick={toggleVideo}>play</div></div>:
-            <img src={data.wpPage.mgWayPageOptions?.aboutImage.mediaItemUrl} alt="" />}
+
+          <div className="wva_video">
+          <img onClick={()=>setVideoUrl(data.wpPage.mgWayPageOptions.aboutVideo?.mediaItemUrl)} src={data.wpPage.mgWayPageOptions.aboutVideoCover?.mediaItemUrl} alt={data.wpPage.mgWayPageOptions.aboutVideoCover?.altText} />
+          </div>
+          
+
+
+           
           </div>
           <div className="wva_right">
             <h3>{data.wpPage.mgWayPageOptions.contentTitle}</h3>
@@ -364,6 +373,24 @@ const MgWay = ({ data }) => {
           title={data.wpPage.mgWayPageOptions.mgAwardTitle}
           data={data.wpPage.mgWayPageOptions.mgAwardPoints}
         />
+
+
+        <div id="myModal" role="dialog" className={showModal?'in show modal cr_video_pp fade':'modal cr_video_pp fade'}>
+        <div className="model_inner">
+          <div className="popup_dialog">
+            <div className="modal-content">
+              <button type="button" className="close" data-dismiss="modal" onClick={()=>setModal(false)}>&times;</button>
+              <div className="popup_body">
+                <div className="video_ratio">
+                {vdUrl?<video key={vdUrl} width="100%" controls><source src={vdUrl} type="video/mp4" />Your browser does not support the video tag.</video>:null}
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </Layout>
   </div>
   )
