@@ -89,21 +89,42 @@ const Post = ({ data }) => {
         readTime={data.wpPost?.articleAuthor?.readTime}
       />
 
-
+       
+       <div className="detailPost">
       <div className="container">
         <div className="row">
-          {/*data.wpPost?.articleAuthor?.articleAuthor?<div className="col-sm-12 col-md-4 author">
-            <a href={'https://www.facebook.com/share.php?u=https://mackaygoodwin.com.au/insights/'+data.wpPost?.slug} target="_blank">Facebook</a>
-            <a href={'https://www.linkedin.com/sharing/share-offsite/?url=https://mackaygoodwin.com.au/insights/'+data.wpPost?.slug} target="_blank">LinkedIn</a>
-            <a href={'https://twitter.com/intent/tweet?url=https://mackaygoodwin.com.au/insights/'+data.wpPost?.slug} target="_blank">Twitter</a>
-            <Link to={'/author/'+data.wpPost?.articleAuthor?.articleAuthor.slug}>
+       
+          {data.wpPost?.articleAuthor?.articleAuthor?<div className="col-sm-12 col-md-2 author"> <div className="author_box">
+          <div className="socialshare">
+            <span>SHARE TO</span>
+           <a href={'https://www.facebook.com/share.php?u=https://mackaygoodwin.com.au/insights/'+data.wpPost?.slug} target="_blank">
+            <i class="fa fa-facebook-square"></i>
+           </a>
+             <a href={'https://twitter.com/intent/tweet?url=https://mackaygoodwin.com.au/insights/'+data.wpPost?.slug} target="_blank"><i class="fa fa-twitter"></i></a>
+            <a href={'https://www.linkedin.com/sharing/share-offsite/?url=https://mackaygoodwin.com.au/insights/'+data.wpPost?.slug} target="_blank"><i class="fa fa-linkedin"></i></a>
+          
+          </div>
+           
+           <div className="post_auther">
+           <Link to={'/author/'+data.wpPost?.articleAuthor?.articleAuthor.slug}>
+             <div className="autherlt">
               <img src={data.wpPost?.articleAuthor?.articleAuthor.featuredImage?.node.mediaItemUrl} className="img-fluid" alt={data.wpPost?.articleAuthor?.articleAuthor.featuredImage?.node.altText} />
-              AUTHOR<br />
-              {data.wpPost?.articleAuthor?.articleAuthor.title}<br />
-              {data.wpPost?.articleAuthor?.articleAuthor.backInBusiness?.designation}
-            </Link>
-          </div>:null*/}
-          <div className="col-sm-12 col-md-8 detailPost">
+              </div>
+             <div className="autherrt">
+               <p>AUTHOR</p>
+              <h4>{data.wpPost?.articleAuthor?.articleAuthor.title}</h4>
+              <h3>{data.wpPost?.articleAuthor?.articleAuthor.backInBusiness?.designation}</h3>
+
+             </div>
+             </Link>
+           </div>
+           
+            
+             
+              
+           </div> 
+          </div>:null}
+          <div className="col-sm-12 col-md-8 sgpost_cont">
             <div dangerouslySetInnerHTML={{ __html: data.wpPost.content }}></div>
             <div className="rig_button">
 
@@ -116,6 +137,7 @@ const Post = ({ data }) => {
           </div>
         </div>
       </div>
+       </div>
       {data.wpPost.backInBusiness?.eventGallery!=null?
       <div className="eventgallery_sec">
         <div className="container">

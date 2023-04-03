@@ -126,6 +126,12 @@ export const query = graphql`
           }
         }
         slug
+        newscategories {
+          nodes {
+            name
+            id
+          }
+        }
       }
     }
   }
