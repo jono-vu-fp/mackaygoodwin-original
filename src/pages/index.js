@@ -293,10 +293,10 @@ const IndexPage = ({ data }) => {
         <div class="model_inner">
         <div class="popup_dialog">
         <div class="modal-content">
-        <button type="button" class="close" data-dismiss="modal" onClick={()=>{setModal(false);$('iframe.embed-responsive-item').attr('src', $('iframe.embed-responsive-item').attr('src').replace("autoplay=1&amp;", ""));}}>&times;</button>
+        <button type="button" class="close" data-dismiss="modal" onClick={()=>{setModal(false);document.getElementById('pp_vid').pause();}}>&times;</button>
         <div class="popup_body">
         <div class="video_ratio">
-        <div dangerouslySetInnerHTML={{__html: data.wpPage.hpOptions.obcVideo }} />
+        <video width="100%" id="pp_vid" controls><source src={data.wpPage.hpOptions.obcVideoUpload.mediaItemUrl} type="video/mp4" />Your browser does not support the video tag.</video>
         </div>
         </div>
         </div>
@@ -383,6 +383,10 @@ export const query = graphql`
         whyMgTitle
         obcTitle
         obcImage {
+          altText
+          mediaItemUrl
+        }
+        obcVideoUpload {
           altText
           mediaItemUrl
         }
