@@ -6,6 +6,7 @@ import Seo from "../components/seo"
 import TopBanner from "../components/top-banner"
 import GetInTouch from "../components/get-in-touch3"
 import GetInTouchPDF from "../components/get-in-touch-pdf"
+import FsLightbox from "fslightbox-react";
 
 // const whyMG = [
 //   {
@@ -25,12 +26,19 @@ import GetInTouchPDF from "../components/get-in-touch-pdf"
 const Post = ({ data }) => {
   const [glimit,setLimit] = React.useState(6);
   const [showLm,setLm] = React.useState(true);
+  const [toggler, setToggler] = React.useState(false);
+  const [curslide, setCurslide] = React.useState(0);
+
   const loadMore = () => {
     setLimit(glimit+6);
     if((glimit+6)>=data.wpPost.backInBusiness.eventGallery.length){
       setLm(false);
     }
   }
+  let imgArr = [];
+  data?.wpPost?.backInBusiness?.eventGallery.map((d,key) => {
+    imgArr.push(d.eventGalleryImage.mediaItemUrl.replace('http://','https://'));
+  });
   let breadCrumbs = [
     { link: "/", title: "Home" },
     { title: data.wpPost?.title }
@@ -78,11 +86,23 @@ const Post = ({ data }) => {
         btnTxt={data.wpPost.backInBusiness?.eventStatus == '' ? '' : (data.wpPost.backInBusiness?.eventStatus == 'enablevideoaccess' ? 'Watch Now' : data.wpPost.backInBusiness?.buttonLabel)}
         sendUrl={data.wpPost.backInBusiness?.eventStatus == 'enablevideoaccess' ? data.wpPost.backInBusiness.recordingUrl?.url : data.wpPost.backInBusiness?.registerUrl}
         downloadBtn2={typeof window !== 'undefined' && window.location.pathname === '/insights/business-survival-pack/' ? true : false}
+        readTime={data.wpPost?.articleAuthor?.readTime}
       />
 
 
       <div className="container">
         <div className="row">
+          {/*data.wpPost?.articleAuthor?.articleAuthor?<div className="col-sm-12 col-md-4 author">
+            <a href={'https://www.facebook.com/share.php?u=https://mackaygoodwin.com.au/insights/'+data.wpPost?.slug} target="_blank">Facebook</a>
+            <a href={'https://www.linkedin.com/sharing/share-offsite/?url=https://mackaygoodwin.com.au/insights/'+data.wpPost?.slug} target="_blank">LinkedIn</a>
+            <a href={'https://twitter.com/intent/tweet?url=https://mackaygoodwin.com.au/insights/'+data.wpPost?.slug} target="_blank">Twitter</a>
+            <Link to={'/author/'+data.wpPost?.articleAuthor?.articleAuthor.slug}>
+              <img src={data.wpPost?.articleAuthor?.articleAuthor.featuredImage?.node.mediaItemUrl} className="img-fluid" alt={data.wpPost?.articleAuthor?.articleAuthor.featuredImage?.node.altText} />
+              AUTHOR<br />
+              {data.wpPost?.articleAuthor?.articleAuthor.title}<br />
+              {data.wpPost?.articleAuthor?.articleAuthor.backInBusiness?.designation}
+            </Link>
+          </div>:null*/}
           <div className="col-sm-12 col-md-8 detailPost">
             <div dangerouslySetInnerHTML={{ __html: data.wpPost.content }}></div>
             <div className="rig_button">
@@ -99,9 +119,20 @@ const Post = ({ data }) => {
       {data.wpPost.backInBusiness?.eventGallery!=null?
       <div className="eventgallery_sec">
         <div className="container">
+        
+       <FsLightbox
+        toggler={toggler}
+        sources={imgArr}
+        slide={curslide}
+        types={[...new Array(imgArr.length).fill('image')]}
+      />
             <ul>
             {data.wpPost.backInBusiness.eventGallery!=null && data.wpPost.backInBusiness.eventGallery.map((d,key) => {
-              return key<glimit?<li key={key}><div className="event_gsthum"><img src={d.eventGalleryImage.mediaItemUrl} alt={d.eventGalleryImage.altText} /></div></li>:null
+              return key<glimit?<li key={key}><div className="event_gsthum">
+
+              <img onClick={() => {setToggler(!toggler);setCurslide(key+1)}} src={d.eventGalleryImage.mediaItemUrl} alt={d.eventGalleryImage.altText} />
+
+              </div></li>:null
             })}
             </ul>
             <div className="me-5 text_center">
@@ -139,6 +170,7 @@ query ($id: String) {
     wpPost(id: {eq: $id}) {
       title
       content
+      slug
       featuredImage {
         node {
           altText
@@ -153,6 +185,7 @@ query ($id: String) {
     wpArticle(id: {eq: $id}) {
       title
       content
+      slug
       featuredImage {
         node {
           altText
@@ -163,10 +196,33 @@ query ($id: String) {
         metaDescription
         metaTitle
       }
+      articleAuthor {
+        readTime
+        articleAuthor {
+          ... on WpOurpeople {
+            slug
+            title
+            content
+            backInBusiness {
+              designation
+              twitter
+              facebook
+              linkedin
+            }
+            featuredImage {
+              node {
+                altText
+                mediaItemUrl
+              }
+            }
+          }
+        }
+      }
     }
     wpBusiness(id: {eq: $id}) {
       title
       content
+      slug
       backInBusiness {
         subTitle
       }
@@ -184,6 +240,7 @@ query ($id: String) {
     wpEvent(id: {eq: $id}) {
       title
       content
+      slug
       eventsOption {
         subTitle
         buttonLabel

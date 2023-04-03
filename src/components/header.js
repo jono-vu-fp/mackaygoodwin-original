@@ -99,7 +99,7 @@ const Header = () => {
         </ul>
         <ul className="top-belt d-flex ms-auto">
           <li className="nav-item">
-            <a className="nav-link" aria-current="page" href="tel:0292207100">{typeof window !== "undefined" && window.screen.width > 979 ? "Speak to our experts 02 9220 7100" : "Call 02 9220 7100"} <i className="fa fa-chevron-right"></i></a>
+            <a className="nav-link" aria-current="page" href="tel:1300062950">{typeof window !== "undefined" && window.screen.width > 979 ? "Speak to our experts 1300 062 950" : "Call 1300 062 950"} <i className="fa fa-chevron-right"></i></a>
           </li>
           <li className="nav-item">
             <a className="nav-link" aria-current="page" href="/contact/">Get expert advice <i className="fa fa-chevron-right"></i></a>
@@ -179,7 +179,7 @@ const Header = () => {
       <div className="bg-light">
         <ul className="top-belt d-flex justify-content-center">
           <li className="nav-item">
-            <a className="nav-link" aria-current="page" href="tel:0292207100">{typeof window !== "undefined" && window.screen.width > 979 ? "Speak to our experts 02 9220 7100" : "Call 02 9220 7100"} <i className="fa fa-chevron-right"></i></a>
+            <a className="nav-link" aria-current="page" href="tel:1300062950">{typeof window !== "undefined" && window.screen.width > 979 ? "Speak to our experts 1300 062 950" : "Call 1300 062 950"} <i className="fa fa-chevron-right"></i></a>
           </li>
           <li className="nav-item">
             <a className="nav-link" aria-current="page" href="/contact/">Get expert advice <i className="fa fa-chevron-right"></i></a>
@@ -203,7 +203,7 @@ const Header = () => {
         <div className="top-mobile">
           <ul className="top-belt2 d-flex ms-auto">
             <li className="nav-item">
-              <a className="nav-link" aria-current="page" href="tel:0292207100">{typeof window !== "undefined" && window.screen.width > 979 ? "Speak to our experts 02 9220 7100" : "Call 02 9220 7100"} <i className="fa fa-chevron-right"></i></a>
+              <a className="nav-link" aria-current="page" href="tel:1300062950">{typeof window !== "undefined" && window.screen.width > 979 ? "Speak to our experts 1300 062 950" : "Call 1300 062 950"} <i className="fa fa-chevron-right"></i></a>
             </li>
             <li className="nav-item">
               <a className="nav-link" aria-current="page" href="/contact/">Get expert advice <i className="fa fa-chevron-right"></i></a>

@@ -10,7 +10,7 @@ import Options from "../components/options/container"
 import useInView from "react-cool-inview";
 import OurPeople from "../components/our-people-list/our-people2"
 import Services from "../components/services/container2"
-import GetInTouch from "../components/get-in-touch"
+import GetInTouch from "../components/get-in-touch3"
 import GetInTouch2 from "../components/get-in-touch2"
 
 const DirectorPenaltyNotice = ({data}) => {
@@ -45,82 +45,191 @@ const DirectorPenaltyNotice = ({data}) => {
   return (<Layout>
     <Seo title="DirectorPenaltyNotice" />
     <div class="dpn_page">
-      <section class="dpnbanner_sec dpnbanner_sec1">
+      <section id="banner-section" class="identi_bannersec identifix_sec1">
      <div class="container position-relative">
-     <div class="row">
-       <div class="col-sm-12 col-md-12 col-lg-7 col-xl-7">
+      <div class="row">
+       <div class="col-sm-12 col-md-12 col-lg-5 col-xl-5">
           <div class="banner-content innerpage-banner">
              <h1 class="banner-heading">{data.wpPage.directorpenaltynoticePageOptions.title}</h1>
               
-             <div class="banner-desc">
+             <div class="banner-desc d-none d-sm-none d-md-none d-lg-block">
              
-             <div dangerouslySetInnerHTML={{__html: data.wpPage.directorpenaltynoticePageOptions.description }} />
+             <div dangerouslySetInnerHTML={{__html: data.wpPage.directorpenaltynoticePageOptions.description }} /> 
              </div>
+             <div class="d-none d-sm-none d-md-none d-lg-block">
+                 <Link className="btn_more" to="/contact/">Enquire now</Link>
+                </div>
           </div>
        </div>
-       <div class="col-sm-12 col-md-12 col-lg-5 col-xl-5  d-none d-sm-none d-md-none d-lg-block">
-           <GetInTouch2
-          title={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchTitle}
-          text={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchDescription}
-        />
+       <div class="col-sm-12 col-md-12 col-lg-5 col-xl-5">
+          <div class="banner-image">
+           <img src={data.wpPage.directorpenaltynoticePageOptions.banner.mediaItemUrl} alt="data.wpPage.directorpenaltynoticePageOptions.banner.altText" />
+
+          </div>
+          <div class="col-12 d-block d-sm-block d-md-block d-lg-none banner-mdesc">
+             <div class="banner-desc"><div dangerouslySetInnerHTML={{__html: data.wpPage.directorpenaltynoticePageOptions.description }} /></div>
+             <div>
+              <Link className="btn_more" to="/contact/">Enquire Now</Link>
+
+              </div>
+
+          </div>
        </div>
     </div>
     </div>
-    </section>   <section class="dpnbanner_sec d-md-block d-lg-none dpnbnr_form">
-           <div class="container position-relative"><div class="bnr_form">
-               <GetInTouch2
-              title={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchTitle}
-              text={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchDescription}
-            />
-           </div> </div> 
-           </section>   
-      <section id="vCFO" class="banners curve-left bhc_sec wdpn_section">
+    </section>   
+
+      <section id="vCFO" class="wva_section about_section history_section identifix_sec2">
        <div class="container">
-          <div class="row">
-             <div class="col-sm-10 col-md-10 col-lg-10 offset-sm-1 offset-md-1 offset-lg-1">
-                <div class="image-warpper">
-                <div class="vid_play"><img class="img-fluid" src={data.wpPage.directorpenaltynoticePageOptions.banner1.mediaItemUrl} alt="data.wpPage.directorpenaltynoticePageOptions.banner1.altText"/>
 
-                </div>
-                </div>
-                <div class="ins-content2">
-                   <h2 class="ins-banner-heading2">{data.wpPage.directorpenaltynoticePageOptions.title1}</h2>
-                   <div class="ins-banner-details2"><div dangerouslySetInnerHTML={{__html: data.wpPage.directorpenaltynoticePageOptions.description1 }} /></div>
-                    
+       <div className="wva_left">
+            <img class="img-fluid" src={data.wpPage.directorpenaltynoticePageOptions.banner1.mediaItemUrl} alt="data.wpPage.directorpenaltynoticePageOptions.banner1.altText"/>
+            </div>
 
-
-        
-
-                   {data.wpPage.directorpenaltynoticePageOptions.wsButtonLink !== null && data.wpPage.directorpenaltynoticePageOptions.wsButtonLink !== "" ? <Link className="btn btn-primary me-5" to={data.wpPage.directorpenaltynoticePageOptions.wsButtonLink}>{data.wpPage.directorpenaltynoticePageOptions.wsButtonText}</Link> : ""}
-                </div>
-             </div>
+          <div className="wva_right">
+            <h3>{data.wpPage.directorpenaltynoticePageOptions.title1}</h3>
+            <div dangerouslySetInnerHTML={{__html: data.wpPage.directorpenaltynoticePageOptions.description1 }} />
+               {data.wpPage.directorpenaltynoticePageOptions.wsButtonLink !== null && data.wpPage.directorpenaltynoticePageOptions.wsButtonLink !== "" ? <Link className="btn btn-primary me-5" to={data.wpPage.directorpenaltynoticePageOptions.wsButtonLink}>{data.wpPage.directorpenaltynoticePageOptions.wsButtonText}</Link> : ""}
           </div>
+
+           
        </div>
     </section>
-      <Accordian
+    <section class="dpnsec_3">
+               
+    {data.wpPage.directorpenaltynoticePageOptions.typesPoints.map((d) => {
+              return (<div className="ca_sec">
+              <div class="container">
+              <h3>{data.wpPage.directorpenaltynoticePageOptions.typesTitle}</h3>  
+                  <h2>{d.title}</h2>
+                  <div className="ca_txt">
+                <div dangerouslySetInnerHTML={{__html: d.description }} />
+              </div> </div></div>)
+            })}
+    
+    </section>
+    {/*  <Accordian
             title={data.wpPage.directorpenaltynoticePageOptions.typesTitle}
             showEnquireButton={false}
             data={data.wpPage.directorpenaltynoticePageOptions.typesPoints}
             bgColor={'#1C5E48'}
             textColor={'#EBE9DE'}
             textHoverColor={"#DBFD90"}
-          />
+          />*/}
 
-      <div ref={observe} className={serviceEnter}>
+   <section className="dpn_optoins"> 
+     <div className="container position-relative">
+      <div className="row">
+        <div className="col-sm-12"> <h2>{data.wpPage.directorpenaltynoticePageOptions.optionsTitle}</h2>
+     <div dangerouslySetInnerHTML={{__html: data.wpPage.directorpenaltynoticePageOptions.optionsSubtext }}></div>
+      </div>
+      </div>
+      </div>
+    </section>
+    <section className="sec_links">
+      <div className="container position-relative">
+      <div className="row">
+        <div className="col-sm-12">
+          <ul class="d-flex justify-content-center">
+            <li>
+             <Link to="#liquidation">Liquidation</Link> 
+            </li>
+            <li>
+             <Link to="#restructure">Restructure & turnaround</Link> 
+            </li>
+              <li>
+               <Link to="#administration">Administration</Link> 
+            </li>
+            <li>
+               <Link to="#DOCA">DOCA</Link> 
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <section id="liquidation" class="banners curve-right vcf_sec mg_identifix dpntab_sec">
+     <div class="container">
+          <div className="wva_right">
+            <img class="img-fluid" src={data.wpPage.directorpenaltynoticePageOptions.liquidationImage.mediaItemUrl} alt="data.wpPage.directorpenaltynoticePageOptions.liquidationImage.altText"/>           
+          </div>
+          <div className="wva_left">
+          <h3>{data.wpPage.directorpenaltynoticePageOptions.liquidationTitle}</h3>           
+            <div dangerouslySetInnerHTML={{__html: data.wpPage.directorpenaltynoticePageOptions.liquidationDescription }}></div>
+             <Link className="btn btn-primary me-5"  to={data.wpPage.directorpenaltynoticePageOptions.liquidationLearnmoreLink}>Learn More</Link>
+           
+          </div>      
+     </div>
+  </section>
+
+  <section id="restructure" class="wva_section about_section history_section identifix_sec2 dpntab_sec">
+       <div class="container">
+
+        <div className="wva_left">
+             <img class="img-fluid" src={data.wpPage.directorpenaltynoticePageOptions.restructureImage.mediaItemUrl} alt="data.wpPage.directorpenaltynoticePageOptions.restructureImage.altText"/>            
+               
+          </div>
+
+          <div className="wva_right">
+            <h3>{data.wpPage.directorpenaltynoticePageOptions.restructureTitle}</h3>
+            <div dangerouslySetInnerHTML={{__html: data.wpPage.directorpenaltynoticePageOptions.restructureDescription }} />
+               <Link className="btn btn-primary me-5"  to={data.wpPage.directorpenaltynoticePageOptions.restructureLearnmoreLink}>Learn More</Link>
+          </div>
+
+          
+       </div>
+    </section>
+
+     <section id="administration" class="banners curve-right vcf_sec mg_identifix dpntab_sec">
+     <div class="container">
+          <div className="wva_right">
+            <img class="img-fluid" src={data.wpPage.directorpenaltynoticePageOptions.administrationImage.mediaItemUrl} alt="data.wpPage.directorpenaltynoticePageOptions.administrationImage.altText"/>           
+          </div>
+          <div className="wva_left">
+          <h3>{data.wpPage.directorpenaltynoticePageOptions.administrationTitle}</h3>           
+            <div dangerouslySetInnerHTML={{__html: data.wpPage.directorpenaltynoticePageOptions.administrationDescription }}></div>
+             <Link className="btn btn-primary me-5"  to={data.wpPage.directorpenaltynoticePageOptions.administrationLearnmoreLink}>Learn More</Link>
+           
+          </div>      
+     </div>
+  </section>
+
+  <section id="DOCA" class="wva_section about_section history_section identifix_sec2 dpntab_sec">
+       <div class="container">
+
+        <div className="wva_left">
+             <img class="img-fluid" src={data.wpPage.directorpenaltynoticePageOptions.docaImage.mediaItemUrl} alt="data.wpPage.directorpenaltynoticePageOptions.docaImage.altText"/>            
+               
+          </div>
+
+          <div className="wva_right">
+            <h3>{data.wpPage.directorpenaltynoticePageOptions.docaTitle}</h3>
+            <div dangerouslySetInnerHTML={{__html: data.wpPage.directorpenaltynoticePageOptions.docaDescription }} />
+               <Link className="btn btn-primary me-5"  to={data.wpPage.directorpenaltynoticePageOptions.docaLearnmoreLink}>Learn More</Link>
+          </div>
+
+          
+       </div>
+    </section>
+
+       {/*<div ref={observe} className={serviceEnter}>
           <Services optionsTitle={data.wpPage.directorpenaltynoticePageOptions.optionsTitle} optionsSubtext={data.wpPage.directorpenaltynoticePageOptions.optionsSubtext}
           />
-        </div>
+        </div>  */}
       
 
       <TestimonialMain
         data={data.wpPage.directorpenaltynoticePageOptions.testimonialTest}
       />
+      <div className="service bankruptcy">
        <Accordian
         title={data.wpPage.directorpenaltynoticePageOptions.faqTitle}
         showEnquireButton={false}
         data={whyMG}
         isPage={'dpn'}
       />
+      </div>
       <section className="recovery-partner dpn_rp_sec">
         <div className="container">
           <div className="row">
@@ -151,11 +260,12 @@ const DirectorPenaltyNotice = ({data}) => {
         showAll={1}
       />
       </div>
-      
+      <div class="home">
       <GetInTouch
           title={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchTitle}
           text={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchDescription}
         />
+        </div>
     </div>
 </Layout>)
 }
@@ -209,6 +319,36 @@ export const query = graphql`
         }
         wsButtonLink
         wsButtonText
+        liquidationTitle
+        liquidationDescription
+        liquidationLearnmoreLink
+        liquidationImage{
+            altText
+            mediaItemUrl
+          }
+
+        restructureTitle
+        restructureDescription
+        restructureLearnmoreLink
+        restructureImage{
+            altText
+            mediaItemUrl
+          }  
+        administrationTitle
+        administrationDescription
+        administrationLearnmoreLink
+        administrationImage{
+            altText
+            mediaItemUrl
+          } 
+          
+        docaTitle
+        docaDescription
+        docaLearnmoreLink
+        docaImage{
+            altText
+            mediaItemUrl
+          }  
       }
     }
     allWpOurpeople(sort: {order:  ASC, fields: menuOrder}) {

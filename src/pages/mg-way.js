@@ -100,7 +100,7 @@ const MgWay = ({ data }) => {
   })
   let businessData = [];
   data.allWpOurpeople.nodes.map((d) => {
-    return businessData.push({ title: d.title, subtitle: d.backInBusiness.designation, text: d.backInBusiness.location, certification: d.backInBusiness.certification, content: d.content, linkedin: d.backInBusiness.linkedin, email: d.backInBusiness.email, phone: d.backInBusiness.phoneNumber, img: d.featuredImage?.node, designationType: d.backInBusiness.designationType });
+    return businessData.push({ title: d.title, slug:d.slug, subtitle: d.backInBusiness.designation, text: d.backInBusiness.location, certification: d.backInBusiness.certification, content: d.content, linkedin: d.backInBusiness.linkedin, email: d.backInBusiness.email, phone: d.backInBusiness.phoneNumber, img: d.featuredImage?.node, designationType: d.backInBusiness.designationType });
   })
   const breadCrumbs = [
     { link: "/", title: "Home" },
@@ -117,6 +117,23 @@ const MgWay = ({ data }) => {
       }
     }
   }, 500)
+  const toggleVideo = () =>{
+    let video = document.querySelector('.video');
+    let playpause = document.querySelector('.playpause');
+    if (video.paused) {
+      video.play();
+      playpause.setAttribute('hiddens', '');
+    } else {
+      video.pause();
+      playpause.removeAttribute('hiddens');
+    }
+  }
+  const [vdUrl, setVdUrl] = React.useState('');
+  const [showModal, setModal] = React.useState(false);
+  const setVideoUrl = (url) => {
+    setVdUrl(url);
+    setModal(true);
+  }
   return (<div className="mgway">
     <Layout>
       <Seo title={data.wpPage.metaFields?.metaTitle} description={data.wpPage.metaFields?.metaDescription} />
@@ -146,7 +163,14 @@ const MgWay = ({ data }) => {
           </div>
 
           <div className="wva_left">
-            <img src={data.wpPage.mgWayPageOptions?.aboutImage.mediaItemUrl} alt="" />
+
+          <div className="wva_video">
+          <img onClick={()=>setVideoUrl(data.wpPage.mgWayPageOptions.aboutVideo?.mediaItemUrl)} src={data.wpPage.mgWayPageOptions.aboutVideoCover?.mediaItemUrl} alt={data.wpPage.mgWayPageOptions.aboutVideoCover?.altText} />
+          </div>
+          
+
+
+           
           </div>
           <div className="wva_right">
             <h3>{data.wpPage.mgWayPageOptions.contentTitle}</h3>
@@ -349,6 +373,24 @@ const MgWay = ({ data }) => {
           title={data.wpPage.mgWayPageOptions.mgAwardTitle}
           data={data.wpPage.mgWayPageOptions.mgAwardPoints}
         />
+
+
+        <div id="myModal" role="dialog" className={showModal?'in show modal cr_video_pp fade':'modal cr_video_pp fade'}>
+        <div className="model_inner">
+          <div className="popup_dialog">
+            <div className="modal-content">
+              <button type="button" className="close" data-dismiss="modal" onClick={()=>setModal(false)}>&times;</button>
+              <div className="popup_body">
+                <div className="video_ratio">
+                {vdUrl?<video key={vdUrl} width="100%" controls><source src={vdUrl} type="video/mp4" />Your browser does not support the video tag.</video>:null}
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </Layout>
   </div>
   )
@@ -360,6 +402,14 @@ export const query = graphql`
     wpPage(title: {eq: "The MG Way"}) {
       mgWayPageOptions {
         aboutImage {
+          altText
+          mediaItemUrl
+        }
+        aboutVideo {
+          altText
+          mediaItemUrl
+        }
+        aboutVideoCover {
           altText
           mediaItemUrl
         }
@@ -463,6 +513,7 @@ export const query = graphql`
     allWpOurpeople(sort: {order:  ASC, fields: menuOrder}) {
       nodes {
         title
+        slug
         backInBusiness {
           designation
           location

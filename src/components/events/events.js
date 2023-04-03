@@ -42,7 +42,7 @@ const Events = (props) => {
   return (
   <section className="events" id="events">
     <div className="container">
-      <h2 className="my-5">{props.title}</h2>
+      {/*<h2 className="my-5">{props.title}</h2>*/}
       <div className="row">
         <h2> Upcoming Events </h2>
         {upcoming.map((d,key) => {
