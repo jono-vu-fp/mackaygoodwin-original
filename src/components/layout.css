@@ -7216,7 +7216,21 @@ section.dpn_optoins {
     color: #5d5d5d;
 }
 .sgpost_cont figure.wp-block-image:nth-child(1){ padding-top:0; }
-
+.staff-listbg img.staffimg-fluid {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+.staff-listbg.listbg {
+    position: relative;
+}
+.staff-listbg:hover img.staffimg-fluid{ opacity:1 }
+.staff-listbg:hover img.img-fluid{ 
+    opacity:0;
+}
 
 /****** BreakPoints *******/
 /****** Responsive Start *******/

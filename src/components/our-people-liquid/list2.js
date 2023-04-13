@@ -80,8 +80,9 @@ const PeopleList = (props) => {
         <div className="row people-list">
           {props.data?.map((d, key) => {
             return <div className="col-lg-4 col-md-12  mt-4" key={key}>
-              <div className="listbg">
-                <img className="img-fluid" style={{ width: "100%" }} src={d.img?.mediaItemUrl} alt={d.img?.altTxt} />
+               <div className={d.altimg?"staff-listbg listbg":"listbg"}>
+              <img className="img-fluid" style={{ width: "100%" }} src={d.img?.mediaItemUrl} alt={d.img?.altTxt} />
+                {d.altimg?<img className="staffimg-fluid" style={{ width: "100%" }} src={d.altimg?.mediaItemUrl} alt={d.altimg?.altTxt} />:null}
                 <h4 className="px-4">{d.title}</h4>
                 <h5 className="px-4 py-1">{d.subtitle}</h5>
                 <p className="py-1 px-4" style={{ minHeight: "70px" }}  dangerouslySetInnerHTML={{ __html: d.text }}></p>
@@ -99,8 +100,9 @@ const PeopleList = (props) => {
         <Slider {...settings} className="testimonial-slider people-slider">
           {props.data?.map((d, key) => {
             return <div className="col-lg-4 col-md-12  mt-4 pe-4" key={key}>
-              <div className="listbg">
-                <img className="img-fluid" style={{ width: "100%" }} src={d.img?.mediaItemUrl} alt={d.img?.altTxt} />
+               <div className={d.altimg?"staff-listbg listbg":"listbg"}>
+              <img className="img-fluid" style={{ width: "100%" }} src={d.img?.mediaItemUrl} alt={d.img?.altTxt} />
+                {d.altimg?<img className="staffimg-fluid" style={{ width: "100%" }} src={d.altimg?.mediaItemUrl} alt={d.altimg?.altTxt} />:null}
                 <h4 className="px-4">{d.title}</h4>
                 <h5 className="px-4 py-1">{d.subtitle}</h5>
                 <p className="py-1 px-4" style={{ minHeight: "70px" }}  dangerouslySetInnerHTML={{ __html: d.text }}></p>
