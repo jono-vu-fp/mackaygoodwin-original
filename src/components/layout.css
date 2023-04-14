@@ -4249,6 +4249,7 @@ img.recovery-partner-img {
     padding-top: 73px;
     padding-bottom: 91px;
 }
+
 .wva_section {
     overflow: hidden;
     margin-bottom: 99px;
@@ -6999,7 +7000,14 @@ section.dpn_optoins {
     padding-top: 0;
     padding-bottom: 0;
 }
-.au_newsec section.news-list .mt-4{ margin-top:0 !important; }
+.author_page .liq_blocks.va_blocks{
+    padding-bottom: 0px;
+}
+.author_page .au_newsec{
+     padding-top: 50px;
+}
+
+.au_newsec section.news-list .mt-4{ margin-top:0 !important; margin-bottom:30px; }
 .au_newsec{ padding-bottom:90px; }
 .wva_videobox {
     position: relative;    padding-top: 67%;
@@ -11312,10 +11320,10 @@ section.dpn_optoins {
     margin: 0 0 25px;
     }
     .au_newsec section.news-list .mt-4 {
-        margin-top: 1.5rem !important;
+        margin-top: 0rem !important;
     }
-    .author_page .liq_blocks.va_blocks.media_blocks {
-        padding-bottom: 25px;
+    .author_page .au_newsec {
+        padding-top: 30px;
     }
     .author_page .news-list h4{
             min-height: auto !important;
