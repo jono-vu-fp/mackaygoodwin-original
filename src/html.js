@@ -5,16 +5,14 @@ export default function HTML(props) {
   return (
     <html {...props.htmlAttributes}>
       <head>
-        {/* Google Tag Manager */}
         <script dangerouslySetInnerHTML={{
           __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-PRCLGBS');`}}
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KX3F5L7');`}}
         />
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRCLGBS" height="0" width="0" style={{ "display": "none", "visibility": "hidden" }}></iframe></noscript>
-        {/* Google Tag Manager End */}
+        
         <meta charSet="utf-8" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <meta
@@ -36,19 +34,11 @@ export default function HTML(props) {
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"></link>
         {props.headComponents}
         <meta name="google-site-verification" content="phYoyguFJu6oqzRW-3qg3hMoNHSXn6zvm3qmyTwS3fY" />
-        <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-KX3F5L7');</script>
-<!-- End Google Tag Manager -->
+        
       </head>
       <body {...props.bodyAttributes}>
-      <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KX3F5L7"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+height="0" width="0" style={{ "display": "none", "visibility": "hidden" }}></iframe></noscript>
         {props.preBodyComponents}
 
         <div
@@ -60,9 +50,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" crossOrigin="anonymous"></script>
         <script type="application/javascript" src="https://script.chatsystem.io/4cdc00125303779d3450f86e801f8dafbe95e0"></script>
-        {/* Google Tag Manager */}
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRCLGBS" height="0" width="0" style={{ "display": "none", "visibility": "hidden" }}></iframe></noscript>
-        {/* Google Tag Manager End */}
       </body>
     </html>
   )
