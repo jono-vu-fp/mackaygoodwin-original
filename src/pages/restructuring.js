@@ -12,7 +12,7 @@ import CurveLeft from "../components/curve-left"
 import CurveRight2 from "../components/curve-right2"
 import HealthForm from "../components/health-form"
 import EbookForm from "../components/ebook-form"
-import ImageRightLayout from "../components/image-right-layout"
+import ImageRightLayout from "../components/image-right-layout2"
 import ImageLeftLayout from "../components/image-left-layout3"
 import { formHealthContext, formEbookContext } from '../components/context';
 import GetInTouchPPForm from "../components/get-in-touch-bankruptcy-popup"

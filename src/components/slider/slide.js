@@ -7,7 +7,7 @@ const Slide = (props) => (
 				alt={props.data.image?.altText} />
 		<div className="card-body" style={{backgroundColor: props.slideColor}}>
 			<h3 className="card-title">{props.data.name || props.data.title}</h3>
-			<h4 className="card-subtitle">{props.data.designation}</h4>
+			{props.data.designation?<h4 className="card-subtitle">{props.data.designation}</h4>:''}
 			<p className="card-text">{props.data.comment}</p>
 			{props.data.url !== null && props.data.url !== ""?<Link className="btn btn-primary" to={"/insights/" + props.data.url+"/"}>Learn More</Link>:""}
 		</div>

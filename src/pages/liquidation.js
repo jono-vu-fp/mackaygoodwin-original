@@ -61,7 +61,7 @@ const ConsultBusiness = ({ data }) => {
         <div className="container">
           <div className="row">
             <div className="col">
-              <h1 className="whyTitle text-center">{data.wpPage.liquidation.recoveryTagline}</h1>
+              <h2 className="whyTitle text-center">{data.wpPage.liquidation.recoveryTagline}</h2>
             </div>
           </div>
           <div className="row justify-content-center">

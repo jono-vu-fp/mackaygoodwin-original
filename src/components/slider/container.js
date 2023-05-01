@@ -30,7 +30,7 @@ const Container = (props) => (
 		<div className="container">
 			<div className="row">
 				<div className="col">
-					<h2>{props.title}</h2>
+					{props.title?<h2>{props.title}</h2>:''}
 					{typeof props.subtitle !== "undefined" && props.subtitle !== "" ? <p className="subtitle">{props.subtitle}</p> : ""}
 				</div>
 			</div>

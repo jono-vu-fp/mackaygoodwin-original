@@ -58,14 +58,14 @@ const IndexPage = ({ data }) => {
                     </div>
                     <div className="col-2 col-sm-2 col-md-2 col-lg-4">
                       <div className="slider-content d-none d-sm-none d-md-none d-lg-block">
-                        <h1 className="banner-heading">{data.wpPage.hpOptions.homeSlider[0].bannerTitle}</h1>
+                        <h2 className="banner-heading">{data.wpPage.hpOptions.homeSlider[0].bannerTitle}</h2>
                         <p className="banner-details">{data.wpPage.hpOptions.homeSlider[0].bannerSubtitle}</p>
                         {data.wpPage.hpOptions.homeSlider[0].learnMoreUrl !== null && data.wpPage.hpOptions.homeSlider[0].learnMoreUrl !== "" ? <Link className="btn btn-primary" to={data.wpPage.hpOptions.homeSlider[0].learnMoreUrl}>Learn more</Link> : ""}
                       </div>
                     </div>
                     <div className="col-10 col-sm-10 col-md-10 col-lg-7">
                       <div className="banner-img-wrapper">
-                        <img className="img-fluid" src={data.wpPage.hpOptions.homeSlider[0].bannerImage.mediaItemUrl} alt={data.wpPage.hpOptions.homeSlider[0].bannerImage.altText} />
+                        <img className="img-fluid" alt={data.wpPage.hpOptions.homeSlider[0].bannerImage.altText} src={data.wpPage.hpOptions.homeSlider[0].bannerImage.mediaItemUrl} alt={data.wpPage.hpOptions.homeSlider[0].bannerImage.altText} />
                       </div>
                     </div>
                     <div className="col-12 d-block d-sm-block d-md-block d-lg-none">
@@ -81,11 +81,11 @@ const IndexPage = ({ data }) => {
                 <div className="container">
                   <div className="row">
                     <div className="col-12 d-block d-sm-block d-md-block d-lg-none">
-                      <h1 className="second banner-heading">{data.wpPage.hpOptions.homeSlider[1].bannerTitle}</h1>
+                      <h2 className="second banner-heading">{data.wpPage.hpOptions.homeSlider[1].bannerTitle}</h2>
                     </div>
                     <div className="col-2 col-sm-2 col-md-2 col-lg-5 align-self-center">
                       <div className="slider-content second d-none d-sm-none d-md-none d-lg-block">
-                        <h1 className="banner-heading">{data.wpPage.hpOptions.homeSlider[1].bannerTitle}</h1>
+                        <h2 className="banner-heading">{data.wpPage.hpOptions.homeSlider[1].bannerTitle}</h2>
                         <p className="banner-details">{data.wpPage.hpOptions.homeSlider[1].bannerSubtitle}</p>
                         {data.wpPage.hpOptions.homeSlider[1].learnMoreUrl !== null && data.wpPage.hpOptions.homeSlider[1].learnMoreUrl !== "" ? <Link className="btn btn-primary" to={data.wpPage.hpOptions.homeSlider[1].learnMoreUrl}>Learn more</Link> : ""}
                       </div>
@@ -108,7 +108,7 @@ const IndexPage = ({ data }) => {
                 <div className="container">
                   <div className="row">
                     <div className="col-12 d-block d-block d-sm-block d-md-block d-lg-none">
-                      <h1 className="third banner-heading">{data.wpPage.hpOptions.homeSlider[2].bannerTitle}</h1>
+                      <h2 className="third banner-heading">{data.wpPage.hpOptions.homeSlider[2].bannerTitle}</h2>
                     </div>
                     <div className="col-10 col-sm-10 col-md-10 col-lg-7">
                       <div className="banner-img-wrapper thirdslide">
@@ -117,7 +117,7 @@ const IndexPage = ({ data }) => {
                     </div>
                     <div className="col-2 col-sm-2 col-md-2 col-lg-5 align-self-center">
                       <div className="slider-content d-none d-sm-none d-md-none d-lg-block">
-                        <h1 className="banner-heading">{data.wpPage.hpOptions.homeSlider[2].bannerTitle}</h1>
+                        <h2 className="banner-heading">{data.wpPage.hpOptions.homeSlider[2].bannerTitle}</h2>
                         <p className="banner-details">{data.wpPage.hpOptions.homeSlider[2].bannerSubtitle}</p>
                         {data.wpPage.hpOptions.homeSlider[2].learnMoreUrl !== null && data.wpPage.hpOptions.homeSlider[2].learnMoreUrl !== "" ? <Link className="btn btn-primary" to={data.wpPage.hpOptions.homeSlider[2].learnMoreUrl}>Learn more</Link> : ""}
                       </div>
@@ -135,7 +135,7 @@ const IndexPage = ({ data }) => {
                 <div className="container">
                   <div className="row">
                     <div className="col-12 d-block d-sm-block d-md-block d-lg-none">
-                      <h1 className="third banner-heading">{data.wpPage.hpOptions.homeSlider[3].bannerTitle}</h1>
+                      <h2 className="third banner-heading">{data.wpPage.hpOptions.homeSlider[3].bannerTitle}</h2>
                     </div>
                     <div className="col-10 col-sm-10 col-md-10 col-lg-7">
                       <div className="banner-img-wrapper thirdslide">
@@ -144,7 +144,7 @@ const IndexPage = ({ data }) => {
                     </div>
                     <div className="col-2 col-sm-2 col-md-2 col-lg-5 align-self-center">
                       <div className="slider-content d-none d-sm-none d-md-none d-lg-block">
-                        <h1 className="banner-heading">{data.wpPage.hpOptions.homeSlider[3].bannerTitle}</h1>
+                        <h2 className="banner-heading">{data.wpPage.hpOptions.homeSlider[3].bannerTitle}</h2>
                         <p className="banner-details">{data.wpPage.hpOptions.homeSlider[3].bannerSubtitle}</p>
                         {data.wpPage.hpOptions.homeSlider[3].learnMoreUrl !== null && data.wpPage.hpOptions.homeSlider[3].learnMoreUrl !== "" ? <Link className="btn btn-primary" to={data.wpPage.hpOptions.homeSlider[3].learnMoreUrl}>Learn more</Link> : ""}
                       </div>
@@ -213,7 +213,7 @@ const IndexPage = ({ data }) => {
 
         <div className="vcfo_section vcfo_section1">
           <div className="container">
-            <div class="vcfo_left"><img src={data.wpPage.hpOptions.vcfoImage.mediaItemUrl} alt="" /></div>
+            <div class="vcfo_left"><img src={data.wpPage.hpOptions.vcfoImage.mediaItemUrl} alt={data.wpPage.hpOptions.vcfoImage.altText} /></div>
             <div class="vcfo_right">
               <h4>{data.wpPage.hpOptions.vcfoTitle}</h4>
               <div dangerouslySetInnerHTML={{__html: data.wpPage.hpOptions.vcfoDescription }} />

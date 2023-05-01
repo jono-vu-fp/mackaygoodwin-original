@@ -483,7 +483,7 @@ div#accordionExample .accordion-item:nth-last-of-type(1) {
 /****************************/
 
 #testimonials {
-    padding: 0 0 120px;
+    padding: 65px 0 120px;
     overflow: hidden;
     position: relative;
     z-index: 1;
@@ -659,7 +659,7 @@ footer {
     padding-top: 84px;
 }
 
-footer h3 {
+footer .h3 {
     font-size: 18px;
     padding-bottom: 10px;
     color: #fff;
@@ -3960,7 +3960,7 @@ img.recovery-partner-img {
     padding-top: 0;
     padding-bottom: 36px;
 }
-.liquidation .liq_rec_section.recovery-partner h1, .bib_section h3 {
+.liquidation .liq_rec_section.recovery-partner h1, .liquidation .liq_rec_section.recovery-partner h2, .bib_section h3 {
     font-size: 44px;
 }
 
@@ -4300,13 +4300,14 @@ img.recovery-partner-img {
     padding-bottom: 63px;
     float: right;
 }
-.wva_section .wva_right h3, .weva_section h3 {
+.wva_section .wva_right h3, .wva_section .wva_right h2, .weva_section h3 {
     color: #154f3a;
     font-size: 44px;
     font-weight: 500;
     line-height: 1.2;
     margin: 0 0 18px;
     padding: 0;
+    font-family: reckless_neue_trialregular,serif,Times New Roman;
 }
 .wva_section .wva_right div, .weva_section .container div {
     color: #000000;
@@ -4338,7 +4339,7 @@ img.recovery-partner-img {
     margin-bottom: 0;
 }
 
-.fd_section .wva_right h3 {
+.fd_section .wva_right h3, .fd_section .wva_right h2 {
     color: #eae7db;
     margin: 0;
 }
@@ -4393,7 +4394,7 @@ img.recovery-partner-img {
 .fd_section.wva_section.dca_section .wva_left:before {
     background-color: #d0ff80;
 }
-.fd_section.dca_section .wva_right h3 {
+.fd_section.dca_section .wva_right h3, .fd_section.dca_section .wva_right h2 {
     color: #134a38;
     margin: 0 0 26px;
 }
@@ -4919,11 +4920,14 @@ img.recovery-partner-img {
     float: right;
     padding-top: 61px;
 }
-.vcfo_section .vcfo_right h4 {
+.vcfo_section .vcfo_right h4, .vcfo_section .vcfo_right h3 {
     color: #1c5e48;
     font-size: 24px;
     margin: 0 0 21px;
     font-family: 'Sohne';
+}
+.vcfo_section .vcfo_right h3 {
+    line-height: 1.2;
 }
 .vcfo_section .vcfo_right p, .ill_section.vcfo_section .vcfo_right .ill_txt, .irl_section.vcfo_section .vcfo_right .ill_txt {
     color: #000000;
@@ -5061,7 +5065,7 @@ img.recovery-partner-img {
     background-color: #ebe9de;
     color: #1c5e48;
 }
-.ill_section.vcfo_section .vcfo_right h4, .irl_section.vcfo_section .vcfo_right h4 {
+.ill_section.vcfo_section .vcfo_right h4, .ill_section.vcfo_section .vcfo_right h3, .irl_section.vcfo_section .vcfo_right h4, .irl_section.vcfo_section .vcfo_right h3 {
     font-family: 'reckless_neue_trialregular';
     font-size: 44px;
 }
@@ -5120,14 +5124,14 @@ img.recovery-partner-img {
 .ca_sec div.ca_txt .cols .col2 {
     margin-left: auto;
 }
-.ca_sec div.ca_txt h4 {
+.ca_sec div.ca_txt h4, .ca_sec div.ca_txt h3 {
     color: #1c5e48;
     font-size: 24px;
     font-weight: 400;
     margin: 0 0 13px;
     font-family: 'Sohne';
 }
-.ca_sec div.ca_txt h4 b {
+.ca_sec div.ca_txt h4, .ca_sec div.ca_txt h3 b {
     font-weight: normal;
 }
 .ca_sec.ca_sec0 {
@@ -5595,7 +5599,7 @@ margin-bottom: 45px;
     display: block;
     padding-top: 16px;
 }
-.small_business .obstacles_text.middleFullText h6{
+.small_business .obstacles_text.middleFullText h6, .small_business .obstacles_text.middleFullText h4 {
     color: #0d4432;
     font-size: 18px;
     margin-bottom: 20px;
@@ -7275,7 +7279,7 @@ section.dpn_optoins {
     .voluntary_administration .liq_banner .banner-content .banner-desc {
         font-size: 21px;
     }
-    .liquidation .liq_rec_section.recovery-partner h1, .bib_section h3, .ols_section h3, .liquidation .middleFullText.glpo_section .fullTxt, .ht_section .ht_right h2, .bib_section#testimonials h2, .liquidation .news-articles h2, .banner-content .banner-heading, .wva_section .wva_right h3, .weva_section h3, .voluntary_administration .banner-content .banner-heading, .bankruptcy #why-mg h2 {
+    .liquidation .liq_rec_section.recovery-partner h1, .liquidation .liq_rec_section.recovery-partner h2, .bib_section h3, .ols_section h3, .liquidation .middleFullText.glpo_section .fullTxt, .ht_section .ht_right h2, .bib_section#testimonials h2, .liquidation .news-articles h2, .banner-content .banner-heading, .wva_section .wva_right h3, .wva_section .wva_right h2, .weva_section h3, .voluntary_administration .banner-content .banner-heading, .bankruptcy #why-mg h2 {
         font-size: 40px;
     }
     .recovery-partner-title {
@@ -7444,7 +7448,7 @@ section.dpn_optoins {
         padding-top: 80px;
         padding-bottom: 150px;
     }
-    .ill_section.vcfo_section .vcfo_right h4, .irl_section.vcfo_section .vcfo_right h4 {
+    .ill_section.vcfo_section .vcfo_right h4, .ill_section.vcfo_section .vcfo_right h3, .irl_section.vcfo_section .vcfo_right h4, .irl_section.vcfo_section .vcfo_right h3 {
         font-size: 36px;
     }
     .ill_section.vcfo_section .vcfo_right .ill_txt, .irl_section.vcfo_section .vcfo_right .ill_txt, .ca_sec div.ca_txt, .vcfo_section .vcfo_right p {
@@ -7862,7 +7866,7 @@ section.dpn_optoins {
     .glpo_reco_section.recovery-plan .subTxt {
         margin-top: 20px;
     }
-    .liquidation .liq_rec_section.recovery-partner h1 {
+    .liquidation .liq_rec_section.recovery-partner h1, .liquidation .liq_rec_section.recovery-partner h2 {
         padding: 0;
         margin-bottom: 40px;
     }
@@ -7942,7 +7946,7 @@ section.dpn_optoins {
     .ca_sec h2, .dpn_optoins h2 {
         font-size: 38px;
     }
-    .ill_section.vcfo_section .vcfo_right h4, .irl_section.vcfo_section .vcfo_right h4 {
+    .ill_section.vcfo_section .vcfo_right h4, .ill_section.vcfo_section .vcfo_right h3, .irl_section.vcfo_section .vcfo_right h4, .irl_section.vcfo_section .vcfo_right h3 {
         font-size: 34px;
     }
     .bankruptcy .news-list {
@@ -8065,7 +8069,7 @@ section.dpn_optoins {
     .dpn_page .dpnfaq .accordion-button{
         font-size: 45px;
     }
-    .liquidation .liq_rec_section.recovery-partner h1, .bib_section h3, .ols_section h3, .liquidation .middleFullText.glpo_section .fullTxt, .ht_section .ht_right h2, .bib_section#testimonials h2, .liquidation .news-articles h2, .banner-content .banner-heading, .wva_section .wva_right h3, .weva_section h3, .voluntary_administration .banner-content .banner-heading, .bankruptcy #why-mg h2 {
+    .liquidation .liq_rec_section.recovery-partner h1, .liquidation .liq_rec_section.recovery-partner h2, .bib_section h3, .ols_section h3, .liquidation .middleFullText.glpo_section .fullTxt, .ht_section .ht_right h2, .bib_section#testimonials h2, .liquidation .news-articles h2, .banner-content .banner-heading, .wva_section .wva_right h3, .wva_section .wva_right h2, .weva_section h3, .voluntary_administration .banner-content .banner-heading, .bankruptcy #why-mg h2 {
         font-size: 36px;
     }
     .liq_banner .banner-content .banner-heading {
@@ -9170,7 +9174,7 @@ section.dpn_optoins {
     .liq_banner .banner-content .banner-subheading {
         font-size: 18px;
     }
-    .liquidation .liq_rec_section.recovery-partner h1, .bib_section h3, .ols_section h3, .liquidation .middleFullText.glpo_section .fullTxt, .ht_section .ht_right h2, .bib_section#testimonials h2, .liquidation .news-articles h2, .banner-content .banner-heading, .wva_section .wva_right h3, .weva_section h3, .voluntary_administration .banner-content .banner-heading, .bankruptcy #why-mg h2 {
+    .liquidation .liq_rec_section.recovery-partner h1, .liquidation .liq_rec_section.recovery-partner h2, .bib_section h3, .ols_section h3, .liquidation .middleFullText.glpo_section .fullTxt, .ht_section .ht_right h2, .bib_section#testimonials h2, .liquidation .news-articles h2, .banner-content .banner-heading, .wva_section .wva_right h3, .wva_section .wva_right h2, .weva_section h3, .voluntary_administration .banner-content .banner-heading, .bankruptcy #why-mg h2 {
         font-size: 32px;
     }
     .liq_banner .banner-content .banner-heading {
@@ -9405,7 +9409,7 @@ section.dpn_optoins {
         width: 450px;
         padding-top: 20px;
     }
-    .vcfo_section .vcfo_right h4 {
+    .vcfo_section .vcfo_right h4, .vcfo_section .vcfo_right h3 {
         font-size: 22px;
         margin-bottom: 10px;
     }
@@ -10303,7 +10307,7 @@ section.dpn_optoins {
     .dca_section .wva_right h5 {
         font-size: 18px;
     }
-    .fd_section.dca_section .wva_right h3 {
+    .fd_section.dca_section .wva_right h3, .fd_section.dca_section .wva_right h2 {
         margin-bottom: 20px;
     }
     .dca_section .wva_right h5 {
@@ -10514,7 +10518,7 @@ section.dpn_optoins {
     .ca_sec div.ca_txt .cols > div {
         width: 100%;
     }
-    .ca_sec div.ca_txt h4 {
+    .ca_sec div.ca_txt h4, .ca_sec div.ca_txt h3 {
         font-size: 20px;
     }
     .ca_sec div.ca_txt .cols p {
@@ -10870,7 +10874,7 @@ section.dpn_optoins {
         font-size: 20px;
         padding-top:10px;
     }
-    .small_business .obstacles_text.middleFullText h6{
+    .small_business .obstacles_text.middleFullText h6, .small_business .obstacles_text.middleFullText h4{
         margin-bottom: 15px;
     }
     .safe_harbour.small_business .myexperience_section h2 {
@@ -11491,7 +11495,7 @@ section.dpn_optoins {
     .ols_section {
         padding-bottom: 45px;
     }
-    .liquidation .liq_rec_section.recovery-partner h1, .bib_section h3, .ols_section h3, .liquidation .middleFullText.glpo_section .fullTxt, .ht_section .ht_right h2, .bib_section#testimonials h2, .liquidation .news-articles h2, .banner-content .banner-heading, .wva_section .wva_right h3, .weva_section h3, .voluntary_administration .banner-content .banner-heading, .bankruptcy #why-mg h2 {
+    .liquidation .liq_rec_section.recovery-partner h1, .liquidation .liq_rec_section.recovery-partner h2, .bib_section h3, .ols_section h3, .liquidation .middleFullText.glpo_section .fullTxt, .ht_section .ht_right h2, .bib_section#testimonials h2, .liquidation .news-articles h2, .banner-content .banner-heading, .wva_section .wva_right h3, .wva_section .wva_right h2, .weva_section h3, .voluntary_administration .banner-content .banner-heading, .bankruptcy #why-mg h2 {
         font-size: 30px;
     }
     .glpo_reco_section .stepsCol, .glpo_reco_section.va_glpo_reco_section .stepsCol {
@@ -11688,7 +11692,7 @@ section.dpn_optoins {
     footer .col-lg-2 {
         width: 50%;
     }
-    .ill_section.vcfo_section .vcfo_right h4, .irl_section.vcfo_section .vcfo_right h4 {
+    .ill_section.vcfo_section .vcfo_right h4, .ill_section.vcfo_section .vcfo_right h3, .irl_section.vcfo_section .vcfo_right h4, .irl_section.vcfo_section .vcfo_right h3 {
         font-size: 26px;
     }
     .ca_sec h2, .dpn_optoins h2 {
@@ -12235,7 +12239,7 @@ section.dpn_optoins {
     .ill_section.ill_section2.vcfo_section {
         margin-bottom: 40px;
     }
-    .ca_sec div.ca_txt h4 {
+    .ca_sec div.ca_txt h4, .ca_sec div.ca_txt h3 {
         font-size: 18px;
     }
     .ill_section.vcfo_section.bhc_section {
@@ -12300,11 +12304,11 @@ section.dpn_optoins {
         padding-left: 0px;
     } 
     .receivership.debt_agree .myexperience_section {
-    padding: 25px 15px 30px 15px;
-}  
-
-      
-
+        padding: 25px 15px 30px 15px;
+    } 
+    #testimonials {
+        padding-top: 45px;
+    }
 }
 @media screen and (max-width:533px){
     .ps_bot h2 {
@@ -12334,7 +12338,7 @@ section.dpn_optoins {
     .testimonial-main1 p {
         font-size: 23px;
     }
-    .liquidation .liq_rec_section.recovery-partner h1, .bib_section h3, .ols_section h3, .liquidation .middleFullText.glpo_section .fullTxt, .ht_section .ht_right h2, .bib_section#testimonials h2, .liquidation .news-articles h2, .banner-content .banner-heading, .wva_section .wva_right h3, .weva_section h3, .voluntary_administration .banner-content .banner-heading, .bankruptcy #why-mg h2 {
+    .liquidation .liq_rec_section.recovery-partner h1, .liquidation .liq_rec_section.recovery-partner h2, .bib_section h3, .ols_section h3, .liquidation .middleFullText.glpo_section .fullTxt, .ht_section .ht_right h2, .bib_section#testimonials h2, .liquidation .news-articles h2, .banner-content .banner-heading, .wva_section .wva_right h3, .wva_section .wva_right h2, .weva_section h3, .voluntary_administration .banner-content .banner-heading, .bankruptcy #why-mg h2 {
         font-size: 26px;
         line-height: 1.2;
     }
@@ -12398,7 +12402,7 @@ section.dpn_optoins {
         font-size: 18px;
         padding-top: 5px;
     }
-    .small_business .obstacles_text.middleFullText h6{
+    .small_business .obstacles_text.middleFullText h6, .small_business .obstacles_text.middleFullText h4{
         margin-bottom: 10px;
     }
     .media_blocks .col-md-12,.media_blocks .col-md-6{

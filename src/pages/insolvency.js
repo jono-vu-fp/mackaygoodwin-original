@@ -174,7 +174,7 @@ const Insolvency = ({ data }) => {
             <img src={data.wpPage.insolvency.dpn3Image.mediaItemUrl} alt={data.wpPage.insolvency.dpn3Image.altText} />
           </div>
           <div className="wva_right">
-            <h3>{data.wpPage.insolvency.dpn3Title}</h3>
+            <h2>{data.wpPage.insolvency.dpn3Title}</h2>
             <div dangerouslySetInnerHTML={{ __html: data.wpPage.insolvency.dpn3Description }}></div>
             {data.wpPage.insolvency.dpn3ButtonLink !== null && data.wpPage.insolvency.dpn3ButtonLink !== "" ? <Link className="btn btn-primary me-5" to={data.wpPage.insolvency.dpn3ButtonLink}>{data.wpPage.insolvency.dpn3ButtonText}</Link> : ""} {data.wpPage.insolvency.dpn3Button2Link !== null && data.wpPage.insolvency.dpn3Button2Link !== "" ? <Link className="btn btn-primary me-5" to={data.wpPage.insolvency.dpn3Button2Link}>{data.wpPage.insolvency.dpn3Button2Text}</Link> : ""}
           </div>

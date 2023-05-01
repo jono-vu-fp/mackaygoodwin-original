@@ -40,7 +40,7 @@ const ConsultBusiness = ({ data }) => {
       <div className="liq_blocks va_blocks doca_2">
         <div className="container">
           <div className="row">
-           <h1 className="whyTitle">{data.wpPage.consultBusiness.title}</h1>
+           <h2 className="whyTitle">{data.wpPage.consultBusiness.title}</h2>
               
               {data.wpPage.consultBusiness.descriptionWhy.map((d) => {
                 return (
