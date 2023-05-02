@@ -7243,6 +7243,11 @@ section.dpn_optoins {
 .staff-listbg:hover img.img-fluid{ 
     opacity:0;
 }
+.incepro_popup{
+        height: auto;
+    overflow: auto;
+    max-height: 800px;
+}
 
 /****** BreakPoints *******/
 /****** Responsive Start *******/
@@ -8038,6 +8043,10 @@ section.dpn_optoins {
     }
     .author_box {    margin-left: -90px;}
     .sgpost_cont h2{     font-size: 28px; }
+
+    .incepro_popup{
+        max-height:600px;
+    }
     
 
 }
@@ -8807,6 +8816,10 @@ section.dpn_optoins {
         width: 25%;
     }
     .rdtime {    margin-bottom: 35px;}
+
+    .incepro_popup{
+        max-height:550px;
+    }
 
 }
 @media screen and (max-width:1300px){

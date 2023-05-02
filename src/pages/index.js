@@ -17,7 +17,9 @@ import GetInTouchPPForm from "../components/get-in-touch-bankruptcy-popup"
 
 const settings = {
   arrows: false,
-  infinite: false,
+  infinite: true, 
+  autoplay: true,
+  autoplaySpeed: 5000,
   slidesToShow: 1,
   slidesToScroll: 1,
   dots: true
@@ -289,7 +291,7 @@ const IndexPage = ({ data }) => {
         </div>
 
         
-        <div id="myModal" role="dialog" className={showModal?'in show modal fade':'modal fade'}>
+        <div id="myModal" role="dialog" onClick={()=>{setModal(false);document.getElementById('pp_vid').pause();}} className={showModal?'in show modal fade':'modal fade'}>
         <div class="model_inner">
         <div class="popup_dialog">
         <div class="modal-content">

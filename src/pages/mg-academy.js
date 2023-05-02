@@ -126,14 +126,14 @@ const MgAcademyPage = ({ data }) => {
       />
       </div>
     </Layout>
-    <div id="myModal2" role="dialog" className={showModal2?'in show modal fade':'modal fade'}>
+    <div id="myModal2" role="dialog" className={showModal2?'in show modal fade':'modal fade'} onClick={()=>setModal2(false)}>
     <div class="model_inner">
      <div class="popup_dialog">
          <div class="modal-content">
           <button type="button" class="close" data-dismiss="modal" onClick={()=>setModal2(false)}>&times;</button>
          <div className="popup_body">
          <div className="form_pp">
-                 <div id="wufoo-w1f3tm5u0u9na2v"><iframe title="Embedded Wufoo Form" id="wufooFormw1f3tm5u0u9na2v" className="wufoo-form-container" height="1451" allowtransparency="true" frameborder="0" scrolling="no" src="https://australiandebtsolvers.wufoo.com/embed/w1f3tm5u0u9na2v/def/embedKey=w1f3tm5u0u9na2v868469&amp;entsource=wordpress&amp;referrer=http%3Awuslashwuslashlocalhostwuslashcitiportwuslashwp-adminwuslashpost.php%3Fpost%3D256%26action%3Dedit"><a href="https://australiandebtsolvers.wufoo.com/forms/w1f3tm5u0u9na2v/" title="html form">Fill out my Wufoo form!</a></iframe></div></div>
+                 <div id="wufoo-w1f3tm5u0u9na2v" class="incepro_popup"><iframe title="Embedded Wufoo Form" id="wufooFormw1f3tm5u0u9na2v" className="wufoo-form-container" height="1651" allowtransparency="true" frameborder="0" scrolling="no" src="https://australiandebtsolvers.wufoo.com/embed/w1f3tm5u0u9na2v/def/embedKey=w1f3tm5u0u9na2v868469&amp;entsource=wordpress&amp;referrer=http%3Awuslashwuslashlocalhostwuslashcitiportwuslashwp-adminwuslashpost.php%3Fpost%3D256%26action%3Dedit"><a href="https://australiandebtsolvers.wufoo.com/forms/w1f3tm5u0u9na2v/" title="html form">Fill out my Wufoo form!</a></iframe></div></div>
          </div>
          
        </div>
