@@ -7,6 +7,7 @@ import TopBanner from "../components/top-banner"
 import GetInTouch from "../components/get-in-touch3"
 import GetInTouchPDF from "../components/get-in-touch-pdf"
 import FsLightbox from "fslightbox-react";
+import ActiveCampaign from "../components/activecampaign"
 
 // const whyMG = [
 //   {
@@ -28,7 +29,32 @@ const Post = ({ data }) => {
   const [showLm,setLm] = React.useState(true);
   const [toggler, setToggler] = React.useState(false);
   const [curslide, setCurslide] = React.useState(0);
-
+  const [showModal, setModal] = React.useState(false);
+  const [ytUrl, setYtUrl] = React.useState('');
+  const [vdUrl, setVdUrl] = React.useState('');
+  const [showVid, setShowVid] = React.useState(false);
+  const setVideoUrl = (url,tp) => {
+    var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
+    var match = url.match(regExp);
+    if(tp){
+      setVdUrl(url);
+      setYtUrl('');
+    }
+    else{
+      setVdUrl('');
+      setYtUrl((match&&match[7].length==11)? match[7] : false);
+    }
+    setModal(true);
+  }
+  const checkVideo = () =>{
+    if(data.wpPost.title=='Insights into the ATO'){
+      setShowVid(false);
+    }
+    else{
+      setShowVid(true);
+    }
+    setVideoUrl(data.wpPost.eventsOption?.recordingUrl?.url?data.wpPost.eventsOption?.recordingUrl?.url:data.wpPost.eventsOption.video?.mediaItemUrl,data.wpPost.eventsOption?.recordingUrl?.url?0:1);
+  }
   const loadMore = () => {
     setLimit(glimit+6);
     if((glimit+6)>=data.wpPost.backInBusiness.eventGallery.length){
@@ -36,9 +62,11 @@ const Post = ({ data }) => {
     }
   }
   let imgArr = [];
-  data?.wpPost?.backInBusiness?.eventGallery.map((d,key) => {
-    imgArr.push(d.eventGalleryImage.mediaItemUrl.replace('http://','https://'));
-  });
+  if(data?.wpPost?.backInBusiness?.eventGallery){
+    data?.wpPost?.backInBusiness?.eventGallery.map((d,key) => {
+      imgArr.push(d.eventGalleryImage.mediaItemUrl.replace('http://','https://'));
+    });
+  }
   let breadCrumbs = [
     { link: "/", title: "Home" },
     { title: data.wpPost?.title }
@@ -124,13 +152,13 @@ const Post = ({ data }) => {
               
            </div> 
           </div>:null}
-          <div className="col-sm-12 col-md-8 sgpost_cont">
+          <div className="col-sm-12 col-md-8 sgpost_cont 11">
             <div dangerouslySetInnerHTML={{ __html: data.wpPost.content }}></div>
             <div className="rig_button">
 
             {data.wpPost.eventsOption?.eventStatus != 'enablevideoaccess' ?
               data.wpPost.eventsOption?.registerUrl ? <a className="bt-big px-4 mx-4" href={data.wpPost.eventsOption?.registerUrl}>{data.wpPost.eventsOption?.buttonLabel} <i className="fa fa-chevron-right" aria-hidden="true"></i></a> : null
-            :null
+            :<a className="bt-big px-4 mx-4" href="javascript:void(0)" onClick={()=>checkVideo()}>{data.wpPost.eventsOption?.buttonLabel} <i className="fa fa-chevron-right" aria-hidden="true"></i></a>
             }
 
             </div>
@@ -175,6 +203,23 @@ const Post = ({ data }) => {
         </div>
       </div>
       :null}
+      <div id="myModal" role="dialog" className={showModal?'in show modal fade':'modal fade'}>
+        <div className="model_inner">
+          <div className="popup_dialog">
+            <div className="modal-content">
+              <button type="button" className="close" data-dismiss="modal" onClick={()=>setModal(false)}>&times;</button>
+              <div className="popup_body">
+
+                {!showVid?<div className="video_form"><ActiveCampaign setShowVid={setShowVid} /></div>:
+                <div className="video_ratio cc">
+                {vdUrl?<video key={vdUrl} width="100%" controls><source src={vdUrl} type="video/mp4" />Your browser does not support the video tag.</video>:<iframe key={ytUrl} className="embed-responsive-item" src={'https://www.youtube.com/embed/'+ytUrl+'?autoplay=1&amp;amp;modestbranding=1&amp;amp;showinfo=0'} id="video" allowscriptaccess="always"></iframe>}
+                </div>
+                }
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       {typeof window !== "undefined" && window.location.pathname.indexOf("/insights/business-survival-pack") >= 0 && <GetInTouchPDF
         title={'Download e-guide'}
         text={'Download your free copy today and get on the path to recovery'}
@@ -285,6 +330,9 @@ query ($id: String) {
           }
         }
         shortDescription
+        video {
+          mediaItemUrl
+        }
       }
       featuredImage {
         node {

@@ -7248,6 +7248,44 @@ section.dpn_optoins {
     overflow: auto;
     max-height: 800px;
 }
+.video_form {
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+}
+.video_form legend {
+    color: #000;
+    font-size: 36px;
+    font-weight: 400;
+    margin: 0 0 20px;
+    text-align: center;
+}
+.video_form label {
+    color: #4a4a4a;
+    font-family: Sohne;
+    font-size: 15px;
+    margin: 0;
+}
+.video_form .c-form__textbox {
+    background-color: #fff;
+    border: 0;
+    color: #4a4a4a;
+    font-size: 16px;
+    height: 43px;
+    line-height: 43px;
+    margin: 0 0 25px 0;
+    padding: 0 15px;
+}
+.video_form input[type="submit"] {
+    background-color: #1c5e48;
+    border: none;
+    border-radius: 50px;
+    font-family: Sohne,sans-serif,Arial;
+    margin-top: 0;
+    padding: 9px 50px;
+    width: auto;
+    color: #fff;
+}
 
 /****** BreakPoints *******/
 /****** Responsive Start *******/
@@ -9869,6 +9907,11 @@ section.dpn_optoins {
     margin-bottom: 30px;}
     .sgpost_cont h2 {
         font-size: 27px;
+    }
+    .video_form legend { 
+    font-size: 33px; 
+    margin: 0 0 10px; 
+    line-height: normal;
     }
 
 }
@@ -12817,6 +12860,9 @@ section.dpn_optoins {
     }
     .autherrt{
             width: 63%;
+    }
+    .video_form legend{
+        font-size: 30px;
     }
 
 }

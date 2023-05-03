@@ -6,6 +6,7 @@ import Seo from "../components/seo"
 import TopBanner from "../components/top-banner"
 import Events from "../components/events/events"
 import GetInTouch from "../components/get-in-touch3"
+import ActiveCampaign from "../components/activecampaign"
 
 const breadCrumbs = [
   { link: "/", title: "Home" },
@@ -17,6 +18,7 @@ const EventsPage = ({ data }) => {
   const [showModal, setModal] = React.useState(false);
   const [ytUrl, setYtUrl] = React.useState('');
   const [vdUrl, setVdUrl] = React.useState('');
+  const [showVid, setShowVid] = React.useState(false);
   const setVideoUrl = (url,tp) => {
     var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
     var match = url.match(regExp);
@@ -46,6 +48,7 @@ const EventsPage = ({ data }) => {
         data={data.allWpEvent.nodes}
         btn={false}
         setVideoUrl={setVideoUrl}
+        setShowVid={setShowVid}
       />
      <div className="home">
       <GetInTouch
@@ -60,10 +63,11 @@ const EventsPage = ({ data }) => {
           <div className="modal-content">
             <button type="button" className="close" data-dismiss="modal" onClick={()=>setModal(false)}>&times;</button>
             <div className="popup_body">
-              <div className="video_ratio">
+              {!showVid?<div className="video_form"><ActiveCampaign setShowVid={setShowVid} /></div>:
+              <div className="video_ratio cc">
               {vdUrl?<video key={vdUrl} width="100%" controls><source src={vdUrl} type="video/mp4" />Your browser does not support the video tag.</video>:<iframe key={ytUrl} className="embed-responsive-item" src={'https://www.youtube.com/embed/'+ytUrl+'?autoplay=1&amp;amp;modestbranding=1&amp;amp;showinfo=0'} id="video" allowscriptaccess="always"></iframe>}
               </div>
-              
+              }
             </div>
           </div>
         </div>
