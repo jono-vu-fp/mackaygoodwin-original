@@ -54,7 +54,7 @@ const ActiveCampaign = (props) => {
         {!state.isSubmitted ? 
             <form onSubmit={handleSubmit(onSubmit)}>
                 <fieldset>
-                    <legend>MG Academy QT</legend>
+                    <legend>Watch Now</legend>
                     <div>
                         <div>
                             <div>

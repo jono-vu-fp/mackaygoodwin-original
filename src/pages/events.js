@@ -15,6 +15,7 @@ const breadCrumbs = [
 ]
 
 const EventsPage = ({ data }) => {
+  const vidRef = React.useRef(null);
   const [showModal, setModal] = React.useState(false);
   const [ytUrl, setYtUrl] = React.useState('');
   const [vdUrl, setVdUrl] = React.useState('');
@@ -31,6 +32,10 @@ const EventsPage = ({ data }) => {
       setYtUrl((match&&match[7].length==11)? match[7] : false);
     }
     setModal(true);
+  }
+  const handleStopVideo = () => {
+    setModal(false);
+    vidRef.current?.pause();
   }
   return (<div className="service insights">
     <Layout>
@@ -61,11 +66,11 @@ const EventsPage = ({ data }) => {
       <div className="model_inner">
         <div className="popup_dialog">
           <div className="modal-content">
-            <button type="button" className="close" data-dismiss="modal" onClick={()=>setModal(false)}>&times;</button>
+            <button type="button" className="close" data-dismiss="modal" onClick={()=>handleStopVideo()}>&times;</button>
             <div className="popup_body">
               {!showVid?<div className="video_form"><ActiveCampaign setShowVid={setShowVid} /></div>:
               <div className="video_ratio cc">
-              {vdUrl?<video key={vdUrl} width="100%" controls><source src={vdUrl} type="video/mp4" />Your browser does not support the video tag.</video>:<iframe key={ytUrl} className="embed-responsive-item" src={'https://www.youtube.com/embed/'+ytUrl+'?autoplay=1&amp;amp;modestbranding=1&amp;amp;showinfo=0'} id="video" allowscriptaccess="always"></iframe>}
+              {vdUrl?<video key={vdUrl} width="100%" ref={vidRef} controls><source src={vdUrl} type="video/mp4" />Your browser does not support the video tag.</video>:<iframe key={ytUrl} className="embed-responsive-item" src={'https://www.youtube.com/embed/'+ytUrl+'?autoplay=1&amp;amp;modestbranding=1&amp;amp;showinfo=0'} id="video" allowscriptaccess="always"></iframe>}
               </div>
               }
             </div>
