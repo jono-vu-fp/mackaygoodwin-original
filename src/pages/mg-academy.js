@@ -50,10 +50,28 @@ const MgAcademyPage = ({ data }) => {
 
        <div class="container">
           <div className="buttons_section">
+                <Link to={"#ondemand"}>On Demand </Link>
                 <Link to={"#mediamoments"}>Media Moments</Link> <Link to={"#events"}>Events</Link> <Link  to={"#resources"}>Resources</Link> 
                 <Link to={"#incubator-program"}>Incubator Program</Link>
           </div>
        </div>
+
+       <section id="ondemand" class="wva_section about_section history_section identifix_sec2 event_incubator mg_acnew4 ond_sec">
+       <div class="container">    
+       <div  className="row">    
+        <div className="wva_left">
+              <img class="img-fluid" src={data.wpPage.news.ondemandImage.mediaItemUrl} alt="data.wpPage.news.ondemandImage.altText"/>          
+          </div>
+          <div className="wva_right">
+           <h3>{data.wpPage.news.ondemandTitle}</h3>
+              <div dangerouslySetInnerHTML={{__html: data.wpPage.news.ondemandDescription }} />
+               <Link className="btn btn-primary" to={data.wpPage.news.ondemandLink}>Book Now</Link>
+          </div> 
+           </div>         
+       </div>
+    </section>
+
+        
 
        <div id="mediamoments" className="wva_section fd_section dca_section mg_acnew1">
         <div className="container">
@@ -186,6 +204,13 @@ export const query = graphql`
         mgacImage2{
           mediaItemUrl
           altText
+        }
+        ondemandLink
+        ondemandTitle
+        ondemandDescription
+        ondemandImage {
+          altText
+          mediaItemUrl
         }
          mgacTitle3
         mgacDescription3

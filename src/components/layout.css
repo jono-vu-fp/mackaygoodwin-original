@@ -7286,7 +7286,58 @@ section.dpn_optoins {
     width: auto;
     color: #fff;
 }
-
+.ond_sec .wva_left::after {
+    background-color: #e0e3e5!important;
+}
+.ond_sec.about_section .wva_left:before {
+    background: #dbfd90 !important;
+}
+.ond_banner .banner-image::before{
+    background:#dbfd90;
+}
+.ond_banner .banner-content h1.banner-heading {
+    padding-top: 40px;
+}
+.fullTxtSection2 {
+    background: #ebe9de;
+    margin-top: 106px;
+}
+.fullTxtSection2 .fullTxt {
+    color: #154f3a;
+    font-size: 44px;
+    line-height: normal;
+}
+.fullTxtSection2 a.bt-big {
+    padding: 13px 39px;
+}
+.ca_main2 .ca_sec:nth-child(3n+1),
+.ca_sec:nth-child(3n-1) {
+    background-color: transparent;
+}
+.ca_main2 .ca_sec .btn {
+    margin-top: 0;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 9px 39px;
+}
+.ca_main2 .ca_sec:nth-child(3n-1) h2 {
+    color: #1c5e48;
+}
+.ca_main2 .ca_sec:nth-child(3n-1) div.ca_txt{
+    color: #000000;
+}
+.ca_main2 .ca_sec {
+    padding: 95px 0 0 0;
+}
+.ca_main2 .ca_sec:nth-child(3n-1) .btn{
+        background-color: #1C5E48;
+}
+.ond_banner .mgacademy_banner .banner-content .banner-desc {
+    max-width: 450px;
+}
+.ca_main2 {
+    padding-bottom: 87px;
+}
 /****** BreakPoints *******/
 /****** Responsive Start *******/
 @media screen and (min-width:1400px){
@@ -8858,6 +8909,9 @@ section.dpn_optoins {
     .incepro_popup{
         max-height:550px;
     }
+    .fullTxtSection2 .fullTxt{
+            font-size: 40px;
+    }
 
 }
 @media screen and (max-width:1300px){
@@ -9913,7 +9967,28 @@ section.dpn_optoins {
     margin: 0 0 10px; 
     line-height: normal;
     }
+    .fullTxtSection2 .fullTxt {
+        font-size: 34px;
+    }
+    .fullTxtSection2 .fullTxt {
+        padding-top: 20px;
+    }
+    .fullTxtSection2 {
+        padding-bottom: 60px;margin-top: 65px;
+    }
+    .ca_main2 .ca_sec {
+        padding: 60px 0 0 0;
+    }
 
+    .ca_main2 .ca_sec div.ca_txt {
+        margin-bottom: 25px;
+    }   
+    .ca_main2 .ca_sec {
+    padding: 45px 0 0 0;
+    }
+    .ca_main2 {
+        padding-bottom: 65px;
+    }
 }
 @media screen and (max-width:1100px){
      .mg_slide_part .image-container{
@@ -11412,6 +11487,26 @@ section.dpn_optoins {
     .posts #banner-section .banner-mdesc {
     padding-top: 0;
     }
+    .ond_banner .banner-content h1.banner-heading {
+        padding-top: 0px;
+    }
+    .fullTxtSection2 {
+    padding-bottom: 54px;
+    margin-top: 50px;
+    }
+    .fullTxtSection2 .fullTxt {
+    font-size: 30px;
+    }
+    .fullTxtSection2 .fullTxt br {
+    display: none;
+    }
+    .fullTxtSection2 .pt-5 {
+        padding-top: 15px !important;
+    }
+    .ca_main2 .ca_sec {
+        padding: 40px 0 0 0;
+    }
+
 }
 @media screen and (max-width:767px){
 
@@ -12066,6 +12161,14 @@ section.dpn_optoins {
     }
     .sgpost_cont h2 {
         font-size: 25px;
+    }
+    .fullTxtSection2 .fullTxt {
+        font-size: 28px;
+    }
+    .ca_main2 .ca_sec .btn,
+    .fullTxtSection2 a.bt-big{
+        padding: 10px 30px;
+        line-height: normal;
     }
 
 }
@@ -12863,6 +12966,12 @@ section.dpn_optoins {
     }
     .video_form legend{
         font-size: 30px;
+    }
+    .fullTxtSection2 .fullTxt {
+        font-size: 24px;
+    }
+    .fullTxtSection2{
+            margin-top: 40px;
     }
 
 }
