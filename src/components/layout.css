@@ -8434,6 +8434,9 @@ section.dpn_optoins {
     .author {
     width: 20%;
     }
+    .buttons_section a{
+        width: 190px;
+    }
 }
 @media screen and (max-width:1400px){
     .identi_bannersec .banner-desc {
@@ -9989,6 +9992,13 @@ section.dpn_optoins {
     .ca_main2 {
         padding-bottom: 65px;
     }
+
+    .buttons_section a{
+            padding: 11px 0;    width: 170px;
+                font-size: 17px; 
+    height: 40px;
+    }
+
 }
 @media screen and (max-width:1100px){
      .mg_slide_part .image-container{
