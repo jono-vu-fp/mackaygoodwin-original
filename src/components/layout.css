@@ -7338,6 +7338,15 @@ section.dpn_optoins {
 .ca_main2 {
     padding-bottom: 87px;
 }
+.video_form input[type="checkbox"] {
+    width: auto;
+    margin-right: 13px;
+    margin-top: 0;
+}
+.video_form h3 {
+    text-align: center;
+    padding-bottom: 15px;
+}
 /****** BreakPoints *******/
 /****** Responsive Start *******/
 @media screen and (min-width:1400px){
@@ -12835,6 +12844,10 @@ section.dpn_optoins {
     
     .mg_slide_part .react-multi-carousel-list  .react-multiple-carousel__arrow--right{
         right: calc(2% + 0px)!important;
+    }
+    label[for="field_6Please contact me to set up a free consultation."] {
+    width: 90%;
+    vertical-align: middle;
     }
 }
 @media screen and (max-width:440px){

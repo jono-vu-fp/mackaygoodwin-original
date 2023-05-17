@@ -12,6 +12,7 @@ import EbookForm from "../components/ebook-form"
 import { formHealthContext, formEbookContext } from '../components/context';
 import ImageLeftLayout from "../components/image-left-layout2"
 import ImageRightLayout from "../components/image-right-layout"
+import ActiveCampaignHowthrive from "../components/activecampaign-howthrive"
 import GetInTouchPPForm from "../components/get-in-touch-bankruptcy-popup"
 // const whyMG = [
 //   {
@@ -30,7 +31,8 @@ import GetInTouchPPForm from "../components/get-in-touch-bankruptcy-popup"
 
 import $ from "jquery"
 const Insolvency = ({ data }) => {
-    const [showModal, setModal] = React.useState(false);
+    const [showModal, setModal] = React.useState(false); 
+  const [showForm, setForm] = React.useState(false);
   let whyMG = [];
   data.wpPage.insolvency.qA.map((d) => {
     return whyMG.push({ title: d.question, description: d.answer, learnMoreText: d.buttonLabel, learnMoreUrl: d.buttonUrl });
@@ -40,6 +42,9 @@ const Insolvency = ({ data }) => {
     { link: "#", title: "Services" },
     { title: "Insolvency" },
   ]
+  const checkVideo = () =>{
+    setForm(true);
+  }
   const [fromDetails, setFormDetails] = React.useState(0);
   const [fromEbookDetails, setFormEbookDetails] = React.useState(0);
   const value = { fromDetails, setFormDetails };
@@ -157,12 +162,26 @@ const Insolvency = ({ data }) => {
             <h2>{data.wpPage.insolvency.insHtTitle}</h2>
             <div className="ht_cnt" dangerouslySetInnerHTML={{ __html: data.wpPage.insolvency?.insHtDescription }}></div>
             <formEbookContext.Provider value={valueEbook}>
-              <button className="btn btn-primary me-5" onClick={() => { setFormEbookDetails(1) }}>Download Now</button>
+              {/*<button className="btn btn-primary me-5" onClick={() => { setFormEbookDetails(1) }}>Download Now</button>*/}
+            <button className="btn btn-primary me-5" onClick={() => { checkVideo() }}>Download Now</button>
               <EbookForm
                 title={'Download e-guide'}
                 text={'Download your free copy today and get on the path to recovery'}
               />
             </formEbookContext.Provider>
+
+            <div id="myModal" role="dialog" className={showForm?'in show modal fade':'modal fade'}>
+              <div className="model_inner">
+                <div className="popup_dialog">
+                  <div className="modal-content">
+                    <button type="button" className="close" onClick={()=>setForm(false)} data-dismiss="modal">&times;</button>
+                    <div className="popup_body">
+                      <div className="video_form"><ActiveCampaignHowthrive setForm={setForm} /></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section> 

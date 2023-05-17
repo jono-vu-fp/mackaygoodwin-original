@@ -14,6 +14,7 @@ import HealthForm from "../components/health-form"
 import EbookForm from "../components/ebook-form"
 import ImageRightLayout from "../components/image-right-layout2"
 import ImageLeftLayout from "../components/image-left-layout3"
+import ActiveCampaignHowthrive from "../components/activecampaign-howthrive"
 import { formHealthContext, formEbookContext } from '../components/context';
 import GetInTouchPPForm from "../components/get-in-touch-bankruptcy-popup"
 
@@ -28,7 +29,8 @@ import GetInTouchPPForm from "../components/get-in-touch-bankruptcy-popup"
 // ]
 import $ from "jquery"
 const Restructuring = ({ data }) => {
-   const [showModal, setModal] = React.useState(false);
+  const [showModal, setModal] = React.useState(false);
+  const [showForm, setForm] = React.useState(false);
   let whyMG = [];
   data.wpPage.restructuring.queAndAnsNew.map((d) => {
     return whyMG.push({ title: d.questionNew, description: d.answerNew });
@@ -38,6 +40,9 @@ const Restructuring = ({ data }) => {
     { link: "#", title: "Services" },
     { title: "Business Restructure" },
   ]
+  const checkVideo = () =>{
+    setForm(true);
+  }
   const [fromDetails, setFormDetails] = React.useState(0);
   const [fromEbookDetails, setFormEbookDetails] = React.useState(0);
   const value = { fromDetails, setFormDetails };
@@ -136,6 +141,21 @@ const Restructuring = ({ data }) => {
 
               {data.wpPage.restructuring.buttonUrl !== null && data.wpPage.restructuring.buttonUrl !== "" ? <Link className="btn btn-primary me-5" to={data.wpPage.restructuring.buttonUrl}>{data.wpPage.restructuring.buttonLabel}</Link> : ""}
 
+              <div id="myModal" role="dialog" className={showForm?'in show modal fade':'modal fade'}>
+              <div className="model_inner">
+                <div className="popup_dialog">
+                  <div className="modal-content">
+                    <button type="button" className="close" onClick={()=>setForm(false)} data-dismiss="modal">&times;</button>
+                    <div className="popup_body">
+                      <div className="video_form"><ActiveCampaignHowthrive setForm={setForm} /></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
               <button  className="btn btn-primary me-5" type="button" onClick={()=>setModal(true)} data-toggle="modal" data-target="#myModal">{data.wpPage.restructuring.videoButtonLabel}</button>
               <div id="myModal" role="dialog" className={showModal?'in show modal fade':'modal fade'}>
               <div className="model_inner">
@@ -166,8 +186,10 @@ const Restructuring = ({ data }) => {
           <div className="ht_right">
             <h2>{data.wpPage.restructuring.resHtTitle}</h2>
             <div className="ht_cnt" dangerouslySetInnerHTML={{ __html: data.wpPage.restructuring?.resHtDescription }}></div>
+
+
             <formEbookContext.Provider value={valueEbook}>
-              <button className="btn btn-primary me-5" onClick={() => { setFormEbookDetails(1) }}>Download Now</button>
+              <button className="btn btn-primary me-5" onClick={() => { checkVideo() }}>Download Now</button>
               <EbookForm
                 title={'Download e-guide'}
                 text={'Download your free copy today and get on the path to recovery'}

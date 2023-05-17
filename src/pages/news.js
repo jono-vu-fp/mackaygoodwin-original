@@ -8,6 +8,8 @@ import News from "../components/news/list"
 import GetInTouch from "../components/get-in-touch3"
 import EbookForm from "../components/ebook-form"
 import { formHealthContext, formEbookContext } from '../components/context';
+import ActiveCampaignHowthrive from "../components/activecampaign-howthrive"
+
 
 
 const breadCrumbs = [
@@ -17,10 +19,14 @@ const breadCrumbs = [
 ]
   
 const NewsPage = ({ data }) => {
-  const [fromDetails, setFormDetails] = React.useState(0);
+  const [showForm, setForm] = React.useState(false);
+   const [fromDetails, setFormDetails] = React.useState(0);
   const [fromEbookDetails, setFormEbookDetails] = React.useState(0);
   const value = { fromDetails, setFormDetails };
   const valueEbook = { fromEbookDetails, setFormEbookDetails };
+  const checkVideo = () =>{
+    setForm(true);
+  }
   return (<div className="service insights">
     <Layout>
       <Seo title={data.wpPage.metaFields?.metaTitle} description={data.wpPage.metaFields?.metaDescription} />
@@ -47,12 +53,25 @@ const NewsPage = ({ data }) => {
             <h2>{data.wpPage.news.newsTitle}</h2>
             <div className="ht_cnt" dangerouslySetInnerHTML={{ __html: data.wpPage.news?.newsDescription }}></div>
             <formEbookContext.Provider value={valueEbook}>
-              <button className="btn btn-primary me-5" onClick={() => { setFormEbookDetails(1) }}>Download Now</button>
+              {/*<button className="btn btn-primary me-5" onClick={() => { setFormEbookDetails(1) }}>Download Now</button>*/}
+            <button className="btn btn-primary me-5" onClick={() => { checkVideo() }}>Download Now</button>
               <EbookForm
                 title={'Download e-guide'}
                 text={'Download your free copy today and get on the path to recovery'}
               />
             </formEbookContext.Provider>
+            <div id="myModal" role="dialog" className={showForm?'in show modal fade':'modal fade'}>
+              <div className="model_inner">
+                <div className="popup_dialog">
+                  <div className="modal-content">
+                    <button type="button" className="close" onClick={()=>setForm(false)} data-dismiss="modal">&times;</button>
+                    <div className="popup_body">
+                      <div className="video_form"><ActiveCampaignHowthrive setForm={setForm} /></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
