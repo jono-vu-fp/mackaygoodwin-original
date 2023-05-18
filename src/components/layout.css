@@ -7311,7 +7311,7 @@ section.dpn_optoins {
     padding: 13px 39px;
 }
 .ca_main2 .ca_sec:nth-child(3n+1),
-.ca_sec:nth-child(3n-1) {
+.ca_main2 .ca_sec:nth-child(3n-1) {
     background-color: transparent;
 }
 .ca_main2 .ca_sec .btn {
