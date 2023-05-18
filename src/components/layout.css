@@ -8365,6 +8365,9 @@ section.dpn_optoins {
     .lb_img img{              
         max-width: 220px
     }
+    .ref_mid_block .recovery-partner-title {
+        font-size: 32px;      
+    }
         
 
 }
@@ -8698,6 +8701,9 @@ section.dpn_optoins {
     }
     .wva_section.refe_ondemand .wva_left {
         margin-top: 80px;
+    }
+     .ref_mid_block .recovery-partner-title {
+        font-size: 30px;      
     }
 }
 @media screen and (max-width:1400px){
@@ -9195,6 +9201,9 @@ section.dpn_optoins {
  .refe_ondemand h4{
         font-size: 22px;
         padding-bottom: 5px;
+    }
+     .ref_mid_block .recovery-partner-title {
+        font-size: 29px;      
     }
 
 }
@@ -10319,6 +10328,9 @@ section.dpn_optoins {
     .thank {
         font-size: 16px;
         padding-top: 20px;
+    }
+      .ref_mid_block .recovery-partner-title {
+        font-size: 28px;      
     }
 
 }
