@@ -185,7 +185,7 @@ const MgWay = ({ data }) => {
                   </div>)
               })}
 
-              <div className="but-sign"><a href="#banner-section"> Sign Up</a></div>
+              <div className="but-sign"><Link to="#banner-section"> Sign Up</Link></div>
           </div>
         </div>
       </div>
