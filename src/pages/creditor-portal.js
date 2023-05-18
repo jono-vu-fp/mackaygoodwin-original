@@ -19,7 +19,6 @@ const CreditorPortal = ({data}) => {
      } 
   }, [])
   const filterList = (e) => {
-    alert(document.getElementById('search_app').value.toLowerCase());
      e.preventDefault();
      let v = document.getElementById('search_app').value.toLowerCase();
      setFilterData(appointData.filter((v1)=>v1.title.toLowerCase().indexOf(v)>=0 || (v1.appointmentId != null && v1.appointmentId.toLowerCase().indexOf(v)>=0) || v1.typeOfJob.toLowerCase().indexOf(v)>=0 || v1.date.toLowerCase().indexOf(v)>=0 || v1.appointee.toLowerCase().indexOf(v)>=0 || v1.analyst.toLowerCase().indexOf(v)>=0 || v1.email.toLowerCase().indexOf(v)>=0 || v1.phone.toLowerCase().indexOf(v)>=0 ))
