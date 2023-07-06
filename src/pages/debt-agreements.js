@@ -91,7 +91,7 @@ const ConsultBusiness = ({ data }) => {
         </div>
       </div>
 
-       <div className="wva_section key_expert">
+       <div className="wva_section key_expert hide_block">
         <div className="container">
         <div className="row">
           <div className="wva_left">
