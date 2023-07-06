@@ -134,7 +134,7 @@ const ConsultBusiness = ({ data }) => {
             </div>
           </div>   
 
-        <div className="wva_section key_expert">
+        <div className="wva_section key_expert hide_block">
           <div className="container">
             <div className="wva_left">
               <img src={data.wpPage.personalinsolvency.perFdImage?.mediaItemUrl} alt={data.wpPage.personalinsolvency.perFdImage?.altText} />

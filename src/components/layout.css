@@ -7544,6 +7544,7 @@ section.dpn_optoins {
 .referral-ban.tank-sec{
     padding-bottom: 80px!important;
 }
+.hide_block{ display:none; }
 
 /****** BreakPoints *******/
 /****** Responsive Start *******/

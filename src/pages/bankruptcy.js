@@ -68,7 +68,7 @@ const Bankruptcy = ({ data }) => {
         </div>
       </div>
 
-      <div className="wva_section">
+      <div className="wva_section hide_block">
         <div className="container">
           <div className="wva_left">
             <img src={data.wpPage.bankruptcy.psImage.mediaItemUrl} alt={data.wpPage.bankruptcy.psImage.altText} />
