@@ -5,7 +5,7 @@ const OurPeople = (props) => (
   <section className="asdasd news-articles" id="people">
     <div className="container">
       <div className="row">
-        <h2 className="my-3">{props.title}</h2>
+        { props.title != "" ? <h2 className="my-3">{props.title}</h2> : ""}
         <div className="col-md-9 col-sm-12 fullTxt">
           {props.text}
         </div>
