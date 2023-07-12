@@ -22,42 +22,42 @@ const SingleCareers = ({ data }) => {
     <Layout> 
       <Seo title={data?.wpPage?.metaFields?.metaTitle} description={data?.wpPage?.metaFields?.metaDescription} />
       <TopBanner
-        title={data.wpPage.singlecareers3?.singcare3BannerTitle}
+        title={data.wpPage?.singlecareers3?.singcare3BannerTitle}
         subtitle={''}
-        text={data.wpPage.singlecareers3?.singcare3BannerDesc}
-        bannerImg={data.wpPage.singlecareers3?.singcare3BannerImage}
+        text={data.wpPage?.singlecareers3?.singcare3BannerDesc}
+        bannerImg={data.wpPage?.singlecareers3?.singcare3BannerImage}
         equalWidth={true}
       />
 
 
        <div className="sing_sec2">
         <div className="container">
-             <h2>{data.wpPage.singlecareers3.singcare3AboTitle}</h2>
-            <div dangerouslySetInnerHTML={{ __html: data.wpPage.singlecareers3.singcare3Description }}></div>
+             <h2>{data.wpPage?.singlecareers3.singcare3AboTitle}</h2>
+            <div dangerouslySetInnerHTML={{ __html: data.wpPage?.singlecareers3.singcare3Description }}></div>
             
         </div>
       </div>  
 
        <div className="weva_section sing_sec3 sec_new1">
         <div className="container">
-             <h2>{data.wpPage.singlecareers3.singcare3CcoTitle}</h2>
-            <div dangerouslySetInnerHTML={{ __html: data.wpPage.singlecareers3.singcare3OppDescription }}></div>
+             <h2>{data.wpPage?.singlecareers3.singcare3CcoTitle}</h2>
+            <div dangerouslySetInnerHTML={{ __html: data.wpPage?.singlecareers3.singcare3OppDescription }}></div>
             
         </div>
       </div>
 
       <div className="sing_sec3 sec_new">
         <div className="container">
-             <h2>{data.wpPage.singlecareers3.singcare3AboutTitle}</h2>
-            <div dangerouslySetInnerHTML={{ __html: data.wpPage.singlecareers3.singcare3AboutDescription }}></div>
+             <h2>{data.wpPage?.singlecareers3.singcare3AboutTitle}</h2>
+            <div dangerouslySetInnerHTML={{ __html: data.wpPage?.singlecareers3.singcare3AboutDescription }}></div>
             
         </div>
       </div>
 
       <div className="sing_sec4">
         <div className="container">
-             <h2>{data.wpPage.singlecareers3.singcare3OfferTitle}</h2>
-            <div dangerouslySetInnerHTML={{ __html: data.wpPage.singlecareers3.singcare3OfferDescription }}></div>
+             <h2>{data.wpPage?.singlecareers3.singcare3OfferTitle}</h2>
+            <div dangerouslySetInnerHTML={{ __html: data.wpPage?.singlecareers3.singcare3OfferDescription }}></div>
             
         </div>
       </div>  
