@@ -17,7 +17,7 @@ import { Carousel } from 'react-responsive-carousel';
 
 import $ from "jquery"
 
-const SingleCareers = ({ data }) => { 
+const SingleCareers = ({ data }) => {  
   return (<div className="service consult-business liquidation voluntary_administration bankruptcy doc_1 safe_harbour media_moment careers single_career inoven">
     <Layout> 
       <Seo title={data.wpPage?.metaFields?.metaTitle} description={data.wpPage?.metaFields?.metaDescription} />
