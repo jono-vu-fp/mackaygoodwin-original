@@ -20,36 +20,36 @@ import $ from "jquery"
 const SingleCareers = ({ data }) => { 
   return (<div className="service consult-business liquidation voluntary_administration bankruptcy doc_1 safe_harbour media_moment careers single_career inoven">
     <Layout>
-      <Seo title={data.wpPage.metaFields?.metaTitle} description={data.wpPage.metaFields?.metaDescription} />
+      <Seo title={data.wpPage?.metaFields?.metaTitle} description={data.wpPage?.metaFields?.metaDescription} />
       <TopBanner
-        title={data.wpPage.singlecareers2?.singcare2BannerTitle}
+        title={data.wpPage?.singlecareers2?.singcare2BannerTitle}
         subtitle={''}
-        text={data.wpPage.singlecareers2?.singcare2BannerDesc}
-        bannerImg={data.wpPage.singlecareers2?.singcare2BannerImage}
+        text={data.wpPage?.singlecareers2?.singcare2BannerDesc}
+        bannerImg={data.wpPage?.singlecareers2?.singcare2BannerImage}
         equalWidth={true}
       />
 
 
        <div className="sing_sec2">
         <div className="container">
-             <h2>{data.wpPage.singlecareers2.singcare2AboTitle}</h2>
-            <div dangerouslySetInnerHTML={{ __html: data.wpPage.singlecareers2.singcare2Description }}></div>
+             <h2>{data.wpPage?.singlecareers2.singcare2AboTitle}</h2>
+            <div dangerouslySetInnerHTML={{ __html: data.wpPage?.singlecareers2.singcare2Description }}></div>
             
         </div>
       </div>  
 
        <div className="weva_section sing_sec3">
         <div className="container">
-             <h2>{data.wpPage.singlecareers2.singcare2CcoTitle}</h2>
-            <div dangerouslySetInnerHTML={{ __html: data.wpPage.singlecareers2.singcare2OppDescription }}></div>
+             <h2>{data.wpPage?.singlecareers2.singcare2CcoTitle}</h2>
+            <div dangerouslySetInnerHTML={{ __html: data.wpPage?.singlecareers2.singcare2OppDescription }}></div>
             
         </div>
       </div>
 
       <div className="sing_sec4">
         <div className="container">
-             <h2>{data.wpPage.singlecareers2.singcare2OfferTitle}</h2>
-            <div dangerouslySetInnerHTML={{ __html: data.wpPage.singlecareers2.singcare2OfferDescription }}></div>
+             <h2>{data.wpPage?.singlecareers2.singcare2OfferTitle}</h2>
+            <div dangerouslySetInnerHTML={{ __html: data.wpPage?.singlecareers2.singcare2OfferDescription }}></div>
             
         </div>
       </div>  
