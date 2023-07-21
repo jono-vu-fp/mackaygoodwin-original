@@ -54,7 +54,9 @@ exports.createPages = async ({ graphql, actions }) => {
     { from: '/10-steps-to-getting-your-business-out-of-debt', to: '/' },
     { from: '/building-developer', to: '/' },
     { from: '/debt-management-tips-for-company-directors', to: '/' },
-    { from: '/why-you-need-a-budget-for-your-business', to: '/' }
+    { from: '/why-you-need-a-budget-for-your-business', to: '/' },
+    { from: '/services', to: '/expertsinbusiness' },
+    { from: '/contact-us', to: '/contact' }
   ]
 
   redirection.forEach(post => {
