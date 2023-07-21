@@ -120,7 +120,7 @@ const FooterMain = ({ data }) => {
         </div>
       </div>
       <div className="row bottom">
-        <div className="col-md-8 col-sm-12 legal">© 2021 All rights reserved   |   Mackay Goodwin Corporate Restructuring and Advisory</div>
+        <div className="col-md-8 col-sm-12 legal">© 2023 All rights reserved   |   Mackay Goodwin Corporate Restructuring and Advisory</div>
         <div className="col-md-4 col-sm-12 text-end legal"><Link to="/privacy-policy">Legal & Privacy</Link></div>
       </div>
     </div>
