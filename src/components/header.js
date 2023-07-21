@@ -45,7 +45,7 @@ const Header = () => {
     <nav className="navbar navbar-light bg-light position-fixed col-12 desktopNav mainnav">
       <div className="container">
         <Link className="navbar-brand small-logo d-none" to="/">
-          <img src={MackeySmall} alt="logo" />
+          <img src={MackeySmall} alt="Mackay Goodwin - Corporate Restructuring, Advisory & Insolvency" />
         </Link>
         <ul className="top-belt1 mb-0 me-auto over-nav d-none">
           <li className="nav-item p-3 dropdown" onMouseOver={(t) => { t.currentTarget.classList.add('show'); }} onMouseOut={(t) => { t.currentTarget.classList.remove('show'); }}>
@@ -113,7 +113,7 @@ const Header = () => {
     <nav className="navbar navbar-expand-lg below-nav navbar-light col-12 desktopNav d-flex d-none d-lg-block d-xl-nonee" style={{ paddingTop: "55px" }}>
       <div className="container">
         <Link className="navbar-brand" to="/">
-          <img src={Mackey} alt="Mackey" />
+          <img src={Mackey} alt="Mackay Goodwin - Corporate Restructuring, Advisory & Insolvency" />
         </Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
@@ -196,7 +196,7 @@ const Header = () => {
         <span className="hamburgerspan"></span>
       </div>
 
-      <div className="mobile-logo black-logo text-center"> <Link to="/"><img src="https://res.cloudinary.com/mbsaiyed/image/upload/v1625504292/svg/logo-color.svg" alt="" /></Link></div>
+      <div className="mobile-logo black-logo text-center"> <Link to="/"><img src="https://res.cloudinary.com/mbsaiyed/image/upload/v1625504292/svg/logo-color.svg" alt="Mackay Goodwin - Corporate Restructuring, Advisory & Insolvency" /></Link></div>
 
 
       <div id="menu-cont-1">
@@ -214,7 +214,7 @@ const Header = () => {
           </ul> 
         </div>
        
-         <div className="mobile-logo black-logo text-center"><Link  onClick={()=>{document.getElementById('top-nav').checked=false;}} to="/"><img src="https://res.cloudinary.com/mbsaiyed/image/upload/v1625481695/svg/mobile-logo.svg" alt="" /></Link></div>
+         <div className="mobile-logo black-logo text-center"><Link  onClick={()=>{document.getElementById('top-nav').checked=false;}} to="/"><img src="https://res.cloudinary.com/mbsaiyed/image/upload/v1625481695/svg/mobile-logo.svg" alt="Mackay Goodwin - Corporate Restructuring, Advisory & Insolvency" /></Link></div>
 
         <ul className="menu-ul">
          <li className="nav-item">  
@@ -228,7 +228,7 @@ const Header = () => {
           <li className="nav-item sub-menu"><Link className="nav-link" to="/expertsinbusiness/"> Services</Link>
             <input type="checkbox" id="menu-1" />
             <div id="menu-cont-2">
-              <div className="mobile-logo black-logo text-center"><Link  onClick={()=>{document.getElementById('top-nav').checked=false;}}  to="/"><img src="https://res.cloudinary.com/mbsaiyed/image/upload/v1625481695/svg/mobile-logo.svg" alt="" /></Link></div>
+              <div className="mobile-logo black-logo text-center"><Link  onClick={()=>{document.getElementById('top-nav').checked=false;}}  to="/"><img src="https://res.cloudinary.com/mbsaiyed/image/upload/v1625481695/svg/mobile-logo.svg" alt="Mackay Goodwin - Corporate Restructuring, Advisory & Insolvency" /></Link></div>
               <ul className="menu-ul">
                 <label className="menu-label" htmlFor="menu-1">Menu</label>
               
@@ -256,7 +256,7 @@ const Header = () => {
           <li className="nav-item sub-menu"><Link className="nav-link" to="/mg-way/">The MG Way</Link>
             <input type="checkbox" id="menu-3" />
             <div id="menu-cont-2">
-              <div className="mobile-logo black-logo text-center"><Link  onClick={()=>{document.getElementById('top-nav').checked=false;}}  to="/"><img src="https://res.cloudinary.com/mbsaiyed/image/upload/v1625481695/svg/mobile-logo.svg" alt="" /></Link></div>
+              <div className="mobile-logo black-logo text-center"><Link  onClick={()=>{document.getElementById('top-nav').checked=false;}}  to="/"><img src="https://res.cloudinary.com/mbsaiyed/image/upload/v1625481695/svg/mobile-logo.svg" alt="Mackay Goodwin - Corporate Restructuring, Advisory & Insolvency" /></Link></div>
               <ul className="menu-ul">
                 <label className="menu-label" htmlFor="menu-3">Menu</label>
                 <li className="nav-item"><Link className="dropdown-item" to="/mg-way/#people">People</Link></li>
@@ -269,7 +269,7 @@ const Header = () => {
           <li className="nav-item sub-menu"><Link className="nav-link" to="/mg-academy/"> MG Academy</Link>
             <input type="checkbox" id="menu-4" />
             <div id="menu-cont-2">
-              <div className="mobile-logo black-logo text-center"><Link  onClick={()=>{document.getElementById('top-nav').checked=false; }} to="/"><img src="https://res.cloudinary.com/mbsaiyed/image/upload/v1625481695/svg/mobile-logo.svg" alt="" /></Link></div>
+              <div className="mobile-logo black-logo text-center"><Link  onClick={()=>{document.getElementById('top-nav').checked=false; }} to="/"><img src="https://res.cloudinary.com/mbsaiyed/image/upload/v1625481695/svg/mobile-logo.svg" alt="Mackay Goodwin - Corporate Restructuring, Advisory & Insolvency" /></Link></div>
               <ul className="menu-ul">  
                 <label className="menu-label" htmlFor="menu-4">Menu</label>
                 <li className="nav-item"><Link to="/media-moments/">Media Moments</Link></li>
