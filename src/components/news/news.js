@@ -12,7 +12,7 @@ const News = (props) => (
         </div>
         <div className="col-lg-5 col-md-5 ps-4" style={{ paddingBottom: "100px", background: "#E0E3E5" }} >
           <h4>{props.data[0].title}</h4>
-          <div dangerouslySetInnerHTML={{ __html: props.data[0].excerpt }}></div>
+          <div dangerouslySetInnerHTML={{ __html: props.data[0].excerpt.replace("newsandarticle","insights") }}></div>
           <Link to={"/insights/" + props.data[0].slug + "/"}>Read More <i className="fa fa-chevron-right" aria-hidden="true"></i></Link>
         </div>
       </div>

@@ -111,11 +111,11 @@ const FooterMain = ({ data }) => {
         <div className="col-lg-2 col-md-4 col-xs-12">
           <div className="h3">Connect</div>
           <ul>
-            <li><a href="https://au.linkedin.com/company/mackay-goodwin" target="_blank" rel="noopener noreferrer"><i className="fa fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
-            <li><a href="https://www.facebook.com/MackayGoodwinAU" target="_blank" rel="noopener noreferrer"><i className="fa fa-facebook" aria-hidden="true"></i> Facebook</a></li>
-            <li><a href="https://twitter.com/GoodwinMackay" target="_blank" rel="noopener noreferrer"><i className="fa fa-twitter" aria-hidden="true"></i> Twitter</a></li>
-            <li><a href="https://www.youtube.com/channel/UCG7SWnAcd3R7SLLXM-erfeQ" target="_blank" rel="noopener noreferrer"><i className="fa fa-youtube" aria-hidden="true"></i> YouTube</a></li>
-            <li><a href="https://www.instagram.com/mackay.goodwin/" target="_blank" rel="noopener noreferrer"><i className="fa fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+            <li><a href="https://au.linkedin.com/company/mackay-goodwin" target="_blank" rel="noopener noreferrer" rel="me"><i className="fa fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+            <li><a href="https://www.facebook.com/MackayGoodwinAU" target="_blank" rel="noopener noreferrer" rel="me"><i className="fa fa-facebook" aria-hidden="true"></i> Facebook</a></li>
+            <li><a href="https://twitter.com/GoodwinMackay" target="_blank" rel="noopener noreferrer" rel="me"><i className="fa fa-twitter" aria-hidden="true"></i> Twitter</a></li>
+            <li><a href="https://www.youtube.com/channel/UCG7SWnAcd3R7SLLXM-erfeQ" target="_blank" rel="noopener noreferrer" rel="me"><i className="fa fa-youtube" aria-hidden="true"></i> YouTube</a></li>
+            <li><a href="https://www.instagram.com/mackay.goodwin/" target="_blank" rel="noopener noreferrer" rel="me"><i className="fa fa-instagram" aria-hidden="true"></i> Instagram</a></li>
           </ul>
         </div>
       </div>
