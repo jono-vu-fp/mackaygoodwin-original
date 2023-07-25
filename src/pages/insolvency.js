@@ -6,14 +6,11 @@ import Seo from "../components/seo"
 import TopBanner from "../components/top-banner"
 import GetInTouch from "../components/get-in-touch3"
 import FullText from "../components/full-text"
-import CurveLeft from "../components/curve-left"
-import HealthForm from "../components/health-form"
 import EbookForm from "../components/ebook-form"
-import { formHealthContext, formEbookContext } from '../components/context';
-import ImageLeftLayout from "../components/image-left-layout2"
-import ImageRightLayout from "../components/image-right-layout"
+import { formEbookContext } from '../components/context';
 import ActiveCampaignHowthrive from "../components/activecampaign-howthrive"
 import GetInTouchPPForm from "../components/get-in-touch-bankruptcy-popup"
+import Accordian from "../components/accordian/accordian-insolvency"
 // const whyMG = [
 //   {
 //     "title": "Liquidation",
@@ -37,6 +34,13 @@ const Insolvency = ({ data }) => {
   data.wpPage.insolvency.qA.map((d) => {
     return whyMG.push({ title: d.question, description: d.answer, learnMoreText: d.buttonLabel, learnMoreUrl: d.buttonUrl });
   })
+
+  let whyMG2 = [];
+
+  data.wpPage.insolvency.insFaqs.map((d) => {
+    return whyMG2.push({ title: d.insQuestion, description: d.insAnswer, tag: '' });
+  })
+
   const breadCrumbs = [
     { link: "/", title: "Home" },
     { link: "#", title: "Services" },
@@ -202,6 +206,15 @@ const Insolvency = ({ data }) => {
 
 
 
+        <Accordian
+          title={data.wpPage.insolvency.insFaqTitle}
+          description={data.wpPage.insolvency.insDescription}
+          showEnquireButton={false}
+          data={whyMG2}
+        />
+
+
+
       <div className="home">
           <GetInTouch
             title={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchTitle}
@@ -272,6 +285,13 @@ export const query = graphql`
           }
 
         sendUrl
+
+        insFaqTitle
+        insDescription
+        insFaqs {
+          insQuestion
+          insAnswer
+        } 
       }
       metaFields {
         metaDescription
