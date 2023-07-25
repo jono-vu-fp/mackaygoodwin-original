@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import TopBanner from "../components/top-banner-4"
-import GetInTouch from "../components/get-in-touch"
+import GetInTouch from "../components/get-in-touch3"
 import CurveLeft from "../components/curve-left"
 import Services from "../components/services"
 import Accordian from "../components/accordian/accordian"
@@ -13,7 +13,7 @@ import FullText from "../components/full-text"
 import OurPeople from "../components/our-people-liquid/our-people2"
 import TestimonialMain from "../components/testimonial-main-liquid-1"
 import ReciveryPlan from "../components/recovery-plan"
-import Container from "../components/slider/container-liquidation"
+import Container from "../components/slider/container-small-business"
 import EbookForm from "../components/ebook-form"
 import { formEbookContext } from '../components/context';
 import GetInTouchPPForm from "../components/get-in-touch-bankruptcy-popup"
@@ -180,12 +180,19 @@ const ConsultBusiness = ({ data }) => {
         liquidation={1}
       />
       <Container
-        title={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.testimonialTitle}
-        data={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.testimonials}
-        slideColor={'#ebe9de'}
+        title={''}
+        subtitle={data.wpPage.smallbusinessrestructure.smBusinessDesc}
+        data={data.wpPage.smallbusinessrestructure.smBusinessTestimonial}
+        slideColor={'#EBE9DE'}
       />
       <div className="cu_fixed">
           <a href="/contact"><img src="/images/sophie-img.png" />Contact Us</a>
+      </div>
+      <div className="home">
+        <GetInTouch
+          title={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchTitle}
+          text={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchDescription}
+        />
       </div>
       <GetInTouchPPForm
         title={data?.allWp?.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchTitle}
@@ -255,6 +262,20 @@ export const query = graphql`
         }
                
         smallWymnuTitle
+
+        smBusinessTitle
+        smBusinessDesc
+
+        smBusinessTestimonial {
+          smComment
+          smDesignation
+          smImage {
+            altText
+            mediaItemUrl
+          }
+          smLearnMoreUrl
+          smName
+        }
       }
     }
     allWp {

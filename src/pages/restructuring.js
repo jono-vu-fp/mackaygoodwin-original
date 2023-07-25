@@ -6,8 +6,8 @@ import Seo from "../components/seo"
 import TopBanner from "../components/top-banner"
 import GetInTouch from "../components/get-in-touch3"
 import Accordian from "../components/accordian/accordian"
-import FullText from "../components/full-text"
-import Container from "../components/slider/container"
+import FullText from "../components/full-text3"
+import Container from "../components/slider/container-restructuring"
 import CurveLeft from "../components/curve-left"
 import CurveRight2 from "../components/curve-right2"
 import HealthForm from "../components/health-form"
@@ -82,7 +82,7 @@ const Restructuring = ({ data }) => {
         data={data.wpPage.restructuring.businessTestimonial}
         slideColor={'#EBE9DE'}
       />
-      <ImageRightLayout
+      {/*<ImageRightLayout
         id={'vCFO'}
         title={data.wpPage.restructuring.croTitle}
         text={data.wpPage.restructuring.croDesc}
@@ -90,17 +90,20 @@ const Restructuring = ({ data }) => {
         btnTxt={'Enquire'}
         btnLink={data.wpPage.restructuring.enquireLink}
         addClass={"ill_section resill_section"}
-      />
+      />*/}
 
-       <div className="wva_section fd_section dca_section dpn_part">
+     
+
+
+       <div className="vcfo_section ill_section resill_section dpn_part">
         <div className="container">
-          <div className="wva_left">
+          <div className="vcfo_left">
             <img src={data.wpPage.restructuring.dpn2Image.mediaItemUrl} alt={data.wpPage.restructuring.dpn2Image.altText} />
           </div>
-          <div className="wva_right">
+          <div className="vcfo_right">
             <h3>{data.wpPage.restructuring.dpn2Title}</h3>
             <div dangerouslySetInnerHTML={{ __html: data.wpPage.restructuring.dpn2Description }}></div>
-            {data.wpPage.restructuring.dpn2ButtonLink !== null && data.wpPage.restructuring.dpn2ButtonLink !== "" ? <Link className="btn btn-primary me-5" to={data.wpPage.restructuring.dpn2ButtonLink}>{data.wpPage.restructuring.dpn2ButtonText}</Link> : ""} {data.wpPage.restructuring.dpn2Button2Link !== null && data.wpPage.restructuring.dpn2Button2Link !== "" ? <Link className="btn btn-primary me-5" to={data.wpPage.restructuring.dpn2Button2Link}>{data.wpPage.restructuring.dpn2Button2Text}</Link> : ""}
+            {data.wpPage.restructuring.dpn2ButtonLink !== null && data.wpPage.restructuring.dpn2ButtonLink !== "" ? <Link className="btn btn-primary me-2" to={data.wpPage.restructuring.dpn2ButtonLink}>{data.wpPage.restructuring.dpn2ButtonText}</Link> : ""} {data.wpPage.restructuring.dpn2Button2Link !== null && data.wpPage.restructuring.dpn2Button2Link !== "" ? <Link className="btn btn-primary me-5" to={data.wpPage.restructuring.dpn2Button2Link}>{data.wpPage.restructuring.dpn2Button2Text}</Link> : ""}
           </div>
         </div>
       </div>

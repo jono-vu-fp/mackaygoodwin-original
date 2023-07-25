@@ -408,7 +408,16 @@ a,a:hover {
     line-height: 24px;
     padding-bottom: 60px;
 }
-
+.restructure #testimonials .card-text {
+    font-size: 16px;
+    line-height: 24px;
+    padding-bottom: 0px;
+        min-height: 225px;
+}
+.restructure #testimonials .card-text p {
+    margin: 0;
+}
+.restructure #testimonials .btn{ margin-top:14px }
 .insights .grn-bx {
     background-color: #F1F0E8;
 }
@@ -5603,10 +5612,16 @@ margin-bottom: 45px;
     padding-top: 16px;
 }
 .small_business .obstacles_text.middleFullText h6, .small_business .obstacles_text.middleFullText h4 {
-    color: #0d4432;
-    font-size: 18px;
+       color: #0d4432;
+    font-size: 20px;
     margin-bottom: 20px;
-    margin-top: 30px;
+    margin-top: 30px; 
+    font-family: 'Sohne';
+    font-weight: normal;
+
+}
+.small_business .fd_section.myexperience_section {
+    padding-bottom: 95px;
 }
 .liquidation.small_business .obstacles_text.middleFullText{
     padding-top: 0px;
@@ -5905,12 +5920,25 @@ margin-bottom: 45px;
      line-height: normal;
 }
 .ca_main.res_new .ca_sec div.ca_txt{
-    padding-right: 40px;
+    padding-right:0px;
 }
 .ca_main.res_new .ca_sec:nth-child(1){
-    background-color: #ebe9de!important;
+    background-color: #e0e3e5!important;
     padding:70px 0px 69px
 }
+.ca_main.res_new .ca_sec:nth-child(3){
+    background-color: #ebe9de ;
+}
+.ca_main.res_new .ca_sec:nth-child(3) .res_ul li{
+        color: #1c5e48;
+}
+.ca_main.res_new .ca_sec p.p1 strong {
+    color: #1c5e48;
+    font-size: 22px;
+    font-family: 'Sohne';
+    font-weight: normal;
+}
+
 .ca_main.res_new .ca_sec:nth-child(1) .btn{
         margin-top:4px!important;
 }
@@ -7548,6 +7576,38 @@ section.dpn_optoins {
     padding-bottom: 80px!important;
 }
 .hide_block{ display:none; }
+.fullTxt p {
+    margin: 0;
+}
+.fullTxt p a {
+    font-size: 32px;
+    color: #000;
+    border-bottom: 1px solid;
+}
+.restructure .fullTxtSection p {
+    max-width: 1181px;
+}
+.restructure .health_check .ht_left{
+        width: 57%;
+}
+.restructure .health_check .ht_right{
+        width: 43%;
+}
+.restructure .health_check {
+    margin-top: 0;
+}
+.small_business .weva_section.doc3 p {
+    color: #0d4432;
+}
+.bankruptcy.safe_harbour.small_business .wva_section.key_expert .wva_right {
+    padding-top: 62px;
+}
+.bankruptcy.small_business .wva_section.key_expert .wva_left {
+    padding-top: 125px;
+}
+.bankruptcy.small_business .wva_section.key_expert .wva_left::before{
+    top: 125px;
+}
 
 /****** BreakPoints *******/
 /****** Responsive Start *******/
@@ -9503,10 +9563,12 @@ section.dpn_optoins {
         padding-bottom: 70px;
     }
 
-    .health_check .ht_right{
+    .health_check .ht_right,
+    .restructure .health_check .ht_right{
         width: 49%;
     }
-    .health_check .ht_left{
+    .health_check .ht_left
+    .restructure .health_check .ht_left{
         width: 51%;    
     }
     .health_check h2{
@@ -11205,11 +11267,13 @@ section.dpn_optoins {
     .myexperience_section h2 {
         margin-bottom: 25px;
     }
-    .health_check .ht_left {
+    .health_check .ht_left,
+    .restructure .health_check .ht_left {
         float: left;
         width: 100%;
     }
-    .health_check .ht_right{
+    .health_check .ht_right,
+   .restructure .health_check .ht_right{
         width: 100%;
         text-align: center;
     }
@@ -11961,7 +12025,18 @@ section.dpn_optoins {
     .wcmg_section.referral_sec {
         margin-top: 55px;
     }
-
+    .ca_main.res_new .ca_sec p.p1 strong{
+        font-size: 20px;
+    }
+    .bankruptcy.small_business .wva_section.key_expert .wva_left {
+        padding-top: 50px;
+    }
+    .bankruptcy.safe_harbour.small_business .wva_section.key_expert .wva_right {
+        padding-top: 0;
+    }
+    .small_business .fd_section.myexperience_section {
+        padding-bottom: 20px;
+    }
 
 }
 @media screen and (max-width:767px){
@@ -12634,7 +12709,12 @@ section.dpn_optoins {
     .ref-form div {
         width: 47%;
     }
-
+     .ca_main.res_new .ca_sec p.p1 strong{
+        font-size: 18px;
+    }
+    .bankruptcy.small_business .wva_section.key_expert .wva_left {
+        padding-top: 30px;
+    }
 
 }
 @media screen and (max-width:667px){
@@ -13291,6 +13371,9 @@ section.dpn_optoins {
     }
      .mg_slide_part .container li {
         padding-left:10px;
+    }
+    .restructure .dpn_part a.btn {
+        margin: 0 0 15px 0 !important;
     }
 
 }
