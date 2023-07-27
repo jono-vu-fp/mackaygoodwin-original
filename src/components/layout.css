@@ -7608,6 +7608,34 @@ section.dpn_optoins {
 .bankruptcy.small_business .wva_section.key_expert .wva_left::before{
     top: 125px;
 }
+.ondpage .wva_section .row {
+    align-items: flex-start;
+}
+.ondpage_se1.mg_acnew1 .wva_right h3{
+    color: #1c5e48;    padding-top: 64px;
+}
+.ondpage_se1.wva_section .wva_right {
+    padding: 0 34px 0 0;
+}
+.ondpage_se1 .btn {
+    margin-top: 0px!important;
+}
+.ondpage_se1 .wva_right div p{
+    margin: 0 0 21px;
+}
+.ondpage_se1 .wva_left{
+        padding-bottom: 50px;
+}
+.ondpage .wva_section{ margin-top:110px;}
+.ondpage .mg_acnew2 .wva_right .btn {
+    margin-top: 0;    padding: 9px 39px;
+}
+.ondpage_se1.wva_section .wva_left:after{
+    bottom: 50px;
+}
+.ondpage .mg_acnew2 .wva_right{
+    padding-top: 133px !important;
+}
 
 /****** BreakPoints *******/
 /****** Responsive Start *******/
@@ -8190,6 +8218,17 @@ section.dpn_optoins {
     .wcmg_section.referral_sec{
             margin-top: 80px;
     }
+     
+    .ondpage .wva_section {
+        margin-top: 90px;  margin-bottom: 0 !important;
+    }
+    .ondpage_se1 .wva_left {
+    margin-top: 0 !important;
+    }
+    .ondpage_se1{ padding-top:60px !important; padding-bottom:60px !important; }
+    .ondpage main {
+        margin-bottom: 120px;
+    }
 
 }
 @media screen and (max-width:1600px){
@@ -8432,7 +8471,10 @@ section.dpn_optoins {
     .ref_mid_block .recovery-partner-title {
         font-size: 32px;      
     }
-        
+
+    .ondpage_se1 .wva_left {
+        padding-bottom: 30px;
+    }        
 
 }
 @media screen and (max-width:1500px){
@@ -9269,6 +9311,10 @@ section.dpn_optoins {
      .ref_mid_block .recovery-partner-title {
         font-size: 29px;      
     }
+    .ondpage_se1 .wva_left {
+        margin-top: 0 !important;
+    }
+    .ondpage .wva_section {    margin-top: 70px;}
 
 }
 @media screen and (max-width:1300px){
@@ -10397,6 +10443,25 @@ section.dpn_optoins {
     }
       .ref_mid_block .recovery-partner-title {
         font-size: 28px;      
+    }
+    .ondpage_se1 .wva_left {
+        margin-top: 0 !important;
+    }
+    .ondpage_se1 {
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+    }
+    .ondpage_se1.mg_acnew1 .wva_right h3{
+            padding-top: 20px;
+    }
+    .ondpage .mg_acnew2 .wva_right {
+        padding-top: 80px !important;
+    }
+    .ondpage .wva_section {
+    margin-top: 55px;
+    }
+    .ondpage main {
+        margin-bottom: 70px;
     }
 
 }
@@ -12037,6 +12102,30 @@ section.dpn_optoins {
     .small_business .fd_section.myexperience_section {
         padding-bottom: 20px;
     }
+    .ondpage_se1 {
+    padding-top: 0px !important;}
+
+    .wva_section.ondpage_se1 .wva_left:before{
+        height: 750%;
+    }
+    .ondpage_se1 .wva_left {
+        padding-bottom: 0;
+    }
+    .ondpage_se1.wva_section .wva_left:after {
+        bottom: 0;
+    }
+    .ondpage_se1.wva_section .wva_right{
+            padding: 0 20px 0 0;
+    }
+    .ondpage .mg_acnew2 .wva_right {
+        padding-top: 0px !important;
+    }
+    .ondpage .wva_section {
+        margin-top: 45px;
+    }
+    .ondpage_se1 .btn,.ondpage .mg_acnew2 .wva_right .btn {
+        margin-top: 0px!important;
+    }
 
 }
 @media screen and (max-width:767px){
@@ -13375,6 +13464,10 @@ section.dpn_optoins {
     .restructure .dpn_part a.btn {
         margin: 0 0 15px 0 !important;
     }
+    .ondpage .wva_section {
+        margin-top: 35px;
+    }
+
 
 }
 @media screen and (max-width:460px){
