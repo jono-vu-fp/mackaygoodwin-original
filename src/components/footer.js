@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import MackeyWhite from "../images/logo-white.svg";
 import SFLOGO from "../images/SF_LOGO.png";
 import DSLOGO from "../images/DS_LOGO.png";
+import GTSLOGO from "../images/gts_logo.png";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 
@@ -94,6 +95,7 @@ const FooterMain = ({ data }) => {
           <ul>
             <li key={0}><a href={"https://australiandebtsolvers.com.au/"} target="_blank"><img style={{width:100}} src={DSLOGO} alt="Mackay" /></a></li>
             <li key={1}><a href={"https://simplyfunds.com.au/"} target="_blank"><img style={{width:100}} src={SFLOGO} alt="Mackay" /></a></li>
+            <li key={1}><a href={"https://gtsadvisory.com.au/"} target="_blank"><img style={{width:70}} src={GTSLOGO} alt="GTS" /></a></li>
           </ul>
         </div>
         {links.map((link, key) => {
