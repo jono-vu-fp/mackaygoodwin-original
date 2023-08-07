@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import MackeyWhite from "../images/logo-white.svg";
+import MackeyWhite from "../images/logo-white2.svg";
 import SFLOGO from "../images/SF_LOGO.png";
 import DSLOGO from "../images/DS_LOGO.png";
 import GTSLOGO from "../images/gts_logo.png";
@@ -90,12 +90,12 @@ const FooterMain = ({ data }) => {
     <div className="container">
       <div className="row">
         <div className="col-lg-2 col-md-4 col-xs-12">
-          <img src={MackeyWhite} alt="Mackay" />
+          <img src={MackeyWhite} alt="Mackay" className="ftrmn_logo" />
           <div className="h3" style={{marginTop: 20, fontStyle: 'italic', fontSize: 16}}>Powers</div>
           <ul>
             <li key={0}><a href={"https://australiandebtsolvers.com.au/"} target="_blank"><img style={{width:100}} src={DSLOGO} alt="Mackay" /></a></li>
             <li key={1}><a href={"https://simplyfunds.com.au/"} target="_blank"><img style={{width:100}} src={SFLOGO} alt="Mackay" /></a></li>
-            <li key={1}><a href={"https://gtsadvisory.com.au/"} target="_blank"><img style={{width:70}} src={GTSLOGO} alt="GTS" /></a></li>
+            <li key={1}><a href={"https://gtsadvisory.com.au/"} target="_blank"><img style={{width:55}} src={GTSLOGO} alt="GTS" /></a></li>
           </ul>
         </div>
         {links.map((link, key) => {
