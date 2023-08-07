@@ -17,6 +17,7 @@
     "gatsby-plugin-force-trailing-slashes": "^1.0.5",
     "gatsby-plugin-gatsby-cloud": "^2.6.1",
     "gatsby-plugin-google-tagmanager": "^3.9.0",
+    "gatsby-plugin-htaccess": "^1.4.0",
     "gatsby-plugin-image": "^1.6.0",
     "gatsby-plugin-manifest": "^3.6.0",
     "gatsby-plugin-no-index": "^1.0.2",
