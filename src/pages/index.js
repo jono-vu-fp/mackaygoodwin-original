@@ -67,7 +67,7 @@ const IndexPage = ({ data }) => {
                     </div>
                     <div className="col-10 col-sm-10 col-md-10 col-lg-7">
                       <div className="banner-img-wrapper">
-                        <img className="img-fluid" alt={data.wpPage.hpOptions.homeSlider[0].bannerImage.altText} src={data.wpPage.hpOptions.homeSlider[0].bannerImage.mediaItemUrl} alt={data.wpPage.hpOptions.homeSlider[0].bannerImage.altText} />
+                        <img className="img-fluid" alt={data.wpPage.hpOptions.homeSlider[0].bannerImage.altText} src={data.wpPage.hpOptions.homeSlider[0].bannerImage.localFile.childImageSharp.resize.src} alt={data.wpPage.hpOptions.homeSlider[0].bannerImage.altText} />
                       </div>
                     </div>
                     <div className="col-12 d-block d-sm-block d-md-block d-lg-none">
@@ -94,7 +94,7 @@ const IndexPage = ({ data }) => {
                     </div>
                     <div className="col-10 col-sm-10 col-md-10 col-lg-7">
                       <div className="banner-img-wrapper">
-                        <img className="img-fluid" src={data.wpPage.hpOptions.homeSlider[1].bannerImage.mediaItemUrl} alt={data.wpPage.hpOptions.homeSlider[1].bannerImage.altText} />
+                        <img className="img-fluid" src={data.wpPage.hpOptions.homeSlider[1].bannerImage.localFile.childImageSharp.resize.src} alt={data.wpPage.hpOptions.homeSlider[1].bannerImage.altText} />
                       </div>
                     </div>
                     <div className="col-12 d-block d-sm-block d-md-block d-lg-none">
@@ -114,7 +114,7 @@ const IndexPage = ({ data }) => {
                     </div>
                     <div className="col-10 col-sm-10 col-md-10 col-lg-7">
                       <div className="banner-img-wrapper thirdslide">
-                        <img className="img-fluid" src={data.wpPage.hpOptions.homeSlider[2].bannerImage.mediaItemUrl} alt={data.wpPage.hpOptions.homeSlider[2].bannerImage.altText} />
+                        <img className="img-fluid" src={data.wpPage.hpOptions.homeSlider[2].bannerImage.localFile.childImageSharp.resize.src} alt={data.wpPage.hpOptions.homeSlider[2].bannerImage.altText} />
                       </div>
                     </div>
                     <div className="col-2 col-sm-2 col-md-2 col-lg-5 align-self-center">
@@ -141,7 +141,7 @@ const IndexPage = ({ data }) => {
                     </div>
                     <div className="col-10 col-sm-10 col-md-10 col-lg-7">
                       <div className="banner-img-wrapper thirdslide">
-                        <img className="img-fluid" src={data.wpPage.hpOptions.homeSlider[3].bannerImage.mediaItemUrl} alt={data.wpPage.hpOptions.homeSlider[3].bannerImage.altText} />
+                        <img className="img-fluid" src={data.wpPage.hpOptions.homeSlider[3].bannerImage.localFile.childImageSharp.resize.src} alt={data.wpPage.hpOptions.homeSlider[3].bannerImage.altText} />
                       </div>
                     </div>
                     <div className="col-2 col-sm-2 col-md-2 col-lg-5 align-self-center">
@@ -168,7 +168,7 @@ const IndexPage = ({ data }) => {
             <h2>{data.wpPage.hpOptions.serviceTitle}</h2>
             <ul>
               {data.wpPage.hpOptions.services.map((d, key) => {
-                return <li><div className="hs_img"><img src={d.serviceImage.mediaItemUrl} alt="" /></div><div className="hs_cnt"><h4>{d.serviceTitle}</h4><p>{d.serviceDecription}</p><Link className="btn btn-primary" to={d.servicePageUrl}>Learn more</Link></div></li>
+                return <li><div className="hs_img"><img src={d.serviceImage.localFile.childImageSharp.resize.src} alt="" /></div><div className="hs_cnt"><h4>{d.serviceTitle}</h4><p>{d.serviceDecription}</p><Link className="btn btn-primary" to={d.servicePageUrl}>Learn more</Link></div></li>
               })}
             </ul>
           </div>
@@ -177,7 +177,7 @@ const IndexPage = ({ data }) => {
         <div className="home_branding">
           <div className="container">
             <div className="obc_img">
-              <img src={data.wpPage.hpOptions.obcImage.mediaItemUrl} alt="" />
+              <img src={data.wpPage.hpOptions.obcImage.localFile.childImageSharp.resize.src} alt="" />
               <button type="button" onClick={()=>setModal(true)} data-toggle="modal" data-target="#myModal">play</button>
             </div>
           </div>
@@ -202,7 +202,7 @@ const IndexPage = ({ data }) => {
         <div className="wva_section fd_section dca_section dpn_part">
         <div className="container">
           <div className="wva_left">
-            <img src={data.wpPage.hpOptions.dpnImage.mediaItemUrl} alt={data.wpPage.hpOptions.dpnImage.altText} />
+            <img src={data.wpPage.hpOptions.dpnImage.localFile.childImageSharp.resize.src} alt={data.wpPage.hpOptions.dpnImage.altText} />
           </div>
           <div className="wva_right">
             <h3>{data.wpPage.hpOptions.dpnTitle}</h3>
@@ -215,7 +215,7 @@ const IndexPage = ({ data }) => {
 
         <div className="vcfo_section vcfo_section1">
           <div className="container">
-            <div class="vcfo_left"><img src={data.wpPage.hpOptions.vcfoImage.mediaItemUrl} alt={data.wpPage.hpOptions.vcfoImage.altText} /></div>
+            <div class="vcfo_left"><img src={data.wpPage.hpOptions.vcfoImage.localFile.childImageSharp.resize.src} alt={data.wpPage.hpOptions.vcfoImage.altText} /></div>
             <div class="vcfo_right">
               <h4>{data.wpPage.hpOptions.vcfoTitle}</h4>
               <div dangerouslySetInnerHTML={{__html: data.wpPage.hpOptions.vcfoDescription }} />
@@ -227,7 +227,7 @@ const IndexPage = ({ data }) => {
         <section className="health_check home_helthcheck">
           <div className="container">
             <div className="ht_right">
-              <img className="img-fluid" src={data.wpPage.hpOptions.bhcImage?.mediaItemUrl} alt={data.wpPage.hpOptions.bhcImage?.altText} />
+              <img className="img-fluid" src={data.wpPage.hpOptions.bhcImage?.localFile.childImageSharp.resize.src} alt={data.wpPage.hpOptions.bhcImage?.altText} />
             </div>
 
             <div className="ht_left">
@@ -305,6 +305,8 @@ const IndexPage = ({ data }) => {
         </div>
         </div>
         </div>
+        {data.wpPage.hpOptions.homeSlider?.bannerImage?.mediaItemUrl}
+        <a>test</a>
       </Layout>
     </div>
   )
@@ -321,6 +323,13 @@ export const query = graphql`
           bannerImage {
             altText
             mediaItemUrl
+            localFile {
+              childImageSharp {
+                resize (width: 641, height: 481, cropFocus: CENTER, quality: 80) {
+                  src
+                }
+              }
+            }
           }
         }
         serviceTitle
@@ -332,6 +341,13 @@ export const query = graphql`
           serviceImage {
             mediaItemUrl
             altText
+            localFile {
+              childImageSharp {
+                resize (width: 268, height: 118, cropFocus: CENTER, quality: 80) {
+                  src
+                }
+              }
+            }
           }
         }
         bhcTitle
@@ -343,6 +359,13 @@ export const query = graphql`
         bhcImage {
           altText
           mediaItemUrl
+          localFile {
+            childImageSharp {
+              resize (width: 522, height: 462, cropFocus: CENTER, quality: 80) {
+                src
+              }
+            }
+          }
         }
 
         dpnTitle
@@ -354,6 +377,13 @@ export const query = graphql`
         dpnImage {
             altText
             mediaItemUrl
+            localFile {
+              childImageSharp {
+                resize (width: 600, height: 373, cropFocus: CENTER, quality: 80) {
+                  src
+                }
+              }
+            }
           }
 
         testimonials {
@@ -387,6 +417,13 @@ export const query = graphql`
         obcImage {
           altText
           mediaItemUrl
+          localFile {
+            childImageSharp {
+              resize (width: 1116, height: 518, cropFocus: CENTER, quality: 80) {
+                src
+              }
+            }
+          }
         }
         obcVideoUpload {
           altText
@@ -398,6 +435,13 @@ export const query = graphql`
         vcfoImage {
           altText
           mediaItemUrl
+          localFile {
+            childImageSharp {
+              resize (width: 522, height: 462, cropFocus: CENTER, quality: 80) {
+                src
+              }
+            }
+          }
         }
         vcfoTitle
         vcfoDescription
@@ -440,12 +484,26 @@ export const query = graphql`
           staffImage2{
             altText
             mediaItemUrl
+            localFile {
+              childImageSharp {
+                resize (width: 356, height: 450, cropFocus: CENTER, quality: 80) {
+                  src
+                }
+              }
+            }
           }
         }
         featuredImage {
           node {
             altText
             mediaItemUrl
+            localFile {
+              childImageSharp {
+                resize (width: 356, height: 450, cropFocus: CENTER, quality: 80) {
+                  src
+                }
+              }
+            }
           }
         }
         content
@@ -460,6 +518,13 @@ export const query = graphql`
           node {
             altText
             mediaItemUrl
+            localFile {
+              childImageSharp {
+                resize (width: 356, height: 450, cropFocus: CENTER, quality: 80) {
+                  src
+                }
+              }
+            }
           }
         }
         slug
