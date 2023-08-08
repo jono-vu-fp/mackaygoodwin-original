@@ -36,13 +36,11 @@ const IndexPage = ({ data }) => {
   const { observe, unobserve, inView, scrollDirection, entry } = useInView({
     threshold: 0.25, // Default is 0
     onEnter: ({ scrollDirection, entry, observe, unobserve }) => {
-      console.log('check404');
       changeServiceEnter('serviceIn')
       // Triggered when the target enters the viewport
     },
     onLeave: ({ scrollDirection, entry, observe, unobserve }) => {
       changeServiceEnter('')
-      console.log('check4041');
       // Triggered when the target leaves the viewport
     },
     // More useful options...
