@@ -70,6 +70,7 @@ const PeopleList = (props) => {
     const ds = dsuf && dsuf.concat(ssuf) 
     //console.log(d, s, ds)
     setSuffledData(ds);
+    if(shuffleData==undefined){window.location.href='/404';}
   }, []);
   //console.log("shuffleData", shuffleData);
   return (
