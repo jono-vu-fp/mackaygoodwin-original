@@ -238,6 +238,7 @@ height="0" width="0" style={{ "display": "none", "visibility": "hidden" }}></ifr
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" crossOrigin="anonymous"></script>
         <script type="application/javascript" src="https://script.chatsystem.io/4cdc00125303779d3450f86e801f8dafbe95e0"></script>
+        <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/40112486.js"></script>
       </body>
     </html>
   )
