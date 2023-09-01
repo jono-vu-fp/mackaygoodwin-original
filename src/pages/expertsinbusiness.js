@@ -46,7 +46,7 @@ const ConsultBusiness = ({ data }) => {
                 return (
                   <div className="col-md-4 col-lg-4">
                     <div className="lb_img">
-                         <img src={d.image.localFile?.publicURL} alt={d.image.altText} className="why-need-img" />
+                         <img src={d.image.mediaItemUrl} alt={d.image.altText} className="why-need-img" />
                     </div>
                     <div className="lb_txt">
                       <p className="recovery-partner-title">{d.title.trim()}</p>
@@ -147,7 +147,7 @@ const ConsultBusiness = ({ data }) => {
             {data.wpPage.consultBusiness.partner.map((d) => {
               return (<div className={"col-xs-12 col-md-6 col-lg-" + parseInt(12 / data.wpPage.consultBusiness.partner.length)}>
                 <div className="text-center">
-                  <img src={d.image.localFile?.publicURL} alt={d.image.altText} className="recovery-partner-img" />
+                  <img src={d.image.mediaItemUrl} alt={d.image.altText} className="recovery-partner-img" />
                 </div>                
                 <p className="recovery-partner-title text-center" dangerouslySetInnerHTML={{ __html: d?.title }}></p>
               </div>)
@@ -178,13 +178,6 @@ export const query = graphql`
         bannerImage {
           altText
           mediaItemUrl
-          localFile {
-            childImageSharp {
-              resize (width: 526, height: 351, cropFocus: CENTER, quality: 80) {
-                src
-              }
-            }
-          }
         }
         businessDirectorAdvisorLink
         bannerTitle
@@ -200,9 +193,6 @@ export const query = graphql`
           image {
             altText
             mediaItemUrl
-            localFile{
-              publicURL
-            }
           }
           title
         }
@@ -211,9 +201,6 @@ export const query = graphql`
           image {
             altText
             mediaItemUrl
-            localFile{
-              publicURL
-            }
           }
           title
           description
@@ -227,13 +214,6 @@ export const query = graphql`
           image {
             altText
             mediaItemUrl
-            localFile {
-              childImageSharp {
-                resize (width: 412, height: 280, cropFocus: CENTER, quality: 80) {
-                  src
-                }
-              }
-            }
           }
         }
         healthCheckTitle
@@ -259,13 +239,6 @@ export const query = graphql`
           image {
             altText
             mediaItemUrl
-            localFile {
-              childImageSharp {
-                resize (width: 564, height: 376, cropFocus: CENTER, quality: 80) {
-                  src
-                }
-              }
-            }
           }
         }
         title

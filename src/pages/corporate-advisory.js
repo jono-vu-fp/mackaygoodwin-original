@@ -119,13 +119,6 @@ export const query = graphql`
         officerimage {
           altText
           mediaItemUrl
-          localFile {
-            childImageSharp {
-              resize (width: 744, height: 554, cropFocus: CENTER, quality: 100) {
-                src
-              }
-            }
-          }
         }
         croTitle
         enquireLink
@@ -133,26 +126,12 @@ export const query = graphql`
         bannerImage {
           altText
           mediaItemUrl
-          localFile {
-            childImageSharp {
-              resize (width: 526, height: 395, cropFocus: CENTER, quality: 100) {
-                src
-              }
-            }
-          }
         }
         newFinancialTitle
         newFinancialDesc
         newFinancialImage {
           altText
           mediaItemUrl
-          localFile {
-            childImageSharp {
-              resize (width: 744, height: 450, cropFocus: CENTER, quality: 80) {
-                src
-              }
-            }
-          }
         }
         newFinancialEnquireLink
         bannerSubtitle
@@ -169,13 +148,6 @@ export const query = graphql`
         cfoImage {
           altText
           mediaItemUrl
-          localFile {
-            childImageSharp {
-              resize (width: 744, height: 535, cropFocus: CENTER, quality: 80) {
-                src
-              }
-            }
-          }
         }
         cfoEnquireLink
       }

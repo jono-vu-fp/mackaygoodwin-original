@@ -33,7 +33,7 @@ const Identifix = ({data}) => {
        </div>
        <div class="col-sm-12 col-md-12 col-lg-5 col-xl-5">
           <div class="banner-image">
-             <img src={data.wpPage.identifixPageOptions.banner.localFile?.childImageSharp?.resize?.src} alt="data.wpPage.identifixPageOptions.banner.altText" />
+             <img src={data.wpPage.identifixPageOptions.banner.mediaItemUrl} alt="data.wpPage.identifixPageOptions.banner.altText" />
           </div>
           <div class="col-12 d-block d-sm-block d-md-block d-lg-none banner-mdesc">
              <div class="banner-desc"><div dangerouslySetInnerHTML={{__html: data.wpPage.identifixPageOptions.description }} /></div>
@@ -75,7 +75,7 @@ const Identifix = ({data}) => {
 <section  id="BHC" className="health_check home_helthcheck">
           <div className="container">
             <div className="ht_right">
-              <img className="img-fluid" src={data.wpPage.identifixPageOptions.banner1?.localFile?.childImageSharp?.resize?.src} alt={data.wpPage.identifixPageOptions.banner1?.altText} />
+              <img className="img-fluid" src={data.wpPage.identifixPageOptions.banner1?.mediaItemUrl} alt={data.wpPage.identifixPageOptions.banner1?.altText} />
             </div>
 
             <div className="ht_left">
@@ -134,7 +134,7 @@ const Identifix = ({data}) => {
     <section id="vCFO" class="banners curve-right vcf_sec mg_identifix">
      <div class="container">
           <div className="wva_right">
-            <img class="img-fluid" src={data.wpPage.identifixPageOptions.banner2.localFile?.childImageSharp?.resize?.src} alt="data.wpPage.identifixPageOptions.banner2.altText"/>           
+            <img class="img-fluid" src={data.wpPage.identifixPageOptions.banner2.mediaItemUrl} alt="data.wpPage.identifixPageOptions.banner2.altText"/>           
           </div>
           <div className="wva_left">
           <h3>{data.wpPage.identifixPageOptions.title2}</h3>           
@@ -149,7 +149,7 @@ const Identifix = ({data}) => {
        <div class="container">
 
         <div className="wva_left">
-             <img class="img-fluid" src={data.wpPage.identifixPageOptions.banner3.localFile?.childImageSharp?.resize?.src} alt="data.wpPage.identifixPageOptions.banner3.altText"/>            
+             <img class="img-fluid" src={data.wpPage.identifixPageOptions.banner3.mediaItemUrl} alt="data.wpPage.identifixPageOptions.banner3.altText"/>            
                
           </div>
 
@@ -199,26 +199,12 @@ export const query = graphql`
         banner {
           mediaItemUrl
           altText
-          localFile {
-            childImageSharp {
-              resize (width: 526, height: 350, cropFocus: CENTER, quality: 80) {
-                src
-              }
-            }
-          }
         }
         title
         title1
         banner1{
           mediaItemUrl
           altText
-          localFile {
-            childImageSharp {
-              resize (width: 522, height: 462, cropFocus: CENTER, quality: 80) {
-                src
-              }
-            }
-          }
         }
         ideDca1ButtonText
         ideDca1ButtonLink
@@ -229,26 +215,12 @@ export const query = graphql`
         banner2{
           mediaItemUrl
           altText
-          localFile {
-            childImageSharp {
-              resize (width: 526, height: 350, cropFocus: CENTER, quality: 80) {
-                src
-              }
-            }
-          }
         }
         description2
         title3
         banner3{
           mediaItemUrl
           altText
-          localFile {
-            childImageSharp {
-              resize (width: 526, height: 351, cropFocus: CENTER, quality: 80) {
-                src
-              }
-            }
-          }
         }
         description3
       }

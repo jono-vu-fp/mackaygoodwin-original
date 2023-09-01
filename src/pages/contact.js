@@ -44,7 +44,7 @@ const Corporate = ({data}) => {
     <section className="ht_section">
         <div className="container">
           <div className="ht_left">
-            <img className="img-fluid" src={data.wpPage.contactPageOptions.conThriveImage?.localFile?.childImageSharp?.resize?.src} alt={data.wpPage.contactPageOptions.conThriveImage?.altText} />
+            <img className="img-fluid" src={data.wpPage.contactPageOptions.conThriveImage?.mediaItemUrl} alt={data.wpPage.contactPageOptions.conThriveImage?.altText} />
           </div>
           <div className="ht_right">
             <h2>{data.wpPage.contactPageOptions.conThriveTitle}</h2>
@@ -64,7 +64,7 @@ const Corporate = ({data}) => {
        <div class="container">
 
         <div className="wva_left">
-             <div class="vid_play"><div class="hov_effact"><img class="img-fluid" src={data.wpPage.contactPageOptions.conImage.localFile?.childImageSharp?.resize?.src} alt="data.wpPage.contactPageOptions.conImage.altText"/>
+             <div class="vid_play"><div class="hov_effact"><img class="img-fluid" src={data.wpPage.contactPageOptions.conImage.mediaItemUrl} alt="data.wpPage.contactPageOptions.conImage.altText"/>
              <button type="button" onClick={()=>setModal(true)} data-toggle="modal" data-target="#myModal">play</button></div>
              </div>
                
@@ -136,13 +136,6 @@ export const query = graphql`
         bannerImage {
           mediaItemUrl
           altText
-          localFile {
-            childImageSharp {
-              resize (width: 526, height: 351, cropFocus: CENTER, quality: 80) {
-                src
-              }
-            }
-          }
         }
         bannerTitle
         locationTagline
@@ -157,13 +150,6 @@ export const query = graphql`
         conImage{
           mediaItemUrl
           altText
-          localFile {
-            childImageSharp {
-              resize (width: 526, height: 351, cropFocus: CENTER, quality: 80) {
-                src
-              }
-            }
-          }
         }
 
         conDescription
@@ -179,13 +165,6 @@ export const query = graphql`
         conThriveImage {
           altText
           mediaItemUrl
-          localFile {
-            childImageSharp {
-              resize (width: 682, height: 465, cropFocus: CENTER, quality: 80) {
-                src
-              }
-            }
-          }
         }  
         
       } 

@@ -4,14 +4,13 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-// import TopBanner from "../components/top-banner-3"
 import TopBanner from "../components/top-banner-3"
-import GetInTouch from "../components/get-in-touch3"
+import GetInTouch from "../components/get-in-touch"
 import CurveLeft from "../components/curve-left"
 import Services from "../components/services"
 import Accordian from "../components/accordian/accordian-bankruptcy"
 import FullText from "../components/full-text"
-import OurPeople from "../components/our-people-liquid/our-people4"
+import OurPeople from "../components/our-people-liquid/our-people2"
 import TestimonialMain from "../components/testimonial-main-liquid-1"
 import ReciveryPlan from "../components/recovery-plan2"
 import Container from "../components/slider/container-liquidation"
@@ -21,11 +20,8 @@ import GetInTouchPPForm from "../components/get-in-touch-bankruptcy-popup"
 
 import $ from "jquery"
 
-import _ from 'lodash';
-
 const ConsultBusiness = ({ data }) => {
   const [showModal, setModal] = React.useState(false);
-  const [businessData, setbusinessData] = React.useState([]);
   let whyMG = [];
 
   data.wpPage.personalinsolvency.perFaqs.map((d) => {
@@ -33,45 +29,24 @@ const ConsultBusiness = ({ data }) => {
     return whyMG.push({ title: d.perQuestion, description: d.perAnswer, tag: '' });
   })
 
-  
+  let businessData = [];
+  let count = 0;
+  data.allWpOurpeople.nodes.map((d,key) => {
 
-  React.useEffect(()=>{
-    let businessData = [];
-    let suffledArray = _.shuffle(data.allWpOurpeople.nodes); let lidx=0;
-    suffledArray.map((d,key) => {
-      if(d.title=='Gavin King'){
-         lidx++;
-        return businessData.unshift({ title: d.title, subtitle: d.backInBusiness.designation, text: d.backInBusiness.location, certification: d.backInBusiness.certification, content: d.content, linkedin: d.backInBusiness.linkedin, email: d.backInBusiness.email, img: d.featuredImage?.node, designationType: d.backInBusiness.designationType, registeredLiquidators: d.backInBusiness.registeredLiquidators, altimg:d.backInBusiness.staffImage2 });
-      }
-      else if(lidx<5){
-        lidx++;
-        return businessData.push({ title: d.title, subtitle: d.backInBusiness.designation, text: d.backInBusiness.location, certification: d.backInBusiness.certification, content: d.content, linkedin: d.backInBusiness.linkedin, email: d.backInBusiness.email, img: d.featuredImage?.node, designationType: d.backInBusiness.designationType, registeredLiquidators: d.backInBusiness.registeredLiquidators, altimg:d.backInBusiness.staffImage2 });
-      }
-    });
-    setbusinessData(businessData);
-    return () => {
+    if(d.backInBusiness.registeredLiquidators && (count < 3 )){
 
-    };
-  },[]);
-  
-  // let businessData = [];
-  // let count = 0;
-  // data.allWpOurpeople.nodes.map((d,key) => {
+      console.log(count);
 
-  //   if(d.backInBusiness.registeredLiquidators && (count < 3 )){
-
-  //     console.log(count);
-
-  //     count++;
+      count++;
       
-  //     return businessData.push({ title: d.title, subtitle: d.backInBusiness.designation, text: d.backInBusiness.location, certification: d.backInBusiness.certification, content: d.content, linkedin: d.backInBusiness.linkedin, email: d.backInBusiness.email, img: d.featuredImage?.node, designationType: d.backInBusiness.designationType, registeredLiquidators: d.backInBusiness.registeredLiquidators });
+      return businessData.push({ title: d.title, subtitle: d.backInBusiness.designation, text: d.backInBusiness.location, certification: d.backInBusiness.certification, content: d.content, linkedin: d.backInBusiness.linkedin, email: d.backInBusiness.email, img: d.featuredImage?.node, designationType: d.backInBusiness.designationType, registeredLiquidators: d.backInBusiness.registeredLiquidators });
 
 
 
-  //   } else {
-  //     return '';
-  //   }
-  // })
+    } else {
+      return '';
+    }
+  })
 
   const breadCrumbs = [
     { link: "/", title: "Home" },
@@ -92,7 +67,7 @@ const ConsultBusiness = ({ data }) => {
         text={data.wpPage.personalinsolvency.perBannerDesc}
         bannerImg={data.wpPage.personalinsolvency.perBannerImage}
         breadCrumbs={breadCrumbs}
-       equalWidth={true}
+        equalWidth={true}
       />
 
        <div className="liq_blocks va_blocks doca_2">
@@ -103,7 +78,7 @@ const ConsultBusiness = ({ data }) => {
                 return (
                   <div className="col-md-4 col-lg-4">
                     <div className="lb_img">
-                        <img src={d.image?.localFile?.publicURL} alt={d.image?.altText} />
+                        <img src={d.image?.mediaItemUrl} alt={d.image?.altText} />
                     </div>
                     <div className="lb_txt">
                       <p className="recovery-partner-title ">{d.title?.trim()}</p>
@@ -127,7 +102,7 @@ const ConsultBusiness = ({ data }) => {
         <div className="container"> 
         <div className="row">    
          <div class="col-md-5 col-lg-5">
-            <img src={data.wpPage.personalinsolvency.perDcaImage.localFile?.childImageSharp?.resize?.src} alt={data.wpPage.personalinsolvency.perDcaImage.altText} />
+            <img src={data.wpPage.personalinsolvency.perDcaImage.mediaItemUrl} alt={data.wpPage.personalinsolvency.perDcaImage.altText} />
           </div>       
           <div class="col-md-7 col-lg-7">
               <div dangerouslySetInnerHTML={{ __html: data.wpPage.personalinsolvency.perDcaDescription }}></div>
@@ -162,7 +137,7 @@ const ConsultBusiness = ({ data }) => {
         <div className="wva_section key_expert hide_block">
           <div className="container">
             <div className="wva_left">
-              <img src={data.wpPage.personalinsolvency.perFdImage?.localFile?.childImageSharp?.resize?.src} alt={data.wpPage.personalinsolvency.perFdImage?.altText} />
+              <img src={data.wpPage.personalinsolvency.perFdImage?.mediaItemUrl} alt={data.wpPage.personalinsolvency.perFdImage?.altText} />
             </div>
             <div className="wva_right">
               <div dangerouslySetInnerHTML={{ __html: data.wpPage.personalinsolvency.perFdContent }}></div>
@@ -181,9 +156,7 @@ const ConsultBusiness = ({ data }) => {
           data={data.wpPage.personalinsolvency.perLpProcess}
           titleDisplay={false}
           customClass={'glpo_reco_section va_glpo_reco_section'}
-        /> 
-
-
+        />  
 
         <Accordian
           title={data.wpPage.personalinsolvency.perFaqsTitle}
@@ -191,21 +164,7 @@ const ConsultBusiness = ({ data }) => {
           data={whyMG}
         />
 
-       
-        <OurPeople
-        title={'Meet our team of experts and registered liquidators'}
-        text={''}
-        data={businessData}
-        showAll={0}
-        liquidation={1}
-      />
-      <div class="row">
-              <div class="col-lg-12 col-md-12 align-center">
-                <Link className="btn btn-primary no-marg" to="/people/">
-                  All People
-                </Link>
-              </div>
-            </div>
+     
       
       
       <Container
@@ -215,12 +174,6 @@ const ConsultBusiness = ({ data }) => {
       />
       <div className="cu_fixed">
           <a href="/contact"><img src="/images/sophie-img.png" />Contact Us</a>
-      </div>
-      <div className="home">
-        <GetInTouch
-          title={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchTitle}
-          text={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchDescription}
-        />
       </div>
       <GetInTouchPPForm
         title={data?.allWp?.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchTitle}
@@ -243,13 +196,6 @@ export const query = graphql`
         perBannerImage {
           altText
           mediaItemUrl
-          localFile {
-            childImageSharp {
-               resize (width: 526, height: 351, cropFocus: CENTER, quality: 100) {
-                src
-              }
-            }
-          }
         }
         perBannerTitle
         
@@ -258,9 +204,6 @@ export const query = graphql`
           image {
             altText
             mediaItemUrl
-            localFile{
-              publicURL
-            }
           }
           title
         }
@@ -281,13 +224,6 @@ export const query = graphql`
         perFdImage {
             altText
             mediaItemUrl
-            localFile {
-              childImageSharp {
-                resize (width: 351, height: 422, cropFocus: CENTER, quality: 80) {
-                  src
-                }
-              }
-            }
           }
         perWevaContent
         perWeva3ButtonText
@@ -301,13 +237,6 @@ export const query = graphql`
         perDcaImage {
             altText
             mediaItemUrl
-            localFile {
-              childImageSharp {
-                resize (width: 564, height: 378, cropFocus: CENTER, quality: 80) {
-                  src
-                }
-              }
-            }
           } 
         perFaqsTitle
         perFaqs {
@@ -349,13 +278,6 @@ export const query = graphql`
               image {
                 altText
                 mediaItemUrl
-                localFile {
-                  childImageSharp {
-                    resize (width: 412, height: 280, cropFocus: CENTER, quality: 80) {
-                      src
-                    }
-                  }
-                }
               }
             }
           }
@@ -372,31 +294,12 @@ export const query = graphql`
           designationType
           linkedin
           email
-          phoneNumber
           registeredLiquidators
-          staffImage2{
-            altText
-            mediaItemUrl
-            localFile {
-              childImageSharp {
-                resize (width: 416, height: 450, cropFocus: CENTER, quality: 80) {
-                  src
-                }
-              }
-            }
-          }
         }
         featuredImage {
           node {
             altText
             mediaItemUrl
-            localFile {
-              childImageSharp {
-                resize (width: 416, height: 450, cropFocus: CENTER, quality: 80) {
-                  src
-                }
-              }
-            }
           }
         }
         content

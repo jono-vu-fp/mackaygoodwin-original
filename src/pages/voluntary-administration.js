@@ -54,10 +54,10 @@ const ConsultBusiness = ({ data }) => {
             </div>
           </div>
           <div className="row justify-content-center">
-            {data.wpPage.voluntaryadministration.vaPartners.map((d,k) => {
-              return (<div key={'v'+k} className={"col-xs-12 col-md-6 col-lg-" + parseInt(12 / data.wpPage.voluntaryadministration.vaPartners.length)}>
+            {data.wpPage.voluntaryadministration.vaPartners.map((d) => {
+              return (<div className={"col-xs-12 col-md-6 col-lg-" + parseInt(12 / data.wpPage.voluntaryadministration.vaPartners.length)}>
                 <div className="text-center rec_img">
-                  <img src={d.vaImage?.localFile?.publicURL} alt={d.vaImage?.altText} className="recovery-partner-img" />
+                  <img src={d.vaImage?.mediaItemUrl} alt={d.vaImage?.altText} className="recovery-partner-img" />
                 </div>
                 <p className="recovery-partner-title text-center"> {d.vaTitle} </p>
               </div>)
@@ -69,11 +69,11 @@ const ConsultBusiness = ({ data }) => {
         <div className="container">
           <div className="row">
               {/* <h3>{data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.tagline}</h3> */}
-              {data.wpPage.voluntaryadministration.wymnuDescriptionWhyliquid.map((d,k) => {
+              {data.wpPage.voluntaryadministration.wymnuDescriptionWhyliquid.map((d) => {
                 return (
-                  <div className="col-md-4 col-lg-4" key={'i'+k}>
+                  <div className="col-md-4 col-lg-4">
                     <div className="lb_img">
-                        <img src={d.image?.localFile.publicURL} alt={d.image?.altText} />
+                        <img src={d.image?.mediaItemUrl} alt={d.image?.altText} />
                     </div>
                     <div className="lb_txt">
                       <p className="recovery-partner-title">{d.title?.trim()}</p>
@@ -107,7 +107,7 @@ const ConsultBusiness = ({ data }) => {
       <div className="wva_section fd_section">
         <div className="container">
           <div className="wva_left">
-            <img src={data.wpPage.voluntaryadministration.fdImage.localFile?.childImageSharp?.resize?.src} alt={data.wpPage.voluntaryadministration.fdImage.altText} />
+            <img src={data.wpPage.voluntaryadministration.fdImage.mediaItemUrl} alt={data.wpPage.voluntaryadministration.fdImage.altText} />
           </div>
           <div className="wva_right">
             <div dangerouslySetInnerHTML={{ __html: data.wpPage.voluntaryadministration.fdContent }}></div>
@@ -147,7 +147,7 @@ const ConsultBusiness = ({ data }) => {
       <div className="wva_section fd_section dca_section">
         <div className="container">
           <div className="wva_left">
-            <img src={data.wpPage.voluntaryadministration.dcaImage.localFile?.childImageSharp?.resize?.src} alt={data.wpPage.voluntaryadministration.dcaImage.altText} />
+            <img src={data.wpPage.voluntaryadministration.dcaImage.mediaItemUrl} alt={data.wpPage.voluntaryadministration.dcaImage.altText} />
           </div>
           <div className="wva_right">
             <h3>{data.wpPage.voluntaryadministration.dcaTitle}</h3>
@@ -166,7 +166,7 @@ const ConsultBusiness = ({ data }) => {
       <section className="ht_section">
         <div className="container">
           <div className="ht_left">
-            <img className="img-fluid" src={data.wpPage.voluntaryadministration.htImage?.localFile?.childImageSharp?.resize?.src} alt={data.wpPage.voluntaryadministration.htImage?.altText} />
+            <img className="img-fluid" src={data.wpPage.voluntaryadministration.htImage?.mediaItemUrl} alt={data.wpPage.voluntaryadministration.htImage?.altText} />
           </div>
           <div className="ht_right">
             <h2>{data.wpPage.voluntaryadministration.htTitle}</h2>
@@ -221,13 +221,6 @@ export const query = graphql`
         bannerImage {
           altText
           mediaItemUrl
-          localFile {
-            childImageSharp {
-              resize (width: 526, height: 351, cropFocus: CENTER, quality: 80) {
-                src
-              }
-            }
-          }
         }
         bannerTitle
         
@@ -236,9 +229,6 @@ export const query = graphql`
           image {
             altText
             mediaItemUrl
-            localFile {
-              publicURL
-            }
           }
           title
         }
@@ -256,13 +246,6 @@ export const query = graphql`
         fdImage {
             altText
             mediaItemUrl
-            localFile {
-              childImageSharp {
-                resize (width: 526, height: 351, cropFocus: CENTER, quality: 80) {
-                  src
-                }
-              }
-            }
           }
         wevaContent
         wevaButtonText
@@ -275,22 +258,12 @@ export const query = graphql`
         dcaImage {
             altText
             mediaItemUrl
-            localFile {
-              childImageSharp {
-                resize (width: 526, height: 351, cropFocus: CENTER, quality: 80) {
-                  src
-                }
-              }
-            }
           }
         vaPartners {
           vaTitle
           vaImage {
             altText
             mediaItemUrl
-            localFile {
-              publicURL
-            }
           }
         }
         htTitle
@@ -298,13 +271,6 @@ export const query = graphql`
         htImage {
           altText
           mediaItemUrl
-          localFile {
-            childImageSharp {
-              resize (width: 682, height: 465, cropFocus: CENTER, quality: 80) {
-                src
-              }
-            }
-          }
         }
         vaLiquidationTagline
         vaRecoveryTagline
@@ -337,13 +303,6 @@ export const query = graphql`
               image {
                 altText
                 mediaItemUrl
-                localFile {
-                  childImageSharp {
-                    resize (width: 412, height: 280, cropFocus: CENTER, quality: 80) {
-                      src
-                    }
-                  }
-                }
               }
             }
           }
@@ -366,13 +325,6 @@ export const query = graphql`
           node {
             altText
             mediaItemUrl
-            localFile {
-              childImageSharp {
-                resize (width: 416, height: 450, cropFocus: CENTER, quality: 80) {
-                  src
-                }
-              }
-            }
           }
         }
         content

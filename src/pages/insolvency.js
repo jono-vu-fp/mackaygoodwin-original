@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import TopBanner from "../components/top-banner-liquidationpage"
+import TopBanner from "../components/top-banner"
 import GetInTouch from "../components/get-in-touch3"
 import FullText from "../components/full-text"
 import EbookForm from "../components/ebook-form"
@@ -107,7 +107,7 @@ const Insolvency = ({ data }) => {
       <section className="health_check home_helthcheck">
           <div className="container">
             <div className="ht_right">
-              <img className="img-fluid" src={data.wpPage.insolvency.healthCheckImage?.localFile?.childImageSharp?.resize?.src} alt={data.wpPage.insolvency.healthCheckImage?.altText} />
+              <img className="img-fluid" src={data.wpPage.insolvency.healthCheckImage?.mediaItemUrl} alt={data.wpPage.insolvency.healthCheckImage?.altText} />
             </div>
 
             <div className="ht_left">
@@ -160,7 +160,7 @@ const Insolvency = ({ data }) => {
        <section className="ht_section ht_bottom">
         <div className="container">
           <div className="ht_left">
-            <img className="img-fluid" src={data.wpPage.insolvency.insHtImage?.localFile?.childImageSharp?.resize?.src} alt={data.wpPage.insolvency.insHtImage?.altText} />
+            <img className="img-fluid" src={data.wpPage.insolvency.insHtImage?.mediaItemUrl} alt={data.wpPage.insolvency.insHtImage?.altText} />
           </div>
           <div className="ht_right">
             <h2>{data.wpPage.insolvency.insHtTitle}</h2>
@@ -194,7 +194,7 @@ const Insolvency = ({ data }) => {
        <div className="wva_section fd_section dca_section dpn_part">
         <div className="container">
           <div className="wva_left">
-            <img src={data.wpPage.insolvency.dpn3Image.localFile?.childImageSharp?.resize?.src} alt={data.wpPage.insolvency.dpn3Image.altText} />
+            <img src={data.wpPage.insolvency.dpn3Image.mediaItemUrl} alt={data.wpPage.insolvency.dpn3Image.altText} />
           </div>
           <div className="wva_right">
             <h2>{data.wpPage.insolvency.dpn3Title}</h2>
@@ -238,13 +238,6 @@ export const query = graphql`
         bannerImage {
           altText
           mediaItemUrl
-          localFile {
-            childImageSharp {
-              resize (width: 655, height: 473, cropFocus: CENTER, quality: 100) {
-                src
-              }
-            }
-          }
         }
         bannerSubtitle
         bannerTitle
@@ -258,13 +251,6 @@ export const query = graphql`
         healthCheckImage {
           altText
           mediaItemUrl
-          localFile {
-            childImageSharp {
-              resize (width: 522, height: 462, cropFocus: CENTER, quality: 80) {
-                src
-              }
-            }
-          }
         }
         survivalDesc
         survivalEnquireLink
@@ -286,13 +272,6 @@ export const query = graphql`
         insHtImage {
           altText
           mediaItemUrl
-          localFile {
-            childImageSharp {
-              resize (width: 682, height: 465, cropFocus: CENTER, quality: 80) {
-                src
-              }
-            }
-          }
         }
         dpn3Title
         dpn3Description
@@ -303,13 +282,6 @@ export const query = graphql`
         dpn3Image {
             altText
             mediaItemUrl
-            localFile {
-              childImageSharp {
-                resize (width: 744, height: 462, cropFocus: CENTER, quality: 80) {
-                  src
-                }
-              }
-            }
           }
 
         sendUrl

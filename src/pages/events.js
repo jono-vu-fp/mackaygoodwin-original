@@ -88,13 +88,6 @@ export const query = graphql`
         image {
           altText
           mediaItemUrl
-          localFile {
-            childImageSharp {
-              resize (width: 526, height: 351, cropFocus: CENTER, quality: 80) {
-                src
-              }
-            }
-          }
         }
         title
       }
@@ -129,13 +122,6 @@ export const query = graphql`
           node {
             altText
             mediaItemUrl
-            localFile {
-              childImageSharp {
-                resize (width: 306, height: 204, cropFocus: CENTER, quality: 80) {
-                  src
-                }
-              }
-            }
           }
         }
         eventsOption {

@@ -31,7 +31,7 @@ const TestimonialMain = (props) => {
         {props.data.map((d, i) => {
           return (<div className={i%2 !== 0 ? "row flex-row-reverse" : "row"}>
           <div className="col-sm-12 col-md-12 col-lg-6 p-5">
-            <img className="img-fluid" src={d.testImage?.localFile?.childImageSharp?.resize?.src} alt={d.testImage?.altText} />
+            <img className="img-fluid" src={d.testImage?.mediaItemUrl} alt={d.testImage?.altText} />
           </div>
           <div className="col-sm-12 col-md-12 col-lg-6 p-5 desc">
             <p>{d.testDescription}</p>

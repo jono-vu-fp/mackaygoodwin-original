@@ -44,11 +44,11 @@ const Events = (props) => {
     <div className="container">
       {/*<h2 className="my-5">{props.title}</h2>*/}
       <div className="row">
-        {upcoming && upcoming.length>0?<h2> Upcoming Events </h2>:''}
+        <h2> Upcoming Events </h2>
         {upcoming.map((d,key) => {
           return <EventsList key={key} data={d} setVideoUrl={props.setVideoUrl} setShowVid={props.setShowVid} />
         })}
-        {past && past.length>0?<h2> Past Events </h2>:''}
+        <h2> Past Events </h2>
         {past.map((d, key) => {
           return <EventsList key={key} data={d} setVideoUrl={props.setVideoUrl} setShowVid={props.setShowVid} />
         })}

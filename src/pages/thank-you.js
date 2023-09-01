@@ -76,13 +76,6 @@ export const query = graphql`
         bannerImage {
           altText
           mediaItemUrl
-          localFile {
-            childImageSharp {
-              resize (width: 526, height: 378, cropFocus: CENTER, quality: 80) {
-                src
-              }
-            }
-          }
         }
         bannerSubtitle
         bannerTitle
@@ -100,13 +93,6 @@ export const query = graphql`
           image {
             altText
             mediaItemUrl
-            localFile {
-              childImageSharp {
-                resize (width: 636, height: 432, cropFocus: CENTER, quality: 80) {
-                  src
-                }
-              }
-            }
           }
         }
         subtitle
@@ -116,13 +102,6 @@ export const query = graphql`
           image {
             altText
             mediaItemUrl
-            localFile {
-              childImageSharp {
-                resize (width: 564, height: 376, cropFocus: CENTER, quality: 80) {
-                  src
-                }
-              }
-            }
           }
         }
       }
@@ -152,13 +131,6 @@ export const query = graphql`
               image {
                 altText
                 mediaItemUrl
-                localFile {
-                  childImageSharp {
-                    resize (width: 564, height: 376, cropFocus: CENTER, quality: 80) {
-                      src
-                    }
-                  }
-                }
               }
             }
           }
@@ -175,13 +147,6 @@ export const query = graphql`
           node {
             altText
             mediaItemUrl
-            localFile {
-              childImageSharp {
-                resize (width: 306, height: 204, cropFocus: CENTER, quality: 80) {
-                  src
-                }
-              }
-            }
           }
         }
         eventsOption {

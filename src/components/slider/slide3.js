@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 
 const Slide = (props) => (
 	<div className="card mb-2 mr-2" key={props.keyloc}>
-		<img className="card-img-top" src={props.data.smImage?.localFile?.childImageSharp?.resize?.src}
+		<img className="card-img-top" src={props.data.smImage?.mediaItemUrl}
 				alt={props.data.smImage?.altText} />
 		<div className="card-body" style={{backgroundColor: props.slideColor}}>
 			<h3 className="card-title">{props.data.smName || props.data.title}</h3>

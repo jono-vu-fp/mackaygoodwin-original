@@ -46,8 +46,8 @@ const PeopleList = (props) => {
           {props.data.map((d, key) => {
             return showAll == 0 && key > 5 ? "" : <div className="col-lg-4 col-md-12  mt-4" key={key}>
                <div className={d.altimg?"staff-listbg listbg":"listbg"}>
-              <img className="img-fluid" style={{ width: "100%" }} src={d.img?.localFile?.childImageSharp?.resize?.src} alt={d.img?.altTxt} />
-                {d.altimg?<img className="staffimg-fluid" style={{ width: "100%" }} src={d.altimg?.localFile?.childImageSharp?.resize?.src} alt={d.altimg?.altTxt} />:null}
+              <img className="img-fluid" style={{ width: "100%" }} src={d.img?.mediaItemUrl} alt={d.img?.altTxt} />
+                {d.altimg?<img className="staffimg-fluid" style={{ width: "100%" }} src={d.altimg?.mediaItemUrl} alt={d.altimg?.altTxt} />:null}
                 <h4 className="px-4">{d.title}</h4>
                 <h5 className="px-4 py-1">{d.subtitle}</h5>
                 <p className="py-1 px-4" style={{ minHeight: "70px" }}  dangerouslySetInnerHTML={{ __html: d.text }}></p>
@@ -67,8 +67,8 @@ const PeopleList = (props) => {
             {props.data.map((d, key) => {
               return <div className="col-lg-4 col-md-12  mt-4 pe-4" key={key}>
                  <div className={d.altimg?"staff-listbg listbg":"listbg"}>
-              <img className="img-fluid" style={{ width: "100%" }} src={d.img?.localFile?.childImageSharp?.resize?.src} alt={d.img?.altTxt} />
-                {d.altimg?<img className="staffimg-fluid" style={{ width: "100%" }} src={d.altimg?.localFile?.childImageSharp?.resize?.src} alt={d.altimg?.altTxt} />:null}
+              <img className="img-fluid" style={{ width: "100%" }} src={d.img?.mediaItemUrl} alt={d.img?.altTxt} />
+                {d.altimg?<img className="staffimg-fluid" style={{ width: "100%" }} src={d.altimg?.mediaItemUrl} alt={d.altimg?.altTxt} />:null}
                   <h4 className="px-4">{d.title}</h4>
                   <h5 className="px-4 py-1">{d.subtitle}</h5>
                   <p className="py-1 px-4" style={{ minHeight: "70px" }}  dangerouslySetInnerHTML={{ __html: d.text }}></p>
@@ -100,7 +100,7 @@ const PeopleList = (props) => {
                     return <div key={key}><div className="row">
                       <div className="col-lg-4 mb-4">
                         <div className="imgholder">
-                          <img className="img-fluid" style={{ width: "100%" }} src={d.img?.localFile?.childImageSharp?.resize?.src} alt={d.img?.altTxt} />
+                          <img className="img-fluid" style={{ width: "100%" }} src={d.img?.mediaItemUrl} alt={d.img?.altTxt} />
                         </div>
                       </div>
                       <div className="col-lg-8 detail">
