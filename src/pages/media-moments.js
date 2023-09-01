@@ -52,7 +52,7 @@ const ConsultBusiness = ({ data }) => {
   const [fromEbookDetails, setFormEbookDetails] = React.useState(0);
   const value = { fromDetails, setFormDetails };
   const valueEbook = { fromEbookDetails, setFormEbookDetails };
-  return (<div className="service consult-business liquidation voluntary_administration bankruptcy doc_1 safe_harbour media_moment ">
+  return (<div className="service consult-business liquidation voluntary_administration bankruptcy doc_1 safe_harbour media_moment media_moment_new">
     <Layout>
       <Seo title={data.wpPage.metaFields?.metaTitle} description={data.wpPage.metaFields?.metaDescription} />
       <TopBanner
@@ -71,10 +71,11 @@ const ConsultBusiness = ({ data }) => {
               
               {data.wpPage.mediamoments.mediaWymnuDescriptionWhyliquid.map((d,key) => {
                 return (
-                  <div className={((key+1)%6==0)?'odd col-md-12 mm_item col-lg-12':((key+1)%3==0?'even col-md-12 mm_item col-lg-12':'col-md-6 mm_item col-lg-6')}>
+                   
+                  <div className={((key+1)%3==0?'even col-md-12 mm_item col-lg-12':'col-md-6 mm_item col-lg-6')}>
                   <div  className={((key+1)%4==0)?'lb_txt4 ':(((key+1)%4==3)?'lb_txt3 ':(((key+1)%4==2)?'lb_txt2 ':'lb_txt1'))}>
                     <div className="lb_img">
-                        <img src={d.mediaImage?.mediaItemUrl} alt={d.image?.altText} />
+                        <img src={d.mediaImage?.localFile?.publicURL} alt={d.image?.altText} />
                     </div>
                     <div className="lb_txt">
                       <h3 className="recovery-partner-title ">{d.mediaTitle?.trim()}</h3>
@@ -116,6 +117,13 @@ export const query = graphql`
         mediaBannerImage {
           altText
           mediaItemUrl
+          localFile {
+            childImageSharp {
+              resize (width: 526, height: 351, cropFocus: CENTER, quality: 80) {
+                src
+              }
+            }
+          }
         }
         mediaBannerTitle
         
@@ -124,6 +132,9 @@ export const query = graphql`
           mediaImage {
             altText
             mediaItemUrl
+            localFile {
+              publicURL
+            }
           }
           mediaTitle
           mediaReadMore

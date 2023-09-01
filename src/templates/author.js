@@ -95,7 +95,7 @@ const Author = ({ data }) => {
                   <div className={((key+1)%6==0)?'odd col-md-12 mm_item col-lg-12':((key+1)%3==0?'even col-md-12 mm_item col-lg-12':'col-md-6 mm_item col-lg-6')}>
                   <div  className={((key+1)%4==0)?'lb_txt4 ':(((key+1)%4==3)?'lb_txt3 ':(((key+1)%4==2)?'lb_txt2 ':'lb_txt1'))}>
                     <div className="lb_img">
-                        <img src={d.image?.mediaItemUrl} alt={d.image?.altText} />
+                        <img src={d.image?.localFile?.childImageSharp?.resize?.src} alt={d.image?.altText} />
                     </div>
                     <div className="lb_txt">
                       <h3 className="recovery-partner-title ">{d.title?.trim()}</h3>
@@ -134,6 +134,13 @@ query ($id: String) {
         node {
           altText
           mediaItemUrl
+          localFile {
+            childImageSharp {
+              resize (width: 306, height: 300, cropFocus: CENTER, quality: 80) {
+                src
+              }
+            }
+          }
         }
       }
       metaFields {
@@ -157,6 +164,13 @@ query ($id: String) {
               node {
                 altText
                 mediaItemUrl
+                localFile {
+                  childImageSharp {
+                    resize (width: 416, height: 450, cropFocus: CENTER, quality: 80) {
+                      src
+                    }
+                  }
+                }
               }
             }
           }
@@ -165,6 +179,13 @@ query ($id: String) {
           image {
             altText
             mediaItemUrl
+            localFile {
+              childImageSharp {
+                resize (width: 416, height: 450, cropFocus: CENTER, quality: 80) {
+                  src
+                }
+              }
+            }
           }
           readMore
           title

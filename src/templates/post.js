@@ -247,6 +247,13 @@ query ($id: String) {
         node {
           altText
           mediaItemUrl
+          localFile {
+            childImageSharp {
+              resize (width: 526, height: 351, cropFocus: CENTER, quality: 80) {
+                src
+              }
+            }
+          }
         }
       }
       metaFields {
@@ -262,6 +269,13 @@ query ($id: String) {
         node {
           altText
           mediaItemUrl
+          localFile {
+            childImageSharp {
+              resize (width: 526, height: 351, cropFocus: CENTER, quality: 80) {
+                src
+              }
+            }
+          }
         }
       }
       metaFields {
@@ -285,6 +299,13 @@ query ($id: String) {
               node {
                 altText
                 mediaItemUrl
+                localFile {
+                  childImageSharp {
+                    resize (width: 526, height: 351, cropFocus: CENTER, quality: 80) {
+                      src
+                    }
+                  }
+                }
               }
             }
           }

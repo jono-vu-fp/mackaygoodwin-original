@@ -60,7 +60,7 @@ const MgAcademyPage = ({ data }) => {
        <div class="container">    
        <div  className="row">    
         <div className="wva_left">
-              <img class="img-fluid" src={data.wpPage.news.ondemandImage.mediaItemUrl} alt="data.wpPage.news.ondemandImage.altText"/>          
+              <img class="img-fluid" src={data.wpPage.news.ondemandImage.localFile?.childImageSharp?.resize?.src} alt="data.wpPage.news.ondemandImage.altText"/>          
           </div>
           <div className="wva_right">
            <h3>{data.wpPage.news.ondemandTitle}</h3>
@@ -77,7 +77,7 @@ const MgAcademyPage = ({ data }) => {
         <div className="container">
           <div  className="row">
               <div className="wva_left  col-sm-12 col-md-12 col-lg-6 col-xl-5">
-                <img src={data.wpPage.news.mgacImage.mediaItemUrl} alt={data.wpPage.news.mgacImage.altText} />
+                <img src={data.wpPage.news.mgacImage.localFile?.childImageSharp?.resize?.src} alt={data.wpPage.news.mgacImage.altText} />
               </div>
               <div className="wva_right  col-sm-12 col-md-12 col-lg-6 col-xl-6">
                 <h3>{data.wpPage.news.mgacTitle}</h3>
@@ -92,7 +92,7 @@ const MgAcademyPage = ({ data }) => {
        <div class="container">  
         <div  className="row">      
           <div className="wva_left">
-               <img class="img-fluid" src={data.wpPage.news.mgacImage2.mediaItemUrl} alt="data.wpPage.news.mgacImage2.altText"/>            
+               <img class="img-fluid" src={data.wpPage.news.mgacImage2.localFile?.childImageSharp?.resize?.src} alt="data.wpPage.news.mgacImage2.altText"/>            
             </div>
             <div className="wva_right">
               <h3>{data.wpPage.news.mgacTitle2}</h3>
@@ -107,7 +107,7 @@ const MgAcademyPage = ({ data }) => {
         <div className="container">
           <div  className="row">
               <div className="wva_left  col-sm-12 col-md-12 col-lg-6 col-xl-5">
-                <img src={data.wpPage.news.mgacImage3.mediaItemUrl} alt={data.wpPage.news.mgacImage3.altText} />
+                <img src={data.wpPage.news.mgacImage3.localFile?.childImageSharp?.resize?.src} alt={data.wpPage.news.mgacImage3.altText} />
               </div>
               <div className="wva_right  col-sm-12 col-md-12 col-lg-6 col-xl-6">
                 <h3>{data.wpPage.news.mgacTitle3}</h3>
@@ -124,7 +124,7 @@ const MgAcademyPage = ({ data }) => {
        <div class="container">    
        <div  className="row">    
         <div className="wva_left">
-             <img class="img-fluid" src={data.wpPage.news.incubatorProgramImage.mediaItemUrl} alt="data.wpPage.news.incubatorProgramImage.altText"/>            
+             <img class="img-fluid" src={data.wpPage.news.incubatorProgramImage.localFile?.childImageSharp?.resize?.src} alt="data.wpPage.news.incubatorProgramImage.altText"/>            
           </div>
           <div className="wva_right">
             <h3>{data.wpPage.news.incubatorProgramTitle}</h3>
@@ -183,6 +183,13 @@ export const query = graphql`
         image {
           altText
           mediaItemUrl
+          localFile {
+            childImageSharp {
+              resize (width: 524, height: 350, cropFocus: CENTER, quality: 80) {
+                src
+              }
+            }
+          }
         }
         title
         description
@@ -190,6 +197,13 @@ export const query = graphql`
         incubatorProgramImage{
           mediaItemUrl
           altText
+          localFile {
+            childImageSharp {
+              resize (width: 524, height: 350, cropFocus: CENTER, quality: 80) {
+                src
+              }
+            }
+          }
         }
         mgacTitle
         mgacDescription
@@ -197,6 +211,13 @@ export const query = graphql`
         mgacImage{
           mediaItemUrl
           altText
+          localFile {
+            childImageSharp {
+              resize (width: 526, height: 351, cropFocus: CENTER, quality: 80) {
+                src
+              }
+            }
+          }
         }
         mgacTitle2
         mgacDescription2
@@ -204,6 +225,13 @@ export const query = graphql`
         mgacImage2{
           mediaItemUrl
           altText
+          localFile {
+            childImageSharp {
+              resize (width: 526, height: 351, cropFocus: CENTER, quality: 80) {
+                src
+              }
+            }
+          }
         }
         ondemandLink
         ondemandTitle
@@ -211,6 +239,13 @@ export const query = graphql`
         ondemandImage {
           altText
           mediaItemUrl
+          localFile {
+            childImageSharp {
+              resize (width: 526, height: 368, cropFocus: CENTER, quality: 80) {
+                src
+              }
+            }
+          }
         }
          mgacTitle3
         mgacDescription3
@@ -218,6 +253,13 @@ export const query = graphql`
         mgacImage3{
           mediaItemUrl
           altText
+          localFile {
+            childImageSharp {
+              resize (width: 526, height: 351, cropFocus: CENTER, quality: 80) {
+                src
+              }
+            }
+          }
         }
         incubatorProgramDescription
         incubatorProgramFormCode

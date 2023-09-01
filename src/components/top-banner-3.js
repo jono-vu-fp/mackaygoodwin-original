@@ -32,7 +32,7 @@ const topBanner = (props) => {
 					</div>
 					<div className={typeof props.equalWidth !== "undefined" && props.equalWidth ? "col-sm-12 col-md-12 col-lg-6 col-xl-6" : "col-sm-12 col-md-12 col-lg-6 col-xl-5"}>
 						<div className="banner-image">
-							<img src={props.bannerImg?.mediaItemUrl} className="img-fluid" alt={props.bannerImg?.altText} />
+							<img src={props.bannerImg?.localFile?.childImageSharp?.resize?.src} className="img-fluid" alt={props.bannerImg?.altText} />
 						</div>
 					</div>
 					

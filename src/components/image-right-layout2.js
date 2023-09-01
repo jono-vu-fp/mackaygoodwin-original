@@ -5,7 +5,7 @@ const CurveLeft = (props) => (
 
   <div className={'vcfo_section '+props.addClass}>
     <div className="container">
-      <div class="vcfo_left"><img src={props.img.mediaItemUrl} alt={props.img.altText} /></div>
+      <div class="vcfo_left"><img src={props.img.localFile?.childImageSharp?.resize?.src} alt={props.img.altText} /></div>
       <div class="vcfo_right">
         <h3>{props.title}</h3>
         <div className="ill_txt" dangerouslySetInnerHTML={{__html: props.text }} />

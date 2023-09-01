@@ -6,20 +6,20 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import TopBanner from "../components/top-banner-3"
 import GetInTouch from "../components/get-in-touch3"
-import CurveLeft from "../components/curve-left"
 import Services from "../components/services"
-import Accordian from "../components/accordian/accordian"
+import Accordian from "../components/accordian/accordian-bankruptcy"
 import FullText from "../components/full-text"
-import OurPeople from "../components/our-people-liquid/our-people"
-import TestimonialMain from "../components/testimonial-main-liquid-1"
+import OurPeople from "../components/our-people-liquid/our-people4"
 import ReciveryPlan from "../components/recovery-plan"
-import Container from "../components/slider/container-liquidation"
 import EbookForm from "../components/ebook-form"
 import { formEbookContext } from '../components/context';
 import GetInTouchPPForm from "../components/get-in-touch-bankruptcy-popup"
+import News from "../components/news/list2"
+import _ from 'lodash';
 
 const ConsultBusiness = ({ data }) => {
   const [showModal, setModal] = React.useState(false);
+  const [businessData, setbusinessData] = React.useState([]);
   let whyMG = [];
   let FAQs = [];
 
@@ -31,19 +31,36 @@ const ConsultBusiness = ({ data }) => {
     return FAQs.push({ title: d.faqTitle, description: d.faqDesc });
   })
 
-  let businessData = [];
-  data.allWpOurpeople.nodes.map((d) => {
-      return businessData.push({ title: d.title, subtitle: d.backInBusiness.designation, text: d.backInBusiness.location, certification: d.backInBusiness.certification, content: d.content, linkedin: d.backInBusiness.linkedin, email: d.backInBusiness.email, img: d.featuredImage?.node, designationType: d.backInBusiness.designationType, registeredLiquidators: d.backInBusiness.registeredLiquidators });
-  })
+  React.useEffect(()=>{
+    let businessData = [];
+    let suffledArray = _.shuffle(data.allWpOurpeople.nodes); let lidx=0;
+    suffledArray.map((d,key) => {
+      if(d.title=='Gavin King'){
+         lidx++;
+        return businessData.unshift({ title: d.title, subtitle: d.backInBusiness.designation, text: d.backInBusiness.location, certification: d.backInBusiness.certification, content: d.content, linkedin: d.backInBusiness.linkedin, email: d.backInBusiness.email, img: d.featuredImage?.node, designationType: d.backInBusiness.designationType, registeredLiquidators: d.backInBusiness.registeredLiquidators, altimg:d.backInBusiness.staffImage2 });
+      }
+      else if(lidx<5){
+         lidx++;
+        return businessData.push({ title: d.title, subtitle: d.backInBusiness.designation, text: d.backInBusiness.location, certification: d.backInBusiness.certification, content: d.content, linkedin: d.backInBusiness.linkedin, email: d.backInBusiness.email, img: d.featuredImage?.node, designationType: d.backInBusiness.designationType, registeredLiquidators: d.backInBusiness.registeredLiquidators, altimg:d.backInBusiness.staffImage2 });
+      }
+    });
+    setbusinessData(businessData);
+    return () => {
+
+    };
+  },[]);
+
+  
+  // suffledArray.map((d) => {
+  //     return businessData.push({ title: d.title, subtitle: d.backInBusiness.designation, text: d.backInBusiness.location, certification: d.backInBusiness.certification, content: d.content, linkedin: d.backInBusiness.linkedin, email: d.backInBusiness.email, img: d.featuredImage?.node, designationType: d.backInBusiness.designationType, registeredLiquidators: d.backInBusiness.registeredLiquidators });
+  // })
 
   const breadCrumbs = [
     { link: "/", title: "Home" },
     { title: "Liquidation" },
   ]
 
-  const [fromDetails, setFormDetails] = React.useState(0);
   const [fromEbookDetails, setFormEbookDetails] = React.useState(0);
-  const value = { fromDetails, setFormDetails };
   const valueEbook = { fromEbookDetails, setFormEbookDetails };
   return (<div className="service restructure consult-business liquidation">
     <Layout>
@@ -52,7 +69,7 @@ const ConsultBusiness = ({ data }) => {
         title={data.wpPage.liquidation.bannerTitle}
         subtitle={data.wpPage.liquidation.bannerSubtitle}
         text={data.wpPage.liquidation.bannerDesc}
-        bannerImg={data.wpPage.liquidation.bannerImage}
+        bannerImg={data.wpPage.liquidation.bannerImageli}
         breadCrumbs={breadCrumbs}
         sendUrl={''}
         equalWidth={true}
@@ -68,7 +85,7 @@ const ConsultBusiness = ({ data }) => {
             {data.wpPage.liquidation.partners.map((d) => {
               return (<div className={"col-xs-12 col-md-6 col-lg-" + parseInt(12 / data.wpPage.liquidation.partners.length)}>
                 <div className="text-center rec_img">
-                  <img src={d.image.mediaItemUrl} alt={d.image.altText} className="recovery-partner-img" />
+                  <img src={d.image.localFile?.publicURL} alt={d.image.altText} className="recovery-partner-img" />
                 </div>
                 <p className="recovery-partner-title text-center"> {d.title} </p>
               </div>)
@@ -84,7 +101,7 @@ const ConsultBusiness = ({ data }) => {
                 return (
                   <div className="col-md-4 col-lg-4">
                     <div className="lb_img">
-                        <img src={d.image.mediaItemUrl} alt={d.image.altText} />
+                        <img src={d.image.localFile?.publicURL} alt={d.image.altText} />
                     </div>
                     <div className="lb_txt">
                       <p className="recovery-partner-title">{d.title.trim()}</p>
@@ -99,7 +116,7 @@ const ConsultBusiness = ({ data }) => {
       <div className="container">
           <div className="row">
             <div className="col-sm-12 col-md-12 col-lg-6 p-5">
-              <img className="img-fluid" src={data.wpPage.liquidation.testimonialsLiquid[0].image?.mediaItemUrl} alt={data.wpPage.liquidation.testimonialsLiquid[0].image?.altText} />
+              <img className="img-fluid" src={data.wpPage.liquidation.testimonialsLiquid[0].image?.localFile?.childImageSharp?.resize?.src} alt={data.wpPage.liquidation.testimonialsLiquid[0].image?.altText} />
             </div>
             <div className="col-sm-12 col-md-12 col-lg-6 p-5 desc">
               <p>{data.wpPage.liquidation.testimonialsLiquid[0].description}</p>
@@ -110,12 +127,12 @@ const ConsultBusiness = ({ data }) => {
       <div className="wbl_section">
         <div className="container">
           <div className="wbl_right">
-            <a onClick={()=>setModal(true)}><img src={data.wpPage.liquidation.businessThumbnail.mediaItemUrl} /></a>
+            <a onClick={()=>setModal(true)}><img src={data.wpPage.liquidation.businessThumbnail.localFile?.childImageSharp?.resize?.src} /></a>
           </div>
           <div className="wbl_left">
             <h3>{data.wpPage.liquidation.businessTitle}</h3>
             <p>{data.wpPage.liquidation.businessDesc}</p>
-            {data.wpPage.liquidation.enquire !== null && data.wpPage.liquidation.enquire !== "" ? <Link className="btn btn-primary me-5" to={data.wpPage.liquidation.enquire}>Learn More</Link> : ""}
+            {data.wpPage.liquidation.enquire !== null && data.wpPage.liquidation.enquire !== "" ? <Link className="btn btn-primary me-5" target="_blank" to={data.wpPage.liquidation.enquire}>Learn More</Link> : ""}
           </div>
         </div>
       </div>
@@ -154,7 +171,7 @@ const ConsultBusiness = ({ data }) => {
         <div className="container">
             <div className="row flex-row-reverse">
               <div className="col-sm-12 col-md-12 col-lg-6 p-5">
-                <img className="img-fluid" src={data.wpPage.liquidation.testimonialsLiquid[1].image?.mediaItemUrl} alt={data.wpPage.liquidation.testimonialsLiquid[1].image?.altText} />
+                <img className="img-fluid" src={data.wpPage.liquidation.testimonialsLiquid[1].image?.localFile?.childImageSharp?.resize?.src} alt={data.wpPage.liquidation.testimonialsLiquid[1].image?.altText} />
               </div>
               <div className="col-sm-12 col-md-12 col-lg-6 p-5 desc">
                 <p>{data.wpPage.liquidation.testimonialsLiquid[1].description}</p>
@@ -169,7 +186,7 @@ const ConsultBusiness = ({ data }) => {
       <section className="ht_section">
         <div className="container">
           <div className="ht_left">
-            <img className="img-fluid" src={data.wpPage.liquidation.htImage?.mediaItemUrl} alt={data.wpPage.liquidation.htImage?.altText} />
+            <img className="img-fluid" src={data.wpPage.liquidation.htImage?.localFile?.childImageSharp?.resize?.src} alt={data.wpPage.liquidation.htImage?.altText} />
           </div>
           <div className="ht_right">
             <h2>{data.wpPage.liquidation.htTitle}</h2>
@@ -186,20 +203,48 @@ const ConsultBusiness = ({ data }) => {
       </section>
       
       <OurPeople
-        title={'Meet our registered Liquidators'}
+        title={'Meet our team of experts and registered liquidators'}
         text={''}
         data={businessData}
         showAll={0}
         liquidation={1}
       />
-      <Container
-        title={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.testimonialTitle}
-        data={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.testimonials}
-        slideColor={'#ebe9de'}
-      />
-      <div className="cu_fixed">
-          <a href="/contact"><img src="/images/sophie-img.png" />Contact Us</a>
-      </div>
+      <div class="row">
+              <div class="col-lg-12 col-md-12 align-center">
+                <Link className="btn btn-primary no-marg" to="/people/">
+                  All People
+                </Link>
+              </div>
+            </div>
+            <div className="bankruptcy service grey_faq">
+               <Accordian
+            title="Liquidation FAQs"
+            showEnquireButton={false}
+            data={FAQs}
+          />
+          </div>
+
+            <div class="liquidation_land"> 
+            <div class="vcfo_section na_section new_landing"> 
+              <section class="news-list allnews_list">
+
+                  <div class="container">
+                  <div class="row">
+                          <div class="col-lg-12 col-md-12">
+                      <h2>Take a deep dive into the insights of liquidation. </h2></div>
+                    </div>
+
+                    <News
+                  title={''}
+                  data={data.wpPage?.liquidation.articles2}
+                  btn={false}
+                />
+                      
+                  </div>
+              </section>
+          </div> </div>
+ 
+     
       <div className="home">
         <GetInTouch
           title={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchTitle}
@@ -220,10 +265,18 @@ export const query = graphql`
     wpPage(title: {eq: "Liquidation"}) {
       liquidation {
         bannerDesc
-        bannerImage {
+        bannerImageli {
           altText
           mediaItemUrl
-        }
+          localFile {
+            childImageSharp {
+              resize (width: 526, height: 351, cropFocus: CENTER, quality: 100) {
+                src
+              }
+            }
+          }
+        } 
+        
         bannerSubtitle
         bannerTitle
         businessDesc
@@ -234,6 +287,13 @@ export const query = graphql`
         businessThumbnail {
           altText
           mediaItemUrl
+          localFile {
+            childImageSharp {
+              resize (width: 599, height: 377, cropFocus: CENTER, quality: 80) {
+                src
+              }
+            }
+          }
         }
         businessTitle
         businessVideo {
@@ -246,6 +306,9 @@ export const query = graphql`
           image {
             altText
             mediaItemUrl
+            localFile{
+              publicURL
+            }
           }
           title
         }
@@ -265,6 +328,9 @@ export const query = graphql`
           image {
             altText
             mediaItemUrl
+            localFile{
+              publicURL
+            }
           }
         }
         htTitle
@@ -272,6 +338,13 @@ export const query = graphql`
         htImage {
           altText
           mediaItemUrl
+          localFile {
+            childImageSharp {
+              resize (width: 682, height: 465, cropFocus: CENTER, quality: 80) {
+                src
+              }
+            }
+          }
         }
         liquidationTagline
         recoveryTagline
@@ -294,8 +367,38 @@ export const query = graphql`
           image {
             altText
             mediaItemUrl
+            localFile {
+              childImageSharp {
+                resize (width: 564, height: 376, cropFocus: CENTER, quality: 80) {
+                  src
+                }
+              }
+            }
           }
         }
+
+        articles2 {
+          ... on WpArticle {
+            id
+            slug
+            title
+            excerpt
+            featuredImage {
+              node {
+                altText
+                mediaItemUrl
+                localFile {
+                  childImageSharp {
+                    resize (width: 416, height: 450, cropFocus: CENTER, quality: 80) {
+                      src
+                    }
+                  }
+                }
+              }
+            }
+          }
+        } 
+
       }
       metaFields {
         metaDescription
@@ -328,6 +431,13 @@ export const query = graphql`
               image {
                 altText
                 mediaItemUrl
+                localFile {
+                  childImageSharp {
+                    resize (width: 412, height: 280, cropFocus: CENTER, quality: 80) {
+                      src
+                    }
+                  }
+                }
               }
             }
           }
@@ -337,6 +447,7 @@ export const query = graphql`
     allWpOurpeople(sort: {order:  ASC, fields: menuOrder}) {
       nodes {
         title
+        slug
         backInBusiness {
           designation
           location
@@ -344,12 +455,31 @@ export const query = graphql`
           designationType
           linkedin
           email
+          phoneNumber
           registeredLiquidators
+          staffImage2{
+            altText
+            mediaItemUrl
+            localFile {
+              childImageSharp {
+                resize (width: 416, height: 450, cropFocus: CENTER, quality: 80) {
+                  src
+                }
+              }
+            }
+          }
         }
         featuredImage {
           node {
             altText
             mediaItemUrl
+            localFile {
+              childImageSharp {
+                resize (width: 416, height: 450, cropFocus: CENTER, quality: 80) {
+                  src
+                }
+              }
+            }
           }
         }
         content

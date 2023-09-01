@@ -63,7 +63,7 @@ const DirectorPenaltyNotice = ({data}) => {
        </div>
        <div class="col-sm-12 col-md-12 col-lg-5 col-xl-5">
           <div class="banner-image">
-           <img src={data.wpPage.directorpenaltynoticePageOptions.banner.mediaItemUrl} alt="data.wpPage.directorpenaltynoticePageOptions.banner.altText" />
+           <img src={data.wpPage.directorpenaltynoticePageOptions.banner.localFile?.childImageSharp?.resize?.src} alt="data.wpPage.directorpenaltynoticePageOptions.banner.altText" />
 
           </div>
           <div class="col-12 d-block d-sm-block d-md-block d-lg-none banner-mdesc">
@@ -83,7 +83,7 @@ const DirectorPenaltyNotice = ({data}) => {
        <div class="container">
 
        <div className="wva_left">
-            <img class="img-fluid" src={data.wpPage.directorpenaltynoticePageOptions.banner1.mediaItemUrl} alt="data.wpPage.directorpenaltynoticePageOptions.banner1.altText"/>
+            <img class="img-fluid" src={data.wpPage.directorpenaltynoticePageOptions.banner1.localFile?.childImageSharp?.resize?.src} alt="data.wpPage.directorpenaltynoticePageOptions.banner1.altText"/>
             </div>
 
           <div className="wva_right">
@@ -152,7 +152,7 @@ const DirectorPenaltyNotice = ({data}) => {
     <section id="liquidation" class="banners curve-right vcf_sec mg_identifix dpntab_sec">
      <div class="container">
           <div className="wva_right">
-            <img class="img-fluid" src={data.wpPage.directorpenaltynoticePageOptions.liquidationImage.mediaItemUrl} alt="data.wpPage.directorpenaltynoticePageOptions.liquidationImage.altText"/>           
+            <img class="img-fluid" src={data.wpPage.directorpenaltynoticePageOptions.liquidationImage.localFile?.childImageSharp?.resize?.src} alt="data.wpPage.directorpenaltynoticePageOptions.liquidationImage.altText"/>           
           </div>
           <div className="wva_left">
           <h3>{data.wpPage.directorpenaltynoticePageOptions.liquidationTitle}</h3>           
@@ -167,7 +167,7 @@ const DirectorPenaltyNotice = ({data}) => {
        <div class="container">
 
         <div className="wva_left">
-             <img class="img-fluid" src={data.wpPage.directorpenaltynoticePageOptions.restructureImage.mediaItemUrl} alt="data.wpPage.directorpenaltynoticePageOptions.restructureImage.altText"/>            
+             <img class="img-fluid" src={data.wpPage.directorpenaltynoticePageOptions.restructureImage.localFile?.childImageSharp?.resize?.src} alt="data.wpPage.directorpenaltynoticePageOptions.restructureImage.altText"/>            
                
           </div>
 
@@ -184,7 +184,7 @@ const DirectorPenaltyNotice = ({data}) => {
      <section id="administration" class="banners curve-right vcf_sec mg_identifix dpntab_sec">
      <div class="container">
           <div className="wva_right">
-            <img class="img-fluid" src={data.wpPage.directorpenaltynoticePageOptions.administrationImage.mediaItemUrl} alt="data.wpPage.directorpenaltynoticePageOptions.administrationImage.altText"/>           
+            <img class="img-fluid" src={data.wpPage.directorpenaltynoticePageOptions.administrationImage.localFile?.childImageSharp?.resize?.src} alt="data.wpPage.directorpenaltynoticePageOptions.administrationImage.altText"/>           
           </div>
           <div className="wva_left">
           <h3>{data.wpPage.directorpenaltynoticePageOptions.administrationTitle}</h3>           
@@ -199,7 +199,7 @@ const DirectorPenaltyNotice = ({data}) => {
        <div class="container">
 
         <div className="wva_left">
-             <img class="img-fluid" src={data.wpPage.directorpenaltynoticePageOptions.docaImage.mediaItemUrl} alt="data.wpPage.directorpenaltynoticePageOptions.docaImage.altText"/>            
+             <img class="img-fluid" src={data.wpPage.directorpenaltynoticePageOptions.docaImage.localFile?.childImageSharp?.resize?.src} alt="data.wpPage.directorpenaltynoticePageOptions.docaImage.altText"/>            
                
           </div>
 
@@ -241,7 +241,7 @@ const DirectorPenaltyNotice = ({data}) => {
             {data.wpPage.directorpenaltynoticePageOptions.partnerNew.map((d) => {
               return (<div className={"col-xs-12 col-md-6 col-lg-" + parseInt(12 / data.wpPage.directorpenaltynoticePageOptions.partnerNew.length)}>
                 <div className="text-center rp_img">
-                  <img src={d.imageNew?.mediaItemUrl} alt={d.imageNew?.altText} className="recovery-partner-img" />
+                  <img src={d.imageNew?.localFile?.publicURL} alt={d.imageNew?.altText} className="recovery-partner-img" />
                 </div>
                 <p className="recovery-partner-title text-center"> {d.titleNew} </p>
               </div>)
@@ -281,6 +281,13 @@ export const query = graphql`
         banner {
           mediaItemUrl
           altText
+          localFile {
+            childImageSharp {
+              resize (width: 526, height: 394, cropFocus: CENTER, quality: 80) {
+                src
+              }
+            }
+          }
         }
         optionsTitle
         optionsSubtext
@@ -289,6 +296,13 @@ export const query = graphql`
         banner1{
           mediaItemUrl
           altText
+          localFile {
+            childImageSharp {
+              resize (width: 526, height: 351, cropFocus: CENTER, quality: 80) {
+                src
+              }
+            }
+          }
         }
         description1
         typesTitle
@@ -302,6 +316,13 @@ export const query = graphql`
           testImage {
             altText
             mediaItemUrl
+            localFile {
+              childImageSharp {
+                resize (width: 564, height: 376, cropFocus: CENTER, quality: 80) {
+                  src
+                }
+              }
+            }
           }
         }
         faqTitle
@@ -314,6 +335,9 @@ export const query = graphql`
           imageNew {
             altText
             mediaItemUrl
+            localFile{
+              publicURL
+            }
           }
           titleNew
         }
@@ -325,6 +349,13 @@ export const query = graphql`
         liquidationImage{
             altText
             mediaItemUrl
+            localFile {
+              childImageSharp {
+                resize (width: 526, height: 351, cropFocus: CENTER, quality: 80) {
+                  src
+                }
+              }
+            }
           }
 
         restructureTitle
@@ -333,6 +364,13 @@ export const query = graphql`
         restructureImage{
             altText
             mediaItemUrl
+            localFile {
+              childImageSharp {
+                resize (width: 526, height: 351, cropFocus: CENTER, quality: 80) {
+                  src
+                }
+              }
+            }
           }  
         administrationTitle
         administrationDescription
@@ -340,6 +378,13 @@ export const query = graphql`
         administrationImage{
             altText
             mediaItemUrl
+            localFile {
+              childImageSharp {
+                resize (width: 526, height: 351, cropFocus: CENTER, quality: 80) {
+                  src
+                }
+              }
+            }
           } 
           
         docaTitle
@@ -348,6 +393,13 @@ export const query = graphql`
         docaImage{
             altText
             mediaItemUrl
+            localFile {
+              childImageSharp {
+                resize (width: 526, height: 351, cropFocus: CENTER, quality: 80) {
+                  src
+                }
+              }
+            }
           }  
       }
     }
@@ -369,6 +421,13 @@ export const query = graphql`
           node {
             altText
             mediaItemUrl
+            localFile {
+              childImageSharp {
+                resize (width: 416, height: 450, cropFocus: CENTER, quality: 80) {
+                  src
+                }
+              }
+            }
           }
         }
         content

@@ -24,7 +24,7 @@ const EventsList = (props) => {
     <div className="col-lg-12 my-3">
       <div className="row">
         <div className="col-lg-3 my-3">
-          <img className="img-fluid" style={{ objectFit: "cover" }} src={props.data?.featuredImage?.node?.mediaItemUrl} alt={props.data?.featuredImage?.node?.altText} />
+          <img className="img-fluid" style={{ objectFit: "cover" }} src={props.data?.featuredImage?.node?.localFile?.childImageSharp?.resize?.src} alt={props.data?.featuredImage?.node?.altText} />
         </div>
         <div className="col-lg-8 my-3">
           <h4 className="px-4 mb-4">{props.data.title} </h4>

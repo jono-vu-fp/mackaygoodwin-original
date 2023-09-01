@@ -165,7 +165,7 @@ const MgWay = ({ data }) => {
           <div className="wva_left">
 
           <div className="wva_video">
-          <img onClick={()=>setVideoUrl(data.wpPage.mgWayPageOptions.aboutVideo?.mediaItemUrl)} src={data.wpPage.mgWayPageOptions.aboutVideoCover?.mediaItemUrl} alt={data.wpPage.mgWayPageOptions.aboutVideoCover?.altText} />
+          <img onClick={()=>setVideoUrl(data.wpPage.mgWayPageOptions.aboutVideo?.mediaItemUrl)} src={data.wpPage.mgWayPageOptions.aboutVideoCover?.localFile?.childImageSharp?.resize?.src} alt={data.wpPage.mgWayPageOptions.aboutVideoCover?.altText} />
           </div>
           
 
@@ -188,7 +188,7 @@ const MgWay = ({ data }) => {
         
             <ul>
               {data.wpPage.mgWayPageOptions.approachQA.map((d, key) => {
-                return <li><div className="wcmg_img"><img src={d.icon.mediaItemUrl} alt="" /></div><h4>{d.question}</h4>
+                return <li><div className="wcmg_img"><img src={d.icon?.localFile?.publicURL} alt="" /></div><h4>{d.question}</h4>
                 <div dangerouslySetInnerHTML={{__html: d.answer}} />
                 </li>
               })} 
@@ -200,7 +200,7 @@ const MgWay = ({ data }) => {
         <div className="container">
          
           <div className="wva_right">
-           <img src={data.wpPage.mgWayPageOptions.identifixImage.mediaItemUrl} alt={data.wpPage.mgWayPageOptions.identifixImage.altText} />            
+           <img src={data.wpPage.mgWayPageOptions.identifixImage.localFile?.childImageSharp?.resize?.src} alt={data.wpPage.mgWayPageOptions.identifixImage.altText} />            
           </div>
 
            <div className="wva_left">
@@ -223,7 +223,7 @@ const MgWay = ({ data }) => {
           </div>
 
           <div className="wva_left">
-            <img src={data.wpPage.mgWayPageOptions.historyImage.mediaItemUrl} alt="" />
+            <img src={data.wpPage.mgWayPageOptions.historyImage.localFile?.childImageSharp?.resize?.src} alt="" />
           </div>
           <div className="wva_right">
             <h3>{data.wpPage.mgWayPageOptions.historyContentTitle}</h3>
@@ -238,7 +238,7 @@ const MgWay = ({ data }) => {
             <ul>
 
                <li id="careers">
-                  <div className="hs_img"><img src={data.wpPage.mgWayPageOptions.careerImage?.mediaItemUrl} alt="" /></div>
+                  <div className="hs_img"><img src={data.wpPage.mgWayPageOptions.careerImage?.localFile?.childImageSharp?.resize?.src} alt="" /></div>
                   <div className="hs_cnt"><h4>{data.wpPage.mgWayPageOptions.carrerTitle}</h4>
                   <div className="des_1" dangerouslySetInnerHTML={{__html: data.wpPage.mgWayPageOptions.careerContentDesc }} /> 
                   <a className="btn btn-primary" href={data.wpPage.mgWayPageOptions.careerButtonLink}>Get In Touch</a></div>
@@ -251,7 +251,7 @@ const MgWay = ({ data }) => {
                   <div className="image-container hs_img">                     
                     <Carousel showThumbs={false} showIndicators={false} autoPlay={true} dynamicHeight={false} swipeable={true} emulateTouch={true} showStatus={false}>
                         { data.wpPage.mgWayPageOptions.communityImages.map((d) => {
-                          return <div><img src={d.image.mediaItemUrl} /></div>
+                          return <div><img src={d.image.localFile?.childImageSharp?.resize?.src} /></div>
                         })}
                     </Carousel>            
                   </div>
@@ -265,7 +265,7 @@ const MgWay = ({ data }) => {
 
 
                    <li id="project8">
-                  <div className="hs_img"><img className={"img-fluid img-fullwidth"} src={data.wpPage.mgWayPageOptions.journeyImage.mediaItemUrl} alt={data.wpPage.mgWayPageOptions.journeyImage.altText} /></div>
+                  <div className="hs_img"><img className={"img-fluid img-fullwidth"} src={data.wpPage.mgWayPageOptions.journeyImage.localFile?.childImageSharp?.resize?.src} alt={data.wpPage.mgWayPageOptions.journeyImage.altText} /></div>
                   <div className="hs_cnt"><h4>{data.wpPage.mgWayPageOptions.journeyTitle}</h4>
                    <h3 className="card-title">{data.wpPage.mgWayPageOptions.journeyContentTitle}</h3>
                   <div  className="des_2" dangerouslySetInnerHTML={{__html: data.wpPage.mgWayPageOptions.journeyContentDesc }} /> 
@@ -404,6 +404,13 @@ export const query = graphql`
         aboutImage {
           altText
           mediaItemUrl
+          localFile {
+            childImageSharp {
+              resize (width: 524, height: 350, cropFocus: CENTER, quality: 80) {
+                src
+              }
+            }
+          }
         }
         aboutVideo {
           altText
@@ -412,6 +419,13 @@ export const query = graphql`
         aboutVideoCover {
           altText
           mediaItemUrl
+          localFile {
+            childImageSharp {
+              resize (width: 526, height: 353, cropFocus: CENTER, quality: 80) {
+                src
+              }
+            }
+          }
         }
         aboutTitle
         allPeopleUrl
@@ -422,6 +436,9 @@ export const query = graphql`
           icon {
             altText
             mediaItemUrl
+            localFile{
+              publicURL
+            }
           }
         }
         approachTitle
@@ -429,6 +446,13 @@ export const query = graphql`
         bannerImage {
           altText
           mediaItemUrl
+          localFile {
+            childImageSharp {
+              resize (width: 526, height: 351, cropFocus: CENTER, quality: 80) {
+                src
+              }
+            }
+          }
         }
         bannerTitle
         careerButtonLink
@@ -437,6 +461,13 @@ export const query = graphql`
         careerImage {
           altText
           mediaItemUrl
+          localFile {
+            childImageSharp {
+              resize (width: 415, height: 277, cropFocus: CENTER, quality: 80) {
+                src
+              }
+            }
+          }
         }
         carrerTitle
         communityContentDesc
@@ -449,6 +480,13 @@ export const query = graphql`
           image{
             altText
             mediaItemUrl
+            localFile {
+              childImageSharp {
+                resize (width: 415, height: 277, cropFocus: CENTER, quality: 80) {
+                  src
+                }
+              }
+            }
           }
         }
         communityTitle
@@ -461,6 +499,13 @@ export const query = graphql`
         identifixImage {
         altText
         mediaItemUrl
+        localFile {
+            childImageSharp {
+              resize (width: 526, height: 351, cropFocus: CENTER, quality: 80) {
+                src
+              }
+            }
+          }
         }
         enquireLink
         historyContentDesc
@@ -469,6 +514,13 @@ export const query = graphql`
         historyImage {
           altText
           mediaItemUrl
+          localFile {
+            childImageSharp {
+              resize (width: 526, height: 351, cropFocus: CENTER, quality: 80) {
+                src
+              }
+            }
+          }
         }
         historyTitle
         learnMoreUrl
@@ -481,6 +533,13 @@ export const query = graphql`
         journeyImage {
           altText
           mediaItemUrl
+          localFile {
+            childImageSharp {
+              resize (width: 415, height: 277, cropFocus: CENTER, quality: 80) {
+                src
+              }
+            }
+          }
         }
         mgAwardTitle
         mgAwardPoints {
@@ -525,18 +584,26 @@ export const query = graphql`
           staffImage2{
             altText
             mediaItemUrl
+            localFile {
+              childImageSharp {
+                resize (width: 416, height: 450, cropFocus: CENTER, quality: 80) {
+                  src
+                }
+              }
+            }
           }
         }
         featuredImage {
           node {
             altText
             mediaItemUrl
-          }
-        }
-        featuredImage {
-          node {
-            altText
-            mediaItemUrl
+            localFile {
+              childImageSharp {
+                resize (width: 416, height: 450, cropFocus: CENTER, quality: 80) {
+                  src
+                }
+              }
+            }
           }
         }
         content

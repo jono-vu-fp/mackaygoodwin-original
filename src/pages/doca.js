@@ -72,7 +72,7 @@ const ConsultBusiness = ({ data }) => {
                 return (
                   <div className="col-md-4 col-lg-4">
                     <div className="lb_img">
-                        <img src={d.image?.mediaItemUrl} alt={d.image?.altText} />
+                        <img src={d.image?.localFile?.publicURL} alt={d.image?.altText} />
                     </div>
                     <div className="lb_txt">
                       <p className="recovery-partner-title ">{d.title?.trim()}</p>
@@ -95,7 +95,7 @@ const ConsultBusiness = ({ data }) => {
       <div className="wva_section key_expert">
         <div className="container">
           <div className="wva_left">
-            <img src={data.wpPage.doca.docaFdImage?.mediaItemUrl} alt={data.wpPage.doca.docaFdImage?.altText} />
+            <img src={data.wpPage.doca.docaFdImage?.localFile?.childImageSharp?.resize?.src} alt={data.wpPage.doca.docaFdImage?.altText} />
           </div>
           <div className="wva_right">
             <div dangerouslySetInnerHTML={{ __html: data.wpPage.doca.docaFdContent }}></div>
@@ -119,7 +119,7 @@ const ConsultBusiness = ({ data }) => {
         <div className="container"> 
         <div className="row">    
          <div class="col-md-5 col-lg-5">
-            <img src={data.wpPage.doca.docaDcaImage.mediaItemUrl} alt={data.wpPage.doca.docaDcaImage.altText} />
+            <img src={data.wpPage.doca.docaDcaImage.localFile?.childImageSharp?.resize?.src} alt={data.wpPage.doca.docaDcaImage.altText} />
           </div>       
           <div class="col-md-7 col-lg-7">
               <div dangerouslySetInnerHTML={{ __html: data.wpPage.doca.docaDcaDescription }}></div>
@@ -133,7 +133,7 @@ const ConsultBusiness = ({ data }) => {
         <section className="health_check">
           <div className="container">
             <div className="ht_right">
-              <img className="img-fluid" src={data.wpPage.doca.docaHtImage?.mediaItemUrl} alt={data.wpPage.doca.docaHtImage?.altText} />
+              <img className="img-fluid" src={data.wpPage.doca.docaHtImage?.localFile?.childImageSharp?.resize?.src} alt={data.wpPage.doca.docaHtImage?.altText} />
             </div>
 
             <div className="ht_left">
@@ -207,6 +207,13 @@ export const query = graphql`
         docaBannerImage {
           altText
           mediaItemUrl
+          localFile {
+            childImageSharp {
+              resize (width: 526, height: 351, cropFocus: CENTER, quality: 80) {
+                src
+              }
+            }
+          }
         }
         docaBannerTitle
         
@@ -215,6 +222,9 @@ export const query = graphql`
           image {
             altText
             mediaItemUrl
+            localFile{
+              publicURL
+            }
           }
           title
         }
@@ -231,6 +241,13 @@ export const query = graphql`
         docaFdImage {
             altText
             mediaItemUrl
+            localFile {
+              childImageSharp {
+                resize (width: 526, height: 351, cropFocus: CENTER, quality: 80) {
+                  src
+                }
+              }
+            }
           }
         docaWevaContent
         docaWevaButtonText
@@ -243,6 +260,13 @@ export const query = graphql`
         docaDcaImage {
             altText
             mediaItemUrl
+            localFile {
+              childImageSharp {
+                resize (width: 565, height: 375, cropFocus: CENTER, quality: 80) {
+                  src
+                }
+              }
+            }
           }        
         docaHtTitle
         docaHtDescription
@@ -250,6 +274,13 @@ export const query = graphql`
         docaHtImage {
           altText
           mediaItemUrl
+          localFile {
+            childImageSharp {
+              resize (width: 522, height: 462, cropFocus: CENTER, quality: 80) {
+                src
+              }
+            }
+          }
         }
                
         docaWymnuTitle
@@ -281,6 +312,13 @@ export const query = graphql`
               image {
                 altText
                 mediaItemUrl
+                localFile {
+                  childImageSharp {
+                    resize (width: 412, height: 280, cropFocus: CENTER, quality: 80) {
+                      src
+                    }
+                  }
+                }
               }
             }
           }
@@ -303,6 +341,13 @@ export const query = graphql`
           node {
             altText
             mediaItemUrl
+            localFile {
+              childImageSharp {
+                resize (width: 416, height: 450, cropFocus: CENTER, quality: 80) {
+                  src
+                }
+              }
+            }
           }
         }
         content

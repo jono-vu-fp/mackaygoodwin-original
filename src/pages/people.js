@@ -150,6 +150,13 @@ export const query = graphql`
         bannerImage {
           altText
           mediaItemUrl
+          localFile {
+            childImageSharp {
+              resize (width: 526, height: 352, cropFocus: CENTER, quality: 80) {
+                src
+              }
+            }
+          }
         }
         bannerTitle
         careerButtonLink
@@ -225,12 +232,26 @@ export const query = graphql`
           staffImage2{
             altText
             mediaItemUrl
+            localFile {
+              childImageSharp {
+                resize (width: 416, height: 450, cropFocus: CENTER, quality: 80) {
+                  src
+                }
+              }
+            }
           }
         }
         featuredImage {
           node {
             altText
             mediaItemUrl
+            localFile {
+              childImageSharp {
+                resize (width: 416, height: 450, cropFocus: CENTER, quality: 80) {
+                  src
+                }
+              }
+            }
           }
         }
         content

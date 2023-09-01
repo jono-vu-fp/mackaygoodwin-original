@@ -105,7 +105,7 @@ const Careers = ({ data }) => {
       />
 
 
-       <div className="weva_section ino_mid_text">
+       <div className="weva_section ino_mid_text cr_video">
         <div className="container">
 
           <div className="imt_text">
@@ -113,7 +113,7 @@ const Careers = ({ data }) => {
           </div>
 
           <div className="imt_img">
-            <img onClick={()=>setVideoUrl(data.wpPage.careers.toiVideo1?.mediaItemUrl)} src={data.wpPage.careers.toiVideoImage1?.mediaItemUrl} alt={data.wpPage.careers.toiVideoImage1?.altText} />
+            <img onClick={()=>setVideoUrl(data.wpPage.careers.toiVideo1?.mediaItemUrl)} src={data.wpPage.careers.toiVideoImage1?.localFile?.childImageSharp?.resize?.src} alt={data.wpPage.careers.toiVideoImage1?.altText} />
           </div>
             
         </div>
@@ -180,7 +180,7 @@ const Careers = ({ data }) => {
                  <div className="image-container hs_img">                     
                     <Carousel responsive={responsive}>
                         { data.wpPage.careers.careImage.map((d) => {
-                          return <div><img src={d.image.mediaItemUrl} /></div>
+                          return <div><img src={d.image.localFile?.childImageSharp?.resize?.src} /></div>
                         })}
                     </Carousel>            
                   </div> 
@@ -221,12 +221,26 @@ export const query = graphql`
         careBannerImage {
           altText
           mediaItemUrl
+          localFile {
+            childImageSharp {
+              resize (width: 526, height: 351, cropFocus: CENTER, quality: 80) {
+                src
+              }
+            }
+          }
         }
         
         careImage{
           image{
             altText
             mediaItemUrl
+            localFile {
+              childImageSharp {
+                resize (width: 400, height: 306, cropFocus: CENTER, quality: 80) {
+                  src
+                }
+              }
+            }
           } 
         }
         careSliderTitle
@@ -241,6 +255,13 @@ export const query = graphql`
         toiVideoImage1 {
           altText
           mediaItemUrl
+          localFile {
+            childImageSharp {
+              resize (width: 648, height: 365, cropFocus: CENTER, quality: 80) {
+                src
+              }
+            }
+          }
         }
       }
     }

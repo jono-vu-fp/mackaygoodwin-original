@@ -21,7 +21,7 @@ const DealHub = ({data}) => {
        </div>
        <div class="col-sm-12 col-md-12 col-lg-7 col-xl-7">
           <div class="banner-image">
-             <img src={data.wpPage.aboutPageOptions.banner.mediaItemUrl} alt="data.wpPage.aboutPageOptions.banner.altText" /> 
+             <img src={data.wpPage.aboutPageOptions.banner.localFile?.childImageSharp?.resize?.src} alt="data.wpPage.aboutPageOptions.banner.altText" /> 
           </div>
           <div class="col-12 d-block d-sm-block d-md-block d-lg-none banner-mdesc">
              <div class="banner-desc"><div dangerouslySetInnerHTML={{__html: data.wpPage.aboutPageOptions.description }} /> 
@@ -63,6 +63,13 @@ export const query = graphql`
         banner {
           mediaItemUrl
           altText
+          localFile {
+            childImageSharp {
+              resize (width: 746, height: 497, cropFocus: CENTER, quality: 80) {
+                src
+              }
+            }
+          }
         }
         title
       }
