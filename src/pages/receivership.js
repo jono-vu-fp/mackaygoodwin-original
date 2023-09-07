@@ -64,7 +64,7 @@ const ConsultBusiness = ({ data }) => {
                   return (
                     <div className="col-md-4 col-lg-4">
                       <div className="lb_img">
-                          <img src={d.image?.mediaItemUrl} alt={d.image?.altText} />
+                          <img src={d.image?.localFile?.publicURL} alt={d.image?.altText} />
                       </div>
                       <div className="lb_txt">
                         <p className="recovery-partner-title ">{d.title?.trim()}</p>
@@ -86,7 +86,7 @@ const ConsultBusiness = ({ data }) => {
        <div className="wva_section key_expert">
         <div className="container">
           <div className="wva_left">
-            <img src={data.wpPage.receivership.receFdImage?.mediaItemUrl} alt={data.wpPage.receivership.receFdImage?.altText} />
+            <img src={data.wpPage.receivership.receFdImage?.localFile?.childImageSharp?.resize?.src} alt={data.wpPage.receivership.receFdImage?.altText} />
           </div>
           <div className="wva_right">
             <div dangerouslySetInnerHTML={{ __html: data.wpPage.receivership.receFdContent }}></div>
@@ -108,7 +108,7 @@ const ConsultBusiness = ({ data }) => {
         <div className="container"> 
         <div className="row">    
          <div class="col-md-5 col-lg-5">
-            <img src={data.wpPage.receivership.receDcaImage.mediaItemUrl} alt={data.wpPage.receivership.receDcaImage.altText} />
+            <img src={data.wpPage.receivership.receDcaImage.localFile?.childImageSharp?.resize?.src} alt={data.wpPage.receivership.receDcaImage.altText} />
           </div>       
           <div class="col-md-7 col-lg-7">
               <div dangerouslySetInnerHTML={{ __html: data.wpPage.receivership.receDcaDescription }}></div>
@@ -164,6 +164,13 @@ export const query = graphql`
         receBannerImage {
           altText
           mediaItemUrl
+          localFile {
+            childImageSharp {
+              resize (width: 526, height: 351, cropFocus: CENTER, quality: 80) {
+                src
+              }
+            }
+          }
         }
         receBannerTitle
         receWymnuDescriptionWhyliquid {
@@ -171,6 +178,9 @@ export const query = graphql`
           image {
             altText
             mediaItemUrl
+            localFile{
+              publicURL
+            }
           }
           title
         }
@@ -185,6 +195,13 @@ export const query = graphql`
         receFdImage {
             altText
             mediaItemUrl
+            localFile {
+              childImageSharp {
+                resize (width: 526, height: 351, cropFocus: CENTER, quality: 80) {
+                  src
+                }
+              }
+            }
           }
         receHt1Description
         receWevaContent
@@ -196,6 +213,13 @@ export const query = graphql`
         receDcaImage {
             altText
             mediaItemUrl
+            localFile {
+              childImageSharp {
+                resize (width: 565, height: 375, cropFocus: CENTER, quality: 80) {
+                  src
+                }
+              }
+            }
           }                
                        
         receWymnuTitle
@@ -227,6 +251,13 @@ export const query = graphql`
               image {
                 altText
                 mediaItemUrl
+                localFile {
+                  childImageSharp {
+                    resize (width: 422, height: 280, cropFocus: CENTER, quality: 80) {
+                      src
+                    }
+                  }
+                }
               }
             }
           }
@@ -250,6 +281,13 @@ export const query = graphql`
           node {
             altText
             mediaItemUrl
+            localFile {
+              childImageSharp {
+                resize (width: 416, height: 450, cropFocus: CENTER, quality: 80) {
+                  src
+                }
+              }
+            }
           }
         }
         content

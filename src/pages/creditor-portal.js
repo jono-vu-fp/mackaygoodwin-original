@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import GetInTouch from "../components/get-in-touch"
+import GetInTouch from "../components/get-in-touchlanding";
 
 const CreditorPortal = ({data}) => {
   let appointData = [];
@@ -52,7 +52,7 @@ const CreditorPortal = ({data}) => {
        </div>
        <div class="col-sm-12 col-md-12 col-lg-7 col-xl-7">
           <div class="banner-image">
-             <img src={data.wpPage.aboutPageOptions.banner.mediaItemUrl} alt="data.wpPage.aboutPageOptions.banner.altText" /> 
+             <img src={data.wpPage.aboutPageOptions.banner.localFile?.childImageSharp?.resize?.src} alt="data.wpPage.aboutPageOptions.banner.altText" /> 
           </div>
           <div class="col-12 d-block d-sm-block d-md-block d-lg-none banner-mdesc">
              <div class="banner-desc"><div dangerouslySetInnerHTML={{__html: data.wpPage.aboutPageOptions.description }} /> 
@@ -107,10 +107,13 @@ const CreditorPortal = ({data}) => {
         </div>
      </div>
   </section>
+
+  <div className="home">
   <GetInTouch
      title={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchTitle}
      text={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchDescription}
    />
+   </div>
   </Layout>)
 }
 export const query = graphql`
@@ -125,6 +128,13 @@ export const query = graphql`
         banner {
           mediaItemUrl
           altText
+          localFile {
+            childImageSharp {
+              resize (width: 746, height: 497, cropFocus: CENTER, quality: 80) {
+                src
+              }
+            }
+          }
         }
         title
       }

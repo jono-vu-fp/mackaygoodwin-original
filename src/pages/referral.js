@@ -176,7 +176,7 @@ const MgWay = ({ data }) => {
                 return (
                   <div className="col-md-4 col-lg-4">
                     <div className="lb_img">
-                        <img src={d.image?.mediaItemUrl} alt={d.image?.altText} />
+                        <img src={d.image?.localFile?.publicURL} alt={d.image?.altText} />
                     </div>
                     <div className="lb_txt">
                       <p className="recovery-partner-title ">{d.title?.trim()}</p>
@@ -194,7 +194,7 @@ const MgWay = ({ data }) => {
        <div class="container">    
        <div  className="row">    
         <div className="wva_left">
-              <img class="img-fluid" src={data.wpPage.ReferralPageOptions.refeOndemandImage.mediaItemUrl} alt="data.wpPage.ReferralPageOptions.refeOndemandImage.altText"/>          
+              <img class="img-fluid" src={data.wpPage.ReferralPageOptions.refeOndemandImage.localFile?.childImageSharp?.resize?.src} alt="data.wpPage.ReferralPageOptions.refeOndemandImage.altText"/>          
           </div>
           <div className="wva_right">
            <h3>{data.wpPage.ReferralPageOptions.refeOndemandTitle}</h3>
@@ -215,7 +215,7 @@ const MgWay = ({ data }) => {
           <div className="wva_left">
 
           <div className="wva_video">
-          <img onClick={()=>setVideoUrl(data.wpPage.ReferralPageOptions.refeAboutVideo?.mediaItemUrl)} src={data.wpPage.ReferralPageOptions.refeAboutVideoCover?.mediaItemUrl} alt={data.wpPage.ReferralPageOptions.refeAboutVideoCover?.altText} />
+          <img onClick={()=>setVideoUrl(data.wpPage.ReferralPageOptions.refeAboutVideo?.mediaItemUrl)} src={data.wpPage.ReferralPageOptions.refeAboutVideoCover?.localFile?.childImageSharp?.resize?.src} alt={data.wpPage.ReferralPageOptions.refeAboutVideoCover?.altText} />
           </div>      
            
           </div>
@@ -233,7 +233,7 @@ const MgWay = ({ data }) => {
         
             <ul>
               {data.wpPage.ReferralPageOptions.refeApproachQA.map((d, key) => {
-                return <li><div className="wcmg_img"><img src={d.icon.mediaItemUrl} alt="" /></div><h4>{d.question}</h4>
+                return <li><div className="wcmg_img"><img src={d.icon.localFile?.childImageSharp?.resize?.src} alt="" /></div><h4>{d.question}</h4>
                 <div dangerouslySetInnerHTML={{__html: d.answer}} />
                 </li>
               })} 
@@ -245,7 +245,7 @@ const MgWay = ({ data }) => {
          <section className="ht_section ht_bottom">
         <div className="container">
           <div className="ht_left">
-            <img className="img-fluid" src={data.wpPage.ReferralPageOptions.refeImage?.mediaItemUrl} alt={data.wpPage.ReferralPageOptions.refeImage?.altText} />
+            <img className="img-fluid" src={data.wpPage.ReferralPageOptions.refeImage?.localFile?.childImageSharp?.resize?.src} alt={data.wpPage.ReferralPageOptions.refeImage?.altText} />
           </div>
           <div className="ht_right">
             <h2>{data.wpPage.ReferralPageOptions.refeTitle}</h2>
@@ -267,7 +267,7 @@ const MgWay = ({ data }) => {
          <section className="health_check home_helthcheck refe_health">
           <div className="container">
             <div className="ht_right">
-              <img className="img-fluid" src={data.wpPage.ReferralPageOptions.refeHealthCheckImage?.mediaItemUrl} alt={data.wpPage.ReferralPageOptions.refeHealthCheckImage?.altText} />
+              <img className="img-fluid" src={data.wpPage.ReferralPageOptions.refeHealthCheckImage?.localFile?.childImageSharp?.resize?.src} alt={data.wpPage.ReferralPageOptions.refeHealthCheckImage?.altText} />
             </div>
 
             <div className="ht_left">
@@ -321,7 +321,7 @@ const MgWay = ({ data }) => {
                  <div className="image-container hs_img">                     
                     <Carousel responsive={responsive}>
                         { data.wpPage.ReferralPageOptions.refeMgImage.map((d) => {
-                          return <div><img src={d.image.mediaItemUrl} /></div>
+                          return <div><img src={d.image.localFile?.childImageSharp?.resize?.src} /></div>
                         })}
                     </Carousel>            
                   </div> 
@@ -371,6 +371,13 @@ export const query = graphql`
         refeAboutVideoCover {
           altText
           mediaItemUrl
+          localFile {
+            childImageSharp {
+              resize (width: 526, height: 353, cropFocus: CENTER, quality: 80) {
+                src
+              }
+            }
+          }
         }
         refeAboutTitle
         refeApproachQA {
@@ -380,6 +387,13 @@ export const query = graphql`
           icon {
             altText
             mediaItemUrl
+            localFile {
+              childImageSharp {
+                resize (width: 682, height: 465, cropFocus: CENTER, quality: 80) {
+                  src
+                }
+              }
+            }
           }
         }
         refeBooknowUrl
@@ -389,12 +403,26 @@ export const query = graphql`
         refeOndemandImage {
           altText
           mediaItemUrl
+          localFile {
+            childImageSharp {
+              resize (width: 526, height: 368, cropFocus: CENTER, quality: 80) {
+                src
+              }
+            }
+          }
         }
         refeMgTitle
         refeMgImage{
           image{
             altText
             mediaItemUrl
+            localFile {
+              childImageSharp {
+                resize (width: 400, height: 306, cropFocus: CENTER, quality: 80) {
+                  src
+                }
+              }
+            }
           } 
         }
 
@@ -403,22 +431,46 @@ export const query = graphql`
         refeBannerImage {
           altText
           mediaItemUrl
+          localFile {
+            childImageSharp {
+              resize (width: 526, height: 350, cropFocus: CENTER, quality: 80) {
+                src
+              }
+            }
+          }
         }
         refeTitle
         refeDescription
         refeImage {
           altText
           mediaItemUrl
+          localFile {
+            childImageSharp {
+              resize (width: 682, height: 465, cropFocus: CENTER, quality: 80) {
+                src
+              }
+            }
+          }
         }
         refeHealthCheckImage {
           altText
           mediaItemUrl
+          localFile {
+            childImageSharp {
+              resize (width: 522, height: 462, cropFocus: CENTER, quality: 80) {
+                src
+              }
+            }
+          }
         }
         midDescription {
           description
           image {
             altText 
             mediaItemUrl
+            localFile{
+              publicURL
+            }
           }
           title
         }

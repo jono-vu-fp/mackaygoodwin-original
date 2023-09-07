@@ -1,5 +1,5 @@
 import * as React from "react"
-
+import { Link } from "gatsby"
 const Accordian = (props) => {
   const isBrowser = typeof window !== "undefined"
   const [sheight,setHeight] = React.useState(isBrowser?window.scrollY:0);
@@ -35,6 +35,7 @@ const Accordian = (props) => {
               return <li>
               <h4>{d.title}</h4>
               <div dangerouslySetInnerHTML={{ __html: d.description }}></div>
+              {d.learnMoreUrl?<Link className="btn btn-primary" to={d.learnMoreUrl}>Learn More</Link>:''}
               </li>
             })}
         </ul>

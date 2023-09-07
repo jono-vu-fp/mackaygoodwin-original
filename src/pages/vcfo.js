@@ -43,7 +43,7 @@ const Vcfo = ({data}) => {
        </div>
        <div class="col-sm-12 col-md-12 col-lg-7 col-xl-7">
           <div class="banner-image">
-             <img src={data.wpPage?.vcfoPageOptions.banner.mediaItemUrl} alt={data.wpPage?.vcfoPageOptions.banner.altText} />
+             <img src={data.wpPage?.vcfoPageOptions.banner.localFile?.childImageSharp?.resize?.src} alt={data.wpPage?.vcfoPageOptions.banner.altText} />
           </div>
           <div class="col-12 d-block d-sm-block d-md-block d-lg-none banner-mdesc">
              <div class="banner-desc"><div dangerouslySetInnerHTML={{__html: data.wpPage.vcfoPageOptions.description }} /></div>
@@ -149,6 +149,13 @@ export const query = graphql`
         banner {
           mediaItemUrl
           altText
+          localFile {
+            childImageSharp {
+              resize (width: 526, height: 351, cropFocus: CENTER, quality: 80) {
+                src
+              }
+            }
+          }
         }
         title
         mainContent,
@@ -189,6 +196,13 @@ export const query = graphql`
           node {
             altText
             mediaItemUrl
+            localFile {
+              childImageSharp {
+                resize (width: 306, height: 204, cropFocus: CENTER, quality: 80) {
+                  src
+                }
+              }
+            }
           }
         }
         eventsOption {

@@ -24,7 +24,7 @@ const BusinessList = (props) => {
   return (
   <div className="col-md-6 my-3">
     <div className="bbbg padding-bottom-80 position-relative">
-      <img className="img-fluid" style={{objectFit: "cover", width: "100%"}} src={props.data.image?.mediaItemUrl} alt={props.data.image?.altText} />
+      <img className="img-fluid" style={{objectFit: "cover", width: "100%"}} src={props.data.image?.localFile?.childImageSharp?.resize?.src} alt={props.data.image?.altText} />
       <h4 className="px-4 pt-5">{props.data.title}</h4>
       <div className="pt-4 px-4 col-10" style={{minHeight: "100px"}} dangerouslySetInnerHTML={{__html:props.data.description}}></div>
       <Link className="bt-big ps-4 pe-4 px-4 position-absolute downloadBtn" to={"#"} onClick={(e) => {sendemail(e, props.data.buttonUrl)}}>{props.data.buttonLabel}</Link>

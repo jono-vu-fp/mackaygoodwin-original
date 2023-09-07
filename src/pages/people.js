@@ -86,10 +86,17 @@ const MgWay = ({ data }) => {
   data.wpPage.mgWayPageOptions.approachQA.map((d) => {
     return whyMG.push({ title: d.question, description: d.answer });
   })
-  let businessData = [];
-  data.allWpOurpeople.nodes.map((d) => {
-    return businessData.push({ title: d.title, slug:d.slug, subtitle: d.backInBusiness.designation, text: d.backInBusiness.location, certification: d.backInBusiness.certification, content: d.content, linkedin: d.backInBusiness.linkedin, email: d.backInBusiness.email, phone: d.backInBusiness.phoneNumber, img: d.featuredImage?.node, altimg: d.backInBusiness?.staffImage2 });
-  })
+  const [businessData, setbusinessData] = React.useState([]);
+  React.useEffect(()=>{
+    let businessData = [];
+    data.allWpOurpeople.nodes.map((d) => {
+      return businessData.push({ title: d.title, slug:d.slug, subtitle: d.backInBusiness.designation, text: d.backInBusiness.location, certification: d.backInBusiness.certification, content: d.content, linkedin: d.backInBusiness.linkedin, email: d.backInBusiness.email, phone: d.backInBusiness.phoneNumber, img: d.featuredImage?.node, altimg: d.backInBusiness?.staffImage2 });
+    })
+    setbusinessData(businessData);
+    return () => {
+
+    };
+  },[]);
   const breadCrumbs = [
     { link: "/", title: "Home" },
     { link: "/mg-way/", title: "The MG Way" },
@@ -150,6 +157,13 @@ export const query = graphql`
         bannerImage {
           altText
           mediaItemUrl
+          localFile {
+            childImageSharp {
+              resize (width: 526, height: 352, cropFocus: CENTER, quality: 80) {
+                src
+              }
+            }
+          }
         }
         bannerTitle
         careerButtonLink
@@ -225,12 +239,26 @@ export const query = graphql`
           staffImage2{
             altText
             mediaItemUrl
+            localFile {
+              childImageSharp {
+                resize (width: 416, height: 450, cropFocus: CENTER, quality: 80) {
+                  src
+                }
+              }
+            }
           }
         }
         featuredImage {
           node {
             altText
             mediaItemUrl
+            localFile {
+              childImageSharp {
+                resize (width: 416, height: 450, cropFocus: CENTER, quality: 80) {
+                  src
+                }
+              }
+            }
           }
         }
         content

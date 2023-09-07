@@ -26,12 +26,12 @@ const settings = {
 };
 
 const Container = (props) => (
-	<section id="testimonials">
+	<section id="testimonials" class="bib_section">
 		<div className="container">
 			<div className="row">
 				<div className="col">
 					{props.title?<h2>{props.title}</h2>:''}
-					{typeof props.subtitle !== "undefined" && props.subtitle !== "" ? <p className="subtitle">{props.subtitle}</p> : ""}
+					{/*{typeof props.subtitle !== "undefined" && props.subtitle !== "" ? <p className="subtitle">{props.subtitle}</p> : ""}*/}
 				</div>
 			</div>
 			<div className="row">

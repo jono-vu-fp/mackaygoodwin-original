@@ -10,14 +10,14 @@ import CurveLeft from "../components/curve-left"
 import Services from "../components/services"
 import Accordian from "../components/accordian/accordian"
 import FullText from "../components/full-text"
-import OurPeople from "../components/our-people-liquid/our-people2"
+import OurPeople from "../components/our-people-liquid/our-people4"
 import TestimonialMain from "../components/testimonial-main-liquid-1"
 import ReciveryPlan from "../components/recovery-plan"
 import Container from "../components/slider/container-small-business"
 import EbookForm from "../components/ebook-form"
 import { formEbookContext } from '../components/context';
 import GetInTouchPPForm from "../components/get-in-touch-bankruptcy-popup"
-
+import _ from 'lodash';
 import $ from "jquery"
 
 const ConsultBusiness = ({ data }) => {
@@ -26,22 +26,29 @@ const ConsultBusiness = ({ data }) => {
 
   let businessData = [];
   let count = 0;
-  data.allWpOurpeople.nodes.map((d,key) => {
-
-    if(d.backInBusiness.registeredLiquidators){
-
+  data.wpPage.smallbusinessrestructure.peoplessmr.map((d,key) => {
       console.log(count);
-
       count++;
-      
       return businessData.push({ title: d.title, subtitle: d.backInBusiness.designation, text: d.backInBusiness.location, certification: d.backInBusiness.certification, content: d.content, linkedin: d.backInBusiness.linkedin, email: d.backInBusiness.email, img: d.featuredImage?.node, designationType: d.backInBusiness.designationType, registeredLiquidators: d.backInBusiness.registeredLiquidators });
-
-
-
-    } else {
-      return '';
-    }
+   
   })
+
+  // let businessData = [];
+  // let suffledArray = _.shuffle(data.allWpOurpeople.nodes); let lidx=0;
+  // suffledArray.map((d,key) => {
+  //   if(d.backInBusiness.registeredLiquidators && lidx<2){
+  //     lidx++;
+  //     return businessData.push({ title: d.title, subtitle: d.backInBusiness.designation, text: d.backInBusiness.location, certification: d.backInBusiness.certification, content: d.content, linkedin: d.backInBusiness.linkedin, email: d.backInBusiness.email, img: d.featuredImage?.node, designationType: d.backInBusiness.designationType, registeredLiquidators: d.backInBusiness.registeredLiquidators, altimg:d.backInBusiness.staffImage2 });
+       
+  //   }
+  // });
+  // suffledArray.map((d,key) => {
+  //   if(d.backInBusiness.registeredLiquidators==null && lidx<6){
+  //     lidx++;
+  //     return businessData.push({ title: d.title, subtitle: d.backInBusiness.designation, text: d.backInBusiness.location, certification: d.backInBusiness.certification, content: d.content, linkedin: d.backInBusiness.linkedin, email: d.backInBusiness.email, img: d.featuredImage?.node, designationType: d.backInBusiness.designationType, registeredLiquidators: d.backInBusiness.registeredLiquidators, altimg:d.backInBusiness.staffImage2 });
+       
+  //   }
+  // });
 
   const breadCrumbs = [
     { link: "/", title: "Home" },
@@ -72,7 +79,7 @@ const ConsultBusiness = ({ data }) => {
                 return (
                   <div className="col-md-4 col-lg-4">
                     <div className="lb_img">
-                        <img src={d.image?.mediaItemUrl} alt={d.image?.altText} />
+                        <img src={d.image?.localFile?.publicURL} alt={d.image?.altText} />
                     </div>
                     <div className="lb_txt">
                       <p className="recovery-partner-title ">{d.title?.trim()}</p>
@@ -94,7 +101,7 @@ const ConsultBusiness = ({ data }) => {
       <div className="wva_section key_expert">
         <div className="container">
           <div className="wva_left">
-            <img src={data.wpPage.smallbusinessrestructure.smallFdImage?.mediaItemUrl} alt={data.wpPage.smallbusinessrestructure.smallFdImage?.altText} />
+            <img src={data.wpPage.smallbusinessrestructure.smallFdImage?.localFile?.childImageSharp?.resize?.src} alt={data.wpPage.smallbusinessrestructure.smallFdImage?.altText} />
           </div>
           <div className="wva_right">
             <div dangerouslySetInnerHTML={{ __html: data.wpPage.smallbusinessrestructure.smallFdContent }}></div>
@@ -116,11 +123,11 @@ const ConsultBusiness = ({ data }) => {
       </div>
       </div>
 
-      <div className="fd_section myexperience_section">
+      {/*<div className="fd_section myexperience_section">
         <div className="container"> 
         <div className="row">    
          <div class="col-md-5 col-lg-5">
-            <img src={data.wpPage.smallbusinessrestructure.smallDcaImage.mediaItemUrl} alt={data.wpPage.smallbusinessrestructure.smallDcaImage.altText} />
+            <img src={data.wpPage.smallbusinessrestructure.smallDcaImage.localFile?.childImageSharp?.resize?.src} alt={data.wpPage.smallbusinessrestructure.smallDcaImage.altText} />
           </div>       
           <div class="col-md-7 col-lg-7">
               <div dangerouslySetInnerHTML={{ __html: data.wpPage.smallbusinessrestructure.smallDcaDescription }}></div>
@@ -129,12 +136,12 @@ const ConsultBusiness = ({ data }) => {
          
         </div>
         </div>
-      </div>
+      </div>*/}
 
       <section className="health_check">
           <div className="container">
             <div className="ht_right">
-              <img className="img-fluid" src={data.wpPage.smallbusinessrestructure.smallHtImage?.mediaItemUrl} alt={data.wpPage.smallbusinessrestructure.smallHtImage?.altText} />
+              <img className="img-fluid" src={data.wpPage.smallbusinessrestructure.smallHtImage?.localFile?.childImageSharp?.resize?.src} alt={data.wpPage.smallbusinessrestructure.smallHtImage?.altText} />
             </div>
 
             <div className="ht_left">
@@ -176,12 +183,19 @@ const ConsultBusiness = ({ data }) => {
         title={''}
         text={''}
         data={businessData}
-        showAll={0}
+       showAll={0}
         liquidation={1}
       />
-      <Container
-        title={''}
-        subtitle={data.wpPage.smallbusinessrestructure.smBusinessDesc}
+      <div class="row">
+              <div class="col-lg-12 col-md-12 align-center">
+                <Link className="btn btn-primary no-marg" to="/people/">
+                  All People
+                </Link>
+              </div>
+            </div>
+      <Container 
+        title={data.wpPage.smallbusinessrestructure.smBusinessTitle}
+        subtitle={false}
         data={data.wpPage.smallbusinessrestructure.smBusinessTestimonial}
         slideColor={'#EBE9DE'}
       />
@@ -215,6 +229,13 @@ export const query = graphql`
         smallBannerImage {
           altText
           mediaItemUrl
+          localFile {
+            childImageSharp {
+              resize (width: 526, height: 351, cropFocus: CENTER, quality: 80) {
+                src
+              }
+            }
+          }
         }
         smallBannerTitle
         
@@ -223,6 +244,9 @@ export const query = graphql`
           image {
             altText
             mediaItemUrl
+            localFile{
+              publicURL
+            }
           }
           title
         }
@@ -236,9 +260,16 @@ export const query = graphql`
         smallFdContent
         smallDelvContent
         smallFdImage {
-            altText
-            mediaItemUrl
+          altText
+          mediaItemUrl
+          localFile {
+            childImageSharp {
+              resize (width: 526, height: 351, cropFocus: CENTER, quality: 80) {
+                src
+              }
+            }
           }
+        }
         smallWevaContent
         smallWevaButtonText
         smallWevaButtonLink
@@ -250,15 +281,29 @@ export const query = graphql`
         smallDca1VideoText
         smallVideo
         smallDcaImage {
-            altText
-            mediaItemUrl
-          }                
+          altText
+          mediaItemUrl
+          localFile {
+            childImageSharp {
+              resize (width: 565, height: 372, cropFocus: CENTER, quality: 80) {
+                src
+              }
+            }
+          }
+        }                
         smallHtTitle
         smallHtDescription
         smallHt1Description
         smallHtImage {
           altText
           mediaItemUrl
+          localFile {
+            childImageSharp {
+              resize (width: 522, height: 462, cropFocus: CENTER, quality: 80) {
+                src
+              }
+            }
+          }
         }
                
         smallWymnuTitle
@@ -272,10 +317,59 @@ export const query = graphql`
           smImage {
             altText
             mediaItemUrl
+            localFile {
+              childImageSharp {
+                resize (width: 412, height: 280, cropFocus: CENTER, quality: 80) {
+                  src
+                }
+              }
+            }
           }
           smLearnMoreUrl
           smName
         }
+        peoplessmr{
+          ... on WpOurpeople {
+            id
+            slug
+            title
+            backInBusiness{
+              designation
+              location
+              certification
+              linkedin
+              email
+              phoneNumber
+              designationType
+              registeredLiquidators
+              staffImage2{
+                altText
+                mediaItemUrl
+                localFile {
+                  childImageSharp {
+                    resize (width: 416, height: 450, cropFocus: CENTER, quality: 80) {
+                      src
+                    }
+                  }
+                }
+              }
+            }
+            content
+            featuredImage {
+              node {
+                altText
+                mediaItemUrl
+                localFile {
+                  childImageSharp {
+                    resize (width: 416, height: 450, cropFocus: CENTER, quality: 80) {
+                      src
+                    }
+                  }
+                }
+              }
+            }
+          }
+        } 
       }
     }
     allWp {
@@ -320,12 +414,31 @@ export const query = graphql`
           designationType
           linkedin
           email
+          phoneNumber
           registeredLiquidators
+          staffImage2{
+            altText
+            mediaItemUrl
+            localFile {
+              childImageSharp {
+                resize (width: 416, height: 450, cropFocus: CENTER, quality: 80) {
+                  src
+                }
+              }
+            }
+          }
         }
         featuredImage {
           node {
             altText
             mediaItemUrl
+            localFile {
+              childImageSharp {
+                resize (width: 416, height: 450, cropFocus: CENTER, quality: 80) {
+                  src
+                }
+              }
+            }
           }
         }
         content

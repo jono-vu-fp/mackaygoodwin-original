@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import Mackey from "../images/logo.svg";
 import MackeySmall from "../images/small-logo.svg";
 import $ from "jquery";
+import GetInTouchGlobalForm from "../components/get-in-touch-form-new-popup";
 
 const Header = () => {
   const inputEl = useRef(null);
@@ -702,7 +703,11 @@ const Header = () => {
       </div>
     </div>
     <div id="white" ref={inputEl1}></div>
-    
+    <GetInTouchGlobalForm
+          title={''}
+          text={''}
+          image={''}
+        />
   </header>
 }
 

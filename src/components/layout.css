@@ -7711,7 +7711,7 @@ section.dpn_optoins {
 .restructure .health_check .ht_right{
         width: 43%;
 }
-.restructure .health_check {
+.health_check-nom {
     margin-top: 0;
 }
 .small_business .weva_section.doc3 p {
@@ -7950,21 +7950,20 @@ section.dpn_optoins {
     padding: 0 15px;
 }
 .sols_item {
-    background-color: #eae7db;
-    min-height: 406px;
+    background-color: #eae7db; 
     display: flex;
     align-items: center;
     justify-content: flex-start;
     flex-flow: column;
     padding: 34px;
-    min-height: 406px;
+    min-height: 360px;
 }
 .sols_grid:nth-child(2) .sols_item{background-color: #dde1e3;}
 .sols_grid:nth-child(3) .sols_item{background-color: #d0ff80;}
 .sols_item h4 {
     color: #000000;
     font-size: 30px;
-    margin: 16px 0 27px 0;
+    margin: 0px 0 27px 0;
     font-family: 'reckless_neue_trialregular';
     min-height: 72px;
 }
@@ -7973,6 +7972,7 @@ section.dpn_optoins {
     color: #000000;
     font-size: 18px;
     line-height: 1.55;
+        min-height: 115px;
     /*font-size: 22px;
     line-height: 1.2;
     font-family: 'shne_testleicht';*/
@@ -8158,10 +8158,10 @@ section.incsteps_sec {
     padding: 0 25px;
 }
 
-.lqssols_sec .sols_item{
+/*.lqssols_sec .sols_item{
     padding: 50px 34px 0;
     min-height: 425px;
-}
+}*/
 .mid_btn {
     text-align: center;
     padding-top: 20px;
@@ -8238,7 +8238,7 @@ section.incsteps_sec {
 
 
 
-.res_sols_sec .sols_item h4{ min-height:auto; }
+ 
 
 .cinlpageidentifix .wva_left h3{ line-height:normal;color: #1c5e48;     font-size: 40px; margin-bottom:18px; }
 .cinlpageidentifix .wva_right{
@@ -8851,26 +8851,34 @@ body .mgacademy_banner.topleft_banner .banner-image::before {
     text-align: center;
 }
 .grey_faq #why-mg .accordion-item{
-        border: 2px solid #1c5e48 !important;
+     border: 2px solid #1c5e48 !important;
+    background: #1c5e48;
 }
-.grey_faq #why-mg .accordion-item .accordion-button{ color:#000000; }
+.grey_faq #why-mg .accordion-item .accordion-button{
+ color:#fff;
+ }
+
 .grey_faq #why-mg .accordion-item.active .accordion-button{
-        color: #dbfd90;
+        color: #1c5e48;
 }
+
 .grey_faq #why-mg .accordion-item.active .accordion-body,
-.grey_faq #why-mg .accordion-item.active .accordion-body *{color: #fff;}
+.grey_faq #why-mg .accordion-item.active .accordion-body *{color: #1c5e48;}
 .grey_faq #why-mg .accordion-item.active{
-    background-color: #1c5e48;
-    border: 2px solid #1c5e48 !important;
+    background-color: #ebe9de;
+    border: 2px solid #ebe9de !important;
 }
 .grey_faq #why-mg .accordion-button:before{
-      -webkit-filter: brightness(2) invert(0.7);
-  filter: brightness(2) invert(0.7);
+     
 }
+.grey_faq .ins_desc, .grey_faq .ins_desc * { text-align: left; color:#000; }
 .grey_faq #why-mg .accordion-item.active .accordion-button:before{
      background-image:url(../images/minus_2.png); 
-  filter:none;
+   -webkit-filter: brightness(2) invert(1);
+  filter: brightness(2) invert(1);
 }
+.insolvency #why-mg h2{ text-align:left; }
+
 .liqtestmon .react-multiple-carousel__arrow {
     display: none !important;
 }
@@ -9019,9 +9027,7 @@ body .mgacademy_banner.topleft_banner .banner-image::before {
     padding-top: 90px;
 
 }
-.clm-page .restructurenews-articles{
-    padding-bottom: 30px !important;
-}
+ 
 .clm-page .wva_section.about_section.dpn-sec1 .wva_right{
         padding-top: 118px!important;
         padding-bottom: 33px!important;
@@ -9134,6 +9140,52 @@ body .mgacademy_banner.topleft_banner .banner-image::before {
 .small_business #banner-section h1{ color:#000; }
 button.btn,
 button.btn.btn-primary{ margin-bottom:0; }
+
+.smallrestructure_land .weva_section.doc3 .btn{
+ margin-top: 38px;
+}
+.brige_color .accordion-item.active {
+    background-color: #ebe9dd !important;
+    border: 2px solid #ebe9dd !important;
+}
+.brige_color .accordion-item .accordion-button{ color: #fff;}
+.step_grid {
+    width: 33.33%;
+    float: left; 
+    padding: 0 9.5px 19px;
+}
+.step_item p {
+    color: #000000;
+    font-family: 'shne_testleicht';
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+}
+ 
+.step_row:after {
+    content: "";
+    clear: both;
+    display: table;
+    overflow: hidden;
+}
+ 
+.step_item{
+    background: #dde1e3;
+}
+.step_item img {
+    width: 100%;
+}
+.step_gcont{
+    padding: 52px 42px;
+}
+.step_item h3 {
+    font-size: 30px;
+    color: #000000;
+    line-height: normal;
+    margin-bottom: 22px;
+}
+
+
 /****** BreakPoints *******/
 /****** Responsive Start *******/
 @media screen and (min-width:1400px){
@@ -10414,12 +10466,10 @@ button.btn.btn-primary{ margin-bottom:0; }
     .spek_item{
         padding: 0 29px;
     }
-    .res_sols_sec .sols_item h4{
+    /*.res_sols_sec .sols_item h4{
             font-size: 27px;
-    }
-   .res_sols_sec .sols_item p{
-            font-size: 20px;
-    }
+    }*/
+    
     .midheading h2{
             margin-bottom: 60px;
     }
@@ -12384,10 +12434,10 @@ button.btn.btn-primary{ margin-bottom:0; }
     /*.sols_item p{
             font-size: 20px;
     }*/
-    .lqssols_sec .sols_item {
+    /*.lqssols_sec .sols_item {
         padding: 40px 15px 0;
     min-height: 400px;
-    }
+    }*/
     .liquidation_land .ols_section {
         margin-bottom: 45px;
     }
@@ -12421,13 +12471,14 @@ button.btn.btn-primary{ margin-bottom:0; }
     font-size: 20px;
     }
     .spek_grid {    width: 33.33%;}
-    .res_sols_sec .sols_item p br {
+    .sols_item p br {
         display: none;
     }
-    .res_sols_sec .sols_item h4 {
+    /*.res_sols_sec .sols_item h4 {
         font-size: 22px;
-    }
-    .res_sols_sec .sols_item{
+    }*/
+    .res_sols_sec .sols_item,
+    .sols_item{
         padding: 34px 15px;
     }
     .res_sols_sec .sols_item p {
@@ -12505,9 +12556,9 @@ button.btn.btn-primary{ margin-bottom:0; }
         height: 155%;
     }
     .restructure_land h2.banner-subheading{ line-height:1.4; }
-    .lqssols_sec .sols_item h4{
+    /*.lqssols_sec .sols_item h4{
             margin-bottom: 2px;
-    }
+    }*/
     .megamenu .dropdown-menu{
             padding: 30px 13px 25px;
     min-height: 330px;
@@ -12633,6 +12684,10 @@ button.btn.btn-primary{ margin-bottom:0; }
     .liqtestmon .ctestitem p{
         font-size: 17px;
     }
+    .sols_item{
+            min-height: 335px;
+    }
+
 
 }
 @media screen and (max-width:1100px){
@@ -14356,13 +14411,13 @@ button.btn.btn-primary{ margin-bottom:0; }
     .lqssols_sec .sols_item img {
     height: 55px;
     }
-    .lqssols_sec .sols_item {
+    /*.lqssols_sec .sols_item {
     padding: 36px 15px 0;
     min-height: 340px;
     }
     .lqssols_sec .sols_item p br {
         display: none;
-    }
+    }*/
     
     .sols_item h4 {
     font-size: 22px;
@@ -14491,9 +14546,9 @@ button.btn.btn-primary{ margin-bottom:0; }
     .restructure_land .banner-heading{
             margin: 0 0 8px 0 !important;
     } 
-    .lqssols_sec .sols_item h4 {
+    /*.lqssols_sec .sols_item h4 {
         margin-bottom: 12px;
-    }
+    }*/
 
 
     #mobileNav.scrolled ul.top-belt a.nav-link {
@@ -15394,10 +15449,10 @@ button.btn.btn-primary{ margin-bottom:0; }
     .smallpageidentifix .wva_left h3, .lun_sec h2, .grid_4_sec h2{
             font-size: 30px;
     }
-   .lqssols_sec .sols_item a.btn {    margin: 14px 0 0 0;}
+   /*.lqssols_sec .sols_item a.btn {    margin: 14px 0 0 0;}
    .lqssols_sec .sols_item{
     min-height: 350px;
-   }
+   }*/
 
    #mobileNav.scrolled ul.top-belt a.nav-link:hover{
     background-color: #dbfd90; 
@@ -15486,7 +15541,24 @@ button.btn.btn-primary{ margin-bottom:0; }
         font-size: 16px;
     }
 
+    .sols_grid {
+    width: 100%;
+    float: none;
+     
+    margin: 0 auto 35px;
+    max-width: 400px;
+    }
+    .res_sols_sec .sols_item p{
+        font-size: 16px;
+    }
+    .sols_item p{
+            min-height: auto;
+    }
+    .sols_item {
+    min-height: auto;
+    }
 
+    .sols_item a.btn, .sols_item button.btn{ opacity:1; }
 }
 @media screen and (max-width:667px){
     .ol_list h2 {
@@ -16027,10 +16099,10 @@ button.btn.btn-primary{ margin-bottom:0; }
     .sols_grid{
         width: 100%;    display: block;
     }       
-    .lqssols_sec .sols_item {
+    /*.lqssols_sec .sols_item {
     padding: 36px 25px 25px;
     min-height: auto;
-    }
+    }*/
     .steps_nav li,.dpn-ban-sec .steps_nav li{
             width: 100%;
     }    

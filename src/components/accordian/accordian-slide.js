@@ -11,7 +11,7 @@ const AccordianSlide = (props) => {
       $(this_ele).closest('.accordion-item').removeClass('active');
     } else {
       console.log(333);
-      $('.accordion-item').removeClass('active');
+      $('#accordionExample .accordion-item').removeClass('active');
       $(this_ele).closest('.accordion-item').addClass('active');
     }
   }

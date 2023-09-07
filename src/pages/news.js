@@ -27,6 +27,12 @@ const NewsPage = ({ data }) => {
   const checkVideo = () =>{
     setForm(true);
   }
+  let businessData2 = [];
+  data.allWpArticle.nodes.map((d) => {
+    if(![7590,6213,1238,785,810,1235,1247].includes(d.databaseId)){
+      return businessData2.push({ title: d.title, excerpt: d.excerpt, slug: d.slug, featuredImage: d.featuredImage });
+    }
+  })
   return (<div className="service insights">
     <Layout>
       <Seo title={data.wpPage.metaFields?.metaTitle} description={data.wpPage.metaFields?.metaDescription} />
@@ -40,14 +46,14 @@ const NewsPage = ({ data }) => {
       />
       <News
         title={''}
-        data={data.allWpArticle.nodes}
+        data={businessData2}
         btn={false}
       />
 
        <section className="ht_section ht_bottom">
         <div className="container">
           <div className="ht_left">
-            <img className="img-fluid" src={data.wpPage.news.newsImage?.mediaItemUrl} alt={data.wpPage.news.newsImage?.altText} />
+            <img className="img-fluid" src={data.wpPage.news.newsImage?.localFile?.childImageSharp?.resize?.src} alt={data.wpPage.news.newsImage?.altText} />
           </div>
           <div className="ht_right">
             <h2>{data.wpPage.news.newsTitle}</h2>
@@ -103,6 +109,13 @@ export const query = graphql`
         image {
           altText
           mediaItemUrl
+          localFile {
+            childImageSharp {
+              resize (width: 526, height: 351, cropFocus: CENTER, quality: 80) {
+                src
+              }
+            }
+          }
         }
         title
         newsTitle
@@ -110,6 +123,13 @@ export const query = graphql`
         newsImage {
           altText
           mediaItemUrl
+          localFile {
+            childImageSharp {
+              resize (width: 526, height: 351, cropFocus: CENTER, quality: 80) {
+                src
+              }
+            }
+          }
         }
       }
       metaFields {
@@ -135,6 +155,7 @@ export const query = graphql`
     }
     allWpArticle(sort: {order: DESC, fields: date}) {
       nodes {
+        databaseId
         title
         excerpt
         content
@@ -142,6 +163,13 @@ export const query = graphql`
           node {
             altText
             mediaItemUrl
+            localFile {
+              childImageSharp {
+                resize (width: 416, height: 450, cropFocus: CENTER, quality: 80) {
+                  src
+                }
+              }
+            }
           }
         }
         slug

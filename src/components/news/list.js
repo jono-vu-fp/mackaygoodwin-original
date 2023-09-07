@@ -75,7 +75,7 @@ const NewsList = (props) => {
         {filterList.map((d, index) => {
           return <div className="col-lg-4 col-md-12  mt-4">
             <div className="listbg">
-              <img className="img-fluid" style={{ objectFit: "cover" }} src={d.featuredImage?.node?.mediaItemUrl} alt={d.featuredImage?.node?.altText} />
+              <img className="img-fluid" style={{ objectFit: "cover" }} src={d.featuredImage?.node?.localFile?.childImageSharp?.resize?.src} alt={d.featuredImage?.node?.altText} />
               <h4 className="px-4" style={{ minHeight: "150px" }}>{d.title}</h4>
               <div className="pt-4 px-4 news-desc" dangerouslySetInnerHTML={{ __html: d.excerpt.replace("newsandarticle","insights") }}></div>
               <Link className="ps-4 pe-4 px-4" to={"/insights/" + d.slug + "/"}>Read More <i className="fa fa-chevron-right" aria-hidden="true"></i></Link>

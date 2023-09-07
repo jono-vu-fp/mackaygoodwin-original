@@ -7,7 +7,7 @@ import TopBanner from "../components/top-banner"
 import GetInTouch from "../components/get-in-touch3"
 import Accordian from "../components/accordian/accordian"
 import FullText from "../components/full-text3"
-import Container from "../components/slider/container-restructuring"
+import Container from "../components/slider/container-restructuring2"
 import CurveLeft from "../components/curve-left"
 import CurveRight2 from "../components/curve-right2"
 import HealthForm from "../components/health-form"
@@ -58,6 +58,7 @@ const Restructuring = ({ data }) => {
         breadCrumbs={breadCrumbs}
         sendUrl={data.wpPage.restructuring.sendUrl}
       />
+      
       <FullText
         text={data.wpPage.restructuring.pageTagline}
       />
@@ -78,8 +79,8 @@ const Restructuring = ({ data }) => {
 
       <Container
         title={''}
-        subtitle={data.wpPage.restructuring.businessDesc}
-        data={data.wpPage.restructuring.businessTestimonial}
+        subtitle={data.wpPage.restructuring.businessDesc11}
+        data={data.wpPage.restructuring.businessTestimonial11}
         slideColor={'#EBE9DE'}
       />
       {/*<ImageRightLayout
@@ -98,7 +99,7 @@ const Restructuring = ({ data }) => {
        <div className="vcfo_section ill_section resill_section dpn_part">
         <div className="container">
           <div className="vcfo_left">
-            <img src={data.wpPage.restructuring.dpn2Image.mediaItemUrl} alt={data.wpPage.restructuring.dpn2Image.altText} />
+            <img src={data.wpPage.restructuring.dpn2Image.localFile?.childImageSharp?.resize?.src} alt={data.wpPage.restructuring.dpn2Image.altText} />
           </div>
           <div className="vcfo_right">
             <h3>{data.wpPage.restructuring.dpn2Title}</h3>
@@ -131,10 +132,10 @@ const Restructuring = ({ data }) => {
         />
       </formHealthContext.Provider> */}
 
-       <section className="health_check home_helthcheck">
+       <section className="health_check home_helthcheck health_check-nom">
           <div className="container">
             <div className="ht_right">
-              <img className="img-fluid" src={data.wpPage.restructuring.healthCheckImage?.mediaItemUrl} alt={data.wpPage.restructuring.healthCheckImage?.altText} />
+              <img className="img-fluid" src={data.wpPage.restructuring.healthCheckImage?.localFile?.childImageSharp?.resize?.src} alt={data.wpPage.restructuring.healthCheckImage?.altText} />
             </div>
 
             <div className="ht_left">
@@ -184,7 +185,7 @@ const Restructuring = ({ data }) => {
        <section className="ht_section ht_bottom">
         <div className="container">
           <div className="ht_left">
-            <img className="img-fluid" src={data.wpPage.restructuring.resHtImage?.mediaItemUrl} alt={data.wpPage.restructuring.resHtImage?.altText} />
+            <img className="img-fluid" src={data.wpPage.restructuring.resHtImage?.localFile?.childImageSharp?.resize?.src} alt={data.wpPage.restructuring.resHtImage?.altText} />
           </div>
           <div className="ht_right">
             <h2>{data.wpPage.restructuring.resHtTitle}</h2>
@@ -247,13 +248,20 @@ export const query = graphql`
         bannerImage {
           altText
           mediaItemUrl
+          localFile {
+            childImageSharp {
+               resize (width: 655, height: 473, cropFocus: CENTER, quality: 100) {
+                src
+              }
+            }
+          }
         }
         bannerSubtitle
         bannerTitle
-        businessDesc
+        businessDesc11
         businessDirectorAdvisorLink
         businessDirectorButtonLink
-        businessTitle
+        businessTitle11
         videoButtonLabel
         video
         croDesc
@@ -274,6 +282,13 @@ export const query = graphql`
         resHtImage {
           altText
           mediaItemUrl
+          localFile {
+            childImageSharp {
+              resize (width: 682, height: 465, cropFocus: CENTER, quality: 80) {
+                src
+              }
+            }
+          }
         }
 
         dpn2Title
@@ -285,27 +300,48 @@ export const query = graphql`
         dpn2Image {
             altText
             mediaItemUrl
+            localFile {
+              childImageSharp {
+                resize (width: 744, height: 462, cropFocus: CENTER, quality: 80) {
+                  src
+                }
+              }
+            }
           }
 
         enquireLink
         healthCheckImage {
           altText
           mediaItemUrl
+          localFile {
+            childImageSharp {
+              resize (width: 522, height: 462, cropFocus: CENTER, quality: 80) {
+                src
+              }
+            }
+          }
         }
         healthCheckDesc
         healthCheckTitle
         buttonLabel
         buttonUrl
         sendUrl
-        businessTestimonial {
-          comment
-          designation
-          image {
+        businessTestimonial11 {
+          comment11
+          designation11
+          image11 {
             altText
             mediaItemUrl
+            localFile {
+              childImageSharp {
+                resize (width: 412, height: 280, cropFocus: CENTER, quality: 80) {
+                  src
+                }
+              }
+            }
           }
-          url
-          name
+          url11
+          name11
         }
         pageTagline
         queAndAnsNew {
@@ -333,6 +369,13 @@ export const query = graphql`
             gitImage{
               mediaItemUrl
               altText
+              localFile {
+                childImageSharp {
+                  resize (width: 500, height: 685, cropFocus: CENTER, quality: 80) {
+                    src
+                  }
+                }
+              }
             }
             speakExpertLink
             speakExpertTitle
