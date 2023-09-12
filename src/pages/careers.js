@@ -158,7 +158,7 @@ const Careers = ({ data }) => {
                             <div dangerouslySetInnerHTML={{ __html: d.content }}></div>
                           </div>
                           <div class="right_but">                                                         
-                              {d.url.includes('mailto:')?<a className="btn btn-primary" href={d.url}>Apply Now</a>:<Link className="btn btn-primary" to={d.url}>Apply Now</Link>}
+                              {d.url?.includes('mailto:')?<a className="btn btn-primary" href={d.url}>Apply Now</a>:<Link className="btn btn-primary" to={d.url}>Apply Now</Link>}
                           </div>
                     </div>
                     })}  
