@@ -26,7 +26,7 @@ const ConsultBusiness = ({ data }) => {
 
   let businessData = [];
   let count = 0;
-  data.wpPage.smallbusinessrestructure.peoplessmr.map((d,key) => {
+  data.wpPage.smallbusinessrestructure.peoplessmr1.map((d,key) => {
       console.log(count);
       count++;
       return businessData.push({ title: d.title, subtitle: d.backInBusiness.designation, text: d.backInBusiness.location, certification: d.backInBusiness.certification, content: d.content, linkedin: d.backInBusiness.linkedin, email: d.backInBusiness.email, img: d.featuredImage?.node, designationType: d.backInBusiness.designationType, registeredLiquidators: d.backInBusiness.registeredLiquidators });
@@ -327,6 +327,48 @@ export const query = graphql`
           }
           smLearnMoreUrl
           smName
+        }
+        peoplessmr1{
+          ... on WpOurpeople {
+            id
+            slug
+            title
+            backInBusiness{
+              designation
+              location
+              certification
+              linkedin
+              email
+              phoneNumber
+              designationType
+              registeredLiquidators
+              staffImage2{
+                altText
+                mediaItemUrl
+                localFile {
+                  childImageSharp {
+                    resize (width: 416, height: 450, cropFocus: CENTER, quality: 80) {
+                      src
+                    }
+                  }
+                }
+              }
+            }
+            content
+            featuredImage {
+              node {
+                altText
+                mediaItemUrl
+                localFile {
+                  childImageSharp {
+                    resize (width: 416, height: 450, cropFocus: CENTER, quality: 80) {
+                      src
+                    }
+                  }
+                }
+              }
+            }
+          }
         } 
       }
     }
