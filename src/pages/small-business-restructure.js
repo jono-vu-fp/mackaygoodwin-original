@@ -327,48 +327,6 @@ export const query = graphql`
           }
           smLearnMoreUrl
           smName
-        }
-        peoplessmr{
-          ... on WpOurpeople {
-            id
-            slug
-            title
-            backInBusiness{
-              designation
-              location
-              certification
-              linkedin
-              email
-              phoneNumber
-              designationType
-              registeredLiquidators
-              staffImage2{
-                altText
-                mediaItemUrl
-                localFile {
-                  childImageSharp {
-                    resize (width: 416, height: 450, cropFocus: CENTER, quality: 80) {
-                      src
-                    }
-                  }
-                }
-              }
-            }
-            content
-            featuredImage {
-              node {
-                altText
-                mediaItemUrl
-                localFile {
-                  childImageSharp {
-                    resize (width: 416, height: 450, cropFocus: CENTER, quality: 80) {
-                      src
-                    }
-                  }
-                }
-              }
-            }
-          }
         } 
       }
     }
