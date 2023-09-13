@@ -330,7 +330,6 @@ export const query = graphql`
         }
         peoplessmr{
           ... on WpOurpeople {
-            id
             slug
             title
             backInBusiness{
