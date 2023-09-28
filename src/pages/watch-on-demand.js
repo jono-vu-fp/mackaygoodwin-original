@@ -89,12 +89,12 @@ const Watchondemand = ({ data }) => {
         equalWidth={true}
       />
 
-      <section class="fullTxtSection middleFullText glpo_section cmin_sec"><div class="container"><div class="row">
+    {/*  <section class="fullTxtSection middleFullText glpo_section cmin_sec"><div class="container"><div class="row">
       <div class="col-xl-9 col-lg-11 col-md-11 col-sm-12 fullTxt">Coming Soon</div>
       <div class="col-xl-9 col-lg-11 col-md-11 col-sm-12 fullSubTxt">
       <p>Want to watch in person?</p>
        <Link className="btn btn-primary" to="https://mackaygoodwin.com.au/insights/your-window-into-the-ato/">Secure your seat</Link>
-      </div></div></div></section>
+      </div></div></div></section>*/}
 
        
 
