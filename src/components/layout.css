@@ -10003,6 +10003,16 @@ ul.profe_row li p {
     right: 0px;
     top: inherit;
 }
+.testimonial-mainnew .desc {
+    flex-flow: column;
+    display: block;
+}
+.testimonial-mainnew .desc h2 {
+    margin: 0;
+    font-size: 25px;
+}
+.testimonial-mainnew p:before{ content:'“'; display:inline-block; }
+.testimonial-mainnew p:after{ content:'”'; display:inline-block; }
 
 /****** BreakPoints *******/
 /****** Responsive Start *******/
@@ -16165,6 +16175,9 @@ ul.profe_row li p {
     .liqtestmon h3, .liqtestmon h2 {
     font-size: 32px;
     }
+    .testimonial-mainnew .desc {
+        padding-top: 0 !important;
+    }
 
 
 }
@@ -17126,7 +17139,10 @@ ul.profe_row li p {
     .liqtestmon h3{
          margin-bottom: 20px;
     }
-
+    .testimonial-main .desc{
+        font-size: 27px;
+    line-height: 37px;
+    }
 
 }
 @media screen and (max-width:667px){
@@ -17929,6 +17945,16 @@ ul.profe_row li p {
     .liqtestmon h3 {
         font-size: 26px;
     }
+
+    .testimonial-main .desc{
+        font-size: 22px;
+    line-height: 30px;
+    }
+    .testimonial-mainnew .desc h2{
+            font-size: 22px;
+    }
+
+
 }
 @media screen and (max-width:460px){
     .mg_slide_part .container li {

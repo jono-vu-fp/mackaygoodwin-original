@@ -112,7 +112,7 @@ const ConsultBusiness = ({ data }) => {
           </div>
         </div>
       </div>
-      {/*<section className={"testimonial-main testimonial-main1"}>
+      <section className={"testimonial-main testimonial-main1 testimonial-mainnew"}>
       <div className="container">
           <div className="row">
             <div className="col-sm-12 col-md-12 col-lg-6 p-5">
@@ -120,12 +120,13 @@ const ConsultBusiness = ({ data }) => {
             </div>
             <div className="col-sm-12 col-md-12 col-lg-6 p-5 desc">
               <p>{data.wpPage.liquidation.testimonialsLiquid[0].description}</p>
+               <h2>-{data.wpPage.liquidation.testimonialsLiquid[0].liqtestimonialsheading1}</h2>
             </div>
           </div>
       </div>
-    </section>*/}
+    </section>
 
-    <div class="liqtestmon">
+    {/*<div class="liqtestmon">
         <div class="container">
             <div class="row">
               
@@ -143,7 +144,7 @@ const ConsultBusiness = ({ data }) => {
               </div>
             </div>
         </div>
-      </div>
+      </div>*/}
 
       <div className="wbl_section">
         <div className="container">
@@ -391,7 +392,7 @@ export const query = graphql`
             mediaItemUrl
             localFile {
               childImageSharp {
-                resize (width: 600, height: 470,  cropFocus: CENTER, quality: 100) {
+                resize (width: 564, height: 376, cropFocus: CENTER, quality: 100) {
                   src
                 }
               }
