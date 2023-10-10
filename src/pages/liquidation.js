@@ -93,7 +93,7 @@ const ConsultBusiness = ({ data }) => {
           </div>
         </div>
       </section>
-      <div className="liq_blocks">
+      <div className="liq_blocks liq_blocks_new">
         <div className="container">
           <div className="row">
               {/* <h3>{data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.tagline}</h3> */}
@@ -112,7 +112,7 @@ const ConsultBusiness = ({ data }) => {
           </div>
         </div>
       </div>
-      <section className={"testimonial-main testimonial-main1"}>
+      {/*<section className={"testimonial-main testimonial-main1"}>
       <div className="container">
           <div className="row">
             <div className="col-sm-12 col-md-12 col-lg-6 p-5">
@@ -123,7 +123,28 @@ const ConsultBusiness = ({ data }) => {
             </div>
           </div>
       </div>
-    </section>
+    </section>*/}
+
+    <div class="liqtestmon">
+        <div class="container">
+            <div class="row">
+              
+              <div class="col-sm-12 col-md-12 col-lg-6">
+                
+                <h3>Client testimonial</h3>
+              <div> <p>{data.wpPage.liquidation.testimonialsLiquid[0].description}</p>
+                <h2>-{data.wpPage.liquidation.testimonialsLiquid[0].liqtestimonialsheading1}</h2>
+                 </div> 
+
+              </div>
+
+              <div class="col-sm-12 col-md-12 col-lg-6 colmn_2">
+               <img className="img-fluid" src={data.wpPage.liquidation.testimonialsLiquid[0].image?.localFile?.childImageSharp?.resize?.src} alt={data.wpPage.liquidation.testimonialsLiquid[0].image?.altText} />
+              </div>
+            </div>
+        </div>
+      </div>
+
       <div className="wbl_section">
         <div className="container">
           <div className="wbl_right">
@@ -215,8 +236,8 @@ const ConsultBusiness = ({ data }) => {
                   All People
                 </Link>
               </div>
-            </div>
-            <div className="bankruptcy service grey_faq">
+     </div>
+            <div className="bankruptcy service grey_faq pa-top">
                <Accordian
             title="Liquidation FAQs"
             showEnquireButton={false}
@@ -289,7 +310,7 @@ export const query = graphql`
           mediaItemUrl
           localFile {
             childImageSharp {
-              resize (width: 599, height: 377, cropFocus: CENTER, quality: 80) {
+              resize (width: 599, height: 377, cropFocus: CENTER, quality: 100) {
                 src
               }
             }
@@ -340,7 +361,7 @@ export const query = graphql`
           mediaItemUrl
           localFile {
             childImageSharp {
-              resize (width: 682, height: 465, cropFocus: CENTER, quality: 80) {
+              resize (width: 682, height: 465, cropFocus: CENTER, quality: 100) {
                 src
               }
             }
@@ -364,12 +385,13 @@ export const query = graphql`
         title
         testimonialsLiquid {
           description
+          liqtestimonialsheading1
           image {
             altText
             mediaItemUrl
             localFile {
               childImageSharp {
-                resize (width: 564, height: 376, cropFocus: CENTER, quality: 80) {
+                resize (width: 600, height: 470,  cropFocus: CENTER, quality: 100) {
                   src
                 }
               }
@@ -389,7 +411,7 @@ export const query = graphql`
                 mediaItemUrl
                 localFile {
                   childImageSharp {
-                    resize (width: 416, height: 450, cropFocus: CENTER, quality: 80) {
+                    resize (width: 416, height: 450, cropFocus: CENTER, quality: 100) {
                       src
                     }
                   }
@@ -433,7 +455,7 @@ export const query = graphql`
                 mediaItemUrl
                 localFile {
                   childImageSharp {
-                    resize (width: 412, height: 280, cropFocus: CENTER, quality: 80) {
+                    resize (width: 412, height: 280, cropFocus: CENTER, quality: 100) {
                       src
                     }
                   }
@@ -462,7 +484,7 @@ export const query = graphql`
             mediaItemUrl
             localFile {
               childImageSharp {
-                resize (width: 416, height: 450, cropFocus: CENTER, quality: 80) {
+                resize (width: 416, height: 450, cropFocus: CENTER, quality: 100) {
                   src
                 }
               }
@@ -475,7 +497,7 @@ export const query = graphql`
             mediaItemUrl
             localFile {
               childImageSharp {
-                resize (width: 416, height: 450, cropFocus: CENTER, quality: 80) {
+                resize (width: 416, height: 450, cropFocus: CENTER, quality: 100) {
                   src
                 }
               }

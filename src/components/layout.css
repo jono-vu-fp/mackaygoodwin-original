@@ -50,6 +50,16 @@
     font-style: normal;
 
 }
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-Medium.woff2') format('woff2'),
+        url('../fonts/Inter-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+
 
  @font-face {
     font-family: 'Myriad Pro Regular';
@@ -4115,7 +4125,7 @@ img.recovery-partner-img {
 .wbl_section h3, .rt_testmon h3 {
     color: #1c5e48;
     font-size: 36px;
-    margin: 0 0 37px;
+    margin: 0 0 37px;    line-height: 1.08;
 }
 .wbl_section p {
     color: #000000;
@@ -4394,7 +4404,7 @@ img.recovery-partner-img {
     padding: 0;
     font-family: reckless_neue_trialregular,serif,Times New Roman;
 }
-.rtsec3 h3{ text-align:center;    margin-bottom: 28px; }
+.rtsec3 h3{ text-align:center;    margin-bottom: 55px; }
 .wva_section .wva_right div, .weva_section .container div {
     color: #000000;
     font-size: 18px;
@@ -4673,7 +4683,8 @@ img.recovery-partner-img {
 .bankruptcy.service .accordion-item.active, .insolvency.service .accordion-item.active {
     background-color: #dbfd90;
 }
-.bankruptcy.service .accordion-item.active .accordion-button, .insolvency.service .accordion-item.active .accordion-button {
+.bankruptcy.service .accordion-item.active .accordion-button, .insolvency.service .accordion-item.active .accordion-button,
+.bankruptcy.service.brige_color2 .accordion-item.active .accordion-button {
     color: #1c5e48;
 }
 .bankruptcy.service .accordion-body a, .insolvency.service .accordion-body a {
@@ -7758,7 +7769,7 @@ section.dpn_optoins {
 
 .rtsec2 {
     background: #ebe9de;
-    padding: 90px 0;
+     padding: 55px 0;
     margin-top: 81px;
 }
 .rtsec2 h2 {
@@ -7794,12 +7805,13 @@ section.dpn_optoins {
 .container2{ padding-right:0; padding-left:0; width:1297px; }
 .rtsec3{ padding:81px 0; position:relative; }
 .rtsec3 .react-multiple-carousel__arrow{ display:none !important; }
-.ctestitem p {
+.ctestitem p, .ctestitem div {
     color: #000000;
     font-size: 24px;
     line-height: 36px;
     font-family: 'shne_testleicht';
     margin: 0;
+    display: inline;
 }
 .ctestitem h4 {
     margin: 31px 0 0 0;
@@ -7861,13 +7873,14 @@ section.dpn_optoins {
 
 }
 .spek_head{
-    text-align: center;    margin-bottom: 95px;
+    text-align: center;    margin-bottom: 70px;
 }
 .spek_head h2{
-    color: #000000;
+        color: #000000;
     font-size: 44px;
     margin-bottom: 36px;
     font-family: reckless_neue_trialregular;
+    line-height: 1.22;
 }
 .spek_head .p{
     color: #000000;
@@ -7900,25 +7913,39 @@ section.dpn_optoins {
     margin: 11px 0 0 0; 
 }
 .spek_item .btn {
-         margin: 0; 
-    background-color:#154f3a;
+      background-color: #154f3a;
     color: #eae7db;
+    position: absolute;
+    bottom: 47px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    max-width: 151px;
+    padding: 0;
+    font-family: 'Sohne-Buch';
+    font-size: 16px;
+    line-height: 1;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .spek_item img {
     filter: brightness(1) invert(1);
 }
 
 .spek_item {
-    min-height: 333px;
+       min-height: 323px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-flow: column;
-        padding: 0 38px;
-        background-color: #eae7db;
+    padding: 0 38px 44px;
+    background-color: #eae7db;
+    position: relative;
 }
-.spek_item:hover .p,
-.spek_item:hover .btn{ display:block; }
+ 
 .spek_item:hover h4{color: #eae7db; /*margin-top: 20px;*/}
 .spek_item:hover .p{color: #eae7db;}
 .spek_item:hover{
@@ -8056,12 +8083,19 @@ section.incsteps_sec {
 }
 .restructure_land .banner-image::before {    background: #eae7db;}
 .restructure_land .banner-heading { margin: 0 0 16px 0;   color: #000;}
-.restructure_land h2.banner-subheading {
+/*.restructure_land h2.banner-subheading {
     color: #000;
     font-size: 24px;
     font-family: 'Sohne-Buch';
         margin: 0 0 25px 0;
-}
+}*/
+ .restructure_land h2.banner-subheading {
+    color: #000;
+    font-size: 18px;
+    line-height: 28px;
+    font-family: 'Sohne-Buch';
+        margin: 0 0 25px 0;
+} 
 .restructure_land .banner-content ul {
     margin: 0;
     padding: 0;
@@ -8115,14 +8149,14 @@ section.incsteps_sec {
     padding: 9px 43px;
     margin: 26px 0 0 0;
     }
-    .restructure_land #banner-section{
+    /*.restructure_land #banner-section{
             padding: 55px 0px 70px;
-    }
+    }*/
 
 .liquidation_land .banner-image::before {
     background: #dbfd90;
 } 
-.liquidation_land .ols_section {
+.liquidation_land .ols_section, .margin_bt {
     margin-bottom: 66px;
 }
 .liquidation_land .banner-image::after {
@@ -8134,7 +8168,7 @@ section.incsteps_sec {
         padding-bottom: 0;
 }  
 .canh_section {
-    padding: 95px 0;
+    padding: 95px 0 0 0;
     text-align: center;
     overflow: hidden;
 }
@@ -8278,8 +8312,12 @@ section.incsteps_sec {
 .smallrestructure_land .weva_section.doc3 p:last-child {
     margin-bottom: 0;
 }
-.smallrestructure_land .weva_section.doc3 {
+.smallrestructure_land .weva_section.doc3, .val_page_new .weva_section.doc3 {
     margin-bottom: 0; background: #fff;  padding-bottom: 0;
+}
+.val_page.val_page_new .weva_section {
+    text-align: left;
+    margin-bottom: 80px;
 }
 .smallrestructure_land .weva_section.doc3 a.btn.btn-primary {
     font-size: 1rem;
@@ -8403,7 +8441,7 @@ section.incsteps_sec {
     font-size: 18px!important;
     font-weight: 400;
     line-height: 28px;
-    width: 63%;
+/*    width: 63%;*/
 }
 .wva_section.mg_acnew4.dpn-sec1 .wva_left{
         margin-bottom: 185px!important;
@@ -8426,24 +8464,27 @@ section.incsteps_sec {
         margin-top: 20px;
 }
 .dpn-sec2{
-    background-color: #ebe9de;
-    padding:65px 0px;
+    /*    background-color: #ebe9de;*/
+    padding:0 0 65px 0px;
 }
 .dpn-sec2 h3{
     color: #154f3a;
     font-size: 44px;
     font-weight: 500;
-    line-height: 1.2;
-    max-width: 380px;
+    line-height: 1.2; 
+    padding-bottom: 25px;
 }
 .dpn-sec2 p{
     font-size: 18px;
     font-weight: 400;
     line-height: 28px;
 }
-.dpn-sec2  .rig-text{
-    padding-left: 57px;
+ .dpn-sec2 .rig-text{ 
     padding-top: 5px;
+    padding-right: 40px;
+}
+.dpn-sec2 .btn {
+    margin-top: 10px;
 }
 .dpnsec_3.dpn-sec3{
     padding-top: 0rem;
@@ -8620,7 +8661,7 @@ section.dpn_optoins.your-opt1{
 .restructure_land .ols_section h3{
     text-align: center;
 }
-.liquidation_landbanner .banner-image::before, .dpn-ban-sec .banner-image::before{ height:150%; }
+ .liquidation_landbanner .banner-image::before, .dpn-ban-sec .banner-image::before, .restructure_land .banner-image::before{ height:150%; }
 .restructure_land .liq_blocks.va_blocks .recovery-partner-title,
 .restructure_land .liq_blocks .recovery-partner-desc{ color:#000; }
 
@@ -8845,7 +8886,7 @@ body .mgacademy_banner.topleft_banner .banner-image::before {
 .grey_faq #why-mg{
     background-color:#e0e3e5; 
 }
-.liquidation .grey_faq #why-mg {   margin-top: 90px;}
+/*.liquidation .grey_faq #why-mg {   margin-top: 90px;}*/
 .grey_faq #why-mg h2{
     color: #000000;
     text-align: center;
@@ -8910,13 +8951,47 @@ body .mgacademy_banner.topleft_banner .banner-image::before {
     line-height: 1.55;
         font-family: Sohne-Buch, sans-serif, Arial;
     font-weight: 400;
+    display: inline;
 }
 .liqtestmon .ctestitem h4{
     font-size: 25px;
 }
-.liqtestmon .row {
-    align-items: center;
-    justify-content: space-between;
+.liqtestmon .col-sm-12:nth-child(1) {
+    padding-left: 70px;
+}
+ 
+/*.liqtestmon h2 {
+    margin: 0 0 20px 0;
+    color: #13513c;
+    font-size: 30px;
+    font-weight: 500;
+    font-family: 'reckless_neue_trialregular';
+}*/
+.liqtestmon p {
+   font-size: 18px; 
+    line-height: 1.5;
+    margin: 0 0 28px 0; 
+    max-width: 502px;
+        min-height: 245px;
+}
+.liqtestmon h2 {
+    margin: 0 0 20px 0;
+    color: #000000;
+    font-size: 36px; 
+        font-family: reckless_neue_trialregular,serif,Times New Roman;
+    text-align: right;
+    display: block;
+    max-width: 502px;
+}
+.liqtestmon p:before{ content:'"'; display:inline-block; }
+.liqtestmon p:after{ content:'"'; display:inline-block; }
+.liqtestmon h3 {
+  
+  color: #1c5e48;
+    font-size: 36px; 
+    margin-bottom: 37px;
+    line-height: normal;
+    max-width: 300px;
 }
 .rt_testmon{ width:95%; margin:auto; }
 
@@ -9008,9 +9083,10 @@ body .mgacademy_banner.topleft_banner .banner-image::before {
     cursor: pointer;
 }
 .val_page.clm-sec-4 .wbl_section{
-    padding-top: 100px;
-    padding-bottom: 100px;
-    margin-bottom: 70px;
+    padding-top:70px;
+    padding-bottom:70px;
+        margin: 0;
+    background: transparent;
 }
 .clm-sec-4 .wbl_section .wbl_left{
     margin-right: 120px;
@@ -9144,23 +9220,29 @@ button.btn.btn-primary{ margin-bottom:0; }
 .smallrestructure_land .weva_section.doc3 .btn{
  margin-top: 38px;
 }
-.brige_color .accordion-item.active {
+.brige_color .accordion-item.active,
+.brige_color2 .accordion-item.active {
     background-color: #ebe9dd !important;
     border: 2px solid #ebe9dd !important;
 }
-.brige_color .accordion-item .accordion-button{ color: #fff;}
-.step_grid {
-    width: 33.33%;
-    float: left; 
-    padding: 0 9.5px 19px;
-}
+.brige_color .accordion-item .accordion-button,
+.brige_color2 .accordion-item .accordion-button{ color: #fff;}
+ 
 .step_item p {
     color: #000000;
     font-family: 'shne_testleicht';
     font-size: 16px;
-    line-height: 24px;
+    line-height: 26px;
     margin: 0;
+    min-height: 290px;
 }
+.step_item button.btn {
+    margin-top: 0;
+    width: 100%;
+    max-width: 151px;
+        padding: 9px 25px;
+}
+
  
 .step_row:after {
     content: "";
@@ -9169,22 +9251,758 @@ button.btn.btn-primary{ margin-bottom:0; }
     overflow: hidden;
 }
  
-.step_item{
-    background: #dde1e3;
-}
+ 
 .step_item img {
     width: 100%;
 }
-.step_gcont{
-    padding: 52px 42px;
-}
+ 
 .step_item h3 {
     font-size: 30px;
-    color: #000000;
+   color: #000000;
     line-height: normal;
-    margin-bottom: 22px;
+    margin: 35px 0 27px 0;
+    min-height: 73px;
+    font-family: 'Sohne-Buch';
+
 }
 
+.step_grid:nth-child(2) .step_item,
+.step_grid:nth-child(4) .step_item{
+    background: #ebe9de;
+}
+.step_grid:nth-child(2) .step_item h3,
+.step_grid:nth-child(4) .step_item h3{
+    color: #000;
+}
+.clm-page .wva_section {
+    margin-bottom: 0 !important;
+}
+.includes_sec {
+    padding-top: 86px;
+}
+.includes_sec .spek_head {
+    margin-bottom: 62px;
+}
+.step_gcont div {
+    min-height: 168px;
+}
+.brige_color #why-mg h2 {
+    padding-bottom: 15px;
+    font-size: 36px;
+}
+.brige_color #why-mg{ padding-bottom:80px; padding-top:70px }
+.clm-page .home #get-in-touch h3 br {
+    display: block;
+}
+.news-articles a.btn.btn-primary.me-5 {
+    margin-right: 0 !important;
+    margin-top: 65px;
+}
+
+/**/
+/*.cloc_s_page .wbl_section{
+    background: #dde1e3; margin-top: 66px;
+}*/
+ 
+/*.wil_sec .wbl_section{
+    padding-top: 158px;
+    padding-bottom: 132px;
+} */
+.wil_sec .wbl_section .wbl_left {
+    margin-right: 75px;
+}
+.wil_sec .wbl_section p:last-child {
+    margin-bottom: 0;
+}
+.spek_sec_left {
+    padding: 135px 0px 80px 0px;
+}
+.spek_sec_left .spek_head {
+    margin-bottom: 70px;
+}
+.spek_sec_left .spek_head .p{
+        font-size: 26px; line-height: normal;
+}
+.cloc_s_page .wva_section.about_section.dpn-sec1 .wva_right {
+    padding-top: 90px!important;
+    padding-bottom: 0px!important;
+    
+}
+.cloc_s_page .wva_section.about_section .wva_right h3{
+        margin-bottom: 23px;    font-size: 36px;
+}
+.cloc_s_page .wva_section.mg_acnew4.dpn-sec1 .wva_left {
+    margin-bottom: 69px!important;
+}
+.left-map iframe {
+    width:565px;
+    height: 376px;
+}
+.val_page .banner-image::before {
+    background: #154f3a;
+}
+.val_page .banner-image::after {
+    background: #e0e3e5;
+}
+.val_page .banner-heading, .val_page h2.banner-subheading  {
+    color: #eae7db;
+}
+.val_page .banner-content ul li label {
+    color: #fff;
+}
+.val_page .banner-content button.btn.btn-primary.d-block {
+    background-color: #eae7db;
+    color: #154f3a;
+}
+.val_page .rtsec3 {
+    padding-top: 127px;
+}
+.val_page .wbl_section {
+    background-color: #eff1f2;
+    padding-top: 63px;
+    padding-bottom: 44px
+}
+.val_page .wbl_section .wbl_right {
+    order: 0;
+    margin: 0;
+}
+.val_page .wbl_section .wbl_left {
+    max-width: 490px;
+    margin-left: auto;
+}
+.val_page .wbl_section h3 {
+    font-size: 44px;
+    line-height: 1.2;
+    margin-bottom: 18px;
+}
+.val_page .wbl_section p {
+    margin-bottom: 27px;
+}
+.val_page .liq_blocks h3 {
+    text-align: center;
+    color: #000;
+    font-size: 44px;
+    margin: 0 0 81px;
+    line-height: 1;
+}
+.val_page .weva_section {
+    text-align: center;
+
+}
+.val_page.bankruptcy .weva_section .btn {
+    font-size: 16px;
+    padding: 15px 33px 11px;
+}
+.bankruptcy.val_page .glpo_reco_section.va_glpo_reco_section .stepsCol {
+    width: 25%;
+}
+.bankruptcy.val_page .glpo_reco_section.recovery-plan .subTxt {
+    padding: 0 30px;
+}
+.val_page.liquidation .middleFullText.glpo_section .fullSubTxt {
+    padding: 0 200px;
+    font-size: 20px;
+    line-height: 1.5;
+}
+.val_page .glpo_reco_section.va_glpo_reco_section .stepsCol:last-of-type {
+    padding: 0 40px;
+}
+.val_page .glpo_reco_section.recovery-plan .stepsCol:last-of-type .subTxt {
+    padding: 0;
+}
+.recovery-plan .steps .stepsCol:not(:last-child) .numContainer:before {
+    border-bottom: 2px solid #1c5e48;
+    content: "";
+    display: block;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    z-index: -1;
+}
+.val_page .glpo_reco_section.recovery-plan .num {
+    padding-left: 60px;
+    padding-right: 60px;
+}
+.val_page .middleFullText.glpo_section .fullTxt {
+    padding-top: 0;
+    color: #000;
+}
+.val_page.liquidation .middleFullText.glpo_section .fullSubTxt{ color:#000; }
+.val_page .recovery-plan.va_glpo_reco_section {
+    padding-bottom: 144px;
+}
+.val_page .recovery-plan .subTxt {
+    color: #000000;
+}
+.val_page #why-mg h2 {
+    text-align: center;
+}
+
+.track_section {
+    background-color: #154f3a;
+    text-align: center;
+    padding: 63px 0 69px;
+    margin-bottom: 84px;
+}
+.track_section h2 {
+    font-size: 44px;
+    color: #eae7db;
+    margin: 0 0 31px;
+    font-family: 'reckless_neue_trialregular', serif, 'Times New Roman';
+    font-weight: 500;
+}
+.track_section .btn {
+    margin: 0;
+    background-color: #eae7db;
+    color: #154f3a;
+    margin-right: 0 !important;
+}
+.val_page .news-list {
+    padding-top: 98px;
+}
+.val_page .new_landing .news-list h2 {
+    margin-bottom: 39px;
+}
+/*.val_page #testimonials {
+    padding-bottom: 128px;
+    padding-top: 35px;
+}*/
+.val_page #testimonials h2 {
+    color: #000000;
+    line-height: 1.227;
+}
+
+.order_reverce .wbl_section,
+.clm-sec-4.wil_sec .wbl_section{ padding-top:90px; padding-bottom:90px;  }
+.order_reverce .wbl_section p:last-child{ margin-bottom:0; }
+
+.cloc_s_page .wva_section.mg_acnew4.dpn-sec1.clm_wva .wva_left {
+    margin-bottom: 230px!important;
+}
+.brige_color_sec {
+/*    background: #ebe9dd;*/
+    padding-top: 0px;
+    padding-bottom: 100px;
+/*    margin-bottom: 74px;*/
+}
+ 
+.brige_color_sec h3 {
+    color: #000000;
+    font-size: 44px;
+    line-height: 1.22;
+    margin-bottom: 25px;
+}
+.brige_color_sec p {
+    color: #000000;
+    font-size: 18px;
+    line-height: 1.55;
+}
+.brige_color_sec p:last-child{ margin-bottom:0; }
+.grid_7{ width:55%; }
+.grid_5{ width:43.5%; }
+.brige_color_sec .row {
+    align-items: center;
+    justify-content: space-between;
+}
+.brige_color_sec button.btn.btn.btn-primary {
+    padding: 9px 59px;
+}
+
+ 
+ 
+.liqtestmon .react-multi-carousel-dot button {
+    width: 35px;
+    margin: 0 5px;
+}
+.liqtestmon .rt_testmon {
+    width: 100%;
+}
+.rtsec2.rtsec2_new {
+    margin-bottom: 70px;
+}
+.liq_blocks.liq_blocks_new .col-lg-4 {
+    align-items: center;
+}
+.rtsec2 .container2 {
+    width: 1150px;
+}
+.pa-top{ margin-top:100px; }
+
+.cyber_page .mgacademy_banner.topleft_banner .banner-image::before {
+    background-image: linear-gradient(to right, #ffffff 65%, #154f3a 100%);
+}
+.cyber_page .mgacademy_banner .banner-image {
+    margin-left: 128px; 
+}
+.cyber_page .banner-image::after {    background: #e0e3e5;}
+.cyber_page .mgacademy_banner.topleft_banner .col-xl-7 {
+   
+    width: 54.55%;
+}
+.cyber_page .mgacademy_banner.topleft_banner .col-xl-5 {
+   
+    width: 45%;
+}
+.cyber_page .mgacademy_banner.topleft_banner .banner-content {
+    margin-top: 117px;
+    padding-left: 62px;
+}
+.cyber_page .banner-content .banner-desc{ padding-top:12px; }
+.cyber_sec1 {
+    text-align: center;
+    padding:82px 0 50px 0;
+}
+.cyber_sec1 h2 {
+    color: #000000;
+    font-family: reckless_neue_trialregular, serif, Times New Roman;
+    font-size: 39px;
+    font-weight: 500;
+    margin-bottom:39px;
+}
+.cyber_sec1 h3 {
+    color: #000000;
+    font-size: 31px;
+    font-family: 'Sohne';
+    margin-bottom: 25px;
+}
+.cyber_sec1 p {
+    color: #000000;
+    font-size: 18px;
+    line-height: 28px;
+    font-family: 'shne_testleicht';
+    margin: 0 0 28px 0;
+}
+.cyber_sec1 p:last-child{ margin-bottom:0; }
+.cyber_sec2 .cyber_keep h2 {
+    color: #000000;
+    font-family: reckless_neue_trialregular, serif, Times New Roman;
+    font-size: 39px;
+    font-weight: 500;
+    margin-bottom: 35px;
+    line-height: normal;
+    text-align: center;
+}
+.cyber_sec2 .cyber_keep p {
+    color: #000000;
+    font-size: 18px;
+    text-align: center;
+    margin: 0;
+}
+.cyber_sec2 .cyber_keep{ margin-bottom:25px; }
+.cyberpl_row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between; margin-bottom: 50px;
+}
+.cyberpl_grid {
+    width: 31%;
+    background-color: #e0e3e5;
+    padding-bottom: 55px;    min-height: 1025px; position: relative;
+}
+.cyberpl_grid .btn.btn-primary {
+    margin: 0 auto;
+    display: block;
+    width: 161px;
+    position: absolute;
+    bottom: 55px;
+    left: 0;
+    right: 0;
+}
+.cyberpl_grid h3 {
+    background-color: #b7c2c9;
+    text-align: center;
+    font-size:39px;
+    color: #000000;
+   font-family: reckless_neue_trialregular, serif, Times New Roman;
+    line-height: 1.12;
+    min-height: 154px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    width: 100%;
+}
+.cyberpl_grid h3 span {
+    display: block;
+    font-size: 31px;
+        font-family: 'Sohne';
+}
+.cyberpl_grid>ul {
+    padding: 20px 37px;
+    margin: 0;
+    list-style: none;
+}
+.cyberpl_grid ul .cplan_ac {
+    color: #000000;
+    font-size: 20px;
+    font-family: 'Sohne-Buch';
+    line-height: normal;
+    padding: 21px 45px 21px 12px;
+    position: relative;
+    cursor: pointer;
+}
+.cyberpl_grid .active .cplan_ac::after{
+    transform: rotate(180deg)
+}
+.cyberpl_grid ul .cplan_ac:after{
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 8px;
+    background: url(../images/plandown_arrow.svg);
+    right: 11px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.cplan_cont {
+    color: #000000;
+    font-size: 16px;
+    line-height: 22px;
+    font-family: shne_testleicht;
+    display: none;
+        padding:0 12px 25px;
+}
+.cplan_cont *{ margin:0; }
+.cyberpl_grid>ul>li {
+    border-bottom: 1px solid #babec0;
+}
+.cyberpl_grid>ul>li:last-child{ border-bottom:0; }
+
+.cplan_cont ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+.cplan_cont ul li {
+    margin-bottom: 15px;
+}
+.cyber_sec2 {
+    padding-top: 35px;padding-bottom: 97px;
+}
+.cplan_cont ul li:before {
+    content: "";
+    margin-right: 10px;
+    width: 5px;
+    height: 5px;
+    display: inline-block;
+    background: #000;
+    vertical-align: middle;
+}
+
+.cyberpl_grid .btn.btn-primary {
+    margin: 0 auto;
+    display: block;
+    width: 161px;
+}
+.cyberpl_grid:nth-child(2) h3{background-color: #d3d0bf;}
+.cyberpl_grid:nth-child(2){
+    background-color: #ebe9de;
+}
+.cyberpl_grid:nth-child(3) h3{color: #ebe9de;background-color: #104b37;}
+.cyberpl_grid:nth-child(3){
+    background-color: #1c5e48;
+}
+.cyberpl_grid:nth-child(3) ul .cplan_ac,
+.cyberpl_grid:nth-child(3) .cplan_cont{
+    color: #ebe9de;
+}
+.cyberpl_grid li.active .cplan_cont {
+    display: block;padding-bottom: 25px;
+}
+.cyberpl_grid li.active .cplan_ac { 
+    text-decoration: underline;
+}
+.cyberpl_grid:nth-child(3) ul .cplan_ac:after{
+ background: url(../images/plandown_arrow2.svg);
+}
+.cyberpl_grid:nth-child(3) .btn.btn-primary{
+    background-color: #ebe9de;
+    color: #1c5e48;
+}
+.cyber_sec2 h5 {
+    text-align: center;
+    color: #000000;
+    font-size: 18px;
+    font-family: 'shne_testleicht';
+    margin: 0;
+}
+.cyberpl_grid:nth-child(3) .cplan_cont ul li::before{
+    background-color: #ebe9de;
+}
+
+.cyber_page .home #get-in-touch h3 br {
+    display: block;
+}
+.cyber_page .home #get-in-touch ul li .btn {
+    margin: 0 auto;
+}
+.cyber_sec3 {
+    padding-bottom: 90px;
+}
+
+.cyber_sec3 .row {
+    padding: 0 96px;    align-items: center;
+}
+.cyber_sec3 h2 {
+    color: #000000;
+    font-size: 39px;
+    font-family: reckless_neue_trialregular, serif, Times New Roman;
+    font-weight: 500;
+    margin-bottom: 27px;
+}
+.cyber_sec3 ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.cyber_sec3 ul li {
+    color: #000000;
+    font-size: 18px;
+    font-family: 'shne_testleicht';
+    position: relative;
+    padding-left: 50px;
+    margin-bottom: 17px;
+    padding-top: 0;
+    line-height: 28px;
+    min-height: 56px;
+    display: flex;
+    align-items: center;
+}
+.cyber_sec3 ul li:before{
+    content: "";
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background: url(../images/list_icon2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+        
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    -webkit-filter: brightness(0) invert(0);
+    filter: brightness(0) invert(0);
+}
+.cyber_sec3 .ht_cnt {
+    padding-left: 20px;
+}
+.cyberpl_grid:nth-child(3) > ul > li{    border-bottom: 1px solid #4e8170;}
+.cyberpl_grid:nth-child(3) > ul > li:last-child{    border-bottom:none;}
+
+.cyberpl_grid h3 span b{ font-family: 'Inter'; font-weight: 500; }
+.cyber_page #banner-section{
+     padding-top: 75px;    padding-bottom: 66px;
+}
+.cyber_page .home #get-in-touch h2{
+    font-size:39px;
+}
+.cyber_page .home #get-in-touch {
+    padding-top: 70px;
+}
+.cyber_page .mgacademy_banner.topleft_banner .banner-content .banner-heading{
+    font-size: 39px;color: #000000;    margin-bottom: 26px;
+}
+.cyber_page .innerpage-banner h2.sub-banner-heading{line-height: 34px; font-size: 31px;}
+
+.clm-page .banner-heading,
+.clm-page h2.banner-subheading{
+    color: #14523d;
+}
+ul.profe_row {
+    padding: 0;
+    margin: 0 auto;
+    list-style: none;
+    max-width: 1096px;
+}
+ul.profe_row li {
+    display: block;
+    margin-bottom: 27px;
+        padding-bottom:23px;
+    position: relative;
+    padding-left: 95px;
+    border-bottom: 1px solid #dcdcdc;
+}
+ul.profe_row li br{ display:none; }
+ul.profe_row li:before{
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 30px;
+    background: url(../images/check_tick.svg);
+    left: 47px;
+    top: 2px;
+}
+ul.profe_row li h4 {
+    color: #000000;
+    font-size: 22px;
+    font-family: 'Sohne';
+    margin: 0 0 6px 0;
+}
+ul.profe_row li p {
+    margin: 0;
+    color: #000000;
+    font-size: 16px;
+    font-family: 'shne_testleicht';
+}
+.clm-sec-is .container{ max-width:1215px; }
+.clm-sec-is .wbl_left {
+    margin-right: 0 !important;
+}
+.clm-sec-is .wbl_section p:last-child{ margin-bottom:0; }
+.clm-sec-is .wbl_section {
+    padding-bottom: 0;
+}
+.step_row {
+    margin: 0 -75px;
+    width: auto;
+    position: relative;
+}
+.step_row .react-multi-carousel-list{ padding-bottom:100px; }
+
+.step_grid {
+    padding: 0 45px;
+    border-right: 1px solid #c6cacd;
+}
+/*.step_row .react-multi-carousel-track li:nth-child(4n) .step_grid { 
+    border-right:none;
+}*/
+.step_row .react-multiple-carousel__arrow {
+    display: none !important;
+}
+.step_row .react-multi-carousel-dot button {
+   font-size: 6px;
+    line-height: 20px;
+   width: 49px;
+    height: 6px;
+    text-align: center;
+    background-color: #dddbcd;
+    border-radius: 3px;
+    border: 0;
+    margin: 0 3px;
+}
+.step_row .react-multi-carousel-dot.react-multi-carousel-dot--active button {
+    background-color: #1c5e48;
+} 
+.clm-page .brige_color #why-mg h2,
+.brige_color,.brige_color2 #why-mg h2{
+    color: #eae7db;    font-size: 44px;
+}
+.clm-page .bankruptcy.service .accordion-item,
+.bankruptcy.service.brige_color2 .accordion-item  {
+    border: 2px solid #eae7db !important;
+}
+.clm-page .brige_color .accordion-item .accordion-button,
+.bankruptcy.service.brige_color2 .accordion-item .accordion-button{
+    color: #eae7db;
+}
+.clm-page .bankruptcy.service .accordion-button:before,
+.bankruptcy.service.brige_color2 .accordion-button:before{
+    background-image: url(../images/brige_plus.png);
+}
+
+.clm-page .bankruptcy.service .active .accordion-button:before,
+.bankruptcy.service.brige_color2 .active .accordion-button:before{
+  background-image: url(../images/minus-icon.png);
+}
+.clm-page .news-articles h2 {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.no_padd{ padding-top:0 !important; }
+
+.hubspot_popup .popup_body {
+    padding: 40px;
+    max-height: 700px;
+    overflow-y: auto;
+}
+.hubspot_popup .popup_body iframe{ min-height: 700px;}
+
+.brigeincludes_sec .step_grid {
+    background: #ebe9de;
+    border: 0;
+    margin: 0 10px;
+    padding: 0;
+    text-align: center;
+}
+.brigeincludes_sec .step_grid .step_gcont {
+    padding: 35px 25px;
+}
+.brigeincludes_sec .step_grid .step_gcont h3 {
+    margin-top: 0;
+        font-size: 25px;
+    min-height: 64px;
+}
+.brigeincludes_sec {
+    padding-bottom: 0;
+} 
+ 
+.restructure_land .banner-image{ display:block;    margin-top: 60px; }
+.restructure_land  .breadcrumbs {
+    right: 4%;
+    top: -4%;
+}
+.restructure_land #banner-section{
+        padding: 90px 0px 90px;
+}
+
+.val_page_new .breadcrumb-item a,
+.val_page_new .breadcrumb-item.active,
+.val_page_new .breadcrumb-item+.breadcrumb-item::before{
+    color: #fff;
+}
+
+.ci_land .cinlpageidentifix .wva_right:after {
+    background-color: #ebe9dd;
+}
+.ci_land .cinlpageidentifix .wva_left h3,
+.ci_land .mg_identifix .wva_left p{ color:#000; }
+
+.bankruptcy.service.brige_color2.faqacr1 .accordion-item{ border-top:0 !important; border-left:0 !important; border-right:0 !important; }
+.eligible_sec ul li label strong {
+    color: #000;
+    font-family: Sohne;
+    font-weight: 500;
+}
+.restructure_land2 .eligible_sec,
+.restructure_land2 .mg_identifix{ margin-bottom:70px; }
+.eligible_sec ul li label span br {
+    display: none;
+}
+.eligible_sec ul li label span p{ margin:0; }
+
+.hubspot_popup #formContainer {
+    max-height: 600px;
+    overflow-y: auto;
+}
+.hubspot_popup iframe {
+    min-height: 600px;
+}
+.testmon_secnew .wva_left h3{
+        line-height: normal;    font-size: 48px;
+}
+.testmon_secnew h2 {
+    margin: 0 0 20px 0;
+    color: #13513c;
+    font-size: 30px;
+    font-weight: 500;
+    font-family: 'reckless_neue_trialregular';
+}
+.testmon_secnew p:before{ content:'"'; display:inline-block; }
+.testmon_secnew p:after{ content:'"'; display:inline-block; }
+
+.testmon_secnew .wva_left {
+    min-height: 620px;
+}
+.testmon_secnew{ margin-top:70px; margin-bottom:70px; }
+.testmon_secnew .wva_right::after {
+    background-color: rgb(235, 233, 221);
+    bottom: 0px;
+    right: 0px;
+    top: inherit;
+}
 
 /****** BreakPoints *******/
 /****** Responsive Start *******/
@@ -9197,7 +10015,9 @@ button.btn.btn-primary{ margin-bottom:0; }
     .ps_bot .container {
         max-width: 1546px;
     }
+    
 }
+
 @media screen and (min-width:1201px){
     .restructure_land #testimonials .card-text{
         min-height: 280px;
@@ -9212,6 +10032,39 @@ button.btn.btn-primary{ margin-bottom:0; }
         left: 45px;
         margin-bottom: 0;
     }
+    .cloc_brs_page .clm-sec-is .container {
+        max-width: 1140px; 
+    }
+    .cloc_brs_page .clm-sec-is .wbl_right {
+        max-width: 540px;
+    }
+    
+}
+@media screen and (min-width:1301px){
+    .cloc_brs_page .clm-sec-is .container {
+        max-width: 1263px; 
+    }
+    .cloc_brs_page .clm-sec-is .wbl_right {    max-width: 663px;}
+}
+@media screen and (min-width:992px){
+
+    .order_reverce .container{
+    justify-content: space-between;
+    padding: 0 50px;
+    }
+    .order_reverce .wbl_left{order:2;margin: 0 !important;}
+    .order_reverce .wbl_right {
+    order: 1;
+    max-width: 490px;
+    margin-left: 0px;
+    }
+    
+    .restructure_land .fd_section.wva_section .wva_right{
+        padding-top: 0; padding-bottom: 100px;
+    }
+
+   
+
 }
 @media screen and (max-width:1900px){
     #community-support .slide img {
@@ -9237,7 +10090,7 @@ button.btn.btn-primary{ margin-bottom:0; }
         font-size: 21px;
     }
     .liquidation .liq_rec_section.recovery-partner h1, .liquidation .liq_rec_section.recovery-partner h2, .bib_section h3, .ols_section h3, .liquidation .middleFullText.glpo_section .fullTxt, .ht_section .ht_right h2, .bib_section#testimonials h2, .liquidation .news-articles h2, .banner-content .banner-heading, .wva_section .wva_right h3, .wva_section .wva_right h2, .weva_section h3, .voluntary_administration .banner-content .banner-heading, .bankruptcy #why-mg h2, .canh_section h2, .sols_sec h2, .new_landing .news-list h2, .wbl_section h3, .incsteps_sec h2, .steps_tab h3, .restructure_land #testimonials h2, .spek_head h2, .midheading h2, .cinlpageidentifix .wva_left h3,
-    .eligible_sec h2, .smallrestructure_land .liq_blocks h2, .smallpageidentifix .wva_left h3, .lun_sec h2, .grid_4_sec h2, .rtsec2 h2, .rt_testmon h3, .rtsec3 h3 {
+    .eligible_sec h2, .smallrestructure_land .liq_blocks h2, .smallpageidentifix .wva_left h3, .lun_sec h2, .grid_4_sec h2, .rtsec2 h2, .rt_testmon h3, .rtsec3 h3, .brige_color_sec h3, .clm-page .brige_color #why-mg h2,.brige_color,.brige_color2 #why-mg h2  {
         font-size: 40px;
     }
     .recovery-partner-title {
@@ -9826,9 +10679,44 @@ button.btn.btn-primary{ margin-bottom:0; }
         font-size: 18px;
     }
 
+    .val_page .news-list {
+        padding-top: 70px;
+    }
+    .val_page .recovery-plan.va_glpo_reco_section {
+        padding-bottom: 75px;
+    }
+    /*.val_page #testimonials {
+        padding-bottom: 80px;
+        padding-top: 0;
+    }*/
+    .val_page .restructurenews-articles {
+        padding-bottom: 60px !important;
+    }
+    .track_section {
+        margin-bottom: 50px;
+    }
+    .track_section h2, .val_page .wbl_section h3 {
+        font-size: 40px;
+    }
+    .bankruptcy.val_page .glpo_reco_section.recovery-plan .subTxt {
+        padding: 0 20px;
+    }
+
+
 }
 @media screen and (max-width:1600px){
-    
+     
+     .hubspot_popup .popup_body {
+        max-height: 550px;
+    }     
+    .hubspot_popup #formContainer {
+        max-height: 500px;
+    }  
+    .cyber_sec1 h2,
+    .cyber_sec2 .cyber_keep h2,
+    .cyber_page .home #get-in-touch h2{
+/*        font-size: 40px;*/
+    }    
     .ps_bot .pack_inner {
         padding: 50px 35px 40px;
     }
@@ -10075,7 +10963,7 @@ button.btn.btn-primary{ margin-bottom:0; }
 /*        padding: 120px 0;*/
     }
     .canh_section {
-    padding: 75px 0;}
+    padding: 75px 0 0 0;}
     .liquidation_land .vcfo_section .news-list {
         padding: 70px 0;
     }
@@ -10107,11 +10995,50 @@ button.btn.btn-primary{ margin-bottom:0; }
             max-width: 100%;
     }
     .rtsec2 ul li,.liqtestmon .ctestitem p,.canh_section .c_grid p, .ols_section ul li div p,
-    .sols_item p, .people_head p{
+    .sols_item p, .people_head p, .brige_color_sec p{
             font-size: 17px;
     }
+
+     .val_page .ctestitem p {
+        font-size: 18px;
+        line-height: 1.7;
+    }
+    .val_page .ctestitem h4 {
+        font-size: 25px;
+    }
+    .val_page .rtsec3 {
+        padding-top: 70px;
+    }
+    .cloc_s_page .wva_section.mg_acnew4.dpn-sec1.clm_wva .wva_left {
+        margin-bottom: 180px!important;
+    }
+    .brige_color_sec{
+            padding-top: 0px;
+    padding-bottom: 80px;
+    }
+
+    .order_reverce .wbl_section, .clm-sec-4.wil_sec .wbl_section {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    }
+    .speakprof_sec {
+    padding-bottom: 50px;
+    }
+    .liqtestmon h3,.liqtestmon h2{
+          font-size: 34px;
+    }
+    .liqtestmon p {    font-size: 17px;}
+
 }
 @media screen and (max-width:1500px){
+
+    .cyber_sec1{
+        padding: 60px 0 50px 0;
+    }
+    .cyberpl_grid h3{
+        font-size: 37px;
+    }
+
     .brokermid_sec h2{ font-size: 42px; }
     .ps_bot h2 {
         margin-bottom: 40px;
@@ -10140,7 +11067,7 @@ button.btn.btn-primary{ margin-bottom:0; }
         font-size: 45px;
     }
     .liquidation .liq_rec_section.recovery-partner h1, .liquidation .liq_rec_section.recovery-partner h2, .bib_section h3, .ols_section h3, .liquidation .middleFullText.glpo_section .fullTxt, .ht_section .ht_right h2, .bib_section#testimonials h2, .liquidation .news-articles h2, .banner-content .banner-heading, .wva_section .wva_right h3, .wva_section .wva_right h2, .weva_section h3, .voluntary_administration .banner-content .banner-heading, .bankruptcy #why-mg h2, .canh_section h2, .sols_sec h2, .new_landing .news-list h2, .wbl_section h3, .incsteps_sec h2, .steps_tab h3, .restructure_land #testimonials h2, .spek_head h2, .midheading h2, .cinlpageidentifix .wva_left h3, .eligible_sec h2, .smallrestructure_land .liq_blocks h2, .smallpageidentifix .wva_left h3,
-    .lun_sec h2, .grid_4_sec h2, .rtsec2 h2, .rt_testmon h3, .rtsec3 h3 {
+    .lun_sec h2, .grid_4_sec h2, .rtsec2 h2, .rt_testmon h3, .rtsec3 h3, .brige_color_sec h3, .clm-page .brige_color #why-mg h2, .brige_color,.brige_color2 #why-mg h2 {
         font-size: 36px;
     }
     .liq_banner .banner-content .banner-heading {
@@ -10447,9 +11374,9 @@ button.btn.btn-primary{ margin-bottom:0; }
      .ref_mid_block .recovery-partner-title {
         font-size: 30px;      
     }
-    .rtsec2{
+    /*.rtsec2{
             padding: 80px 0;
-    }
+    }*/
     .ctestitem h4{
         font-size: 28px;
     }
@@ -10464,7 +11391,7 @@ button.btn.btn-primary{ margin-bottom:0; }
             font-size: 21px;
     }
     .spek_item{
-        padding: 0 29px;
+        padding: 0 29px 44px;
     }
     /*.res_sols_sec .sols_item h4{
             font-size: 27px;
@@ -10477,7 +11404,7 @@ button.btn.btn-primary{ margin-bottom:0; }
     
 
    .dpn-ban-sec h2.banner-subheading {
-        width: 75%;
+/*        width: 75%;*/
     }
 
     .wva_section.mg_acnew4.dpn-sec1 .wva_left {
@@ -10533,8 +11460,8 @@ button.btn.btn-primary{ margin-bottom:0; }
         font-size: 36px;
     }
     .val_page.clm-sec-4 .wbl_section {
-        padding-top: 70px;
-        padding-bottom: 70px;
+        padding-top: 60px;
+        padding-bottom: 60px;
     }
     .val_page.clm-sec-6 .wbl_section{
             margin-bottom:20px;
@@ -10551,8 +11478,90 @@ button.btn.btn-primary{ margin-bottom:0; }
     .media_moment_new .lb_img img:not(.even .lb_img img) {
     height: 350px;}
 
+    .spek_sec_left {
+        padding: 70px 0px 60px 0px;
+    }
+    /*.wil_sec .wbl_section {
+    padding-top: 108px;
+    padding-bottom: 100px;
+    }*/
+
+    .track_section h2, .val_page .wbl_section h3 {
+        font-size: 36px;
+    }
+    .cloc_s_page .wva_section.about_section .wva_right h3{
+            font-size: 34px;
+    }
+    .spek_head h2{
+           margin-bottom: 20px;
+    }
+    .pa-top {
+        margin-top: 60px;
+    }
+    .cyber_page .innerpage-banner h2.sub-banner-heading, .cyber_sec1 h3,.cyberpl_grid h3 span{
+        font-size: 29px;
+    }
+
+    .order_reverce .wbl_section, .clm-sec-4.wil_sec .wbl_section {
+    padding-top: 55px;
+    padding-bottom:55px;
+    }
+
+    .speakprof_sec {
+    padding-bottom: 40px;
+    }
+
+    .step_item h3{
+            font-size: 28px;
+    }
+    .step_row {    margin: 0 -20px;}
+    .step_grid {    padding: 0 35px;}
+    .liqtestmon h3, .liqtestmon h2 {
+        font-size: 32px;
+    }
+
+
 }
 @media screen and (max-width:1400px){
+
+    .cyber_page .mgacademy_banner.topleft_banner .banner-content {
+    margin-top: 60px;
+    padding-left: 30px;
+    }
+    .cyber_page .banner-content .banner-desc br {
+        display: none;
+    }
+    .cyber_sec1 h2, .cyber_sec2 .cyber_keep h2, .cyber_page .home #get-in-touch h2 {
+        font-size: 37px;
+    }
+    .cyber_sec1 h2{
+            margin-bottom: 25px;
+    }
+    .cyberpl_grid h3 {
+        font-size: 37px;
+    }
+    .cyberpl_grid h3 span{
+        font-size: 27px;
+    }
+    .cyberpl_grid {
+    width: 31.5%;}
+    .cyberpl_grid ul .cplan_ac{
+        font-size: 18px;
+    }
+    .cyber_sec3 .row {    padding: 0 20px;}
+    .cyber_sec3 ul li br{ display:none; }
+
+    .cyber_sec2 {
+    padding-top: 20px;
+    padding-bottom: 70px;
+    }
+
+     .restructure_land .banner-image {
+        padding-top: 40px;
+    }
+    .restructure_land .banner-image::after {
+        top: 40px;
+    }
     .identi_bannersec .banner-desc {
         padding-top: 0;
         padding-right: 5px;
@@ -11064,16 +12073,20 @@ button.btn.btn-primary{ margin-bottom:0; }
     }
     .ondpage .wva_section {    margin-top: 70px;}
 
-    .restructure_land #banner-section {
+    /*.restructure_land #banner-section {
         padding: 35px 0px 70px;
-    }
+    }*/
     .restructure_land .banner-heading {
-    margin: 0 0 8px 0;
-    font-size: 40px;
+/*    margin: 0 0 8px 0;*/
+/*    font-size: 40px;*/
+    }
+    .dpn-ban-sec h2.banner-subheading{
+            font-size: 17px!important; 
+    line-height: 24px;
     }
     .restructure_land h2.banner-subheading {
-    font-size: 22px;
-    margin: 0 0 15px 0;
+    font-size: 17px; 
+/*    margin: 0 0 15px 0; */
     }
     .restructure_land .banner-content ul{
         max-width: 435px;
@@ -11095,7 +12108,7 @@ button.btn.btn-primary{ margin-bottom:0; }
     .rtsec3 li.react-multi-carousel-item {
         padding: 0 60px;
     }
-    .ctestitem p{
+    .ctestitem p, .ctestitem div{
         font-size: 23px;
     }
     .liquidation_land .wbl_section {
@@ -11126,9 +12139,9 @@ button.btn.btn-primary{ margin-bottom:0; }
     .innerpage-banner h2.sub-banner-heading {
         font-size: 21px;
     }
-    .rtsec2 {
+    /*.rtsec2 {
         padding: 85px 0;
-    }
+    }*/
 
     .lun_sec {
     padding-top: 45px;
@@ -11183,6 +12196,58 @@ button.btn.btn-primary{ margin-bottom:0; }
     .cinlpageidentifix .wva_left{
             max-width: 515px;
     }
+
+    .val_page .new_landing .news-list h2 {
+        margin-bottom: 20px;
+    }
+    .val_page .news-list {
+        padding-top: 50px;
+    }
+    .wbl_right img {
+        max-width: 100%;
+    }
+    .wil_sec .wbl_section .wbl_left{
+        margin-left: 0 !important;
+    }
+    .cloc_s_page .wva_section.about_section.dpn-sec1 .wva_right {
+    padding-top: 90px!important;
+    padding-bottom: 0px!important; 
+     max-width: 515px!important;
+    }
+    
+    .step_gcont div {
+        min-height: 220px;
+    }
+    .spek_sec_left .spek_head .p{
+        font-size: 23px;
+    }
+
+    .cyber_page .innerpage-banner h2.sub-banner-heading, .cyber_sec1 h3, .cyberpl_grid h3 span {
+        font-size: 27px;
+    }
+    .cyber_page .mgacademy_banner.topleft_banner .banner-content .banner-heading,
+    .cyber_sec3 h2 {
+        font-size: 37px;
+    }
+    .clm-sec-is .wbl_section .wbl_left{
+        margin-left: 0 !important;    padding-right: 0;
+    }
+    .step_item h3 {
+        font-size: 25px;    margin: 22px 0 10px 0;
+    }
+
+    .step_grid {
+        padding: 0 28px;
+    }
+    .step_item p{
+            min-height: 325px;
+    }
+    .hubspot_popup #formContainer {
+        max-height: 400px;
+    }
+    .liqtestmon .col-sm-12:nth-child(1) {
+        padding-left: 15px;
+    } 
 
 }
 @media screen and (max-width:1300px){
@@ -11573,10 +12638,17 @@ button.btn.btn-primary{ margin-bottom:0; }
     .ols_section ul li div p{
             min-height: 288px;
     }
-
+    .liqtestmon .container2 {
+        width: 960px;
+    }
+    .liqtestmon .col-lg-5 {
+        width: 520px !important;
+    }
 }
 
 @media screen and (max-width:1200px){
+    .restructure_land2 .eligible_sec,
+.restructure_land2 .mg_identifix{ margin-bottom:50px; }
     .careers.single_career .banner-content {
         padding-right: 5px!important;
     }
@@ -11590,7 +12662,7 @@ button.btn.btn-primary{ margin-bottom:0; }
     .liq_banner .banner-content .banner-subheading {
         font-size: 18px;
     }
-    .liquidation .liq_rec_section.recovery-partner h1, .liquidation .liq_rec_section.recovery-partner h2, .bib_section h3, .ols_section h3, .liquidation .middleFullText.glpo_section .fullTxt, .ht_section .ht_right h2, .bib_section#testimonials h2, .liquidation .news-articles h2, .banner-content .banner-heading, .wva_section .wva_right h3, .wva_section .wva_right h2, .weva_section h3, .voluntary_administration .banner-content .banner-heading, .bankruptcy #why-mg h2, .canh_section h2, .sols_sec h2, .new_landing .news-list h2, .wbl_section h3, .incsteps_sec h2, .steps_tab h3, .restructure_land #testimonials h2, .spek_head h2, .midheading h2, .cinlpageidentifix .wva_left h3, .eligible_sec h2, .smallrestructure_land .liq_blocks h2, .smallpageidentifix .wva_left h3, .lun_sec h2, .grid_4_sec h2, .rtsec2 h2, .rt_testmon h3, .rtsec3 h3 {
+    .liquidation .liq_rec_section.recovery-partner h1, .liquidation .liq_rec_section.recovery-partner h2, .bib_section h3, .ols_section h3, .liquidation .middleFullText.glpo_section .fullTxt, .ht_section .ht_right h2, .bib_section#testimonials h2, .liquidation .news-articles h2, .banner-content .banner-heading, .wva_section .wva_right h3, .wva_section .wva_right h2, .weva_section h3, .voluntary_administration .banner-content .banner-heading, .bankruptcy #why-mg h2, .canh_section h2, .sols_sec h2, .new_landing .news-list h2, .wbl_section h3, .incsteps_sec h2, .steps_tab h3, .restructure_land #testimonials h2, .spek_head h2, .midheading h2, .cinlpageidentifix .wva_left h3, .eligible_sec h2, .smallrestructure_land .liq_blocks h2, .smallpageidentifix .wva_left h3, .lun_sec h2, .grid_4_sec h2, .rtsec2 h2, .rt_testmon h3, .rtsec3 h3, .cloc_s_page .wva_section.about_section .wva_right h3, .brige_color_sec h3, .clm-page .brige_color #why-mg h2, .brige_color,.brige_color2 #why-mg h2 {
         font-size: 32px;
     }
     .liq_banner .banner-content .banner-heading {
@@ -12370,7 +13442,7 @@ button.btn.btn-primary{ margin-bottom:0; }
         margin-bottom: 70px;
     }
     .restructure_land h2.banner-subheading {
-        font-size: 20px;
+        font-size: 17px; 
     }
     .liquidation_land .banner-image {
         padding-top: 0;    margin-top: 35px;
@@ -12379,11 +13451,15 @@ button.btn.btn-primary{ margin-bottom:0; }
     .liquidation_land .banner-image::after {
         top: 0;
     }
-    .restructure_land #banner-section{
+    /*.restructure_land #banner-section{
         padding: 35px 0px 55px;
+    }*/
+    .restructure_land #banner-section {
+        padding: 70px 0px 70px;
     }
+    .restructure_land .banner-content .banner-heading{ line-height:1.2; }
     .rtsec2{
-            margin-top: 60px;padding: 80px 0;
+            margin-top: 60px;padding:55px 0;
     }
     .liquidation .liq_rec_section.recovery-partner{
         margin-top: 60px;
@@ -12398,7 +13474,7 @@ button.btn.btn-primary{ margin-bottom:0; }
     .rtsec3 li.react-multi-carousel-item {
         padding: 0 40px;
     }
-    .ctestitem p {
+    .ctestitem p, .ctestitem div {
     font-size: 21px;
     line-height: 32px;
     }
@@ -12413,7 +13489,7 @@ button.btn.btn-primary{ margin-bottom:0; }
 /*        padding: 60px 0;*/
     }
     .canh_section {
-        padding: 50px 0;
+        padding: 50px 0 0 0;
     }
     .canh_section h2, .rtsec2 h2 {
         margin-bottom: 30px;
@@ -12438,7 +13514,7 @@ button.btn.btn-primary{ margin-bottom:0; }
         padding: 40px 15px 0;
     min-height: 400px;
     }*/
-    .liquidation_land .ols_section {
+    .liquidation_land .ols_section, .margin_bt {
         margin-bottom: 45px;
     }
     .liquidation_land .vcfo_section .news-list {
@@ -12452,7 +13528,7 @@ button.btn.btn-primary{ margin-bottom:0; }
     }
     
     .spek_sec {
-        padding: 0;
+        padding: 0px 0px 40px 0px;
     }
     .spek_head h2{
             margin-bottom: 22px;
@@ -12465,7 +13541,7 @@ button.btn.btn-primary{ margin-bottom:0; }
             height: 50px;
     }
     .spek_item {
-    padding: 0 15px;
+    padding: 0 15px 44px;
     }
     .spek_item h4 {
     font-size: 20px;
@@ -12553,7 +13629,7 @@ button.btn.btn-primary{ margin-bottom:0; }
         min-height: auto;
     }
     .liquidation_landbanner .banner-image::before, .dpn-ban-sec .banner-image::before {
-        height: 155%;
+        height: 175%;
     }
     .restructure_land h2.banner-subheading{ line-height:1.4; }
     /*.lqssols_sec .sols_item h4{
@@ -12615,9 +13691,9 @@ button.btn.btn-primary{ margin-bottom:0; }
     .mg_acnew2.ondpage_experience .wva_right h3 {
         margin-right: 0;
     }
-    .liquidation .grey_faq #why-mg {
+    /*.liquidation .grey_faq #why-mg {
         margin-top: 60px;
-    }
+    }*/
     .liqtestmon {
     padding-top: 50px;
     padding-bottom: 60px;
@@ -12643,12 +13719,15 @@ button.btn.btn-primary{ margin-bottom:0; }
         padding-top: 50px
     }
    .clm-page .wva_section.mg_acnew4.dpn-sec1 .wva_left {
-        margin-bottom: 233px!important;
+        margin-bottom: 50px!important;
     }
-    .clm-page .wva_section.about_section.dpn-sec1 .wva_right {
-        padding-top: 120px!important;
+    .clm-page .wva_section.about_section.dpn-sec1 .wva_right,
+    .cloc_s_page .wva_section.about_section.dpn-sec1 .wva_right {
+        padding-top: 50px!important;
         padding-bottom: 5px!important;
+            max-width: 460px!important
     }
+
     .val_page.clm-sec-4.clm-sec-6 .wbl_section{
         padding-bottom: 40px;
     }
@@ -12687,8 +13766,161 @@ button.btn.btn-primary{ margin-bottom:0; }
     .sols_item{
             min-height: 335px;
     }
+    .contact-map{
+            padding-top: 60px;
+    }
+    /*.cloc_s_page .wbl_section{
+            margin-top: 50px;    margin-bottom: 50px !important;
+    }*/
+    /*.wil_sec .wbl_section  {
+    padding-top: 75px;
+    padding-bottom: 75px;
+    }*/
+    .spek_sec_left .spek_head .p {
+        font-size: 20px;
+    }
+    .spek_sec_left .spek_head {
+        margin-bottom: 37px;
+    }
+    .includes_sec {
+        padding-top: 50px;    padding-bottom: 20px;
+    }
+    .spek_head .p{
+            font-size: 17px;
+    line-height: 26px;
+    }
+    .includes_sec .spek_head {
+        margin-bottom: 35px;
+    }
+    .step_item h3 {     margin-bottom: 13px;
+    min-height: 61px;   font-size: 25px;}
+   
+    .step_gcont button.btn.btn {
+        margin-top: 10px;
+    }
+    .step_item p {
+        min-height: 270px;
+    }
+    .clm-page .news-articles h2 {
+    padding: 0 !important;
+    margin: 0 !important;
+    }
+    .step_gcont div {
+        min-height: 250px;
+    }
+    .brige_color #why-mg h2 {
+    padding-bottom: 0;}
+    .clm-page .people_head {
+        padding-top: 50px;
+    }
 
-
+    .track_section h2, .val_page .wbl_section h3 {
+        font-size: 32px;
+    }
+    .val_page.liquidation .middleFullText.glpo_section .fullSubTxt {
+        padding: 0;
+    }
+    .val_page .wbl_section .wbl_left {
+        padding-right: 0;
+        padding-left: 30px;
+    }
+    .brige_color_sec {
+    padding-top:25px;
+    padding-bottom: 60px; 
+    }
+    .rtsec2.rtsec2_new {
+        margin-bottom: 50px;
+    }
+    .dpn-sec2 h3{
+            padding-bottom: 10px;
+    }
+     .restructure_land .banner-image{
+            margin-top: 180px;
+    }
+    .cyber_page .mgacademy_banner .banner-image {
+    margin-left: 90px;
+    margin-top: 0;
+    }
+    .cyber_page #banner-section {
+    padding-top: 60px;
+    padding-bottom: 50px;
+    }
+    .cyber_page .banner-content .banner-desc {
+        padding-top: 0;
+    }
+    .cyber_sec1 {
+    padding: 50px 0 35px 0;
+    }
+    .cyber_sec1 h3{
+        margin-bottom: 15px;
+    }
+    .cyber_page .mgacademy_banner.topleft_banner .banner-content {
+    margin-top: 25px;}
+    .cyber_sec1 h2, .cyber_sec2 .cyber_keep h2, .cyber_page .home #get-in-touch h2,
+    .cyber_page .mgacademy_banner.topleft_banner .banner-content .banner-heading, .cyber_sec3 h2 {
+        font-size: 35px;
+    }
+    .cyber_sec1 h2 {
+        margin-bottom: 20px;
+    }
+    .cyber_sec1 p{
+        font-size: 17px;
+    }
+    .cyber_sec2 .cyber_keep h2{
+            margin-bottom: 25px;
+    }
+    .cyberpl_grid h3 {
+    font-size: 33px;
+    min-height: 130px;
+    }
+    .cyberpl_grid h3 span {
+        font-size: 25px;
+    }
+    .cyberpl_grid>ul {
+    padding: 0 20px;}
+    .cyberpl_grid ul .cplan_ac {
+            padding: 17px 35px 17px 12px; font-size: 17px;
+    }
+    .cyberpl_grid{
+        padding-bottom: 35px;
+    min-height: 890px;
+    }
+    .cyberpl_grid .btn.btn-primary{
+        bottom: 40px;
+    }
+    .cyber_sec3 h2{
+            font-size: 32px;margin-bottom: 16px;
+    }
+    .cyber_sec3 ul li{
+            font-size: 17px;
+    }
+    .cyber_sec3 {
+        padding-bottom: 65px;
+    }
+    .cyber_sec2{
+        padding-bottom: 50px;
+    }
+    .cyber_page .home #get-in-touch {
+        padding-top: 50px;
+    }
+    ul.profe_row li h4{
+            font-size: 20px;
+    }
+    ul.profe_row li{
+        margin-bottom: 20px;
+    padding-bottom: 17px;
+    }
+    .clm-sec-is .container {
+        max-width: 960px;
+    }
+    .clm-sec-is .wbl_section .wbl_left{ padding-right:40px; }
+ 
+    .liqtestmon p {
+         min-height: 187px;
+    }
+    .liqtestmon h3, .liqtestmon h2 {
+        font-size: 28px;
+    }
 }
 @media screen and (max-width:1100px){
      .mg_slide_part .image-container{
@@ -12696,6 +13928,9 @@ button.btn.btn-primary{ margin-bottom:0; }
     }
 }
 @media screen and (max-width:991px){
+    .rtsec2 .container2 {
+        width: 100%;
+    }
     .wva_section.testi_section .wva_left,.wva_section.testi_section .wva_right{
         width:100%!important;
     }
@@ -14355,12 +15590,12 @@ button.btn.btn-primary{ margin-bottom:0; }
     }
     .restructure_land h2.banner-subheading {
     font-size: 17px;
-        margin: 0 0 20px 0;
+        margin: 0 0 20px 0; 
     }
     .restructure_land .innerpage-banner form br{ display:none; }
     .rtsec2 {
     margin-top: 0;
-    padding: 50px 0;
+    padding:40px 0 20px;
     }
     .liquidation .liq_rec_section.recovery-partner{
         margin-top: 55px;
@@ -14377,7 +15612,7 @@ button.btn.btn-primary{ margin-bottom:0; }
     .rtsec2 ul li:nth-child(2n+1) {
     clear: both;
     }
-    .ctestitem p {
+    .ctestitem p, .ctestitem div {
     font-size: 19px;
     line-height: 30px;
     }
@@ -14446,7 +15681,7 @@ button.btn.btn-primary{ margin-bottom:0; }
     }
      
     .spek_grid {
-        width: 50%;    margin-bottom: 0;
+        width: 50%;     margin-bottom: 20px;
     }
     .steps_nav li,
     .dpn-ban-sec .steps_nav li{
@@ -14457,7 +15692,7 @@ button.btn.btn-primary{ margin-bottom:0; }
     }
      
 
-    .liquidation .liq_rec_section.recovery-partner h1, .liquidation .liq_rec_section.recovery-partner h2, .bib_section h3, .ols_section h3, .liquidation .middleFullText.glpo_section .fullTxt, .ht_section .ht_right h2, .bib_section#testimonials h2, .liquidation .news-articles h2, .banner-content .banner-heading, .wva_section .wva_right h3, .wva_section .wva_right h2, .weva_section h3, .voluntary_administration .banner-content .banner-heading, .bankruptcy #why-mg h2, .canh_section h2, .sols_sec h2, .new_landing .news-list h2, .wbl_section h3, .incsteps_sec h2, .steps_tab h3, .restructure_land #testimonials h2, .spek_head h2, .midheading h2, .cinlpageidentifix .wva_left h3, .eligible_sec h2, .smallrestructure_land .liq_blocks h2, .smallpageidentifix .wva_left h3, .lun_sec h2, .grid_4_sec h2, .rtsec2 h2, .rt_testmon h3, .rtsec3 h3 {
+    .liquidation .liq_rec_section.recovery-partner h1, .liquidation .liq_rec_section.recovery-partner h2, .bib_section h3, .ols_section h3, .liquidation .middleFullText.glpo_section .fullTxt, .ht_section .ht_right h2, .bib_section#testimonials h2, .liquidation .news-articles h2, .banner-content .banner-heading, .wva_section .wva_right h3, .wva_section .wva_right h2, .weva_section h3, .voluntary_administration .banner-content .banner-heading, .bankruptcy #why-mg h2, .canh_section h2, .sols_sec h2, .new_landing .news-list h2, .wbl_section h3, .incsteps_sec h2, .steps_tab h3, .restructure_land #testimonials h2, .spek_head h2, .midheading h2, .cinlpageidentifix .wva_left h3, .eligible_sec h2, .smallrestructure_land .liq_blocks h2, .smallpageidentifix .wva_left h3, .lun_sec h2, .grid_4_sec h2, .rtsec2 h2, .rt_testmon h3, .rtsec3 h3, .cloc_s_page .wva_section.about_section .wva_right h3, .brige_color_sec h3, .clm-page .brige_color #why-mg h2, .brige_color,.brige_color2 #why-mg h2 {
         font-size: 32px;
     }
     .cinlpageidentifix .wva_left h3 {
@@ -14485,10 +15720,18 @@ button.btn.btn-primary{ margin-bottom:0; }
         font-size: 32px;
         max-width: 100%;
     }
-    .dpn-sec2 .rig-text{
+      .dpn-sec2 .rig-text{
         padding-top: 15px;
          padding-left: 15px;
+         padding-right: 15px;
          width: 100%;
+    }
+    .dpn-sec2 .row {
+        flex-direction: column-reverse;
+    }
+    .dpn-sec2 img.img-fluid {
+    display: block;
+    margin: 0 auto 15px;
     }
    
     .wva_section.dpntab_sec.dpn-doc-img1 .wva_right {
@@ -14662,7 +15905,8 @@ button.btn.btn-primary{ margin-bottom:0; }
         line-height: 30px;
         font-size: 17px;
     }
-    .clm-page .wva_section.mg_acnew4.dpn-sec1 .wva_left {
+    .clm-page .wva_section.mg_acnew4.dpn-sec1 .wva_left,
+    .cloc_s_page .wva_section.mg_acnew4.dpn-sec1.clm_wva .wva_left {
         margin-bottom: 0px!important;
         width: 100%;
     }
@@ -14670,7 +15914,7 @@ button.btn.btn-primary{ margin-bottom:0; }
         margin-left: 0;
     }
     .clm-page .wva_section.about_section.dpn-sec1 .wva_right {
-        padding-top: 20px!important;
+        padding-top: 35px!important;
         padding-bottom: 20px!important;
         max-width: 768px!important;    
         padding-left: 30px;
@@ -14722,13 +15966,215 @@ button.btn.btn-primary{ margin-bottom:0; }
     margin-bottom: 40px;
     }
     .smallrestructure_land .weva_section.doc3 img{ width:100%; }
-    .spek_item{
-            margin-bottom: 30px;
+     
+    .cloc_s_page .val_page.clm-sec-4 .wbl_section{
+            padding-top: 50px;
+    padding-bottom: 50px;
+    }
+    .cloc_s_page .wbl_section p:last-child {
+        margin: 0;
+    }
+    .order_reverce .wbl_section .wbl_right, .order_reverce .wbl_section .wbl_left,
+    .wil_sec .wbl_section .wbl_right, .wil_sec .wbl_section .wbl_left {
+        max-width: 100%;
+    }
+    .wil_sec .wbl_section .container,
+    .order_reverce .wbl_section .container {
+      display: block;
+    }
+    /*.wil_sec .wbl_section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    }*/
+    .wil_sec .wbl_left,
+    .order_reverce .wbl_left {
+    padding: 0 !important;
+    margin: auto;
+    display: block;
+    text-align: center;
+    margin-bottom: 38px;
+    }
+    .spek_sec_left .spek_head .p {
+        font-size: 19px;
+    }
+     
+    .step_item {
+        height: 100%;
+    }
+    .step_gcont div {
+        min-height: auto;
+    }
+    
+    .step_item h3, .brigeincludes_sec .step_grid .step_gcont h3{
+            font-size: 23px;
+    }
+    .news-articles a.btn.btn-primary.me-5{
+        margin-top: 43px;
     }
 
+
+    .val_page .rtsec3 {
+        padding-top: 0;
+    }
+    .val_page .ctestitem p {
+        font-size: 17px;
+    }
+    .val_page .ctestitem h4 {
+        font-size: 23px;
+    }
+    .val_page .wbl_section .container {
+        flex-wrap: wrap;
+    }
+    .val_page .wbl_section .wbl_right, .val_page .wbl_section .wbl_left {
+        max-width: 100%;
+    }
+    .val_page .wbl_section .wbl_right {
+        margin-bottom: 30px;
+    }
+    .val_page .wbl_section .wbl_left {
+        padding-left: 0;
+    }
+    .val_page .liq_blocks h3 {
+        font-size: 32px;
+    }
+    .bankruptcy.val_page .glpo_reco_section.va_glpo_reco_section .stepsCol {
+        width: 50%;
+    }
+    .smallpageidentifix .wva_left{ padding-bottom:0; }
+
+    .liqedpage_banner .banner-content .btn {
+    margin-top: 20px;
+    padding: 7px 25px;
+    }
+    .left-map iframe { width:100%; }
+
+    .brige_color_sec .row{
+        flex-direction: column-reverse;
+    }
+    .grid_7 {
+        width: 100%;
+    }
+    .grid_5 {
+        width: 100%;
+            text-align: center;
+    margin-bottom: 40px;
+    }
+
+    .liqtestmon .container2 {
+        width: 100%;
+    }
+    .liqtestmon .col-lg-5, .liqtestmon .col-lg-7 {
+        width: 100% !important;
+    }
+    .rtsec2.rtsec2_new {
+        margin-bottom: 30px;
+    }
+    .restructure_land .banner-image::before{
+        height: 400%;
+    }
+    .restructure_land .banner-image::after {
+        top: 0;
+    }
+    .restructure_land .banner-image {
+        padding-top: 0;
+    }
+    .dpn-sec2 p {    font-size: 17px;}
+
+    .cyber_page .mgacademy_banner.topleft_banner .col-xl-5 {
+        width:100%;
+    }
+    .cyber_page .mgacademy_banner.topleft_banner .col-xl-7 {
+        width: 100%;
+    }
+    .cyber_page .mgacademy_banner .banner-image {
+    margin-left: 0;}
+    .cyber_page .banner-image::after{
+            height: calc(350% + 71px);
+    }
+    .cyber_page .banner-content .banner-desc {
+    padding-top: 14px;
+    padding-bottom: 0;
+    }
+    .cyber_page .mgacademy_banner.topleft_banner .banner-content .banner-heading{
+        margin-bottom: 25px;
+    }
+    .cyber_page .mgacademy_banner.topleft_banner .banner-content {
+    margin-top: 35px;
+    margin-bottom: 0;
+    }
+    .cyber_sec1 h2, .cyber_sec2 .cyber_keep h2, .cyber_page .home #get-in-touch h2 {
+        font-size: 33px;
+    }
+    .cyberpl_grid {
+    min-height: auto;
+    max-width: 450px;
+    width: 100%;
+    margin: 0 auto 30px;
+    }
+    .cyberpl_row {
+    display: block;
+    }
+    .cyberpl_grid .btn.btn-primary{
+        position: initial; margin-top: 25px;
+    }
+    .cyberpl_grid ul .cplan_ac {    padding: 15px 35px 15px  12px; }
+    .cyber_sec3 .ht_cnt {
+    padding-left: 0;
+    padding-top: 35px;
+    }
+    .cyber_sec3 img.img-fluid {
+    display: block;
+    margin: auto;
+    }
+    .cyber_sec3 ul li{
+        margin-bottom: 10px; padding-left: 44px;
+    }
+    .cyber_sec3 ul li:before{
+            width: 30px;
+    height: 27px;background-size: contain;   
+    }
+    .cyber_sec3 {
+    padding-bottom: 45px;
+    }
+
+    .cyber_page .innerpage-banner h2.sub-banner-heading, .cyber_sec1 h3, .cyberpl_grid h3 span {
+        font-size: 25px;
+    }
+    ul.profe_row li:before{
+        left: 25px;
+    }
+    ul.profe_row li{
+            padding-left: 78px;
+    }
+
+    .restructure_land .breadcrumbs {
+    right: auto;
+    top: 0;
+    }
+    .restructure_land #banner-section {
+            padding: 50px 0px 49px;
+    } 
+    .liqtestmon p {
+    font-size: 17px;
+    max-width: 100%;
+    min-height: auto;
+    }
+    .liqtestmon h2 { 
+    max-width: 100%;
+    }
+    .liqtestmon h3, .liqtestmon h2 {
+    font-size: 32px;
+    }
+
+
 }
+
+
 @media screen and (max-width:767px){
 
+    .restructure_land2 .eligible_sec,
+.restructure_land2 .mg_identifix{ margin-bottom:40px; }
+    .rtsec3 h3{     margin-bottom:35px; }
     #banner-section.identi_bannersec {
         padding: 55px 0 0px;
     }
@@ -14865,7 +16311,7 @@ button.btn.btn-primary{ margin-bottom:0; }
     .ols_section {
         padding-bottom: 45px;
     }
-    .liquidation .liq_rec_section.recovery-partner h1, .liquidation .liq_rec_section.recovery-partner h2, .bib_section h3, .ols_section h3, .liquidation .middleFullText.glpo_section .fullTxt, .ht_section .ht_right h2, .bib_section#testimonials h2, .liquidation .news-articles h2, .banner-content .banner-heading, .wva_section .wva_right h3, .wva_section .wva_right h2, .weva_section h3, .voluntary_administration .banner-content .banner-heading, .bankruptcy #why-mg h2, .canh_section h2, .sols_sec h2, .new_landing .news-list h2, .wbl_section h3, .incsteps_sec h2, .steps_tab h3, .restructure_land #testimonials h2, .spek_head h2, .midheading h2, .cinlpageidentifix .wva_left h3, .eligible_sec h2, .smallrestructure_land .liq_blocks h2, .smallpageidentifix .wva_left h3, .lun_sec h2, .grid_4_sec h2, .rtsec2 h2, .rt_testmon h3, .rtsec3 h3 {
+    .liquidation .liq_rec_section.recovery-partner h1, .liquidation .liq_rec_section.recovery-partner h2, .bib_section h3, .ols_section h3, .liquidation .middleFullText.glpo_section .fullTxt, .ht_section .ht_right h2, .bib_section#testimonials h2, .liquidation .news-articles h2, .banner-content .banner-heading, .wva_section .wva_right h3, .wva_section .wva_right h2, .weva_section h3, .voluntary_administration .banner-content .banner-heading, .bankruptcy #why-mg h2, .canh_section h2, .sols_sec h2, .new_landing .news-list h2, .wbl_section h3, .incsteps_sec h2, .steps_tab h3, .restructure_land #testimonials h2, .spek_head h2, .midheading h2, .cinlpageidentifix .wva_left h3, .eligible_sec h2, .smallrestructure_land .liq_blocks h2, .smallpageidentifix .wva_left h3, .lun_sec h2, .grid_4_sec h2, .rtsec2 h2, .rt_testmon h3, .rtsec3 h3, .cloc_s_page .wva_section.about_section .wva_right h3, .brige_color_sec h3, .clm-page .brige_color #why-mg h2, .brige_color,.brige_color2 #why-mg h2 {
         font-size: 30px;
     }
     .glpo_reco_section .stepsCol, .glpo_reco_section.va_glpo_reco_section .stepsCol {
@@ -15495,9 +16941,9 @@ button.btn.btn-primary{ margin-bottom:0; }
     padding-left: calc(var(--bs-gutter-x)/ 2);
     }
 
-    .liquidation .grey_faq #why-mg {
+    /*.liquidation .grey_faq #why-mg {
         margin-top: 50px;
-    }
+    }*/
 
 
     .val_page.clm-sec-4 .wbl_section {
@@ -15537,7 +16983,7 @@ button.btn.btn-primary{ margin-bottom:0; }
         font-size: 16px;
     }
 
-    .rtsec2 ul li, .liqtestmon .ctestitem p, .canh_section .c_grid p, .ols_section ul li div p, .sols_item p, .people_head p {
+    .rtsec2 ul li, .liqtestmon .ctestitem p, .canh_section .c_grid p, .ols_section ul li div p, .sols_item p, .people_head p, .brige_color_sec p {
         font-size: 16px;
     }
 
@@ -15559,8 +17005,133 @@ button.btn.btn-primary{ margin-bottom:0; }
     }
 
     .sols_item a.btn, .sols_item button.btn{ opacity:1; }
+
+
+    .cloc_s_page .val_page .wbl_section .wbl_right{
+        padding-bottom: 20px;
+    }
+    .spek_sec_left .spek_head .p {
+        font-size: 17px;
+    }
+    .wil_sec .wbl_right,
+    .order_reverce .wbl_right {
+        margin-bottom: 0;
+    }
+   
+    .step_item h3, .brigeincludes_sec .step_grid .step_gcont h3{
+            min-height: auto;
+    }
+    .step_gcont button.btn.btn {
+        margin-top: 20px;
+    }
+
+    .bankruptcy.val_page .glpo_reco_section.va_glpo_reco_section .stepsCol {
+        width: 100%;
+    }
+    .val_page .recovery-plan .steps .stepsCol:not(:last-child) .numContainer:before {
+        display: none;
+    }
+    .val_page .liq_blocks h3 {
+        margin-bottom: 40px;
+    }
+    .track_section {
+        padding: 40px 0 50px;
+    }
+    .val_page .restructurenews-articles {
+        padding-bottom: 25px !important;
+    }
+    .liquidation .br_popup,
+    .restructure_land .br_popup {
+        position: fixed;
+    }
+    .lun_sec .container,.grid_4_sec .container {
+    padding-left: 20px;
+    padding-right: 20px;
+    }
+
+    .clm-page .wva_section.about_section.dpn-sec1 .wva_right{
+        padding-right: 20px !important;
+    }
+
+    .brige_color_sec { 
+    padding-bottom: 30px; 
+    }
+    .grid_5{
+        margin-bottom: 30px;
+    }
+    .val_page.val_page_new .weva_section .col-xl-7 {
+        margin-bottom: 40px;
+    }
+    .dpn-sec2{
+        padding: 20px 0 55px 0px;
+    }
+    .pa-top {
+        margin-top: 40px;
+    }
+
+    .cyberpl_grid h3 {
+    font-size: 30px;
+    min-height: 110px;
+    }
+    .cyberpl_grid h3 span {
+        font-size: 23px;
+    }
+    ul.profe_row li {
+        padding-left: 60px;
+    }
+    ul.profe_row li:before {
+    left: 16px;
+    width: 26px;
+    height: 24px;
+    background-size: contain;
+    }   
+    .clm-sec-is .container {
+        max-width: 540px;
+    }
+    .clm-sec-is .wbl_section .wbl_left {
+    padding-right: 0;
+    padding-bottom: 35px;
+    }
+    .clm-sec-is .wbl_section .wbl_right{
+            margin-bottom: 0;
+    }
+    .cloc_s_page .val_page.clm-sec-4 .wbl_section{ margin-bottom:0; }
+
+    .step_item h3,.brigeincludes_sec .step_grid .step_gcont h3 {
+        font-size: 21px;
+    }
+    .step_row .react-multi-carousel-list {
+        padding-bottom: 59px;
+    }
+    .step_row .react-multi-carousel-dot button{
+        width:35px;
+    }
+
+    .hubspot_popup .popup_dialog {
+        height: 85%;
+    }
+    .hubspot_popup .popup_dialog .modal-content {
+        height: 100%;
+    }
+    .hubspot_popup .popup_body {
+        max-height: 100%;
+    }
+    .cr_video_pp.br_popup {
+    position: fixed;
+    height: 100%;
+    }
+     .liqtestmon h3, .liqtestmon h2 {
+    font-size: 30px;
+    }
+    .liqtestmon h3{
+         margin-bottom: 20px;
+    }
+
+
 }
 @media screen and (max-width:667px){
+
+
     .ol_list h2 {
         font-size: 34px;
     }
@@ -15584,7 +17155,14 @@ button.btn.btn-primary{ margin-bottom:0; }
         font-size: 17px;
     }
 
-
+    .cyber_sec1 h2, .cyber_sec2 .cyber_keep h2, .cyber_page .home #get-in-touch h2, .cyber_page .mgacademy_banner.topleft_banner .banner-content .banner-heading, .cyber_sec3 h2 {
+        font-size: 30px;
+    }
+    .cyber_sec3 h2 {
+    font-size: 30px;}
+    .cyberpl_row{
+            margin-bottom: 20px;
+    } 
    
 }
 @media screen and (max-width:640px){
@@ -15650,7 +17228,11 @@ button.btn.btn-primary{ margin-bottom:0; }
     }
     .mg_slide_part .carousel .control-next.control-arrow {
     right: -50px;
-}
+    }
+    .cyber_page .innerpage-banner h2.sub-banner-heading, .cyber_sec1 h3, .cyberpl_grid h3 span {
+    font-size: 23px;
+    line-height: normal;
+    }
    
 }
 @media screen and (min-width:567px){
@@ -15659,13 +17241,16 @@ button.btn.btn-primary{ margin-bottom:0; }
 }
 @media screen and (max-width:568px){
 
+    .step_item p{ min-height:auto; }
     .rtsec3 .carousel_row {
         margin: 0;
     }
+    .step_grid{ border:0; padding:0; }
+    .step_row{ margin:0; }
     .rtsec3 li.react-multi-carousel-item{
             padding: 0 20px;
     }
-    .ctestitem p {
+    .ctestitem p, .ctestitem div {
     font-size: 18px;
     line-height: 28px;
     }
@@ -15899,6 +17484,11 @@ button.btn.btn-primary{ margin-bottom:0; }
         font-size: 16px;
     }
 
+    .track_section h2, .val_page .wbl_section h3 {
+        font-size: 30px;
+    }
+
+
 }
 @media screen and (max-width:533px){
     .ps_bot h2 {
@@ -15928,7 +17518,7 @@ button.btn.btn-primary{ margin-bottom:0; }
     .testimonial-main1 p {
         font-size: 23px;
     }
-    .liquidation .liq_rec_section.recovery-partner h1, .liquidation .liq_rec_section.recovery-partner h2, .bib_section h3, .ols_section h3, .liquidation .middleFullText.glpo_section .fullTxt, .ht_section .ht_right h2, .bib_section#testimonials h2, .liquidation .news-articles h2, .banner-content .banner-heading, .wva_section .wva_right h3, .wva_section .wva_right h2, .weva_section h3, .voluntary_administration .banner-content .banner-heading, .bankruptcy #why-mg h2, .canh_section h2, .sols_sec h2, .new_landing .news-list h2, .wbl_section h3, .incsteps_sec h2, .steps_tab h3, .restructure_land #testimonials h2, .spek_head h2, .midheading h2, .cinlpageidentifix .wva_left h3, .eligible_sec h2, .smallrestructure_land .liq_blocks h2, .smallpageidentifix .wva_left h3, .lun_sec h2, .grid_4_sec h2, .rtsec2 h2, .rt_testmon h3, .rtsec3 h3 {
+    .liquidation .liq_rec_section.recovery-partner h1, .liquidation .liq_rec_section.recovery-partner h2, .bib_section h3, .ols_section h3, .liquidation .middleFullText.glpo_section .fullTxt, .ht_section .ht_right h2, .bib_section#testimonials h2, .liquidation .news-articles h2, .banner-content .banner-heading, .wva_section .wva_right h3, .wva_section .wva_right h2, .weva_section h3, .voluntary_administration .banner-content .banner-heading, .bankruptcy #why-mg h2, .canh_section h2, .sols_sec h2, .new_landing .news-list h2, .wbl_section h3, .incsteps_sec h2, .steps_tab h3, .restructure_land #testimonials h2, .spek_head h2, .midheading h2, .cinlpageidentifix .wva_left h3, .eligible_sec h2, .smallrestructure_land .liq_blocks h2, .smallpageidentifix .wva_left h3, .lun_sec h2, .grid_4_sec h2, .rtsec2 h2, .rt_testmon h3, .rtsec3 h3, .cloc_s_page .wva_section.about_section .wva_right h3, .brige_color_sec h3, .clm-page .brige_color #why-mg h2, .brige_color,.brige_color2 #why-mg h2 {
         font-size: 26px;
         line-height: 1.2;
     }
@@ -16114,6 +17704,9 @@ button.btn.btn-primary{ margin-bottom:0; }
      
     line-height: 25px;
     }
+    .liqtestmon h3 {    font-size: 33px;}
+
+
 }
 @media screen and (max-width:480px){
     .dpn_page .accordion-button {
@@ -16321,7 +17914,21 @@ button.btn.btn-primary{ margin-bottom:0; }
     .clm-page .accordion-body p strong{
         margin-top:15px!important;
     }
-
+     .val_page .liq_blocks h3 {
+        font-size: 28px;
+        line-height: 1.2;
+    }
+    .cyber_sec1 h2, .cyber_sec2 .cyber_keep h2, .cyber_page .home #get-in-touch h2 {
+    font-size: 29px;
+    line-height: 1.2;
+    }
+    .liqtestmon h2{
+        font-size: 26px;
+    }
+    .liqtestmon p {    font-size: 16px;}
+    .liqtestmon h3 {
+        font-size: 26px;
+    }
 }
 @media screen and (max-width:460px){
     .mg_slide_part .container li {
@@ -16338,8 +17945,12 @@ button.btn.btn-primary{ margin-bottom:0; }
     width: 90%;
     vertical-align: middle;
     }
+    .brige_color_sec p br{
+        display: none;
+    }
 }
 @media screen and (max-width:440px){
+    .rtsec3 h3{     margin-bottom:25px; }
     .dpnbanner_sec h1.banner-heading {
         font-size: 29px;
     }
@@ -16495,7 +18106,7 @@ button.btn.btn-primary{ margin-bottom:0; }
     .rtsec2 {
         padding: 41px 0 15px;
     }
-    .ctestitem p {
+    .ctestitem p, .ctestitem div {
     font-size: 17px;
     line-height: 27px;
     }
@@ -16607,7 +18218,90 @@ button.btn.btn-primary{ margin-bottom:0; }
     .liquidation .liq_rec_section.recovery-partner{
         margin-top: 30px;
     }
+    .left-map iframe{
+            height: 270px;
+    }
+    /*.cloc_s_page .wbl_section {
+    margin-top: 30px;
+    margin-bottom: 30px !important;
+    }*/
+    .track_section h2, .val_page .wbl_section h3 {
+        font-size: 26px;
+    }
+    .spek_item .btn {
+        position: initial;
+    }
+    .step_item h3,.brigeincludes_sec .step_grid .step_gcont h3 {
+        font-size: 21px;
+    }
+    .track_section h2, .val_page .wbl_section h3 {
+        font-size: 28px;
+    }
+     .dpn-sec2 p {    font-size: 16px;}
+     .cyber_page .mgacademy_banner.topleft_banner .banner-content {
+        margin-top: 30px;
+    }
+    .cyber_sec1 h2, .cyber_sec2 .cyber_keep h2, .cyber_page .home #get-in-touch h2 {
+    font-size: 25px;}
+     .cyberpl_grid h3 {
+    font-size: 29px;
+    min-height: 93px;
+    }
+    .cyber_page .innerpage-banner h2.sub-banner-heading, .cyber_sec1 h3, .cyberpl_grid h3 span {
+        font-size: 21px;
+    }
+    .cyberpl_grid h3 span {
+    font-size: 21px;
+    }
+    .cyber_sec3 h2 {
+    font-size: 26px;
+    }
+    .cyber_page .home #get-in-touch {
+        padding-top: 35px;
+    }
+    .cyber_sec3 ul li{
+            line-height: 24px;
+    }
+    .cyber_sec3 .ht_cnt{
+            padding-top: 25px;
+    }
+    .cyber_page #banner-section {
+    padding-top: 40px;
+    padding-bottom: 35px;
+    }
+    .cyber_sec1 p {
+    font-size: 16px;
+    line-height: 26px;
+    }
+    .cyber_sec2 .cyber_keep p{
+            font-size: 16px;
+    }
+    .cloc_s_page .val_page.clm-sec-4 .wbl_section {
+    padding-top: 31px;
+    padding-bottom: 47px;
+    }
+    .order_reverce .wbl_section, .clm-sec-4.wil_sec .wbl_section{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    }
+    ul.profe_row li h4 {
+    font-size: 18px;
+    line-height: 1.3;
+    }
+    ul.profe_row li {
+        padding-left: 38px;
+    }
+    ul.profe_row li:before {
+    left: 6px;
+    width: 20px;
+    height: 19px;}
+    .speakprof_sec {
+    padding-bottom: 25px;
+    }
 
+    .restructure_land #banner-section {
+            padding: 40px 0px 30px;
+    }
 
 }
 @media screen and (max-width:414px){
@@ -16686,7 +18380,7 @@ button.btn.btn-primary{ margin-bottom:0; }
     }
         
 
-    .liquidation .liq_rec_section.recovery-partner h1, .liquidation .liq_rec_section.recovery-partner h2, .bib_section h3, .ols_section h3, .liquidation .middleFullText.glpo_section .fullTxt, .ht_section .ht_right h2, .bib_section#testimonials h2, .liquidation .news-articles h2, .banner-content .banner-heading, .wva_section .wva_right h3, .wva_section .wva_right h2, .weva_section h3, .voluntary_administration .banner-content .banner-heading, .bankruptcy #why-mg h2, .canh_section h2, .sols_sec h2, .new_landing .news-list h2, .wbl_section h3, .incsteps_sec h2, .steps_tab h3, .restructure_land #testimonials h2, .spek_head h2, .midheading h2, .cinlpageidentifix .wva_left h3, .eligible_sec h2, .smallrestructure_land .liq_blocks h2, .smallpageidentifix .wva_left h3, .lun_sec h2, .grid_4_sec h2, .rtsec2 h2, .rt_testmon h3, .rtsec3 h3{
+    .liquidation .liq_rec_section.recovery-partner h1, .liquidation .liq_rec_section.recovery-partner h2, .bib_section h3, .ols_section h3, .liquidation .middleFullText.glpo_section .fullTxt, .ht_section .ht_right h2, .bib_section#testimonials h2, .liquidation .news-articles h2, .banner-content .banner-heading, .wva_section .wva_right h3, .wva_section .wva_right h2, .weva_section h3, .voluntary_administration .banner-content .banner-heading, .bankruptcy #why-mg h2, .canh_section h2, .sols_sec h2, .new_landing .news-list h2, .wbl_section h3, .incsteps_sec h2, .steps_tab h3, .restructure_land #testimonials h2, .spek_head h2, .midheading h2, .cinlpageidentifix .wva_left h3, .eligible_sec h2, .smallrestructure_land .liq_blocks h2, .smallpageidentifix .wva_left h3, .lun_sec h2, .grid_4_sec h2, .rtsec2 h2, .rt_testmon h3, .rtsec3 h3, .cloc_s_page .wva_section.about_section .wva_right h3, .brige_color_sec h3, .clm-page .brige_color #why-mg h2, .brige_color,.brige_color2 #why-mg h2{
             font-size: 25px;
     }
 
@@ -17626,7 +19320,9 @@ button.btn-close {
     button.btn-close {
         right: 8px;
         top: 9px;
-}
+    }
+
+
 }
 
 .service.contact .ca_sec2.ca_sec2_n {
@@ -17663,322 +19359,109 @@ button.btn-close {
         margin-bottom: 15px;
     }
 }
+ 
 
+/*perth styles start*/
 
-/*voluntary administration landing page styles start*/
-
-.val_page .banner-image::before {
-    background: #154f3a;
+.company_liquidation_perth.restructure_land .banner-heading {
+    color: #13513c;
 }
-.val_page .banner-image::after {
-    background: #e0e3e5;
-}
-.val_page .banner-heading, .val_page h2.banner-subheading  {
-    color: #eae7db;
-}
-.val_page .banner-content ul li label {
-    color: #fff;
-}
-.val_page .banner-content button.btn.btn-primary.d-block {
-    background-color: #eae7db;
-    color: #154f3a;
-}
-.val_page .rtsec3 {
-    padding-top: 127px;
-}
-.val_page .wbl_section {
-    background-color: #eff1f2;
-    padding-top: 63px;
-    padding-bottom: 44px
-}
-.val_page .wbl_section .wbl_right {
-    order: 0;
-    margin: 0;
-}
-.val_page .wbl_section .wbl_left {
-    max-width: 490px;
-    margin-left: auto;
-}
-.val_page .wbl_section h3 {
-    font-size: 44px;
+.mg_identifix.mg_identifix1 .wva_left h3 {
     line-height: 1.2;
-    margin-bottom: 18px;
+    font-size: 36px;
+    color: #1c5e48;
 }
-.val_page .wbl_section p {
-    margin-bottom: 27px;
+.mg_identifix.mg_identifix1 .wva_right::before {
+    top: inherit;
+    bottom: 0;
+    background-color: #ebe9dd;
 }
-.val_page .liq_blocks h3 {
-    text-align: center;
-    color: #000;
-    font-size: 44px;
-    margin: 0 0 81px;
-    line-height: 1;
+.mg_identifix.mg_identifix1 {
+    margin-top: 112px;
 }
-.val_page .weva_section {
-    text-align: center;
-
+.mg_identifix.mg_identifix1 .wva_right:after {
+    bottom: inherit;
+    top: 0;
+    background-color: #dfe3e6;
+    height: calc(100% + 176px);
 }
-.val_page.bankruptcy .weva_section .btn {
-    font-size: 16px;
-    padding: 15px 33px 11px;
-}
-.bankruptcy.val_page .glpo_reco_section.va_glpo_reco_section .stepsCol {
-    width: 25%;
-}
-.bankruptcy.val_page .glpo_reco_section.recovery-plan .subTxt {
-    padding: 0 30px;
-}
-.val_page.liquidation .middleFullText.glpo_section .fullSubTxt {
-    padding: 0 200px;
-    font-size: 20px;
-    line-height: 1.5;
-}
-.val_page .glpo_reco_section.va_glpo_reco_section .stepsCol:last-of-type {
-    padding: 0 40px;
-}
-.val_page .glpo_reco_section.recovery-plan .stepsCol:last-of-type .subTxt {
-    padding: 0;
-}
-.recovery-plan .steps .stepsCol:not(:last-child) .numContainer:before {
-    border-bottom: 2px solid #1c5e48;
-    content: "";
-    display: block;
-    left: 50%;
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    z-index: -1;
-}
-.val_page .glpo_reco_section.recovery-plan .num {
-    padding-left: 60px;
-    padding-right: 60px;
-}
-.val_page .middleFullText.glpo_section .fullTxt {
-    padding-top: 0;
-    color: #000;
-}
-.val_page.liquidation .middleFullText.glpo_section .fullSubTxt{ color:#000; }
-.val_page .recovery-plan.va_glpo_reco_section {
-    padding-bottom: 144px;
-}
-.val_page .recovery-plan .subTxt {
-    color: #000000;
-}
-.val_page #why-mg h2 {
-    text-align: center;
+.mg_identifix.mg_identifix1 .wva_left {
+    padding-top: 140px;
 }
 
-.track_section {
-    background-color: #154f3a;
-    text-align: center;
-    padding: 63px 0 69px;
-    margin-bottom: 84px;
-}
-.track_section h2 {
-    font-size: 44px;
-    color: #eae7db;
-    margin: 0 0 31px;
-    font-family: 'reckless_neue_trialregular', serif, 'Times New Roman';
-    font-weight: 500;
-}
-.track_section .btn {
-    margin: 0;
-    background-color: #eae7db;
-    color: #154f3a;
-    margin-right: 0 !important;
-}
-.val_page .news-list {
-    padding-top: 98px;
-}
-.val_page .new_landing .news-list h2 {
-    margin-bottom: 39px;
-}
-.val_page #testimonials {
-    padding-bottom: 128px;
-    padding-top: 35px;
-}
-.val_page #testimonials h2 {
-    color: #000000;
-    line-height: 1.227;
+.spek_sec_left.spek_sec_left1 {
+    padding-top: 55px;
 }
 
-@media screen and (max-width:1700px){
-    .val_page .news-list {
-        padding-top: 70px;
-    }
-    .val_page .recovery-plan.va_glpo_reco_section {
-        padding-bottom: 75px;
-    }
-    .val_page #testimonials {
-        padding-bottom: 80px;
-        padding-top: 0;
-    }
-    .val_page .restructurenews-articles {
-        padding-bottom: 60px !important;
-    }
-    .track_section {
-        margin-bottom: 50px;
-    }
-    .track_section h2, .val_page .wbl_section h3 {
-        font-size: 40px;
-    }
-    .bankruptcy.val_page .glpo_reco_section.recovery-plan .subTxt {
-        padding: 0 20px;
-    }
-}
-@media screen and (max-width:1600px){
-    .val_page .ctestitem p {
-        font-size: 18px;
-        line-height: 1.7;
-    }
-    .val_page .ctestitem h4 {
-        font-size: 25px;
-    }
-    .val_page .rtsec3 {
-        padding-top: 70px;
-    }
-}
 @media screen and (max-width:1500px){
-    .track_section h2, .val_page .wbl_section h3 {
-        font-size: 36px;
+    .mg_identifix.mg_identifix1 {
+        margin-top: 70px;
     }
 }
 @media screen and (max-width:1400px){
-    .val_page .new_landing .news-list h2 {
-        margin-bottom: 20px;
-    }
-    .val_page .news-list {
-        padding-top: 50px;
-    }
-    .wbl_right img {
-        max-width: 100%;
+    .spek_sec_left.spek_sec_left1 {
+        padding-top: 25px;
     }
 }
 @media screen and (max-width:1200px){
-    .track_section h2, .val_page .wbl_section h3 {
-        font-size: 32px;
+    .mg_identifix.mg_identifix1 .wva_right:after {
+        height: calc(100% + 300px);
     }
-    .val_page.liquidation .middleFullText.glpo_section .fullSubTxt {
-        padding: 0;
+    .mg_identifix.mg_identifix1 .wva_left {
+        padding-bottom: 85px;
     }
-    .val_page .wbl_section .wbl_left {
-        padding-right: 0;
-        padding-left: 30px;
+    .spek_sec_left.spek_sec_left1 {
+        padding-bottom: 60px;
     }
 }
 @media screen and (max-width:991px){
-    .val_page .rtsec3 {
-        padding-top: 0;
-    }
-    .val_page .ctestitem p {
-        font-size: 17px;
-    }
-    .val_page .ctestitem h4 {
-        font-size: 23px;
-    }
-    .val_page .wbl_section .container {
-        flex-wrap: wrap;
-    }
-    .val_page .wbl_section .wbl_right, .val_page .wbl_section .wbl_left {
-        max-width: 100%;
-    }
-    .val_page .wbl_section .wbl_right {
-        margin-bottom: 30px;
-    }
-    .val_page .wbl_section .wbl_left {
+    .mg_identifix.mg_identifix1 .wva_left {
+        padding-top: 30px;
         padding-left: 0;
+        padding-right: 30px;
     }
-    .val_page .liq_blocks h3 {
-        font-size: 32px;
+    .mg_identifix.mg_identifix1 .wva_left h3 {
+        font-size: 31px;
     }
-    .bankruptcy.val_page .glpo_reco_section.va_glpo_reco_section .stepsCol {
-        width: 50%;
+    .mg_identifix.mg_identifix1 .wva_right:after {
+        height: calc(100% + 370px);
     }
-    .smallpageidentifix .wva_left{ padding-bottom:0; }
-
-    .liqedpage_banner .banner-content .btn {
-    margin-top: 20px;
-    padding: 7px 25px;
-    }
-
-
 }
 @media screen and (max-width:767px){
-    .bankruptcy.val_page .glpo_reco_section.va_glpo_reco_section .stepsCol {
-        width: 100%;
+    .mg_identifix.mg_identifix1 .wva_right:after {
+        height: calc(100% + 440px);
     }
-    .val_page .recovery-plan .steps .stepsCol:not(:last-child) .numContainer:before {
-        display: none;
+    .mg_identifix.mg_identifix1 .wva_left {
+        padding-bottom: 60px;
     }
-    .val_page .liq_blocks h3 {
-        margin-bottom: 40px;
-    }
-    .track_section {
-        padding: 40px 0 50px;
-    }
-    .val_page .restructurenews-articles {
-        padding-bottom: 25px !important;
-    }
-    .liquidation .br_popup,
-    .restructure_land .br_popup {
-        position: fixed;
-    }
-    .lun_sec .container,.grid_4_sec .container {
-    padding-left: 20px;
-    padding-right: 20px;
-    }
-
-
 }
-@media screen and (max-width:568px){
-    .track_section h2, .val_page .wbl_section h3 {
-        font-size: 30px;
+@media screen and (max-width:640px){
+    .mg_identifix.mg_identifix1 .wva_left h3 {
+        font-size: 28px;
+    }
+}
+@media screen and (max-width:533px){
+    .mg_identifix.mg_identifix1 .wva_right:after {
+        height: calc(100% + 380px);
     }
 }
 @media screen and (max-width:480px){
-    .val_page .liq_blocks h3 {
-        font-size: 28px;
-        line-height: 1.2;
+    .mg_identifix.mg_identifix1 .wva_right:after {
+        height: calc(100% + 400px);
+    }
+    .mg_identifix.mg_identifix1 .wva_left h3 {
+        font-size: 25px;
     }
 }
 @media screen and (max-width:440px){
-    .track_section h2, .val_page .wbl_section h3 {
-        font-size: 28px;
+    .mg_identifix.mg_identifix1 .wva_right:after {
+        height: calc(100% + 470px);
+    }
+}
+@media screen and (max-width:400px){
+    .mg_identifix.mg_identifix1 .wva_right:after {
+        height: calc(100% + 560px);
     }
 }
 
-/**/
-.cloc_s_page .wbl_section{
-    background: #dde1e3; margin-top: 66px;
-}
- 
-.wil_sec .wbl_section{
-    padding-top: 158px;
-    padding-bottom: 132px;
-} 
-.wil_sec .wbl_section .wbl_left {
-    margin-right: 75px;
-}
-.wil_sec .wbl_section p:last-child {
-    margin-bottom: 0;
-}
-.spek_sec_left {
-    padding: 135px 0px 80px 0px;
-}
-.spek_sec_left .spek_head {
-    text-align: left; margin-bottom: 70px;
-}
-.spek_sec_left .spek_head .p{
-        font-size: 26px;
-}
-.cloc_s_page .wva_section.about_section.dpn-sec1 .wva_right {
-    padding-top: 90px!important;
-    padding-bottom: 0px!important;
-    
-}
-.cloc_s_page .wva_section.about_section .wva_right h3{
-        margin-bottom: 23px;    font-size: 36px;
-}
-.cloc_s_page .wva_section.mg_acnew4.dpn-sec1 .wva_left {
-    margin-bottom: 69px!important;
-}
+/*perth styles end*/
