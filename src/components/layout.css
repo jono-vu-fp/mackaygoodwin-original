@@ -9275,9 +9275,9 @@ button.btn.btn-primary{ margin-bottom:0; }
 .step_grid:nth-child(4) .step_item h3{
     color: #000;
 }
-.clm-page .wva_section {
+/*.clm-page .wva_section {
     margin-bottom: 0 !important;
-}
+}*/
 .includes_sec {
     padding-top: 86px;
 }
@@ -10178,6 +10178,8 @@ ul.profe_row li p {
 .rdpdpn-sec5 .rig-text{
     padding-right: 61px;
 }
+.liquidation_servpage .banner-image::before{    background: #ebe9de;}
+.brige_color.brige_color2 #why-mg h2{ text-align:center; }
 
 /****** BreakPoints *******/
 /****** Responsive Start *******/

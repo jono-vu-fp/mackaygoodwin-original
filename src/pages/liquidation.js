@@ -62,7 +62,7 @@ const ConsultBusiness = ({ data }) => {
 
   const [fromEbookDetails, setFormEbookDetails] = React.useState(0);
   const valueEbook = { fromEbookDetails, setFormEbookDetails };
-  return (<div className="service restructure consult-business liquidation">
+  return (<div className="service restructure consult-business liquidation liquidation_servpage">
     <Layout>
       <Seo title={data.wpPage.metaFields?.metaTitle} description={data.wpPage.metaFields?.metaDescription} />
       <TopBanner
@@ -154,7 +154,7 @@ const ConsultBusiness = ({ data }) => {
           <div className="wbl_left">
             <h3>{data.wpPage.liquidation.businessTitle}</h3>
             <p>{data.wpPage.liquidation.businessDesc}</p>
-            {data.wpPage.liquidation.enquire !== null && data.wpPage.liquidation.enquire !== "" ? <Link className="btn btn-primary me-5" target="_blank" to={data.wpPage.liquidation.enquire}>Learn More</Link> : ""}
+            {data.wpPage.liquidation.enquire !== null && data.wpPage.liquidation.enquire !== "" ? <Link className="btn btn-primary me-5" target="_blank" to={data.wpPage.liquidation.enquire}>Learn more</Link> : ""}
           </div>
         </div>
       </div>
@@ -238,13 +238,16 @@ const ConsultBusiness = ({ data }) => {
                 </Link>
               </div>
      </div>
-            <div className="bankruptcy service grey_faq pa-top">
-               <Accordian
+
+     <div className="service bankruptcy brige_color brige_color2 pa-top">
+                 <Accordian
             title="Liquidation FAQs"
             showEnquireButton={false}
             data={FAQs}
           />
-          </div>
+              </div>
+
+            
 
             <div class="liquidation_land"> 
             <div class="vcfo_section na_section new_landing"> 
