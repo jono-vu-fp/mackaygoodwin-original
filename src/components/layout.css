@@ -4791,6 +4791,8 @@ img.recovery-partner-img {
     margin: 0 0 22px;
     padding: 0;
 }
+.br_popup .brp_inner .brp_left .brp_desc a{  color: #000000;
+    font-size: 18px;}
 .br_popup .brp_inner .brp_left .brp_desc p {
     margin-bottom: 0;
 }
@@ -10181,6 +10183,26 @@ ul.profe_row li p {
 .liquidation_servpage .banner-image::before{    background: #ebe9de;}
 .brige_color.brige_color2 #why-mg h2{ text-align:center; }
 
+.rddca_section.fd_section.wva_section .wva_left:after {
+    top: 0;
+    bottom: inherit;
+}
+.rddca_section.fd_section.wva_section .wva_left:before {
+    top: -70px;
+    height: 421px;
+}
+.rddca_section.fd_section.wva_section {
+    margin-top: 80px;
+}
+.rddca_section.fd_section.wva_section .wva_right {
+    padding-top: 70px;
+}
+
+.home #get-in-touch h3 a {
+    color: #000000;
+    font-size: 20px;
+}
+
 /****** BreakPoints *******/
 /****** Responsive Start *******/
 @media screen and (min-width:1400px){
@@ -10356,7 +10378,7 @@ ul.profe_row li p {
     .bankruptcy .wva_section .wva_right {
         padding-bottom: 60px;
     }
-    .br_popup .brp_inner .brp_left .brp_desc {
+    .br_popup .brp_inner .brp_left .brp_desc, .br_popup .brp_inner .brp_left .brp_desc a {
         font-size: 17px;
     }
     .br_popup .brp_inner .brp_left {
@@ -10412,9 +10434,9 @@ ul.profe_row li p {
         padding-top: 70px;
         padding-bottom: 60px;
     }
-    .home #get-in-touch h3 {
+    .home #get-in-touch h3, .home #get-in-touch h3 a{
         font-size: 18px;
-    }
+    } 
     .home #awards, .about_awards#awards {
         padding-top: 60px;
     }
@@ -11306,6 +11328,7 @@ ul.profe_row li p {
         margin-bottom: 15px;
         font-size: 16px;
     }
+    .br_popup .brp_inner .brp_left .brp_desc a{ font-size: 16px;}
     .br_popup .brp_inner .brp_left {
         padding: 25px 30px 30px;
     }
@@ -11841,7 +11864,7 @@ ul.profe_row li p {
     .home #get-in-touch {
         padding-top: 55px;
     }
-    .home #get-in-touch h3 {
+    .home #get-in-touch h3, .home #get-in-touch h3 a {
         margin-bottom: 10px;
     }
     .vcfo_section .vcfo_left {
@@ -12446,6 +12469,10 @@ ul.profe_row li p {
     }
     .dpn-sec2 h3, .focus_sec h2 {
         font-size: 36px;
+    }
+    .rddca_section.fd_section.wva_section {
+        margin-top: 60px;
+        margin-bottom: 70px;
     }
 }
 @media screen and (max-width:1300px){
@@ -13115,7 +13142,7 @@ ul.profe_row li p {
     .home #get-in-touch h2 {
         margin-bottom: 15px;
     }
-    .home #get-in-touch h3 {
+    .home #get-in-touch h3, .home #get-in-touch h3 a {
         font-size: 16px;
     }
     .home #awards, .about_awards#awards {
@@ -14139,6 +14166,14 @@ ul.profe_row li p {
     .focus_sec {
     padding-bottom: 40px;
     padding-top: 38px;
+    }
+
+    .rddca_section.fd_section.wva_section .wva_left:before {
+        top: -30px;
+        height: 342px;
+    }
+    .rddca_section.fd_section.wva_section {
+        margin-top: 30px;
     }
 
 
@@ -16412,6 +16447,18 @@ ul.profe_row li p {
     padding: 50px 0 50px;
     margin-bottom: 40px;
     }
+    .rddca_section.fd_section.wva_section .wva_left:before {
+        top: -50px;
+        height: 515px;
+    }
+    .rddca_section.fd_section.wva_section {
+        margin-top: 50px;
+    }
+    .rddca_section.fd_section.wva_section .wva_right {
+        padding-top: 0;
+        padding-left: 30px;
+        padding-right: 0;
+    }
 
 }
 
@@ -17438,6 +17485,9 @@ ul.profe_row li p {
     .cyberpl_row{
             margin-bottom: 20px;
     } 
+    .rddca_section.fd_section.wva_section .wva_left:before {
+        height: 394px;
+    }
    
 }
 @media screen and (max-width:640px){
@@ -17762,6 +17812,9 @@ ul.profe_row li p {
     .track_section h2, .val_page .wbl_section h3 {
         font-size: 30px;
     }
+    .rddca_section.fd_section.wva_section .wva_left:before {
+        height: 402px;
+    }
 
 
 }
@@ -17980,6 +18033,10 @@ ul.profe_row li p {
     line-height: 25px;
     }
     .liqtestmon h3 {    font-size: 33px;}
+
+    .rddca_section.fd_section.wva_section .wva_left:before {
+        height: 402px;
+    }
 
 
 }
@@ -18211,6 +18268,10 @@ ul.profe_row li p {
     }
     .testimonial-mainnew .desc h2{
             font-size: 22px;
+    }
+
+    .rddca_section.fd_section.wva_section .wva_left:before {
+        height: 343px;
     }
 
 
@@ -18598,6 +18659,9 @@ ul.profe_row li p {
     .rdpdpn-sec5 p strong {
         font-size: 18px;
     }
+    .rddca_section.fd_section.wva_section .wva_left:before {
+        height: 307px;
+    }
 }
 @media screen and (max-width:414px){
     .ps_bot h2 {
@@ -18653,6 +18717,12 @@ ul.profe_row li p {
     .mg_slide_part .carousel .control-next.control-arrow {
     right: -45px;
 }
+    .rddca_section.fd_section.wva_section .wva_right {
+        padding-left: 25px;
+    }
+    .rddca_section.fd_section.wva_section .wva_left:before {
+        height: 264px;
+    }
      
    
 }
