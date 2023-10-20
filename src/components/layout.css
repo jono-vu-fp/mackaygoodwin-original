@@ -7876,7 +7876,7 @@ section.dpn_optoins {
     text-align: center;    margin-bottom: 70px;
 }
 .spek_head h2{
-        color: #000000;
+        color: #1c5e48;
     font-size: 44px;
     margin-bottom: 36px;
     font-family: reckless_neue_trialregular;
@@ -8422,6 +8422,7 @@ section.incsteps_sec {
     font-size: 18px;
     line-height: 28px;
 }
+.eligible_sec h3 *{ margin:0; line-height:normal; }
 
 .align-center{ text-align:center; }
 .smallrestructure_land .sols_sec {
@@ -9596,7 +9597,7 @@ button.btn.btn-primary{ margin-bottom:0; }
     justify-content: space-between; margin-bottom: 50px;
 }
 .cyberpl_grid {
-    width: 31%;
+    width:24%;
     background-color: #e0e3e5;
     padding-bottom: 55px;    min-height: 1025px; position: relative;
 }
@@ -9616,7 +9617,7 @@ button.btn.btn-primary{ margin-bottom:0; }
     color: #000000;
    font-family: reckless_neue_trialregular, serif, Times New Roman;
     line-height: 1.12;
-    min-height: 154px;
+    min-height: 250px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -9629,16 +9630,21 @@ button.btn.btn-primary{ margin-bottom:0; }
         font-family: 'Sohne';
 }
 .cyberpl_grid>ul {
-    padding: 20px 37px;
+    padding: 20px 25px;
     margin: 0;
     list-style: none;
 }
+.cyberpl_grid h3 span strong {
+    font-family: 'Sohne';
+    font-weight: 300;
+    font-size: 18px;
+}
 .cyberpl_grid ul .cplan_ac {
     color: #000000;
-    font-size: 20px;
+    font-size: 18px;
     font-family: 'Sohne-Buch';
     line-height: normal;
-    padding: 21px 45px 21px 12px;
+    padding: 21px 35px 21px 12px;
     position: relative;
     cursor: pointer;
 }
@@ -9705,7 +9711,8 @@ button.btn.btn-primary{ margin-bottom:0; }
     background-color: #1c5e48;
 }
 .cyberpl_grid:nth-child(3) ul .cplan_ac,
-.cyberpl_grid:nth-child(3) .cplan_cont{
+.cyberpl_grid:nth-child(3) .cplan_cont,
+.cyberpl_grid:nth-child(3) .pricesubtext{
     color: #ebe9de;
 }
 .cyberpl_grid li.active .cplan_cont {
@@ -9782,9 +9789,7 @@ button.btn.btn-primary{ margin-bottom:0; }
     left: 0;
     top: 0;
     bottom: 0;
-    margin: auto;
-    -webkit-filter: brightness(0) invert(0);
-    filter: brightness(0) invert(0);
+    margin: auto; 
 }
 .cyber_sec3 .ht_cnt {
     padding-left: 20px;
@@ -9807,10 +9812,10 @@ button.btn.btn-primary{ margin-bottom:0; }
 }
 .cyber_page .innerpage-banner h2.sub-banner-heading{line-height: 34px; font-size: 31px;}
 
-.clm-page .banner-heading,
+/*.clm-page .banner-heading,
 .clm-page h2.banner-subheading{
     color: #14523d;
-}
+}*/
 ul.profe_row {
     padding: 0;
     margin: 0 auto;
@@ -10004,15 +10009,175 @@ ul.profe_row li p {
     top: inherit;
 }
 .testimonial-mainnew .desc {
-    flex-flow: column;
-    display: block;
+    flex-flow: column; 
+    justify-content: center;
+    align-items: flex-start;
 }
 .testimonial-mainnew .desc h2 {
     margin: 0;
     font-size: 25px;
+    color: #1c5e48;
+    font-family: Sohne,sans-serif,Arial;
 }
 .testimonial-mainnew p:before{ content:'“'; display:inline-block; }
 .testimonial-mainnew p:after{ content:'”'; display:inline-block; }
+
+.toggle-control {
+  display: block;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    cursor: pointer; 
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+   
+    height: auto;
+    font-family: 'Sohne-Buch';
+    
+   padding: 6px  0 6px 55px;
+    margin: 17px auto 1px;
+    font-size: 16px;
+        text-align: left;
+    width: 100%;
+    line-height: 1.4;
+}
+.toggle-control strong {
+    display: block;
+    color: #000000;
+    font-family: 'shne_testhalbfett';
+    font-weight: normal;
+    position: relative;
+}
+.toggle-control strong svg {
+    position: absolute;
+    bottom: -10px;
+    left: -14px;
+    width: 100%;
+    height: auto;
+}
+.cyberpl_grid:nth-child(3) strong{color: #ebe9de;}
+.cyberpl_grid:nth-child(3) svg path:nth-child(2){fill: #ebe9de !important;}
+.pricesubtext{
+    font-family: 'Sohne-Buch';
+    font-size: 16px;
+    margin-top: 13px;
+    color: #000;
+    padding: 0 21px;
+    line-height: 1.4;
+}
+.determined {
+    font-family: 'Sohne-Buch';
+    font-size: 18px;
+    margin-top: 13px;
+    color: #000;
+    padding: 0 10px;
+    line-height: 1.4;
+}
+.toggle-control input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.toggle-control input:checked ~ .control {
+    background-color: #1c5e48;
+}
+.toggle-control input:checked ~ .control:after {
+      left: 22px;
+}
+.toggle-control .control {
+  position: absolute;
+      top: 6px;
+  left: 0;
+ width: 44px;
+    height: 24px;
+  border-radius: 1.563rem;
+  background-color:#a1a1a1;
+  transition: background-color 0.15s ease-in;
+}
+.toggle-control .control:after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 3px;
+    width: 18px;
+    height: 18px;
+    border-radius: 1.563rem;
+    background: #fff;
+    transition: left 0.15s ease-in;
+}
+.margin_bottom{ margin-bottom:100px; }
+.bannertitle_big h1.banner-heading {
+    margin-right: -29px;
+}
+.eligible_sec h3 {
+    max-width: 1042px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.clm-page .banner-heading{ color:#154f3a; }
+.redrecoveryrow {
+    max-width: 1060px;
+    margin: auto;
+}
+.redrecoveryrow .col-lg-3 {
+    padding: 0 34px;
+}
+.rdpdpn-sec2{ padding-top:125px; padding-bottom:100px; }
+.rdpdpn-sec2 .rig-text {
+    padding-top: 0; 
+    padding-left: 43px;
+}
+.rdpdpn-sec2 h3{ margin-bottom:0; }
+
+.focus_sec {
+    background-color: #eae7db; 
+    padding-bottom: 60px;
+    padding-top: 47px;
+}
+.focus_sec h2 {
+    color: #154f3a;
+    font-family: reckless_neue_trialregular,serif,Times New Roman;
+    font-size: 44px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 0 0 31px;
+    padding: 0;
+}
+.focus_sec h3 {
+    font-family: 'Sohne-Buch';
+    color: #154f3a;
+    font-size: 24px;
+    margin-bottom: 26px;
+}
+.focus_sec p {
+    color: #000;
+    font-size: 18px;
+    line-height: 1.55;
+    margin: 0;
+}
+.rdpdpn-sec5 {
+    background: #dde1e3;
+    padding: 70px 0 100px;
+    margin-bottom: 87px;
+}
+.rdpdpn-sec5 .col-md-5 {
+    padding: 41px 0 0 0; 
+}
+.rdpdpn-sec5 p {
+    font-family: 'shne_testleicht';
+}
+.rdpdpn-sec5 p strong {
+    font-size: 20px;
+    color: #000000;
+    font-family: 'Sohne-Buch';
+    font-weight: normal;
+}
+.rdpdpn-sec5 .rig-text{
+    padding-right: 61px;
+}
 
 /****** BreakPoints *******/
 /****** Responsive Start *******/
@@ -11038,7 +11203,20 @@ ul.profe_row li p {
           font-size: 34px;
     }
     .liqtestmon p {    font-size: 17px;}
-
+    .cyberpl_grid h3{
+        font-size: 36px;
+    }
+    .dpn-sec2 h3, .focus_sec h2{
+            font-size: 40px;
+    }
+    .rdpdpn-sec2 {
+    padding-top: 100px;
+    padding-bottom: 70px;
+    }
+    .rdpdpn-sec5 {
+    padding: 50px 0 80px;
+    margin-bottom: 70px;
+    }
 }
 @media screen and (max-width:1500px){
 
@@ -11046,7 +11224,7 @@ ul.profe_row li p {
         padding: 60px 0 50px 0;
     }
     .cyberpl_grid h3{
-        font-size: 37px;
+        font-size: 35px;
     }
 
     .brokermid_sec h2{ font-size: 42px; }
@@ -11529,7 +11707,9 @@ ul.profe_row li p {
     .liqtestmon h3, .liqtestmon h2 {
         font-size: 32px;
     }
-
+    .margin_bottom {
+        margin-bottom: 75px;
+    }
 
 }
 @media screen and (max-width:1400px){
@@ -11552,9 +11732,7 @@ ul.profe_row li p {
     }
     .cyberpl_grid h3 span{
         font-size: 27px;
-    }
-    .cyberpl_grid {
-    width: 31.5%;}
+    } 
     .cyberpl_grid ul .cplan_ac{
         font-size: 18px;
     }
@@ -12258,7 +12436,15 @@ ul.profe_row li p {
     .liqtestmon .col-sm-12:nth-child(1) {
         padding-left: 15px;
     } 
-
+    .rdpdpn-sec2 {    padding-top: 80px;}
+    .rdpdpn-sec5 p br{ display:none; }
+    .rdpdpn-sec5 {
+    padding: 50px 0 70px;
+    margin-bottom: 60px;
+    }
+    .dpn-sec2 h3, .focus_sec h2 {
+        font-size: 36px;
+    }
 }
 @media screen and (max-width:1300px){
      .mg_slide_part .image-container{
@@ -13880,8 +14066,11 @@ ul.profe_row li p {
             margin-bottom: 25px;
     }
     .cyberpl_grid h3 {
-    font-size: 33px;
-    min-height: 130px;
+    font-size: 31px;
+    min-height: 210px;
+    }
+    .determined{
+        font-size: 17px;
     }
     .cyberpl_grid h3 span {
         font-size: 25px;
@@ -13889,7 +14078,8 @@ ul.profe_row li p {
     .cyberpl_grid>ul {
     padding: 0 20px;}
     .cyberpl_grid ul .cplan_ac {
-            padding: 17px 35px 17px 12px; font-size: 17px;
+              padding: 17px 29px 17px 7px;
+    font-size: 16px;
     }
     .cyberpl_grid{
         padding-bottom: 35px;
@@ -13931,6 +14121,25 @@ ul.profe_row li p {
     .liqtestmon h3, .liqtestmon h2 {
         font-size: 28px;
     }
+    .margin_bottom {
+        margin-bottom: 55px;
+    }
+    .redrecoveryrow .col-lg-3 {
+        padding: 0 20px;
+    }
+    .focus_sec h3{
+            font-size: 22px;
+    margin-bottom: 18px;
+    }
+    .focus_sec h2 {
+    font-size: 34px;    margin: 0 0 21px;
+    }
+    .focus_sec {
+    padding-bottom: 40px;
+    padding-top: 38px;
+    }
+
+
 }
 @media screen and (max-width:1100px){
      .mg_slide_part .image-container{
@@ -16176,9 +16385,31 @@ ul.profe_row li p {
     font-size: 32px;
     }
     .testimonial-mainnew .desc {
+            display: block;
         padding-top: 0 !important;
     }
-
+    .rdpdpn-sec2 .row {
+        display: block;
+    }
+    .rdpdpn-sec2 {
+        padding-top: 65px;padding-bottom: 60px;
+    }
+    .focus_sec h2 {
+    font-size: 32px;}
+    .focus_sec h3 {
+    font-size: 20px;
+    margin-bottom: 14px;
+    }
+    .focus_sec p{
+            font-size: 17px;
+    }
+    .rdpdpn-sec5 .col-md-5 {
+        padding: 0;
+    }
+    .rdpdpn-sec5 {
+    padding: 50px 0 50px;
+    margin-bottom: 40px;
+    }
 
 }
 
@@ -17084,7 +17315,8 @@ ul.profe_row li p {
 
     .cyberpl_grid h3 {
     font-size: 30px;
-    min-height: 110px;
+       min-height: auto;
+    padding: 19px 0;
     }
     .cyberpl_grid h3 span {
         font-size: 23px;
@@ -17143,6 +17375,31 @@ ul.profe_row li p {
         font-size: 27px;
     line-height: 37px;
     }
+    .margin_bottom {
+        margin-bottom: 30px;
+    }
+    .rdpdpn-sec2 {
+    padding-top: 55px;
+    padding-bottom:55px;
+    }
+    .rdpdpn-sec5 {
+    padding: 50px 0 50px;
+    }
+    .rdpdpn-sec5 .col-md-5 {
+        padding: 0 calc(var(--bs-gutter-x)/ 2);
+    }
+    .redrecoveryrow .col-lg-3 {
+    padding: 0 10px;
+    width: 50%;
+    }
+    .rdpdpn-sec2 h3 {
+        margin-bottom: 7px;
+    }
+    .rdpdpn-sec5 p strong {    font-size: 19px;}
+    .voluntary_administration.liquidation .middleFullText.glpo_section .fullTxt br {
+        display: none;
+    }
+
 
 }
 @media screen and (max-width:667px){
@@ -18270,8 +18527,7 @@ ul.profe_row li p {
     .cyber_sec1 h2, .cyber_sec2 .cyber_keep h2, .cyber_page .home #get-in-touch h2 {
     font-size: 25px;}
      .cyberpl_grid h3 {
-    font-size: 29px;
-    min-height: 93px;
+    font-size: 29px; 
     }
     .cyber_page .innerpage-banner h2.sub-banner-heading, .cyber_sec1 h3, .cyberpl_grid h3 span {
         font-size: 21px;
@@ -18328,7 +18584,18 @@ ul.profe_row li p {
     .restructure_land #banner-section {
             padding: 40px 0px 30px;
     }
-
+    .dpn-sec2 h3,.focus_sec h2 {    font-size: 28px;}
+    .focus_sec h3 {
+    font-size: 18px;
+    margin-bottom: 9px;
+    }
+    .focus_sec p {
+        font-size: 16px;
+    }
+    .voluntary_administration .glpo_reco_section.recovery-plan .subTxt br{ display:none; }
+    .rdpdpn-sec5 p strong {
+        font-size: 18px;
+    }
 }
 @media screen and (max-width:414px){
     .ps_bot h2 {
