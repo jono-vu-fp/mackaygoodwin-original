@@ -62,7 +62,7 @@ const ConsultBusiness = ({ data }) => {
 
   const [fromEbookDetails, setFormEbookDetails] = React.useState(0);
   const valueEbook = { fromEbookDetails, setFormEbookDetails };
-  return (<div className="service restructure consult-business liquidation liquidation_servpage">
+  return (<div className="service restructure consult-business liquidation">
     <Layout>
       <Seo title={data.wpPage.metaFields?.metaTitle} description={data.wpPage.metaFields?.metaDescription} />
       <TopBanner
