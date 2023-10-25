@@ -7,6 +7,7 @@ import TopBanner from "../components/top-banner"
 import Events from "../components/events/events"
 import GetInTouch from "../components/get-in-touch3"
 import ActiveCampaign from "../components/activecampaign"
+import $ from "jquery"
 
 const breadCrumbs = [
   { link: "/", title: "Home" },
@@ -68,7 +69,7 @@ const EventsPage = ({ data }) => {
           <div className="modal-content">
             <button type="button" className="close" data-dismiss="modal" onClick={()=>handleStopVideo()}>&times;</button>
             <div className="popup_body">
-              {!showVid?<div className="video_form"><ActiveCampaign setShowVid={setShowVid} /></div>:
+              {!showVid?<div className="video_form"><div id="formContainer"></div></div>:
               <div className="video_ratio cc">
               {vdUrl?<video key={vdUrl} width="100%" ref={vidRef} controls><source src={vdUrl} type="video/mp4" />Your browser does not support the video tag.</video>:<iframe key={ytUrl} className="embed-responsive-item" src={'https://www.youtube.com/embed/'+ytUrl+'?autoplay=1&amp;amp;modestbranding=1&amp;amp;showinfo=0'} id="video" allowscriptaccess="always"></iframe>}
               </div>

@@ -9,7 +9,15 @@ const EventsList = (props) => {
     return t1+" "+t[1];
   }
   const checkVideo = () =>{
-    if(props.data.title=='Insights into the ATO'){
+    if(props.data.title=='Your window into the ATO' || props.data.title=='Insights into the ATO'){
+      if ('hbspt' in window) {
+          window.hbspt.forms.create({
+          region: "na1",
+          portalId: "40112486",
+          formId: "29ea506b-20aa-4f51-8998-937429b204a9",
+          target: "#formContainer"
+        });
+      }
       props.setShowVid(false);
     }
     else{
@@ -17,6 +25,28 @@ const EventsList = (props) => {
     }
     props.setVideoUrl(props.data.eventsOption?.recordingUrl?.url?props.data.eventsOption?.recordingUrl?.url:props.data.eventsOption.video?.mediaItemUrl,props.data.eventsOption?.recordingUrl?.url?0:1);
   }
+
+  React.useEffect(() => {
+    //hubspot
+    let scriptEle = document.createElement("script");
+    scriptEle.setAttribute("src", '//js.hsforms.net/forms/embed/v2.js');
+    scriptEle.setAttribute("type", "text/javascript");
+    document.body.appendChild(scriptEle);
+    scriptEle.addEventListener("load", () => {
+      console.log("File loaded")
+    });
+    window.addEventListener('message', event => {
+      console.log(event.data)
+       if(event.data.type === 'hsFormCallback' && event.data.eventName === 'onFormSubmitted') {
+           console.log("Form Submitted! Event data: ${event.data}");
+           props.setShowVid(true);
+       }
+    });
+
+
+    return () => {
+    }
+   }, [])
   
   return(
 

@@ -8083,7 +8083,7 @@ section.incsteps_sec {
 .restructure_land .banner-image::after{
     background: #154f3a;
 }
-.restructure_land .banner-image::before {    background: #eae7db;}
+.restructure_land .banner-image::before, .liquidation_land.liquidation_landbannern .banner-image::before, .smallrestructure_land.smallrestructure_landn .banner-image::before {    background: #eae7db;}
 .restructure_land .banner-heading { margin: 0 0 16px 0;   color: #000;}
 /*.restructure_land h2.banner-subheading {
     color: #000;
@@ -10201,6 +10201,50 @@ ul.profe_row li p {
 .home #get-in-touch h3 a {
     color: #000000;
     font-size: 20px;
+}
+.rddca_section.fd_section.wva_section .wva_right p, .wil_section.wva_section .wva_right p, .cl_section.wva_section .wva_right p, .helping_section.wva_section .wva_right p {
+    color: #000;
+}
+.val_page.val_page_new2 .banner-image:before {
+    background-color: #eae7db;
+}
+.val_page_new.val_page_new2 .breadcrumb-item a, .val_page_new.val_page_new2 .breadcrumb-item.active, .val_page_new.val_page_new2 .breadcrumb-item+.breadcrumb-item::before, .val_page.val_page_new2 .banner-heading, .val_page.val_page_new2 h2.banner-subheading, .val_page.val_page_new2 .banner-content ul li label, .dpn_part2.wva_section .wva_right div p {
+    color: #000;
+}
+.val_page.val_page_new2 .banner-content button.btn.btn-primary.d-block {
+    background-color: #1c5e48;
+    color: #fff;
+}
+
+.video_form #formContainer fieldset {
+ 
+    max-width: 100% !important;
+}
+.video_form #formContainer .hs-input:not(input[type="checkbox"]) {
+    background-color: #fff !important;
+    border: 0;
+    color: #4a4a4a;
+    font-size: 16px;
+    height: 43px;
+    line-height: 43px;
+    margin: 0 0 25px;
+    padding: 0 15px;
+}
+.video_form #formContainer fieldset.form-columns-1 input[type="text"]{
+        width: 100% !important;
+}
+.video_form ul.inputs-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.video_form label.hs-form-booleancheckbox-display{ display:block; }
+.video_form .hs-richtext h2{
+    color: #000;
+    font-size: 36px;
+    font-weight: 400;
+    margin: 0 0 20px;
+    text-align: center;
 }
 
 /****** BreakPoints *******/
@@ -13570,7 +13614,8 @@ ul.profe_row li p {
     .sgpost_cont h2 {
         font-size: 27px;
     }
-    .video_form legend { 
+    .video_form legend,
+    .video_form .hs-richtext h2 { 
     font-size: 33px; 
     margin: 0 0 10px; 
     line-height: normal;
@@ -18433,7 +18478,8 @@ ul.profe_row li p {
     .autherrt{
             width: 63%;
     }
-    .video_form legend{
+    .video_form legend,
+    .video_form .hs-richtext h2{
         font-size: 30px;
     }
     .fullTxtSection2 .fullTxt {
@@ -19830,3 +19876,4 @@ button.btn-close {
 }
 
 /*perth styles end*/
+
