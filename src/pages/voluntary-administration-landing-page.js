@@ -21,7 +21,13 @@ import OurPeople from "../components/our-people-liquid/our-people3"
 import GetInTouchPPForm from "../components/get-in-touch-liquidation-popup";
 import $ from "jquery"
 
-const Voluntary = ({ data }) => {
+const Voluntary = ({ data }) => {React.useEffect(()=>{
+    
+    $('head').prepend("<meta name='robots' content='noindex, nofollow' />");
+
+      return () => {
+      };
+    },[]);
 
   let whyMG1 = [];
   data.wpPage.voluntaryAdministrationLandingPageOptions.valpFaqs.map((d) => {

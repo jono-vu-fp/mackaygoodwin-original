@@ -114,6 +114,9 @@ const Dpnpaidlandingpage = ({ data }) => {
     });
   });
   React.useEffect(() => {
+    
+    $('head').prepend("<meta name='robots' content='noindex, nofollow' />");
+    
     console.log($('.dpn-sec3 a').length)
     $('.dpn-sec3 a').each(function(){
       console.log($(this).attr('href').replace('?',''))

@@ -25,7 +25,13 @@ import News from "../components/news/list2";
 import OurPeople from "../components/our-people-liquid/our-people3"
 import $ from "jquery"
 
-const Smallbusinessrestructure = ({ data }) => {
+const Smallbusinessrestructure = ({ data }) => {React.useEffect(()=>{
+    
+    $('head').prepend("<meta name='robots' content='noindex, nofollow' />");
+
+      return () => {
+      };
+    },[]);
   let whyMG = [];
   data.wpPage.smallBusinessRestructureLandingPageOptions.iconWithTextsbr.map((d) => {
     return whyMG.push({ title: d.itextsbr });

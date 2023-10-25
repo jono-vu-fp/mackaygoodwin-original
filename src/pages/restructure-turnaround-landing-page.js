@@ -27,6 +27,15 @@ import OurPeople from "../components/our-people-liquid/our-people3"
 import $ from "jquery"
 
 const Restructure2 = ({ data }) => {
+
+  React.useEffect(()=>{
+    
+    $('head').prepend("<meta name='robots' content='noindex, nofollow' />");
+
+    return () => {
+    };
+  },[]);
+
   let whyMG = [];
   data.wpPage.restructureTurnaroundLandingPageOptions.iconWithTextr.map((d) => {
     return whyMG.push({ title: d.itext });

@@ -129,6 +129,8 @@ const Corporateinsolvency2 = ({ data }) => {
     $('#br_popup').addClass('show');
   }
   React.useEffect(()=>{
+    
+    $('head').prepend("<meta name='robots' content='noindex, nofollow' />");
     if(window.location.hash=='#receverships_sec'){
       changeTab(6);
     }

@@ -26,6 +26,13 @@ import OurPeople from "../components/our-people-liquid/our-people3"
 import $ from "jquery"
 
 const Liquidation2 = ({ data }) => {
+  React.useEffect(()=>{
+    
+    $('head').prepend("<meta name='robots' content='noindex, nofollow' />");
+
+    return () => {
+    };
+  },[]);
   const [showModal, setModal] = React.useState(false);
   
 
