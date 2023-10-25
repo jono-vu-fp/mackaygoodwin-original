@@ -261,10 +261,10 @@ const Header = () => {
           </li>
         </ul>
         {newTopbar?<ul className="top-belt d-flex ms-auto no_line"><li className="nav-item">
-              <a className="nav-link" aria-current="page" href="#get-in-touch">{typeof window !== "undefined" && window.screen.width > 979 ? "Book your free consultation today" : "Call 1300 614 791"} <i className="fa fa-chevron-right"></i></a>
+              <a className="nav-link" aria-current="page" href="#get-in-touch">{typeof window !== "undefined" && window.screen.width > 979 ? "Book your free consultation today" : "Call 1300 062 950"} <i className="fa fa-chevron-right"></i></a>
             </li></ul>:<ul className="top-belt d-flex ms-auto">
           {/*<li className="nav-item">
-            <a className="nav-link" aria-current="page" href="tel:1300 614 791">{typeof window !== "undefined" && window.screen.width > 979 ? "Speak to our experts 1300 614 791" : "Call 1300 614 791"} <i className="fa fa-chevron-right"></i></a>
+            <a className="nav-link" aria-current="page" href="tel:1300 062 950">{typeof window !== "undefined" && window.screen.width > 979 ? "Speak to our experts 1300 062 950" : "Call 1300 062 950"} <i className="fa fa-chevron-right"></i></a>
           </li>*/}
           <li className="nav-item">
           <a className="nav-link" aria-current="page" href="/contact/">Speak to our experts</a>
@@ -521,7 +521,7 @@ const Header = () => {
       <div id="menu-cont-1">
         <div className="top-mobile">
           {newTopbar?<ul className="top-belt d-flex ms-auto no_line"><li className="nav-item">
-              <a className="nav-link" aria-current="page" href="#get-in-touch">{typeof window !== "undefined" && window.screen.width > 979 ? "Book your free consultation today" : "Call 1300 614 791"} <i className="fa fa-chevron-right"></i></a>
+              <a className="nav-link" aria-current="page" href="#get-in-touch">{typeof window !== "undefined" && window.screen.width > 979 ? "Book your free consultation today" : "Call 1300 062 950"} <i className="fa fa-chevron-right"></i></a>
             </li></ul>:<ul className="top-belt2 d-flex ms-auto">
             <li className="nav-item">
 

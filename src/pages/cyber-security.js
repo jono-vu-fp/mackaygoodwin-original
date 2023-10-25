@@ -165,7 +165,7 @@ const Cybersecurity = ({data}) => {
       </div>
       <div className="brp_left">
         <h2>{signupTitle}</h2>
-        <div className="brp_desc">Enter your details below or call <a href="tel:1300 614 791">1300 614 791</a></div>
+        <div className="brp_desc">Enter your details below or call <a href="tel:1300 062 950">1300 062 950</a></div>
          <div id="formContainer"></div>
       </div>
     </div>
