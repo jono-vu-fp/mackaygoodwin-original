@@ -73,7 +73,6 @@ const Corporate = ({data}) => {
           <div className="wva_right">
             <h3>{data.wpPage.contactPageOptions.conTitle}</h3>
             <div dangerouslySetInnerHTML={{__html: data.wpPage.contactPageOptions.conDescription }} /> 
-             <Link className="btn btn-primary me-5"  target="_blank" to="https://calendly.com/davidhill-mackaygoodwin/30min?month=2022-03">Book Now</Link>
           </div>
  
           
