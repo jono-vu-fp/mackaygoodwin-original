@@ -16,7 +16,7 @@ const GetInTouchGlobalForm = (props) => {
         <h2>Get in touch</h2>
         <div className="brp_desc">
           Speak to one of our experts now for a free consultation. 
-Enter your details below or call 1300 062 950.
+Enter your details below or call 1300 750 599.
         </div>
         <GetInTouchForm />
       </div>
