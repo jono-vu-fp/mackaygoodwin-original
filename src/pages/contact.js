@@ -73,6 +73,7 @@ const Corporate = ({data}) => {
           <div className="wva_right">
             <h3>{data.wpPage.contactPageOptions.conTitle}</h3>
             <div dangerouslySetInnerHTML={{__html: data.wpPage.contactPageOptions.conDescription }} /> 
+            <Link className="btn btn-primary me-5"  target="_blank" to="https://outlook.office365.com/owa/calendar/MackayGoodwinBusinessHealthCheck@mackaygoodwin.com.au/bookings/">Book Now</Link>
           </div>
  
           
