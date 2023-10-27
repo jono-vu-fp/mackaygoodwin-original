@@ -31,6 +31,7 @@ const IndexPage = ({ data }) => {
     return businessData.push({ title: d.title,slug: d.slug, subtitle: d.backInBusiness.designation, text: d.backInBusiness.location, certification: d.backInBusiness.certification, content: d.content, linkedin: d.backInBusiness.linkedin, email: d.backInBusiness.email, phone: d.backInBusiness.phoneNumber, img: d.featuredImage?.node, designationType: d.backInBusiness.designationType, altimg: d.backInBusiness?.staffImage2 });
   })
   const [showModal, setModal] = React.useState(false);
+  const [showModal1, setModal1] = React.useState(false);
   //console.log("Home pG Data", datadata.wpPage.hpOptions.homeSlider[2]);
   const [serviceEnter, changeServiceEnter] = React.useState('')
   const { observe, unobserve, inView, scrollDirection, entry } = useInView({
@@ -237,12 +238,12 @@ const IndexPage = ({ data }) => {
 
               {data.wpPage.hpOptions.bhcButtonLink !== null && data.wpPage.hpOptions.bhcButtonLink !== "" ? <Link className="btn btn-primary me-5" to={data.wpPage.hpOptions.bhcButtonLink}>{data.wpPage.hpOptions.bhcButtonText}</Link> : ""}
 
-              <button  className="btn btn-primary me-5" type="button" onClick={()=>setModal(true)} data-toggle="modal" data-target="#myModal">{data.wpPage.hpOptions.bhcVideoButtonText}</button>
-              <div id="myModal2" role="dialog" className={showModal?'in show modal fade':'modal fade'}>
+              <button  className="btn btn-primary me-5" type="button" onClick={()=>setModal1(true)} data-toggle="modal" data-target="#myModal2">{data.wpPage.hpOptions.bhcVideoButtonText}</button>
+              <div id="myModal2" role="dialog" className={showModal1?'in show modal fade':'modal fade'}>
               <div className="model_inner">
                   <div className="popup_dialog">
                       <div className="modal-content">
-                          <button type="button" className="close" data-dismiss="modal" onClick={()=>{setModal(false);$('iframe.embed-responsive-item').attr('src', $('iframe.embed-responsive-item').attr('src').replace("autoplay=1&amp;", ""));}}>&times;</button>
+                          <button type="button" className="close" data-dismiss="modal" onClick={()=>{setModal1(false);$('iframe.embed-responsive-item').attr('src', $('iframe.embed-responsive-item').attr('src').replace("autoplay=1&amp;", ""));}}>&times;</button>
                           <div className="popup_body">
                               <div className="video_ratio">
                                   <div dangerouslySetInnerHTML={{__html: data.wpPage.hpOptions.bhcVideo }} />
@@ -275,7 +276,7 @@ const IndexPage = ({ data }) => {
           text={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchDescription}
         />
 
-         <div id="myModal2" role="dialog" className={showModal?'in show modal fade':'modal fade'}>
+         {/*<div id="myModal2" role="dialog" className={showModal?'in show modal fade':'modal fade'}>
         <div class="model_inner">
         <div class="popup_dialog">
         <div class="modal-content">
@@ -288,7 +289,7 @@ const IndexPage = ({ data }) => {
         </div>
         </div>
         </div>
-        </div>
+        </div>*/}
 
         
         <div id="myModal" role="dialog" onClick={()=>{setModal(false);document.getElementById('pp_vid').pause();}} className={showModal?'in show modal fade':'modal fade'}>
