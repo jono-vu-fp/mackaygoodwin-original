@@ -10158,8 +10158,13 @@ ul.profe_row li p {
     color: #000;
     font-size: 18px;
     line-height: 1.55;
-    margin: 0;
+    margin:0 0px 26px 0;
 }
+.focus_sec p strong {
+    font-family: 'Sohne';
+    font-weight: normal;
+}
+.focus_sec p:last-child{ margin-bottom:0; }
 .rdpdpn-sec5 {
     background: #dde1e3;
     padding: 70px 0 100px;
@@ -10168,13 +10173,12 @@ ul.profe_row li p {
 .rdpdpn-sec5 .col-md-5 {
     padding: 41px 0 0 0; 
 }
-.rdpdpn-sec5 p {
+/*.rdpdpn-sec5 p {
     font-family: 'shne_testleicht';
-}
-.rdpdpn-sec5 p strong {
-    font-size: 20px;
+}*/
+.rdpdpn-sec5 p strong { 
     color: #000000;
-    font-family: 'Sohne-Buch';
+    font-family: 'Sohne';
     font-weight: normal;
 }
 .rdpdpn-sec5 .rig-text{
@@ -10247,8 +10251,124 @@ ul.profe_row li p {
     text-align: center;
 }
 
+body .bhc_page .mgacademy_banner.topleft_banner .banner-image::before{
+    background: #dbfd90;
+}
+.bhc_page .banner-image::after {
+    background: #eae7db;
+}
+.bhc_page .mgacademy_banner.topleft_banner .banner-content .banner-heading{
+    font-size: 44px;
+}
+.bhc_page .banner-content .banner-desc{
+/*    font-size:24px;  */
+      padding: 0;
+}
+.bhc_page .banner-content .btn{ margin:40px 0 0 0; }
+
+.bhc_page .wbl_section .wbl_left {
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+    width: 52.5%;
+}
+.bhc_page .wbl_section .wbl_right {
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+    width: 47%;
+}
+.bhc_page .wbl_left img {
+    width: 100%;
+}
+.bhc_page .wbl_section .container{
+        max-width: 1470px;
+        justify-content: space-between;
+}
+.bhc_page .wbl_section strong {
+    font-size: 24px;
+    color: #154f3a;
+    font-family: 'Sohne-Buch';
+    font-weight: normal;
+}
+.bhc_page .wbl_section p {
+    font-family: 'shne_testleicht';
+    padding-right: 0;
+}
+.bhc_page .wbl_section .wbl_right a.btn.btn.btn-primary.me-5 {
+    margin-top: 0;
+}
+.bhc_page .recovery-plan {
+    padding-top: 0;
+}
+.bhc_page .recovery-plan a.btn.btn.btn-primary {
+    display: none;
+}
+.bhc_page .recovery-plan .stepsCol:nth-child(1) a.btn.btn.btn-primary {
+    display: inline-block;
+}
+.bhc_page .recovery-plan .container {
+    max-width: 1435px;
+}
+.bhc_page .recovery-plan .num{
+        padding: 10px 60px;
+}
+.bhc_page .home #get-in-touch h3 br {
+    display: none;
+}
+.bsc_testmon {
+    background: #dde1e3;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    margin-bottom: 80px;
+}
+.bsc_testmon .row {
+    align-items: center;
+}
+.bsc_testmon h2{
+        font-size: 44px;
+    line-height: 1.2;
+    margin-bottom: 18px;
+    font-family: reckless_neue_trialregular, serif, Times New Roman;
+    color: #1c5e48;
+
+}
+.bsc_testmon h3 {
+    font-size: 20px;
+    color: #000000;
+    margin: 0 0 6px 0;
+}
+.bsc_testmon h2:before {
+    content: '"';
+    font-style: italic;
+}
+.bsc_testmon h2:after {
+    content: '"';
+    font-style: italic;
+}
+.bsc_testmon img {
+    width: 100%;
+}
+.bhc_page .wva_section .wva_right div p br, 
+.bhc_page .weva_section div p br{ display:none; }
+.bhc_page .wva_section .wva_right{
+    padding-top: 120px;
+}
+.bhc_page .wva_section a.btn{
+    margin-top: 0;
+}
+.bhc_page .wva_section { 
+    margin-bottom: 0;
+    margin-top: 90px;
+}
+.bhc_page .testimonial-mainnew {
+    padding-top: 0;
+    padding-bottom: 40px;
+}
+
 /****** BreakPoints *******/
 /****** Responsive Start *******/
+
 @media screen and (min-width:1400px){
     .ps_bot .container {
         max-width: 1320px;
@@ -10262,6 +10382,10 @@ ul.profe_row li p {
 }
 
 @media screen and (min-width:1201px){
+    .bhc_page .rtsec2 ul li {
+        width: 20.66%;
+    }
+    .bhc_page .rtsec2 ul{ margin: auto; width:90%; }
     .restructure_land #testimonials .card-text{
         min-height: 280px;
     }
@@ -10944,11 +11068,29 @@ ul.profe_row li p {
     .bankruptcy.val_page .glpo_reco_section.recovery-plan .subTxt {
         padding: 0 20px;
     }
-
+    .bhc_page .wva_section .wva_right{
+            padding-bottom: 60px;
+    }
 
 }
 @media screen and (max-width:1600px){
      
+     .bhc_page .wbl_section .container,
+     .bhc_page .recovery-plan .container {
+        max-width: 1320px;
+    }
+    .bhc_page .wbl_section .wbl_left{
+            width: 50%;
+    }
+    .bhc_page .wbl_section .wbl_right{
+            width: 49%;
+    }
+    .bhc_page .wbl_section strong {
+        font-size: 22px;
+    }
+    .bsc_testmon h2 {
+        font-size: 40px;
+    }
      .hubspot_popup .popup_body {
         max-height: 550px;
     }     
@@ -11285,9 +11427,19 @@ ul.profe_row li p {
     padding: 50px 0 80px;
     margin-bottom: 70px;
     }
+    .bhc_page .recovery-plan{
+            padding-bottom: 70px;
+    }
+
 }
 @media screen and (max-width:1500px){
 
+    .bhc_page .mgacademy_banner.topleft_banner .banner-content .banner-heading {
+        font-size: 40px;
+    }
+    .bsc_testmon h2 {
+        font-size: 36px;
+    }
     .cyber_sec1{
         padding: 60px 0 50px 0;
     }
@@ -11782,6 +11934,7 @@ ul.profe_row li p {
 
 }
 @media screen and (max-width:1400px){
+
 
     .cyber_page .mgacademy_banner.topleft_banner .banner-content {
     margin-top: 60px;
@@ -12517,6 +12670,31 @@ ul.profe_row li p {
     .rddca_section.fd_section.wva_section {
         margin-top: 60px;
         margin-bottom: 70px;
+    }
+
+    .bhc_page .wbl_section strong br{
+        display: none;
+    }
+    .bhc_page .wbl_section .wbl_left{
+        margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 0 !important;
+    }
+    .bhc_page .wbl_section .container,
+    .bhc_page .recovery-plan .container {
+        max-width: 1140px;
+    }
+    .bhc_page .wbl_section p br{
+        display: none;
+    }
+    /*.bhc_page .banner-content .banner-desc {
+        font-size: 22px;
+    }*/
+    .bhc_page .banner-content .btn {
+        margin: 25px 0 0 0;
+    }
+    .bhc_page .glpo_reco_section.recovery-plan .subTxt{
+            padding: 0;
     }
 }
 @media screen and (max-width:1300px){
@@ -14205,6 +14383,9 @@ ul.profe_row li p {
             font-size: 22px;
     margin-bottom: 18px;
     }
+    .focus_sec p{
+      margin-bottom: 18px;  
+    }
     .focus_sec h2 {
     font-size: 34px;    margin: 0 0 21px;
     }
@@ -14221,6 +14402,42 @@ ul.profe_row li p {
         margin-top: 30px;
     }
 
+    .bhc_page .mgacademy_banner.topleft_banner .banner-content{
+            margin-top: 60px;
+    }
+    .bhc_page .mgacademy_banner.topleft_banner .banner-content .banner-heading{
+            margin-bottom: 15px;
+    }
+    .bhc_page .wbl_section .container, .bhc_page .recovery-plan .container {
+        max-width: 960px;
+    }
+    .bhc_page .wbl_section strong {
+        font-size: 20px;
+    }
+    .bhc_page .recovery-plan {
+    padding-bottom: 70px;
+    }
+    .bhc_page .val_page.clm-sec-4 .wbl_section{ padding-bottom:0px }
+    .bsc_testmon {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin-bottom: 60px;
+    }
+    .bsc_testmon h2 {
+        font-size: 32px;
+    }
+    .bhc_page .wva_section .wva_right {
+        padding-top: 80px;padding-bottom: 40px;
+    }
+    .bhc_page .wva_section {
+    margin-top: 60px;
+    }
+    .bhc_page .recovery-plan {
+        padding-bottom: 40px;
+    }
+    .bhc_page .testimonial-mainnew{
+            padding-bottom: 10px;
+    }
 
 }
 @media screen and (max-width:1100px){
@@ -16483,6 +16700,9 @@ ul.profe_row li p {
     margin-bottom: 14px;
     }
     .focus_sec p{
+      margin-bottom: 14px;  
+    }
+    .focus_sec p{
             font-size: 17px;
     }
     .rdpdpn-sec5 .col-md-5 {
@@ -16503,6 +16723,45 @@ ul.profe_row li p {
         padding-top: 0;
         padding-left: 30px;
         padding-right: 0;
+    }
+    .bhc_page .mgacademy_banner.topleft_banner .banner-content .banner-heading{
+        margin-bottom:0;
+    }
+    .bhc_page .rtsec2 {    margin-top: 50px;}
+    .bhc_page .wbl_section .wbl_left,
+    .bhc_page .wbl_section .wbl_right{
+        width: 100%;
+    }
+    .bhc_page .wbl_section .container {
+        flex-direction: column-reverse;
+    }
+    .bhc_page .wbl_left img {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    display: block;
+    }
+    .val_page .wbl_section p {
+        margin-bottom: 19px;
+    }
+   .bhc_page .voluntary_administration .glpo_section {
+        padding-top: 0;
+    }
+    .bsc_testmon {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+    }
+    .bsc_testmon h2 {
+        font-size: 30px;
+    }
+    .bhc_page .wva_section .wva_right {
+        padding: 10px 0 40px 25px;
+    }
+    .bhc_page .wva_section {
+        margin-bottom: 25px;     margin-top: 40px;
+    }
+    .bhc_page .recovery-plan {
+        padding-bottom: 0;
     }
 
 }
@@ -17489,11 +17748,26 @@ ul.profe_row li p {
     .rdpdpn-sec2 h3 {
         margin-bottom: 7px;
     }
-    .rdpdpn-sec5 p strong {    font-size: 19px;}
+    
     .voluntary_administration.liquidation .middleFullText.glpo_section .fullTxt br {
         display: none;
     }
-
+    .bhc_page .voluntary_administration .glpo_section{
+            padding-bottom: 5px;
+    }
+    .bsc_testmon img{
+            margin-top: 20px;
+    }
+    .bhc_page .recovery-plan {
+        padding-bottom: 10px;
+    }
+    .bsc_testmon h2 {
+        font-size: 29px;
+    }
+    .bhc_page .val_page.clm-sec-4 .wbl_section{
+            margin-bottom: 0;
+    }
+    .bhc_page .glpo_reco_section.recovery-plan .subTxt br{ display:none; }
 
 }
 @media screen and (max-width:667px){
@@ -18698,16 +18972,35 @@ ul.profe_row li p {
     font-size: 18px;
     margin-bottom: 9px;
     }
+    .focus_sec p{
+      margin-bottom: 9px;  
+    }
     .focus_sec p {
         font-size: 16px;
     }
     .voluntary_administration .glpo_reco_section.recovery-plan .subTxt br{ display:none; }
-    .rdpdpn-sec5 p strong {
-        font-size: 18px;
-    }
+    
     .rddca_section.fd_section.wva_section .wva_left:before {
         height: 307px;
     }
+    .bhc_page .banner-content .btn {
+        margin: 15px 0 0 0;
+    }
+    .bhc_page .wbl_section strong {
+        font-size: 18px;
+    }
+    .bsc_testmon h2 {
+    font-size: 25px;
+    line-height: 1.3;
+    }
+    .bsc_testmon h3 {
+    font-size: 18px;}
+    .bsc_testmon {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-bottom: 35px;
+    }
+
 }
 @media screen and (max-width:414px){
     .ps_bot h2 {
