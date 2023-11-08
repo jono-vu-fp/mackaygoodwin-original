@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import TopBanner from "../components/top-banner-3"
+import TopBanner from "../components/top-banner-10"
 import GetInTouch from "../components/get-in-touch3"
 import CurveLeft from "../components/curve-left"
 import Services from "../components/services"
@@ -35,7 +35,7 @@ const ResearchDiscovery = ({ data }) => {
   const [fromEbookDetails, setFormEbookDetails] = React.useState(0);
   const value = { fromDetails, setFormDetails };
   const valueEbook = { fromEbookDetails, setFormEbookDetails };
-  return (<div className="service restructure consult-business liquidation voluntary_administration">
+  return (<div className="service restructure consult-business liquidation voluntary_administration rdpage">
     <Layout>
       <Seo title={data.wpPage.metaFields?.metaTitle} description={data.wpPage.metaFields?.metaDescription} />
       <TopBanner

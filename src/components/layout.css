@@ -10365,7 +10365,11 @@ body .bhc_page .mgacademy_banner.topleft_banner .banner-image::before{
     padding-top: 0;
     padding-bottom: 40px;
 }
-
+.rdpage .innerpage-banner a.btn.btn-primary {
+    margin-top: 20px;
+    background-color: #ebe9de;
+    color: #154f3a;
+}
 /****** BreakPoints *******/
 /****** Responsive Start *******/
 
@@ -17768,6 +17772,9 @@ body .bhc_page .mgacademy_banner.topleft_banner .banner-image::before{
             margin-bottom: 0;
     }
     .bhc_page .glpo_reco_section.recovery-plan .subTxt br{ display:none; }
+    .rdpage .innerpage-banner a.btn.btn-primary{
+            padding: 5px 18px;
+    }
 
 }
 @media screen and (max-width:667px){
