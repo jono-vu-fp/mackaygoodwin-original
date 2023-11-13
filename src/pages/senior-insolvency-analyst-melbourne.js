@@ -70,7 +70,14 @@ export const query = graphql`
         singcare8BannerImage {
           altText
           mediaItemUrl
-        }    
+          localFile {
+            childImageSharp {
+              resize (width: 525, height: 351, cropFocus: CENTER, quality: 100) {
+                src
+              }
+            }
+          }
+        }
         singcare8BannerTitle
         singcare8BannerDesc       
         singcare8Description
