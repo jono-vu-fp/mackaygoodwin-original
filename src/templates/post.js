@@ -34,6 +34,7 @@ const Post = ({ data }) => {
   const [ytUrl, setYtUrl] = React.useState('');
   const [vdUrl, setVdUrl] = React.useState('');
   const [showVid, setShowVid] = React.useState(false);
+  const [showHbForm, setShowHbForm] = React.useState(false);
   const setVideoUrl = (url,tp) => {
     var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
     var match = url.match(regExp);
@@ -60,6 +61,35 @@ const Post = ({ data }) => {
     }
     setVideoUrl(data.wpPost.eventsOption?.recordingUrl?.url?data.wpPost.eventsOption?.recordingUrl?.url:data.wpPost.eventsOption.video?.mediaItemUrl,data.wpPost.eventsOption?.recordingUrl?.url?0:1);
   }
+  const checkVideo1 = () =>{
+    if ('hbspt' in window) {
+        window.hbspt.forms.create({
+        region: "na1",
+        portalId: "40112486",
+        formId: "33214767-fa74-4e9d-af84-b5c2ab70cc24",
+        target: "#formContainer"
+      });
+      setShowHbForm(true);
+    }
+  }
+  React.useEffect(() => {
+    //hubspot
+    let scriptEle = document.createElement("script");
+    scriptEle.setAttribute("src", '//js.hsforms.net/forms/embed/v2.js');
+    scriptEle.setAttribute("type", "text/javascript");
+    document.body.appendChild(scriptEle);
+    scriptEle.addEventListener("load", () => {
+      console.log("File loaded")
+    });
+    window.addEventListener('message', event => {
+      console.log(event.data)
+       if(event.data.type === 'hsFormCallback' && event.data.eventName === 'onFormSubmitted') {
+           console.log("Form Submitted! Event data: ${event.data}");
+       }
+    });
+    return () => {
+    }
+   }, [])
   const loadMore = () => {
     setLimit(glimit+6);
     if((glimit+6)>=data.wpPost.backInBusiness.eventGallery.length){
@@ -165,12 +195,13 @@ const Post = ({ data }) => {
               data.wpPost.eventsOption?.registerUrl ? <a className="bt-big px-4 mx-4" href={data.wpPost.eventsOption?.registerUrl}>{data.wpPost.eventsOption?.buttonLabel} <i className="fa fa-chevron-right" aria-hidden="true"></i></a> : null
             :<a className="bt-big px-4 mx-4" href="javascript:void(0)" onClick={()=>checkVideo()}>{data.wpPost.eventsOption?.buttonLabel} <i className="fa fa-chevron-right" aria-hidden="true"></i></a>
             }
-
+            {data.wpPost.title=='Super Bowl LVIII'?<a className="bt-big px-4 mx-4" href="javascript:void(0)" onClick={()=>checkVideo1()}>Register for your tickets today</a>:null}
             </div>
           </div>
         </div>
       </div>
        </div>
+            
       {data.wpPost.backInBusiness?.eventGallery!=null?
       <div className="eventgallery_sec">
         <div className="container">
@@ -220,6 +251,23 @@ const Post = ({ data }) => {
                 {vdUrl?<video key={vdUrl} width="100%" ref={vidRef} controls><source src={vdUrl} type="video/mp4" />Your browser does not support the video tag.</video>:<iframe key={ytUrl} className="embed-responsive-item" src={'https://www.youtube.com/embed/'+ytUrl+'?autoplay=1&amp;amp;modestbranding=1&amp;amp;showinfo=0'} id="video" allowscriptaccess="always"></iframe>}
                 </div>
                 }
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="myModal1" role="dialog" className={showHbForm?'in show modal fade':'modal fade'}>
+        <div className="model_inner">
+          <div className="popup_dialog">
+            <div className="modal-content">
+              <button type="button" className="close" data-dismiss="modal" onClick={()=>setShowHbForm(false)}>&times;</button>
+              <div className="popup_body">
+              <div className="video_form">
+              <div class="hs-richtext hs-main-font-element"> <h2>Register your interest</h2></div>
+              
+               
+                <div id="formContainer"></div>
+                </div>
               </div>
             </div>
           </div>
