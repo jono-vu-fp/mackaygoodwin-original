@@ -10370,6 +10370,10 @@ body .bhc_page .mgacademy_banner.topleft_banner .banner-image::before{
     background-color: #ebe9de;
     color: #154f3a;
 }
+.lt_btn{
+    display: block;
+    max-width: fit-content;
+}
 /****** BreakPoints *******/
 /****** Responsive Start *******/
 

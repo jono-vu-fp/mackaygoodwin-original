@@ -195,7 +195,7 @@ const Post = ({ data }) => {
               data.wpPost.eventsOption?.registerUrl ? <a className="bt-big px-4 mx-4" href={data.wpPost.eventsOption?.registerUrl}>{data.wpPost.eventsOption?.buttonLabel} <i className="fa fa-chevron-right" aria-hidden="true"></i></a> : null
             :<a className="bt-big px-4 mx-4" href="javascript:void(0)" onClick={()=>checkVideo()}>{data.wpPost.eventsOption?.buttonLabel} <i className="fa fa-chevron-right" aria-hidden="true"></i></a>
             }
-            {data.wpPost.title=='Super Bowl LVIII'?<a className="bt-big px-4 mx-4" href="javascript:void(0)" onClick={()=>checkVideo1()}>Register for your tickets today</a>:null}
+            {data.wpPost.title=='Super Bowl LVIII'?<a className="bt-big px-4 lt_btn" href="javascript:void(0)" onClick={()=>checkVideo1()}>Register for your tickets today</a>:null}
             </div>
           </div>
         </div>
