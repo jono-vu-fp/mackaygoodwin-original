@@ -150,6 +150,8 @@ const Post = ({ data }) => {
         sendUrl={data.wpPost.backInBusiness?.eventStatus == 'enablevideoaccess' ? data.wpPost.backInBusiness.recordingUrl?.url : data.wpPost.backInBusiness?.registerUrl}
         downloadBtn2={typeof window !== 'undefined' && window.location.pathname === '/insights/business-survival-pack/' ? true : false}
         readTime={data.wpPost?.articleAuthor?.readTime}
+        superbowl={typeof window !== 'undefined' && window.location.pathname === '/insights/super-bowl-lviii/' ? true : false}
+        checkVideo1={checkVideo1}
       />
 
        

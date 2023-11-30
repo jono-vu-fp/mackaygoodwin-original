@@ -7250,7 +7250,7 @@ section.dpn_optoins {
     display: flex;
     flex-flow: column;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: center;
 }
 .rdtime {
     margin-bottom:50px;

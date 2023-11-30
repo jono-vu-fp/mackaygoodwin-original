@@ -37,6 +37,8 @@ const topBanner = (props) => {
 							{props.downloadBtn === true ? <button className="btn btn-primary" onClick={() => { sendemail() }}>Download e-guide</button> : ""}
 							{props.downloadBtn2 === true ? <a className="btn btn-primary" href="#get-in-touch">Download e-guide</a> : ""}
 							{props.readTime !== null && props.readTime !== "" && props.readTime !== undefined ? <div class="rdtime">Read Time<br />{props.readTime}</div> : ""}
+
+							{props.superbowl !== false ?<a className="bt-big px-4 lt_btn" href="javascript:void(0)" onClick={()=>props.checkVideo1()}>Tickets</a>:null}
 						</div>
 					</div>
 					<div className={typeof props.equalWidth !== "undefined" && props.equalWidth ? "col-sm-12 col-md-12 col-lg-6 col-xl-6" : "col-sm-12 col-md-12 col-lg-6 col-xl-5"}>
@@ -48,6 +50,7 @@ const topBanner = (props) => {
 						<div className="banner-desc" dangerouslySetInnerHTML={{ __html: props.text }}></div>
 
 						{props.btn !== false && props.sendUrl !== null && props.sendUrl !== "" ? <Link className="btn btn-primary" to={props.sendUrl}>{props.btnTxt || "Learn more"}</Link> : ""}
+						
 					</div>
 				</div>
 			</div>
