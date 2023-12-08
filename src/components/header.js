@@ -111,7 +111,7 @@ const Header = () => {
                      <li><Link className="dropdown-item" to="/liquidation/">Creditors Voluntary Liquidation</Link></li>
                 <li><Link className="dropdown-item" to="/liquidation/">Simplified Liquidation</Link></li>
                 <li><Link className="dropdown-item" to="/liquidation/">Members Voluntary Liquidation</Link></li>
-                <li><Link className="dropdown-item" to="/corporate-insolvency-landing-page#receverships_sec">Receverships </Link></li>
+                <li><Link className="dropdown-item" to="/corporate-insolvency-landing-page#receverships_sec">Receiverships </Link></li>
                  
                   </ul>
 
@@ -329,7 +329,7 @@ const Header = () => {
                      <li><Link className="dropdown-item" to="/liquidation/">Creditors Voluntary Liquidation</Link></li>
                 <li><Link className="dropdown-item" to="/liquidation/">Simplified Liquidation</Link></li>
                 <li><Link className="dropdown-item" to="/liquidation/">Members Voluntary Liquidation</Link></li>
-                <li><Link className="dropdown-item" to="/corporate-insolvency-landing-page#receverships_sec">Receverships </Link></li>
+                <li><Link className="dropdown-item" to="/corporate-insolvency-landing-page#receverships_sec">Receiverships </Link></li>
                  
                   </ul>
 
@@ -592,7 +592,7 @@ const Header = () => {
                      <li><Link className="dropdown-item" to="/liquidation/">Creditors Voluntary Liquidation</Link></li>
                 <li><Link className="dropdown-item" to="/liquidation/">Simplified Liquidation</Link></li>
                 <li><Link className="dropdown-item" to="/liquidation/">Members Voluntary Liquidation</Link></li>
-                <li><Link className="dropdown-item" to="/corporate-insolvency-landing-page#receverships_sec">Receverships </Link></li>
+                <li><Link className="dropdown-item" to="/corporate-insolvency-landing-page#receverships_sec">Receiverships </Link></li>
                  
                   </ul>
                 </li>
