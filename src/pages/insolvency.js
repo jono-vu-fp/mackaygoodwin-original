@@ -1,331 +1,865 @@
-import * as React from "react"
-import { graphql } from "gatsby"
-import { Link } from "gatsby"
-import Layout from "../components/layout"
-import Seo from "../components/seo"
-import TopBanner from "../components/top-banner-liquidationpage"
-import GetInTouch from "../components/get-in-touch3"
-import FullText from "../components/full-text"
-import EbookForm from "../components/ebook-form"
-import { formEbookContext } from '../components/context';
-import ActiveCampaignHowthrive from "../components/activecampaign-howthrive"
-import GetInTouchPPForm from "../components/get-in-touch-bankruptcy-popup"
-import Accordian from "../components/accordian/accordian-insolvency"
-// const whyMG = [
-//   {
-//     "title": "Liquidation",
-//     "text":"We’re in the business of resolution. Backed by leading technology and innovative thinking, we make the right decisions at the right time. Capturing opportunity and avoiding obstacles. Delivering the best possible outcome, every day."
-//   },
-//   {
-//     "title": "Receivership",
-//     "text":"To achieve success takes determination and focus. We leave no stone unturned. Tailoring solutions to meet your specific needs, on top of every moment. Getting you where you need to be, step by step."
-//   },
-//   {
-//     "title": "Personal Insolvency",
-//     "text":"We know time is of the essence. So we put positive action into practice. Taking the initiative, we anticipate your needs and move ahead as swiftly as possible, all without missing a trick."
-//   }
-// ]
+import * as React from "react";
+import { graphql } from "gatsby";
+import { Link } from "gatsby";
+import Layout from "../components/layout";
+import Seo from "../components/seo";
+import TopBanner from "../components/top-banner-landing";
+import GetInTouch from "../components/get-in-touchlanding";
+import Accordian from "../components/accordian/accordian-bankruptcy";
+import GetInTouchPPForm from "../components/get-in-touch-liquidation-popup";
+
+import Container from "../components/slider/container-restructuring-nolink";
+
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+
+
+import OurPeople from "../components/our-people-liquid/our-people3"
 
 import $ from "jquery"
+
 const Insolvency = ({ data }) => {
-    const [showModal, setModal] = React.useState(false); 
-  const [showForm, setForm] = React.useState(false);
   let whyMG = [];
-  data.wpPage.insolvency.qA.map((d) => {
-    return whyMG.push({ title: d.question, description: d.answer, learnMoreText: d.buttonLabel, learnMoreUrl: d.buttonUrl });
-  })
+  data.wpPage.corporateInsolvencyLandingPageOptions.iconWithTextco.map((d) => {
+    return whyMG.push({ title: d.itextco });
+  });
+  data.wpPage.corporateInsolvencyLandingPageOptions.testimonialsRowco.map(
+    (d) => {
+      return whyMG.push({
+        title: d.testimonialsHeadingco,
+        testdescription: d.testimonialsContentco,
+      });
+    }
+  );
+  data.wpPage.corporateInsolvencyLandingPageOptions.professionalGridco.map(
+    (d) => {
+      return whyMG.push({ title: d.cotitle, testdescription: d.coprocontent, testlink: d.coplink });
+    }
+  );
+  data.wpPage.corporateInsolvencyLandingPageOptions.resolutionGridco.map(
+    (d) => {
+      return whyMG.push({ title: d.retitleco, testdescription: d.recontentco });
+    }
+  );
+
+  let whyMG1 = [];
+  data.wpPage.corporateInsolvencyLandingPageOptions.brFaqsco.map((d) => {
+    console.log(d);
+    return whyMG1.push({ title: d.questionco, description: d.answerco, tag: "" });
+  });
 
   let whyMG2 = [];
+  data.wpPage.corporateInsolvencyLandingPageOptions.businessTestimonialco.map((d,k) => {
+    console.log(d)
+    return whyMG2.push({ name: d.nameco, designation: "", comment: d.commentco, url:d.urlco, keyloc:"d"+k, image:d.imageco });
+  });
 
-  data.wpPage.insolvency.insFaqs.map((d) => {
-    return whyMG2.push({ title: d.insQuestion, description: d.insAnswer, tag: '' });
-  })
+  let businessData = [];
+  data.wpPage.corporateInsolvencyLandingPageOptions.peoplesco.map((d) => {
+    return businessData.push({
+      title: d.title,
+      subtitle: d.backInBusiness.designation,
+      text: d.backInBusiness.location,
+      certification: d.backInBusiness.certification,
+      content: d.content,
+      linkedin: d.backInBusiness.linkedin,
+      email: d.backInBusiness.email,
+      phone: d.backInBusiness.phoneNumber,
+      img: d.featuredImage?.node,
+      altimg: d.backInBusiness?.staffImage2,
+      designationType: d.backInBusiness.designationType,
+      registeredLiquidators: d.backInBusiness.registeredLiquidators,
+      slug: d.slug
+    });
+  });
 
+  
+  // const formDetailContext = React.createContext(null);
+  const [curTab, changeTab] = React.useState(1);
+  
+   const responsive = {
+    superLargeDesktop: {
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5,
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
+  };
+
+  const stepsresponsive = {
+    mobile: {
+      breakpoint: { max: 567, min: 0 },
+      items: 1
+    },
+    mintablet: {
+      breakpoint: { max: 991, min: 568 },
+      items: 2
+    },
+    tablet: {
+      breakpoint: { max: 1101, min: 991 },
+      items: 3
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1100 },
+      items: 4
+    },
+    superLargeDesktop: {
+      breakpoint: { max: 4000, min: 3000 },
+      items: 4
+    }
+
+  };
   const breadCrumbs = [
-    { link: "/", title: "Home" },
-    { link: "#", title: "Services" },
-    { title: "Insolvency" },
-  ]
-  const checkVideo = () =>{
-    setForm(true);
+    { link: "/", title: "Home" }, 
+    { title: "Corporate Insolvency" },
+  ];
+
+  const showContactForm = () => {
+    $('#br_popup').addClass('show');
   }
-  const [fromDetails, setFormDetails] = React.useState(0);
-  const [fromEbookDetails, setFormEbookDetails] = React.useState(0);
-  const value = { fromDetails, setFormDetails };
-  const valueEbook = { fromEbookDetails, setFormEbookDetails };
-  return (<div className="service insolvency">
-    <Layout>
-      <Seo title={data.wpPage.metaFields?.metaTitle} description={data.wpPage.metaFields?.metaDescription} />
-      <TopBanner
-        title={data.wpPage.insolvency.bannerTitle}
-        subtitle={data.wpPage.insolvency.bannerSubtitle}
-        text={data.wpPage.insolvency.bannerDesc}
-        bannerImg={data.wpPage.insolvency.bannerImage}
-        breadCrumbs={breadCrumbs}
-        sendUrl={data.wpPage.insolvency.sendUrl}
-      />
-      <FullText
-        text={data.wpPage.insolvency.pageTagline}
-      />
-      <div class="ca_main">
-        {data.wpPage.insolvency.qA.map((d,key) => {
-            return <div className={'ca_sec ca_sec'+key}><div className="container"><h2>{d.question}</h2><div className="ca_txt" dangerouslySetInnerHTML={{ __html: d.answer }}></div><div className="find_more">{d.buttonUrl !== null && d.buttonUrl !== "" ? <Link className="btn btn-primary me-5" to={d.buttonUrl}>{d.buttonLabel}</Link> : ""}</div></div></div>
-        })}
-      </div>
-      {/* <CurveRight
-        title={data.wpPage.insolvency.healthCheckTitle}
-        text={data.wpPage.insolvency.healthCheckDesc}
-        img={data.wpPage.insolvency.healthCheckImage}
-        btn1Txt={'Business Advisors'}
-        btn2Txt={'Business Directors'}
-        btn1Link={data.wpPage.insolvency.businessDirectorAdvisorLink}
-        btn2Link={data.wpPage.insolvency.businessDirectorButtonLink}
-      /> */}
+  React.useEffect(()=>{
+    if(window.location.hash=='#receverships_sec'){
+      changeTab(6);
+    }
+    return () => {
 
+    };
+  });
 
-      {/* <formHealthContext.Provider value={value}>
-        <ImageLeftLayout
-          title={data.wpPage.insolvency.healthCheckTitle}
-          text={data.wpPage.insolvency.healthCheckDesc}
-          img={data.wpPage.insolvency.healthCheckImage}
-          btnTxt={data.wpPage.insolvency.buttonBook}
-          btnLink={data.wpPage.insolvency.buttonBookurl}
-          btnClick={''}
-          addClass={"ill_section bhc_section"}
-          video={data.wpPage.insolvency.video}
-          videolabel={data.wpPage.insolvency.videoButtonLabel}
+  return (
+    <div className="restructure_land service liquidation ci_land restructure_land2 no_bannerform dpnfont_page">
+      <Layout>
+        <Seo
+          title={data.wpPage.metaFields?.metaTitle}
+          description={data.wpPage.metaFields?.metaDescription}
         />
-        
-        <HealthForm
-          title={'Register Now'}
-          text={'Register now for your business health check'}
+        <TopBanner
+          title={
+            data.wpPage?.corporateInsolvencyLandingPageOptions.cobannerTitle
+          }
+          subtitle={
+            data.wpPage?.corporateInsolvencyLandingPageOptions.cobannerSubtitle
+          }
+          bannerImg={
+            data.wpPage?.corporateInsolvencyLandingPageOptions.cobannerImage
+          }
+          breadCrumbs={breadCrumbs}
         />
-      </formHealthContext.Provider> */}
 
+        <div class="rtsec2">
+          <div class="container container2">
+          <h2>About your recovery partner</h2>
+            <ul>
+              {data.wpPage.corporateInsolvencyLandingPageOptions.iconWithTextco.map(
+                (d, key) => {
+                  return (
+                    <li>
+                      <img src={d.giconco?.localFile?.publicURL} />
 
-
-      <section className="health_check home_helthcheck">
-          <div className="container">
-            <div className="ht_right">
-              <img className="img-fluid" src={data.wpPage.insolvency.healthCheckImage?.localFile?.childImageSharp?.resize?.src} alt={data.wpPage.insolvency.healthCheckImage?.altText} />
-            </div>
-
-            <div className="ht_left">
-              <h2>{data.wpPage.insolvency.healthCheckTitle}</h2>
-              <div className="ht_cnt" dangerouslySetInnerHTML={{ __html: data.wpPage.insolvency?.healthCheckDesc }}></div>
-          
-
-              {data.wpPage.insolvency.buttonBookurl !== null && data.wpPage.insolvency.buttonBookurl !== "" ? <Link className="btn btn-primary me-5" to={data.wpPage.insolvency.buttonBookurl}>{data.wpPage.insolvency.buttonBook}</Link> : ""}
-
-              <button  className="btn btn-primary me-5" type="button" onClick={()=>setModal(true)} data-toggle="modal" data-target="#myModal">{data.wpPage.insolvency.videoButtonLabel}</button>
-              <div id="myModal" role="dialog" className={showModal?'in show modal fade':'modal fade'}>
-              <div className="model_inner">
-                  <div className="popup_dialog">
-                      <div className="modal-content">
-                          <button type="button" className="close" data-dismiss="modal" onClick={()=>{setModal(false);$('iframe.embed-responsive-item').attr('src', $('iframe.embed-responsive-item').attr('src').replace("autoplay=1&amp;", ""));}}>&times;</button>
-                          <div className="popup_body">
-                              <div className="video_ratio">
-                                  <div dangerouslySetInnerHTML={{__html: data.wpPage.insolvency.video }} />
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
+                      <div dangerouslySetInnerHTML={{ __html: d.itextco }}></div>
+                    </li>
+                  );
+                }
+              )}
+            </ul>
           </div>
+        </div>
 
+        <section className="testimonial-main testimonial-mainnew">
+      <div className="container">
+          <div className="row">
+            <div className="col-sm-12 col-md-12 col-lg-6 p-5">
+               
+              <img
+                class="img-fluid"
+                src={
+                  data.wpPage.corporateInsolvencyLandingPageOptions
+                    .testimageco.localFile?.childImageSharp?.resize?.src
+                }
+                alt="data.wpPage.corporateInsolvencyLandingPageOptions.testimageco.altText"
+              />
+            </div>
+            <div className="col-sm-12 col-md-12 col-lg-6 p-5 desc">
+               {data.wpPage.corporateInsolvencyLandingPageOptions.testimonialsRowco.map((d,key) => {
+                 return <div>
+                 
+                  <div dangerouslySetInnerHTML={{ __html: d.testimonialsContentco}}></div>
+                 <h2>- {d.testimonialsHeadingco}</h2>
+                 </div>
+                })}
+            </div>
+          </div>
+      </div>
+    </section>
+
+        {/*<div class="liqtestmon">
+        <div class="container">
+            <div class="row">
+              
+              <div class="col-sm-12 col-md-12 col-lg-6">
+                
+                <h3>Client testimonial</h3>
+         {data.wpPage.corporateInsolvencyLandingPageOptions.testimonialsRowco.map((d,key) => {
+                 return <div>
+                 
+                  <div dangerouslySetInnerHTML={{ __html: d.testimonialsContentco}}></div>
+                 <h2>- {d.testimonialsHeadingco}</h2>
+                 </div>
+                })}
+
+              </div>
+
+              <div class="col-sm-12 col-md-12 col-lg-6 colmn_2">
+               
+              <img
+                class="img-fluid"
+                src={
+                  data.wpPage.corporateInsolvencyLandingPageOptions
+                    .testimageco.localFile?.childImageSharp?.resize?.src
+                }
+                alt="data.wpPage.corporateInsolvencyLandingPageOptions.testimageco.altText"
+              />
+              </div>
+            </div>
+        </div>
+      </div>*/}
+
+        {/* <div class="rtsec3">
+          <div class="container container2">
+            <div class="carousel_row">
+            <h3>Hear from our clients</h3>
+            <Carousel showDots={true} responsive={responsive} infinite={true}  autoPlay={true} autoPlaySpeed={2000}> 
+                {data.wpPage.corporateInsolvencyLandingPageOptions.testimonialsRowco.map((d,key) => {
+                 return <div class="ctestitem">
+                  <div dangerouslySetInnerHTML={{ __html: '"'+d.testimonialsContentco+'"' }}></div>
+                 <h4>-{d.testimonialsHeadingco}</h4>
+                 </div>
+                })}
+          </Carousel> 
+            </div>
+          </div>
+        </div>*/}
+
+        {/*<div class="liqtestmon">
+        <div class="container container2">
+            <div class="row">
+              <div class="col-sm-12 col-md-12 col-lg-5">
+               
+              <img
+                class="img-fluid"
+                src={
+                  data.wpPage.corporateInsolvencyLandingPageOptions
+                    .testimageco.localFile?.childImageSharp?.resize?.src
+                }
+                alt="data.wpPage.corporateInsolvencyLandingPageOptions.testimageco.altText"
+              />
+              </div>
+              <div class="col-sm-12 col-md-12 col-lg-7">
+                <div class="rt_testmon">
+                <h3>Hear from our clients</h3>
+
+                  <Carousel showDots={true} responsive={responsive} infinite={true}  autoPlay={true} autoPlaySpeed={2000}> 
+                {data.wpPage.corporateInsolvencyLandingPageOptions.testimonialsRowco.map((d,key) => {
+                 return <div class="ctestitem">
+                  <div dangerouslySetInnerHTML={{ __html: '"'+d.testimonialsContentco+'"' }}></div>
+                 <h4>{d.testimonialsHeadingco}</h4>
+                 </div>
+                })}
+          </Carousel> 
+                </div>
+              
+
+              </div>
+            </div>
+        </div>
+      </div>*/}
+
+        
+<div class="midheading">
+        <div class="container"> <h2>{data.wpPage.corporateInsolvencyLandingPageOptions.midheading}</h2> </div> </div>
+        <section id="vCFO" class="mg_identifix cinlpageidentifix">
+        
+          <div class="container">
+            <div className="wva_right">
+              <img
+                class="img-fluid"
+                src={
+                  data.wpPage.corporateInsolvencyLandingPageOptions
+                    .costructureImage.localFile?.childImageSharp?.resize?.src
+                }
+                alt="data.wpPage.corporateInsolvencyLandingPageOptions.costructureImage.altText"
+              />
+            </div>
+            <div className="wva_left">
+              <h3>
+                {data.wpPage.corporateInsolvencyLandingPageOptions.coresheading}
+              </h3>
+              <div
+                dangerouslySetInnerHTML={{
+                  __html:
+                    data.wpPage.corporateInsolvencyLandingPageOptions
+                      .corescontent,
+                }}
+              ></div>
+              <button className="btn btn-primary me-5" onClick={()=>showContactForm()}>
+                          Learn more
+                        </button>
+              {/*<Link className="btn btn-primary me-5" to={data.wpPage.corporateInsolvencyLandingPageOptions.corlink}>
+                Learn More
+              </Link>*/}
             </div>
           </div>
         </section>
 
 
+        <section class="eligible_sec mbottom_0 greybg">
+          <div class="container container2">
 
+          <h2>
+                 {data.wpPage.corporateInsolvencyLandingPageOptions.coheading}
+              </h2>
+               <h3>
+                {data.wpPage.corporateInsolvencyLandingPageOptions.cocontent}
+              </h3>
+               
 
-       {/* <formEbookContext.Provider value={valueEbook}>
+            
+              <ul>
 
-        <ImageRightLayout
-          title={data.wpPage.insolvency.survivalTitle}
-          text={data.wpPage.insolvency.survivalDesc}
-          img={data.wpPage.insolvency.survivalImage}
-          btnTxt={'Download Now'}
-          btnLink={""}
-          btnClick={() => { setFormEbookDetails(1) }}
-          addClass={"irl_section bsp_section"}
-        />
-        <EbookForm
-          title={'Download e-guide'}
-          text={'Download your free copy today and get on the path to recovery'}
-        />
-      </formEbookContext.Provider> */}
+              {data.wpPage.corporateInsolvencyLandingPageOptions.professionalGridco.map(
+                (d, key) => {
+                    return (
+                       <li>
+                       <input type="checkbox" name="radio" id={'radio'+key} />
+                        <label for={'radio'+key}><strong>{d.cotitle}</strong><br/>
 
-       <section className="ht_section ht_bottom">
-        <div className="container">
-          <div className="ht_left">
-            <img className="img-fluid" src={data.wpPage.insolvency.insHtImage?.localFile?.childImageSharp?.resize?.src} alt={data.wpPage.insolvency.insHtImage?.altText} />
+                        <span dangerouslySetInnerHTML={{ __html: d.coprocontent }}
+                        />
+                        </label>
+
+                       </li>
+                      
+                    );
+                  }
+                )}
+
+                </ul>
+                 <button className="btn btn btn-primary" onClick={()=>showContactForm()}>
+                Contact us
+              </button>
+                 
           </div>
-          <div className="ht_right">
-            <h2>{data.wpPage.insolvency.insHtTitle}</h2>
-            <div className="ht_cnt" dangerouslySetInnerHTML={{ __html: data.wpPage.insolvency?.insHtDescription }}></div>
-            <formEbookContext.Provider value={valueEbook}>
-              {/*<button className="btn btn-primary me-5" onClick={() => { setFormEbookDetails(1) }}>Download Now</button>*/}
-            <button className="btn btn-primary me-5" onClick={() => { checkVideo() }}>Download Now</button>
-              <EbookForm
-                title={'Download e-guide'}
-                text={'Download your free copy today and get on the path to recovery'}
-              />
-            </formEbookContext.Provider>
+          </section>
 
-            <div id="myModal" role="dialog" className={showForm?'in show modal fade':'modal fade'}>
-              <div className="model_inner">
-                <div className="popup_dialog">
-                  <div className="modal-content">
-                    <button type="button" className="close" onClick={()=>setForm(false)} data-dismiss="modal">&times;</button>
-                    <div className="popup_body">
-                      <div className="video_form"><ActiveCampaignHowthrive setForm={setForm} /></div>
+        {/*<section class="speakprof_sec spek_sec">
+          <div class="container container2">
+            <div class="spek_head">
+              <h2>
+                 {data.wpPage.corporateInsolvencyLandingPageOptions.coheading}
+              </h2>
+              <div
+                class="p"
+                dangerouslySetInnerHTML={{
+                  __html:
+                    data.wpPage?.corporateInsolvencyLandingPageOptions
+                      ?.cocontent,
+                }}
+              />
+               <button className="btn btn-primary " onClick={()=>showContactForm()}>
+                         Contact </button>
+             
+              </div>           
+
+            <ul class="profe_row">
+              {data.wpPage.corporateInsolvencyLandingPageOptions.professionalGridco.map(
+                (d, key) => {
+                  return (
+                    
+                        <li>
+                        <h4>{d.cotitle}</h4>
+                        <div
+                          class="p"
+                          dangerouslySetInnerHTML={{ __html: d.coprocontent }}
+                        />
+                        
+                       {" "}
+                     </li>
+                  );
+                }
+              )}
+            </ul> 
+          </div>
+         </section>*/}
+
+       {/* <section class="spek_sec">
+          <div class="container container2">
+            <div class="spek_head">
+              <h2>
+                {data.wpPage.corporateInsolvencyLandingPageOptions.coheading}
+              </h2>
+              <div
+                class="p"
+                dangerouslySetInnerHTML={{
+                  __html:
+                    data.wpPage?.corporateInsolvencyLandingPageOptions
+                      ?.cocontent,
+                }}
+              />
+              <button className="btn btn-primary " onClick={()=>showContactForm()}>
+                         Contact </button>
+            </div>
+
+
+
+            <div class="spek_row">
+              {data.wpPage.corporateInsolvencyLandingPageOptions.professionalGridco.map(
+                (d, key) => {
+                  return (
+                    <div class="spek_grid">
+                      <div class="spek_item">
+                       
+                        <h4>{d.cotitle}</h4>
+                        <div
+                          class="p"
+                          dangerouslySetInnerHTML={{ __html: d.coprocontent }}
+                        />
+                         {d.coplink?<Link className="btn" to={d.coplink}>
+                          Contact us
+                        </Link>:<button className="btn" onClick={()=>showContactForm()}>
+                          Contact us
+                        </button>}
+                      </div>{" "}
                     </div>
-                  </div>
+                  );
+                }
+              )}
+            </div>
+          </div>
+
+
+        </section>*/}
+
+        
+
+        <section class="includes_sec brigeincludes_sec liqpagefont">
+       <div class="container container2">
+         <div class="spek_head">
+
+         <h2 dangerouslySetInnerHTML={{ __html:data.wpPage?.theyMayIncludeSection?.theyheading,}}/>
+
+        
+              <div
+                class="p"
+                dangerouslySetInnerHTML={{
+                  __html:
+                    data.wpPage?.theyMayIncludeSection
+                      ?.theysubheading,
+                }}
+              />
+         </div>
+
+         <div class="step_row">
+
+         <Carousel showDots={true} responsive={stepsresponsive} infinite={true}  autoPlay={false} autoPlaySpeed={2000}> 
+                {data.wpPage.theyMayIncludeSection.includes.map((d, key) => {
+                 return <div class="step_grid">
+             <div class="step_item">
+               <img src={d.theyimage?.localFile?.childImageSharp?.resize?.src}/>
+               <div class="step_gcont">
+                <h3>{d.theytitle}</h3>
+                         <div dangerouslySetInnerHTML={{ __html: d.theycontent }} />
+                         <button className="btn btn btn-primary" onClick={()=>showContactForm()}>Learn more</button>
+                         
                 </div>
+             </div>
+           </div>
+                })}
+          </Carousel> 
+
+         
+         </div>
+       </div>
+   </section>
+
+
+         
+
+        <Container
+          title={
+            data.wpPage.corporateInsolvencyLandingPageOptions.businessTitleco
+          }
+          subtitle={""}
+          data={ whyMG2 }
+          slideColor={"#EBE9DE"}
+        />
+
+         <div className="service bankruptcy brige_color brige_color2 sub_heading">
+          <Accordian
+          title={
+            data.wpPage.corporateInsolvencyLandingPageOptions.brFaqsTitleco
+          }
+          showEnquireButton={false}
+          data={whyMG1}
+        />
+        </div> 
+        
+        
+
+        <section className="news-articles restructurenews-articles corporate_people" id="people">
+          <div className="container">
+            <div className="row">
+              <div className="people_head">
+                <h2>{data.wpPage.corporateInsolvencyLandingPageOptions.peopleHeadco} </h2>
+              
+
+                 <div className="p" dangerouslySetInnerHTML={{ __html: data.wpPage.corporateInsolvencyLandingPageOptions?.peopleContentco }}></div>
+              </div>
+            </div>
+
+            <OurPeople
+              title={""}
+              text={""}
+              data={businessData}
+              showAll={0}
+              liquidation={0}
+            />
+
+            <div class="row">
+              <div class="col-lg-12 col-md-12 align-center">
+                <Link className="btn btn-primary me-5" to="/people/">
+                  All People
+                </Link>
               </div>
             </div>
           </div>
-        </div>
-      </section> 
+        </section>
 
-
-       <div className="wva_section fd_section dca_section dpn_part">
-        <div className="container">
-          <div className="wva_left">
-            <img src={data.wpPage.insolvency.dpn3Image.localFile?.childImageSharp?.resize?.src} alt={data.wpPage.insolvency.dpn3Image.altText} />
-          </div>
-          <div className="wva_right">
-            <h2>{data.wpPage.insolvency.dpn3Title}</h2>
-            <div dangerouslySetInnerHTML={{ __html: data.wpPage.insolvency.dpn3Description }}></div>
-            {data.wpPage.insolvency.dpn3ButtonLink !== null && data.wpPage.insolvency.dpn3ButtonLink !== "" ? <Link className="btn btn-primary me-5" to={data.wpPage.insolvency.dpn3ButtonLink}>{data.wpPage.insolvency.dpn3ButtonText}</Link> : ""} {data.wpPage.insolvency.dpn3Button2Link !== null && data.wpPage.insolvency.dpn3Button2Link !== "" ? <Link className="btn btn-primary me-5" to={data.wpPage.insolvency.dpn3Button2Link}>{data.wpPage.insolvency.dpn3Button2Text}</Link> : ""}
-          </div>
-        </div>
-      </div>
-
-
-      <div class="grey_faq">
-        <Accordian
-          title={data.wpPage.insolvency.insFaqTitle}
-          description={data.wpPage.insolvency.insDescription}
-          showEnquireButton={false}
-          data={whyMG2}
-        />
-         </div>
-
-
-      <div className="home">
+        <div className="home">
           <GetInTouch
-            title={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchTitle}
-            text={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchDescription}
+            title={
+              data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings
+                .getInTouchTitle
+            }
+            text={
+              data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings
+                .getInTouchDescription2
+            }
           />
-      </div>
-      <GetInTouchPPForm
-        title={data?.allWp?.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchTitle}
-        text={data?.allWp?.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchDescription}
-        image={data?.allWp?.nodes[0].themeGeneralSettings.themeGeneralSettings.gitImage}
-      />
-    </Layout>
-  </div>
-  )
-}
+        </div>
+        <GetInTouchPPForm
+          title={
+            data?.allWp?.nodes[0].themeGeneralSettings.themeGeneralSettings
+              .getInTouchTitle
+          }
+          text={
+            data?.allWp?.nodes[0].themeGeneralSettings.themeGeneralSettings
+              .getInTouchDescription2
+          }
+          image={
+            data?.allWp?.nodes[0].themeGeneralSettings.themeGeneralSettings
+              .gitImage
+          }
+        />
+      </Layout>
+    </div>
+  );
+};
+
 export const query = graphql`
   {
     wpPage(title: {eq: "Corporate Insolvency"}) {
-      insolvency {
-        bannerDesc
-        bannerImage {
-          altText
-          mediaItemUrl
-          localFile {
-            childImageSharp {
-              resize (width: 655, height: 473, cropFocus: CENTER, quality: 100) {
-                src
-              }
-            }
-          }
-        }
-        bannerSubtitle
-        bannerTitle
-        businessDirectorAdvisorLink
-        businessDirectorButtonLink
-        buttonBook
-        buttonBookurl
-        videoButtonLabel
-        video
-        healthCheckDesc
-        healthCheckImage {
-          altText
-          mediaItemUrl
-          localFile {
-            childImageSharp {
-              resize (width: 522, height: 462, cropFocus: CENTER, quality: 80) {
-                src
-              }
-            }
-          }
-        }
-        survivalDesc
-        survivalEnquireLink
-        survivalTitle
-        survivalImage {
-          altText
-          mediaItemUrl
-        }
-        healthCheckTitle
-        pageTagline
-        qA {
-          answer
-          question
-          buttonUrl
-          buttonLabel
-        }
-        insHtTitle
-        insHtDescription
-        insHtImage {
-          altText
-          mediaItemUrl
-          localFile {
-            childImageSharp {
-              resize (width: 682, height: 465, cropFocus: CENTER, quality: 80) {
-                src
-              }
-            }
-          }
-        }
-        dpn3Title
-        dpn3Description
-        dpn3ButtonText
-        dpn3ButtonLink
-        dpn3Button2Text
-        dpn3Button2Link
-        dpn3Image {
+
+      theyMayIncludeSection{
+        theyheading
+        theysubheading
+        includes{
+          theytitle
+          theycontent
+          theylink{
+            title
+            url
+          } 
+          theyimage {
             altText
             mediaItemUrl
             localFile {
               childImageSharp {
-                resize (width: 744, height: 462, cropFocus: CENTER, quality: 80) {
+                resize (width: 413, height: 290, cropFocus: CENTER, quality: 100) {
+                  src
+                }
+              }
+            }
+          }
+        }
+      }
+
+      corporateInsolvencyLandingPageOptions {
+        iconWithTextco {
+          itextco 
+          giconco{
+            altText
+            mediaItemUrl
+            localFile {
+              publicURL
+            }
+          }
+        }
+        midheading
+        coresheading
+        corescontent
+        corlink
+        cocontent
+        coheading
+        professionalGridco{
+          cotitle
+          coprocontent
+          coplink
+          coimage{
+           mediaItemUrl
+           altText
+           localFile{
+            publicURL
+           }
+          }
+        }
+
+        
+        peoplesco {
+          ... on WpOurpeople {
+            id
+            slug
+            title
+            backInBusiness{
+              designation
+              location
+              certification
+              linkedin
+              email
+              phoneNumber
+              designationType
+              registeredLiquidators
+              staffImage2{
+                altText
+                mediaItemUrl
+                localFile {
+                  childImageSharp {
+                    resize (width: 416, height: 450, cropFocus: CENTER, quality: 100) {
+                      src
+                    }
+                  }
+                }
+              }
+            }
+            content
+            featuredImage {
+              node {
+                altText
+                mediaItemUrl
+                localFile {
+                  childImageSharp {
+                    resize (width: 416, height: 450, cropFocus: CENTER, quality: 100) {
+                      src
+                    }
+                  }
+                }
+              }
+            }
+          }
+        } 
+        peopleHeadco
+        peopleContentco
+        coreheading
+        resolutionGridco{
+          recontentco
+          retitleco
+          reiconco{
+           mediaItemUrl
+           altText
+           localFile{
+            publicURL
+           }
+          }
+        }
+
+        businessTitleco
+        businessTestimonialco {
+          commentco
+          imageco {
+            altText
+            mediaItemUrl
+            localFile {
+              childImageSharp {
+                resize (width: 412, height: 280, cropFocus: CENTER, quality: 100) {
+                  src
+                }
+              }
+            }
+          }
+          urlco
+          nameco
+        }
+
+        brFaqsTitleco
+        brFaqsco {
+          questionco
+          answerco
+        }
+
+
+        nextStepsHeadingco 
+        voluntaryAdministrationTitleco
+        voluntaryAdministrationContentco
+        vlinkco
+        voluntaryAdministrationImg1{
+            altText
+            mediaItemUrl
+            localFile {
+              childImageSharp {
+                resize (width: 526, height: 351, cropFocus: CENTER, quality: 100) {
                   src
                 }
               }
             }
           }
 
-        sendUrl
+        safeHarbourTitleco
+        safeHarbourContentco
+        slinkco
+        safeHarbourImg1{
+            altText
+            mediaItemUrl
+            localFile {
+              childImageSharp {
+                resize (width: 526, height: 351, cropFocus: CENTER, quality: 100) {
+                  src
+                }
+              }
+            }
+          }
 
-        insFaqTitle
-        insDescription
-        insFaqs {
-          insQuestion
-          insAnswer
-        } 
+        creditorsVoluntaryLiquidationTitleco
+        creditorsVoluntaryLiquidationContentco
+        clinkco
+        creditorsVoluntaryLiquidationImg1{
+            altText
+            mediaItemUrl
+            localFile {
+              childImageSharp {
+                resize (width: 526, height: 351, cropFocus: CENTER, quality: 100) {
+                  src
+                }
+              }
+            }
+          }
+
+        simplifiedLiquidationTitleco
+        simplifiedLiquidationContentco
+        silinkco
+        simplifiedLiquidationImg1{
+            altText
+            mediaItemUrl
+            localFile {
+              childImageSharp {
+                resize (width: 526, height: 351, cropFocus: CENTER, quality: 100) {
+                  src
+                }
+              }
+            }
+          }
+
+        membersVoluntaryLiquidationTitleco
+        membersVoluntaryLiquidationContentco
+        mlinkco
+        membersVoluntaryLiquidationImg1{
+            altText
+            mediaItemUrl
+            localFile {
+              childImageSharp {
+                resize (width: 526, height: 351, cropFocus: CENTER, quality: 100) {
+                  src
+                }
+              }
+            }
+          }
+
+        receivershiptitle
+        receivershipContent
+        relink
+        receivershipImg1{
+            altText
+            mediaItemUrl
+            localFile {
+              childImageSharp {
+                resize (width: 526, height: 351, cropFocus: CENTER, quality: 100) {
+                  src
+                }
+              }
+            }
+          }
+        
+        costructureImage{
+          mediaItemUrl
+          altText
+          localFile {
+            childImageSharp {
+              resize (width: 549, height: 499, cropFocus: CENTER, quality: 100) {
+                src
+              }
+            }
+          }
+        }
+        testimonialsRowco {
+          testimonialsHeadingco
+          testimonialsContentco 
+           
+        }
+        testimageco {
+          altText
+          mediaItemUrl
+          localFile {
+            childImageSharp {
+              resize (width: 564, height: 376, cropFocus: CENTER, quality: 100) {
+                src
+              }
+            }
+          }
+        }
+       cobannerTitle
+       cobannerSubtitle
+       cobannerImage {
+          altText
+          mediaItemUrl
+          localFile {
+            childImageSharp {
+              resize (width: 526, height: 473, cropFocus: CENTER, quality: 100) {
+                src
+              }
+            }
+          }
+        }
+
+
+       
       }
+
       metaFields {
         metaDescription
         metaTitle
       }
     }
+
+
     allWp {
       nodes {
         themeGeneralSettings {
@@ -334,19 +868,62 @@ export const query = graphql`
             expertAdviceLink
             expertAdviceTitle
             fieldGroupName
-            getInTouchDescription
+            getInTouchDescription2
             getInTouchTitle
             gitImage{
               mediaItemUrl
               altText
+              localFile {
+                childImageSharp {
+                  resize (width: 500, height: 685, cropFocus: CENTER, quality: 100) {
+                    src
+                  }
+                }
+              }
             }
+            tagline
             speakExpertLink
             speakExpertTitle
+            testimonialTitle
+            testimonials {
+              comment
+              designation
+              url
+              name
+              image {
+                altText
+                mediaItemUrl
+              }
+            }
           }
         }
       }
     }
-  }
-`
 
-export default Insolvency
+    allWpOurpeople(sort: {order:  ASC, fields: menuOrder}) {
+      nodes {
+        title
+        slug
+        backInBusiness {
+          designation
+          location
+          certification
+          designationType
+          linkedin
+          email
+          phoneNumber
+          registeredLiquidators
+        }
+        featuredImage {
+          node {
+            altText
+            mediaItemUrl
+          }
+        }
+        content
+      }
+    }
+  }
+`;
+
+export default Insolvency;

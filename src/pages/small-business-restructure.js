@@ -1,77 +1,158 @@
-import * as React from "react"
-import { graphql } from "gatsby"
-import { Link } from "gatsby"
+import * as React from "react";
+import { graphql } from "gatsby";
+import { Link } from "gatsby";
+import Layout from "../components/layout";
+import Seo from "../components/seo";
+import TopBanner from "../components/top-banner-landing" 
+import ImageLeftLayout from "../components/image-left-layout4";
+import ImageRightLayout from "../components/image-right-layout2";
+import GetInTouch from "../components/get-in-touchlanding";
+import Accordian from "../components/accordian/accordian-bankruptcy";
+import CapabilityForm from "../components/capability-form";
+import CapabilityFormNew from "../components/capability-form-new";
+import FullText from "../components/full-text";
+import { formDetailContext } from "../components/context";
+import GetInTouchPPForm from "../components/get-in-touch-liquidation-popup"
 
-import Layout from "../components/layout"
-import Seo from "../components/seo"
-import TopBanner from "../components/top-banner-4"
-import GetInTouch from "../components/get-in-touch3"
-import CurveLeft from "../components/curve-left"
-import Services from "../components/services"
-import Accordian from "../components/accordian/accordian"
-import FullText from "../components/full-text"
-import OurPeople from "../components/our-people-liquid/our-people4"
-import TestimonialMain from "../components/testimonial-main-liquid-1"
-import ReciveryPlan from "../components/recovery-plan"
-import Container from "../components/slider/container-small-business"
-import EbookForm from "../components/ebook-form"
-import { formEbookContext } from '../components/context';
-import GetInTouchPPForm from "../components/get-in-touch-bankruptcy-popup"
-import _ from 'lodash';
+import Container from "../components/slider/container-restructuring-nolink";
+
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+
+import News from "../components/news/list2";
+
+import OurPeople from "../components/our-people-liquid/our-people3"
 import $ from "jquery"
 
 const ConsultBusiness = ({ data }) => {
-  const [showModal, setModal] = React.useState(false);
   let whyMG = [];
+  data.wpPage.smallBusinessRestructureLandingPageOptions.iconWithTextsbr.map((d) => {
+    return whyMG.push({ title: d.itextsbr });
+  });
+  data.wpPage.smallBusinessRestructureLandingPageOptions.testimonialsRowsbr.map(
+    (d) => {
+      return whyMG.push({
+        title: d.testimonialsHeadingsbr,
+        testdescription: d.testimonialsContentsbr,
+      });
+    }
+  );
+
+  let swhyMG = [];
+  data.wpPage.smallBusinessRestructureLandingPageOptions.eligiblerow.map((d) => {
+    return swhyMG.push({ title: d.eligibletext });
+  });
+
+
+ 
+  data.wpPage.smallBusinessRestructureLandingPageOptions.resolutionGridsbr.map(
+    (d) => {
+      return whyMG.push({ title: d.retitlesbr, testdescription: d.recontentsbr });
+    }
+  );
+
+  
 
   let businessData = [];
-  let count = 0;
-  data.wpPage.smallbusinessrestructure.peoplessmr1.map((d,key) => {
-      console.log(count);
-      count++;
-      return businessData.push({ title: d.title, subtitle: d.backInBusiness.designation, text: d.backInBusiness.location, certification: d.backInBusiness.certification, content: d.content, linkedin: d.backInBusiness.linkedin, email: d.backInBusiness.email, img: d.featuredImage?.node, designationType: d.backInBusiness.designationType, registeredLiquidators: d.backInBusiness.registeredLiquidators });
-   
-  })
-
-  // let businessData = [];
-  // let suffledArray = _.shuffle(data.allWpOurpeople.nodes); let lidx=0;
-  // suffledArray.map((d,key) => {
-  //   if(d.backInBusiness.registeredLiquidators && lidx<2){
-  //     lidx++;
-  //     return businessData.push({ title: d.title, subtitle: d.backInBusiness.designation, text: d.backInBusiness.location, certification: d.backInBusiness.certification, content: d.content, linkedin: d.backInBusiness.linkedin, email: d.backInBusiness.email, img: d.featuredImage?.node, designationType: d.backInBusiness.designationType, registeredLiquidators: d.backInBusiness.registeredLiquidators, altimg:d.backInBusiness.staffImage2 });
-       
-  //   }
-  // });
-  // suffledArray.map((d,key) => {
-  //   if(d.backInBusiness.registeredLiquidators==null && lidx<6){
-  //     lidx++;
-  //     return businessData.push({ title: d.title, subtitle: d.backInBusiness.designation, text: d.backInBusiness.location, certification: d.backInBusiness.certification, content: d.content, linkedin: d.backInBusiness.linkedin, email: d.backInBusiness.email, img: d.featuredImage?.node, designationType: d.backInBusiness.designationType, registeredLiquidators: d.backInBusiness.registeredLiquidators, altimg:d.backInBusiness.staffImage2 });
-       
-  //   }
-  // });
+  data.wpPage.smallBusinessRestructureLandingPageOptions.peoples2sbr.map((d) => {
+    return businessData.push({
+      title: d.title,
+      subtitle: d.backInBusiness.designation,
+      text: d.backInBusiness.location,
+      certification: d.backInBusiness.certification,
+      content: d.content,
+      linkedin: d.backInBusiness.linkedin,
+      email: d.backInBusiness.email,
+      phone: d.backInBusiness.phoneNumber,
+      img: d.featuredImage?.node,
+      altimg: d.backInBusiness?.staffImage2,
+      designationType: d.backInBusiness.designationType,
+      registeredLiquidators: d.backInBusiness.registeredLiquidators,
+      slug: d.slug
+    });
+  });
 
   const breadCrumbs = [
-    { link: "/", title: "Home" },
-    { title: "Liquidation" },
-  ]
-
+    { link: "/", title: "Home" }, 
+    { title: "Small Business Restructure" },
+  ];
+  // const formDetailContext = React.createContext(null);
   const [fromDetails, setFormDetails] = React.useState(0);
-  const [fromEbookDetails, setFormEbookDetails] = React.useState(0);
+  const [fromDetails2, setFormDetails2] = React.useState(0);
+  const [curTab, changeTab] = React.useState(1);
   const value = { fromDetails, setFormDetails };
-  const valueEbook = { fromEbookDetails, setFormEbookDetails };
-  return (<div className="service restructure consult-business liquidation voluntary_administration bankruptcy doc_1 safe_harbour small_business">
-    <Layout>
-      <Seo title={data.wpPage.metaFields?.metaTitle} description={data.wpPage.metaFields?.metaDescription} />
-      <TopBanner
-        title={data.wpPage.smallbusinessrestructure.smallBannerTitle}
-        subtitle={''}
-        text={data.wpPage.smallbusinessrestructure.smallBannerDesc}
-        bannerImg={data.wpPage.smallbusinessrestructure.smallBannerImage}
-        breadCrumbs={breadCrumbs}
-        equalWidth={true}
-      />
+  const value2 = { fromDetails2, setFormDetails2 };
+  
+   const responsive = {
+    superLargeDesktop: {
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5,
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
+  };
 
-       <div className="liq_blocks va_blocks doca_2">
+  const stepsresponsive = {
+    mobile: {
+      breakpoint: { max: 567, min: 0 },
+      items: 1
+    },
+    mintablet: {
+      breakpoint: { max: 991, min: 568 },
+      items: 2
+    },
+    tablet: {
+      breakpoint: { max: 1101, min: 991 },
+      items: 3
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1100 },
+      items: 4
+    },
+    superLargeDesktop: {
+      breakpoint: { max: 4000, min: 3000 },
+      items: 4
+    }
+
+  };
+
+  const showContactForm = () => {
+    $('#br_popup').addClass('show');
+  }
+
+  return (
+    <div className="restructure_land service liquidation smallrestructure_land smallrestructure_landn no_bannerform dpnfont_page">
+      <Layout>
+        <Seo
+          title={data.wpPage.metaFields?.metaTitle}
+          description={data.wpPage.metaFields?.metaDescription}
+        />
+        <TopBanner
+          title={
+            data.wpPage?.smallBusinessRestructureLandingPageOptions.sbrbannerTitle
+          }
+          subtitle={
+            data.wpPage?.smallBusinessRestructureLandingPageOptions.sbrbannerSubtitle
+          }
+          bannerImg={
+            data.wpPage?.smallBusinessRestructureLandingPageOptions.sbrbannerImage
+          }
+          
+          breadCrumbs={breadCrumbs}
+        />
+
+        <div className="liq_blocks va_blocks doca_2">
         <div className="container">
           <div className="row">
               
@@ -91,14 +172,177 @@ const ConsultBusiness = ({ data }) => {
         </div>
       </div>
 
-      <div className="weva_section doc3">
-        <div className="container">
-            <div dangerouslySetInnerHTML={{ __html: data.wpPage.smallbusinessrestructure.smallWevaContent }}></div>
-            {data.wpPage.smallbusinessrestructure.smallWevaButtonLink !== null && data.wpPage.smallbusinessrestructure.smallWevaButtonLink !== "" ? <Link className="btn btn-primary me-5" to={data.wpPage.smallbusinessrestructure.smallWevaButtonLink}>{data.wpPage.smallbusinessrestructure.smallWevaButtonText}</Link> : ""}
-        </div>
-      </div>
+        <div class="rtsec2 mtop_0">
+          <div class="container container2">
+           <h2>About your recovery partner</h2>
+            <ul>
+              {data.wpPage.smallBusinessRestructureLandingPageOptions.iconWithTextsbr.map(
+                (d, key) => {
+                  return (
+                    <li>
+                      <img src={d.giconsbr?.localFile?.publicURL} />
 
-      <div className="wva_section key_expert">
+                      <div dangerouslySetInnerHTML={{ __html: d.itextsbr }}></div>
+                    </li>
+                  );
+                }
+              )}
+            </ul>
+          </div>
+        </div>
+
+        <section className="testimonial-main testimonial-mainnew">
+      <div className="container">
+          <div className="row">
+            <div className="col-sm-12 col-md-12 col-lg-6 p-5">
+               
+              <img
+                class="img-fluid"
+                src={
+                  data.wpPage.smallBusinessRestructureLandingPageOptions
+                    .testimagebr.localFile?.childImageSharp?.resize?.src
+                }
+                alt="data.wpPage.smallBusinessRestructureLandingPageOptions.testimagebr.altText"
+              />
+            </div>
+            <div className="col-sm-12 col-md-12 col-lg-6 p-5 desc">
+               {data.wpPage.smallBusinessRestructureLandingPageOptions.testimonialsRowsbr.map((d,key) => {
+                 return <div>
+                 
+                  <div dangerouslySetInnerHTML={{ __html:d.testimonialsContentsbr }}></div>
+                   <h2>- {d.testimonialsHeadingsbr}</h2>
+                 </div>
+                })}
+            </div>
+          </div>
+      </div>
+    </section>
+
+
+        {/*<div class="liqtestmon">
+        <div class="container">
+            <div class="row">
+              
+              <div class="col-sm-12 col-md-12 col-lg-6">
+                
+                <h3>Client testimonial</h3>
+          {data.wpPage.smallBusinessRestructureLandingPageOptions.testimonialsRowsbr.map((d,key) => {
+                 return <div>
+                 
+                  <div dangerouslySetInnerHTML={{ __html:d.testimonialsContentsbr }}></div>
+                   <h2>- {d.testimonialsHeadingsbr}</h2>
+                 </div>
+                })}
+
+              </div>
+
+              <div class="col-sm-12 col-md-12 col-lg-6 colmn_2">
+               
+              <img
+                class="img-fluid"
+                src={
+                  data.wpPage.smallBusinessRestructureLandingPageOptions
+                    .testimagebr.localFile?.childImageSharp?.resize?.src
+                }
+                alt="data.wpPage.smallBusinessRestructureLandingPageOptions.testimagebr.altText"
+              />
+              </div>
+            </div>
+        </div>
+      </div>*/}
+
+        {/*<div class="rtsec3">
+          <div class="container container2">
+            <div class="carousel_row">
+            <h3>Hear from our clients</h3>
+            <Carousel showDots={true} responsive={responsive} infinite={true}  autoPlay={true} autoPlaySpeed={2000}> 
+                {data.wpPage.smallBusinessRestructureLandingPageOptions.testimonialsRowsbr.map((d,key) => {
+                 return <div class="ctestitem">
+                  <div dangerouslySetInnerHTML={{ __html: '"'+d.testimonialsContentsbr+'"' }}></div>
+                 <h4>-{d.testimonialsHeadingsbr}</h4>
+                 </div>
+                })}
+          </Carousel> 
+            </div>
+          </div>
+        </div>*/}
+
+
+        {/*<div class="liqtestmon">
+        <div class="container container2">
+            <div class="row">
+              <div class="col-sm-12 col-md-12 col-lg-5">
+               
+              <img
+                class="img-fluid"
+                src={
+                  data.wpPage.smallBusinessRestructureLandingPageOptions
+                    .testimagebr.localFile?.childImageSharp?.resize?.src
+                }
+                alt="data.wpPage.smallBusinessRestructureLandingPageOptions.testimagebr.altText"
+              />
+              </div>
+              <div class="col-sm-12 col-md-12 col-lg-7">
+                <div class="rt_testmon">
+                <h3>Hear from our clients</h3>
+
+                  <Carousel showDots={true} responsive={responsive} infinite={true}  autoPlay={true} autoPlaySpeed={2000}> 
+                {data.wpPage.smallBusinessRestructureLandingPageOptions.testimonialsRowsbr.map((d,key) => {
+                 return <div class="ctestitem">
+                  <div dangerouslySetInnerHTML={{ __html: '"'+d.testimonialsContentsbr+'"' }}></div>
+                 <h4>{d.testimonialsHeadingsbr}</h4>
+                 </div>
+                })}
+          </Carousel> 
+                </div>
+              
+
+              </div>
+            </div>
+        </div>
+      </div>*/}
+
+      <section class="weva_section doc3 sbrdoc3">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12 col-md-7 col-xl-7"> <h3>
+                {data.wpPage.smallBusinessRestructureLandingPageOptions.wheadingsbr}
+              </h3>
+               <div
+                dangerouslySetInnerHTML={{
+                  __html:
+                    data.wpPage.smallBusinessRestructureLandingPageOptions
+                      .wcontentsbr,
+                }}
+              ></div>
+               <button className="btn btn btn-primary me-5" onClick={()=>showContactForm()}>
+                Learn more
+              </button>
+               
+               {/* <Link className="btn btn-primary" to="/insights/guide-to-small-business-restructure/">
+                Learn more
+              </Link>*/}
+              </div>
+              <div class="col-sm-12 col-md-5 col-xl-5">
+              <img
+                class="img-fluid"
+                src={
+                  data.wpPage.smallBusinessRestructureLandingPageOptions
+                    .wrmagebr.mediaItemUrl
+                }
+                alt="data.wpPage.smallBusinessRestructureLandingPageOptions.wrmagebr.altText"
+              />
+              </div>
+            </div>
+          
+          
+
+          </div>
+        </section>
+
+        <div className="bankruptcy small_business safe_harbour">
+
+          <div className="wva_section key_expert">
         <div className="container">
           <div className="wva_left">
             <img src={data.wpPage.smallbusinessrestructure.smallFdImage?.localFile?.childImageSharp?.resize?.src} alt={data.wpPage.smallbusinessrestructure.smallFdImage?.altText} />
@@ -108,137 +352,230 @@ const ConsultBusiness = ({ data }) => {
           </div>
         </div>
       </div>
+       
+        </div>
+       
 
-       <FullText
-        subTxt={data.wpPage.smallbusinessrestructure.smallDelvContent}
-        customClass={'middleFullText glpo_section right_soloution'}
-      />
 
-       <div className="weva_section obstacles">        
-         <FullText
-          subTxt={data.wpPage.smallbusinessrestructure.smallWva1Description}
-          customClass={'middleFullText obstacles_text'}
-        />
-       <div className="container"> {data.wpPage.smallbusinessrestructure.smallWeva2ButtonLink !== null && data.wpPage.smallbusinessrestructure.smallWeva2ButtonLink !== "" ? <Link className="btn btn-primary me-5" to={data.wpPage.smallbusinessrestructure.smallWeva2ButtonLink}>{data.wpPage.smallbusinessrestructure.smallWeva2ButtonText}</Link> : ""}
-      </div>
-      </div>
-
-      {/*<div className="fd_section myexperience_section">
-        <div className="container"> 
-        <div className="row">    
-         <div class="col-md-5 col-lg-5">
-            <img src={data.wpPage.smallbusinessrestructure.smallDcaImage.localFile?.childImageSharp?.resize?.src} alt={data.wpPage.smallbusinessrestructure.smallDcaImage.altText} />
-          </div>       
-          <div class="col-md-7 col-lg-7">
-              <div dangerouslySetInnerHTML={{ __html: data.wpPage.smallbusinessrestructure.smallDcaDescription }}></div>
-            
-          </div>
+        
          
-        </div>
-        </div>
-      </div>*/}
 
-      <section className="health_check">
-          <div className="container">
-            <div className="ht_right">
-              <img className="img-fluid" src={data.wpPage.smallbusinessrestructure.smallHtImage?.localFile?.childImageSharp?.resize?.src} alt={data.wpPage.smallbusinessrestructure.smallHtImage?.altText} />
-            </div>
+         <div className="liq_blocks va_blocks doca_2">
+         <div class="row">
+          <div class="col-md-12 col-lg-12">
+            <h2>Reduce your financial distress</h2>
+          </div>
+        </div>
+        <div className="container">
+          <div className="row">
+              
+              {data.wpPage.smallBusinessRestructureLandingPageOptions.distressDescription.map((d) => {
+                return (
+                  <div className="col-md-4 col-lg-4">
+                    <div className="lb_img">
+                        <img src={d.imagered?.localFile?.publicURL} alt={d.imagered?.altText} />
+                    </div>
+                    <div className="lb_txt">
+                      <p className="recovery-partner-title ">{d.titlered?.trim()}</p>
+                      <div className="recovery-partner-desc" dangerouslySetInnerHTML={{ __html: d.descriptionred }}/>
+                       
+                    </div>
+                  </div>)
+              })}
+          </div>
+        </div>
+      </div>
+   
 
-            <div className="ht_left">
-              <h2>{data.wpPage.smallbusinessrestructure.smallHtTitle}</h2>
-              <div className="ht_cnt" dangerouslySetInnerHTML={{ __html: data.wpPage.smallbusinessrestructure?.smallHtDescription }}></div>
+
+        <section class="eligible_sec">
+          <div class="container container2">
+
+          <h2 dangerouslySetInnerHTML={{
+                  __html:
+                    data.wpPage.smallBusinessRestructureLandingPageOptions
+                      .eligibleHead,}}
+              />
+
+              <h3>If you find yourself ticking all the boxes, get in contact with us today</h3>
+
+            
+              <ul>
+
+              {data.wpPage.smallBusinessRestructureLandingPageOptions.eligiblerow.map(
+                  (d, key) => {
+                    return (
+                       <li>
+                       <input type="checkbox" name="radio" id={'radio'+key} />
+                        <label for={'radio'+key}>{d.eligibletext}</label>
+
+                       </li>
+                      
+                    );
+                  }
+                )}
+
+                </ul>
+                 <button className="btn btn btn-primary" onClick={()=>showContactForm()}>
+                Contact us
+              </button>
+                
+             {/*<Link
+                  className="btn btn-primary"
+                  to="#get-in-touch"
+                >Contact us</Link>*/}
+          </div>
+          </section>
+
+          <section class="includes_sec brigeincludes_sec liqpagefont">
+       <div class="container container2">
+         <div class="spek_head">
+
+         <h2 dangerouslySetInnerHTML={{ __html:data.wpPage?.theyMayIncludeSection?.theyheading,}}/>
+
+        
+              <div
+                class="p"
+                dangerouslySetInnerHTML={{
+                  __html:
+                    data.wpPage?.theyMayIncludeSection
+                      ?.theysubheading,
+                }}
+              />
+         </div>
+
+         <div class="step_row">
+
+         <Carousel showDots={true} responsive={stepsresponsive} infinite={true}  autoPlay={false} autoPlaySpeed={2000}> 
+                {data.wpPage.theyMayIncludeSection.includes.map((d, key) => {
+                 return <div class="step_grid">
+             <div class="step_item">
+               <img src={d.theyimage?.localFile?.childImageSharp?.resize?.src}/>
+               <div class="step_gcont">
+                <h3>{d.theytitle}</h3>
+                         <div dangerouslySetInnerHTML={{ __html: d.theycontent }} />
+                         <button className="btn btn btn-primary" onClick={()=>showContactForm()}>Learn more</button>
+                         
+                </div>
+             </div>
+           </div>
+                })}
+          </Carousel> 
+
+         
+         </div>
+       </div>
+   </section>
+       
+
+   
+        
+ 
+
           
 
-              {data.wpPage.smallbusinessrestructure.smallDca1ButtonLink !== null && data.wpPage.smallbusinessrestructure.smallDca1ButtonLink !== "" ? <Link className="btn btn-primary me-5" to={data.wpPage.smallbusinessrestructure.smallDca1ButtonLink}>{data.wpPage.smallbusinessrestructure.smallDca1ButtonText}</Link> : ""}
+          <section id="vCFO" class="mg_identifix smallpageidentifix sbr_iden"><div class="container">
+          <div class="wva_right">
 
-              <button  className="btn btn-primary me-5" type="button" onClick={()=>setModal(true)} data-toggle="modal" data-target="#myModal">{data.wpPage.smallbusinessrestructure.smallDca1VideoText}</button>
-              <div id="myModal" role="dialog" className={showModal?'in show modal fade':'modal fade'}>
-              <div className="model_inner">
-                  <div className="popup_dialog">
-                      <div className="modal-content">
-                          <button type="button" className="close" data-dismiss="modal" onClick={()=>{setModal(false);$('iframe.embed-responsive-item').attr('src', $('iframe.embed-responsive-item').attr('src').replace("autoplay=1&amp;", ""));}}>&times;</button>
-                          <div className="popup_body">
-                              <div className="video_ratio">
-                                  <div dangerouslySetInnerHTML={{__html: data.wpPage.smallbusinessrestructure.smallVideo }} />
-                              </div>
-                          </div>
-                      </div>
-                  </div>
+          <img class="img-fluid"
+                src={
+                  data.wpPage.smallBusinessRestructureLandingPageOptions
+                    .imageguide.localFile?.childImageSharp?.resize?.src
+                }
+                alt="data.wpPage.smallBusinessRestructureLandingPageOptions.imageguide.altText"
+              />
+
+           </div>
+          <div class="wva_left">
+          <h3 dangerouslySetInnerHTML={{ __html: data.wpPage.smallBusinessRestructureLandingPageOptions?.titleguide }}/>  
+<a class="btn btn-primary me-5" href="/insights/guide-to-small-business-restructure/">Read More</a>
+  
+
+<div class="rdtime" dangerouslySetInnerHTML={{ __html: data.wpPage.smallBusinessRestructureLandingPageOptions?.readtimeguide }}/>  
+</div>
+</div></section>
+
+        <Container
+          title={
+            data.wpPage.smallBusinessRestructureLandingPageOptions.businessTitlesbr
+          }
+          subtitle={""}
+          data={
+            data.wpPage.smallBusinessRestructureLandingPageOptions
+              .businessTestimonialsbr
+          }
+          slideColor={"#EBE9DE"}
+        />
+
+         
+         
+
+        <section className="news-articles restructurenews-articles" id="people">
+          <div className="container">
+            <div className="row">
+              <div className="people_head">
+                <h2>{data.wpPage.smallBusinessRestructureLandingPageOptions.peopleHeadsbr} </h2>
+              
+
+                 <div className="p" dangerouslySetInnerHTML={{ __html: data.wpPage.smallBusinessRestructureLandingPageOptions?.peopleContentsbr }}></div>
               </div>
-          </div>
-
             </div>
-          </div>
-        </section>
-        
 
-          <FullText
-        subTxt={data.wpPage.smallbusinessrestructure.smallHt1Description}
-        customClass={'middleFullText glpo_section help_many'}
-      />
-   
-     
-      
-      <OurPeople
-        title={''}
-        text={''}
-        data={businessData}
-       showAll={0}
-        liquidation={1}
-      />
-      <div class="row">
+            <OurPeople
+              title={""}
+              text={""}
+              data={businessData}
+              showAll={0}
+              liquidation={0}
+            />
+
+            <div class="row">
               <div class="col-lg-12 col-md-12 align-center">
-                <Link className="btn btn-primary no-marg" to="/people/">
+                <Link className="btn btn-primary me-5" to="/people/">
                   All People
                 </Link>
               </div>
             </div>
-      <Container 
-        title={data.wpPage.smallbusinessrestructure.smBusinessTitle}
-        subtitle={false}
-        data={data.wpPage.smallbusinessrestructure.smBusinessTestimonial}
-        slideColor={'#EBE9DE'}
-      />
-      <div className="cu_fixed">
-          <a href="/contact"><img src="/images/sophie-img.png" />Contact Us</a>
-      </div>
-      <div className="home">
-        <GetInTouch
-          title={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchTitle}
-          text={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchDescription}
+          </div>
+        </section>
+
+        <div className="home">
+          <GetInTouch
+            title={
+              data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings
+                .getInTouchTitle
+            }
+            text={
+              data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings
+                .getInTouchDescription2
+            }
+          />
+        </div>
+        <GetInTouchPPForm
+          title={
+            data?.allWp?.nodes[0].themeGeneralSettings.themeGeneralSettings
+              .getInTouchTitle
+          }
+          text={
+            data?.allWp?.nodes[0].themeGeneralSettings.themeGeneralSettings
+              .getInTouchDescription2
+          }
+          image={
+            data?.allWp?.nodes[0].themeGeneralSettings.themeGeneralSettings
+              .gitImage
+          }
         />
-      </div>
-      <GetInTouchPPForm
-        title={data?.allWp?.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchTitle}
-        text={data?.allWp?.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchDescription}
-        image={data?.allWp?.nodes[0].themeGeneralSettings.themeGeneralSettings.gitImage}
-      />
-    </Layout>
-  </div>
-  )
-}
+      </Layout>
+    </div>
+  );
+};
+
 export const query = graphql`
   {
     wpPage(title: {eq: "Small Business Restructure"}) {
-      metaFields {
-        metaDescription
-        metaTitle
-      }
+
       smallbusinessrestructure {
-        smallBannerDesc
-        smallBannerImage {
-          altText
-          mediaItemUrl
-          localFile {
-            childImageSharp {
-              resize (width: 526, height: 351, cropFocus: CENTER, quality: 80) {
-                src
-              }
-            }
-          }
-        }
-        smallBannerTitle
-        
+
         smallWymnuDescriptionWhyliquid {
           description
           image {
@@ -250,85 +587,79 @@ export const query = graphql`
           }
           title
         }
-      
-        smallWymnuImage {
-          altText
-          mediaItemUrl
-        }
-        smallWymnuLearnMoreLink
-        smallWva1Description
+
         smallFdContent
-        smallDelvContent
         smallFdImage {
           altText
           mediaItemUrl
           localFile {
             childImageSharp {
-              resize (width: 526, height: 351, cropFocus: CENTER, quality: 80) {
+              resize (width: 526, height: 351, cropFocus: CENTER, quality: 100) {
                 src
               }
             }
           }
         }
-        smallWevaContent
-        smallWevaButtonText
-        smallWevaButtonLink
-        smallWeva2ButtonText
-        smallWeva2ButtonLink
-        smallDcaDescription        
-        smallDca1ButtonText
-        smallDca1ButtonLink
-        smallDca1VideoText
-        smallVideo
-        smallDcaImage {
-          altText
-          mediaItemUrl
-          localFile {
-            childImageSharp {
-              resize (width: 565, height: 372, cropFocus: CENTER, quality: 80) {
-                src
-              }
-            }
-          }
-        }                
-        smallHtTitle
-        smallHtDescription
-        smallHt1Description
-        smallHtImage {
-          altText
-          mediaItemUrl
-          localFile {
-            childImageSharp {
-              resize (width: 522, height: 462, cropFocus: CENTER, quality: 80) {
-                src
-              }
-            }
-          }
-        }
-               
-        smallWymnuTitle
+        
+      }
 
-        smBusinessTitle
-        smBusinessDesc
-
-        smBusinessTestimonial {
-          smComment
-          smDesignation
-          smImage {
+      theyMayIncludeSection{
+        theyheading
+        theysubheading
+        includes{
+          theytitle
+          theycontent
+          theylink{
+            title
+            url
+          } 
+          theyimage {
             altText
             mediaItemUrl
             localFile {
               childImageSharp {
-                resize (width: 412, height: 280, cropFocus: CENTER, quality: 80) {
+                resize (width: 413, height: 290, cropFocus: CENTER, quality: 100) {
                   src
                 }
               }
             }
           }
-          smLearnMoreUrl
-          smName
         }
-        peoplessmr1{
+      }
+
+
+
+      smallBusinessRestructureLandingPageOptions {
+        iconWithTextsbr {
+          itextsbr 
+          giconsbr{
+            altText
+            mediaItemUrl
+            localFile{
+              publicURL
+            }
+          }
+        }
+        wheadingsbr
+        wcontentsbr
+        wlinksbr
+       
+       distressDescription {
+          descriptionred
+          imagered {
+            altText
+            mediaItemUrl
+            localFile{
+              publicURL
+            }
+          }
+          titlered
+        }  
+         
+        
+
+ 
+        peoples2sbr {
           ... on WpOurpeople {
             id
             slug
@@ -347,7 +678,7 @@ export const query = graphql`
                 mediaItemUrl
                 localFile {
                   childImageSharp {
-                    resize (width: 416, height: 450, cropFocus: CENTER, quality: 80) {
+                    resize (width: 416, height: 450, cropFocus: CENTER, quality: 100) {
                       src
                     }
                   }
@@ -361,7 +692,7 @@ export const query = graphql`
                 mediaItemUrl
                 localFile {
                   childImageSharp {
-                    resize (width: 416, height: 450, cropFocus: CENTER, quality: 80) {
+                    resize (width: 416, height: 450, cropFocus: CENTER, quality: 100) {
                       src
                     }
                   }
@@ -370,8 +701,187 @@ export const query = graphql`
             }
           }
         } 
+        peopleHeadsbr
+        peopleContentsbr
+        reheadingsbr
+        resolutionGridsbr{
+          recontentsbr
+          retitlesbr
+          reiconsbr{
+           mediaItemUrl
+           altText
+           localFile{
+            publicURL
+           }
+          }
+        }
+
+        businessTitlesbr
+        businessTestimonialsbr {
+          comment
+          image {
+            altText
+            mediaItemUrl
+            localFile {
+              childImageSharp {
+                resize (width: 412, height: 280, cropFocus: CENTER, quality: 100) {
+                  src
+                }
+              }
+            }
+          }
+          url
+          name
+        }
+
+        
+        nextStepsHeadingsbr 
+        voluntaryAdministrationTitlesbr
+        voluntaryAdministrationContentsbr
+        vlinksbr
+        voluntaryAdministrationImg{
+            altText
+            mediaItemUrl
+            localFile {
+              childImageSharp {
+                resize (width: 526, height: 351, cropFocus: CENTER, quality: 100) {
+                  src
+                }
+              }
+            }
+          }
+
+
+        safeHarbourTitlesbr
+        safeHarbourContentsbr
+        slinksbr
+        safeHarbourImg{
+            altText
+            mediaItemUrl
+            localFile {
+              childImageSharp {
+                resize (width: 526, height: 351, cropFocus: CENTER, quality: 100) {
+                  src
+                }
+              }
+            }
+          }
+
+        creditorsVoluntaryLiquidationTitlesbr
+        creditorsVoluntaryLiquidationContentsbr
+        clinksbr
+        creditorsVoluntaryLiquidationImg{
+          altText
+            mediaItemUrl
+            localFile {
+              childImageSharp {
+                resize (width: 526, height: 351, cropFocus: CENTER, quality: 100) {
+                  src
+                }
+              }
+            }
+         }
+
+        simplifiedLiquidationTitlesbr
+        simplifiedLiquidationContentsbr
+        silinksbr
+        simplifiedLiquidationImg{
+          altText
+            mediaItemUrl
+            localFile {
+              childImageSharp {
+                resize (width: 526, height: 351, cropFocus: CENTER, quality: 100) {
+                  src
+                }
+              }
+            }
+         }
+
+        membersVoluntaryLiquidationTitlesbr
+        membersVoluntaryLiquidationContentsbr
+        mlinksbr
+        membersVoluntaryLiquidationImg{
+          altText
+            mediaItemUrl
+            localFile {
+              childImageSharp {
+                resize (width: 526, height: 351, cropFocus: CENTER, quality: 100) {
+                  src
+                }
+              }
+            }
+         }
+        
+        eligibleHead
+        eligiblerow {
+          eligibletext
+        }
+       
+        testimonialsRowsbr {
+          testimonialsHeadingsbr
+          testimonialsContentsbr 
+           
+        }
+        testimagebr {
+          altText
+          mediaItemUrl
+          localFile {
+            childImageSharp {
+              resize (width: 564, height: 376, cropFocus: CENTER, quality: 100) {
+                src
+              }
+            }
+          }
+        }
+        wrmagebr {
+          altText
+          mediaItemUrl
+          localFile {
+            childImageSharp {
+              resize (width: 516, height: 605, cropFocus: CENTER, quality: 100) {
+                src
+              }
+            }
+          }
+        }
+       sbrbannerTitle
+       sbrbannerSubtitle
+       sbrbannerImage {
+          altText
+          mediaItemUrl
+          localFile {
+            childImageSharp {
+              resize (width: 526, height: 473, cropFocus: CENTER, quality: 100) {
+                src
+              }
+            }
+          }
+        }
+        titleguide
+        readtimeguide
+        imageguide {
+          altText
+          mediaItemUrl
+          localFile {
+            childImageSharp {
+              resize (width: 526, height: 346, cropFocus: CENTER, quality: 100) {
+                src
+              }
+            }
+          }
+        }
+
+
+       
+      }
+
+      metaFields {
+        metaDescription
+        metaTitle
       }
     }
+
+
     allWp {
       nodes {
         themeGeneralSettings {
@@ -380,7 +890,7 @@ export const query = graphql`
             expertAdviceLink
             expertAdviceTitle
             fieldGroupName
-            getInTouchDescription
+            getInTouchDescription2
             getInTouchTitle
             gitImage{
               mediaItemUrl
@@ -404,9 +914,11 @@ export const query = graphql`
         }
       }
     }
+
     allWpOurpeople(sort: {order:  ASC, fields: menuOrder}) {
       nodes {
         title
+        slug
         backInBusiness {
           designation
           location
@@ -416,35 +928,17 @@ export const query = graphql`
           email
           phoneNumber
           registeredLiquidators
-          staffImage2{
-            altText
-            mediaItemUrl
-            localFile {
-              childImageSharp {
-                resize (width: 416, height: 450, cropFocus: CENTER, quality: 80) {
-                  src
-                }
-              }
-            }
-          }
         }
         featuredImage {
           node {
             altText
             mediaItemUrl
-            localFile {
-              childImageSharp {
-                resize (width: 416, height: 450, cropFocus: CENTER, quality: 80) {
-                  src
-                }
-              }
-            }
           }
         }
         content
       }
     }
   }
-`
+`;
 
-export default ConsultBusiness
+export default ConsultBusiness;

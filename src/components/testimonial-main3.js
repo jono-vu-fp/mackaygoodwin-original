@@ -1,0 +1,46 @@
+import * as React from "react"
+import { Link } from "gatsby"
+
+const TestimonialMain = (props) => {
+  const isBrowser = typeof window !== "undefined"
+  const [sheight,setHeight] = React.useState(isBrowser?window.scrollY:0);
+  React.useEffect(() => {
+    const onScroll = () => {
+      const scrollPosition = window.scrollY;
+      setHeight(scrollPosition);console.log(scrollPosition)
+      if(document.getElementsByClassName("why-mg-fixed").length && (window.outerWidth<=991)){
+        if(window.outerWidth<430){
+          //document.getElementsByClassName("why-mg-fixed")[0].style.top = 96+document.getElementsByClassName("slider_fix")[0].offsetHeight+'px';
+        } else {
+          //document.getElementsByClassName("why-mg-fixed")[0].style.top = 91+document.getElementsByClassName("slider_fix")[0].offsetHeight+'px';
+        }
+      }
+    };
+
+    //document.addEventListener("scroll", onScroll);
+
+    return () => {
+      //document.removeEventListener("scroll", onScroll);
+    };
+
+
+
+  }, []);
+  return <section className={sheight>2100 && sheight<5417?'testimonial-main why-mg-fixed':'testimonial-main'}>
+    <div className="container">
+        {props.data.map((d, i) => {
+          return (<div className={i%2 !== 0 ? "row flex-row-reverse" : "row"}>
+          <div className="col-sm-12 col-md-12 col-lg-6 p-5">
+            <img className="img-fluid" src={d.ptestImage?.localFile?.childImageSharp?.resize?.src} alt={d.ptestImage?.altText} />
+          </div>
+          <div className="col-sm-12 col-md-12 col-lg-6 p-5 desc">
+          <div className="p" dangerouslySetInnerHTML={{ __html: d.ptestDescription }}></div>
+          </div>
+        </div>)
+        })}
+    </div>
+  </section>
+
+}
+
+export default TestimonialMain

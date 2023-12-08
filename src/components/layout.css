@@ -540,6 +540,8 @@ div#accordionExample .accordion-item:nth-last-of-type(1) {
 #testimonials .card-text {
     padding-top: 12px;
     min-height: 180px;
+        font-size: 16px;
+    line-height: 24px;
 }
 
 #testimonials .card-body {
@@ -4089,7 +4091,7 @@ img.recovery-partner-img {
     padding: 0px 0 10px;
 }
 .liq_blocks .lb_txt {
-    padding-right: 40px;
+    padding-right: 30px;
 }
 .liq_blocks .col-lg-4:first-child .recovery-partner-title {
     padding-top: 0;
@@ -4126,6 +4128,9 @@ img.recovery-partner-img {
     color: #1c5e48;
     font-size: 36px;
     margin: 0 0 37px;    line-height: 1.08;
+}
+.liquidationpagenew .wbl_section h3{
+    font-size: 44px;
 }
 .wbl_section p {
     color: #000000;
@@ -7250,7 +7255,7 @@ section.dpn_optoins {
     display: flex;
     flex-flow: column;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: space-between;
 }
 .rdtime {
     margin-bottom:50px;
@@ -8276,7 +8281,10 @@ section.incsteps_sec {
 
  
 
-.cinlpageidentifix .wva_left h3{ line-height:normal;color: #1c5e48;     font-size: 40px; margin-bottom:18px; }
+.cinlpageidentifix .wva_left h3{ line-height:normal;color: #1c5e48;     
+/*    font-size: 40px; */
+    margin-bottom:18px;
+     }
 .cinlpageidentifix .wva_right{
         margin-top:35px;    margin-right: 100px;
             width: 549px;
@@ -8636,7 +8644,7 @@ section.dpn_optoins.your-opt1{
 .dpn-ban-sec .steps_nav li{
     width: 34%;
 }
-.smallrestructure_land .recovery-partner-title{ line-height:28px;    font-size: 22px; color:#000000; }
+/*.smallrestructure_land .recovery-partner-title{ line-height:28px;    font-size: 22px; color:#000000; }*/
 .banners.curve-right.dpn-doc-img2 {
     margin-bottom: 60px;
 }
@@ -9978,7 +9986,7 @@ ul.profe_row li p {
 .eligible_sec ul li label span br {
     display: none;
 }
-.eligible_sec ul li label span p{ margin:0; }
+.eligible_sec ul li label span p{ margin:0;     font-size: 18px;}
 
 .hubspot_popup #formContainer {
     max-height: 600px;
@@ -10374,6 +10382,144 @@ body .bhc_page .mgacademy_banner.topleft_banner .banner-image::before{
     display: block;
     max-width: fit-content;
 }
+
+.video_frame {
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+}
+.video_frame img{ width:100%; }
+.video_section {
+    padding-bottom: 70px;
+}
+.voluntary_page .rtsec2{
+    margin-top: 0 !important;
+}
+.voluntary_page .testimonial-mainnew {
+    padding-bottom: 0;
+}
+.voluntary_page .liquidation .middleFullText {
+    margin-top: 50px;
+}
+.voluntary_page .recovery-plan.va_glpo_reco_section{ padding-bottom:80px; }
+.mtop_0{ margin-top:0 !important; }
+.mbottom_0{ margin-bottom:0 !important; }
+.sbr_iden {
+    padding-bottom: 0;
+    padding-top: 70px;
+}
+.smallrestructure_landn .bankruptcy.safe_harbour.small_business .wva_section.key_expert {
+    margin-bottom: 0; margin-top: 100px;
+}
+.weva_section.doc3.sbrdoc3 {
+    padding-top: 0;
+}
+.dpnfont_page.liquidationpagenew .banner-subheading {
+    margin-bottom: 0 !important;
+       font-family: 'Sohne' !important;
+    font-weight: normal !important;
+    font-size: 25px;
+}
+.dpnfont_page.liquidationpagenew .banner-content1{
+    font-family: shne_testleicht !important;
+}
+.liquidationpagenew .banner-content1{ margin-bottom:25px; }
+.greybg{
+    background: #e0e3e5;
+}
+.greybg ul li input[type="checkbox"] + label::before{
+        background-color: rgb(255 255 255);
+}
+.liqpagefont .recovery-partner-title{
+    font-family: 'Sohne';
+}
+.liqpagefont .step_grid .step_gcont h3{
+    font-family: 'Sohne';font-weight: normal !important;
+}
+
+.no_bannerform .banner-content form{ display:none; }
+.no_bannerform #banner-section .row {
+    align-items: center;
+}
+.liquidationpagenew .banner-content1 { 
+    margin-top: 20px;
+}
+.vcfo_section h2{
+    color: #154f3a;
+    font-family: reckless_neue_trialregular,serif,Times New Roman;
+    font-size: 44px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 0 0 26px;
+    padding: 0;
+}
+.bankruptcy.service.sub_heading .accordion-button{
+        font-size: 25px;
+        font-family: 'Sohne';
+         font-weight: normal;
+}
+.sub_heading .accordion-header{
+     font-family: 'Sohne';font-weight: normal;
+}
+.liqpagefont .step_grid .step_item p {
+    color: #000000;
+    font-size: 18px;
+    line-height: 1.55;
+}
+.dpnfont_page .banner-subheading,
+.dpnfont_page .rtsec2 ul li,
+.dpnfont_page .wva_section .wva_right p,
+.dpnfont_page .vcfo_section .vcfo_right p,
+.dpnfont_page .accordion-body,
+.dpnfont_page .liqpagefont .p,
+.dpnfont_page .liqpagefont .step_grid .step_item p,
+.dpnfont_page .people_head p,
+.dpnfont_page .dpn-sec2 p,
+.dpnfont_page .eligible_sec h3,
+.dpnfont_page .eligible_sec ul li label span p,
+.dpnfont_page #testimonials .card-text,
+.dpnfont_page .liq_blocks .recovery-partner-desc,
+.dpnfont_page .weva_section p,
+.dpnfont_page .middleFullText.glpo_section .fullSubTxt,
+.dpnfont_page .glpo_reco_section.recovery-plan .subTxt,
+.dpnfont_page .mg_identifix .wva_left p,
+.dpnfont_page .wbl_section p,
+.dpnfont_page .canh_section .c_grid p, 
+.dpnfont_page .ols_section ul li div p,
+.dpnfont_page .news-desc p{
+    font-family: shne_testleicht !important; 
+}
+.dpnfont_page .eligible_sec.greybg {
+    margin-bottom: 0;
+}
+.dpnfont_page #testimonials .card-text,
+.dpnfont_page .liq_blocks .recovery-partner-desc,
+.dpnfont_page.val_page.liquidation .middleFullText.glpo_section .fullSubTxt,
+.dpnfont_page .glpo_reco_section.recovery-plan .subTxt,
+.dpnfont_page .middleFullText.glpo_section .fullSubTxt,
+.dpnfont_page .news-desc p{
+    font-size: 18px;
+    line-height: 1.55;
+}
+.step_row.noneed_dots .react-multi-carousel-list {
+    padding-bottom: 0;
+}
+.dpnfont_page #testimonials h3,
+.dpnfont_page .recovery-partner-title,
+.dpnfont_page .dca_section .wva_right h5,
+.dpnfont_page .news-list h4{
+    font-family: 'Sohne';
+    font-weight: normal !important;
+        font-size: 25px;
+}
+.dpnfont_page .glpo_section {
+    padding-top: 70px;
+}
+.liquidation_land.dpnfont_page .vcfo_section .news-list{
+    padding-top: 40px;
+}
+ 
+ 
 /****** BreakPoints *******/
 /****** Responsive Start *******/
 
@@ -10413,7 +10559,21 @@ body .bhc_page .mgacademy_banner.topleft_banner .banner-image::before{
     .cloc_brs_page .clm-sec-is .wbl_right {
         max-width: 540px;
     }
+
+    .noneed_dots ul.react-multi-carousel-dot-list {
+        display: none;
+    }
+    .liq_threblocks{ margin-top:50px; margin-bottom:50px; }
     
+    .dpnfont_page #testimonials .card-text {
+        
+        min-height: 335px;
+    }
+    .dpnfont_page .liq_blocks .recovery-partner-title {
+    padding: 0;
+    margin: 0 0 6px 0;
+    }   
+
 }
 @media screen and (min-width:1301px){
     .cloc_brs_page .clm-sec-is .container {
@@ -10465,7 +10625,8 @@ body .bhc_page .mgacademy_banner.topleft_banner .banner-image::before{
         font-size: 21px;
     }
     .liquidation .liq_rec_section.recovery-partner h1, .liquidation .liq_rec_section.recovery-partner h2, .bib_section h3, .ols_section h3, .liquidation .middleFullText.glpo_section .fullTxt, .ht_section .ht_right h2, .bib_section#testimonials h2, .liquidation .news-articles h2, .banner-content .banner-heading, .wva_section .wva_right h3, .wva_section .wva_right h2, .weva_section h3, .voluntary_administration .banner-content .banner-heading, .bankruptcy #why-mg h2, .canh_section h2, .sols_sec h2, .new_landing .news-list h2, .wbl_section h3, .incsteps_sec h2, .steps_tab h3, .restructure_land #testimonials h2, .spek_head h2, .midheading h2, .cinlpageidentifix .wva_left h3,
-    .eligible_sec h2, .smallrestructure_land .liq_blocks h2, .smallpageidentifix .wva_left h3, .lun_sec h2, .grid_4_sec h2, .rtsec2 h2, .rt_testmon h3, .rtsec3 h3, .brige_color_sec h3, .clm-page .brige_color #why-mg h2,.brige_color,.brige_color2 #why-mg h2  {
+    .eligible_sec h2, .smallrestructure_land .liq_blocks h2, .smallpageidentifix .wva_left h3, .lun_sec h2, .grid_4_sec h2, .rtsec2 h2, .rt_testmon h3, .rtsec3 h3, .brige_color_sec h3, .clm-page .brige_color #why-mg h2,.brige_color,.brige_color2 #why-mg h2, .liquidationpagenew .wbl_section h3,.vcfo_section h2, .dpnfont_page .dpn-sec2 h3,
+    .dpnfont_page .liq_blocks h3  {
         font-size: 40px;
     }
     .recovery-partner-title {
@@ -11079,6 +11240,38 @@ body .bhc_page .mgacademy_banner.topleft_banner .banner-image::before{
     .bhc_page .wva_section .wva_right{
             padding-bottom: 60px;
     }
+     
+      .dpnfont_page .bankruptcy.service .accordion-body p,
+      .dpnfont_page .bankruptcy.service .accordion-body li,
+    .dpnfont_page .banner-subheading, .dpnfont_page .rtsec2 ul li, 
+    .dpnfont_page .wva_section .wva_right p, 
+    .dpnfont_page .vcfo_section .vcfo_right p, 
+    .dpnfont_page .accordion-body, 
+    .dpnfont_page .liqpagefont .p, 
+    .dpnfont_page .liqpagefont .step_grid .step_item p, 
+    .dpnfont_page .people_head p,
+    .dpnfont_page #testimonials .card-text,
+.dpnfont_page .liq_blocks .recovery-partner-desc,
+.dpnfont_page.val_page.liquidation .middleFullText.glpo_section .fullSubTxt,
+.dpnfont_page .glpo_reco_section.recovery-plan .subTxt,
+.dpnfont_page .mg_identifix .wva_left p,
+.dpnfont_page .eligible_sec h3,
+.dpnfont_page .eligible_sec ul li label span p,
+.dpnfont_page .wbl_section p,
+.dpnfont_page .canh_section .c_grid p, 
+.dpnfont_page .ols_section ul li div p,
+.dpnfont_page .news-desc p,
+.dpnfont_page .middleFullText.glpo_section .fullSubTxt {
+        font-size: 17px;
+    }
+    .dpnfont_page.dpn-ban-sec h2.banner-subheading,
+    .dpnfont_page h2.banner-subheading,
+    .dpnfont_page.liquidationpagenew .banner-content1{
+        font-size: 17px !important;
+    }
+    .dpnfont_page.liquidationpagenew .banner-subheading{
+        font-size: 25px !important;
+    }
 
 }
 @media screen and (max-width:1600px){
@@ -11439,6 +11632,12 @@ body .bhc_page .mgacademy_banner.topleft_banner .banner-image::before{
             padding-bottom: 70px;
     }
 
+    .dpn-sec2 p, .eligible_sec ul li label span p,
+    .restructure_land .mg_identifix .wva_left p,
+    .dpnfont_page .middleFullText.glpo_section .fullSubTxt{
+        font-size: 17px;
+    }
+
 }
 @media screen and (max-width:1500px){
 
@@ -11483,7 +11682,8 @@ body .bhc_page .mgacademy_banner.topleft_banner .banner-image::before{
         font-size: 45px;
     }
     .liquidation .liq_rec_section.recovery-partner h1, .liquidation .liq_rec_section.recovery-partner h2, .bib_section h3, .ols_section h3, .liquidation .middleFullText.glpo_section .fullTxt, .ht_section .ht_right h2, .bib_section#testimonials h2, .liquidation .news-articles h2, .banner-content .banner-heading, .wva_section .wva_right h3, .wva_section .wva_right h2, .weva_section h3, .voluntary_administration .banner-content .banner-heading, .bankruptcy #why-mg h2, .canh_section h2, .sols_sec h2, .new_landing .news-list h2, .wbl_section h3, .incsteps_sec h2, .steps_tab h3, .restructure_land #testimonials h2, .spek_head h2, .midheading h2, .cinlpageidentifix .wva_left h3, .eligible_sec h2, .smallrestructure_land .liq_blocks h2, .smallpageidentifix .wva_left h3,
-    .lun_sec h2, .grid_4_sec h2, .rtsec2 h2, .rt_testmon h3, .rtsec3 h3, .brige_color_sec h3, .clm-page .brige_color #why-mg h2, .brige_color,.brige_color2 #why-mg h2 {
+    .lun_sec h2, .grid_4_sec h2, .rtsec2 h2, .rt_testmon h3, .rtsec3 h3, .brige_color_sec h3, .clm-page .brige_color #why-mg h2, .brige_color,.brige_color2 #why-mg h2, .liquidationpagenew .wbl_section h3, .vcfo_section h2,
+    .dpnfont_page .dpn-sec2 h3, .dpnfont_page .liq_blocks h3 {
         font-size: 36px;
     }
     .liq_banner .banner-content .banner-heading {
@@ -11939,6 +12139,11 @@ body .bhc_page .mgacademy_banner.topleft_banner .banner-image::before{
     .margin_bottom {
         margin-bottom: 75px;
     }
+    .dpnfont_page #testimonials h3, .dpnfont_page .recovery-partner-title, .dpnfont_page .dca_section .wva_right h5 {
+    font-family: 'Sohne';
+    font-weight: normal !important;
+    font-size: 25px;
+    }
 
 }
 @media screen and (max-width:1400px){
@@ -12076,7 +12281,7 @@ body .bhc_page .mgacademy_banner.topleft_banner .banner-image::before{
         width: 600px;
     }
     .vcfo_section .vcfo_right p, .ill_section.vcfo_section .vcfo_right .ill_txt {
-        font-size: 16px;
+/*        font-size: 16px;*/
     }
     .vcfo_section .vcfo_right {
         width: 480px;
@@ -12704,6 +12909,27 @@ body .bhc_page .mgacademy_banner.topleft_banner .banner-image::before{
     .bhc_page .glpo_reco_section.recovery-plan .subTxt{
             padding: 0;
     }
+
+    .no_bannerform .banner-image {
+        padding-top: 0;
+    }
+
+    .dpnfont_page #testimonials .card-body{
+            padding: 30px 15px 35px 25px;
+    }
+    .dpnfont_page #testimonials h3,
+    .liqpagefont .step_grid .step_gcont h3,
+    .bankruptcy.service.sub_heading .accordion-button,
+    .dpnfont_page .recovery-partner-title,
+.dpnfont_page .dca_section .wva_right h5,
+.dpnfont_page .news-list h4,
+.dpnfont_page.liquidationpagenew .banner-subheading{
+            font-size: 24px;
+    }
+     .dpnfont_page.liquidationpagenew .banner-subheading{
+        font-size: 24px !important;
+    }
+
 }
 @media screen and (max-width:1300px){
      .mg_slide_part .image-container{
@@ -13099,6 +13325,11 @@ body .bhc_page .mgacademy_banner.topleft_banner .banner-image::before{
     .liqtestmon .col-lg-5 {
         width: 520px !important;
     }
+
+    .dpnfont_page .vcfo_section.vcfo_section1_n .vcfo_left:before {
+        height: 450px;
+    }
+
 }
 
 @media screen and (max-width:1200px){
@@ -13117,7 +13348,7 @@ body .bhc_page .mgacademy_banner.topleft_banner .banner-image::before{
     .liq_banner .banner-content .banner-subheading {
         font-size: 18px;
     }
-    .liquidation .liq_rec_section.recovery-partner h1, .liquidation .liq_rec_section.recovery-partner h2, .bib_section h3, .ols_section h3, .liquidation .middleFullText.glpo_section .fullTxt, .ht_section .ht_right h2, .bib_section#testimonials h2, .liquidation .news-articles h2, .banner-content .banner-heading, .wva_section .wva_right h3, .wva_section .wva_right h2, .weva_section h3, .voluntary_administration .banner-content .banner-heading, .bankruptcy #why-mg h2, .canh_section h2, .sols_sec h2, .new_landing .news-list h2, .wbl_section h3, .incsteps_sec h2, .steps_tab h3, .restructure_land #testimonials h2, .spek_head h2, .midheading h2, .cinlpageidentifix .wva_left h3, .eligible_sec h2, .smallrestructure_land .liq_blocks h2, .smallpageidentifix .wva_left h3, .lun_sec h2, .grid_4_sec h2, .rtsec2 h2, .rt_testmon h3, .rtsec3 h3, .cloc_s_page .wva_section.about_section .wva_right h3, .brige_color_sec h3, .clm-page .brige_color #why-mg h2, .brige_color,.brige_color2 #why-mg h2 {
+    .liquidation .liq_rec_section.recovery-partner h1, .liquidation .liq_rec_section.recovery-partner h2, .bib_section h3, .ols_section h3, .liquidation .middleFullText.glpo_section .fullTxt, .ht_section .ht_right h2, .bib_section#testimonials h2, .liquidation .news-articles h2, .banner-content .banner-heading, .wva_section .wva_right h3, .wva_section .wva_right h2, .weva_section h3, .voluntary_administration .banner-content .banner-heading, .bankruptcy #why-mg h2, .canh_section h2, .sols_sec h2, .new_landing .news-list h2, .wbl_section h3, .incsteps_sec h2, .steps_tab h3, .restructure_land #testimonials h2, .spek_head h2, .midheading h2, .cinlpageidentifix .wva_left h3, .eligible_sec h2, .smallrestructure_land .liq_blocks h2, .smallpageidentifix .wva_left h3, .lun_sec h2, .grid_4_sec h2, .rtsec2 h2, .rt_testmon h3, .rtsec3 h3, .cloc_s_page .wva_section.about_section .wva_right h3, .brige_color_sec h3, .clm-page .brige_color #why-mg h2, .brige_color,.brige_color2 #why-mg h2, .liquidationpagenew .wbl_section h3, .vcfo_section h2, .dpnfont_page .dpn-sec2 h3, .dpnfont_page .liq_blocks h3 {
         font-size: 32px;
     }
     .liq_banner .banner-content .banner-heading {
@@ -14447,6 +14678,23 @@ body .bhc_page .mgacademy_banner.topleft_banner .banner-image::before{
             padding-bottom: 10px;
     }
 
+    .no_bannerform .banner-image {
+        margin-top: 35px;
+    }
+
+    .bankruptcy.service.sub_heading .accordion-button,
+    .liqpagefont .step_grid .step_gcont h3,
+    .dpnfont_page #testimonials h3,
+    .dpnfont_page .recovery-partner-title,
+.dpnfont_page .dca_section .wva_right h5,
+.dpnfont_page .news-list h4,
+.dpnfont_page.liquidationpagenew .banner-subheading{
+            font-size: 23px;
+    }
+    .dpnfont_page.liquidationpagenew .banner-subheading{
+        font-size: 23px !important;
+    }
+     
 }
 @media screen and (max-width:1100px){
      .mg_slide_part .image-container{
@@ -16218,7 +16466,7 @@ body .bhc_page .mgacademy_banner.topleft_banner .banner-image::before{
     }
      
 
-    .liquidation .liq_rec_section.recovery-partner h1, .liquidation .liq_rec_section.recovery-partner h2, .bib_section h3, .ols_section h3, .liquidation .middleFullText.glpo_section .fullTxt, .ht_section .ht_right h2, .bib_section#testimonials h2, .liquidation .news-articles h2, .banner-content .banner-heading, .wva_section .wva_right h3, .wva_section .wva_right h2, .weva_section h3, .voluntary_administration .banner-content .banner-heading, .bankruptcy #why-mg h2, .canh_section h2, .sols_sec h2, .new_landing .news-list h2, .wbl_section h3, .incsteps_sec h2, .steps_tab h3, .restructure_land #testimonials h2, .spek_head h2, .midheading h2, .cinlpageidentifix .wva_left h3, .eligible_sec h2, .smallrestructure_land .liq_blocks h2, .smallpageidentifix .wva_left h3, .lun_sec h2, .grid_4_sec h2, .rtsec2 h2, .rt_testmon h3, .rtsec3 h3, .cloc_s_page .wva_section.about_section .wva_right h3, .brige_color_sec h3, .clm-page .brige_color #why-mg h2, .brige_color,.brige_color2 #why-mg h2 {
+    .liquidation .liq_rec_section.recovery-partner h1, .liquidation .liq_rec_section.recovery-partner h2, .bib_section h3, .ols_section h3, .liquidation .middleFullText.glpo_section .fullTxt, .ht_section .ht_right h2, .bib_section#testimonials h2, .liquidation .news-articles h2, .banner-content .banner-heading, .wva_section .wva_right h3, .wva_section .wva_right h2, .weva_section h3, .voluntary_administration .banner-content .banner-heading, .bankruptcy #why-mg h2, .canh_section h2, .sols_sec h2, .new_landing .news-list h2, .wbl_section h3, .incsteps_sec h2, .steps_tab h3, .restructure_land #testimonials h2, .spek_head h2, .midheading h2, .cinlpageidentifix .wva_left h3, .eligible_sec h2, .smallrestructure_land .liq_blocks h2, .smallpageidentifix .wva_left h3, .lun_sec h2, .grid_4_sec h2, .rtsec2 h2, .rt_testmon h3, .rtsec3 h3, .cloc_s_page .wva_section.about_section .wva_right h3, .brige_color_sec h3, .clm-page .brige_color #why-mg h2, .brige_color,.brige_color2 #why-mg h2, .liquidationpagenew .wbl_section h3, .vcfo_section h2, .dpnfont_page .dpn-sec2 h3, .dpnfont_page .liq_blocks h3 {
         font-size: 32px;
     }
     .cinlpageidentifix .wva_left h3 {
@@ -16771,6 +17019,16 @@ body .bhc_page .mgacademy_banner.topleft_banner .banner-image::before{
     .bhc_page .recovery-plan {
         padding-bottom: 0;
     }
+    .video_section {
+    padding-bottom: 20px;
+    padding-top: 20px;
+    }
+    .dpn_new .brigeincludes_sec_n {
+        padding-bottom: 0;
+    }
+    .dpn_new .testimonial-main .desc {
+    padding-top: 0 !important;
+    }
 
 }
 
@@ -16916,7 +17174,7 @@ body .bhc_page .mgacademy_banner.topleft_banner .banner-image::before{
     .ols_section {
         padding-bottom: 45px;
     }
-    .liquidation .liq_rec_section.recovery-partner h1, .liquidation .liq_rec_section.recovery-partner h2, .bib_section h3, .ols_section h3, .liquidation .middleFullText.glpo_section .fullTxt, .ht_section .ht_right h2, .bib_section#testimonials h2, .liquidation .news-articles h2, .banner-content .banner-heading, .wva_section .wva_right h3, .wva_section .wva_right h2, .weva_section h3, .voluntary_administration .banner-content .banner-heading, .bankruptcy #why-mg h2, .canh_section h2, .sols_sec h2, .new_landing .news-list h2, .wbl_section h3, .incsteps_sec h2, .steps_tab h3, .restructure_land #testimonials h2, .spek_head h2, .midheading h2, .cinlpageidentifix .wva_left h3, .eligible_sec h2, .smallrestructure_land .liq_blocks h2, .smallpageidentifix .wva_left h3, .lun_sec h2, .grid_4_sec h2, .rtsec2 h2, .rt_testmon h3, .rtsec3 h3, .cloc_s_page .wva_section.about_section .wva_right h3, .brige_color_sec h3, .clm-page .brige_color #why-mg h2, .brige_color,.brige_color2 #why-mg h2 {
+    .liquidation .liq_rec_section.recovery-partner h1, .liquidation .liq_rec_section.recovery-partner h2, .bib_section h3, .ols_section h3, .liquidation .middleFullText.glpo_section .fullTxt, .ht_section .ht_right h2, .bib_section#testimonials h2, .liquidation .news-articles h2, .banner-content .banner-heading, .wva_section .wva_right h3, .wva_section .wva_right h2, .weva_section h3, .voluntary_administration .banner-content .banner-heading, .bankruptcy #why-mg h2, .canh_section h2, .sols_sec h2, .new_landing .news-list h2, .wbl_section h3, .incsteps_sec h2, .steps_tab h3, .restructure_land #testimonials h2, .spek_head h2, .midheading h2, .cinlpageidentifix .wva_left h3, .eligible_sec h2, .smallrestructure_land .liq_blocks h2, .smallpageidentifix .wva_left h3, .lun_sec h2, .grid_4_sec h2, .rtsec2 h2, .rt_testmon h3, .rtsec3 h3, .cloc_s_page .wva_section.about_section .wva_right h3, .brige_color_sec h3, .clm-page .brige_color #why-mg h2, .brige_color,.brige_color2 #why-mg h2, .liquidationpagenew .wbl_section h3, .vcfo_section h2, .dpnfont_page .dpn-sec2 h3, .dpnfont_page .liq_blocks h3 {
         font-size: 30px;
     }
     .glpo_reco_section .stepsCol, .glpo_reco_section.va_glpo_reco_section .stepsCol {
@@ -17779,6 +18037,32 @@ body .bhc_page .mgacademy_banner.topleft_banner .banner-image::before{
     .rdpage .innerpage-banner a.btn.btn-primary{
             padding: 5px 18px;
     }
+    .smallrestructure_landn .bankruptcy.safe_harbour.small_business .wva_section.key_expert{
+            margin-top: 50px;
+    }
+    .dpn-sec2 p, .eligible_sec ul li label span p {
+        font-size: 16px;
+    }
+    .dpnfont_page .vcfo_section.vcfo_section1_n .vcfo_left:before {
+    height: 400%;
+    }
+    .bankruptcy.service.sub_heading .accordion-button, .liqpagefont .step_grid .step_gcont h3,
+    .dpnfont_page #testimonials h3,
+    .dpnfont_page .recovery-partner-title,
+.dpnfont_page .dca_section .wva_right h5,
+.dpnfont_page .news-list h4,
+.dpnfont_page.liquidationpagenew .banner-subheading {
+        font-size: 21px;
+    }
+     .dpnfont_page.liquidationpagenew .banner-subheading{
+        font-size: 21px !important;
+    }
+
+    .dpnfont_page.dpn-ban-sec h2.banner-subheading,
+    .dpnfont_page h2.banner-subheading{
+        font-size: 16px !important;
+    }
+
 
 }
 @media screen and (max-width:667px){
@@ -18176,7 +18460,7 @@ body .bhc_page .mgacademy_banner.topleft_banner .banner-image::before{
     .testimonial-main1 p {
         font-size: 23px;
     }
-    .liquidation .liq_rec_section.recovery-partner h1, .liquidation .liq_rec_section.recovery-partner h2, .bib_section h3, .ols_section h3, .liquidation .middleFullText.glpo_section .fullTxt, .ht_section .ht_right h2, .bib_section#testimonials h2, .liquidation .news-articles h2, .banner-content .banner-heading, .wva_section .wva_right h3, .wva_section .wva_right h2, .weva_section h3, .voluntary_administration .banner-content .banner-heading, .bankruptcy #why-mg h2, .canh_section h2, .sols_sec h2, .new_landing .news-list h2, .wbl_section h3, .incsteps_sec h2, .steps_tab h3, .restructure_land #testimonials h2, .spek_head h2, .midheading h2, .cinlpageidentifix .wva_left h3, .eligible_sec h2, .smallrestructure_land .liq_blocks h2, .smallpageidentifix .wva_left h3, .lun_sec h2, .grid_4_sec h2, .rtsec2 h2, .rt_testmon h3, .rtsec3 h3, .cloc_s_page .wva_section.about_section .wva_right h3, .brige_color_sec h3, .clm-page .brige_color #why-mg h2, .brige_color,.brige_color2 #why-mg h2 {
+    .liquidation .liq_rec_section.recovery-partner h1, .liquidation .liq_rec_section.recovery-partner h2, .bib_section h3, .ols_section h3, .liquidation .middleFullText.glpo_section .fullTxt, .ht_section .ht_right h2, .bib_section#testimonials h2, .liquidation .news-articles h2, .banner-content .banner-heading, .wva_section .wva_right h3, .wva_section .wva_right h2, .weva_section h3, .voluntary_administration .banner-content .banner-heading, .bankruptcy #why-mg h2, .canh_section h2, .sols_sec h2, .new_landing .news-list h2, .wbl_section h3, .incsteps_sec h2, .steps_tab h3, .restructure_land #testimonials h2, .spek_head h2, .midheading h2, .cinlpageidentifix .wva_left h3, .eligible_sec h2, .smallrestructure_land .liq_blocks h2, .smallpageidentifix .wva_left h3, .lun_sec h2, .grid_4_sec h2, .rtsec2 h2, .rt_testmon h3, .rtsec3 h3, .cloc_s_page .wva_section.about_section .wva_right h3, .brige_color_sec h3, .clm-page .brige_color #why-mg h2, .brige_color,.brige_color2 #why-mg h2, .liquidationpagenew .wbl_section h3, .vcfo_section h2, .dpnfont_page .dpn-sec2 h3, .dpnfont_page .liq_blocks h3 {
         font-size: 26px;
         line-height: 1.2;
     }
@@ -18604,6 +18888,10 @@ body .bhc_page .mgacademy_banner.topleft_banner .banner-image::before{
         height: 343px;
     }
 
+    .dpnfont_page .liq_blocks h3 {
+        font-size: 26px;
+    line-height: 1.2;
+    }
 
 }
 @media screen and (max-width:460px){
@@ -19011,6 +19299,36 @@ body .bhc_page .mgacademy_banner.topleft_banner .banner-image::before{
     padding-bottom: 40px;
     margin-bottom: 35px;
     }
+    .dpnfont_page h2.banner-subheading{
+            line-height: 1.5;
+    }
+    .dpnfont_page .bankruptcy.service .accordion-body p, .dpnfont_page .bankruptcy.service .accordion-body li, .dpnfont_page .banner-subheading, .dpnfont_page .rtsec2 ul li, .dpnfont_page .wva_section .wva_right p, .dpnfont_page .vcfo_section .vcfo_right p, .dpnfont_page .accordion-body, .dpnfont_page .liqpagefont .p, .dpnfont_page .liqpagefont .step_grid .step_item p, .dpnfont_page .people_head p,.dpnfont_page #testimonials .card-text,
+.dpnfont_page .liq_blocks .recovery-partner-desc,
+.dpnfont_page.val_page.liquidation .middleFullText.glpo_section .fullSubTxt,
+.dpnfont_page .glpo_reco_section.recovery-plan .subTxt,
+.dpnfont_page .mg_identifix .wva_left p,
+.dpnfont_page .eligible_sec h3,
+.dpnfont_page .eligible_sec ul li label span p,
+.dpnfont_page .wbl_section p,
+.dpnfont_page .canh_section .c_grid p, 
+.dpnfont_page .ols_section ul li div p,
+.dpnfont_page .news-desc p {
+    font-size: 16px;
+    }
+   .dpnfont_page .vcfo_section.vcfo_section1_n .vcfo_left:before {
+    height: 400%;
+    }
+    .bankruptcy.service.sub_heading .accordion-button, .liqpagefont .step_grid .step_gcont h3,
+    .dpnfont_page #testimonials h3,
+    .dpnfont_page .recovery-partner-title,
+.dpnfont_page .dca_section .wva_right h5,
+.dpnfont_page .news-list h4,
+.dpnfont_page.liquidationpagenew .banner-subheading {
+        font-size: 19px;
+    }
+     .dpnfont_page.liquidationpagenew .banner-subheading{
+        font-size: 19px !important;
+    }
 
 }
 @media screen and (max-width:414px){
@@ -19095,7 +19413,8 @@ body .bhc_page .mgacademy_banner.topleft_banner .banner-image::before{
     }
         
 
-    .liquidation .liq_rec_section.recovery-partner h1, .liquidation .liq_rec_section.recovery-partner h2, .bib_section h3, .ols_section h3, .liquidation .middleFullText.glpo_section .fullTxt, .ht_section .ht_right h2, .bib_section#testimonials h2, .liquidation .news-articles h2, .banner-content .banner-heading, .wva_section .wva_right h3, .wva_section .wva_right h2, .weva_section h3, .voluntary_administration .banner-content .banner-heading, .bankruptcy #why-mg h2, .canh_section h2, .sols_sec h2, .new_landing .news-list h2, .wbl_section h3, .incsteps_sec h2, .steps_tab h3, .restructure_land #testimonials h2, .spek_head h2, .midheading h2, .cinlpageidentifix .wva_left h3, .eligible_sec h2, .smallrestructure_land .liq_blocks h2, .smallpageidentifix .wva_left h3, .lun_sec h2, .grid_4_sec h2, .rtsec2 h2, .rt_testmon h3, .rtsec3 h3, .cloc_s_page .wva_section.about_section .wva_right h3, .brige_color_sec h3, .clm-page .brige_color #why-mg h2, .brige_color,.brige_color2 #why-mg h2{
+    .liquidation .liq_rec_section.recovery-partner h1, .liquidation .liq_rec_section.recovery-partner h2, .bib_section h3, .ols_section h3, .liquidation .middleFullText.glpo_section .fullTxt, .ht_section .ht_right h2, .bib_section#testimonials h2, .liquidation .news-articles h2, .banner-content .banner-heading, .wva_section .wva_right h3, .wva_section .wva_right h2, .weva_section h3, .voluntary_administration .banner-content .banner-heading, .bankruptcy #why-mg h2, .canh_section h2, .sols_sec h2, .new_landing .news-list h2, .wbl_section h3, .incsteps_sec h2, .steps_tab h3, .restructure_land #testimonials h2, .spek_head h2, .midheading h2, .cinlpageidentifix .wva_left h3, .eligible_sec h2, .smallrestructure_land .liq_blocks h2, .smallpageidentifix .wva_left h3, .lun_sec h2, .grid_4_sec h2, .rtsec2 h2, .rt_testmon h3, .rtsec3 h3, .cloc_s_page .wva_section.about_section .wva_right h3, .brige_color_sec h3, .clm-page .brige_color #why-mg h2, .brige_color,.brige_color2 #why-mg h2, .liquidationpagenew .wbl_section h3,
+    .vcfo_section h2, .dpnfont_page .dpn-sec2 h3, .dpnfont_page .liq_blocks h3{
             font-size: 25px;
     }
 
@@ -20181,3 +20500,129 @@ button.btn-close {
 
 /*perth styles end*/
 
+.brigeincludes_sec_n {
+    padding-bottom: 80px;
+}
+.vcfo_section1_n .vcfo_left {
+    float: right;
+    width: 700px;
+}
+.vcfo_section.vcfo_section1_n .vcfo_left:before {
+    top: 0;
+    background-color: #dde1e3;
+    height: calc(100% - -100px);
+}
+.vcfo_section.vcfo_section1_n .vcfo_left:after {
+    background-color: #1c5e48;
+    top: inherit;
+    bottom: 0;
+    height: calc(100% - -60px);
+}
+.vcfo_section1_n {
+    margin-top: 130px;
+}
+.vcfo_section1_n .vcfo_right {
+    width: 590px;
+    padding-right: 35px;
+}
+.dpn_new .banner-image:after {
+    height: 115%;
+}
+.restructure_land.dpn_new h2.banner-subheading {
+    margin-bottom: 0;
+}
+
+@media screen and (max-width:1400px){
+    .vcfo_section1_n .vcfo_left {
+        width: 600px;
+    }
+    .vcfo_section1_n .vcfo_right {
+        width: 500px;
+    }
+    .vcfo_section1_n {
+        margin-bottom: 160px;
+    }
+}
+@media screen and (max-width:1300px){
+    .vcfo_section.vcfo_section1_n .vcfo_left:before {
+        height: calc(100% - -60px);
+    }
+    .vcfo_section1_n {
+        margin-bottom: 120px;
+    }
+}
+@media screen and (max-width:1200px){
+    .vcfo_section1_n .vcfo_left {
+        width: 500px;
+    }
+    .vcfo_section1_n .vcfo_right {
+        width: 400px;
+    }
+    .vcfo_section1_n {
+        margin-bottom: 80px;
+    }
+    .vcfo_section1_n {
+        margin-top: 100px;
+    }
+}
+@media screen and (max-width:991px){
+    .vcfo_section1_n .vcfo_left, .vcfo_section1_n .vcfo_right {
+        width: 100%;
+    }
+    .vcfo_section.vcfo_section1_n .vcfo_left:after {
+        height: 114.3%;
+        top: inherit;
+        bottom: 0;
+    }
+    .vcfo_section.vcfo_section1_n .vcfo_left:before {
+        height: calc(100% - -270px);
+    }
+    .vcfo_section1_n {
+        margin-bottom: 50px;
+    }
+    .dpn_new .banner-image:after {
+        height: 100%;
+    }
+    .restructure_land.dpn_new h2.banner-subheading {
+        margin-bottom: 30px;
+    }
+
+    .smallrestructure_landn .bankruptcy.safe_harbour.small_business .wva_section.key_expert {
+        margin-bottom: 50px;
+    }
+
+}
+@media screen and (max-width:767px){
+    .brigeincludes_sec_n {
+        padding-bottom: 80px;
+    }
+    .vcfo_section.vcfo_section1_n .vcfo_left:before {
+        height: calc(100% - -320px);
+    }
+    .vcfo_section1_n .vcfo_right {
+        padding-left: 0;
+    }
+    .vcfo_section1_n {
+        margin-top: 50px;
+    }
+}
+@media screen and (max-width:480px){
+    .vcfo_section.vcfo_section1_n .vcfo_left:before {
+        height: calc(100% - -360px);
+    }
+}
+@media screen and (max-width:440px){
+    .vcfo_section.vcfo_section1_n .vcfo_left:before {
+        height: calc(100% - -400px);
+    }
+}
+@media screen and (max-width:400px){
+    .vcfo_section.vcfo_section1_n .vcfo_left:before {
+        height: calc(100% - -430px);
+    }
+}
+@media screen and (max-width:360px){
+    .vcfo_section.vcfo_section1_n .vcfo_left:before {
+        height: calc(100% - -460px);
+    }
+}

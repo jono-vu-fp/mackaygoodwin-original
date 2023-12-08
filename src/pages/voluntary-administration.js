@@ -4,16 +4,16 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import TopBanner from "../components/top-banner-3"
+import TopBanner from "../components/top-banner-landing"
 import GetInTouch from "../components/get-in-touch3"
 import CurveLeft from "../components/curve-left"
 import Services from "../components/services"
-import Accordian from "../components/accordian/accordian"
+import Accordian from "../components/accordian/accordian-bankruptcy";
 import FullText from "../components/full-text"
-import OurPeople from "../components/our-people-liquid/our-people"
+import OurPeople from "../components/our-people-liquid/our-people3"
 import TestimonialMain from "../components/testimonial-main-liquid-1"
 import ReciveryPlan from "../components/recovery-plan"
-import Container from "../components/slider/container-liquidation"
+import Container from "../components/slider/container-restructuring-nolink";
 import EbookForm from "../components/ebook-form"
 import { formEbookContext } from '../components/context';
 
@@ -21,55 +21,55 @@ const ConsultBusiness = ({ data }) => {
   const [showModal, setModal] = React.useState(false);
   let whyMG = [];
 
+  let whyMG2 = [];
+  data.wpPage.faqSection.fqa.map((d) => {
+    console.log(d);
+    return whyMG2.push({ title: d.famquestion, description: d.famanswer, tag: "" });
+  });
+
   let businessData = [];
-  data.allWpOurpeople.nodes.map((d) => {
-    return businessData.push({ title: d.title, subtitle: d.backInBusiness.designation, text: d.backInBusiness.location, certification: d.backInBusiness.certification, content: d.content, linkedin: d.backInBusiness.linkedin, email: d.backInBusiness.email, img: d.featuredImage?.node, designationType: d.backInBusiness.designationType, registeredLiquidators: d.backInBusiness.registeredLiquidators });
-  })
+  data.wpPage.voluntaryadministration.valpagepeoples.map((d) => {
+    return businessData.push({
+      title: d.title,
+      subtitle: d.backInBusiness.designation,
+      text: d.backInBusiness.location,
+      certification: d.backInBusiness.certification,
+      content: d.content,
+      linkedin: d.backInBusiness.linkedin,
+      email: d.backInBusiness.email,
+      phone: d.backInBusiness.phoneNumber,
+      img: d.featuredImage?.node,
+      altimg: d.backInBusiness?.staffImage2,
+      designationType: d.backInBusiness.designationType,
+      registeredLiquidators: d.backInBusiness.registeredLiquidators,
+       slug: d.slug
+    });
+  });
 
   const breadCrumbs = [
     { link: "/", title: "Home" },
-    { title: "Liquidation" },
+    { title: "Voluntary Administration" },
   ]
 
   const [fromDetails, setFormDetails] = React.useState(0);
   const [fromEbookDetails, setFormEbookDetails] = React.useState(0);
   const value = { fromDetails, setFormDetails };
   const valueEbook = { fromEbookDetails, setFormEbookDetails };
-  return (<div className="service restructure consult-business liquidation voluntary_administration">
+  return (<div className="restructure_land service liquidation val_page val_page_new val_page_new2 voluntary_page no_bannerform dpnfont_page">
     <Layout>
       <Seo title={data.wpPage.metaFields?.metaTitle} description={data.wpPage.metaFields?.metaDescription} />
       <TopBanner
         title={data.wpPage.voluntaryadministration.bannerTitle}
-        subtitle={''}
-        text={data.wpPage.voluntaryadministration.bannerDesc}
+        subtitle={data.wpPage.voluntaryadministration.bannerDesc}
         bannerImg={data.wpPage.voluntaryadministration.bannerImage}
         breadCrumbs={breadCrumbs}
         equalWidth={true}
       />
-      <section className="recovery-partner liq_rec_section">
-        <div className="container">
-          <div className="row">
-            <div className="col">
-              <h2 className="whyTitle text-center">{data.wpPage.voluntaryadministration.vaRecoveryTagline}</h2>
-            </div>
-          </div>
-          <div className="row justify-content-center">
-            {data.wpPage.voluntaryadministration.vaPartners.map((d,k) => {
-              return (<div key={'v'+k} className={"col-xs-12 col-md-6 col-lg-" + parseInt(12 / data.wpPage.voluntaryadministration.vaPartners.length)}>
-                <div className="text-center rec_img">
-                  <img src={d.vaImage?.localFile?.publicURL} alt={d.vaImage?.altText} className="recovery-partner-img" />
-                </div>
-                <p className="recovery-partner-title text-center"> {d.vaTitle} </p>
-              </div>)
-            })}
-          </div>
-        </div>
-      </section>
+
       <div className="liq_blocks va_blocks">
         <div className="container">
           <div className="row">
-              {/* <h3>{data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.tagline}</h3> */}
-              {data.wpPage.voluntaryadministration.wymnuDescriptionWhyliquid.map((d,k) => {
+               {data.wpPage.voluntaryadministration.wymnuDescriptionWhyliquid.map((d,k) => {
                 return (
                   <div className="col-md-4 col-lg-4" key={'i'+k}>
                     <div className="lb_img">
@@ -84,8 +84,53 @@ const ConsultBusiness = ({ data }) => {
           </div>
         </div>
       </div>
-        
-      <div className="wva_section">
+
+      
+
+
+      <div class="rtsec2">
+          <div class="container container2">
+           <h2>{data.wpPage.voluntaryadministration.vaRecoveryTagline}</h2>
+            <ul>
+              {data.wpPage.voluntaryadministration.vaPartners.map((d,k) => {
+                  return (
+                    <li>
+                     <img src={d.vaImage?.localFile?.publicURL} /> 
+                     
+                      <div dangerouslySetInnerHTML={{ __html: d.vaTitle }}></div>
+                    </li>
+                  );
+                }
+              )}
+            </ul>
+          </div>
+        </div>
+
+      <section className="testimonial-main testimonial-mainnew">
+      <div className="container">
+          <div className="row">
+            <div className="col-sm-12 col-md-12 col-lg-6 p-5">
+               
+              <img
+                class="img-fluid"
+                src={
+                  data.wpPage.voluntaryadministration
+                    .valpagetestimage.localFile?.childImageSharp?.resize?.src
+                }
+                alt="data.wpPage.voluntaryadministration.valpagetestimage.altText"
+              />
+            </div>
+            <div className="col-sm-12 col-md-12 col-lg-6 p-5 desc">
+
+            <div dangerouslySetInnerHTML={{ __html:data.wpPage.voluntaryadministration.valpagetestimonialscontent}}></div>
+              <h2>- {data.wpPage.voluntaryadministration.valpagetestimonialsheading}</h2>
+              
+            </div>
+          </div>
+      </div>
+    </section>
+
+     <div className="wva_section">
         <div className="container">
           <div className="wva_left">
             <iframe src={'https://www.youtube.com/embed/'+data.wpPage.voluntaryadministration.wvaVideo} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -95,8 +140,28 @@ const ConsultBusiness = ({ data }) => {
             <div dangerouslySetInnerHTML={{ __html: data.wpPage.voluntaryadministration.wvaDescription }}></div>
           </div>
         </div>
-      </div>        
-        
+      </div>   
+
+      <div className="liq_blocks va_blocks">
+        <div className="container">
+         <h3>The benefits of entering Voluntary Administration</h3> 
+          <div className="row">
+               {data.wpPage.voluntaryadministration.wymnuDescriptionWhyliquid.map((d,k) => {
+                return (
+                  <div className="col-md-4 col-lg-4" key={'i'+k}>
+                    <div className="lb_img">
+                        <img src={d.image?.localFile.publicURL} alt={d.image?.altText} />
+                    </div>
+                    <div className="lb_txt">
+                      <p className="recovery-partner-title">{d.title?.trim()}</p>
+                      <p className="recovery-partner-desc">{d.description?.trim()}</p>
+                    </div>
+                  </div>)
+              })}
+          </div>
+        </div>
+      </div>
+
       <div className="weva_section">
         <div className="container">
             <div dangerouslySetInnerHTML={{ __html: data.wpPage.voluntaryadministration.wevaContent }}></div>
@@ -144,6 +209,9 @@ const ConsultBusiness = ({ data }) => {
       />
 
 
+      
+
+
       <div className="wva_section fd_section dca_section">
         <div className="container">
           <div className="wva_left">
@@ -162,8 +230,57 @@ const ConsultBusiness = ({ data }) => {
       {/* <FullText
         text={data.wpPage.voluntaryadministration.vaSubDescription}
       /> */}
+      
 
-      <section className="ht_section">
+       <div className="service bankruptcy brige_color brige_color2 sub_heading">
+               <Accordian
+                title={
+                  data.wpPage.faqSection.fmainheading
+                }
+                showEnquireButton={false}
+                data={whyMG2}
+              />
+     </div>
+
+
+
+     
+
+
+        <Container
+        title="We’ve helped many businesses undergo a successful restructure. We can do the same for you."
+        data={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.testimonials}
+        slideColor={'#ebe9de'}
+      />
+
+      <section className="news-articles restructurenews-articles" id="people">
+          <div className="container">
+            <div className="row">
+              <div className="people_head">
+                <h2>{data.wpPage.voluntaryadministration.valpagepeoplehead} </h2>
+                 <div className="p" dangerouslySetInnerHTML={{ __html: data.wpPage.voluntaryadministration?.valpagepeoplecontent }}></div>
+              </div>
+            </div>
+
+            <OurPeople
+              title={""}
+              text={""}
+              data={businessData}
+              showAll={0}
+              liquidation={0}
+            />
+             <div class="row">
+              <div class="col-lg-12 col-md-12 align-center">
+                <Link className="btn btn-primary me-5" to="/people/">
+                  All People
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+     {/* <section className="ht_section">
         <div className="container">
           <div className="ht_left">
             <img className="img-fluid" src={data.wpPage.voluntaryadministration.htImage?.localFile?.childImageSharp?.resize?.src} alt={data.wpPage.voluntaryadministration.htImage?.altText} />
@@ -180,20 +297,10 @@ const ConsultBusiness = ({ data }) => {
             </formEbookContext.Provider>
           </div>
         </div>
-      </section>
+      </section>*/}
       
-      <OurPeople
-        title={'Meet our registered Liquidators'}
-        text={''}
-        data={businessData}
-        showAll={0}
-        liquidation={1}
-      />
-      <Container
-        title={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.testimonialTitle}
-        data={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.testimonials}
-        slideColor={'#ebe9de'}
-      />
+      
+      
       <div className="cu_fixed">
           <a href="/contact"><img src="/images/sophie-img.png" />Contact Us</a>
       </div>
@@ -212,6 +319,15 @@ const ConsultBusiness = ({ data }) => {
 export const query = graphql`
   {
     wpPage(title: {eq: "Voluntary Administration"}) {
+
+      faqSection{
+        fmainheading
+        fqa {
+          famquestion
+          famanswer
+        }
+      }
+
       metaFields {
         metaDescription
         metaTitle
@@ -223,7 +339,7 @@ export const query = graphql`
           mediaItemUrl
           localFile {
             childImageSharp {
-              resize (width: 526, height: 351, cropFocus: CENTER, quality: 80) {
+              resize (width: 526, height: 473, cropFocus: CENTER, quality: 100) {
                 src
               }
             }
@@ -258,7 +374,7 @@ export const query = graphql`
             mediaItemUrl
             localFile {
               childImageSharp {
-                resize (width: 526, height: 351, cropFocus: CENTER, quality: 80) {
+                resize (width: 526, height: 351, cropFocus: CENTER, quality: 100) {
                   src
                 }
               }
@@ -277,7 +393,7 @@ export const query = graphql`
             mediaItemUrl
             localFile {
               childImageSharp {
-                resize (width: 526, height: 351, cropFocus: CENTER, quality: 80) {
+                resize (width: 526, height: 351, cropFocus: CENTER, quality: 100) {
                   src
                 }
               }
@@ -300,12 +416,31 @@ export const query = graphql`
           mediaItemUrl
           localFile {
             childImageSharp {
-              resize (width: 682, height: 465, cropFocus: CENTER, quality: 80) {
+              resize (width: 682, height: 465, cropFocus: CENTER, quality: 100) {
                 src
               }
             }
           }
         }
+
+        valpagepeoplehead
+        valpagepeoplecontent
+
+        valpagetestimonialscontent
+        valpagetestimonialsheading
+        
+        valpagetestimage {
+          altText
+          mediaItemUrl
+          localFile {
+            childImageSharp {
+              resize (width: 564, height: 376, cropFocus: CENTER, quality: 100) {
+                src
+              }
+            }
+          }
+        }
+
         vaLiquidationTagline
         vaRecoveryTagline
         vaSubDescription
@@ -313,7 +448,56 @@ export const query = graphql`
           processTitle
         }
         wymnuTitle
+
+
+        valpagepeoples {
+          ... on WpOurpeople {
+            id
+            slug
+            title
+            backInBusiness{
+              designation
+              location
+              certification
+              linkedin
+              email
+              designationType
+              registeredLiquidators
+              phoneNumber
+              staffImage2{
+                altText
+                mediaItemUrl
+                localFile {
+                  childImageSharp {
+                    resize (width: 416, height: 450, cropFocus: CENTER, quality: 100) {
+                      src
+                    }
+                  }
+                }
+              }
+            }
+            content
+            featuredImage {
+              node {
+                altText
+                mediaItemUrl
+                localFile {
+                  childImageSharp {
+                    resize (width: 416, height: 450, cropFocus: CENTER, quality: 100) {
+                      src
+                    }
+                  }
+                }
+              }
+            }
+          }
+        } 
+
+
       }
+
+
+
     }
     allWp {
       nodes {
@@ -339,7 +523,7 @@ export const query = graphql`
                 mediaItemUrl
                 localFile {
                   childImageSharp {
-                    resize (width: 412, height: 280, cropFocus: CENTER, quality: 80) {
+                    resize (width: 412, height: 280, cropFocus: CENTER, quality: 100) {
                       src
                     }
                   }
@@ -368,7 +552,7 @@ export const query = graphql`
             mediaItemUrl
             localFile {
               childImageSharp {
-                resize (width: 416, height: 450, cropFocus: CENTER, quality: 80) {
+                resize (width: 416, height: 450, cropFocus: CENTER, quality: 100) {
                   src
                 }
               }
