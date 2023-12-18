@@ -241,6 +241,7 @@ const Bankruptcy = ({ data }) => {
           title={data?.allWp?.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchTitle}
           text={data?.allWp?.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchDescription}
           image={data?.allWp?.nodes[0].themeGeneralSettings.themeGeneralSettings.gitImage}
+          formid='rcpp_form'
         />
         
     </Layout>

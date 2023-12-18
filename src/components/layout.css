@@ -8162,16 +8162,20 @@ section.incsteps_sec {
         appearance: none;
   
 }
- .restructure_land .banner-content ul li{ 
+ .restructure_land .banner-content ul li, .restructure_land .banner-content .hs-form-field { 
 
     padding: 0 11.5px;
     margin-bottom: 10px;
   }
-  .restructure_land .banner-content ul {
+  .restructure_land .banner-content ul, .restructure_land .banner-content fieldset {
         margin: -8px -11.5px 0;
     max-width: 512px;
     }
+    .restructure_land .banner-content fieldset {
+        margin-bottom: 8px;
+    }
   .restructure_land .banner-content ul li:nth-child(1),
+  .restructure_land .banner-content .form-columns-2 .hs-form-field,
   .restructure_land .banner-content ul li:nth-child(2),
   .restructure_land .banner-content ul li:nth-child(3),
   .restructure_land .banner-content ul li:nth-child(4){

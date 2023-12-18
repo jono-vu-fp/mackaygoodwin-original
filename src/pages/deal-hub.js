@@ -45,10 +45,12 @@ const DealHub = ({data}) => {
         </div>
     </section>
      
+     <div className="home">
    <GetInTouch
      title={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchTitle}
      text={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchDescription}
    />
+   </div>
   </Layout>)
 }
 export const query = graphql`

@@ -12,6 +12,24 @@ const GetInTouch = (props) => {
       const myTimeout = setTimeout(myGreeting, 2500);
     }
     function myGreeting() {
+
+      if ('hbspt' in window) {
+          window.hbspt.forms.create({
+             region: "na1",
+             portalId: "40112486",
+             formId: "f1eb5ebb-c2ea-41d3-8bcd-31e9f68a21bf",
+            target: "#rcpp_form"
+        });
+      }
+
+      let scriptEle = document.createElement("script");
+      scriptEle.setAttribute("src", '//js.hsforms.net/forms/embed/v2.js');
+      scriptEle.setAttribute("type", "text/javascript");
+      document.body.appendChild(scriptEle);
+      scriptEle.addEventListener("load", () => {
+        console.log("File loaded")
+      });
+
       if(window.location.href.includes('liquidation-landing-page') || window.location.href.includes('restructure-turnaround-landing-page') || window.location.href.includes('corporate-insolvency-landing-page') || window.location.href.includes('small-business-restructure-landing-page') || window.location.href.includes('dpn-landing-page') || window.location.href.includes('voluntary-administration-landing-page')){
       }
       else{
@@ -35,7 +53,7 @@ const GetInTouch = (props) => {
       <div className="brp_left">
         <h2>{props.title}</h2>
         <div className="brp_desc" dangerouslySetInnerHTML={{__html:props.text}}></div>
-        <GetInTouchForm />
+        <GetInTouchForm formid={props.formid} />
       </div>
     </div>
   </div>
