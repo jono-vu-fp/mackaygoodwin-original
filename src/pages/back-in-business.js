@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import TopBanner from "../components/top-banner"
 import BackInBusiness from "../components/backinbusiness/backinbusiness"
-import GetInTouch from "../components/get-in-touch"
+import GetInTouch from "../components/get-in-touch3"
 
 const breadCrumbs = [
   { link: "/", title: "Home" },
@@ -30,10 +30,12 @@ const BackInBusinessPage = ({ data }) => (
         data={data.allWpBusiness.nodes}
         btn={false}
       />
+      <div className="home">
       <GetInTouch
         title={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchTitle}
         text={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchDescription}
       />
+      </div>
     </Layout>
   </div>
 )

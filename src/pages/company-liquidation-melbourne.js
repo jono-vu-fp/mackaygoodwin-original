@@ -111,8 +111,31 @@ const CompanyLiquidationMelbourne = ({ data }) => {
  
 
   const showContactForm = () => {
+    if ('hbspt' in window) {
+        window.hbspt.forms.create({
+           region: "na1",
+           portalId: "40112486",
+           formId: "f1eb5ebb-c2ea-41d3-8bcd-31e9f68a21bf",
+          target: "#rcpp_form"
+      });
+    }
     $('#br_popup').addClass('show');
   }
+
+  React.useEffect(() => {
+    //hubspot
+    let scriptEle = document.createElement("script");
+    scriptEle.setAttribute("src", '//js.hsforms.net/forms/embed/v2.js');
+    scriptEle.setAttribute("type", "text/javascript");
+    document.body.appendChild(scriptEle);
+    scriptEle.addEventListener("load", () => {
+      console.log("File loaded")
+    });
+
+
+    return () => {
+    }
+   }, [])
 
   return (
     <div className="restructure_land service liquidation clm-page cloc_s_page bannertitle_big">
@@ -459,6 +482,7 @@ const CompanyLiquidationMelbourne = ({ data }) => {
           title={data?.allWp?.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchTitle}
           text={data?.allWp?.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchDescription}
           image={data?.allWp?.nodes[0].themeGeneralSettings.themeGeneralSettings.gitImage}
+          formid='rcpp_form'
         />
 
       </Layout>

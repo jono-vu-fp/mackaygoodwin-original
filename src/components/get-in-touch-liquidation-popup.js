@@ -35,7 +35,7 @@ const GetInTouch = (props) => {
       <div className="brp_left">
         <h2>{props.title}</h2>
         <div className="brp_desc" dangerouslySetInnerHTML={{__html:props.text}}></div>
-        <GetInTouchForm />
+        <GetInTouchForm formid={props.formid} />
       </div>
     </div>
   </div>

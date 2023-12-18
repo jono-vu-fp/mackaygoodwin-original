@@ -22,6 +22,9 @@ const Corporate = ({data}) => {
   ]
   const [fromEbookDetails, setFormEbookDetails] = React.useState(0);
   const valueEbook = { fromEbookDetails, setFormEbookDetails };
+
+  
+  
   return (<div className=" service contact">
   <Layout>
     <Seo title={data.wpPage.metaFields?.metaTitle} description={data.wpPage.metaFields?.metaDescription} />

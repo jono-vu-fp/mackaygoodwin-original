@@ -551,7 +551,7 @@ div#accordionExample .accordion-item:nth-last-of-type(1) {
     background-color: #EBE9DE;
 }
 
-.btn {
+.btn, .home #git_form input[type="submit"], .br_popup .brp_inner .brp_left input[type="submit"], .restructure_land .banner-content input[type="submit"] {
     border-radius: 50px;
     background-color: #1C5E48;
     border: none;
@@ -559,6 +559,17 @@ div#accordionExample .accordion-item:nth-last-of-type(1) {
     padding: 9px 35px;
     margin-top: 38px;
     font-family: 'Sohne', sans-serif, Arial;
+}
+.restructure_land .banner-content input[type="submit"] {
+    margin: 0;
+    color: #fff;
+}
+.restructure_land .banner-content .hs-form-booleancheckbox {
+    width: 100% !important;
+}
+.restructure_land .banner-content .hs-form-booleancheckbox-display {
+    display: flex;
+    align-items: center;
 }
 
 .btn:hover,
@@ -4826,7 +4837,10 @@ img.recovery-partner-img {
     font-size: 15px;
     margin: 0 0 1px;
 }
-.br_popup .brp_inner .brp_left input, .br_popup .brp_inner .brp_left textarea, .br_popup .brp_inner .brp_left select {
+.br_popup .brp_inner .brp_left input[type="submit"] {
+    color: #fff;
+}
+.br_popup .brp_inner .brp_left input[type=text], .br_popup .brp_inner .brp_left input[type=number], .br_popup .brp_inner .brp_left input[type=email], .br_popup .brp_inner .brp_left textarea, .br_popup .brp_inner .brp_left select {
     margin: 0;
     background-color: #ffffff;
     height: 50px;
@@ -4834,9 +4848,13 @@ img.recovery-partner-img {
     padding: 0 15px;
     font-size: 16px;
     border: 0;
+    width: 100% !important;
 }
 .br_popup .brp_inner .brp_left textarea {
     height: 110px;
+}
+.br_popup input {
+    margin-right: 0 !important;
 }
 .br_popup .brp_inner .brp_left button {
     margin: 0;
@@ -5103,19 +5121,22 @@ img.recovery-partner-img {
     padding: 0;
     margin: 0;
 }
-.home #get-in-touch ul li {
-    width: 48.8%;
+.home #get-in-touch ul li, .home #git_form fieldset.form-columns-2 .hs-form-field, .br_popup fieldset.form-columns-2 .hs-form-field {
+    width: 48.8% !important;
     float: left;
-    margin: 0 0 15px;
+    margin: 0 0 15px !important;
 }
-.home #get-in-touch ul li:nth-child(2n+0) {
+.home #get-in-touch ul li:nth-child(2n+0), .home #git_form fieldset.form-columns-2 .hs-form-field:nth-child(2n+0), .br_popup fieldset.form-columns-2 .hs-form-field:nth-child(2n+0) {
     float: right;
 }
-.home #get-in-touch ul li label {
+.home #get-in-touch ul li label, .home #git_form label {
     color: #4a4a4a;
     font-size: 15px;
     margin: 0;
     font-family: 'Sohne';
+}
+.home #git_form fieldset, .br_popup fieldset {
+    max-width: 100% !important;
 }
 .home #get-in-touch:after {
     content: "";
@@ -5125,7 +5146,10 @@ img.recovery-partner-img {
 .home #get-in-touch ul li:nth-child(7), .home #get-in-touch ul li:nth-child(8) {
     width: 100%;
 }
-.home #get-in-touch ul li input[type="text"], .home #get-in-touch ul li input[type="phone"], .home #get-in-touch ul li select, .home #get-in-touch ul li input[type="email"], .home #get-in-touch ul li textarea{
+.home #git_form .input {
+    margin-right: 0;
+}
+.home #get-in-touch ul li input[type="text"], .home #get-in-touch ul li input[type="phone"], .home #get-in-touch ul li select, .home #get-in-touch ul li input[type="email"], .home #get-in-touch ul li textarea, .home #git_form input[type="text"], .home #git_form input[type="phone"], .home #git_form select, .home #git_form input[type="email"], .home #git_form textarea {
     background-color: #ffffff;
     border: 0;
     padding: 0 15px;
@@ -5134,18 +5158,30 @@ img.recovery-partner-img {
     height: 43px;
     line-height: 43px;
     margin: 0;
+    width: 100%;
 }
-.home #get-in-touch ul li textarea {
+.home #get-in-touch ul li textarea, .home #git_form textarea {
     height: 133px;
+    width: 100%;
 }
-.home #get-in-touch ul li .btn {
+.home #get-in-touch ul li .btn, .home #git_form input[type="submit"], .br_popup .brp_inner .brp_left input[type="submit"] {
     margin: 0;
+}
+.home #git_form input[type="submit"] {
+    color: #fff;
+}
+.home #get-in-touch #git_form ul li, .br_popup ul li {
+    width: 100% !important;
 }
 .home #get-in-touch {
     padding-top: 96px;
     padding-bottom: 90px;
 }
-.home #get-in-touch ul li select {
+.home #git_form .hs-form-booleancheckbox-display, .br_popup .hs-form-booleancheckbox-display {
+    display: flex;
+    align-items: center;
+}
+.home #get-in-touch ul li select, .home #git_form select, .br_popup .brp_inner .brp_left select {
     appearance: none;
     -webkit-appearance: none;
     background-image: url(../images/dd-arw.svg);
@@ -8108,7 +8144,7 @@ section.incsteps_sec {
     padding: 0;
     list-style: none;
 }
-.restructure_land .banner-content ul input, .restructure_land .banner-content ul select {
+.restructure_land .banner-content input, .restructure_land .banner-content select {
     width: 100%;
     background-color: #ffffff;
     border: 0;
@@ -8116,7 +8152,10 @@ section.incsteps_sec {
     height: 43px;
     padding: 15px;
 }
- .restructure_land .banner-content ul select{    
+.restructure_land .banner-content select {
+    padding: 10px 15px;
+}
+ .restructure_land .banner-content select{    
     background-image: url(../images/select-down-arrow.svg);
     background-repeat: no-repeat;
     background-position: right 20px top 18px; ;
@@ -8138,17 +8177,18 @@ section.incsteps_sec {
   .restructure_land .banner-content ul li:nth-child(4){
     width:50%; float:left;
   }
-  .restructure_land .banner-content ul li label{
+  .restructure_land .banner-content label{
     margin:0;color: #4a4a4a;font-size: 15px;
    font-family: 'Sohne-Buch';
   }
-  .restructure_land .banner-content ul li textarea {
-    width: 100%;
+  .restructure_land .banner-content textarea {
+    width: 100% !important;
     background-color: #ffffff;
     border: 0;
     margin: 0;
     height: 82px;
     padding: 15px;
+    max-width: 100% !important;
     }
     .restructure_land .banner-content button.btn.btn-primary.d-block {
     font-size: 16px;
@@ -12714,11 +12754,11 @@ body .bhc_page .mgacademy_banner.topleft_banner .banner-image::before{
     .restructure_land .banner-content ul{
         max-width: 435px;
     }
-    .restructure_land .banner-content ul input, .restructure_land .banner-content ul select{
+    .restructure_land .banner-content input, .restructure_land .banner-content select{
             height: 38px;
     padding: 10px 15px;
     }
-    .restructure_land .banner-content ul li textarea{
+    .restructure_land .banner-content textarea{
             height: 70px;
     padding: 15px;
     }
@@ -18703,8 +18743,8 @@ body .bhc_page .mgacademy_banner.topleft_banner .banner-image::before{
         padding-top: 35px;
         padding-bottom: 30px;
     }
-    .home #get-in-touch ul li {
-        width: 100%;
+    .home #get-in-touch ul li, .home #git_form fieldset.form-columns-2 .hs-form-field, .br_popup fieldset.form-columns-2 .hs-form-field {
+        width: 100% !important;
     }
     .ca_sec {
         padding: 35px 0 45px;

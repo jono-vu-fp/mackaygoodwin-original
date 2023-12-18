@@ -26,6 +26,7 @@ const settings = {
 };
 
 const IndexPage = ({ data }) => {
+
   let businessData = [];
   data.allWpOurpeople.nodes.map((d) => {
     return businessData.push({ title: d.title,slug: d.slug, subtitle: d.backInBusiness.designation, text: d.backInBusiness.location, certification: d.backInBusiness.certification, content: d.content, linkedin: d.backInBusiness.linkedin, email: d.backInBusiness.email, phone: d.backInBusiness.phoneNumber, img: d.featuredImage?.node, designationType: d.backInBusiness.designationType, altimg: d.backInBusiness?.staffImage2 });

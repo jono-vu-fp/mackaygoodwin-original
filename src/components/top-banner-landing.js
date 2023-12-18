@@ -47,7 +47,7 @@ const topBanner = (props) => {
 					<div className="banner-content1" dangerouslySetInnerHTML={{ __html: props.bannerContent }}/>:''}
 						 
 					
-							 <GetInTouchForm />
+							 <GetInTouchForm formid="loctopbnrform" />
 
 							 
 						</div>

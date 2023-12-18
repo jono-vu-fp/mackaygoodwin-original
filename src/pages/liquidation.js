@@ -131,6 +131,14 @@ const ConsultBusiness = ({ data }) => {
 
   };
   const showContactForm = () => {
+    if ('hbspt' in window) {
+        window.hbspt.forms.create({
+           region: "na1",
+           portalId: "40112486",
+           formId: "f1eb5ebb-c2ea-41d3-8bcd-31e9f68a21bf",
+          target: "#rcpp_form"
+      });
+    }
     $('#br_popup').addClass('show');
   }
   const setModal2 = (event) => {
@@ -138,6 +146,19 @@ const ConsultBusiness = ({ data }) => {
         setModal(false);document.querySelector('.video').pause();
      }
   }
+  React.useEffect(()=>{
+
+    let scriptEle = document.createElement("script");
+    scriptEle.setAttribute("src", '//js.hsforms.net/forms/embed/v2.js');
+    scriptEle.setAttribute("type", "text/javascript");
+    document.body.appendChild(scriptEle);
+    scriptEle.addEventListener("load", () => {
+      console.log("File loaded")
+    });
+    return () => {
+
+    };
+  });
 
   return (<div className="restructure_land liquidation_land service liquidation liquidation_landbanner liquidation_landbannern liquidationpagenew no_bannerform dpnfont_page">
     <Layout>
@@ -426,6 +447,7 @@ const ConsultBusiness = ({ data }) => {
           title={data?.allWp?.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchTitle}
           text={data?.allWp?.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchDescription2}
           image={data?.allWp?.nodes[0].themeGeneralSettings.themeGeneralSettings.gitImage}
+          formid='rcpp_form'
         />
     </Layout>
   </div>)
