@@ -36,6 +36,17 @@ const ConsultBusiness = ({ data }) => {
   
 
   React.useEffect(()=>{
+
+    
+
+    let scriptEle = document.createElement("script");
+    scriptEle.setAttribute("src", '//js.hsforms.net/forms/embed/v2.js');
+    scriptEle.setAttribute("type", "text/javascript");
+    document.body.appendChild(scriptEle);
+    scriptEle.addEventListener("load", () => {
+      console.log("File loaded")
+    });
+    
     let businessData = [];
     let suffledArray = _.shuffle(data.allWpOurpeople.nodes); let lidx=0;
     suffledArray.map((d,key) => {
@@ -226,6 +237,7 @@ const ConsultBusiness = ({ data }) => {
         title={data?.allWp?.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchTitle}
         text={data?.allWp?.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchDescription}
         image={data?.allWp?.nodes[0].themeGeneralSettings.themeGeneralSettings.gitImage}
+          formid='rcpp_form'
       />
     </Layout>
   </div>
