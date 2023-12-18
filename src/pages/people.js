@@ -130,10 +130,12 @@ const MgWay = ({ data }) => {
         data={businessData}
         showAll={1}
       />
-      <GetInTouch
-        title={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchTitle}
-        text={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchDescription}
-      />
+      <div class="home">
+        <GetInTouch
+          title={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchTitle}
+          text={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchDescription}
+        />
+      </div>
     </Layout>
   </div>
   )

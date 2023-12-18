@@ -114,10 +114,12 @@ const Vcfo = ({data}) => {
         data={data.allWpEvent.nodes}
         btn={true}
       />
-  <GetInTouch
-     title={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchTitle}
-     text={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchDescription}
-   />
+  <div class="home">
+      <GetInTouch
+         title={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchTitle}
+         text={data.allWp.nodes[0].themeGeneralSettings.themeGeneralSettings.getInTouchDescription}
+       />
+   </div>
    <div id="myModal" role="dialog" className={showModal?'in show modal fade':'modal fade'}>
     <div class="model_inner">
      <div class="popup_dialog">
