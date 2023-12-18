@@ -125,10 +125,26 @@ const Corporateinsolvency2 = ({ data }) => {
     { title: "Corporate Insolvency" },
   ];
 
-  const showContactForm = () => {
+   const showContactForm = () => {
+    if ('hbspt' in window) {
+        window.hbspt.forms.create({
+           region: "na1",
+           portalId: "40112486",
+           formId: "f1eb5ebb-c2ea-41d3-8bcd-31e9f68a21bf",
+          target: "#rcpp_form"
+      });
+    }
     $('#br_popup').addClass('show');
   }
   React.useEffect(()=>{
+
+    let scriptEle = document.createElement("script");
+    scriptEle.setAttribute("src", '//js.hsforms.net/forms/embed/v2.js');
+    scriptEle.setAttribute("type", "text/javascript");
+    document.body.appendChild(scriptEle);
+    scriptEle.addEventListener("load", () => {
+      console.log("File loaded")
+    });
     
     $('head').prepend("<meta name='robots' content='noindex, nofollow' />");
     if(window.location.hash=='#receverships_sec'){
@@ -601,6 +617,7 @@ const Corporateinsolvency2 = ({ data }) => {
             data?.allWp?.nodes[0].themeGeneralSettings.themeGeneralSettings
               .gitImage
           }
+          formid='rcpp_form'
         />
       </Layout>
     </div>
