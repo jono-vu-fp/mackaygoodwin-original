@@ -300,7 +300,8 @@ const IndexPage = ({ data }) => {
         <button type="button" class="close" data-dismiss="modal" onClick={()=>{setModal(false);document.getElementById('pp_vid').pause();}}>&times;</button>
         <div class="popup_body">
         <div class="video_ratio">
-        <video width="100%" id="pp_vid" controls><source src={data.wpPage.hpOptions.obcVideoUpload.mediaItemUrl} type="video/mp4" />Your browser does not support the video tag.</video>
+        {showModal?<video width="100%" id="pp_vid" controls>
+        <source src={data.wpPage.hpOptions.obcVideoUpload.mediaItemUrl} type="video/mp4" />Your browser does not support the video tag.</video>:null}
         </div>
         </div>
         </div>
