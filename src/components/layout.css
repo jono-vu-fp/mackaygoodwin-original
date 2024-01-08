@@ -7291,7 +7291,10 @@ section.dpn_optoins {
     display: flex;
     flex-flow: column;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: center;
+}
+.posts .innerpage-banner .banner-heading {
+    margin-bottom: 15px !important;
 }
 .rdtime {
     margin-bottom:50px;
@@ -10562,7 +10565,8 @@ body .bhc_page .mgacademy_banner.topleft_banner .banner-image::before{
 .liquidation_land.dpnfont_page .vcfo_section .news-list{
     padding-top: 40px;
 }
- 
+
+
  
 /****** BreakPoints *******/
 /****** Responsive Start *******/

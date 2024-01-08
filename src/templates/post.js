@@ -138,6 +138,7 @@ const Post = ({ data }) => {
   return (<div className="service insolvency posts">
     <Layout>
       <Seo title={data.wpPost?.metaFields?.metaTitle} description={data.wpPost?.metaFields?.metaDescription} />
+      <div className="sp_bnr">
       <TopBanner
         title={data.wpPost.title}
         subtitle={data.wpPost.backInBusiness?.subTitle}
@@ -153,7 +154,7 @@ const Post = ({ data }) => {
         superbowl={typeof window !== 'undefined' && window.location.pathname === '/insights/super-bowl-lviii/' ? true : false}
         checkVideo1={checkVideo1}
       />
-
+      </div>
        
        <div className="detailPost">
       <div className="container">

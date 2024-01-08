@@ -247,7 +247,7 @@ const IndexPage = ({ data }) => {
                           <button type="button" className="close" data-dismiss="modal" onClick={()=>{setModal1(false);$('iframe.embed-responsive-item').attr('src', $('iframe.embed-responsive-item').attr('src').replace("autoplay=1&amp;", ""));}}>&times;</button>
                           <div className="popup_body">
                               <div className="video_ratio">
-                                  {showModal1?<div dangerouslySetInnerHTML={{__html: data.wpPage.hpOptions.bhcVideo }} />:null}
+                                  <div dangerouslySetInnerHTML={{__html: data.wpPage.hpOptions.bhcVideo }} />
                               </div>
                           </div>
                       </div>

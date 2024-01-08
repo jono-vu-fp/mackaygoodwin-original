@@ -25,15 +25,7 @@ const Project8 = ({ data }) => {
     <div className="service insights thankyou">
       <Layout>
         <Seo title={data.wpPage.metaFields?.metaTitle} description={data.wpPage.metaFields?.metaDescription} />
-        <TopBanner
-          title={data.wpPage.title}
-          subtitle={data.wpPage.project8.bannerSubtitle}
-          text={''}
-          bannerImg={data.wpPage.project8.bannerImage}
-          breadCrumbs={breadCrumbs}
-          btnTxt={''}
-          sendUrl={''}
-        />
+        
         <div className="detailPost">
           <div className="container">
             <div className="row">
