@@ -91,7 +91,7 @@ const Layout = ({ children }) => {
       if (param && param.length > 0) {
         for (var i = 0; i < param.length; i++) {
           var a = param[i].split('=');
-          if (a[0] == 'utm_source')
+          /*if (a[0] == 'utm_source')
             document.getElementById('00N9D000002P5S5').value = a[1];
           if (a[0] == 'utm_medium')
             document.getElementById('00N9D000002Pe9F').value = a[1];
@@ -100,7 +100,7 @@ const Layout = ({ children }) => {
           if (a[0] == 'utm_content')
             document.getElementById('00N9D000002P5SF').value = a[1];
           if (a[0] == 'utm_term')
-            document.getElementById('00N9D000002HWSI').value = a[1];
+            document.getElementById('00N9D000002HWSI').value = a[1];*/
         }
       }
 
