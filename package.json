@@ -58,7 +58,6 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "postbuild": "cd ../ && find -maxdepth 1 ! -name 'harsh-savvient' ! -name 'images' ! -name '.htaccess' ! -name 'sitemap.xml' ! -name 'robots.txt' ! -name . -exec rm -rv {} \\; && yes | cp -r harsh-savvient/public/* ./ && echo successfully deployed at $(date)"
   },
   "repository": {
     "type": "git",
